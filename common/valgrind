@@ -1,0 +1,51 @@
+
+usage: valgrind [options] prog-and-args
+
+  options for the user, with defaults in [ ], are:
+    --help                    show this message
+    --version                 show version
+    -q --quiet                run silently; only print error msgs
+    -v --verbose              be more verbose, incl counts of errors
+    --gdb-attach=no|yes       start GDB when errors detected? [no]
+    --demangle=no|yes         automatically demangle C++ names? [yes]
+    --num-callers=<number>    show <num> callers in stack traces [4]
+    --partial-loads-ok=no|yes too hard to explain here; see manual [yes]
+    --leak-check=no|yes       search for memory leaks at exit? [no]
+    --leak-resolution=low|med|high
+                              amount of bt merging in leak check [low]
+    --show-reachable=no|yes   show reachable blocks in leak check? [no]
+    --sloppy-malloc=no|yes    round malloc sizes to next word? [no]
+    --trace-children=no|yes   Valgrind-ise child processes? [no]
+    --logfile-fd=<number>     file descriptor for messages [2=stderr]
+    --freelist-vol=<number>   volume of freed blocks queue [1000000]
+    --workaround-gcc296-bugs=no|yes  self explanatory [no]
+    --suppressions=<filename> suppress errors described in
+                              suppressions file <filename>
+    --check-addrVs=no|yes     experimental lighterweight checking? [yes]
+                              yes == Valgrind's original behaviour
+
+  options for debugging Valgrind itself are:
+    --sanity-level=<number>   level of sanity checking to do [1]
+    --single-step=no|yes      translate each instr separately? [no]
+    --optimise=no|yes         improve intermediate code? [yes]
+    --instrument=no|yes       actually do memory checks? [yes]
+    --cleanup=no|yes          improve after instrumentation? [yes]
+    --smc-check=none|some|all check writes for s-m-c? [some]
+    --trace-syscalls=no|yes   show all system calls? [no]
+    --trace-signals=no|yes    show signal handling details? [no]
+    --trace-symtab=no|yes     show symbol table details? [no]
+    --trace-malloc=no|yes     show client malloc details? [no]
+    --trace-sched=no|yes      show thread scheduler details? [no]
+    --trace-pthread=none|some|all  show pthread event details? [no]
+    --stop-after=<number>     switch to real CPU after executing
+                              <number> basic blocks [infinity]
+    --dump-error=<number>     show translation for basic block
+                              associated with <number>'th
+                              error context [0=don't show any]
+
+  Extra options are read from env variable $VALGRIND_OPTS
+
+  Valgrind is Copyright (C) 2000-2002 Julian Seward
+  and licensed under the GNU General Public License, version 2.
+  Bug reports, feedback, admiration, abuse, etc, to: jseward@acm.org.
+
