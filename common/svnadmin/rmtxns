@@ -1,0 +1,7 @@
+rmtxns: usage: svnadmin rmtxns REPOS_PATH TXN_NAME...
+
+Delete the named transaction(s).
+
+Valid options:
+  -q [--quiet]             : no progress (only errors) to stderr
+

@@ -1,4 +1,4 @@
-propedit (pedit, pe): Edit property PROPNAME with $EDITOR on targets.
+propedit (pedit, pe): Edit property PROPNAME with an external editor on targets.
 usage: 1. propedit PROPNAME PATH...
        2. propedit PROPNAME --revprop -r REV [URL]
 

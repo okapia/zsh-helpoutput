@@ -1,0 +1,16 @@
+setlog: usage: svnadmin setlog REPOS_PATH -r REVISION FILE
+
+Set the log-message on revision REVISION to the contents of FILE.  Use
+--bypass-hooks to avoid triggering the revision-property-related hooks
+(for example, if you do not want an email notification sent
+from your post-revprop-change hook, or because the modification of
+revision properties has not been enabled in the pre-revprop-change
+hook).
+
+NOTE: revision properties are not historied, so this command
+will permanently overwrite the previous log message.
+
+Valid options:
+  -r [--revision] arg      : specify revision number ARG (or X:Y range)
+  --bypass-hooks           : bypass the repository hook system
+

@@ -1,0 +1,7 @@
+hotcopy: usage: svnadmin hotcopy REPOS_PATH NEW_REPOS_PATH
+
+Makes a hot copy of a repository.
+
+Valid options:
+  --clean-logs             : remove redundant log files from source repository
+

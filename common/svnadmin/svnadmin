@@ -1,0 +1,18 @@
+general usage: svnadmin SUBCOMMAND REPOS_PATH  [ARGS & OPTIONS ...]
+Type "svnadmin help <subcommand>" for help on a specific subcommand.
+
+Available subcommands:
+   create
+   deltify
+   dump
+   help (?, h)
+   hotcopy
+   list-dblogs
+   list-unused-dblogs
+   load
+   lstxns
+   recover
+   rmtxns
+   setlog
+   verify
+
