@@ -1,0 +1,24 @@
+Usage:
+  arp [-vn]  [<HW>] [-i <if>] [-a] [<hostname>]             <-Display ARP cache
+  arp [-v]          [-i <if>] -d  <hostname> [pub][nopub]    <-Delete ARP entry
+  arp [-vnD] [<HW>] [-i <if>] -f  [<filename>]              <-Add entry from file
+  arp [-v]   [<HW>] [-i <if>] -s  <hostname> <hwaddr> [temp][nopub] <-Add entry
+  arp [-v]   [<HW>] [-i <if>] -s  <hostname> <hwaddr> [netmask <nm>] pub  <-''-
+  arp [-v]   [<HW>] [-i <if>] -Ds <hostname> <if> [netmask <nm>] pub      <-''-
+
+        -a                       display (all) hosts in alternative (BSD) style
+        -s, --set                set a new ARP entry
+        -d, --delete             delete a specified entry
+        -v, --verbose            be verbose
+        -n, --numeric            don't resolve names
+        -i, --device             specify network interface (e.g. eth0)
+        -D, --use-device         read <hwaddr> from given device
+        -A, -p, --protocol       specify protocol family
+        -f, --file               read new entries from file or from /etc/ethers
+
+  <HW>=Use '-H <hw>' to specify hardware address type. Default: ether
+  List of possible hardware types (which support ARP):
+    strip (Metricom Starmode IP) ether (Ethernet) tr (16/4 Mbps Token Ring) 
+    tr (16/4 Mbps Token Ring (New)) ax25 (AMPR AX.25) netrom (AMPR NET/ROM) 
+    arcnet (ARCnet) dlci (Frame Relay DLCI) fddi (Fiber Distributed Data Interface) 
+    hippi (HIPPI) irda (IrLAP) x25 (generic X.25) 
