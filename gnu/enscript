@@ -1,0 +1,96 @@
+Usage: enscript [OPTION]... [FILE]...
+Mandatory arguments to long options are mandatory for short options too.
+  -#                         an alias for option -n, --copies
+  -1                         same as --columns=1
+  -2                         same as --columns=2
+      --columns=NUM          specify the number of columns per page
+  -a, --pages=PAGES          specify which pages are printed
+  -A, --file-align=ALIGN     align separate input files to ALIGN
+  -b, --header=HEADER        set page header
+  -B, --no-header            no page headers
+  -c, --truncate-lines       cut long lines (default is to wrap)
+  -C, --line-numbers[=START]
+                             precede each line with its line number
+  -d                         an alias for option --printer
+  -D, --setpagedevice=KEY[:VALUE]
+                             pass a page device definition to output
+  -e, --escapes[=CHAR]       enable special escape interpretation
+  -E, --pretty-print[=LANG]  pretty-print source code
+  -f, --font=NAME            use font NAME for body text
+  -F, --header-font=NAME     use font NAME for header texts
+  -g, --print-anyway         nothing (compatibility option)
+  -G                         same as --fancy-header
+      --fancy-header[=NAME]  select fancy page header
+  -h, --no-job-header        suppress the job header page
+  -H, --highlight-bars=NUM   specify how high highlight bars are
+  -i, --indent=NUM           set line indent to NUM characters
+  -I, --filter=CMD           read input files through input filter CMD
+  -j, --borders              print borders around columns
+  -J,                        an alias for option --title
+  -k, --page-prefeed         enable page prefeed
+  -K, --no-page-prefeed      disable page prefeed
+  -l, --lineprinter          simulate lineprinter, this is an alias for:
+                               --lines-per-page=66, --no-header, --portrait,
+                               --columns=1
+  -L, --lines-per-page=NUM   specify how many lines are printed on each page
+  -m, --mail                 send mail upon completion
+  -M, --media=NAME           use output media NAME
+  -n, --copies=NUM           print NUM copies of each page
+  -N, --newline=NL           select the newline character.  Possible
+                             values for NL are: n (`\n') and r (`\r').
+  -o                         an alias for option --output
+  -O, --missing-characters   list missing characters
+  -p, --output=FILE          leave output to file FILE.  If FILE is `-',
+                             leave output to stdout.
+  -P, --printer=NAME         print output to printer NAME
+  -q, --quiet, --silent      be really quiet
+  -r, --landscape            print in landscape mode
+  -R, --portrait             print in portrait mode
+  -s, --baselineskip=NUM     set baselineskip to NUM
+  -S, --statusdict=KEY[:VALUE]
+                             pass a statusdict definition to the output
+  -t, --title=TITLE          set banner page's job title to TITLE.  Option
+                             sets also the name of the input file stdin.
+  -T, --tabsize=NUM          set tabulator size to NUM
+  -u, --underlay[=TEXT]      print TEXT under every page
+  -U, --nup=NUM              print NUM logical pages on each output page
+  -v, --verbose              tell what we are doing
+  -V, --version              print version number
+  -W, --language=LANG        set output language to LANG
+  -X, --encoding=NAME        use input encoding NAME
+  -z, --no-formfeed          do not interpret form feed characters
+  -Z, --pass-through         pass through PostScript and PCL files
+                             without any modifications
+Long-only options:
+  --color[=bool]             create color outputs with states
+  --download-font=NAME       download font NAME
+  --filter-stdin=NAME        specify how stdin is shown to the input filter
+  --h-column-height=HEIGHT   set the horizontal column height to HEIGHT
+  --help                     print this help and exit
+  --help-pretty-print        describe all supported --pretty-print languages
+                             and file formats
+  --highlight-bar-gray=NUM   print highlight bars with gray NUM (0 - 1)
+  --list-media               list names of all known media
+  --list-options             list all options and their values
+  --margins=LEFT:RIGHT:TOP:BOTTOM
+                             adjust page marginals
+  --mark-wrapped-lines[STYLE]
+                             mark wrapped lines in the output with STYLE
+  --non-printable-format=FMT specify how non-printable chars are printed
+  --nup-xpad=NUM             set the page x-padding of N-up printing to NUM
+  --nup-ypad=NUM             set the page y-padding of N-up printing to NUM
+  --page-label-format=FMT    set page label format to FMT
+  --ps-level=LEVEL           set the PostScript language level that enscript
+                             should use
+  --printer-options=OPTIONS  pass extra options to the printer command
+  --rotate-even-pages        rotate even-numbered pages 180 degrees
+  --slice=NUM                print vertical slice NUM
+  --style=STYLE              use highlight style STYLE
+  --toc                      print table of contents
+  --ul-angle=ANGLE           set underlay text's angle to ANGLE
+  --ul-font=NAME             print underlays with font NAME
+  --ul-gray=NUM              print underlays with gray value NUM
+  --ul-position=POS          set underlay's starting position to POS
+  --ul-style=STYLE           print underlays with style STYLE
+  --word-wrap                wrap long lines from word boundaries
+
