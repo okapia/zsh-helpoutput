@@ -1,0 +1,10 @@
+Usage:
+rmmod [-aehrsvV] module ...
+
+  -a, --all     Remove all unused modules
+  -e, --persist Save persistent data, do not unload module
+  -r, --stacks  Remove stacks, starting at the named module
+  -s, --syslog  Use syslog for error messages
+  -h, --help    Print this message
+  -v, --verbose Be verbose
+  -V, --version Print the release version number
