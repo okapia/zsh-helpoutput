@@ -1,0 +1,5 @@
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | rule | neigh | tunnel |
+                   maddr | mroute | monitor }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -r[esolve] |
+                    -f[amily] { inet | inet6 | ipx | dnet | link } | -o[neline] }
