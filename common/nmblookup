@@ -1,0 +1,17 @@
+Usage: nmblookup [-M] [-B bcast address] [-d debuglevel] name
+Version 2.2.3a
+	-d debuglevel         set the debuglevel
+	-B broadcast address  the address to use for broadcasts
+	-U unicast   address  the address to use for unicast
+	-M                    searches for a master browser
+	-R                    set recursion desired in packet
+	-S                    lookup node status as well
+	-T                    translate IP addresses into names
+	-r                    Use root port 137 (Win95 only replies to this)
+	-A                    Do a node status on <name> as an IP Address
+	-i NetBIOS scope      Use the given NetBIOS scope for name queries
+	-s smb.conf file      Use the given path to the smb.conf file
+	-h                    Print this help message.
+
+  If you specify -M and name is "-", nmblookup looks up __MSBROWSE__<01>
+

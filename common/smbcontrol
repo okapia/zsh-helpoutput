@@ -1,0 +1,40 @@
+Usage: smbcontrol [OPTION...] <destination> <message-type> <parameters>
+  -t, --timeout=TIMEOUT              Set timeout value in seconds
+
+Help options:
+  -?, --help                         Show this help message
+  --usage                            Display brief usage message
+
+Common samba options:
+  -d, --debuglevel=DEBUGLEVEL        Set debug level
+  -s, --configfile=CONFIGFILE        Use alternate configuration file
+  -l, --log-basename=LOGFILEBASE     Base name for log files
+  -V, --version                      Print version
+
+<destination> is one of "nmbd", "smbd", "winbindd" or a process ID
+
+<message-type> is one of:
+	debug                         Set debuglevel
+	force-election                Force a browse election
+	ping                          Elicit a response
+	profile                       
+	inject                        Inject a fatal signal into a running smbd
+	stacktrace                    Display a stack trace of a daemon
+	profilelevel                  
+	debuglevel                    Display current debuglevels
+	printnotify                   Send a print notify message
+	close-share                   Forcibly disconnect a share
+	samsync                       Initiate SAM synchronisation
+	samrepl                       Initiate SAM replication
+	pool-usage                    Display talloc memory usage
+	dmalloc-mark                  
+	dmalloc-log-changed           
+	shutdown                      Shut down daemon
+	drvupgrade                    Notify a printer driver has changed
+	reload-config                 Force smbd or winbindd to reload config file
+	nodestatus                    Ask nmbd to do a node status request
+	online                        Ask winbind to go into online state
+	offline                       Ask winbind to go into offline state
+	onlinestatus                  Request winbind online status
+	noop                          Do nothing
+
