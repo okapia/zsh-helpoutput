@@ -22,16 +22,17 @@ Operation modes:
 
 TeX tuning:
   -@                   use @input instead of \input; for preloaded Texinfo
-  -e, --expand         force macro expansion using makeinfo
+  -e, -E, --expand     force macro expansion using makeinfo
   -I DIR               search DIR for Texinfo files
   -l, --language=LANG  specify the LANG of FILE (LaTeX or Texinfo)
   -p, --pdf            use pdftex or pdflatex for processing
-  -t, --texinfo=CMD    insert CMD after @setfilename in copy of input file
-                       multiple values accumulate
+  -t, --command=CMD    insert CMD in copy of input file;
+   or --texinfo=CMD    multiple values accumulate
 
-The values of the BIBTEX, LATEX (or PDFLATEX), MAKEINDEX, MAKEINFO,
-TEX (or PDFTEX), and TEXINDEX environment variables are used to run
-those commands, if they are set.
+The values of the BIBTEX, LATEX (or PDFLATEX), MAKEINDEX, MAKEINFO, TEX
+(or PDFTEX), and TEXINDEX environment variables are used to run those
+commands, if they are set.  Any CMD strings are added after @setfilename
+for Texinfo input, in the first line for LaTeX input.
 
 Email bug reports to <bug-texinfo@gnu.org>,
 general questions and discussion to <help-texinfo@gnu.org>.
