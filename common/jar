@@ -1,0 +1,23 @@
+Usage: jar {ctxu}[vfm0Mi] [jar-file] [manifest-file] [-C dir] files ...
+Options:
+    -c  create new archive
+    -t  list table of contents for archive
+    -x  extract named (or all) files from archive
+    -u  update existing archive
+    -v  generate verbose output on standard output
+    -f  specify archive file name
+    -m  include manifest information from specified manifest file
+    -0  store only; use no ZIP compression
+    -M  do not create a manifest file for the entries
+    -i  generate index information for the specified jar files
+    -C  change to the specified directory and include the following file
+If any file is a directory then it is processed recursively.
+The manifest file name and the archive file name needs to be specified
+in the same order the 'm' and 'f' flags are specified.
+
+Example 1: to archive two class files into an archive called classes.jar: 
+       jar cvf classes.jar Foo.class Bar.class 
+Example 2: use an existing manifest file 'mymanifest' and archive all the
+           files in the foo/ directory into 'classes.jar': 
+       jar cvfm classes.jar mymanifest -C foo/ .
+
