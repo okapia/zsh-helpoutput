@@ -1,0 +1,13 @@
+GQview 1.2.2
+Usage: gqview [options] [path]
+
+valid options are:
+  +t, --with-tools           force show of tools
+  -t, --without-tools        force hide of tools
+  -f, --fullscreen           start in full screen mode
+  -s, --slideshow            start in slideshow mode
+  -l, --list                 open collection window for command line
+  --debug                    turn on debug output
+  -v, --version              print version info
+  -h, --help                 show this message
+
