@@ -1,7 +1,7 @@
 merge: Apply the differences between two sources to a working copy path.
 usage: 1. merge sourceURL1[@N] sourceURL2[@M] [WCPATH]
        2. merge sourceWCPATH1@N sourceWCPATH2@M [WCPATH]
-       3. merge -r N:M SOURCE [WCPATH]
+       3. merge -r N:M SOURCE[@REV] [WCPATH]
 
   1. In the first form, the source URLs are specified at revisions
      N and M.  These are the two sources to be compared.  The revisions
@@ -12,8 +12,9 @@ usage: 1. merge sourceURL1[@N] sourceURL2[@M] [WCPATH]
      be specified.
 
   3. In the third form, SOURCE can be a URL, or working copy item
-     in which case the corresponding URL is used.  This URL, at
-     revisions N and M, defines the two sources to be compared.
+     in which case the corresponding URL is used.  This URL in
+     revision REV is compared as it existed between revisions N and 
+     M.  If REV is not specified, HEAD is assumed.
 
   WCPATH is the working copy path that will receive the changes.
   If WCPATH is omitted, a default value of '.' is assumed, unless

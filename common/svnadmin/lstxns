@@ -1,0 +1,3 @@
+lstxns: usage: svnadmin lstxns REPOS_PATH
+
+Print the names of all uncommitted transactions.

@@ -1,0 +1,7 @@
+help (?, h): usage: svnadmin help [SUBCOMMAND...]
+
+Describe the usage of this program or its subcommands.
+
+Valid options:
+  --version                : show version information
+

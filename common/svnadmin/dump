@@ -1,0 +1,15 @@
+dump: usage: svnadmin dump REPOS_PATH [-r LOWER[:UPPER]] [--incremental]
+
+Dump the contents of filesystem to stdout in a 'dumpfile'
+portable format, sending feedback to stderr.  Dump revisions
+LOWER rev through UPPER rev.  If no revisions are given, dump all
+revision trees.  If only LOWER is given, dump that one revision tree.
+If --incremental is passed, then the first revision dumped will be
+a diff against the previous revision, instead of the usual fulltext.
+
+Valid options:
+  -r [--revision] arg      : specify revision number ARG (or X:Y range)
+  --incremental            : dump incrementally
+  --deltas                 : use deltas in dump output
+  -q [--quiet]             : no progress (only errors) to stderr
+

@@ -1,0 +1,13 @@
+load: usage: svnadmin load REPOS_PATH
+
+Read a 'dumpfile'-formatted stream from stdin, committing
+new revisions into the repository's filesystem.  If the repository
+was previously empty, its UUID will, by default, be changed to the
+one specified in the stream.  Progress feedback is sent to stdout.
+
+Valid options:
+  -q [--quiet]             : no progress (only errors) to stderr
+  --ignore-uuid            : ignore any repos UUID found in the stream
+  --force-uuid             : set repos UUID to that found in stream, if any
+  --parent-dir arg         : load at specified directory in repository
+
