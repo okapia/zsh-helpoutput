@@ -1,0 +1,10 @@
+usage: modinfo <options> <module>
+  -a, --author            display module author
+  -d, --description       display module description
+  -l, --license           display module license
+  -n, --filename          display module filename
+  -f <str>
+      --format <str>      print the <query-string>
+  -p, --parameters        display module parameters
+  -V, --version           show version
+  -h, --help              this usage screen

@@ -1,0 +1,28 @@
+modprobe 2.4.21
+Load/Unload modules with dependencies
+
+Load module(s):
+  modprobe [-a -n -v ] [-C config ] [ -t type ] pattern OR module1 module2 ...
+List modules:
+  modprobe [-l ] [-C config ] [ -t type ] pattern
+   note: wildcard patterns should be escaped
+Show configuration:
+  modprobe [-C config ] -c
+Remove module(s) or autoclean:
+  modprobe [-C config ] -r [ module ...]
+
+options:
+	-a, --all                  Load _all_ matching modules
+	-c, --showconfig           Show current configuration
+	-d, --debug                Print debugging information
+	-h, --help                 Print this message
+	-k, --autoclean            Set 'autoclean' on loaded modules
+	-l, --list                 List matching modules
+	-n, --show                 Don't actually perform the action
+	-q, --quiet                Quiet operation
+	-r, --remove               Remove module (stacks) or do autoclean
+	-s, --syslog               Use syslog to report
+	-t, --type moduletype      Only look for modules of this type
+	-v, --verbose              Print all commands
+	-V, --version              Show version
+	-C, --config configfile    Use instead of /etc/modules.conf
