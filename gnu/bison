@@ -1,0 +1,37 @@
+GNU bison generates parsers for LALR(1) grammars.
+
+Usage: bison [OPTION]... FILE
+
+If a long option shows an argument as mandatory, then it is mandatory
+for the equivalent short option also.  Similarly for optional arguments.
+
+Operation modes:
+  -h, --help      display this help and exit
+  -V, --version   output version information and exit
+  -y, --yacc      emulate POSIX yacc
+
+Parser:
+  -S, --skeleton=FILE        specify the skeleton to use
+  -t, --debug                instrument the parser for debugging
+      --locations            enable locations computation
+  -p, --name-prefix=PREFIX   prepend PREFIX to the external symbols
+  -l, --no-lines             don't generate `#line' directives
+  -n, --no-parser            generate the tables only
+  -k, --token-table          include a table of token names
+
+Output:
+  -d, --defines              also produce a header file
+  -r, --report=THINGS        also produce details on the automaton
+  -v, --verbose              same as `--report=state'
+  -b, --file-prefix=PREFIX   specify a PREFIX for output files
+  -o, --output=FILE          leave output to FILE
+  -g, --graph                also produce a VCG description of the automaton
+
+THINGS is a list of comma separated words that can include:
+  `state'        describe the states
+  `itemset'      complete the core item sets with their closure
+  `lookahead'    explicitly associate lookaheads to items
+  `solved'       describe shift/reduce conflicts solving
+  `all'          include all the above information
+  `none'         disable the report
+
