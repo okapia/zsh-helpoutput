@@ -1,0 +1,28 @@
+added interface ip=158.234.142.61 bcast=158.234.142.255 nmask=255.255.255.0
+Usage: smbclient service <password> [options]
+Version 2.2.3a
+	-s smb.conf           pathname to smb.conf file
+	-O socket_options     socket options to use
+	-R name resolve order use these name resolution services only
+	-M host               send a winpopup message to the host
+	-i scope              use this NetBIOS scope
+	-N                    don't ask for a password
+	-n netbios name.      Use this name as my netbios name
+	-d debuglevel         set the debuglevel
+	-P                    connect to service as a printer
+	-p port               connect to the specified port
+	-l log basename.      Basename for log/debug files
+	-h                    Print this help message.
+	-I dest IP            use this IP to connect to
+	-E                    write messages to stderr instead of stdout
+	-U username           set the network username
+	-L host               get a list of shares available on a host
+	-t terminal code      terminal i/o code {sjis|euc|jis7|jis8|junet|hex}
+	-m max protocol       set the max protocol level
+	-A filename           get the credentials from a file
+	-W workgroup          set the workgroup name
+	-T<c|x>IXFqgbNan      command line tar
+	-D directory          start from directory
+	-c command string     execute semicolon separated commands
+	-b xmit/send buffer   changes the transmit/send buffer (default: 65520)
+
