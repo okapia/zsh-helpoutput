@@ -1,0 +1,13 @@
+resolved: Remove 'conflicted' state on working copy files or directories.
+usage: resolved PATH...
+
+  Note:  this subcommand does not semantically resolve conflicts or
+  remove conflict markers; it merely removes the conflict-related
+  artifact files and allows PATH to be committed again.
+
+Valid options:
+  --targets arg            : pass contents of file ARG as additional args
+  -R [--recursive]         : descend recursively
+  -q [--quiet]             : print as little as possible
+  --config-dir arg         : read user configuration files from directory ARG
+

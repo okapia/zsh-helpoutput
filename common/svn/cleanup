@@ -1,0 +1,8 @@
+cleanup: Recursively clean up the working copy, removing locks, resuming
+unfinished operations, etc.
+usage: cleanup [PATH...]
+
+Valid options:
+  --diff3-cmd arg          : use ARG as merge command
+  --config-dir arg         : read user configuration files from directory ARG
+

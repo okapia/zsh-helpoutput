@@ -1,0 +1,12 @@
+add: Put files and directories under version control, scheduling
+them for addition to repository.  They will be added in next commit.
+usage: add PATH...
+
+Valid options:
+  --targets arg            : pass contents of file ARG as additional args
+  -N [--non-recursive]     : operate on single directory only
+  -q [--quiet]             : print as little as possible
+  --config-dir arg         : read user configuration files from directory ARG
+  --auto-props             : enable automatic properties
+  --no-auto-props          : disable automatic properties
+
