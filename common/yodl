@@ -1,0 +1,25 @@
+Yodl 1.31.18
+Yet oneOther Document Language
+Usage: yodl [OPTION]... [FILE]...
+Convert to various documentation formats from FILE or <stdin>.
+
+Options:
+  -D, --define=NAME    define NAME as symbol, same as DEFINESYMBOL(NAME)
+  -d, --definemacro=NAME=EXPANSION
+                       define NAME as macro expanding to EXPANSION
+  -h, --help           this message
+  -I, --include=DIR    use directory DIR for system-wide includes files
+                         [/usr/share/yodl]
+  -l, --live-data=NR   set "live data" policy to NR [0]:
+                         allow live data:
+                           0: never (the default)
+                           1: only when confirmed
+                           2: issuing warning
+                           3: always
+  -o, --output=FILE    send output to FILE instead of <stdout>
+  -P, --preload=CMD    preload CMD
+  -p, --max-pass=NR    set the maximum number of parsing passes to NR [20]
+  -t, --trace          trace generated output to <stderr> for each parsing pass
+  -v, --verbose        increase verbosity (-vv...)
+  -W, --warranty       show warranty and copyright
+  -w, --warn           warn about redefinitions
