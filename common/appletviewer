@@ -1,0 +1,8 @@
+Usage: appletviewer <options> url(s)
+
+where <options> include:
+  -debug                  Start the applet viewer in the Java debugger
+  -encoding <encoding>    Specify character encoding used by HTML files
+  -J<runtime flag>        Pass argument to the java interpreter
+
+The -J option is non-standard and subject to change without notice.

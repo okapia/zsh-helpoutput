@@ -1,0 +1,31 @@
+Usage: rmic <options> <class names>
+
+where <options> includes:
+  -keep          Do not delete intermediate generated source files
+  -keepgenerated (same as "-keep")
+  -v1.1          Create stubs/skeletons for 1.1 stub protocol version
+  -vcompat       (default) Create stubs/skeletons compatible with both
+                           1.1 and 1.2 stub protocol versions
+  -v1.2          Create stubs for 1.2 stub protocol version only
+  -iiop          Create stubs for IIOP. When present, <options> also includes:
+
+                   -always           Create stubs even when they appear current
+                   -alwaysgenerate   (same as "-always")
+                   -nolocalstubs     Do not create stubs optimized for same process
+
+  -idl           Create IDL. When present, <options> also includes:
+
+                   -noValueMethods   Do not generate methods for valuetypes 
+                   -always           Create IDL even when it appears current
+                   -alwaysgenerate   (same as "-always")
+
+  -g             Generate debugging info
+  -depend        Recompile out-of-date files recursively
+  -nowarn        Generate no warnings
+  -nowrite       Do not write compiled classes to the file system
+  -verbose       Output messages about what the compiler is doing
+  -classpath <path>      Specify where to find input class files
+  -bootclasspath <path>  Override location of bootstrap class files
+  -extdirs <path>        Override location of installed extensions
+  -d <directory>         Specify where to place generated class files
+  -J<runtime flag>       Pass argument to the java interpreter
