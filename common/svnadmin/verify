@@ -1,0 +1,3 @@
+verify: usage: svnadmin verify REPOS_PATH
+
+Verifies the data stored in the repository.

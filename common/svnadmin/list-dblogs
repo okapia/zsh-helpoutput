@@ -1,0 +1,6 @@
+list-dblogs: usage: svnadmin list-dblogs REPOS_PATH
+
+List all Berkeley DB log files.
+
+WARNING: Modifying or deleting logfiles which are still in use
+will cause your repository to be corrupted.

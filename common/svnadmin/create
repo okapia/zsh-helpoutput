@@ -1,0 +1,10 @@
+create: usage: svnadmin create REPOS_PATH
+
+Create a new, empty repository at REPOS_PATH.
+
+Valid options:
+  --bdb-txn-nosync         : disable fsync at transaction commit [Berkeley DB]
+  --bdb-log-keep           : disable automatic log file removal [Berkeley DB]
+  --config-dir arg         : read user configuration files from directory ARG
+  --fs-type arg            : type of repository: 'bdb' or 'fsfs'
+

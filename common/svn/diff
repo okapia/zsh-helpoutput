@@ -1,26 +1,26 @@
 diff (di): Display the differences between two paths.
-usage: 1. diff [-r N[:M]] [--old OLD-TGT] [--new NEW-TGT] [PATH...]
-       2. diff -r N:M URL
-       3. diff [-r N[:M]] URL1[@N] URL2[@M]
+usage: 1. diff [-r N[:M]] [TARGET[@REV]...]
+       2. diff [-r N[:M]] --old=OLD-TGT[@OLDREV] [--new=NEW-TGT[@NEWREV]] \
+               [PATH...]
+       3. diff OLD-URL[@OLDREV] NEW-URL[@NEWREV]
 
-  1. Display the differences between OLD-TGT and NEW-TGT.  PATHs, if
-     given, are relative to OLD-TGT and NEW-TGT and restrict the output
-     to differences for those paths.  OLD-TGT and NEW-TGT may be working
-     copy paths or URL[@REV].
+  1. Display the changes made to TARGETs as they are seen in REV between
+     two revisions.  TARGETs may be working copy paths or URLs.
 
-     OLD-TGT defaults to the path '.' and NEW-TGT defaults to OLD-TGT.
-     N defaults to BASE or, if OLD-TGT is an URL, to HEAD.
-     M defaults to the current working version or, if NEW-TGT is an URL,
-     to HEAD.
+     N defaults to BASE if any TARGET is a working copy path, otherwise it
+     must be specified.  M defaults to the current working version if any
+     TARGET is a working copy path, otherwise it defaults to HEAD.
 
-     '-r N' sets the revision of OLD-TGT to N, '-r N:M' also sets the
-     revision of NEW-TGT to M.
+  2. Display the differences between OLD-TGT as it was seen in OLDREV and
+     NEW-TGT as it was seen in NEWREV.  PATHs, if given, are relative to
+     OLD-TGT and NEW-TGT and restrict the output to differences for those
+     paths.  OLD-TGT and NEW-TGT may be working copy paths or URL[@REV]. 
+     NEW-TGT defaults to OLD-TGT if not specified.  -r N makes OLDREV default
+     to N, -r N:M makes OLDREV default to N and NEWREV default to M.
 
-  2. Shorthand for 'svn diff -r N:M --old=URL --new=URL'.
+  3. Shorthand for 'svn diff --old=OLD-URL[@OLDREV] --new=NEW-URL[@NEWREV]'
 
-  3. Shorthand for 'svn diff [-r N[:M]] --old=URL1 --new=URL2'
-
-  Use just 'svn diff' to display local modifications in a working copy
+  Use just 'svn diff' to display local modifications in a working copy.
 
 Valid options:
   -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)

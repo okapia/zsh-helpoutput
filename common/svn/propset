@@ -12,7 +12,8 @@ usage: 1. propset PROPNAME [PROPVAL | -F VALFILE] PATH...
       URL, HeadURL             - The URL for the head version of the object.
       Author, LastChangedBy    - The last person to modify the file.
       Date, LastChangedDate    - The date/time the object was last modified.
-      Rev, LastChangedRevision - The last revision the object changed.
+      Rev, Revision,           - The last revision the object changed.
+      LastChangedRevision
       Id                       - A compressed summary of the previous
                                    4 keywords.
     svn:executable - If present, make the file executable. This

@@ -11,6 +11,7 @@ Valid options:
                                 "BASE"       base rev of item's working copy
                                 "COMMITTED"  last commit at or before BASE
                                 "PREV"       revision just before COMMITTED
+  -v [--verbose]           : print extra information
   --username arg           : specify a username ARG
   --password arg           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens

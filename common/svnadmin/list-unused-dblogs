@@ -1,0 +1,4 @@
+list-unused-dblogs: usage: svnadmin list-unused-dblogs REPOS_PATH
+
+List unused Berkeley DB log files.
+

@@ -7,6 +7,7 @@ Valid options:
   -N [--non-recursive]     : operate on single directory only
   -q [--quiet]             : print as little as possible
   --config-dir arg         : read user configuration files from directory ARG
+  --force                  : force operation to run
   --auto-props             : enable automatic properties
   --no-auto-props          : disable automatic properties
 
