@@ -1,0 +1,44 @@
+Usage : xmllint [options] XMLfiles ...
+	Parse the XML files and output the result of the parsing
+	--version : display the version of the XML library used
+	--debug : dump a debug tree of the in-memory document
+	--shell : run a navigating shell
+	--debugent : debug the entities defined in the document
+	--copy : used to test the internal copy implementation
+	--recover : output what was parsable on broken XML documents
+	--noent : substitute entity references by their value
+	--noout : don't output the result tree
+	--htmlout : output results as HTML
+	--nowrap : do not put HTML doc wrapper
+	--valid : validate the document in addition to std well-formed check
+	--postvalid : do a posteriori validation, i.e after parsing
+	--dtdvalid URL : do a posteriori validation against a given DTD
+	--timing : print some timings
+	--output file or -o file: save to a given file
+	--repeat : repeat 100 times, for timing or profiling
+	--insert : ad-hoc test for valid insertions
+	--compress : turn on gzip compression of output
+	--sgml : use the DocBook SGML parser
+	--html : use the HTML parser
+	--push : use the push mode of the parser
+	--memory : parse from memory
+	--nowarning : do not emit warnings from parser/validator
+	--noblanks : drop (ignorable?) blanks spaces
+	--format : reformat/reindent the input
+	--testIO : test user I/O support
+	--encode encoding : output in the given encoding
+	--catalogs : use SGML catalogs from $SGML_CATALOG_FILES
+	             otherwise XML Catalogs starting from 
+	         file:///etc/xml/catalog are activated by default
+	--nocatalogs: deactivate all catalogs
+	--auto : generate a small doc on the fly
+	--xinclude : do XInclude processing
+	--loaddtd : fetch external DTD
+	--dtdattr : loaddtd + populate the tree with inherited attributes 
+	--dropdtd : remove the DOCTYPE of the input docs
+	--stream : use the streaming interface to process very large files
+	--chkregister : verify the node registration code
+	--relaxng schema : do RelaxNG validation against the schema
+
+Libxml project home page: http://xmlsoft.org/
+To report bugs or get some help check: http://xmlsoft.org/bugs.html
