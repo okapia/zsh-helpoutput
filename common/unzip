@@ -1,0 +1,23 @@
+UnZip 5.50 of 17 February 2002, by Info-ZIP.  Maintained by C. Spieler.  Send
+bug reports to the authors at Zip-Bugs@lists.wku.edu; see README for details.
+
+Usage: unzip [-Z] [-opts[modifiers]] file[.zip] [list] [-x xlist] [-d exdir]
+  Default action is to extract files in list, except those in xlist, to exdir;
+  file[.zip] may be a wildcard.  -Z => ZipInfo mode ("unzip -Z" for usage).
+
+  -p  extract files to pipe, no messages     -l  list files (short format)
+  -f  freshen existing files, create none    -t  test compressed archive data
+  -u  update files, create if necessary      -z  display archive comment
+  -x  exclude files that follow (in xlist)   -d  extract files into exdir
+
+modifiers:                                   -q  quiet mode (-qq => quieter)
+  -n  never overwrite existing files         -a  auto-convert any text files
+  -o  overwrite files WITHOUT prompting      -aa treat ALL files as text
+  -j  junk paths (do not make directories)   -v  be verbose/print version info
+  -C  match filenames case-insensitively     -L  make (some) names lowercase
+  -X  restore UID/GID info                   -V  retain VMS version numbers
+                                             -M  pipe through "more" pager
+Examples (see unzip.txt for more info):
+  unzip data1 -x joe   => extract all files except joe from zipfile data1.zip
+  unzip -p foo | more  => send contents of foo.zip via pipe into program more
+  unzip -fo foo ReadMe => quietly replace existing ReadMe if archive file newer
