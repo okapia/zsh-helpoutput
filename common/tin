@@ -1,0 +1,36 @@
+A Usenet reader.
+
+Usage: tin [options] [newsgroup[,...]]
+  -a       toggle colour flag
+  -A       force authentication on connect
+  -c       mark all news as read in subscribed newsgroups (batch mode)
+  -d       don't show newsgroup descriptions
+  -f file  subscribed to newsgroups file [default=/home/kiddleo/.newsrc]
+  -G limit get only limit articles/group
+  -g serv  read news from NNTP server serv [default=localhost]
+  -h       this help message
+  -H       help information about tin
+  -I dir   news index file directory [default=/home/kiddleo/.tin/.news]
+  -l       use only LISTGROUP instead of GROUP (-n) command
+  -m dir   mailbox directory [default=/home/kiddleo/Mail]
+  -M user  mail new news to specified user (batch mode)
+  -n       only read subscribed .newsrc groups from NNTP server
+  -N       mail new news to your posts (batch mode)
+  -o       post all postponed articles and exit
+  -p port  use port as NNTP port [default=119]
+  -q       don't check for new newsgroups
+  -Q       quick start. Same as -nqd
+  -r       read news remotely from default NNTP server
+  -R       read news saved by -S option
+  -s dir   save news directory [default=/home/kiddleo/News]
+  -S       save new news for later reading (batch mode)
+  -u       update index files (batch mode)
+  -U       update index files in the background while reading news
+  -v       verbose output for batch mode options
+  -V       print version & date information
+  -w       post an article and exit
+  -X       don't save any files on quit
+  -z       start if any unread news
+  -Z       return status indicating if any unread news (batch mode)
+
+Mail bug reports/comments to tin-bugs@tin.org
