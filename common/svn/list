@@ -1,0 +1,34 @@
+list (ls): List directory entries in the repository.
+usage: list [TARGET...]
+
+  List each TARGET file and the contents of each TARGET directory as
+  they exist in the repository.  If TARGET is a working copy path, the
+  corresponding repository URL will be used.
+
+  The default TARGET is '.', meaning the repository URL of the current
+  working directory.
+
+  With --verbose, the following fields show the status of the item:
+
+    Revision number of the last commit
+    Author of the last commit
+    Size (in bytes)
+    Date and time of the last commit
+
+Valid options:
+  -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)
+                             A revision argument can be one of:
+                                NUMBER       revision number
+                                "{" DATE "}" revision at start of the date
+                                "HEAD"       latest in repository
+                                "BASE"       base rev of item's working copy
+                                "COMMITTED"  last commit at or before BASE
+                                "PREV"       revision just before COMMITTED
+  -v [--verbose]           : print extra information
+  -R [--recursive]         : descend recursively
+  --username arg           : specify a username ARG
+  --password arg           : specify a password ARG
+  --no-auth-cache          : do not cache authentication tokens
+  --non-interactive        : do no interactive prompting
+  --config-dir arg         : read user configuration files from directory ARG
+

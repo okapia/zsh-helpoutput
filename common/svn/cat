@@ -1,0 +1,18 @@
+cat: Output the content of specified files or URLs.
+usage: cat TARGET...
+
+Valid options:
+  -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)
+                             A revision argument can be one of:
+                                NUMBER       revision number
+                                "{" DATE "}" revision at start of the date
+                                "HEAD"       latest in repository
+                                "BASE"       base rev of item's working copy
+                                "COMMITTED"  last commit at or before BASE
+                                "PREV"       revision just before COMMITTED
+  --username arg           : specify a username ARG
+  --password arg           : specify a password ARG
+  --no-auth-cache          : do not cache authentication tokens
+  --non-interactive        : do no interactive prompting
+  --config-dir arg         : read user configuration files from directory ARG
+

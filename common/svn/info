@@ -1,0 +1,10 @@
+info: Display information about a file or directory.
+usage: info [PATH...]
+
+  Print information about each PATH (default: '.').
+
+Valid options:
+  --targets arg            : pass contents of file ARG as additional args
+  -R [--recursive]         : descend recursively
+  --config-dir arg         : read user configuration files from directory ARG
+
