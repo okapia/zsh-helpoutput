@@ -14,9 +14,10 @@ General options:
       --version               display version information and exit.
 
 Output format selection (default is to produce Info):
-      --docbook             output DocBook rather than Info.
+      --docbook             output Docbook XML rather than Info.
       --html                output HTML rather than Info.
-      --xml                 output XML (TexinfoML) rather than Info.
+      --xml                 output Texinfo XML rather than Info.
+      --plaintext           output plain text rather than Info.
 
 General output options:
   -E, --macro-expand FILE   output macro-expanded source to FILE.
@@ -41,34 +42,50 @@ Options for Info and plain text:
       --paragraph-indent=VAL  indent Info paragraphs by VAL spaces (default 3).
                                 If VAL is `none', do not indent; if VAL is
                                 `asis', preserve existing indentation.
-      --split-size=NUM        split Info files at size NUM (default 50000).
+      --split-size=NUM        split Info files at size NUM (default 300000).
+
+Options for HTML:
+      --css-include=FILE        include FILE in HTML <style> output;
+                                  read stdin if FILE is -.
+
+Options for XML and Docbook:
+      --output-indent=VAL       indent XML elements by VAL spaces (default 2).
+                                  If VAL is 0, ignorable whitespace is dropped.
 
 Input file options:
-      --commands-in-node-names   allow @ commands in node names.
-  -D VAR                         define the variable VAR, as with @set.
-  -I DIR                         append DIR to the @include search path.
-  -P DIR                         prepend DIR to the @include search path.
-  -U VAR                         undefine the variable VAR, as with @clear.
+      --commands-in-node-names  allow @ commands in node names.
+  -D VAR                        define the variable VAR, as with @set.
+  -I DIR                        append DIR to the @include search path.
+  -P DIR                        prepend DIR to the @include search path.
+  -U VAR                        undefine the variable VAR, as with @clear.
 
 Conditional processing in input:
+  --ifdocbook       process @ifdocbook and @docbook even if
+                      not generating Docbook.
   --ifhtml          process @ifhtml and @html even if not generating HTML.
   --ifinfo          process @ifinfo even if not generating Info.
   --ifplaintext     process @ifplaintext even if not generating plain text.
   --iftex           process @iftex and @tex; implies --no-split.
+  --ifxml           process @ifxml and @xml.
+  --no-ifdocbook    do not process @ifdocbook and @docbook text.
   --no-ifhtml       do not process @ifhtml and @html text.
   --no-ifinfo       do not process @ifinfo text.
   --no-ifplaintext  do not process @ifplaintext text.
   --no-iftex        do not process @iftex and @tex text.
+  --no-ifxml        do not process @ifxml and @xml text.
+
+  Also, for the --no-ifFORMAT options, do process @ifnotFORMAT text.
 
   The defaults for the @if... conditionals depend on the output format:
   if generating HTML, --ifhtml is on and the others are off;
   if generating Info, --ifinfo is on and the others are off;
   if generating plain text, --ifplaintext is on and the others are off;
+  if generating XML, --ifxml is on and the others are off.
 
 Examples:
   makeinfo foo.texi                     write Info to foo's @setfilename
   makeinfo --html foo.texi              write HTML to @setfilename
-  makeinfo --xml foo.texi               write XML to @setfilename
+  makeinfo --xml foo.texi               write Texinfo XML to @setfilename
   makeinfo --docbook foo.texi           write DocBook XML to @setfilename
   makeinfo --no-headers foo.texi        write plain text to standard output
 
