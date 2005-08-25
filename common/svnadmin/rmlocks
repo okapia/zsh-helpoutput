@@ -1,0 +1,3 @@
+rmlocks: usage: svnadmin rmlocks REPOS_PATH LOCKED_PATH...
+
+Unconditionally remove lock from each LOCKED_PATH.

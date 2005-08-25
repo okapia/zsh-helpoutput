@@ -13,15 +13,15 @@ usage: 1. mkdir PATH...
   In both cases, all the intermediate directories must already exist.
 
 Valid options:
+  -q [--quiet]             : print as little as possible
   -m [--message] arg       : specify commit message ARG
   -F [--file] arg          : read data from file ARG
-  -q [--quiet]             : print as little as possible
+  --force-log              : force validity of log message source
+  --editor-cmd arg         : use ARG as external editor
+  --encoding arg           : treat value as being in charset encoding ARG
   --username arg           : specify a username ARG
   --password arg           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --editor-cmd arg         : use ARG as external editor
-  --encoding arg           : treat value as being in charset encoding ARG
-  --force-log              : force validity of log message source
   --config-dir arg         : read user configuration files from directory ARG
 
