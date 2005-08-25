@@ -16,10 +16,7 @@ usage: 1. propset PROPNAME [PROPVAL | -F VALFILE] PATH...
       LastChangedRevision
       Id                       - A compressed summary of the previous
                                    4 keywords.
-    svn:executable - If present, make the file executable. This
-      property cannot be set on a directory.  A non-recursive attempt
-      will fail, and a recursive attempt will set the property only
-      on the file children of the directory.
+    svn:executable - If present, make the file executable.
     svn:eol-style  - One of 'native', 'LF', 'CR', 'CRLF'.
     svn:mime-type  - The mimetype of the file.  Used to determine
       whether to merge the file, and how to serve it from Apache.
@@ -30,9 +27,17 @@ usage: 1. propset PROPNAME [PROPVAL | -F VALFILE] PATH...
       revision flags, and an URL.  For example
         foo             http://example.com/repos/zig
         foo/bar -r 1234 http://example.com/repos/zag
+    svn:needs-lock - If present, indicates that the file should be locked
+      before it is modified.  Makes the working copy file read-only
+      when it is not locked.
+  The svn:keywords, svn:executable, svn:eol-style, svn:mime-type and
+  svn:needs-lock properties cannot be set on a directory.  A non-recursive
+  attempt will fail, and a recursive attempt will set the property
+  only on the file children of the directory.
 
 Valid options:
   -F [--file] arg          : read data from file ARG
+  --encoding arg           : treat value as being in charset encoding ARG
   -q [--quiet]             : print as little as possible
   -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)
                              A revision argument can be one of:
@@ -49,7 +54,6 @@ Valid options:
   --password arg           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --encoding arg           : treat value as being in charset encoding ARG
   --force                  : force operation to run
   --config-dir arg         : read user configuration files from directory ARG
 

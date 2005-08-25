@@ -33,11 +33,12 @@ Valid options:
                                 "PREV"       revision just before COMMITTED
   --old arg                : use ARG as the older target
   --new arg                : use ARG as the newer target
-  -x [--extensions] arg    : pass ARG as bundled options to GNU diff
   -N [--non-recursive]     : operate on single directory only
   --diff-cmd arg           : use ARG as diff command
+  -x [--extensions] arg    : pass ARG to --diff-cmd as options (default: '-u')
   --no-diff-deleted        : do not print differences for deleted files
   --notice-ancestry        : notice ancestry when calculating differences
+  --force                  : force operation to run
   --username arg           : specify a username ARG
   --password arg           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens

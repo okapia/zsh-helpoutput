@@ -1,5 +1,5 @@
 general usage: svnadmin SUBCOMMAND REPOS_PATH  [ARGS & OPTIONS ...]
-Type "svnadmin help <subcommand>" for help on a specific subcommand.
+Type 'svnadmin help <subcommand>' for help on a specific subcommand.
 
 Available subcommands:
    create
@@ -10,8 +10,10 @@ Available subcommands:
    list-dblogs
    list-unused-dblogs
    load
+   lslocks
    lstxns
    recover
+   rmlocks
    rmtxns
    setlog
    verify

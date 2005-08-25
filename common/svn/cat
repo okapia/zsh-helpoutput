@@ -1,5 +1,8 @@
 cat: Output the content of specified files or URLs.
-usage: cat TARGET...
+usage: cat TARGET[@REV]...
+
+  If specified, REV determines in which revision the target is first
+  looked up.
 
 Valid options:
   -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)

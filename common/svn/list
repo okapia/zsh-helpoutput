@@ -1,9 +1,10 @@
 list (ls): List directory entries in the repository.
-usage: list [TARGET...]
+usage: list [TARGET[@REV]...]
 
   List each TARGET file and the contents of each TARGET directory as
   they exist in the repository.  If TARGET is a working copy path, the
-  corresponding repository URL will be used.
+  corresponding repository URL will be used. If specified, REV determines
+  in which revision the target is first looked up.
 
   The default TARGET is '.', meaning the repository URL of the current
   working directory.
@@ -26,6 +27,8 @@ Valid options:
                                 "PREV"       revision just before COMMITTED
   -v [--verbose]           : print extra information
   -R [--recursive]         : descend recursively
+  --incremental            : give output suitable for concatenation
+  --xml                    : output in XML
   --username arg           : specify a username ARG
   --password arg           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens

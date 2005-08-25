@@ -5,7 +5,6 @@ this if you've been getting errors indicating that recovery
 ought to be run.  Recovery requires exclusive access and will
 exit if the repository is in use by another process.
 
-
 Valid options:
   --wait                   : wait instead of exit if the repository is in
                              use by another process
