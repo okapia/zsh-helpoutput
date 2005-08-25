@@ -1,6 +1,6 @@
 export: Create an unversioned copy of a tree.
-usage: 1. export [-r REV] URL [PATH]
-       2. export [-r REV] PATH1 [PATH2]
+usage: 1. export [-r REV] URL[@PEGREV] [PATH]
+       2. export [-r REV] PATH1[@PEGREV] [PATH2]
 
   1. Exports a clean directory tree from the repository specified by
      URL, at revision REV if it is given, otherwise at HEAD, into
@@ -14,6 +14,9 @@ usage: 1. export [-r REV] URL [PATH]
      changes will be preserved, but files not under version control will
      not be copied.
 
+  If specified, PEGREV determines in which revision the target is first
+  looked up.
+
 Valid options:
   -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)
                              A revision argument can be one of:
@@ -24,6 +27,7 @@ Valid options:
                                 "COMMITTED"  last commit at or before BASE
                                 "PREV"       revision just before COMMITTED
   -q [--quiet]             : print as little as possible
+  -N [--non-recursive]     : operate on single directory only
   --force                  : force operation to run
   --username arg           : specify a username ARG
   --password arg           : specify a password ARG
@@ -33,4 +37,5 @@ Valid options:
   --native-eol arg         : use a different EOL marker than the standard
                              system marker for files with a native svn:eol-style
                              property.  ARG may be one of 'LF', 'CR', 'CRLF'
+  --ignore-externals       : ignore externals definitions
 

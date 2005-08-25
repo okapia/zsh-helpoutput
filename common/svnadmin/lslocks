@@ -1,0 +1,3 @@
+lslocks: usage: svnadmin lslocks REPOS_PATH
+
+Print descriptions of all locks.

@@ -1,8 +1,9 @@
 propget (pget, pg): Print value of PROPNAME on files, dirs, or revisions.
-usage: 1. propget PROPNAME [PATH...]
+usage: 1. propget PROPNAME [TARGET[@REV]...]
        2. propget PROPNAME --revprop -r REV [URL]
 
-  1. Prints versioned prop in working copy.
+  1. Prints versioned prop. If specified, REV determines in which
+     revision the target is first looked up.
   2. Prints unversioned remote prop on repos revision.
 
   By default, this subcommand will add an extra newline to the end

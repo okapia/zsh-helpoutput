@@ -6,18 +6,18 @@ usage: import [PATH] URL
   as necessary in the repository.
 
 Valid options:
-  -m [--message] arg       : specify commit message ARG
-  -F [--file] arg          : read data from file ARG
   -q [--quiet]             : print as little as possible
   -N [--non-recursive]     : operate on single directory only
+  --auto-props             : enable automatic properties
+  --no-auto-props          : disable automatic properties
+  -m [--message] arg       : specify commit message ARG
+  -F [--file] arg          : read data from file ARG
+  --force-log              : force validity of log message source
+  --editor-cmd arg         : use ARG as external editor
+  --encoding arg           : treat value as being in charset encoding ARG
   --username arg           : specify a username ARG
   --password arg           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --force-log              : force validity of log message source
-  --editor-cmd arg         : use ARG as external editor
-  --encoding arg           : treat value as being in charset encoding ARG
   --config-dir arg         : read user configuration files from directory ARG
-  --auto-props             : enable automatic properties
-  --no-auto-props          : disable automatic properties
 
