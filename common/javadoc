@@ -1,4 +1,4 @@
-usage: javadoc [options] [packagenames] [sourcefiles] [classnames] [@files]
+usage: javadoc [options] [packagenames] [sourcefiles] [@files]
 -overview <file>          Read overview documentation from HTML file
 -public                   Show only public classes and members
 -protected                Show protected/public classes and members (default)
@@ -19,6 +19,7 @@ usage: javadoc [options] [packagenames] [sourcefiles] [classnames] [@files]
 -verbose                  Output messages about what Javadoc is doing
 -locale <name>            Locale to be used, e.g. en_US or en_US_WIN
 -encoding <name>          Source file encoding name
+-quiet                    Do not display status messages
 -J<flag>                  Pass <flag> directly to the runtime system
 
 Provided by Standard doclet:
@@ -41,12 +42,12 @@ Provided by Standard doclet:
 -nodeprecated                     Do not include @deprecated information
 -noqualifier <name1>:<name2>:...  Exclude the list of qualifiers from the output.
 -nosince                          Do not include @since information
+-notimestamp                      Do not include hidden time stamp
 -nodeprecatedlist                 Do not generate deprecated list
 -notree                           Do not generate class hierarchy
 -noindex                          Do not generate index
 -nohelp                           Do not generate help link
 -nonavbar                         Do not generate navigation bar
--quiet                            Do not display status messages to screen
 -serialwarn                       Generate warning about @serial tag
 -tag <name>:<locations>:<header>  Specify single argument custom tags
 -taglet                           The fully qualified name of Taglet to register
@@ -54,5 +55,7 @@ Provided by Standard doclet:
 -charset <charset>                Charset for cross-platform viewing of generated documentation.
 -helpfile <file>                  Include file that help link links to
 -linksource                       Generate source in HTML
+-sourcetab <tab length>           Specify the number of spaces each tab takes up in the source
+-keywords                         Include HTML meta tags with package, class and member info
 -stylesheetfile <path>            File to change style of the generated documentation
 -docencoding <name>               Output encoding name
