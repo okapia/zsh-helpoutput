@@ -2,7 +2,6 @@ invalid flag: -?
 Usage: javap <options> <classes>...
 
 where options include:
-   -b                        Backward compatibility with javap in JDK 1.1
    -c                        Disassemble the code
    -classpath <pathlist>     Specify where to find user class files
    -extdirs <dirs>           Override location of installed extensions

@@ -4,11 +4,14 @@ Usage: java [-options] class [args...]
            (to execute a jar file)
 
 where options include:
+    -d32          use a 32-bit data model if available
+
+    -d64          use a 64-bit data model if available
     -client	  to select the "client" VM
     -server	  to select the "server" VM
     -hotspot	  is a synonym for the "client" VM  [deprecated]
                   The default VM is client.
-
+                  
     -cp <class search path of directories and zip/jar files>
     -classpath <class search path of directories and zip/jar files>
                   A : separated list of directories, JAR archives,
@@ -35,3 +38,10 @@ where options include:
                   enable system assertions
     -dsa | -disablesystemassertions
                   disable system assertions
+    -agentlib:<libname>[=<options>]
+                  load native agent library <libname>, e.g. -agentlib:hprof
+                    see also, -agentlib:jdwp=help and -agentlib:hprof=help
+    -agentpath:<pathname>[=<options>]
+                  load native agent library by full pathname
+    -javaagent:<jarpath>[=<options>]
+                  load Java programming language agent, see java.lang.instrument

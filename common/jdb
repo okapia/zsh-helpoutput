@@ -12,6 +12,7 @@ where options include:
                       wait for a running VM to connect at any available address using standard connector
     -launch
                       launch VM immediately instead of waiting for 'run' command
+    -listconnectors   list the connectors available in this VM
     -connect <connector-name>:<name1>=<value1>,...
                       connect to target VM using named connector with listed argument values
     -dbgtrace [flags] print info for debugging jdb
