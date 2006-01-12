@@ -1,0 +1,20 @@
+diffstat: illegal option -- ?
+Usage: diffstat [options] [files]
+
+Reads from one or more input files which contain output from 'diff',
+producing a histogram of total lines changed for each file referenced.
+If no filename is given on the command line, reads from stdin.
+
+Options:
+  -c      prefix each line with comment (#)
+  -e FILE redirect standard error to FILE
+  -f NUM  format (0=concise, 1=normal)
+  -h      print this message
+  -k      do not merge filenames
+  -n NUM  specify minimum width for the filenames (default: auto)
+  -o FILE redirect standard output to FILE
+  -p NUM  specify number of pathname-separators to strip (default: common)
+  -u      do not sort the input list
+  -v      makes output more verbose
+  -V      prints the version number
+  -w NUM  specify maximum width of the output (default: 80)
