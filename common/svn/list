@@ -9,10 +9,11 @@ usage: list [TARGET[@REV]...]
   The default TARGET is '.', meaning the repository URL of the current
   working directory.
 
-  With --verbose, the following fields show the status of the item:
+  With --verbose, the following fields will be shown for each item:
 
     Revision number of the last commit
     Author of the last commit
+    If locked, the letter 'O'.  (Use 'svn info URL' to see details)
     Size (in bytes)
     Date and time of the last commit
 
