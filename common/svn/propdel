@@ -1,9 +1,10 @@
-propdel (pdel, pd): Remove PROPNAME from files, dirs, or revisions.
+propdel (pdel, pd): Remove a property from files, dirs, or revisions.
 usage: 1. propdel PROPNAME [PATH...]
-       2. propdel PROPNAME --revprop -r REV [URL]
+       2. propdel PROPNAME --revprop -r REV [TARGET]
 
   1. Removes versioned props in working copy.
   2. Removes unversioned remote prop on repos revision.
+     TARGET only determines which repository to access.
 
 Valid options:
   -q [--quiet]             : print as little as possible

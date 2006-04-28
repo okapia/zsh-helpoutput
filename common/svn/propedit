@@ -1,9 +1,10 @@
-propedit (pedit, pe): Edit property PROPNAME with an external editor on targets.
+propedit (pedit, pe): Edit a property with an external editor.
 usage: 1. propedit PROPNAME PATH...
-       2. propedit PROPNAME --revprop -r REV [URL]
+       2. propedit PROPNAME --revprop -r REV [TARGET]
 
   1. Edits versioned props in working copy.
   2. Edits unversioned remote prop on repos revision.
+     TARGET only determines which repository to access.
 
 Valid options:
   -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)

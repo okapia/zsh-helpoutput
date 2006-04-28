@@ -1,10 +1,11 @@
 proplist (plist, pl): List all properties on files, dirs, or revisions.
 usage: 1. proplist [TARGET[@REV]...]
-       2. proplist --revprop -r REV [URL]
+       2. proplist --revprop -r REV [TARGET]
 
   1. Lists versioned props. If specified, REV determines in which
      revision the target is first looked up.
   2. Lists unversioned remote props on repos revision.
+     TARGET only determines which repository to access.
 
 Valid options:
   -v [--verbose]           : print extra information
