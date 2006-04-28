@@ -1,9 +1,12 @@
-propset (pset, ps): Set PROPNAME to PROPVAL on files, dirs, or revisions.
-usage: 1. propset PROPNAME [PROPVAL | -F VALFILE] PATH...
-       2. propset PROPNAME --revprop -r REV [PROPVAL | -F VALFILE] [URL]
+propset (pset, ps): Set the value of a property on files, dirs, or revisions.
+usage: 1. propset PROPNAME PROPVAL PATH...
+       2. propset PROPNAME --revprop -r REV PROPVAL [TARGET]
 
   1. Creates a versioned, local propchange in working copy.
   2. Creates an unversioned, remote propchange on repos revision.
+     TARGET only determines which repository to access.
+
+  The value may be provided with the --file option instead of PROPVAL.
 
   Note: svn recognizes the following special versioned properties
   but will store any arbitrary properties set:
