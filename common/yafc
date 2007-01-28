@@ -1,0 +1,28 @@
+yafc 1.1.1 Copyright (C) 1998-2001 Martin Hedenfalk <mhe@home.se>.
+This is yet another FTP client.  Usage:
+ yafc [options] [[proto://][user[:password]@]hostname[:port][/directory] ...]
+ proto can be either 'ftp' or 'ssh'
+Options:
+  -a, --anon        (*) anonymous login
+  -d, --debug           print all commands sent to/from server
+  -D, --dump-rc         prints the default config file to stdout
+  -m, --mechanism=MECH
+                    (*) try MECH as security mechanism(s)
+  -n, --norc            don't parse config file
+  -p, --noproxy     (*) don't connect via proxy
+  -q, --quiet           don't print the yafc welcome message
+  -r, --rcfile=FILE     use other config file instead of ~/.yafc/yafcrc
+  -t, --trace[=FILE]    use a trace file (mainly for debugging)
+               if FILE specified, use it instead of ~/.yafc/trace/trace.<pid>
+  -u, --noauto      (*) disable autologin
+  -U, --noalias     (*) disable bookmark alias lookup and abbreviation
+  -v, --verbose         print all replies from server
+  -w, --wait=TIME       use a different wait time for reconnecting
+  -W, --workdir=DIR     use a different working directory (instead of ~/.yafc)
+  -V, --version         print version information and quit
+  -h, --help            print this help and quit
+
+(*) only applies for login to host specified on the command line
+
+Report bugs to <yafc-devel@lists.sourceforge.net>
+
