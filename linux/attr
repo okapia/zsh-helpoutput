@@ -1,0 +1,5 @@
+A filename to operate on is required
+Usage: attr [-LRSq] -s attrname [-V attrvalue] pathname  # set value
+       attr [-LRSq] -g attrname pathname                 # get value
+       attr [-LRSq] -r attrname pathname                 # remove attr
+      -s reads a value from stdin and -g writes a value to stdout
