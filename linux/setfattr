@@ -1,0 +1,9 @@
+setfattr 2.4.16 -- set extended attributes
+Usage: setfattr {-n name|-x name} [-v value] [-h] file...
+  -n, --name=name         set the value of the named extended attribute
+  -x, --remove=name       remove the named extended attribute
+  -v, --value=value       use value as the attribute value
+  -h, --no-dereference    do not dereference symbolic links
+      --restore=file      restore extended attributes
+      --version           print version and exit
+      --help              this help text
