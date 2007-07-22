@@ -6,9 +6,10 @@ If a long option shows an argument as mandatory, then it is mandatory
 for the equivalent short option also.  Similarly for optional arguments.
 
 Operation modes:
-  -h, --help      display this help and exit
-  -V, --version   output version information and exit
-  -y, --yacc      emulate POSIX yacc
+  -h, --help                 display this help and exit
+  -V, --version              output version information and exit
+      --print-localedir      output directory containing locale-dependent data
+  -y, --yacc                 emulate POSIX yacc
 
 Parser:
   -S, --skeleton=FILE        specify the skeleton to use
@@ -30,7 +31,7 @@ Output:
 THINGS is a list of comma separated words that can include:
   `state'        describe the states
   `itemset'      complete the core item sets with their closure
-  `lookahead'    explicitly associate lookaheads to items
+  `look-ahead'   explicitly associate look-ahead tokens to items
   `solved'       describe shift/reduce conflicts solving
   `all'          include all the above information
   `none'         disable the report
