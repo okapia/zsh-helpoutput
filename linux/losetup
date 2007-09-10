@@ -1,0 +1,9 @@
+losetup: invalid option -- h
+usage:
+  losetup [-e encryption] [options] loop_device file  # setup
+  losetup -F [options] loop_device [file]   # setup, read /etc/fstab
+  losetup loop_device                       # give info
+  losetup -a                                # give info of all loops
+  losetup -d loop_device                    # delete
+options:  -o offset  -s sizelimit  -p passwdfd  -S pseed  -H phash  -t timeout
+          -I loinit  -T  -K gpgkey  -G gpghome  -C itercountk  -v  -r
