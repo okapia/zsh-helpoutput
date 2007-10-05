@@ -1,0 +1,13 @@
+Usage: sqlite [OPTIONS] FILENAME [SQL]
+Options are:
+   -init filename       read/process named file
+   -echo                print commands before execution
+   -[no]header          turn headers on or off
+   -column              set output mode to 'column'
+   -html                set output mode to HTML
+   -line                set output mode to 'line'
+   -list                set output mode to 'list'
+   -separator 'x'       set output field separator (|)
+   -nullvalue 'text'    set text string for NULL values
+   -version             show SQLite version
+   -help                show this text, also show dot-commands
