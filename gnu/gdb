@@ -6,11 +6,17 @@ This is the GNU debugger.  Usage:
 Options:
 
   --args             Arguments after executable-file are passed to inferior
-  --[no]async        Enable (disable) asynchronous version of CLI
   -b BAUDRATE        Set serial port baud rate used for remote debugging.
   --batch            Exit after processing options.
+  --batch-silent     As for --batch, but suppress all gdb stdout output.
+  --return-child-result
+                     GDB exit code will be the child's exit code.
   --cd=DIR           Change current directory to DIR.
-  --command=FILE     Execute GDB commands from FILE.
+  --command=FILE, -x Execute GDB commands from FILE.
+  --eval-command=COMMAND, -ex
+                     Execute a single GDB command.
+                     May be used multiple times and in conjunction
+                     with --command.
   --core=COREFILE    Analyze the core dump COREFILE.
   --pid=PID          Attach to running process PID.
   --dbx              DBX compatibility mode.
@@ -21,7 +27,7 @@ Options:
   --help             Print this message.
   --interpreter=INTERP
                      Select a specific interpreter / user interface
-  --mapped           Use mapped symbol files if supported on this system.
+  -l TIMEOUT         Set timeout in seconds for remote debugging.
   --nw		     Do not use a window interface.
   --nx               Do not read .gdbinit file.
   --quiet            Do not print version number on startup.
