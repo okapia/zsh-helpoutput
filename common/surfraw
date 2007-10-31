@@ -1,0 +1,38 @@
+Usage: surfraw [-help] [-elvi] elvis [elvioptions] [search terms]
+       surfraw [options] bookmark
+    If you wish to run the elvi directly, run "surfraw-update-path" to append
+	/usr/lib/surfraw to your $PATH in your shell's config files.
+    See surfraw-update-path(1) for details
+Options:
+   -elvi  List elvi
+   -help  This help
+sr is an alias for surfraw
+Global options:
+  -browser=EXECUTABLE		Set browser
+				Default: 
+  -elvi				List Surfraw mechanisms for conquering evil
+  -escape-url-args=yes|no	Apply url escaping to arguments
+				Default: yes
+				Environment: SURFRAW_escape_url_args
+  -g | -graphical		Get some windowed sin
+  				Default: no
+				Environment: SURFRAW_graphical
+  -help				What you're reading now, dude
+  -p | -print			Just print search URL, don't pass to browser
+  -quiet=yes|no			I can't enjoy it with you talking all the time
+				Default: no
+				Environment: SURFRAW_quiet
+  -new[=yes|no]			Start in a new window
+				Default: no
+				Environment: SURFRAW_new_window
+  -t | -text			Back to the yellow brick road
+  -q | -quote			Quote arguments with " characters
+				Default: no
+				Environment: SURFRAW_quote_args
+  -version			Display Surfraw version (2.1.7)
+Copyright:
+  Copyright (c) 2003-2007 The Surfraw-Devel Team
+                           <surfraw-devel@lists.alioth.debian.org>
+  Copyright (c) 2000-2001 Julian Assange <proff@iq.org>
+  Copyright (c) 2001 Australian Institute for Collaborative Research
+  Copyright (c) 2000 Melbourne Institute for Advanced Study
