@@ -1,28 +1,44 @@
-added interface ip=158.234.142.61 bcast=158.234.142.255 nmask=255.255.255.0
-Usage: smbclient service <password> [options]
-Version 2.2.3a
-	-s smb.conf           pathname to smb.conf file
-	-O socket_options     socket options to use
-	-R name resolve order use these name resolution services only
-	-M host               send a winpopup message to the host
-	-i scope              use this NetBIOS scope
-	-N                    don't ask for a password
-	-n netbios name.      Use this name as my netbios name
-	-d debuglevel         set the debuglevel
-	-P                    connect to service as a printer
-	-p port               connect to the specified port
-	-l log basename.      Basename for log/debug files
-	-h                    Print this help message.
-	-I dest IP            use this IP to connect to
-	-E                    write messages to stderr instead of stdout
-	-U username           set the network username
-	-L host               get a list of shares available on a host
-	-t terminal code      terminal i/o code {sjis|euc|jis7|jis8|junet|hex}
-	-m max protocol       set the max protocol level
-	-A filename           get the credentials from a file
-	-W workgroup          set the workgroup name
-	-T<c|x>IXFqgbNan      command line tar
-	-D directory          start from directory
-	-c command string     execute semicolon separated commands
-	-b xmit/send buffer   changes the transmit/send buffer (default: 65520)
+Usage: smbclient service <password>
+  -R, --name-resolve=NAME-RESOLVE-ORDER     Use these name resolution services
+                                            only
+  -M, --message=HOST                        Send message
+  -I, --ip-address=IP                       Use this IP to connect to
+  -E, --stderr                              Write messages to stderr instead
+                                            of stdout
+  -L, --list=HOST                           Get a list of shares available on
+                                            a host
+  -t, --terminal=CODE                       Terminal I/O code
+                                            {sjis|euc|jis7|jis8|junet|hex}
+  -m, --max-protocol=LEVEL                  Set the max protocol level
+  -T, --tar=<c|x>IXFqgbNan                  Command line tar
+  -D, --directory=DIR                       Start from directory
+  -c, --command=STRING                      Execute semicolon separated
+                                            commands
+  -b, --send-buffer=BYTES                   Changes the transmit/send buffer
+  -p, --port=PORT                           Port to connect to
+  -g, --grepable                            Produce grepable output
 
+Help options:
+  -?, --help                                Show this help message
+  --usage                                   Display brief usage message
+
+Common samba options:
+  -d, --debuglevel=DEBUGLEVEL               Set debug level
+  -s, --configfile=CONFIGFILE               Use alternate configuration file
+  -l, --log-basename=LOGFILEBASE            Base name for log files
+  -V, --version                             Print version
+
+Connection options:
+  -O, --socket-options=SOCKETOPTIONS        socket options to use
+  -n, --netbiosname=NETBIOSNAME             Primary netbios name
+  -W, --workgroup=WORKGROUP                 Set the workgroup name
+  -i, --scope=SCOPE                         Use this Netbios scope
+
+Authentication options:
+  -U, --user=USERNAME                       Set the network username
+  -N, --no-pass                             Don't ask for a password
+  -k, --kerberos                            Use kerberos (active directory)
+                                            authentication
+  -A, --authentication-file=FILE            Get the credentials from a file
+  -S, --signing=on|off|required             Set the client signing state
+  -P, --machine-pass                        Use stored machine account password
