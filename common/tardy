@@ -1,0 +1,266 @@
+
+NAME
+	tardy - a tar post-processor
+
+SYNOPSIS
+	tardy [ option...  ][ infile [ outfile ]]
+	tardy -Help
+	tardy -VERSion
+
+DESCRIPTION
+	The tardy program is used to manipulate the file headers within tar(1)
+	archive files.
+
+	This is useful when preparing sources for Internet archive sites, and
+	you don't want to included details of your development environment in
+	the tar(1) file.
+
+	One of the most useful features is the ability to add a prefix to the
+	names of the files within the tar(1) file.  An example is adding the
+	prefix ".", for when you have a tar(1) file with absolute paths in it,
+	and need to extract the file with relative paths.
+
+	The GNU tar format headers are understood, including extended names.
+
+	If no input file is named, or the special name "-" is used, input will
+	be read from the standard input.  Similarly, if no output file is
+	named, or the special name "-" is used, output will be written to the
+	standard output.
+
+OPTIONS
+	The following options are understood:
+
+	-Block_Size number
+		Thsi option many be used to specify the block size, as a
+		multiple of 512 bytes.	The default is CW]-bs=20 resulting in a
+		10KB block size.
+
+	-Clean_Meta
+		This option may be used to ensure that file names do not
+		contain shell meta characters.	If any are found, they are
+		replaced by a hyphen (-) character.  Warning: duplicate file
+		names may result.
+
+	-Clean_Print
+		This option may be used to ensure that file names only contain
+		printable ascii characters.  If any non-printable characters
+		are found, they are replaced by a hyphen (-) character.
+		Warning: duplicate file names may result.
+
+	-Clean_Space
+		This option may be used to ensure that file names contain no
+		white space characters.	 If any are found, they are replaced by
+		a hyphen (-) character.	 Warning: duplicate file names may
+		result.
+
+	-Clean
+		This option is a terse way of specifying all of the above 3
+		options.
+
+	-DownCase
+		This option may be used to force file names to be all lower
+		case.  Warning: duplicate file names may result.
+
+	-Group arg
+		This option may be used to set both the group name and group
+		number fields in the header of every file in the archive file.
+		The argument may be either a string or a number.  It is an
+		error if a corresponding entry cannot be found in the
+		/etc/group file.
+
+	-Group_NAme string
+		This option is used to set the group name field in the header
+		of every file in the archive file.  The string may be any
+		arbitrary string, it is not restricted to a known group.
+
+	-Group_NAme number
+		This option is used to set the group name field in the header
+		of every file in the archive file.  The number is mapped to a
+		group name through the /etc/group file.	 It is an error if a
+		corresponding group cannot be found.
+
+	-Group_NUmber string
+		This option is used to set the group number field in the header
+		of every file in the archive file.  The string is mapped to a
+		group number through the /etc/group file.  It is an error if a
+		corresponding group cannot be found.
+
+	-Group_NUmber number
+		This option is used to set the group number field in the header
+		of every file in the archive file.  The number may be any
+		arbitrary number, it is not restricted to a known group.
+
+	-Help
+		This option may be used to obtain more information about how to
+		use the tardy program.
+
+	-Input_ForMaT name
+		This option may be used to specify the input format to be used.
+		The input names are
+
+		tar
+			This format understands all of the various tar(1)
+			formats.  This is the default.
+
+		list
+			The input is a text file which contains one file name
+			per line.  The named files are read as if they were the
+			input.	It is common for find(1) to be used to form the
+			list of file names.
+
+		Any other format name will produce an error.
+
+	-List
+		Give a terse listing of the file headers on the standard error
+		as they are written to the output.
+
+	-No_Directories
+		This option may be used to supress directories from the output.
+		This can be useful when the archive has been created with
+		directories in useless modes.
+
+	-Mode_Clear bits
+		This option may be used to set the mode of each file in the
+		archive file.  The bits specified are cleared in the mode.  You
+		should use an octal number with a leading zero as the argument;
+		if you omit the leading zero it will be interpreted as decimal.
+		The -Mode_Set option is applied first, the -Mode_Clear option
+		is applied specond; if neither is specified the mode of each
+		file is unaltered.
+
+	-Mode_Set bits
+		This option may be used to set the mode of each file in the
+		archive file.  The bits specified are set in the mode.	You
+		should use an octal number with a leading zero as the argument;
+		if you omit the leading zero it will be interpreted as decimal.
+
+	-Now
+		Set the last-time-modified field of the headers to the current
+		time, all files will be giben the same time.
+
+	-Old_Type
+		By default, tardy corrects the old normal file type into the
+		modern normal file type.  This option requests that old normal
+		file type indicators remain unaltered.
+
+	-Output_ForMaT name
+		This option may be used to specify the output format to be
+		used.  The output names are
+
+		ustar
+			The format that GNU tar uses.  This is the default.
+
+		tar-bsd
+			The format that BSD tar(1) uses.
+
+		cpio
+			The new cpio(1) ASCII format.
+
+		cpio-old-ascii
+			The old cpio(1) ASCII format.
+
+		v7
+			The ancient UNIX V7 tar(1) format.
+
+		Any other format name will produce an error.
+
+	-Prefix string
+		This option is used to add a prefix directory name to the name
+		of every file in the archive file.
+
+	-PROgress
+		This option is used to obtain a progress indicator.  Only works
+		in combination with the --ifmt=list option.
+
+	-Remove_Prefix number
+		This option is used to remove a number of leading directories
+		from the name of every file in the archive file, if present.
+		The prefixes will be removed before any prefix specified by the
+		-Prefix option is prepended.
+
+	-Remove_Prefix string
+		This option is used to remove a prefix directory name from the
+		name of every file in the archive file, if present.  This
+		option may be given more than once, and as many of the prefixes
+		as appear will be removed.  The prefixes will be removed before
+		any prefix specified by the -Prefix option is prepended.
+
+		This option is potentially ambiguous with the preceeding
+		option, if you wish to remove a leading prefix which looks like
+		a number.  If this is the case, add a slash ("/") to the end of
+		the prefix to stop it looking like a number.
+
+	-UpCase
+		This option may be used to force file names to be all upper
+		case.  Warning: duplicate file names may result.
+
+	-User arg
+		This option may be used to set both the user name and user
+		number fields in the header of every file in the archive file.
+		The argument may be either a string or a number.  It is an
+		error if a corresponding entry cannot be found in the
+		/etc/passwd file.
+
+	-User_NAme string
+		This option is used to set the user name field in the header of
+		every file in the archive file.	 The string may be any
+		arbitrary string, it is not restricted to a known user.
+
+	-User_NAme number
+		This option is used to set the user name field in the header of
+		every file in the archive file.	 The number is mapped to a user
+		name through the /etc/passwd file.  It is an error if a
+		corresponding user cannot be found.
+
+	-User_NUmber string
+		This option is used to set the user number field in the header
+		of every file in the archive file.  The string is mapped to a
+		user number through the /etc/passwd file.  It is an error if a
+		corresponding user cannot be found.
+
+	-User_NUmber number
+		This option is used to set the user number field in the header
+		of every file in the archive file.  The number may be any
+		arbitrary number, it is not restricted to a known user.
+
+	-VERSion
+		Print the version of the tardy program being executed.
+
+	See also tardy(1) for options common to all tardy commands.
+
+	All options may be abbreviated; the abbreviation is documented as the
+	upper case letters, all lower case letters and underscores (_) are
+	optional.  You must use consecutive sequences of optional letters.
+
+	All options are case insensitive, you may type them in upper case or
+	lower case or a combination of both, case is not important.
+
+	For example: the arguments "-help, "-HELP" and "-h" are all interpreted
+	to mean the -Help option.  The argument "-hlp" will not be understood,
+	because consecutive optional characters were not supplied.
+
+	Options and other command line arguments may be mixed arbitrarily on
+	the command line, after the function selectors.
+
+	The GNU long option names are understood.  Since all option names for
+	tardy are long, this means ignoring the extra leading '-'.  The
+	"--option=value" convention is also understood.
+
+EXIT STATUS
+	The tardy command will exit with a status of 1 on any error.  The tardy
+	command will only exit with a status of 0 if there are no errors.
+
+COPYRIGHT
+	tardy version 1.12.D002
+	Copyright (C) 1993, 1994, 1995, 1996, 1998, 1999, 2000, 2001, 2002,
+	2003, 2004 Peter Miller; All rights reserved.
+
+	The tardy program comes with ABSOLUTELY NO WARRANTY; for details use
+	the 'tardy -VERSion Warranty' command.	The tardy program is free
+	software, and you are welcome to redistribute it under certain
+	conditions; for details use the 'tardy -VERSion Redistribution'
+	command.
+
+AUTHOR
+	Peter Miller   EMail: millerp@canb.auug.org.au
+	/\/\*	     WWW: http://www.canb.auug.org.au/~millerp/
