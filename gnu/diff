@@ -53,6 +53,7 @@ Compare files line by line.
   -l  --paginate  Pass the output through `pr' to paginate it.
   -t  --expand-tabs  Expand tabs to spaces in output.
   -T  --initial-tab  Make tabs line up by prepending a tab.
+  --tabsize=NUM  Tab stops are every NUM (default 8) print columns.
 
   -r  --recursive  Recursively compare any subdirectories found.
   -N  --new-file  Treat absent files as empty.
