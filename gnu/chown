@@ -1,12 +1,11 @@
-Usage: chown [OPTION]... OWNER[:[GROUP]] FILE...
-  or:  chown [OPTION]... :GROUP FILE...
+Usage: chown [OPTION]... [OWNER][:[GROUP]] FILE...
   or:  chown [OPTION]... --reference=RFILE FILE...
 Change the owner and/or group of each FILE to OWNER and/or GROUP.
 With --reference, change the owner and group of each FILE to those of RFILE.
 
   -c, --changes          like verbose but report only when a change is made
-      --dereference      affect the referent of each symbolic link, rather
-                         than the symbolic link itself (this is the default)
+      --dereference      affect the referent of each symbolic link (this is
+                         the default), rather than the symbolic link itself
   -h, --no-dereference   affect each symbolic link instead of any referenced
                          file (useful only on systems that can change the
                          ownership of a symlink)
@@ -15,11 +14,11 @@ With --reference, change the owner and group of each FILE to those of RFILE.
                          its current owner and/or group match those specified
                          here.  Either may be omitted, in which case a match
                          is not required for the omitted attribute.
-      --no-preserve-root do not treat `/' specially (the default)
+      --no-preserve-root  do not treat `/' specially (the default)
       --preserve-root    fail to operate recursively on `/'
   -f, --silent, --quiet  suppress most error messages
       --reference=RFILE  use RFILE's owner and group rather than
-                         the specifying OWNER:GROUP values
+                         specifying OWNER:GROUP values
   -R, --recursive        operate on files and directories recursively
   -v, --verbose          output a diagnostic for every file processed
 
@@ -37,7 +36,12 @@ one takes effect.
       --version  output version information and exit
 
 Owner is unchanged if missing.  Group is unchanged if missing, but changed
-to login group if implied by a `:'.  OWNER and GROUP may be numeric as well
-as symbolic.
+to login group if implied by a `:' following a symbolic OWNER.
+OWNER and GROUP may be numeric as well as symbolic.
+
+Examples:
+  chown root /u        Change the owner of /u to "root".
+  chown root:staff /u  Likewise, but also change its group to "staff".
+  chown -hR root /u    Change the owner of /u and subfiles to "root".
 
 Report bugs to <bug-coreutils@gnu.org>.
