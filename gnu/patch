@@ -53,6 +53,8 @@ Miscellaneous options:
   --verbose  Output extra information about the work being done.
   --dry-run  Do not actually change any files; just print what would happen.
   --posix  Conform to the POSIX standard.
+  -U  --unified-reject-files  Create unified reject files.
+  --global-reject-file=file  Put all rejects into one file.
 
   -d DIR  --directory=DIR  Change the working directory to DIR first.
   --binary  Read and write data in binary mode (no effect on this platform).
