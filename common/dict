@@ -1,0 +1,32 @@
+dict 1.10.11/rf on Linux 2.6.26-1-iop32x
+Copyright 1997-2002 Rickard E. Faith (faith@dict.org)
+Copyright 2002-2007 Aleksey Cheusov (vle@gmx.net)
+
+Usage: dict [options] [word]
+Query a dictd server for the definition of a word
+
+-h --host <server>        specify server
+-p --port <service>       specify port
+-d --database <dbname>    select a database to search
+-m --match                match instead of define
+-s --strategy <strategy>  strategy for matching or defining
+-c --config <file>        specify configuration file
+-C --nocorrect            disable attempted spelling correction
+-D --dbs                  show available databases
+-S --strats               show available search strategies
+-H --serverhelp           show server help
+-i --info <dbname>        show information about a database
+-I --serverinfo           show information about the server
+-a --noauth               disable authentication
+-u --user <username>      username for authentication
+-k --key <key>            shared secret for authentication
+-V --version              display version information
+-L --license              display copyright and license information
+   --help                 display this help
+-v --verbose              be verbose
+-r --raw                  trace raw transaction
+   --debug <flag>         set debugging flag
+   --pipesize <size>      specify buffer size for pipelining (256)
+   --client <text>        additional text for client command
+-M --mime                 send OPTION MIME command if server supports it
+-f --formatted            use strict tabbed format of output
