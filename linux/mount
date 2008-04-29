@@ -15,6 +15,17 @@ One can also mount an already visible directory tree elsewhere:
        mount --bind olddir newdir
 or move a subtree:
        mount --move olddir newdir
+One can change the type of mount containing the directory dir:
+       mount --make-shared dir
+       mount --make-slave dir
+       mount --make-private dir
+       mount --make-unbindable dir
+One can change the type of all the mounts in a mount subtree
+containing the directory dir:
+       mount --make-rshared dir
+       mount --make-rslave dir
+       mount --make-rprivate dir
+       mount --make-runbindable dir
 A device can be given by name, say /dev/hda1 or /dev/cdrom,
 or by label, using  -L label  or by uuid, using  -U uuid .
 Other options: [-nfFrsvw] [-o options] [-p passwdfd].
