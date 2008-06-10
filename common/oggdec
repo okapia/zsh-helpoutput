@@ -1,0 +1,18 @@
+oggdec from vorbis-tools 1.2.0
+ by the Xiph.Org Foundation (http://www.xiph.org/)
+
+Usage: oggdec [flags] file1.ogg [file2.ogg ... fileN.ogg]
+
+Supported flags:
+ --quiet, -Q      Quiet mode. No console output.
+ --help,  -h      Produce this help message.
+ --version, -v    Print out version number.
+ --bits, -b       Bit depth for output (8 and 16 supported)
+ --endianness, -e Output endianness for 16 bit output. 0 for
+                  little endian (default), 1 for big endian
+ --sign, -s       Sign for output PCM, 0 for unsigned, 1 for
+                  signed (default 1)
+ --raw, -R        Raw (headerless) output.
+ --output, -o     Output to given filename. May only be used
+                  if there is only one input file, except in
+                  raw mode.

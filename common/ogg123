@@ -1,0 +1,50 @@
+ogg123 from vorbis-tools 1.2.0
+ by the Xiph.Org Foundation (http://www.xiph.org/)
+
+Usage: ogg123 [options] file ...
+Play Ogg audio files and network streams.
+
+Available codecs: FLAC, Speex, Ogg Vorbis.
+
+Output options
+  -d dev, --device dev    Use output device "dev". Available devices:
+                          Live:  alsa, oss, null
+                          File:  wav, raw, au
+
+  -f file, --file file    Set the output filename for a file device
+                          previously specified with --device.
+
+  --audio-buffer n        Use an output audio buffer of 'n' kilobytes
+  -o k:v, --device-option k:v
+                          Pass special option 'k' with value 'v' to the
+                          device previously specified with --device. See
+                          the ogg123 man page for available device options.
+
+Playlist options
+  -@ file, --list file    Read playlist of files and URLs from "file"
+  -r, --repeat            Repeat playlist indefinitely
+  -R, --remote            Use remote control interface
+  -z, --shuffle           Shuffle list of files before playing
+  -Z, --random            Play files randomly until interrupted
+
+Input options
+  -b n, --buffer n        Use an input buffer of 'n' kilobytes
+  -p n, --prebuffer n     Load n% of the input buffer before playing
+
+Decode options
+  -k n, --skip n          Skip the first 'n' seconds (or hh:mm:ss format)
+  -K n, --end n           End at 'n' seconds (or hh:mm:ss format)
+  -x n, --nth n           Play every 'n'th block
+  -y n, --ntimes n        Repeat every played block 'n' times
+
+Miscellaneous options
+  -l s, --delay s         Set termination timeout in milliseconds. ogg123
+                          will skip to the next song on SIGINT (Ctrl-C),
+                          and will terminate if two SIGINTs are received
+                          within the specified timeout 's'. (default 500)
+
+  -h, --help              Display this help
+  -q, --quiet             Don't display anything (no title)
+  -v, --verbose           Display progress and other status information
+  -V, --version           Display ogg123 version
+
