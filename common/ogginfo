@@ -1,0 +1,13 @@
+ogginfo from vorbis-tools 1.2.0
+ by the Xiph.Org Foundation (http://www.xiph.org/)
+
+(c) 2003-2005 Michael Smith <msmith@xiph.org>
+
+Usage: ogginfo [flags] file1.ogg [file2.ogg ... fileN.ogg]
+Flags supported:
+	-h Show this help message
+	-q Make less verbose. Once will remove detailed informative
+	   messages, two will remove warnings
+	-v Make more verbose. This may enable more detailed checks
+	   for some stream types.
+	-V Output version information and exit
