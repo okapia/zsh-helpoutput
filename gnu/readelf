@@ -7,21 +7,24 @@ Usage: readelf <option(s)> elf-file(s)
      --segments          An alias for --program-headers
   -S --section-headers   Display the sections' header
      --sections          An alias for --section-headers
+  -g --section-groups    Display the section groups
+  -t --section-details   Display the section details
   -e --headers           Equivalent to: -h -l -S
   -s --syms              Display the symbol table
       --symbols          An alias for --syms
   -n --notes             Display the core notes (if present)
   -r --relocs            Display the relocations (if present)
   -u --unwind            Display the unwind info (if present)
-  -d --dynamic           Display the dynamic segment (if present)
+  -d --dynamic           Display the dynamic section (if present)
   -V --version-info      Display the version sections (if present)
   -A --arch-specific     Display architecture specific information (if any).
   -D --use-dynamic       Use the dynamic section info when displaying symbols
   -x --hex-dump=<number> Dump the contents of section <number>
-  -w[liaprmfFso] or
-  --debug-dump[=line,=info,=abbrev,=pubnames,=ranges,=macro,=frames,=str,=loc]
+  -w[liaprmfFsoR] or
+  --debug-dump[=line,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=str,=loc,=Ranges]
                          Display the contents of DWARF2 debug sections
   -I --histogram         Display histogram of bucket list lengths
   -W --wide              Allow output width to exceed 80 characters
+  @<file>                Read options from <file>
   -H --help              Display this information
   -v --version           Display the version number of readelf

@@ -13,10 +13,12 @@ Usage: objdump <option(s)> <file(s)>
   -g, --debugging          Display debug information in object file
   -e, --debugging-tags     Display debug information using ctags style
   -G, --stabs              Display (in raw form) any STABS info in the file
+  -W, --dwarf              Display DWARF info in the file
   -t, --syms               Display the contents of the symbol table(s)
   -T, --dynamic-syms       Display the contents of the dynamic symbol table
   -r, --reloc              Display the relocation entries in the file
   -R, --dynamic-reloc      Display the dynamic relocation entries in the file
+  @<file>                  Read options from <file>
   -v, --version            Display this program's version number
   -i, --info               List object formats and architectures supported
   -H, --help               Display this information
@@ -42,6 +44,19 @@ Usage: objdump <option(s)> <file(s)>
       --prefix-addresses         Print complete address alongside disassembly
       --[no-]show-raw-insn       Display hex alongside symbolic disassembly
       --adjust-vma=OFFSET        Add OFFSET to all displayed section addresses
+      --special-syms             Include special symbols in symbol dumps
 
-objdump: supported targets: elf32-sparc elf64-sparc a.out-sunos-big elf64-little elf64-big elf32-little elf32-big srec symbolsrec tekhex binary ihex
-objdump: supported architectures: sparc sparc:sparclet sparc:sparclite sparc:v8plus sparc:v8plusa sparc:sparclite_le sparc:v9 sparc:v9a sparc:v8plusb sparc:v9b
+objdump: supported targets: elf32-littlearm elf32-bigarm elf32-little elf32-big srec symbolsrec tekhex binary ihex
+objdump: supported architectures: arm armv2 armv2a armv3 armv3m armv4 armv4t armv5 armv5t armv5te xscale ep9312 iwmmxt iwmmxt2
+
+The following ARM specific disassembler options are supported for use with
+the -M switch:
+  reg-names-special-atpcs  Select special register names used in the ATPCS
+  reg-names-atpcs          Select register names used in the ATPCS
+  reg-names-apcs           Select register names used in the APCS
+  reg-names-std            Select register names used in ARM's ISA documentation
+  reg-names-gcc            Select register names used by GCC
+  reg-names-raw            Select raw register names
+  force-thumb              Assume all insns are Thumb insns
+  no-force-thumb           Examine preceeding label to determine an insn's type
+
