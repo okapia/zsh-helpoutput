@@ -1,6 +1,7 @@
-ranlib: supported targets: elf32-sparc elf64-sparc a.out-sunos-big elf64-little elf64-big elf32-little elf32-big srec symbolsrec tekhex binary ihex
 Usage: ranlib [options] archive
  Generate an index to speed access to archives
  The options are:
+  @<file>                      Read options from <file>
   -h --help                    Print this help message
   -V --version                 Print version information
+ranlib: supported targets: elf32-littlearm elf32-bigarm elf32-little elf32-big srec symbolsrec tekhex binary ihex
