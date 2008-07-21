@@ -1,0 +1,5 @@
+usage:
+	help
+	help <command>
+	help property
+	help [property] <property>

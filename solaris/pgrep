@@ -1,0 +1,4 @@
+pgrep: No matching criteria specified
+Usage: pgrep [-flnovx] [-d delim] [-P ppidlist] [-g pgrplist] [-s sidlist]
+	[-u euidlist] [-U uidlist] [-G gidlist] [-J projidlist]
+	[-T taskidlist] [-t termlist] [-z zonelist] [-c ctidlist] [pattern]

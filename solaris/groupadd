@@ -1,0 +1,2 @@
+UX: groupadd: ERROR: invalid syntax.
+usage: groupadd [-g gid [-o]] group

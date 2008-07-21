@@ -1,0 +1,10 @@
+usage:	chmod [-fR] <absolute-mode> file ...
+	chmod [-fR] <ACL-operation> file ...
+	chmod [-fR] <symbolic-mode-list> file ...
+where 	<symbolic-mode-list> is a comma-separated list of
+	[ugoa]{+|-|=}[rwxXlstugo]
+where 	<ACL-operation> is one of the following
+	A-<acl_specification>
+	A[number]-
+	A[number]{+|=}<acl_specification>
+where 	<acl-specification> is a comma-separated list of ACEs

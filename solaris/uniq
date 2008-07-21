@@ -1,0 +1,3 @@
+uniq: illegal option -- ?
+Usage:	uniq [-c|-d|-u][-f fields][-s char] [input_file [output_file]]
+Or:	uniq [-c|-d|-u][-n][+m] [input_file [output_file]]

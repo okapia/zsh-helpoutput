@@ -1,0 +1,4 @@
+ln: Insufficient arguments (0)
+Usage: ln [-f] [-n] [-s] f1 [f2]
+       ln [-f] [-n] [-s] f1 ... fn d1
+       ln [-f] [-n] -s d1 d2

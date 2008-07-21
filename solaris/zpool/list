@@ -1,0 +1,2 @@
+usage:
+	list [-H] [-o property[,...]] [-T d|u] [pool] ... [interval [count]]

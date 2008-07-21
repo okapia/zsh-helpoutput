@@ -1,0 +1,2 @@
+finger: illegal option -- ?
+Usage: finger [-bfhilmpqsw] [-t l|h|l,h] [name1 [name2 ...] ]

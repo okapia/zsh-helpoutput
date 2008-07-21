@@ -1,0 +1,3 @@
+dumpadm: illegal option -- ?
+Usage: dumpadm [-nuy] [-c kernel | curproc | all ] [-d dump-device | swap ]
+	[-m min {k|m|%} ] [-s savecore-dir] [-r root-dir] [-z on|off]

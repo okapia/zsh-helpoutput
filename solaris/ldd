@@ -1,0 +1,1 @@
+usage: ldd [-d | -r] [-c] [-D] [-e envar] [-f] [-i] [-L] [-l] [-p] [-s] [-U | -u] [-v] [-w] file(s)

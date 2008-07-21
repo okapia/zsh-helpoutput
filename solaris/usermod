@@ -1,0 +1,6 @@
+UX: usermod: ERROR: Invalid syntax.
+usage:  usermod -u uid [-o] | -g group | -G group[[,group]...] |
+		-d dir [-m] | -s shell | -c comment |
+		-l new_logname | -f inactive | -e expire |
+		-A authorization [, authorization ...] | -K key=value ... |
+		-P profile [, profile ...] | -R role [, role ...] login

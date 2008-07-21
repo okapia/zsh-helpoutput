@@ -1,0 +1,12 @@
+Usage: fmadm [-P prog] [-q] [cmd [args ... ]]
+
+	fmadm config                   - display fault manager configuration
+	fmadm faulty [-afgiprsv] [-u <uuid>] [-n <max_fault>] - display list of faulty resources
+	fmadm flush <fmri> ...         - flush cached state for resource
+	fmadm load <path>              - load specified fault manager module
+	fmadm repaired <fmri>|label>   - notify fault manager that resource has been repaired
+	fmadm acquit <fmri> [<uuid>] | label [<uuid>] | <uuid> - acquit resource or acquit case
+	fmadm replaced <fmri>|label    - notify fault manager that resource has been replaced
+	fmadm reset [-s serd] <module> - reset module or sub-component
+	fmadm rotate <logname>         - rotate log file
+	fmadm unload <module>          - unload specified fault manager module

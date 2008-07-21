@@ -1,0 +1,28 @@
+
+Usage:  snoop
+	[ -a ]			# Listen to packets on audio
+	[ -d device ]		# Listen on interface named device
+	[ -s snaplen ]		# Truncate packets
+	[ -c count ]		# Quit after count packets
+	[ -P ]			# Turn OFF promiscuous mode
+	[ -D ]			# Report dropped packets
+	[ -S ]			# Report packet size
+	[ -i file ]		# Read previously captured packets
+	[ -o file ]		# Capture packets in file
+	[ -n file ]		# Load addr-to-name table from file
+	[ -N ]			# Create addr-to-name table
+	[ -t  r|a|d ]		# Time: Relative, Absolute or Delta
+	[ -v ]			# Verbose packet display
+	[ -V ]			# Show all summary lines
+	[ -p first[,last] ]	# Select packet(s) to display
+	[ -x offset[,length] ]	# Hex dump from offset for length
+	[ -C ]			# Print packet filter code
+	[ -q ]			# Suppress printing packet count
+	[ -r ]			# Do not resolve address to name
+
+	[ filter expression ]
+
+Example:
+	snoop -o saved  host fred
+
+	snoop -i saved -tr -v -p19

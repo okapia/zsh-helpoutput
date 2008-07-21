@@ -1,0 +1,2 @@
+usage:
+	snapshot [-r] [-o property=value] ... <filesystem@snapname|volume@snapname>
