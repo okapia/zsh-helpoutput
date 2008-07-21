@@ -1,0 +1,2 @@
+grep: illegal option -- ?
+Usage: grep -hblcnsviw pattern file . . .

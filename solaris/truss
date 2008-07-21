@@ -1,0 +1,3 @@
+usage:	truss [-fcaeildD] [-[tTvx] [!]syscalls] [-[sS] [!]signals] \
+	[-[mM] [!]faults] [-[rw] [!]fds] [-[uU] [!]libs:[:][!]funcs] \
+	[-o outfile]  command | -p pid[/lwps] ...

@@ -1,0 +1,4 @@
+usage:
+	rename <filesystem|volume|snapshot> <filesystem|volume|snapshot>
+	rename -p <filesystem|volume> <filesystem|volume>
+	rename -r <snapshot> <snapshot>

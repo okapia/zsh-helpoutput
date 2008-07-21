@@ -1,0 +1,4 @@
+date: illegal option -- ?
+usage:	date [-u] mmddHHMM[[cc]yy][.SS]
+	date [-u] [+format]
+	date -a [-]sss[.fff]

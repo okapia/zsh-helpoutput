@@ -1,0 +1,4 @@
+usage:
+	upgrade
+	upgrade -v
+	upgrade [-V version] <-a | pool ...>

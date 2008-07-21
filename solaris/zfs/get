@@ -1,0 +1,3 @@
+usage:
+	get [-rHp] [-d max] [-o "all" | field[,...]] [-s source[,...]]
+	    <"all" | property[,...]> [filesystem|volume|snapshot] ...

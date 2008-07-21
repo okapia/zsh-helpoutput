@@ -1,0 +1,3 @@
+usage:
+	mount
+	mount [-vO] [-o opts] <-a | filesystem>

@@ -1,0 +1,4 @@
+mail: illegal option -- ?
+mail: Usage: [-ehpPqr] [-f file] [-x debuglevel]
+or	[-tw] [-m message_type] [-T file] [-x debuglevel] persons
+or	[-x debuglevel]

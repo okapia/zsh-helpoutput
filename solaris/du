@@ -1,0 +1,2 @@
+du: illegal option -- ?
+usage: du [-a] [-d] [-h|-k] [-r] [-o|-s] [-H|-L] [file ...]

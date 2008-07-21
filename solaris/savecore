@@ -1,0 +1,2 @@
+savecore: illegal option -- ?
+usage: savecore [-Lvd] [-f dumpfile] [dirname]

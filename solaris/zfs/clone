@@ -1,0 +1,2 @@
+usage:
+	clone [-p] [-o property=value] ... <snapshot> <filesystem|volume>

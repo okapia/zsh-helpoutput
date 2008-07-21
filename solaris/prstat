@@ -1,0 +1,6 @@
+prstat: illegal option -- ?
+Usage:	prstat [-acJLmRtTvZ] [-u euidlist] [-U uidlist]
+	[-p pidlist] [-P cpulist] [-C psrsetlist]
+	[-j projidlist] [-k taskidlist] [-z zoneidlist]
+	[-s key | -S key] [-n nprocs[,nusers]]
+	[interval [counter]]

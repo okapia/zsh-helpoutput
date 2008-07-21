@@ -1,0 +1,3 @@
+usage:
+	userspace [-hniHp] [-o field[,...]] [-sS field] ... [-t type[,...]]
+	    <filesystem|snapshot>

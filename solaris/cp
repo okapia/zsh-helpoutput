@@ -1,0 +1,5 @@
+cp: illegal option -- ?
+cp: Insufficient arguments (0)
+Usage: cp [-f] [-i] [-p] [-@] f1 f2
+       cp [-f] [-i] [-p] [-@] f1 ... fn d1
+       cp -r|-R [-H|-L|-P] [-f] [-i] [-p] [-@] d1 ... dn-1 dn

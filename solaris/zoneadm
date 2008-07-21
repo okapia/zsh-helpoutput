@@ -1,0 +1,91 @@
+usage:	zoneadm help
+	zoneadm [-z <zone>] [-u <uuid-match>] list
+	zoneadm {-z <zone>|-u <uuid-match>} <subcommand>
+
+Subcommands:
+
+help
+	Print usage message.
+
+boot [-- boot_arguments]
+	Activates (boots) specified zone.  See zoneadm(1m) for valid boot
+	arguments.
+
+halt
+	Halts specified zone, bypassing shutdown scripts and removing runtime
+	resources of the zone.
+
+ready
+	Prepares a zone for running applications but does not start any user
+	processes in the zone.
+
+reboot [-- boot_arguments]
+	Restarts the zone (equivalent to a halt / boot sequence).
+	Fails if the zone is not active.  See zoneadm(1m) for valid boot
+	arguments.
+
+list [-cipv]
+	Lists the current zones, or a specific zone if indicated.  By default,
+	all running zones are listed, though this can be expanded to all
+	installed zones with the -i option or all configured zones with the
+	-c option.  When used with the general -z <zone> and/or -u <uuid-match>
+	options, lists only the specified matching zone, but lists it
+	regardless of its state, and the -i and -c options are disallowed.  The
+	-v option can be used to display verbose information: zone name, id,
+	current state, root directory and options.  The -p option can be used
+	to request machine-parsable output.  The -v and -p options are mutually
+	exclusive.  If neither -v nor -p is used, just the zone name is listed.
+
+verify
+	Check to make sure the configuration can safely be instantiated
+	on the machine: physical network interfaces exist, etc.
+
+install [-x nodataset] [brand-specific args]
+	Install the configuration on to the system.  The -x nodataset option
+	can be used to prevent the creation of a new ZFS file system for the
+	zone (assuming the zonepath is within a ZFS file system).
+	All other arguments are passed to the brand installation function;
+	see brand(4) for more information.
+
+uninstall [-F]
+	Uninstall the configuration from the system.  The -F flag can be used
+	to force the action.
+
+clone [-m method] [-s <ZFS snapshot>] zonename
+	Clone the installation of another zone.  The -m option can be used to
+	specify 'copy' which forces a copy of the source zone.  The -s option
+	can be used to specify the name of a ZFS snapshot that was taken from
+	a previous clone command.  The snapshot will be used as the source
+	instead of creating a new ZFS snapshot.
+
+move zonepath
+	Move the zone to a new zonepath.
+
+detach [-n]
+	Detach the zone from the system. The zone state is changed to
+	'configured' (but the files under the zonepath are untouched).
+	The zone can subsequently be attached, or can be moved to another
+	system and attached there. The -n option can be used to specify
+	'no-execute' mode. When -n is used, the information needed to attach
+	the zone is sent to stdout but the zone is not actually detached.
+
+attach [-F] [-n <path>] [-b patchid]* [-u|-U]
+	Attach the zone to the system.  The zone state must be 'configured'
+	prior to attach; upon successful completion, the zone state will be
+	'installed'.  The system software on the current system must be
+	compatible with the software on the zone's original system or use
+	the -u|U option to update the zone to the current system software.
+	Specify one or more -b patchid options to backout the patch from the
+	zone.  Specify -F to force the attach and skip software compatibility
+	tests.  The -n option can be used to specify 'no-execute' mode.  When
+	-n is used, the information needed to attach the zone is read from the
+	specified path and the configuration is only validated.  The path can
+	be '-' to specify standard input.  The -F, -n and -u|U options are
+	mutually exclusive.
+
+mark incomplete
+	Set the state of the zone.  This can be used to force the zone
+	state to 'incomplete' administratively if some activity has rendered
+	the zone permanently unusable.  The only valid state that may be
+	specified is 'incomplete'.
+

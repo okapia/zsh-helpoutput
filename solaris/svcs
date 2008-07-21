@@ -1,0 +1,47 @@
+Usage: svcs [-aHpv] [-o col[,col ... ]] [-R restarter] [-sS col] [<service> ...]
+       svcs -d | -D [-Hpv] [-o col[,col ... ]] [-sS col] [<service> ...]
+       svcs -l <service> ...
+       svcs -x [-v] [<service> ...]
+       svcs -?
+
+	-a  list all service instances rather than only those that are enabled
+	-d  list dependencies of the specified service(s)
+	-D  list dependents of the specified service(s)
+	-H  omit header line from output
+	-l  list detailed information about the specified service(s)
+	-o  list only the specified columns in the output
+	-p  list process IDs and names associated with each service
+	-R  list only those services with the specified restarter
+	-s  sort output in ascending order by the specified column(s)
+	-S  sort output in descending order by the specified column(s)
+	-v  list verbose information appropriate to the type of output
+	-x  explain the status of services that might require maintenance,
+	    or explain the status of the specified service(s)
+
+	Services can be specified using an FMRI, abbreviation, or fnmatch(5)
+	pattern, as shown in these examples for svc:/network/smtp:sendmail
+
+	svcs [opts] svc:/network/smtp:sendmail
+	svcs [opts] network/smtp:sendmail
+	svcs [opts] network/*mail
+	svcs [opts] network/smtp
+	svcs [opts] smtp:sendmail
+	svcs [opts] smtp
+	svcs [opts] sendmail
+
+	Columns for output or sorting can be specified using these names:
+
+	CTID    contract ID for service (see contract(4))
+	DESC    human-readable description of the service
+	FMRI    Fault Managed Resource Identifier for service
+	INST    portion of the FMRI indicating service instance
+	N       abbreviation for next state (if in transition)
+	NSTA    abbreviation for next state (if in transition)
+	NSTATE  name for next state (if in transition)
+	S       abbreviation for current state
+	SCOPE   name for scope associated with service
+	SN      abbreviation for current state and next state
+	SVC     portion of the FMRI representing service name
+	STA     abbreviation for current state
+	STATE   name for current state
+	STIME   time of last state change

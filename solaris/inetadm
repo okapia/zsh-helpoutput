@@ -1,0 +1,20 @@
+Usage:
+  inetadm
+  inetadm -?
+  inetadm -p
+  inetadm -l {FMRI | pattern}...
+  inetadm -e {FMRI | pattern}...
+  inetadm -d {FMRI | pattern}...
+  inetadm -m {FMRI | pattern}... {name=value}...
+  inetadm -M {name=value}...
+
+Without any options inetadm lists all inetd managed services.
+
+Options:
+  -?	Print help.
+  -p	List all default inetd property values.
+  -l 	List all inetd property values for the inet service(s).
+  -e	Enable the inet service(s).
+  -d	Disable the inet service(s).
+  -m	Modify the inet service(s) inetd property values.
+  -M	Modify default inetd property values.

@@ -1,0 +1,29 @@
+iostat: illegal option -- ?
+Usage: iostat [-cCdDeEiImMnpPrstxXYz]  [-l n] [-T d|u] [disk ...] [interval [count]]
+		-c: 	report percentage of time system has spent
+			in user/system/wait/idle mode
+		-C: 	report disk statistics by controller
+		-d: 	display disk Kb/sec, transfers/sec, avg. 
+			service time in milliseconds  
+		-D: 	display disk reads/sec, writes/sec, 
+			percentage disk utilization 
+		-e: 	report device error summary statistics
+		-E: 	report extended device error statistics
+		-i:	show device IDs for -E output
+		-I: 	report the counts in each interval,
+			instead of rates, where applicable
+		-l n:	Limit the number of disks to n
+		-m: 	Display mount points (most useful with -p)
+		-M: 	Display data throughput in MB/sec instead of Kb/sec
+		-n: 	convert device names to cXdYtZ format
+		-p: 	report per-partition disk statistics
+		-P: 	report per-partition disk statistics only,
+			no per-device disk statistics
+		-r: 	Display data in comma separated format
+		-s: 	Suppress state change messages
+		-T d|u	Display a timestamp in date (d) or unix time_t (u)
+		-t: 	display chars read/written to terminals
+		-x: 	display extended disk statistics
+		-X: 	display I/O path statistics
+		-Y: 	display I/O path (I/T/L) statistics
+		-z: 	Suppress entries with all zero values

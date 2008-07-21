@@ -1,0 +1,8 @@
+ps: illegal option -- ?
+usage: ps [ -aAdeflcjLPyZ ] [ -o format ] [ -t termlist ]
+	[ -u userlist ] [ -U userlist ] [ -G grouplist ]
+	[ -p proclist ] [ -g pgrplist ] [ -s sidlist ] [ -z zonelist ]
+  'format' is one or more of:
+	user ruser group rgroup uid ruid gid rgid pid ppid pgid sid taskid ctid
+	pri opri pcpu pmem vsz rss osz nice class time etime stime zone zoneid
+	f s c lwp nlwp psr tty addr wchan fname comm args projid project pset

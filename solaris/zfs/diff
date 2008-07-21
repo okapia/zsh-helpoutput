@@ -1,0 +1,3 @@
+usage:
+	diff [-FHte] [-o field] <snapshot> [snapshot|filesystem]
+	diff -E [-FHt] [-o field] snapshot|filesystem

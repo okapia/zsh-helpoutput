@@ -1,0 +1,2 @@
+usage: od [-bcCdDfFoOsSvxX] [-] [file] [offset_string]
+       od [-bcCdDfFoOsSvxX] [-t type_string]... [-A address_base] [-j skip] [-N count] [-] [file...]

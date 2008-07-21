@@ -1,0 +1,3 @@
+usage:
+	destroy [-rRf] <filesystem|volume>
+	destroy [-rRd] <snapshot>

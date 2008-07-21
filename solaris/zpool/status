@@ -1,0 +1,2 @@
+usage:
+	status [-vx] [-T d|u] [pool] ... [interval [count]]
