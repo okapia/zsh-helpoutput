@@ -1,0 +1,2 @@
+UX: groupmod: ERROR: invalid syntax.
+usage: groupmod -g gid [-o] | -n name group

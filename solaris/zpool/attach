@@ -1,0 +1,2 @@
+usage:
+	attach [-f] <pool> <device> <new-device>

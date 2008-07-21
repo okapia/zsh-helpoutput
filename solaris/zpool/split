@@ -1,0 +1,3 @@
+usage:
+	split [-n] [-R altroot] [-o mntopts]
+	    [-o property=value] <pool> <newpool> [<device> ...]

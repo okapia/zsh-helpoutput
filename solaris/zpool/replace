@@ -1,0 +1,2 @@
+usage:
+	replace [-f] <pool> <device> [new-device]

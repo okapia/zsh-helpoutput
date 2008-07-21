@@ -1,0 +1,4 @@
+gprof: illegal option -- ?
+usage: gprof [ -abcCDlsz ] [ -e function-name ] [ -E function-name ]
+	[ -f function-name ] [ -F function-name  ]
+	[  image-file  [ profile-file ... ] ]

@@ -1,0 +1,5 @@
+diff: illegal option -- ?
+usage: diff [-bitw] [-c | -e | -f | -h | -n | -u] file1 file2
+       diff [-bitw] [-C number | -U number] file1 file2
+       diff [-bitw] [-D string] file1 file2
+       diff [-bitw] [-c | -e | -f | -h | -n | -u] [-l] [-r] [-s] [-S name] directory1 directory2

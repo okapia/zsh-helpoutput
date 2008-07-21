@@ -1,0 +1,14 @@
+usage: dladm create-aggr [-t] [-R <root-dir>] [-P <policy>]
+                    [-l <mode>] [-T <time>]
+                    [-u <address>] -d <dev> ... <key>
+             delete-aggr [-t] [-R <root-dir>] <key>
+             add-aggr    [-t] [-R <root-dir>] -d <dev> ... <key>
+             remove-aggr [-t] [-R <root-dir>] -d <dev> ... <key>
+             modify-aggr [-t] [-R <root-dir>] [-P <policy>]
+                    [-l <mode>] [-T <time>] [-u <address>] <key>
+             show-aggr [-L] [-s] [-i <interval>] [-p] [<key>]
+             show-dev [-s] [-i <interval>] [-p] [<dev>]
+             show-link [-s] [-i <interval>] [-p] [<name>]
+             set-linkprop [-t] -p <prop>=<value>[,...] <name>
+             reset-linkprop [-t] [-p <prop>,...] <name>
+             show-linkprop [-cP][-p <prop>,...] <name>

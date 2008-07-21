@@ -1,0 +1,6 @@
+usage:
+	help
+	help <command>
+	help permission
+	help property
+	help [property] <property>

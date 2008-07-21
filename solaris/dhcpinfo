@@ -1,0 +1,2 @@
+usage: dhcpinfo [-c] [-i interface] [-n limit] [-v {4|6}] code
+       dhcpinfo [-c] [-i interface] [-n limit] [-v {4|6}] identifier

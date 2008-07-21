@@ -1,0 +1,7 @@
+ptree: illegal option -- ?
+usage:	ptree [-ac] [-z zone] [ {pid|user} ... ]
+  (show process trees)
+  list can include process-ids and user names
+  -a : include children of process 0
+  -c : show contract ownership
+  -z : print only processes in given zone

@@ -1,0 +1,3 @@
+uname: illegal option -- ?
+usage:	uname [-snrvmapiX]
+	uname [-S system_name]

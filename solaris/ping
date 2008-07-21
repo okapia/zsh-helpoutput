@@ -1,0 +1,4 @@
+usage: ping host [timeout]
+usage: ping -s [-l | U] [adLnRrv] [-A addr_family] [-c traffic_class]
+	[-g gateway [-g gateway ...]] [-F flow_label] [-I interval]
+	[-i interface] [-P tos] [-p port] [-t ttl] host [data_size] [npackets]

@@ -1,0 +1,5 @@
+For more info, run: zpool help <command>
+The following commands are supported:
+add      attach   clear    create   destroy  detach   export   get      
+help     history  import   iostat   list     offline  online   remove   
+replace  scrub    set      split    status   upgrade  

@@ -1,0 +1,3 @@
+svccfg: illegal option -- ?
+Usage:	svccfg [-v] [-s FMRI] [-f file]
+	svccfg [-v] [-s FMRI] <command> [args]
