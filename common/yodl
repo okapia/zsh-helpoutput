@@ -1,25 +1,44 @@
-Yodl 1.31.18
-Yet oneOther Document Language
+yodl version 2.13.1
+
+Your Own Document Language
+
 Usage: yodl [OPTION]... [FILE]...
 Convert to various documentation formats from FILE or <stdin>.
 
 Options:
-  -D, --define=NAME    define NAME as symbol, same as DEFINESYMBOL(NAME)
+  -D, --define=NAME[=VALUE]
+                       define NAME as a symbol, same as DEFINESYMBOL(NAME)()
+                       If `=VALUE' is added, NAME receives VALUE as its
+                       initial value, same as DEFINESYMBOL(NAME)(VALUE)
   -d, --definemacro=NAME=EXPANSION
                        define NAME as macro expanding to EXPANSION
   -h, --help           this message
+  -i, --index[=file]   `file' is the name of the index file. By default
+                       <outputbase>.idx is used. No default for stdout.
   -I, --include=DIR    use directory DIR for system-wide includes files
-                         [/usr/share/yodl]
-  -l, --live-data=NR   set "live data" policy to NR [0]:
-                         allow live data:
-                           0: never (the default)
-                           1: only when confirmed
-                           2: issuing warning
-                           3: always
+                         [.:/usr/share/yodl]
+  -k, --keep-ws        When WSLEVEL is non-zero, keep ws at line-heads
+                       unless lines are terminated by \
+  -l, --live-data=HOW  set "live data" policy to HOW [none]:
+                         execute SYSTEM and PIPETHROUGH commands:
+                           `none' or `0':    never (the default)
+                           `confirm' or `1': only when confirmed
+                           `report' or `2':  issuing warning
+                           `ok' or `3':      always
+  -m, --messages=SET   set message level to a combination of SET acdeinw:
+                          a: alert,    c: crit,    d: debug,
+                          e: error,    i: info,    n: notice,
+                          w: warning
+  -n, --max-nested-files=NR set the maximum number of nested files that
+                       can be parsed to NR [20]
   -o, --output=FILE    send output to FILE instead of <stdout>
-  -P, --preload=CMD    preload CMD
-  -p, --max-pass=NR    set the maximum number of parsing passes to NR [20]
+  -p, --preload=CMD    preload CMD
+  -r, --max-replacements=NR set the maximum number of macros or substs
+                       per character read from file to NR x 10,000 [1]
+                       (--max-replacements=0 implies no maximum)
   -t, --trace          trace generated output to <stderr> for each parsing pass
+  -V, --version        show Yodl's version
   -v, --verbose        increase verbosity (-vv...)
   -W, --warranty       show warranty and copyright
-  -w, --warn           warn about redefinitions
+  -w, --warn           warn about no-macro calls
+
