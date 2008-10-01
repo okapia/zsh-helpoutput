@@ -1,9 +1,23 @@
-losetup: invalid option -- h
-usage:
-  losetup [-e encryption] [options] loop_device file  # setup
-  losetup -F [options] loop_device [file]   # setup, read /etc/fstab
-  losetup loop_device                       # give info
-  losetup -a                                # give info of all loops
-  losetup -d loop_device                    # delete
-options:  -o offset  -s sizelimit  -p passwdfd  -S pseed  -H phash  -t timeout
-          -I loinit  -T  -K gpgkey  -G gpghome  -C itercountk  -v  -r
+
+Usage:
+ losetup loop_device                                  # give info
+ losetup -a | --all                                   # list all used
+ losetup -d | --detach loop_device                    # delete
+ losetup -f | --find                                  # find unused
+ losetup [ options ] {-f|--find|loop_device} file     # setup
+
+Options:
+ -e | --encryption <type> enable data encryption with specified <name/num>
+ -h | --help              this help
+ -o | --offset <num>      start at offset <num> into file
+ -p | --pass-fd <num>     read passphrase from file descriptor <num>
+ -r | --read-only         setup read-only loop device
+ -s | --show              print device name (with -f <file>)
+ -N | --nohashpass        Do not hash the given password (Debian hashes)
+ -k | --keybits <num>     specify number of bits in the hashed key given
+                          to the cipher.  Some ciphers support several key
+                          sizes and might be more efficient with a smaller
+                          key size.  Key sizes < 128 are generally not
+                          recommended
+ -v | --verbose           verbose mode
+
