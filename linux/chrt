@@ -1,7 +1,8 @@
-chrt version 1.4.0
+chrt (util-linux-ng 2.13.1.1)
 usage: chrt [options] [prio] [pid | cmd [args...]]
 manipulate real-time attributes of a process
-  -f, --fifo                         set policy to SCHED_FF
+  -b, --batch                        set policy to SCHED_BATCH
+  -f, --fifo                         set policy to SCHED_FIFO
   -p, --pid                          operate on existing given pid
   -m, --max                          show min and max valid priorities
   -o, --other                        set policy to SCHED_OTHER
