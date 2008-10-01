@@ -1,0 +1,15 @@
+chrt version 1.4.0
+usage: chrt [options] [prio] [pid | cmd [args...]]
+manipulate real-time attributes of a process
+  -f, --fifo                         set policy to SCHED_FF
+  -p, --pid                          operate on existing given pid
+  -m, --max                          show min and max valid priorities
+  -o, --other                        set policy to SCHED_OTHER
+  -r, --rr                           set policy to SCHED_RR (default)
+  -h, --help                         display this help
+  -v, --verbose                      display status information
+  -V, --version                      output version information
+
+You must give a priority if changing policy.
+
+Report bugs and send patches to <rml@tech9.net>
