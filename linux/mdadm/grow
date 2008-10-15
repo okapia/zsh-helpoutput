@@ -1,0 +1,19 @@
+Usage: mdadm --grow device options
+
+This usage causes mdadm to attempt to reconfigure a running array.
+This is only possibly if the kernel being used supports a particular
+reconfiguration.  This version supports changing the number of
+devices in a RAID1/5/6, changing the active size of all devices in
+a RAID1/4/5/6, adding or removing a write-intent bitmap, and changing
+the error mode for a 'FAULTY' array.
+
+Options that are valid with the grow (-G --grow) mode are:
+  --level=       -l   : Tell mdadm what level the array is so that it can
+                      : interpret '--layout' properly.
+  --layout=      -p   : For a FAULTY array, set/change the error mode.
+  --size=        -z   : Change the active size of devices in an array.
+                      : This is useful if all devices have been replaced
+                      : with larger devices.
+  --raid-disks=  -n   : Change the number of active devices in an array.
+                      : array.
+  --bitmap=      -b   : Add or remove a write-intent bitmap.

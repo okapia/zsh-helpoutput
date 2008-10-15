@@ -1,0 +1,29 @@
+Any parameter that does not start with '-' is treated as a device name
+or, for --examine-bitmap, a file name.
+The first such name is often the name of an md device.  Subsequent
+names are often names of component devices.
+
+Some common options are:
+  --help        -h   : General help message or, after above option,
+                       mode specific help message
+  --help-options     : This help message
+  --version     -V   : Print version information for mdadm
+  --verbose     -v   : Be more verbose about what is happening
+  --quiet       -q   : Don't print un-necessary messages
+  --brief       -b   : Be less verbose, more brief
+  --export      -Y   : With --detail, use key=value format for easy
+                       import into environment
+  --force       -f   : Override normal checks and be more forceful
+
+  --assemble    -A   : Assemble an array
+  --build       -B   : Build an array without metadata
+  --create      -C   : Create a new array
+  --detail      -D   : Display details of an array
+  --examine     -E   : Examine superblock on an array component
+  --examine-bitmap -X: Display the detail of a bitmap file
+  --monitor     -F   : monitor (follow) some arrays
+  --grow        -G   : resize/ reshape and array
+  --incremental -I   : add a single device to an array as appropriate
+  --query       -Q   : Display general information about how a
+                       device relates to the md driver
+  --auto-detect      : Start arrays auto-detected by the kernel

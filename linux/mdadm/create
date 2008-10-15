@@ -1,0 +1,39 @@
+Usage:  mdadm --create device -chunk=X --level=Y --raid-devices=Z devices
+
+ This usage will initialise a new md array, associate some
+ devices with it, and activate the array.   In order to create an
+ array with some devices missing, use the special word 'missing' in
+ place of the relevant device name.
+
+ Before devices are added, they are checked to see if they already contain
+ raid superblocks or filesystems.  They are also checked to see if
+ the variance in device size exceeds 1%.
+ If any discrepancy is found, the user will be prompted for confirmation
+ before the array is created.  The presence of a '--run' can override this
+ caution.
+
+ If the --size option is given then only that many kilobytes of each
+ device is used, no matter how big each device is.
+ If no --size is given, the apparent size of the smallest drive given
+ is used for raid level 1 and greater, and the full device is used for
+ other levels.
+
+ Options that are valid with --create (-C) are:
+  --bitmap=          : Create a bitmap for the array with the given filename
+  --chunk=      -c   : chunk size of kibibytes
+  --rounding=        : rounding factor for linear array (==chunk size)
+  --level=      -l   : raid level: 0,1,4,5,6,linear,multipath and synonyms
+  --parity=     -p   : raid5/6 parity algorithm: {left,right}-{,a}symmetric
+  --layout=          : same as --parity
+  --raid-devices= -n : number of active devices in array
+  --spare-devices= -x: number of spares (eXtras) devices in initial array
+  --size=       -z   : Size (in K) of each drive in RAID1/4/5/6/10 - optional
+  --force       -f   : Honour devices as listed on command line.  Don't
+                     : insert a missing drive for RAID5.
+  --run         -R   : insist of running the array even if not all
+                     : devices are present or some look odd.
+  --readonly    -o   : start the array readonly - not supported yet.
+  --name=       -N   : Textual name for array - max 32 characters
+  --bitmap-chunk=    : bitmap chunksize in Kilobytes.
+  --delay=      -d   : bitmap update delay in seconds.
+

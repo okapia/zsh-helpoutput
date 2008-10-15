@@ -1,0 +1,54 @@
+Usage: mdadm --assemble device options...
+       mdadm --assemble --scan options...
+
+This usage assembles one or more raid arrays from pre-existing
+components.
+For each array, mdadm needs to know the md device, the identity of
+the array, and a number of sub devices. These can be found in a number
+of ways.
+
+The md device is either given on the command line or is found listed
+in the config file.  The array identity is determined either from the
+--uuid or --super-minor commandline arguments, from the config file,
+or from the first component device on the command line.
+
+The different combinations of these are as follows:
+ If the --scan option is not given, then only devices and identities
+ listed on the command line are considered.
+ The first device will be the array device, and the remainder will be
+ examined when looking for components.
+ If an explicit identity is given with --uuid or --super-minor, then
+ only devices with a superblock which matches that identity is considered,
+ otherwise every device listed is considered.
+
+ If the --scan option is given, and no devices are listed, then
+ every array listed in the config file is considered for assembly.
+ The identity of candidate devices are determined from the config file.
+
+ If the --scan option is given as well as one or more devices, then
+ Those devices are md devices that are to be assembled.  Their identity
+ and components are determined from the config file.
+
+ If mdadm can not find all of the components for an array, it will assemble
+ it but not activate it unless --run or --scan is given.  To preserve this
+ behaviour even with --scan, add --no-degraded.  Note that "all of the
+ components" means as many as were present the last time the array was running
+ as recorded in the superblock.  If the array was already degraded, and
+ the missing device is not a new problem, it will still be assembled.  It
+ is only newly missing devices that cause the array not to be started.
+
+Options that are valid with --assemble (-A) are:
+  --bitmap=          : bitmap file to use wit the array
+  --uuid=       -u   : uuid of array to assemble. Devices which don't
+                       have this uuid are excluded
+  --super-minor= -m  : minor number to look for in super-block when
+                       choosing devices to use.
+  --name=       -N   : Array name to look for in super-block.
+  --config=     -c   : config file
+  --scan        -s   : scan config file for missing information
+  --run         -R   : Try to start the array even if not enough devices
+                       for a full array are present
+  --force       -f   : Assemble the array even if some superblocks appear
+                     : out-of-date.  This involves modifying the superblocks.
+  --update=     -U   : Update superblock: try '-A --update=?' for option list.
+  --no-degraded      : Assemble but do not start degraded arrays.

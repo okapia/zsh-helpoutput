@@ -1,0 +1,30 @@
+mdadm is used for building, managing, and monitoring
+Linux md devices (aka RAID arrays)
+Usage: mdadm --create device options...
+            Create a new array from unused devices.
+       mdadm --assemble device options...
+            Assemble a previously created array.
+       mdadm --build device options...
+            Create or assemble an array without metadata.
+       mdadm --manage device options...
+            make changes to an existing array.
+       mdadm --misc options... devices
+            report on or modify various md related devices.
+       mdadm --grow options device
+            resize/reshape an active array
+       mdadm --incremental device
+            add a device to an array as appropriate
+       mdadm --monitor options...
+            Monitor one or more array for significant changes.
+       mdadm device options...
+            Shorthand for --manage.
+Any parameter that does not start with '-' is treated as a device name
+or, for --examine-bitmap, a file name.
+The first such name is often the name of an md device.  Subsequent
+names are often names of component devices.
+
+ For detailed help on the above major modes use --help after the mode
+ e.g.
+         mdadm --assemble --help
+ For general help on options use
+         mdadm --help-options
