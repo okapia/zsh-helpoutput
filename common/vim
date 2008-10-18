@@ -1,4 +1,4 @@
-VIM - Vi IMproved 6.2 (2003 Jun 1, compiled Aug 15 2007 23:31:53)
+VIM - Vi IMproved 7.1 (2007 May 12, compiled Oct 18 2008 22:34:39)
 
 usage: vim [arguments] [file ..]       edit specified file(s)
    or: vim [arguments] -               read text from stdin
@@ -20,7 +20,7 @@ Arguments:
    -l			Lisp mode
    -C			Compatible with Vi: 'compatible'
    -N			Not fully Vi compatible: 'nocompatible'
-   -V[N]		Verbose level
+   -V[N][fname]		Be verbose [level N] [log messages to fname]
    -D			Debugging mode
    -n			No swap file, use memory only
    -r			List swap files and exit
@@ -32,6 +32,7 @@ Arguments:
    -T <terminal>	Set terminal type to <terminal>
    -u <vimrc>		Use <vimrc> instead of any .vimrc
    --noplugin		Don't load plugin scripts
+   -p[N]		Open N tab pages (default: one for each file)
    -o[N]		Open N windows (default: one for each file)
    -O[N]		Like -o but split vertically
    +			Start at end of file
