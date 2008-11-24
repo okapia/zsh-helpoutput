@@ -1,27 +1,32 @@
 Usage: sort [OPTION]... [FILE]...
 Write sorted concatenation of all FILE(s) to standard output.
 
+Mandatory arguments to long options are mandatory for short options too.
 Ordering options:
 
-Mandatory arguments to long options are mandatory for short options too.
-  -b, --ignore-leading-blanks ignore leading blanks
+  -b, --ignore-leading-blanks  ignore leading blanks
   -d, --dictionary-order      consider only blanks and alphanumeric characters
   -f, --ignore-case           fold lower case to upper case characters
   -g, --general-numeric-sort  compare according to general numerical value
   -i, --ignore-nonprinting    consider only printable characters
   -M, --month-sort            compare (unknown) < `JAN' < ... < `DEC'
   -n, --numeric-sort          compare according to string numerical value
+  -R, --random-sort           sort by random hash of keys
+      --random-source=FILE    get random bytes from FILE (default /dev/urandom)
   -r, --reverse               reverse the result of comparisons
 
 Other options:
 
-  -c, --check               check whether input is sorted; do not sort
-  -k, --key=POS1[,POS2]     start a key at POS1, end it at POS 2 (origin 1)
+  -c, --check, --check=diagnose-first  check for sorted input; do not sort
+  -C, --check=quiet, --check=silent  like -c, but do not report first bad line
+      --compress-program=PROG  compress temporaries with PROG;
+                              decompress them with PROG -d
+  -k, --key=POS1[,POS2]     start a key at POS1, end it at POS2 (origin 1)
   -m, --merge               merge already sorted files; do not sort
   -o, --output=FILE         write result to FILE instead of standard output
   -s, --stable              stabilize sort by disabling last-resort comparison
   -S, --buffer-size=SIZE    use SIZE for main memory buffer
-  -t, --field-separator=SEP use SEP instead of non-blank to blank transition
+  -t, --field-separator=SEP  use SEP instead of non-blank to blank transition
   -T, --temporary-directory=DIR  use DIR for temporaries, not $TMPDIR or /tmp;
                               multiple options specify multiple directories
   -u, --unique              with -c, check for strict ordering;
@@ -31,9 +36,10 @@ Other options:
       --version  output version information and exit
 
 POS is F[.C][OPTS], where F is the field number and C the character position
-in the field.  OPTS is one or more single-letter ordering options, which
-override global ordering options for that key.  If no key is given, use the
-entire line as the key.
+in the field; both are origin 1.  If neither -t nor -b is in effect, characters
+in a field are counted from the beginning of the preceding whitespace.  OPTS is
+one or more single-letter ordering options, which override global ordering
+options for that key.  If no key is given, use the entire line as the key.
 
 SIZE may be followed by the following multiplicative suffixes:
 % 1% of memory, b 1, K 1024 (default), and so on for M, G, T, P, E, Z, Y.
