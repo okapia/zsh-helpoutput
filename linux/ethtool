@@ -1,0 +1,81 @@
+ethtool version 6
+Usage:
+ethtool DEVNAME	Display standard information about device
+        ethtool -s|--change DEVNAME	Change generic options
+		[ speed 10|100|1000|2500|10000 ]
+		[ duplex half|full ]
+		[ port tp|aui|bnc|mii|fibre ]
+		[ autoneg on|off ]
+		[ advertise %%x ]
+		[ phyad %%d ]
+		[ xcvr internal|external ]
+		[ wol p|u|m|b|a|g|s|d... ]
+		[ sopass %%x:%%x:%%x:%%x:%%x:%%x ]
+		[ msglvl %%d ] 
+        ethtool -a|--show-pause DEVNAME	Show pause options
+        ethtool -A|--pause DEVNAME	Set pause options
+		[ autoneg on|off ]
+		[ rx on|off ]
+		[ tx on|off ]
+        ethtool -c|--show-coalesce DEVNAME	Show coalesce options
+        ethtool -C|--coalesce DEVNAME	Set coalesce options
+		[adaptive-rx on|off]
+		[adaptive-tx on|off]
+		[rx-usecs N]
+		[rx-frames N]
+		[rx-usecs-irq N]
+		[rx-frames-irq N]
+		[tx-usecs N]
+		[tx-frames N]
+		[tx-usecs-irq N]
+		[tx-frames-irq N]
+		[stats-block-usecs N]
+		[pkt-rate-low N]
+		[rx-usecs-low N]
+		[rx-frames-low N]
+		[tx-usecs-low N]
+		[tx-frames-low N]
+		[pkt-rate-high N]
+		[rx-usecs-high N]
+		[rx-frames-high N]
+		[tx-usecs-high N]
+		[tx-frames-high N]
+		[sample-interval N]
+        ethtool -g|--show-ring DEVNAME	Query RX/TX ring parameters
+        ethtool -G|--set-ring DEVNAME	Set RX/TX ring parameters
+		[ rx N ]
+		[ rx-mini N ]
+		[ rx-jumbo N ]
+		[ tx N ]
+        ethtool -k|--show-offload DEVNAME	Get protocol offload information
+        ethtool -K|--offload DEVNAME	Set protocol offload
+		[ rx on|off ]
+		[ tx on|off ]
+		[ sg on|off ]
+		[ tso on|off ]
+		[ ufo on|off ]
+		[ gso on|off ]
+               [ lro on|off ]
+        ethtool -i|--driver DEVNAME	Show driver information
+        ethtool -d|--register-dump DEVNAME	Do a register dump
+		[ raw on|off ]
+		[ file FILENAME ]
+        ethtool -e|--eeprom-dump DEVNAME	Do a EEPROM dump
+		[ raw on|off ]
+		[ offset N ]
+		[ length N ]
+        ethtool -E|--change-eeprom DEVNAME	Change bytes in device EEPROM
+		[ magic N ]
+		[ offset N ]
+		[ value N ]
+        ethtool -r|--negotiate DEVNAME	Restart N-WAY negotation
+        ethtool -p|--identify DEVNAME	Show visible port identification (e.g. blinking)
+               [ TIME-IN-SECONDS ]
+        ethtool -t|--test DEVNAME	Execute adapter self test
+               [ online | offline ]
+        ethtool -S|--statistics DEVNAME	Show adapter statistics
+        ethtool -n|--show-nfc DEVNAME	Show Rx network flow classificationoptions
+		[ rx-flow-hash tcp4|udp4|ah4|sctp4|tcp6|udp6|ah6|sctp6 ]
+        ethtool -N|--config-nfc DEVNAME	Configure Rx network flow classification options
+		[ rx-flow-hash tcp4|udp4|ah4|sctp4|tcp6|udp6|ah6|sctp6 p|m|v|t|s|d|f|n|r... ]
+        ethtool -h|--help DEVNAME	Show this help
