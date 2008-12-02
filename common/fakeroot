@@ -1,0 +1,5 @@
+fakeroot, create a fake root environment.
+   usage: fakeroot [-l|--lib fakerootlib] [-f|--faked fakedbin]
+                   [-i file] [-s file] [-u|--unknown-is-real]
+		   [-b|--fd-base fd] [-h|--help] [-v|--version]
+                   [--] [command]
