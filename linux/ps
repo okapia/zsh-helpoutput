@@ -1,0 +1,22 @@
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
