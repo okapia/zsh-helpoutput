@@ -1,0 +1,11 @@
+ssh-add: illegal option -- ?
+usage: ssh-add [options] [file ...]
+Options:
+  -l          List fingerprints of all identities.
+  -L          List public key parameters of all identities.
+  -d          Delete identity.
+  -D          Delete all identities.
+  -x          Lock agent.
+  -X          Unlock agent.
+  -t life     Set lifetime (in seconds) when adding identities.
+  -c          Require confirmation to sign using identities
