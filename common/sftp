@@ -1,0 +1,6 @@
+usage: sftp [-1Cv] [-B buffer_size] [-b batchfile] [-F ssh_config]
+            [-o ssh_option] [-P sftp_server_path] [-R num_requests]
+            [-S program] [-s subsystem | sftp_server] host
+       sftp [[user@]host[:file [file]]]
+       sftp [[user@]host[:dir[/]]]
+       sftp -b batchfile [user@]host

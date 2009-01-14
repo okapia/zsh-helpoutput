@@ -1,36 +1,7 @@
-Usage: ssh [options] host [command]
-Options:
-  -l user     Log in using this user name.
-  -n          Redirect input from /dev/null.
-  -F config   Config file (default: ~/.ssh/config).
-  -A          Enable authentication agent forwarding.
-  -a          Disable authentication agent forwarding (default).
-  -X          Enable X11 connection forwarding.
-  -x          Disable X11 connection forwarding (default).
-  -i file     Identity for public key authentication (default: ~/.ssh/identity)
-  -t          Tty; allocate a tty even if command is given.
-  -T          Do not allocate a tty.
-  -v          Verbose; display verbose debugging messages.
-              Multiple -v increases verbosity.
-  -V          Display version number only.
-  -q          Quiet; don't display any warning messages.
-  -f          Fork into background after authentication.
-  -e char     Set escape character; ``none'' = disable (default: ~).
-  -c cipher   Select encryption algorithm
-  -m macs     Specify MAC algorithms for protocol version 2.
-  -p port     Connect to this port.  Server must be on the same port.
-  -L listen-port:host:port   Forward local port to remote address
-  -R listen-port:host:port   Forward remote port to local address
-              These cause ssh to listen for connections on a port, and
-              forward them to the other side by connecting to host:port.
-  -D port     Enable dynamic application-level port forwarding.
-  -C          Enable compression.
-  -N          Do not execute a shell or command.
-  -g          Allow remote hosts to connect to forwarded ports.
-  -1          Force protocol version 1.
-  -2          Force protocol version 2.
-  -4          Use IPv4 only.
-  -6          Use IPv6 only.
-  -o 'option' Process the option as if it was read from a configuration file.
-  -s          Invoke command (mandatory) as SSH2 subsystem.
-  -b addr     Local IP address.
+ssh: illegal option -- ?
+usage: ssh [-1246AaCfgKkMNnqsTtVvXxY] [-b bind_address] [-c cipher_spec]
+           [-D [bind_address:]port] [-e escape_char] [-F configfile]
+           [-i identity_file] [-L [bind_address:]port:host:hostport]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-R [bind_address:]port:host:hostport] [-S ctl_path]
+           [-w local_tun[:remote_tun]] [user@]hostname [command]
