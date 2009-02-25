@@ -1,4 +1,4 @@
-XFree86 4.3.99.903(184) usage:
+X.Org 6.8.99.903(238) usage:
     xterm [-options ...] [-e command args]
 
 where options include:
@@ -32,6 +32,7 @@ where options include:
     -fb fontname                 bold text font
     -/+fbb                       turn on/off normal/bold font comparison inhibit
     -/+fbx                       turn off/on linedrawing characters
+    -fd pattern                  FreeType Doublesize font-selection pattern
     -fg color                    foreground color
     -fi fontname                 icon font for active icon
     -fn fontname                 normal text font
@@ -42,9 +43,9 @@ where options include:
     %geom                        Tek window geometry
     #geom                        icon window geometry
     -geometry geom               size (in characters) and position
-    -hc color                    selection background color
     -help                        print out this message
     -/+hf                        turn on/off HP Function Key escape codes
+    -/+hm                        turn on/off selection-color override
     -/+hold                      turn on/off logic that retains window after exit
     -iconic                      start iconic
     -/+ie                        turn on/off initialization of 'erase' from pty
@@ -52,15 +53,17 @@ where options include:
     -into windowId               use the window id given to -into as the parent window rather than the default root window
     -/+j                         turn on/off jump scroll
     -/+k8                        turn on/off C1-printable classification
+    -kt keyboardtype             set keyboard type: tcap hp sco sun vt220
     -/+l                         turn on/off logging (not supported)
     -/+lc                        turn on/off locale mode using luit
-    -lcc path                    filename of locale converter (/usr/X11R6/bin/luit)
+    -lcc path                    filename of locale converter (/usr/bin/luit)
     -leftbar                     force scrollbar left
     -lf filename                 logging filename (not supported)
     -/+ls                        turn on/off login shell
     -/+mb                        turn on/off margin bell
     -mc milliseconds             multiclick time in milliseconds
     -/+mesg                      forbid/allow messages
+    -/+mk_width                  turn on/off simple width convention
     -ms color                    pointer color
     -n string                    icon name for window
     -name string                 client instance, icon, and title strings
@@ -75,6 +78,8 @@ where options include:
     -/+s                         turn on/off multiscroll
     -/+samename                  turn on/off the no-flicker option for title and icon name
     -/+sb                        turn on/off scrollbar
+    -selbg color                 selection background color
+    -selfg color                 selection foreground color
     -/+sf                        turn on/off Sun Function Key escape codes
     -/+si                        turn on/off scroll-on-tty-output inhibit
     -/+sk                        turn on/off scroll-on-keypress
@@ -87,7 +92,9 @@ where options include:
     -tm string                   terminal mode keywords and characters
     -tn name                     TERM environment variable name
     -/+u8                        turn on/off UTF-8 mode (implies wide-characters)
+    -/+uc                        turn on/off underline cursor
     -/+ulc                       turn off/on display of underline as color
+    -/+ulit                      turn off/on display of underline as italics
     -/+ut                        turn on/off utmp support
     -/+vb                        turn on/off visual bell
     -version                     print the version number
