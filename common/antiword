@@ -1,0 +1,20 @@
+	Name: antiword
+	Purpose: Display MS-Word files
+	Author: (C) 1998-2005 Adri van Os
+	Version: 0.37  (21 Oct 2005)
+	Status: GNU General Public License
+	Usage: antiword [switches] wordfile1 [wordfile2 ...]
+	Switches: [-f|-t|-a papersize|-p papersize|-x dtd][-m mapping][-w #][-i #][-Ls]
+		-f formatted text output
+		-t text output (default)
+		-a <paper size name> Adobe PDF output
+		-p <paper size name> PostScript output
+		   paper size like: a4, letter or legal
+		-x <dtd> XML output
+		   like: db (DocBook)
+		-m <mapping> character mapping file
+		-w <width> in characters of text output
+		-i <level> image level (PostScript only)
+		-L use landscape mode (PostScript only)
+		-r Show removed text
+		-s Show hidden (by Word) text
