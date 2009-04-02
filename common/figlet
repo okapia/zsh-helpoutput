@@ -1,0 +1,4 @@
+figlet: illegal option -- ?
+Usage: figlet [ -cklnoprstvxDELNRSWX ] [ -d fontdirectory ]
+              [ -f fontfile ] [ -m smushmode ] [ -w outputwidth ]
+              [ -C controlfile ] [ -I infocode ] [ message ]
