@@ -3,7 +3,7 @@ Usage: info [OPTION]... [MENU-ITEM...]
 Read documentation in Info format.
 
 Options:
-      --apropos=STRING         look up STRING in all indices of all manuals.
+  -k, --apropos=STRING         look up STRING in all indices of all manuals.
   -d, --directory=DIR          add DIR to INFOPATH.
       --dribble=FILENAME       remember user keystrokes in FILENAME.
   -f, --file=FILENAME          specify Info file to visit.
@@ -16,9 +16,9 @@ Options:
       --restore=FILENAME       read initial keystrokes from FILENAME.
   -O, --show-options, --usage  go to command-line options node.
       --subnodes               recursively output menu items.
-  -w, --where, --location      print physical location of Info file.
       --vi-keys                use vi-like and less-like key bindings.
       --version                display version information and exit.
+  -w, --where, --location      print physical location of Info file.
 
 The first non-option argument, if present, is the menu entry to start from;
 it is searched for in all `dir' files along INFOPATH.
@@ -31,6 +31,7 @@ Examples:
   info emacs                 start at emacs node from top-level dir
   info emacs buffers         start at buffers node within emacs manual
   info --show-options emacs  start at node with emacs' command line options
+  info --subnodes -o out.txt emacs  dump entire manual to out.txt
   info -f ./foo.info         show file ./foo.info, not searching dir
 
 Email bug reports to bug-texinfo@gnu.org,
