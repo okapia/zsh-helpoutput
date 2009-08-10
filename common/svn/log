@@ -1,12 +1,15 @@
 log: Show the log messages for a set of revision(s) and/or file(s).
 usage: 1. log [PATH]
-       2. log URL [PATH...]
+       2. log URL[@REV] [PATH...]
 
   1. Print the log messages for a local PATH (default: '.').
      The default revision range is BASE:1.
 
   2. Print the log messages for the PATHs (default: '.') under URL.
-     The default revision range is HEAD:1.
+     If specified, REV determines in which revision the URL is first
+     looked up, and the default revision range is REV:1; otherwise,
+     the URL is looked up in HEAD, and the default revision range is
+     HEAD:1.
 
   With -v, also print all affected paths with each log message.
   With -q, don't print the log message body itself (note that this is
@@ -24,24 +27,31 @@ usage: 1. log [PATH]
     svn log http://www.example.com/repo/project foo.c bar.c
 
 Valid options:
-  -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)
+  -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
                              A revision argument can be one of:
                                 NUMBER       revision number
-                                "{" DATE "}" revision at start of the date
-                                "HEAD"       latest in repository
-                                "BASE"       base rev of item's working copy
-                                "COMMITTED"  last commit at or before BASE
-                                "PREV"       revision just before COMMITTED
-  -q [--quiet]             : print as little as possible
+                                '{' DATE '}' revision at start of the date
+                                'HEAD'       latest in repository
+                                'BASE'       base rev of item's working copy
+                                'COMMITTED'  last commit at or before BASE
+                                'PREV'       revision just before COMMITTED
+  -q [--quiet]             : print nothing, or only summary information
   -v [--verbose]           : print extra information
-  --targets arg            : pass contents of file ARG as additional args
+  -g [--use-merge-history] : use/display additional information from merge
+                             history
+  -c [--change] ARG        : the change made by ARG
+  --targets ARG            : pass contents of file ARG as additional args
   --stop-on-copy           : do not cross copies while traversing history
   --incremental            : give output suitable for concatenation
   --xml                    : output in XML
-  --username arg           : specify a username ARG
-  --password arg           : specify a password ARG
+  -l [--limit] ARG         : maximum number of log entries
+  --with-all-revprops      : retrieve all revision properties
+  --with-revprop ARG       : retrieve revision property ARG
+
+Global options:
+  --username ARG           : specify a username ARG
+  --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --config-dir arg         : read user configuration files from directory ARG
-  --limit arg              : maximum number of log entries
+  --config-dir ARG         : read user configuration files from directory ARG
 

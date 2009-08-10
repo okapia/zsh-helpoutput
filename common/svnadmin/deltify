@@ -7,6 +7,6 @@ delta from the preceding revision.  If no revisions are specified,
 this will simply deltify the HEAD revision.
 
 Valid options:
-  -r [--revision] arg      : specify revision number ARG (or X:Y range)
+  -r [--revision] ARG      : specify revision number ARG (or X:Y range)
   -q [--quiet]             : no progress (only errors) to stderr
 

@@ -1,18 +1,16 @@
-add: Put files and directories under version control, scheduling
-them for addition to repository.  They will be added in next commit.
-usage: add PATH...
+resolve: Resolve conflicts on working copy files or directories.
+usage: resolve [PATH...]
+
+  Note:  the --accept option is currently required.
 
 Valid options:
   --targets ARG            : pass contents of file ARG as additional args
-  -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
+  -R [--recursive]         : descend recursively, same as --depth=infinity
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
                             'immediates', or 'infinity')
   -q [--quiet]             : print nothing, or only summary information
-  --force                  : force operation to run
-  --no-ignore              : disregard default and svn:ignore property ignores
-  --auto-props             : enable automatic properties
-  --no-auto-props          : disable automatic properties
-  --parents                : add intermediate parents
+  --accept ARG             : specify automatic conflict resolution source
+                            ('base', 'working', 'mine-full', 'theirs-full')
 
 Global options:
   --username ARG           : specify a username ARG

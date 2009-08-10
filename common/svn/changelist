@@ -1,15 +1,14 @@
-revert: Restore pristine working copy file (undo most local edits).
-usage: revert PATH...
-
-  Note:  this subcommand does not require network access, and resolves
-  any conflicted states.  However, it does not restore removed directories.
+changelist (cl): Associate (or dissociate) changelist CLNAME with the named files.
+usage: 1. changelist CLNAME TARGET...
+       2. changelist --remove TARGET...
 
 Valid options:
-  --targets ARG            : pass contents of file ARG as additional args
+  -q [--quiet]             : print nothing, or only summary information
   -R [--recursive]         : descend recursively, same as --depth=infinity
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
                             'immediates', or 'infinity')
-  -q [--quiet]             : print nothing, or only summary information
+  --remove                 : remove changelist association
+  --targets ARG            : pass contents of file ARG as additional args
   --changelist ARG         : operate only on members of changelist ARG
                              [aliases: --cl]
 

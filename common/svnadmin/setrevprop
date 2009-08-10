@@ -1,0 +1,15 @@
+setrevprop: usage: svnadmin setrevprop REPOS_PATH -r REVISION NAME FILE
+
+Set the property NAME on revision REVISION to the contents of FILE. Use
+--use-pre-revprop-change-hook/--use-post-revprop-change-hook to trigger
+the revision property-related hooks (for example, if you want an email
+notification sent from your post-revprop-change hook).
+
+NOTE: Revision properties are not versioned, so this command will
+overwrite the previous value of the property.
+
+Valid options:
+  -r [--revision] ARG      : specify revision number ARG (or X:Y range)
+  --use-pre-revprop-change-hook : call hook before changing revision property
+  --use-post-revprop-change-hook : call hook after changing revision property
+

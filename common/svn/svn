@@ -1,6 +1,8 @@
 usage: svn <subcommand> [options] [args]
-Subversion command-line client, version 1.2.3.
+Subversion command-line client, version 1.5.7.
 Type 'svn help <subcommand>' for help on a specific subcommand.
+Type 'svn --version' to see the program version and RA modules
+  or 'svn --version --quiet' to see just the version number.
 
 Most subcommands take file and/or directory arguments, recursing
 on the directories.  If no arguments are supplied to such a
@@ -10,6 +12,7 @@ Available subcommands:
    add
    blame (praise, annotate, ann)
    cat
+   changelist (cl)
    checkout (co)
    cleanup
    commit (ci)
@@ -24,6 +27,7 @@ Available subcommands:
    lock
    log
    merge
+   mergeinfo
    mkdir
    move (mv, rename, ren)
    propdel (pdel, pd)
@@ -31,6 +35,7 @@ Available subcommands:
    propget (pget, pg)
    proplist (plist, pl)
    propset (pset, ps)
+   resolve
    resolved
    revert
    status (stat, st)

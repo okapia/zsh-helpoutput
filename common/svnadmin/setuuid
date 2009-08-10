@@ -1,0 +1,5 @@
+setuuid: usage: svnadmin setuuid REPOS_PATH [NEW_UUID]
+
+Reset the repository UUID for the repository located at REPOS_PATH.  If
+NEW_UUID is provided, use that as the new repository UUID; otherwise,
+generate a brand new UUID for the repository.
