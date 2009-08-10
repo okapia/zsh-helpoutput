@@ -8,7 +8,7 @@ If --incremental is passed, then the first revision dumped will be
 a diff against the previous revision, instead of the usual fulltext.
 
 Valid options:
-  -r [--revision] arg      : specify revision number ARG (or X:Y range)
+  -r [--revision] ARG      : specify revision number ARG (or X:Y range)
   --incremental            : dump incrementally
   --deltas                 : use deltas in dump output
   -q [--quiet]             : no progress (only errors) to stderr

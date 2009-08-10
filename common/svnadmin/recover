@@ -1,8 +1,8 @@
 recover: usage: svnadmin recover REPOS_PATH
 
-Run the Berkeley DB recovery procedure on a repository.  Do
-this if you've been getting errors indicating that recovery
-ought to be run.  Recovery requires exclusive access and will
+Run the recovery procedure on a repository.  Do this if you've
+been getting errors indicating that recovery ought to be run.
+Berkeley DB recovery requires exclusive access and will
 exit if the repository is in use by another process.
 
 Valid options:

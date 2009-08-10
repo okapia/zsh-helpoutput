@@ -19,7 +19,8 @@ usage: 1. propset PROPNAME PROPVAL PATH...
       LastChangedRevision
       Id                       - A compressed summary of the previous
                                    4 keywords.
-    svn:executable - If present, make the file executable.
+    svn:executable - If present, make the file executable.  Use
+      'svn propdel svn:executable PATH...' to clear.
     svn:eol-style  - One of 'native', 'LF', 'CR', 'CRLF'.
     svn:mime-type  - The mimetype of the file.  Used to determine
       whether to merge the file, and how to serve it from Apache.
@@ -27,36 +28,60 @@ usage: 1. propset PROPNAME PROPVAL PATH...
       treated as text.  Anything else is treated as binary.
     svn:externals  - A newline separated list of module specifiers,
       each of which consists of a relative directory path, optional
-      revision flags, and an URL.  For example
+      revision flags and an URL.  The ordering of the three elements
+      implements different behavior.  Subversion 1.4 and earlier only
+      support the following formats and the URLs cannot have peg
+      revisions:
         foo             http://example.com/repos/zig
         foo/bar -r 1234 http://example.com/repos/zag
+      Subversion 1.5 and greater support the above formats and the
+      following formats where the URLs may have peg revisions:
+                http://example.com/repos/zig foo
+        -r 1234 http://example.com/repos/zig foo/bar
+      Relative URLs are supported in Subversion 1.5 and greater for
+      all above formats and are indicated by starting the URL with one
+      of the following strings
+        ../  to the parent directory of the extracted external
+        ^/   to the repository root
+        //   to the scheme
+        /    to the server root
+      The ambiguous format 'relative_path relative_path' is taken as
+      'relative_url relative_path' with peg revision support.
     svn:needs-lock - If present, indicates that the file should be locked
       before it is modified.  Makes the working copy file read-only
-      when it is not locked.
+      when it is not locked.  Use 'svn propdel svn:needs-lock PATH...'
+      to clear.
+
   The svn:keywords, svn:executable, svn:eol-style, svn:mime-type and
   svn:needs-lock properties cannot be set on a directory.  A non-recursive
   attempt will fail, and a recursive attempt will set the property
   only on the file children of the directory.
 
 Valid options:
-  -F [--file] arg          : read data from file ARG
-  --encoding arg           : treat value as being in charset encoding ARG
-  -q [--quiet]             : print as little as possible
-  -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)
+  -F [--file] ARG          : read property value from file ARG
+  --encoding ARG           : treat value as being in charset encoding ARG
+  -q [--quiet]             : print nothing, or only summary information
+  -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
                              A revision argument can be one of:
                                 NUMBER       revision number
-                                "{" DATE "}" revision at start of the date
-                                "HEAD"       latest in repository
-                                "BASE"       base rev of item's working copy
-                                "COMMITTED"  last commit at or before BASE
-                                "PREV"       revision just before COMMITTED
-  --targets arg            : pass contents of file ARG as additional args
-  -R [--recursive]         : descend recursively
+                                '{' DATE '}' revision at start of the date
+                                'HEAD'       latest in repository
+                                'BASE'       base rev of item's working copy
+                                'COMMITTED'  last commit at or before BASE
+                                'PREV'       revision just before COMMITTED
+  --targets ARG            : pass contents of file ARG as additional args
+  -R [--recursive]         : descend recursively, same as --depth=infinity
+  --depth ARG              : limit operation by depth ARG ('empty', 'files',
+                            'immediates', or 'infinity')
   --revprop                : operate on a revision property (use with -r)
-  --username arg           : specify a username ARG
-  --password arg           : specify a password ARG
+  --force                  : force operation to run
+  --changelist ARG         : operate only on members of changelist ARG
+                             [aliases: --cl]
+
+Global options:
+  --username ARG           : specify a username ARG
+  --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --force                  : force operation to run
-  --config-dir arg         : read user configuration files from directory ARG
+  --config-dir ARG         : read user configuration files from directory ARG
 

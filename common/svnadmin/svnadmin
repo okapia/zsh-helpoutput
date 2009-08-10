@@ -1,7 +1,9 @@
 general usage: svnadmin SUBCOMMAND REPOS_PATH  [ARGS & OPTIONS ...]
 Type 'svnadmin help <subcommand>' for help on a specific subcommand.
+Type 'svnadmin --version' to see the program version and FS modules.
 
 Available subcommands:
+   crashtest
    create
    deltify
    dump
@@ -16,5 +18,8 @@ Available subcommands:
    rmlocks
    rmtxns
    setlog
+   setrevprop
+   setuuid
+   upgrade
    verify
 
