@@ -1,3 +1,4 @@
-lslocks: usage: svnadmin lslocks REPOS_PATH
+lslocks: usage: svnadmin lslocks REPOS_PATH [PATH-IN-REPOS]
 
-Print descriptions of all locks.
+Print descriptions of all locks on or under PATH-IN-REPOS (which,
+if not provided, is the root of the repository).

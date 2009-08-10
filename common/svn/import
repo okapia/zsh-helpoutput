@@ -6,21 +6,30 @@ usage: import [PATH] URL
   Parent directories are created as necessary in the repository.
   If PATH is a directory, the contents of the directory are added
   directly under URL.
+  Unversionable items such as device files and pipes are ignored
+  if --force is specified.
 
 Valid options:
-  -q [--quiet]             : print as little as possible
-  -N [--non-recursive]     : operate on single directory only
+  -q [--quiet]             : print nothing, or only summary information
+  -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
+  --depth ARG              : limit operation by depth ARG ('empty', 'files',
+                            'immediates', or 'infinity')
   --auto-props             : enable automatic properties
+  --force                  : force operation to run
   --no-auto-props          : disable automatic properties
-  -m [--message] arg       : specify commit message ARG
-  -F [--file] arg          : read data from file ARG
+  -m [--message] ARG       : specify log message ARG
+  -F [--file] ARG          : read log message from file ARG
   --force-log              : force validity of log message source
-  --editor-cmd arg         : use ARG as external editor
-  --encoding arg           : treat value as being in charset encoding ARG
+  --editor-cmd ARG         : use ARG as external editor
+  --encoding ARG           : treat value as being in charset encoding ARG
+  --with-revprop ARG       : set revision property ARG in new revision
+                             using the name[=value] format
   --no-ignore              : disregard default and svn:ignore property ignores
-  --username arg           : specify a username ARG
-  --password arg           : specify a password ARG
+
+Global options:
+  --username ARG           : specify a username ARG
+  --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --config-dir arg         : read user configuration files from directory ARG
+  --config-dir ARG         : read user configuration files from directory ARG
 

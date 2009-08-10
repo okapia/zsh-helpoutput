@@ -1,0 +1,4 @@
+crashtest: usage: svnadmin crashtest REPOS_PATH
+
+Open the repository at REPOS_PATH, then abort, thus simulating
+a process that crashes while holding an open repository handle.

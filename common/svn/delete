@@ -4,7 +4,8 @@ usage: 1. delete PATH...
 
   1. Each item specified by a PATH is scheduled for deletion upon
     the next commit.  Files, and directories that have not been
-    committed, are immediately removed from the working copy.
+    committed, are immediately removed from the working copy
+    unless the --keep-local option is given.
     PATHs that are, or contain, unversioned or modified items will
     not be removed unless the --force option is given.
 
@@ -13,16 +14,21 @@ usage: 1. delete PATH...
 
 Valid options:
   --force                  : force operation to run
-  -q [--quiet]             : print as little as possible
-  --targets arg            : pass contents of file ARG as additional args
-  -m [--message] arg       : specify commit message ARG
-  -F [--file] arg          : read data from file ARG
+  -q [--quiet]             : print nothing, or only summary information
+  --targets ARG            : pass contents of file ARG as additional args
+  -m [--message] ARG       : specify log message ARG
+  -F [--file] ARG          : read log message from file ARG
   --force-log              : force validity of log message source
-  --editor-cmd arg         : use ARG as external editor
-  --encoding arg           : treat value as being in charset encoding ARG
-  --username arg           : specify a username ARG
-  --password arg           : specify a password ARG
+  --editor-cmd ARG         : use ARG as external editor
+  --encoding ARG           : treat value as being in charset encoding ARG
+  --with-revprop ARG       : set revision property ARG in new revision
+                             using the name[=value] format
+  --keep-local             : keep path in working copy
+
+Global options:
+  --username ARG           : specify a username ARG
+  --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --config-dir arg         : read user configuration files from directory ARG
+  --config-dir ARG         : read user configuration files from directory ARG
 

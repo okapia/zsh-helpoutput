@@ -1,8 +1,11 @@
-cat: Output the content of specified files or URLs.
-usage: cat TARGET[@REV]...
+mergeinfo: Display merge-related information.
+usage: mergeinfo SOURCE[@REV] [TARGET[@REV]]
 
-  If specified, REV determines in which revision the target is first
-  looked up.
+  Display information related to merges (or potential merges) between
+  SOURCE and TARGET (default: '.').  If the --show-revs option
+  is not provided, display revisions which have been merged from
+  SOURCE to TARGET; otherwise, display the type of information
+  specified by the --show-revs option.
 
 Valid options:
   -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
@@ -13,6 +16,8 @@ Valid options:
                                 'BASE'       base rev of item's working copy
                                 'COMMITTED'  last commit at or before BASE
                                 'PREV'       revision just before COMMITTED
+  --show-revs ARG          : specify which collection of revisions to display
+                             ('merged', 'eligible')
 
 Global options:
   --username ARG           : specify a username ARG

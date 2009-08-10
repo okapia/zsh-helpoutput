@@ -1,3 +1,8 @@
 verify: usage: svnadmin verify REPOS_PATH
 
 Verifies the data stored in the repository.
+
+Valid options:
+  -r [--revision] ARG      : specify revision number ARG (or X:Y range)
+  -q [--quiet]             : no progress (only errors) to stderr
+

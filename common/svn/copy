@@ -1,30 +1,46 @@
-copy (cp): Duplicate something in working copy or repository, remembering history.
-usage: copy SRC DST
+copy (cp): Duplicate something in working copy or repository, remembering
+history.
+usage: copy SRC[@REV]... DST
+
+When copying multiple sources, they will be added as children of DST,
+which must be a directory.
 
   SRC and DST can each be either a working copy (WC) path or URL:
     WC  -> WC:   copy and schedule for addition (with history)
     WC  -> URL:  immediately commit a copy of WC to URL
     URL -> WC:   check out URL into WC, schedule for addition
-    URL -> URL:  complete server-side copy;  used to branch & tag
+    URL -> URL:  complete server-side copy;  used to branch and tag
+  All the SRCs must be of the same type.
+
+WARNING: For compatibility with previous versions of Subversion,
+copies performed using two working copy paths (WC -> WC) will not
+contact the repository.  As such, they may not, by default, be able
+to propagate merge tracking information from the source of the copy
+to the destination.
 
 Valid options:
-  -r [--revision] arg      : ARG (some commands also take ARG1:ARG2 range)
+  -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
                              A revision argument can be one of:
                                 NUMBER       revision number
-                                "{" DATE "}" revision at start of the date
-                                "HEAD"       latest in repository
-                                "BASE"       base rev of item's working copy
-                                "COMMITTED"  last commit at or before BASE
-                                "PREV"       revision just before COMMITTED
-  -q [--quiet]             : print as little as possible
-  -m [--message] arg       : specify commit message ARG
-  -F [--file] arg          : read data from file ARG
+                                '{' DATE '}' revision at start of the date
+                                'HEAD'       latest in repository
+                                'BASE'       base rev of item's working copy
+                                'COMMITTED'  last commit at or before BASE
+                                'PREV'       revision just before COMMITTED
+  -q [--quiet]             : print nothing, or only summary information
+  --parents                : make intermediate directories
+  -m [--message] ARG       : specify log message ARG
+  -F [--file] ARG          : read log message from file ARG
   --force-log              : force validity of log message source
-  --editor-cmd arg         : use ARG as external editor
-  --encoding arg           : treat value as being in charset encoding ARG
-  --username arg           : specify a username ARG
-  --password arg           : specify a password ARG
+  --editor-cmd ARG         : use ARG as external editor
+  --encoding ARG           : treat value as being in charset encoding ARG
+  --with-revprop ARG       : set revision property ARG in new revision
+                             using the name[=value] format
+
+Global options:
+  --username ARG           : specify a username ARG
+  --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --config-dir arg         : read user configuration files from directory ARG
+  --config-dir ARG         : read user configuration files from directory ARG
 
