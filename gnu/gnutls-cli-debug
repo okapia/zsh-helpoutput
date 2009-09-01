@@ -1,0 +1,9 @@
+GNU TLS debug client
+Usage: gnutls-cli-debug [options] hostname
+
+
+     -p, --port integer       The port to connect to.
+     -d, --debug integer      Enable debugging
+     -V, --verbose            More verbose output
+     -v, --version            prints the program's version number
+     -h, --help               prints this help

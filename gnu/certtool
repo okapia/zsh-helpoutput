@@ -1,0 +1,76 @@
+Certtool help
+Usage: certtool [options]
+     -s, --generate-self-signed 
+                              Generate a self-signed certificate.
+     -c, --generate-certificate 
+                              Generate a signed certificate.
+     --generate-proxy         Generate a proxy certificate.
+     --generate-crl           Generate a CRL.
+     -u, --update-certificate 
+                              Update a signed certificate.
+     -p, --generate-privkey   Generate a private key.
+     -q, --generate-request   Generate a PKCS #10 certificate 
+                              request.
+     -e, --verify-chain       Verify a PEM encoded certificate chain. 
+                              The last certificate in the chain must 
+                              be a self signed one.
+     --verify-crl             Verify a CRL.
+     --generate-dh-params     Generate PKCS #3 encoded Diffie Hellman 
+                              parameters.
+     --get-dh-params          Get the included PKCS #3 encoded Diffie 
+                              Hellman parameters.
+     --load-privkey FILE      Private key file to use.
+     --load-request FILE      Certificate request file to use.
+     --load-certificate FILE  
+                              Certificate file to use.
+     --load-ca-privkey FILE   Certificate authority's private key 
+                              file to use.
+     --load-ca-certificate FILE  
+                              Certificate authority's certificate 
+                              file to use.
+     --password PASSWORD      Password to use.
+     -i, --certificate-info   Print information on a certificate.
+     --pgp-certificate-info   Print information on a OpenPGP 
+                              certificate.
+     --pgp-ring-info          Print information on a keyring 
+                              structure.
+     -l, --crl-info           Print information on a CRL.
+     --p12-info               Print information on a PKCS #12 
+                              structure.
+     --p7-info                Print information on a PKCS #7 
+                              structure.
+     --smime-to-p7            Convert S/MIME to PKCS #7 structure.
+     -k, --key-info           Print information on a private key.
+     --pgp-key-info           Print information on a OpenPGP private 
+                              key.
+     --fix-key                Regenerate the parameters in a private 
+                              key.
+     --v1                     Generate an X.509 version 1 certificate 
+                              (no extensions).
+     --to-p12                 Generate a PKCS #12 structure.
+     --to-p8                  Generate a PKCS #8 key structure.
+     -8, --pkcs8              Use PKCS #8 format for private keys.
+     --dsa                    Use DSA keys.
+     --hash STR               Hash algorithm to use for signing 
+                              (MD5,SHA1,RMD160,SHA256,SHA384,SHA512).
+     --export-ciphers         Use weak encryption algorithms.
+     --inder                  Use DER format for input certificates 
+                              and private keys.
+     --inraw                  Use RAW/DER format for input 
+                              certificates and private keys.
+     --outder                 Use DER format for output certificates 
+                              and private keys.
+     --outraw                 Use RAW/DER format for output 
+                              certificates and private keys.
+     --bits BITS              specify the number of bits for key 
+                              generation.
+     --disable-quick-random   Use /dev/random for key generationg, 
+                              thus increasing the quality of 
+                              randomness used.
+     --outfile FILE           Output file.
+     --infile FILE            Input file.
+     --template FILE          Template file to use for non 
+                              interactive operation.
+     -d, --debug LEVEL        specify the debug level. Default is 1.
+     -h, --help               shows this help text
+     -v, --version            shows the program's version
