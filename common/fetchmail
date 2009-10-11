@@ -16,8 +16,8 @@ usage:  fetchmail [options] [server ...]
       --pidfile     specify alternate PID (lock) file
       --postmaster  specify recipient of last resort
       --nobounce    redirect bounces from user to postmaster.
-  -I, --interface   interface required specification
-  -M, --monitor     monitor interface for activity
+      --nosoftbounce fetchmail deletes permanently undeliverable messages.
+      --softbounce  keep permanently undeliverable messages on server (default).
       --ssl         enable ssl encrypted session
       --sslkey      ssl private key file
       --sslcert     ssl client certificate
