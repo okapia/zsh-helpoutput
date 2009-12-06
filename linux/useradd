@@ -1,0 +1,34 @@
+useradd: invalid option -- h
+Usage: useradd [options] LOGIN
+
+Options:
+  -b, --base-dir BASE_DIR       base directory for the new user account
+                                home directory
+  -c, --comment COMMENT         set the GECOS field for the new user account
+  -d, --home-dir HOME_DIR       home directory for the new user account
+  -D, --defaults                print or save modified default useradd
+                                configuration
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP for the new user account
+  -G, --groups GROUPS           list of supplementary groups for the new
+                                user account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           specify an alternative skel directory
+  -K, --key KEY=VALUE           overrides /etc/login.defs defaults
+  -l,                           do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create home directory for the new user
+                                account
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow create user with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new user
+                                account
+  -r, --system                  create a system account
+  -s, --shell SHELL             the login shell for the new user account
+  -u, --uid UID                 force use the UID for the new user account
+  -U, --user-group              create a group with the same name as the user
+
