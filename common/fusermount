@@ -1,0 +1,8 @@
+fusermount: [options] mountpoint
+Options:
+ -h		    print help
+ -V		    print version
+ -o opt[,opt...]   mount options
+ -u		    unmount
+ -q		    quiet
+ -z		    lazy unmount
