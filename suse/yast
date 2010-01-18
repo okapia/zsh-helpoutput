@@ -3,16 +3,20 @@ Usage: /sbin/yast [OPTIONS] [MODULE] [module specific parameters]
 OPTIONS:
 	-h, --help	this message
 	-l, --list	list all available modules
+	--qt            use the QT graphical user interface
+	--gtk           use the GTK graphical user interface
+	--ncurses       use the NCURSES text-mode user interface
 	-g, --geometry	default window size (qt only)
-	-s, --style	widget style (qt only)
 	--noborder      no window manager border for main window
 	--fullscreen    use full screen
 
 exceptional case for installing packages:
-/sbin/yast OPTION <package>
+/sbin/yast OPTION <package> [<package> [...]]
 
 OPTION:
 	-i, --install	install rpm package
+	    --update 	update rpm package
+	    --remove	remove rpm package
 
 <package> can be a single short package name (e.g. gvim)
 which will be installed with dependency checking, or the full
