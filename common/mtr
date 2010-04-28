@@ -1,0 +1,5 @@
+usage: mtr [-hvrwctglspniu46] [--help] [--version] [--report]
+		[--report-wide] [--report-cycles=COUNT] [--curses] [--gtk]
+		[--raw] [--split] [--no-dns] [--address interface]
+		[--psize=bytes/-s bytes]
+		[--interval=SECONDS] HOSTNAME [PACKETSIZE]
