@@ -1,6 +1,6 @@
 ==============================================================================
-metaflac - Command-line FLAC metadata editor version 1.1.0
-Copyright (C) 2001,2002,2003  Josh Coalson
+metaflac - Command-line FLAC metadata editor version 1.2.1
+Copyright (C) 2001,2002,2003,2004,2005,2006,2007  Josh Coalson
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -29,8 +29,9 @@ Options:
                       (the default if more than one FLAC file is specified)
 --no-filename         Do not prefix each output line with the FLAC file name
                       (the default if only one FLAC file is specified)
---no-utf8-convert     Do not convert Vorbis comments from UTF-8 to local charset,
-                      or vice versa.  This is useful for scripts.
+--no-utf8-convert     Do not convert tags from UTF-8 to local charset,
+                      or vice versa.  This is useful for scripts, and setting
+                      tags in situations where the locale is wrong.
 --dont-use-padding    By default metaflac tries to use padding where possible
                       to avoid rewriting the entire file if the metadata size
                       changes.  Use this option to tell metaflac to not take
@@ -47,34 +48,90 @@ Shorthand operations:
 --show-bps            Show the # of bits per sample from the STREAMINFO block.
 --show-total-samples  Show the total # of samples from the STREAMINFO block.
 
---show-vc-vendor      Show the vendor string from the VORBIS_COMMENT block.
---show-vc-field=name  Show all Vorbis comment fields where the the field name
-                      matches 'name'.
---remove-vc-field=name  Remove all Vorbis comment fields whose field name
-                      is 'name'.
---remove-vc-firstfield=name  Remove first Vorbis comment field whose field
-                      name is 'name'.
---remove-vc-all       Remove all Vorbis comment fields, leaving only the
-                      vendor string in the VORBIS_COMMENT block.
---set-vc-field=field  Add a Vorbis comment field.  The field must comply with
-                      the Vorbis comment spec, of the form "NAME=VALUE".  If
-                      there is currently no VORBIS_COMMENT block, one will be
-                      created.
---import-vc-from=file Import Vorbis comments from a file.  Use '-' for stdin.
-                      Each line should be of the form NAME=VALUE.  Multi-
-                      line comments are currently not supported.  Specify
-                      --remove-vc-all and/or --no-utf8-convert before
-                      --import-vc-from if necessary.
---export-vc-to=file   Export Vorbis comments to a file.  Use '-' for stdin.
-                      Each line will be of the form NAME=VALUE.  Specify
+--show-vendor-tag     Show the vendor string from the VORBIS_COMMENT block.
+--show-tag=NAME       Show all tags where the the field name matches 'NAME'.
+--remove-tag=NAME     Remove all tags whose field name is 'NAME'.
+--remove-first-tag=NAME  Remove first tag whose field name is 'NAME'.
+--remove-all-tags     Remove all tags, leaving only the vendor string.
+--set-tag=FIELD       Add a tag.  The FIELD must comply with the Vorbis comment
+                      spec, of the form "NAME=VALUE".  If there is currently
+                      no tag block, one will be created.
+--set-tag-from-file=FIELD   Like --set-tag, except the VALUE is a filename
+                      whose contents will be read verbatim to set the tag value.
+                      Unless --no-utf8-convert is specified, the contents will
+                      be converted to UTF-8 from the local charset.  This can
+                      be used to store a cuesheet in a tag (e.g.
+                      --set-tag-from-file="CUESHEET=image.cue").  Do not try
+                      to store binary data in tag fields!  Use APPLICATION
+                      blocks for that.
+--import-tags-from=FILE Import tags from a file.  Use '-' for stdin.  Each line
+                      should be of the form NAME=VALUE.  Multi-line comments
+                      are currently not supported.  Specify --remove-all-tags
+                      and/or --no-utf8-convert before --import-tags-from if
+                      necessary.  If FILE is '-' (stdin), only one FLAC file
+                      may be specified.
+--export-tags-to=FILE Export tags to a file.  Use '-' for stdout.  Each line
+                      will be of the form NAME=VALUE.  Specify
                       --no-utf8-convert if necessary.
---import-cuesheet-from=file  Import a cuesheet from a file.  Only one FLAC
-                      file may be specified.  A seekpoint will be added for
-                      each index point in the cuesheet to the SEEKTABLE unless
-                      --no-cued-seekpoints is specified.
---export-cuesheet-to=file  Export CUESHEET block to a cuesheet file, suitable
-                      for use by CD authoring software.  Use '-' for stdin.
+--import-cuesheet-from=FILE  Import a cuesheet from a file.  Use '-' for stdin.
+                      Only one FLAC file may be specified.  A seekpoint will be
+                      added for each index point in the cuesheet to the
+                      SEEKTABLE unless --no-cued-seekpoints is specified.
+--export-cuesheet-to=FILE  Export CUESHEET block to a cuesheet file, suitable
+                      for use by CD authoring software.  Use '-' for stdout.
                       Only one FLAC file may be specified on the command line.
+--import-picture-from=FILENAME|SPECIFICATION  Import a picture and store it in a
+                      PICTURE block.  Either a filename for the picture file or
+                      a more complete specification form can be used.  The
+                      SPECIFICATION is a string whose parts are separated by |
+                      characters.  Some parts may be left empty to invoke
+                      default values.  FILENAME is just shorthand for
+                      "||||FILENAME".  The format of SPECIFICATION is:
+         [TYPE]|[MIME-TYPE]|[DESCRIPTION]|[WIDTHxHEIGHTxDEPTH[/COLORS]]|FILE
+           TYPE is optional; it is a number from one of:
+              0: Other
+              1: 32x32 pixels 'file icon' (PNG only)
+              2: Other file icon
+              3: Cover (front)
+              4: Cover (back)
+              5: Leaflet page
+              6: Media (e.g. label side of CD)
+              7: Lead artist/lead performer/soloist
+              8: Artist/performer
+              9: Conductor
+             10: Band/Orchestra
+             11: Composer
+             12: Lyricist/text writer
+             13: Recording Location
+             14: During recording
+             15: During performance
+             16: Movie/video screen capture
+             17: A bright coloured fish
+             18: Illustration
+             19: Band/artist logotype
+             20: Publisher/Studio logotype
+             The default is 3 (front cover).  There may only be one picture each
+             of type 1 and 2 in a file.
+           MIME-TYPE is optional; if left blank, it will be detected from the
+             file.  For best compatibility with players, use pictures with MIME
+             type image/jpeg or image/png.  The MIME type can also be --> to
+             mean that FILE is actually a URL to an image, though this use is
+             discouraged.
+           DESCRIPTION is optional; the default is an empty string
+           The next part specfies the resolution and color information.  If
+             the MIME-TYPE is image/jpeg, image/png, or image/gif, you can
+             usually leave this empty and they can be detected from the file.
+             Otherwise, you must specify the width in pixels, height in pixels,
+             and color depth in bits-per-pixel.  If the image has indexed colors
+             you should also specify the number of colors used.
+           FILE is the path to the picture file to be imported, or the URL if
+             MIME type is -->
+--export-picture-to=FILE  Export PICTURE block to a file.  Use '-' for stdout.
+                      Only one FLAC file may be specified.  The first PICTURE
+                      block will be exported unless --export-picture-to is
+                      preceded by a --block-number=# option to specify the exact
+                      metadata block to extract.  Note that the block number is
+                      the one shown by --list.
 --add-replay-gain     Calculates the title and album gains/peaks of the given
                       FLAC files as if all the files were part of one album,
                       then stores them in the VORBIS_COMMENT block.  The tags
@@ -87,6 +144,7 @@ Shorthand operations:
                       must have the same resolution, sample rate, and number
                       of channels.  The sample rate must be one of 8, 11.025,
                       12, 16, 22.05, 24, 32, 44.1, or 48 kHz.
+--remove-replay-gain  Removes the ReplayGain tags.
 --add-seekpoint={#|X|#x|#s}  Add seek points to a SEEKTABLE block
        #  : a specific sample number for a seek point
        X  : a placeholder point (always goes at the end of the SEEKTABLE)
@@ -118,7 +176,7 @@ Major operations:
 
     --block-type=type[,type[...]]
     --except-block-type=type[,type[...]]
-    An optional comma-separated list of block types to included or ignored
+    An optional comma-separated list of block types to be included or ignored
     with this option.  Use only one of --block-type or --except-block-type.
     The valid block types are: STREAMINFO, PADDING, APPLICATION, SEEKTABLE,
     VORBIS_COMMENT.  You may narrow down the types of APPLICATION blocks
