@@ -1,13 +1,18 @@
-Usage: sqlite [OPTIONS] FILENAME [SQL]
-Options are:
+Usage: sqlite3 [OPTIONS] FILENAME [SQL]
+FILENAME is the name of an SQLite database. A new database is created
+if the file does not previously exist.
+OPTIONS include:
    -init filename       read/process named file
    -echo                print commands before execution
    -[no]header          turn headers on or off
+   -bail                stop after hitting an error
+   -interactive         force interactive I/O
+   -batch               force batch I/O
    -column              set output mode to 'column'
+   -csv                 set output mode to 'csv'
    -html                set output mode to HTML
    -line                set output mode to 'line'
    -list                set output mode to 'list'
    -separator 'x'       set output field separator (|)
    -nullvalue 'text'    set text string for NULL values
    -version             show SQLite version
-   -help                show this text, also show dot-commands
