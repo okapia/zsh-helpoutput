@@ -1,4 +1,4 @@
-X.Org 6.8.99.903(238) usage:
+X.Org 6.8.99.903(253) usage:
     xterm [-options ...] [-e command args]
 
 where options include:
@@ -44,7 +44,6 @@ where options include:
     #geom                        icon window geometry
     -geometry geom               size (in characters) and position
     -help                        print out this message
-    -/+hf                        turn on/off HP Function Key escape codes
     -/+hm                        turn on/off selection-color override
     -/+hold                      turn on/off logic that retains window after exit
     -iconic                      start iconic
@@ -53,13 +52,14 @@ where options include:
     -into windowId               use the window id given to -into as the parent window rather than the default root window
     -/+j                         turn on/off jump scroll
     -/+k8                        turn on/off C1-printable classification
-    -kt keyboardtype             set keyboard type: tcap hp sco sun vt220
+    -kt keyboardtype             set keyboard type: tcap sun vt220
     -/+l                         turn on/off logging (not supported)
     -/+lc                        turn on/off locale mode using luit
     -lcc path                    filename of locale converter (/usr/bin/luit)
     -leftbar                     force scrollbar left
     -lf filename                 logging filename (not supported)
     -/+ls                        turn on/off login shell
+    -/+maximized                 turn on/off maxmize on startup
     -/+mb                        turn on/off margin bell
     -mc milliseconds             multiclick time in milliseconds
     -/+mesg                      forbid/allow messages
