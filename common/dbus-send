@@ -1,0 +1,1 @@
+Usage: dbus-send [--help] [--system | --session] [--dest=NAME] [--type=TYPE] [--print-reply=(literal)] [--reply-timeout=MSEC] <destination object path> <message name> [contents ...]
