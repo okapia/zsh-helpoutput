@@ -1,4 +1,4 @@
-setfacl 2.2.21 -- set file access control lists
+setfacl 2.2.47 -- set file access control lists
 Usage: setfacl [-bkndRLP] { -m|-M|-x|-X ... } file ...
   -m, --modify=acl        modify the current ACL(s) of file(s)
   -M, --modify-file=file  read ACL entries to modify from file
@@ -16,5 +16,5 @@ Usage: setfacl [-bkndRLP] { -m|-M|-x|-X ... } file ...
   -P, --physical          physical walk, do not follow symbolic links
       --restore=file      restore ACLs (inverse of `getfacl -R')
       --test              test mode (ACLs are not modified)
-      --version           print version and exit
-      --help              this help text
+  -v, --version           print version and exit
+  -h, --help              this help text
