@@ -2,6 +2,7 @@ This is the GNU debugger.  Usage:
 
     gdb [options] [executable-file [core-file or process-id]]
     gdb [options] --args executable-file [inferior-arguments ...]
+    gdb [options] [--python|-P] script-file [script-arguments ...]
 
 Options:
 
@@ -30,8 +31,11 @@ Options:
   -l TIMEOUT         Set timeout in seconds for remote debugging.
   --nw		     Do not use a window interface.
   --nx               Do not read .gdbinit file.
+  --python, -P       Following argument is Python script file; remaining
+                     arguments are passed to script.
   --quiet            Do not print version number on startup.
   --readnow          Fully read symbol files on first access.
+  --readnever        Do not read symbol files.
   --se=FILE          Use FILE as symbol file and executable file.
   --symbols=SYMFILE  Read symbols from SYMFILE.
   --tty=TTY          Use TTY for input/output by the program being debugged.
@@ -41,5 +45,8 @@ Options:
   --write            Set writing into executable and core files.
   --xdb              XDB compatibility mode.
 
+At startup, GDB reads the following init files and executes their commands:
+
 For more information, type "help" from within GDB, or consult the
 GDB manual (available as on-line info or a printed manual).
+
