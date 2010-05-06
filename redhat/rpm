@@ -1,4 +1,5 @@
 Usage: rpm [OPTION...]
+  --quiet
 
 Query options (with -q or --query):
   -c, --configfiles                list all configuration files
@@ -12,11 +13,22 @@ Query options (with -q or --query):
   -f, --file                       query/verify package(s) owning file
   -g, --group                      query/verify package(s) in group
   -p, --package                    query/verify a package file
+  -W, --ftswalk                    query/verify package(s) from TOP file tree
+                                   walk
+  --pkgid                          query/verify package(s) with package
+                                   identifier
+  --hdrid                          query/verify package(s) with header
+                                   identifier
+  --fileid                         query/verify package(s) with file identifier
   --specfile                       query a spec file
+  --triggeredby                    query the package(s) triggered by the
+                                   package
   --whatrequires                   query/verify the package(s) which require a
                                    dependency
   --whatprovides                   query/verify the package(s) which provide a
                                    dependency
+  --nomanifest                     do not process non-package files as
+                                   manifests
 
 Verify options (with -V or --verify):
   --nomd5                          don't verify MD5 digest of files
@@ -27,15 +39,37 @@ Verify options (with -V or --verify):
   -f, --file                       query/verify package(s) owning file
   -g, --group                      query/verify package(s) in group
   -p, --package                    query/verify a package file
+  -W, --ftswalk                    query/verify package(s) from TOP file tree
+                                   walk
+  --pkgid                          query/verify package(s) with package
+                                   identifier
+  --hdrid                          query/verify package(s) with header
+                                   identifier
+  --fileid                         query/verify package(s) with file identifier
   --specfile                       query a spec file
+  --triggeredby                    query the package(s) triggered by the
+                                   package
   --whatrequires                   query/verify the package(s) which require a
                                    dependency
   --whatprovides                   query/verify the package(s) which provide a
                                    dependency
+  --nomanifest                     do not process non-package files as
+                                   manifests
+
+File tree walk options (with --ftswalk):
+  --comfollow                      FTS_COMFOLLOW: follow command line symlinks
+  --logical                        FTS_LOGICAL: logical walk
+  --nochdir                        FTS_NOCHDIR: don't change directories
+  --nostat                         FTS_NOSTAT: don't get stat info
+  --physical                       FTS_PHYSICAL: physical walk
+  --seedot                         FTS_SEEDOT: return dot and dot-dot
+  --xdev                           FTS_XDEV: don't cross devices
+  --whiteout                       FTS_WHITEOUT: return whiteout information
 
 Signature options:
   --addsign                        sign package(s) (identical to --resign)
   -K, --checksig                   verify package signature(s)
+  --delsign                        delete package signatures
   --import                         import an armored public key
   --resign                         sign package(s) (identical to --addsign)
   --nodigest                       don't verify package digest(s)
@@ -53,10 +87,11 @@ Install/Upgrade/Erase options:
   --allmatches                     remove all packages which match <package>
                                    (normally an error is generated if
                                    <package> specified multiple packages)
-  --badreloc                       relocate files in non-relocateable package
+  --badreloc                       relocate files in non-relocatable package
   -e, --erase=<package>+           erase (uninstall) package
   --excludedocs                    do not install documentation
   --excludepath=<path>             skip files with leading component <path> 
+  --fileconflicts                  detect file conflicts between packages
   --force                          short hand for --replacepkgs --replacefiles
   -F, --freshen=<packagefile>+     upgrade package(s) if already installed
   -h, --hash                       print hash marks as package installs (good
@@ -69,6 +104,7 @@ Install/Upgrade/Erase options:
                                    filesystem
   --nodeps                         do not verify package dependencies
   --nomd5                          don't verify MD5 digest of files
+  --nocontexts                     don't install file security contexts
   --noorder                        do not reorder package installation to
                                    satisfy dependencies
   --nosuggest                      do not suggest missing dependency
@@ -84,14 +120,13 @@ Install/Upgrade/Erase options:
                                    relocatable
   --relocate=<old>=<new>           relocate files from path <old> to <new>
   --repackage                      save erased package files by repackaging
-  --replacefiles                   install even if the package replaces
-                                   installed files
+  --replacefiles                   ignore file conflicts between packages
   --replacepkgs                    reinstall if the package is already present
   --test                           don't install, but tell if it would work or
                                    not
   -U, --upgrade=<packagefile>+     upgrade package(s)
 
-Common options for all rpm modes:
+Common options for all rpm modes and executables:
   -D, --define='MACRO EXPR'        define MACRO with value EXPR
   -E, --eval='EXPR'                print macro expansion of EXPR
   --macros=<FILE:...>              read <FILE:...> instead of default file(s)
@@ -118,15 +153,29 @@ Options implemented via popt alias/exec:
                                    this package
   --provides                       list capabilities that this package provides
   --requires                       list capabilities required by package(s)
+  --suggests                       list capabilities this package suggests
+  --recommends                     list capabilities this package recommends
+  --enhances                       list capabilities this package enhances
+  --supplements                    list capabilities this package supplements
   --basedon                        list packages this patch-rpm is based on
   --info                           list descriptive information from package(s)
   --changelog                      list change logs for this package
+  --xml                            list metadata in xml
   --triggers                       list trigger scriptlets from package(s)
   --last                           list package(s) by install time, most
                                    recent first
+  --dupes                          list duplicated packages
   --filesbypkg                     list all files from each package
   --fileclass                      list file names with classes
   --filecolor                      list file names with colors
+  --filecontext                    list file names with security context from
+                                   header
+  --fscontext                      list file names with security context from
+                                   file system
+  --recontext                      list file names with security context from
+                                   policy RE
+  --fileprovide                    list file names with provides
+  --filerequire                    list file names with requires
   --buildpolicy=<policy>           set buildroot <policy> (e.g. compress man
                                    pages)
   --with=<option>                  enable configure <option> for build
