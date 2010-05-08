@@ -1,23 +1,26 @@
 
 Usage:
- losetup loop_device                                  # give info
- losetup -a | --all                                   # list all used
- losetup -d | --detach loop_device                    # delete
- losetup -f | --find                                  # find unused
- losetup [ options ] {-f|--find|loop_device} file     # setup
+ losetup loop_device                             give info
+ losetup -a | --all                              list all used
+ losetup -d | --detach <loopdev> [<loopdev> ...] delete
+ losetup -f | --find                             find unused
+ losetup -c | --set-capacity <loopdev>           resize
+ losetup -j | --associated <file> [-o <num>]     list all associated with <file>
+ losetup [ options ] {-f|--find|loopdev} <file>  setup
 
 Options:
  -e | --encryption <type> enable data encryption with specified <name/num>
+ -H | --phash <type>      hash password using specified algorithm (sha512/sha256/sha384/rmd160/none)
  -h | --help              this help
- -o | --offset <num>      start at offset <num> into file
- -p | --pass-fd <num>     read passphrase from file descriptor <num>
- -r | --read-only         setup read-only loop device
- -s | --show              print device name (with -f <file>)
- -N | --nohashpass        Do not hash the given password (Debian hashes)
  -k | --keybits <num>     specify number of bits in the hashed key given
                           to the cipher.  Some ciphers support several key
                           sizes and might be more efficient with a smaller
                           key size.  Key sizes < 128 are generally not
                           recommended
+ -o | --offset <num>      start at offset <num> into file
+      --sizelimit <num>   loop limited to only <num> bytes of the file
+ -p | --pass-fd <num>     read passphrase from file descriptor <num>
+ -r | --read-only         setup read-only loop device
+      --show              print device name (with -f <file>)
  -v | --verbose           verbose mode
 
