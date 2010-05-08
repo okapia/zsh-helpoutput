@@ -1,16 +1,24 @@
-chrt (util-linux-ng 2.13.1.1)
-usage: chrt [options] [prio] [pid | cmd [args...]]
-manipulate real-time attributes of a process
-  -b, --batch                        set policy to SCHED_BATCH
-  -f, --fifo                         set policy to SCHED_FIFO
-  -p, --pid                          operate on existing given pid
-  -m, --max                          show min and max valid priorities
-  -o, --other                        set policy to SCHED_OTHER
-  -r, --rr                           set policy to SCHED_RR (default)
-  -h, --help                         display this help
-  -v, --verbose                      display status information
-  -V, --version                      output version information
 
-You must give a priority if changing policy.
+chrt - manipulate real-time attributes of a process.
 
-Report bugs and send patches to <rml@tech9.net>
+Set policy:
+  chrt [options] <policy> <priority> {<pid> | <command> [<arg> ...]}
+
+Get policy:
+  chrt [options] {<pid> | <command> [<arg> ...]}
+
+
+Scheduling policies:
+  -b | --batch         set policy to SCHED_BATCH
+  -f | --fifo          set policy to SCHED_FIFO
+  -i | --idle          set policy to SCHED_IDLE
+  -o | --other         set policy to SCHED_OTHER
+  -r | --rr            set policy to SCHED_RR (default)
+
+Options:
+  -h | --help          display this help
+  -p | --pid           operate on existing given pid
+  -m | --max           show min and max valid priorities
+  -v | --verbose       display status information
+  -V | --version       output version information
+

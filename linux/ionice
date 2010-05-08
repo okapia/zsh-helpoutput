@@ -1,10 +1,14 @@
-Usage: ionice [OPTIONS] [COMMAND [ARG]...]
-Sets or gets process io scheduling class and priority.
 
-	-n	Class data (typically 0-7, lower being higher prio)
-	-c	Scheduling class
-			1: realtime, 2: best-effort, 3: idle
-	-p	Process pid
-	-h	This help page
+ionice - sets or gets process io scheduling class and priority.
 
-Jens Axboe <axboe@suse.de> (C) 2005
+Usage:
+  ionice [ options ] -p <pid> [<pid> ...]
+  ionoce [ options ] <command> [<arg> ...]
+
+Options:
+  -n <classdata>      class data (0-7, lower being higher prio)
+  -c <class>          scheduling class
+                      0: none, 1: realtime, 2: best-effort, 3: idle
+  -t                  ignore failures
+  -h                  this help
+
