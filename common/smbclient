@@ -17,6 +17,7 @@ Usage: smbclient service <password>
   -b, --send-buffer=BYTES                   Changes the transmit/send buffer
   -p, --port=PORT                           Port to connect to
   -g, --grepable                            Produce grepable output
+  -B, --browse                              Browse SMB servers using DNS
 
 Help options:
   -?, --help                                Show this help message
@@ -42,3 +43,5 @@ Authentication options:
   -A, --authentication-file=FILE            Get the credentials from a file
   -S, --signing=on|off|required             Set the client signing state
   -P, --machine-pass                        Use stored machine account password
+  -e, --encrypt                             Encrypt SMB transport (UNIX
+                                            extended servers only)
