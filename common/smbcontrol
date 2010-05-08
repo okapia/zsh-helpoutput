@@ -24,6 +24,8 @@ Common samba options:
 	debuglevel                    Display current debuglevels
 	printnotify                   Send a print notify message
 	close-share                   Forcibly disconnect a share
+	lockretry                     Force a blocking lock retry
+	brl-revalidate                Revalidate all brl entries
 	samsync                       Initiate SAM synchronisation
 	samrepl                       Initiate SAM replication
 	pool-usage                    Display talloc memory usage
@@ -36,5 +38,8 @@ Common samba options:
 	online                        Ask winbind to go into online state
 	offline                       Ask winbind to go into offline state
 	onlinestatus                  Request winbind online status
+	dump-event-list               Dump event list
+	validate-cache                Validate winbind's credential cache
+	dump-domain-list              Dump winbind domain list
 	noop                          Do nothing
 
