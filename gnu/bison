@@ -1,37 +1,51 @@
-GNU bison generates parsers for LALR(1) grammars.
-
 Usage: bison [OPTION]... FILE
+Generate LALR(1) and GLR parsers.
 
-If a long option shows an argument as mandatory, then it is mandatory
-for the equivalent short option also.  Similarly for optional arguments.
+Mandatory arguments to long options are mandatory for short options too.
+The same is true for optional arguments.
 
 Operation modes:
   -h, --help                 display this help and exit
   -V, --version              output version information and exit
       --print-localedir      output directory containing locale-dependent data
-  -y, --yacc                 emulate POSIX yacc
+      --print-datadir        output directory containing skeletons and XSLT
+  -y, --yacc                 emulate POSIX Yacc
+  -W, --warnings=[CATEGORY]  report the warnings falling in CATEGORY
 
 Parser:
+  -L, --language=LANGUAGE    specify the output programming language
+                             (this is an experimental feature)
   -S, --skeleton=FILE        specify the skeleton to use
   -t, --debug                instrument the parser for debugging
       --locations            enable locations computation
   -p, --name-prefix=PREFIX   prepend PREFIX to the external symbols
   -l, --no-lines             don't generate `#line' directives
-  -n, --no-parser            generate the tables only
   -k, --token-table          include a table of token names
 
 Output:
-  -d, --defines              also produce a header file
+      --defines[=FILE]       also produce a header file
+  -d                         likewise but cannot specify FILE (for POSIX Yacc)
   -r, --report=THINGS        also produce details on the automaton
+      --report-file=FILE     write report to FILE
   -v, --verbose              same as `--report=state'
   -b, --file-prefix=PREFIX   specify a PREFIX for output files
   -o, --output=FILE          leave output to FILE
-  -g, --graph                also produce a VCG description of the automaton
+  -g, --graph[=FILE]         also output a graph of the automaton
+  -x, --xml[=FILE]           also output an XML report of the automaton
+                             (the XML schema is experimental)
+
+Warning categories include:
+  `midrule-values'  unset or unused midrule values
+  `yacc'            incompatibilities with POSIX YACC
+  `all'             all the warnings
+  `no-CATEGORY'     turn off warnings in CATEGORY
+  `none'            turn off all the warnings
+  `error'           treat warnings as errors
 
 THINGS is a list of comma separated words that can include:
   `state'        describe the states
   `itemset'      complete the core item sets with their closure
-  `look-ahead'   explicitly associate look-ahead tokens to items
+  `lookahead'    explicitly associate lookahead tokens to items
   `solved'       describe shift/reduce conflicts solving
   `all'          include all the above information
   `none'         disable the report
