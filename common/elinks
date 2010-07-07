@@ -1,0 +1,34 @@
+ELinks 0.12pre5
+
+Usage: elinks [OPTION]... [URL]...
+
+Options:
+  -anonymous [0|1]      Restrict to anonymous mode
+  -auto-submit [0|1]    Autosubmit first form
+  -base-session <num>   Clone internal session with given ID
+  -config-dir <str>     Name of directory with configuration file
+  -config-dump          Print default configuration file to stdout
+  -config-file <str>    Name of configuration file
+  -config-help          Print help for configuration options
+  -default-mime-type    MIME type assumed for unknown document types
+  -default-keys [0|1]   Ignore user-defined keybindings
+  -dump [0|1]           Print formatted versions of given URLs to stdout
+  -dump-charset         Codepage to use with -dump
+  -dump-color-mode      Color mode used with -dump
+  -dump-width           Width of document formatted with -dump
+  -eval                 Evaluate configuration file directive
+  -force-html           Interpret documents of unknown types as HTML
+  -?, -h, -help         Print usage help and exit
+  -localhost [0|1]      Only permit local connections
+  -long-help            Print detailed usage help and exit
+  -lookup               Look up specified host
+  -no-connect [0|1]     Run as separate instance
+  -no-home [0|1]        Disable use of files in ~/.elinks
+  -no-numbering         Disable link numbering in dump output
+  -no-references        Disable printing of link references in dump output
+  -remote               Control an already running ELinks
+  -session-ring <num>   Connect to session ring with given ID
+  -source [0|1]         Print the source of given URLs to stdout
+  -touch-files [0|1]    Touch files in ~/.elinks when running with -no-connect/-session-ring
+  -verbose <num>        Verbose level
+  -version              Print version information and exit
