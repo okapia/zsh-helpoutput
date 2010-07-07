@@ -1,0 +1,349 @@
+links [options] URL
+Options are:
+
+ -g
+  Run in graphics mode.
+
+ -no-g
+  Run in text mode (overrides previous -g).
+
+ -driver <driver name>
+  Graphics driver to use. Drivers are: x, svgalib, fb, directfb, pmshell,
+    atheos.
+  List of drivers will be shown if you give it an unknown driver.
+  Available drivers depend on your operating system and available libraries.
+
+ -mode <graphics mode>
+  Graphics mode. For SVGALIB it is in format COLUMNSxROWSxCOLORS --
+    for example 640x480x256, 800x600x64k, 960x720x16M, 1024x768x16M32
+    List of modes will be shown if you give it an unknown videomode.
+  For framebuffer it is number of pixels in border --- LEFT,TOP,RIGHT,BOTTOM
+    other 3 values are optional --- i.e. -mode 10 will set all borders to 10,
+    -mode 10,20 will set left & right border to 10 and top & bottom to 20.
+  For Xwindow it is size of a window in format WIDTHxHEIGHT.
+
+ -display <x-display>
+  Set Xwindow display.
+
+ -force-html
+  Treat files with unknown type as html rather than text.
+    (can be toggled with '\' key)
+
+ -source <url>
+  Write unformatted data stream to stdout.
+
+ -dump <url>
+  Write formatted document to stdout.
+
+ -width <number>
+  For dump, document will be formatted to this screen width (but it can still
+    exceed it if lines can't be broken).
+
+ -codepage <codepage>
+  For dump, convert output to specified character set --
+    for eaxmple iso-8859-2, windows-1250.
+
+ -anonymous
+  Restrict links so that it can run on an anonymous account.
+  No local file browsing. No downloads. Executing viewers
+    is allowed, but user can't add or modify entries in
+    association table.
+
+ -no-connect
+  Runs links as a separate instance - instead of connecting to
+    existing instance.
+
+ -download-utime <0>/<1>
+  Set time of downloaded files to last modification time reported by server.
+
+ -async-dns <0>/<1>
+  Asynchronous DNS resolver on(1)/off(0).
+
+ -max-connections <max>
+  Maximum number of concurrent connections.
+    (default: 10)
+
+ -max-connections-to-host <max>
+  Maximum number of concurrent connection to a given host.
+    (default: 2)
+
+ -retries <retry>
+  Number of retries.
+    (default: 3)
+
+ -receive-timeout <sec>
+  Timeout on receive.
+    (default: 120)
+
+ -unrestartable-receive-timeout <sec>
+  Timeout on non restartable connections.
+    (default: 600)
+
+ -format-cache-size <num>
+  Number of formatted document pages cached.
+    (default: 5)
+
+ -memory-cache-size <bytes>
+  Cache memory in bytes.
+    (default: 1048576)
+
+ -image-cache-size <bytes>
+  Cache memory in bytes.
+    (default: 1048576)
+
+ -http-proxy <host:port>
+  Host and port number of the HTTP proxy, or blank.
+    (default: blank)
+
+ -ftp-proxy <host:port>
+  Host and port number of the FTP proxy, or blank.
+    (default: blank)
+
+ -socks-proxy <user@host:port>
+  Userid, host and port of Socks4a, or blank.
+    (default: blank)
+
+ -only-proxies <0>/<1>
+    (default 0)
+  "1" causes that Links won't initiate any non-proxy connection.
+    It is useful for anonymization with tor or similar networks.
+
+ -download-dir <path>
+  Default download directory.
+    (default: actual dir)
+
+ -language <language>
+  Set user interface language.
+
+ -http-bugs.http10 <0>/<1>
+    (default 0)
+  "1" forces using only HTTP/1.0 protocol. (useful for buggy servers
+    that claim to be HTTP/1.1 compliant but are not)
+  "0" use both HTTP/1.0 and HTTP/1.1.
+
+ -http-bugs.allow-blacklist <0>/<1>
+    (default 1)
+  "1" defaults to using list of servers that have broken HTTP/1.1 support.
+     When links finds such server, it will retry the request with HTTP/1.0.
+
+ -http-bugs.bug-302-redirect <0>/<1>
+    (default 1)
+  Process 302 redirect in a way that is incompatible with RFC1945 and RFC2068,
+    but the same as Netscape and MSIE. Many pages depend on it.
+
+ -http-bugs.bug-post-no-keepalive <0>/<1>
+    (default 0)
+  No keepalive connection after post requests. For some buggy servers.
+
+ -http-bugs.bug-no-accept-charset <0>/<1>
+    (default 0)
+  Do not send Accept-Charset field of HTTP header. Because it is too long
+    some servers will deny the request. Other servers will convert content
+    to plain ascii when Accept-Charset is missing.
+
+ -http-bugs.no-compression <0>/<1>
+    (default 0)
+  "1" causes that links won't advertise HTTP compression support (but it
+    will still accept compressed data). Use it when you communicate with
+    server that has broken compression support.
+
+ -http-bugs.retry-internal-errors <0>/<1>
+    (default 0)
+  Retry on internal server errors (50x).
+
+ -http-bugs.aggressive-cache <0>/<1>
+    (default 1)
+  Always cache everything regardless of server's caching recomendations.
+    Many servers deny caching even if their content is not changing
+    just to get more hits and more money from ads.
+
+ -http-referer <0>/<1>/<2>/<3>
+    (default 0)
+  0 - do not send referer
+  1 - send the requested URL as referer
+  2 - send fake referer
+  3 - send real referer
+  4 - send real referer only to the same server
+
+ -fake-referer <string>
+  Fake referer value.
+
+ -fake-user-agent <string>
+  Fake user agent value.
+
+ -ftp.anonymous-password <string>
+  Password for anonymous ftp access.
+
+ -ftp.use-passive <0>/<1>
+  Use ftp PASV command to bypass firewalls.
+
+ -ftp.fast <0>/<1>
+  Send more ftp commands simultaneously. Faster response when
+    browsing ftp directories, but it is incompatible with RFC
+    and some servers don't like it.
+
+ -ftp.set-iptos <0>/<1>
+  Set IP Type-of-service to high throughput on ftp connections.
+
+ -menu-font-size <size>
+  Size of font in menu.
+
+ -background-color 0xRRGGBB
+  Set menu background color in graphics mode, RRGGBB are hex.
+
+ -foreground-color 0xRRGGBB
+  Set menu foreground color in graphics mode.
+
+ -scroll-bar-area-color 0xRRGGBB
+  Set color of scroll bar area.
+
+ -scroll-bar-bar-color 0xRRGGBB
+  Set color of scroll bar.
+
+ -scroll-bar-frame-color 0xRRGGBB
+  Set color of scroll bar frame.
+
+ -display-red-gamma <fp-value>
+  Red gamma of display.
+    (default 2.2)
+
+ -display-green-gamma <fp-value>
+  Green gamma of display.
+    (default 2.2)
+
+ -display-blue-gamma <fp-value>
+  Blue gamma of display.
+    (default 2.2)
+
+ -user-gamma <fp-value>
+  Additional gamma.
+    (default 1)
+
+ -bfu-aspect <fp-value>
+  Display aspect ration.
+
+ -aspect-on <0>/<1>
+  Enable aspect ratio correction.
+
+ -dither-letters <0>/<1>
+  Do letter dithering.
+
+ -dither-images <0>/<1>
+  Do image dithering.
+
+ -display-optimize <0>/<1>/<2>
+  Optimize for CRT (0), LCD RGB (1), LCD BGR (2).
+
+ -gamma correction <0>/<1>/<2>
+  Type of gamma correction:
+    (default 2)
+  0 - 8-bit (fast).
+  1 - 16-bit (slow).
+  2 - automatically detect according to speed of FPU.
+
+ -bookmarks-codepage <codepage>
+  Character set of bookmarks file.
+
+ -bookmarks-file <file>
+  File to store bookmarks.
+
+ -html-assume-codepage <codepage>
+  If server didn't specify document character set, assume this.
+
+ -html-hard-assume <0>/<1>
+  Use always character set from "-html-assume-codepage" no matter
+    what server sent.
+
+ -html-tables <0>/<1>
+  Render tables. (0) causes tables being rendered like in lynx.
+
+ -html-frames <0>/<1>
+  Render frames. (0) causes frames  rendered like in lynx.
+
+ -html-images <0>/<1>
+  Display links to unnamed images as [IMG].
+
+ -html-image-names <0>/<1>
+  Display filename of an image instead of [IMG].
+
+ -html-display-images <0>/<1>
+  Display images in graphics mode.
+
+ -html-image-scale <percent>
+  Scale images in graphics mode.
+
+ -html-bare-image-autoscale <0>/<1>
+  Autoscale images displayed on full screen.
+
+ -html-numbered-links <0>/<1>
+  Number links in text mode. Allow quick link selection by typing
+    link number and enter.
+
+ -html-table-order <0>/<1>
+  In text mode, walk through table by rows (0) or columns (1).
+
+ -html-auto-refresh <0>/<1>
+  Process refresh to other page (1), or display link to that page (0).
+
+ -html-target-in-new-window <0>/<1>
+  Allow opening new windows from html.
+
+ -html-margin <number of spaces>
+  Margin in text mode.
+
+ -html-user-font-size <size>
+  Size of font on pages in graphics mode.
+
+ -lookup <hostname>
+  Does name lookup, like command "host".
+
+ -version
+  Prints the links version number and exit.
+
+ -help
+  Prints this help screen
+
+
+Keys:
+	ESC	  display menu
+	^C	  quit
+	^P	  scroll up
+	^N	  scroll down
+	[, ]	  scroll left, right
+	up, down  select link
+	->, enter follow link
+	<-, z	  go back
+	g	  go to url
+	G	  go to url based on current url
+	^G	  go to url based on current link
+	^R	  reload
+	/	  search
+	?	  search back
+	n	  find next
+	N	  find previous
+	=	  document info
+	\	  document source
+	|	  HTTP header
+	*	  toggle displaying of image links (text mode)
+	d	  download
+	s	  bookmarks
+	q	  quit or close current window
+	^X	  cut to clipboard
+	^V	  paste from clipboard
+	^K	  cut line (in textarea) or text to the end (in field)
+	^U	  cut all text before cursor
+	^W	  autocomplete url
+	Alt-1 .. Alt-9
+		  switch virtual screens (svgalib and framebuffer)
+
+Keys for braille terminal:
+       arrows	  move the cursor
+       enter	  follow link
+	a	  cursor to status line
+	w	  cursor to title
+	^Y	  next link
+	^T	  previous link
+	y	  next word
+	t	  previous word
+	^O	  next form field entry
+
