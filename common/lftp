@@ -1,0 +1,11 @@
+Usage: lftp [OPTS] <site>
+`lftp' is the first command executed by lftp after rc files
+ -f <file>           execute commands from the file and exit
+ -c <cmd>            execute the commands and exit
+ --help              print this help and exit
+ --version           print lftp version and exit
+Other options are the same as in `open' command
+ -e <cmd>            execute the command just after selecting
+ -u <user>[,<pass>]  use the user/password for authentication
+ -p <port>           use the port for connection
+ <site>              host name, URL or bookmark name
