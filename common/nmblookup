@@ -1,17 +1,28 @@
-Usage: nmblookup [-M] [-B bcast address] [-d debuglevel] name
-Version 2.2.3a
-	-d debuglevel         set the debuglevel
-	-B broadcast address  the address to use for broadcasts
-	-U unicast   address  the address to use for unicast
-	-M                    searches for a master browser
-	-R                    set recursion desired in packet
-	-S                    lookup node status as well
-	-T                    translate IP addresses into names
-	-r                    Use root port 137 (Win95 only replies to this)
-	-A                    Do a node status on <name> as an IP Address
-	-i NetBIOS scope      Use the given NetBIOS scope for name queries
-	-s smb.conf file      Use the given path to the smb.conf file
-	-h                    Print this help message.
+Usage: <NODE> ...
+  -B, --broadcast=BROADCAST-ADDRESS      Specify address to use for broadcasts
+  -f, --flags                            List the NMB flags returned
+  -U, --unicast=STRING                   Specify address to use for unicast
+  -M, --master-browser                   Search for a master browser
+  -R, --recursion                        Set recursion desired in package
+  -S, --status                           Lookup node status as well
+  -T, --translate                        Translate IP addresses into names
+  -r, --root-port                        Use root port 137 (Win95 only replies
+                                         to this)
+  -A, --lookup-by-ip                     Do a node status on <name> as an IP
+                                         Address
 
-  If you specify -M and name is "-", nmblookup looks up __MSBROWSE__<01>
+Help options:
+  -?, --help                             Show this help message
+      --usage                            Display brief usage message
 
+Common samba options:
+  -d, --debuglevel=DEBUGLEVEL            Set debug level
+  -s, --configfile=CONFIGFILE            Use alternate configuration file
+  -l, --log-basename=LOGFILEBASE         Base name for log files
+  -V, --version                          Print version
+
+Connection options:
+  -O, --socket-options=SOCKETOPTIONS     socket options to use
+  -n, --netbiosname=NETBIOSNAME          Primary netbios name
+  -W, --workgroup=WORKGROUP              Set the workgroup name
+  -i, --scope=SCOPE                      Use this Netbios scope
