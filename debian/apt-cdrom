@@ -1,0 +1,21 @@
+apt 0.7.20.2 for armel compiled on May 13 2010 17:56:45
+Usage: apt-cdrom [options] command
+
+apt-cdrom is a tool to add CDROM's to APT's source list. The
+CDROM mount point and device information is taken from apt.conf
+and /etc/fstab.
+
+Commands:
+   add - Add a CDROM
+   ident - Report the identity of a CDROM
+
+Options:
+  -h   This help text
+  -d   CD-ROM mount point
+  -r   Rename a recognized CD-ROM
+  -m   No mounting
+  -f   Fast mode, don't check package files
+  -a   Thorough scan mode
+  -c=? Read this configuration file
+  -o=? Set an arbitrary configuration option, eg -o dir::cache=/tmp
+See fstab(5)
