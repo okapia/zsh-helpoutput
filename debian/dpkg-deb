@@ -1,0 +1,42 @@
+Usage: dpkg-deb [<option> ...] <command>
+
+Commands:
+  -b|--build <directory> [<deb>]   Build an archive.
+  -c|--contents <deb>              List contents.
+  -I|--info <deb> [<cfile> ...]    Show info to stdout.
+  -W|--show <deb>                  Show information on package(s)
+  -f|--field <deb> [<cfield> ...]  Show field(s) to stdout.
+  -e|--control <deb> [<directory>] Extract control info.
+  -x|--extract <deb> <directory>   Extract files.
+  -X|--vextract <deb> <directory>  Extract & list files.
+  --fsys-tarfile <deb>             Output filesystem tarfile.
+
+  -h|--help                        Show this help message.
+  --version                        Show the version.
+  --license|--licence              Show the copyright licensing terms.
+
+<deb> is the filename of a Debian format archive.
+<cfile> is the name of an administrative file component.
+<cfield> is the name of a field in the main `control' file.
+
+Options:
+  --showformat=<format>            Use alternative format for --show.
+  -D                               Enable debugging output.
+  --old, --new                     Select archive format.
+  --nocheck                        Suppress control file check (build bad
+                                     packages).
+  -z#                              Set the compression level when building.
+  -Z<type>                         Set the compression type used when building.
+                                     Allowed values: gzip, bzip2, lzma, none.
+
+Format syntax:
+  A format is a string that will be output for each package. The format
+  can include the standard escape sequences \n (newline), \r (carriage
+  return) or \\ (plain backslash). Package information can be included
+  by inserting variable references to package fields using the ${var[;width]}
+  syntax. Fields will be right-aligned unless the width is negative in which
+  case left alignment will be used.
+
+Use `dpkg' to install and remove packages from your system, or
+`dselect' or `aptitude' for user-friendly package management.  Packages
+unpacked using `dpkg-deb --extract' will be incorrectly installed !
