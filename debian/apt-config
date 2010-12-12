@@ -1,0 +1,13 @@
+apt 0.7.20.2 for armel compiled on May 13 2010 17:56:29
+Usage: apt-config [options] command
+
+apt-config is a simple tool to read the APT config file
+
+Commands:
+   shell - Shell mode
+   dump - Show the configuration
+
+Options:
+  -h   This help text.
+  -c=? Read this configuration file
+  -o=? Set an arbitrary configuration option, eg -o dir::cache=/tmp
