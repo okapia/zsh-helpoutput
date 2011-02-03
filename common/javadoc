@@ -33,6 +33,7 @@ Provided by Standard doclet:
 -doctitle <html-code>             Include title for the overview page
 -header <html-code>               Include header text for each page
 -footer <html-code>               Include footer text for each page
+-top    <html-code>               Include top text for each page
 -bottom <html-code>               Include bottom text for each page
 -link <url>                       Create links to javadoc output at <url>
 -linkoffline <url> <url2>         Link to docs at <url> using package list at <url2>
