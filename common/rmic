@@ -4,9 +4,9 @@ where <options> includes:
   -keep          Do not delete intermediate generated source files
   -keepgenerated (same as "-keep")
   -v1.1          Create stubs/skeletons for 1.1 stub protocol version
-  -vcompat       (default) Create stubs/skeletons compatible with both
+  -vcompat       Create stubs/skeletons compatible with both
                            1.1 and 1.2 stub protocol versions
-  -v1.2          Create stubs for 1.2 stub protocol version only
+  -v1.2          (default) Create stubs for 1.2 stub protocol version only
   -iiop          Create stubs for IIOP. When present, <options> also includes:
 
                    -always           Create stubs even when they appear current
@@ -20,7 +20,6 @@ where <options> includes:
                    -alwaysgenerate   (same as "-always")
 
   -g             Generate debugging info
-  -depend        Recompile out-of-date files recursively
   -nowarn        Generate no warnings
   -nowrite       Do not write compiled classes to the file system
   -verbose       Output messages about what the compiler is doing

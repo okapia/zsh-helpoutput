@@ -4,75 +4,89 @@ keytool usage:
 	     [-alias <alias>] [-sigalg <sigalg>]
 	     [-file <csr_file>] [-keypass <keypass>]
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
+
+-changealias [-v] [-protected] -alias <alias> -destalias <destalias>
+	     [-keypass <keypass>]
+	     [-keystore <keystore>] [-storepass <storepass>]
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
 -delete      [-v] [-protected] -alias <alias>
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
--export      [-v] [-rfc] [-protected]
+-exportcert  [-v] [-rfc] [-protected]
 	     [-alias <alias>] [-file <cert_file>]
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
--genkey      [-v] [-protected]
+-genkeypair  [-v] [-protected]
 	     [-alias <alias>]
 	     [-keyalg <keyalg>] [-keysize <keysize>]
 	     [-sigalg <sigalg>] [-dname <dname>]
 	     [-validity <valDays>] [-keypass <keypass>]
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
+
+-genseckey   [-v] [-protected]
+	     [-alias <alias>] [-keypass <keypass>]
+	     [-keyalg <keyalg>] [-keysize <keysize>]
+	     [-keystore <keystore>] [-storepass <storepass>]
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
 -help
 
--identitydb  [-v] [-protected]
-	     [-file <idb_file>]
-	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
-
--import      [-v] [-noprompt] [-trustcacerts] [-protected]
+-importcert  [-v] [-noprompt] [-trustcacerts] [-protected]
 	     [-alias <alias>]
 	     [-file <cert_file>] [-keypass <keypass>]
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
--keyclone    [-v] [-protected]
-	     [-alias <alias>] -dest <dest_alias>
-	     [-keypass <keypass>] [-new <new_keypass>]
-	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+-importkeystore [-v] 
+	     [-srckeystore <srckeystore>] [-destkeystore <destkeystore>]
+	     [-srcstoretype <srcstoretype>] [-deststoretype <deststoretype>]
+	     [-srcstorepass <srcstorepass>] [-deststorepass <deststorepass>]
+	     [-srcprotected] [-destprotected]
+	     [-srcprovidername <srcprovidername>]
+	     [-destprovidername <destprovidername>]
+	     [-srcalias <srcalias> [-destalias <destalias>]
+	       [-srckeypass <srckeypass>] [-destkeypass <destkeypass>]]
+	     [-noprompt]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
 -keypasswd   [-v] [-alias <alias>]
 	     [-keypass <old_keypass>] [-new <new_keypass>]
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
 -list        [-v | -rfc] [-protected]
 	     [-alias <alias>]
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]
 
 -printcert   [-v] [-file <cert_file>]
 
--selfcert    [-v] [-protected]
-	     [-alias <alias>]
-	     [-dname <dname>] [-validity <valDays>]
-	     [-keypass <keypass>] [-sigalg <sigalg>]
-	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
-
 -storepasswd [-v] [-new <new_storepass>]
 	     [-keystore <keystore>] [-storepass <storepass>]
-	     [-storetype <storetype>] [-providerName <name>]
-	     [-providerClass <provider_class_name> [-providerArg <arg>]] ...
-
+	     [-storetype <storetype>] [-providername <name>]
+	     [-providerclass <provider_class_name> [-providerarg <arg>]] ...
+	     [-providerpath <pathlist>]

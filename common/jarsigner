@@ -13,6 +13,10 @@ Usage: jarsigner [options] jar-file alias
 
 [-signedjar <file>]         name of signed JAR file
 
+[-digestalg <algorithm>]    name of digest algorithm
+
+[-sigalg <algorithm>]       name of signature algorithm
+
 [-verify]                   verify a signed JAR file
 
 [-verbose]                  verbose output when signing/verifying

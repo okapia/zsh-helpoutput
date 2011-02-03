@@ -1,5 +1,5 @@
   -Xlint                     Enable recommended warnings
-  -Xlint:{all,deprecation,unchecked,fallthrough,path,serial,finally,-deprecation,-unchecked,-fallthrough,-path,-serial,-finally}Enable or disable specific warnings
+  -Xlint:{all,cast,deprecation,divzero,empty,unchecked,fallthrough,path,serial,finally,overrides,-cast,-deprecation,-divzero,-empty,-unchecked,-fallthrough,-path,-serial,-finally,-overrides,none}Enable or disable specific warnings
   -Xbootclasspath/p:<path>   Prepend to the bootstrap class path
   -Xbootclasspath/a:<path>   Append to the bootstrap class path
   -Xbootclasspath:<path>     Override location of bootstrap class files
@@ -8,5 +8,9 @@
   -Xmaxerrs <number>         Set the maximum number of errors to print
   -Xmaxwarns <number>        Set the maximum number of warnings to print
   -Xstdout <filename>        Redirect standard output
+  -Xprint                    Print out a textual representation of specified types
+  -XprintRounds              Print information about rounds of annotation processing
+  -XprintProcessorInfo       Print information about which annotations a processor is asked to process
+  -Xprefer:{source,newer}    Specify which file to read when both a source file and class file are found for an implicitly compiled class
 
 These options are non-standard and subject to change without notice.
