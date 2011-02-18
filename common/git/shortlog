@@ -1,0 +1,1 @@
+usage: git-shortlog [-n] [-s] [-e] [-w] [<commit-id>... ]

@@ -1,0 +1,1 @@
+usage: git-mailinfo [-k] [-u | --encoding=<encoding> | -n] msg patch <mail >info

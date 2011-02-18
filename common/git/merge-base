@@ -1,0 +1,1 @@
+usage: git-merge-base [--all] <commit-id> <commit-id>

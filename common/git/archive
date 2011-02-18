@@ -1,0 +1,1 @@
+usage: git-archive --format=<fmt> [--prefix=<prefix>/] [--verbose] [<extra>] <tree-ish> [path...]

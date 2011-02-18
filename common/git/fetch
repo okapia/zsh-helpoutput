@@ -1,0 +1,13 @@
+usage: git-fetch [options] [<repository> <refspec>...]
+
+    -q, --quiet           be quiet
+    -v, --verbose         be verbose
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <PATH>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -n                    do not fetch all tags (--no-tags)
+    -k, --keep            keep downloaded pack
+    -u, --update-head-ok  allow updating of HEAD ref
+    --depth <DEPTH>       deepen history of shallow clone
+

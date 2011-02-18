@@ -1,0 +1,8 @@
+usage: git-pack-objects [{ -q | --progress | --all-progress }] 
+	[--max-pack-size=N] [--local] [--incremental] 
+	[--window=N] [--window-memory=N] [--depth=N] 
+	[--no-reuse-delta] [--no-reuse-object] [--delta-base-offset] 
+	[--threads=N] [--non-empty] [--revs [--unpacked | --all]*] [--reflog] 
+	[--stdout | base-name] [--include-tag] 
+	[--keep-unreachable | --unpack-unreachable] 
+	[<ref-list | <object-list]

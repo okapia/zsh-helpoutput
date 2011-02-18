@@ -1,0 +1,7 @@
+usage: git-update-ref [options] -d <refname> <oldval>
+   or: git-update-ref [options]    <refname> <newval> [<oldval>]
+
+    -m <reason>           reason of the update
+    -d                    deletes the reference
+    --no-deref            update <refname> not the one it points to
+

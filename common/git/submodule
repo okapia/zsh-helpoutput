@@ -1,0 +1,1 @@
+Usage: /usr/bin/git-submodule [--quiet] [--cached] [add <repo> [-b branch]|status|init|update [-i|--init]|summary [-n|--summary-limit <n>] [<commit>]] [--] [<path>...]

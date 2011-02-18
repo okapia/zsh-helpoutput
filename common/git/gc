@@ -1,0 +1,7 @@
+usage: git-gc [options]
+
+    --prune               prune unreferenced objects (deprecated)
+    --aggressive          be more thorough (increased runtime)
+    --auto                enable auto-gc mode
+    -q, --quiet           suppress progress reports
+

@@ -1,0 +1,9 @@
+usage: git-cherry-pick [options] <commit-ish>
+
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -x                    append commit name when cherry-picking
+    -r                    no-op (backward compatibility)
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <n>    parent number
+

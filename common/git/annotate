@@ -1,0 +1,17 @@
+usage: git-blame [-c] [-b] [-l] [--root] [-t] [-f] [-n] [-s] [-p] [-w] [-L n,m] [-S <revs-file>] [-M] [-C] [-C] [--contents <filename>] [--incremental] [commit] [--] file
+  -c                  Use the same output mode as git-annotate (Default: off)
+  -b                  Show blank SHA-1 for boundary commits (Default: off)
+  -l                  Show long commit SHA1 (Default: off)
+  --root              Do not treat root commits as boundaries (Default: off)
+  -t                  Show raw timestamp (Default: off)
+  -f, --show-name     Show original filename (Default: auto)
+  -n, --show-number   Show original linenumber (Default: off)
+  -s                  Suppress author name and timestamp (Default: off)
+  -p, --porcelain     Show in a format designed for machine consumption
+  -w                  Ignore whitespace differences
+  -L n,m              Process only line range n,m, counting from 1
+  -M, -C              Find line movements within and across files
+  --incremental       Show blame entries as we find them, incrementally
+  --contents file     Use <file>'s contents as the final image
+  -S revs-file        Use revisions from revs-file instead of calling git-rev-list
+

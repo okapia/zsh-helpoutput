@@ -1,0 +1,4 @@
+*** git-tar-tree is now deprecated.
+*** Running git-archive instead.
+*** 'git-archive' '--format=tar' '-h'
+usage: git-archive --format=<fmt> [--prefix=<prefix>/] [--verbose] [<extra>] <tree-ish> [path...]
