@@ -1,0 +1,5 @@
+usage: git-prune [-n] [--expire <time>] [--] [<head>...]
+
+    -n                    do not remove, show only
+    --expire <time>       expire objects older than <time>
+

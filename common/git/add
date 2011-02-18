@@ -1,0 +1,12 @@
+usage: git-add [options] [--] <filepattern>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           interactive patching
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+

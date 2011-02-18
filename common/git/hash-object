@@ -1,0 +1,1 @@
+usage: git-hash-object [ [-t <type>] [-w] [--stdin] <file>... | --stdin-paths < <list-of-paths> ]

@@ -1,0 +1,1 @@
+usage: git-fmt-merge-msg [--log] [--no-log] [--file <file>]

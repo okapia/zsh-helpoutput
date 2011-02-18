@@ -1,0 +1,1 @@
+usage: git-unpack-objects [-n] [-q] [-r] [--strict] < pack-file

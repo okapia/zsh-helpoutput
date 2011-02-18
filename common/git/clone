@@ -1,0 +1,17 @@
+usage: git-clone [options] [--] <repo> [<dir>]
+
+    -q, --quiet           be quiet
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --naked               create a bare repository
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --template <path>     path the template repository
+    --reference <repo>    reference repository
+    -o, --origin <branch>
+                          use <branch> instead or 'origin' to track upstream
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+

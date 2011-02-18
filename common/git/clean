@@ -1,0 +1,9 @@
+usage: git-clean [-d] [-f] [-n] [-q] [-x | -X] [--] <paths>...
+
+    -q, --quiet           be quiet
+    -n, --dry-run         dry run
+    -f                    force
+    -d                    remove whole directories
+    -x                    remove ignored files, too
+    -X                    remove only ignored files
+

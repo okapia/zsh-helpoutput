@@ -1,0 +1,30 @@
+usage: git-rev-list [OPTION] <commit-id>... [ -- paths... ]
+  limiting output:
+    --max-count=nr
+    --max-age=epoch
+    --min-age=epoch
+    --sparse
+    --no-merges
+    --remove-empty
+    --all
+    --branches
+    --tags
+    --remotes
+    --stdin
+    --quiet
+  ordering output:
+    --topo-order
+    --date-order
+    --reverse
+  formatting output:
+    --parents
+    --objects | --objects-edge
+    --unpacked
+    --header | --pretty
+    --abbrev=nr | --no-abbrev
+    --abbrev-commit
+    --left-right
+  special purpose:
+    --bisect
+    --bisect-vars
+    --bisect-all

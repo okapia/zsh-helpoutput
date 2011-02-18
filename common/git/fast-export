@@ -1,0 +1,5 @@
+usage: git-fast-export [rev-list-opts]
+
+    --progress <n>        show progress after <n> objects
+    --signed-tags <mode>  select handling of signed tags
+
