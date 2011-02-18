@@ -1,0 +1,8 @@
+usage: git-reset [--mixed | --soft | --hard] [-q] [<commit>]
+   or: git-reset [--mixed] <commit> [--] <paths>...
+
+    --mixed               reset HEAD and index
+    --soft                reset only HEAD
+    --hard                reset HEAD, index and working tree
+    -q                    disable showing new HEAD in hard reset and progress message
+

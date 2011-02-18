@@ -1,0 +1,1 @@
+usage: git reflog [ show | expire | delete ]

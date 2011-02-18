@@ -1,0 +1,14 @@
+usage: git-instaweb [options] (--start | --stop | --restart)
+
+    -l, --local           only bind on 127.0.0.1
+    -p, --port ...        the port to bind to
+    -d, --httpd ...       the command to launch
+    -b, --browser ...     the browser to launch
+    -m, --module-path ...
+                          the module path (only needed for apache2)
+
+Action
+    --stop                stop the web server
+    --start               start the web server
+    --restart             restart the web server
+

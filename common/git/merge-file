@@ -1,0 +1,1 @@
+usage: git merge-file [-p | --stdout] [-q | --quiet] [-L name1 [-L orig [-L name2]]] file1 orig_file file2

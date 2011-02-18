@@ -1,0 +1,1 @@
+usage: git-ls-remote [--upload-pack=<git-upload-pack>] [<host>:]<directory>

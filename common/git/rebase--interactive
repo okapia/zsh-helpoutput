@@ -1,0 +1,2 @@
+Usage: /usr/bin/git-rebase--interactive (--continue | --abort | --skip | [--preserve-merges] [--verbose]
+	[--onto <branch>] <upstream> [<branch>])

@@ -1,0 +1,11 @@
+usage: git-for-each-ref [options] [<pattern>]
+
+    -s, --shell           quote placeholders suitably for shells
+    -p, --perl            quote placeholders suitably for perl
+    --python              quote placeholders suitably for python
+    --tcl                 quote placeholders suitably for tcl
+
+    --count <n>           show only <n> matched refs
+    --format <format>     format to use for the output
+    --sort <key>          field name to sort on
+

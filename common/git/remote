@@ -1,0 +1,9 @@
+usage: git remote
+   or: git remote add <name> <url>
+   or: git remote rm <name>
+   or: git remote show <name>
+   or: git remote prune <name>
+   or: git remote update [group]
+
+    -v, --verbose         be verbose
+

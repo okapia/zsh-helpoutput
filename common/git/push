@@ -1,0 +1,15 @@
+usage: git-push [--all | --mirror] [--dry-run] [--tags] [--receive-pack=<git-receive-pack>] [--repo=all] [-f | --force] [-v] [<repository> <refspec>...]
+
+    -v, --verbose         be verbose
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    --tags                push tags
+    --dry-run             dry run
+    -f, --force           force updates
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+

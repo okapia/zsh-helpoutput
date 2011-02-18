@@ -1,0 +1,10 @@
+usage: git checkout [options] <branch>
+   or: git checkout [options] [<branch>] -- <file>...
+
+    -q, --quiet           be quiet
+    -b <new branch>       branch
+    -l                    log for new branch
+    -t, --track           track
+    -f                    force
+    -m                    merge
+
