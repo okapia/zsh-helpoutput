@@ -7,11 +7,12 @@ Probe for hardware.
   --dump-db n    dump hardware data base, 0: external, 1: internal
   --hw_item      probe for hw_item
   hw_item is one of:
-    all, bios, block, bluetooth, braille, bridge, camera, cdrom, chipcard, cpu,
-    disk, dsl, dvb, floppy, framebuffer, gfxcard, hub, ide, isapnp, isdn,
-    joystick, keyboard, memory, modem, monitor, mouse, netcard, network,
-    partition, pci, pcmcia, pcmcia-ctrl, pppoe, printer, scanner, scsi, smp,
-    sound, storage-ctrl, sys, tape, tv, usb, usb-ctrl, vbe, wlan, zip
+   all, bios, block, bluetooth, braille, bridge, camera, cdrom, chipcard,
+   cpu, disk, dsl, dvb, fingerprint, floppy, framebuffer, gfxcard, hub,
+   ide, isapnp, isdn, joystick, keyboard, memory, modem, monitor, mouse,
+   netcard, network, partition, pci, pcmcia, pcmcia-ctrl, pppoe, printer,
+   scanner, scsi, smp, sound, storage-ctrl, sys, tape, tv, usb, usb-ctrl,
+   vbe, wlan, zip
 
   Note: debug info is shown only in the log file. (If you specify a
   log file the debug level is implicitly set to a reasonable value.)
