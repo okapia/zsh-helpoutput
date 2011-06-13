@@ -1,4 +1,4 @@
-gpg (GnuPG) 1.4.9
+gpg (GnuPG) 2.0.9
 Copyright (C) 2008 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
@@ -6,10 +6,11 @@ There is NO WARRANTY, to the extent permitted by law.
 
 Home: ~/.gnupg
 Supported algorithms:
-Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Pubkey: RSA, ELG, DSA
 Cipher: 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH
 Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
 Compression: Uncompressed, ZIP, ZLIB, BZIP2
+Used libraries: gcrypt(1.4.1)
 
 Syntax: gpg [options] [files]
 sign, check, encrypt or decrypt
@@ -24,7 +25,7 @@ Commands:
  -c, --symmetric               encryption only with symmetric cipher
  -d, --decrypt                 decrypt data (default)
      --verify                  verify a signature
-     --list-keys               list keys
+ -k, --list-keys               list keys
      --list-sigs               list keys and signatures
      --check-sigs              list and check key signatures
      --fingerprint             list keys and fingerprints
@@ -47,6 +48,7 @@ Commands:
      --change-pin              change a card's PIN
      --update-trustdb          update the trust database
      --print-md algo [files]   print message digests
+     --server                  run in server mode
 
 Options:
  
@@ -55,7 +57,7 @@ Options:
  -u, --local-user              use this user-id to sign or decrypt
  -z N                          set compress level N (0 disables)
      --textmode                use canonical text mode
- -o, --output                  use as output file
+ -o, --output FILE             write output to FILE
  -v, --verbose                 verbose
  -n, --dry-run                 do not make any changes
  -i, --interactive             prompt before overwriting
