@@ -1,7 +1,8 @@
-iptables v1.4.2
+iptables v1.4.6
 
 Usage: iptables -[AD] chain rule-specification [options]
-       iptables -[RI] chain rulenum rule-specification [options]
+       iptables -I chain [rulenum] rule-specification [options]
+       iptables -R chain rulenum rule-specification [options]
        iptables -D chain rulenum [options]
        iptables -[LS] [chain [rulenum]] [options]
        iptables -[FZ] [chain] [options]
@@ -25,7 +26,8 @@ Either long or short options are allowed.
   --list-rules -S [chain [rulenum]]
 				Print the rules in a chain or all chains
   --flush   -F [chain]		Delete all rules in  chain or all chains
-  --zero    -Z [chain]		Zero counters in chain or all chains
+  --zero    -Z [chain [rulenum]]
+				Zero counters in chain or all chains
   --new     -N chain		Create a new user-defined chain
   --delete-chain
             -X [chain]		Delete a user-defined chain
@@ -36,9 +38,9 @@ Either long or short options are allowed.
 				Change chain name, (moving any references)
 Options:
 [!] --proto	-p proto	protocol: by number or name, eg. `tcp'
-[!] --source	-s address[/mask]
+[!] --source	-s address[/mask][...]
 				source specification
-[!] --destination -d address[/mask]
+[!] --destination -d address[/mask][...]
 				destination specification
 [!] --in-interface -i input name[+]
 				network interface name ([+] for wildcard)
