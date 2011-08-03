@@ -13,6 +13,9 @@ Ordering options:
   -n, --numeric-sort          compare according to string numerical value
   -R, --random-sort           sort by random hash of keys
       --random-source=FILE    get random bytes from FILE (default /dev/urandom)
+      --sort=WORD             sort according to WORD:
+                                general-numeric -g, month -M, numeric -n,
+                                random -R
   -r, --reverse               reverse the result of comparisons
 
 Other options:
