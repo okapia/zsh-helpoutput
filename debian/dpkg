@@ -21,25 +21,30 @@ Commands:
   -l|--list [<pattern> ...]        List packages concisely.
   -S|--search <pattern> ...        Find package(s) owning file(s).
   -C|--audit                       Check for broken package(s).
+  --add-architecture <arch>        Add <arch> to the list of architectures.
+  --remove-architecture <arch>     Remove <arch> from the list of architectures.
   --print-architecture             Print dpkg architecture.
+  --print-foreign-architectures    Print allowed foreign architectures.
   --compare-versions <a> <op> <b>  Compare version numbers - see below.
   --force-help                     Show help on forcing.
   -Dh|--debug=help                 Show help on debugging.
 
   -h|--help                        Show this help message.
   --version                        Show the version.
-  --license|--licence              Show the copyright licensing terms.
 
 Use dpkg -b|--build|-c|--contents|-e|--control|-I|--info|-f|--field|
  -x|--extract|-X|--vextract|--fsys-tarfile  on archives (type dpkg-deb --help).
 
 For internal use: dpkg --assert-support-predepends | --predep-package |
-  --assert-working-epoch | --assert-long-filenames | --assert-multi-conrep.
+  --assert-working-epoch | --assert-long-filenames | --assert-multi-conrep |
+  --assert-multi-arch.
 
 Options:
   --admindir=<directory>     Use <directory> instead of /var/lib/dpkg.
   --root=<directory>         Install on a different root directory.
   --instdir=<directory>      Change installation dir without changing admin dir.
+  --path-exclude=<pattern>   Do not install paths which match a shell pattern.
+  --path-include=<pattern>   Re-include a pattern after a previous exclusion.
   -O|--selected-only         Skip packages not selected for install/upgrade.
   -E|--skip-same-version     Skip packages whose same version is installed.
   -G|--refuse-downgrade      Skip packages with earlier version than installed.
@@ -50,6 +55,7 @@ Options:
                              Just say what we would do - don't do it.
   -D|--debug=<octal>         Enable debugging (see -Dhelp or --debug=help).
   --status-fd <n>            Send status change updates to file descriptor <n>.
+  --status-logger=<command>  Send status change updates to <command>'s stdin.
   --log=<filename>           Log status changes and actions to <filename>.
   --ignore-depends=<package>,...
                              Ignore dependencies involving <package>.
