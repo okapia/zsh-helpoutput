@@ -1,0 +1,33 @@
+Use of qw(...) as parentheses is deprecated at /usr/bin/dpkg-cross line 1046.
+
+dpkg-cross version 2.6.6
+
+Usage:
+ dpkg-cross [OPTIONS] [--install|-i] <files...>
+ dpkg-cross [OPTIONS] [--build|-b] <files...>
+ dpkg-cross [OPTIONS] [--remove|--purge|-r] <packages...>
+ dpkg-cross [OPTIONS] [--status|-s] <packages...>
+ dpkg-cross [OPTIONS] [--list|-l] <packages...>
+ dpkg-cross [OPTIONS] [--list-files|-L] <packages...>
+ dpkg-cross [OPTIONS] [--query|-Q] <pkgpath>
+ dpkg-cross [OPTIONS] [--update|-u] <pkgpath>
+
+Commands:
+ -?|-h|--help|--version: print this message.
+
+Options:
+ -a|--arch ARCH:         set architecture (default: defined in configuration file)
+ -v|--verbose:           be verbose
+ -q|--quiet:             be quiet
+ -A|--convert-anyway:    convert package even if it does not provide any
+                         development files
+ -M|--convert-multiarch: convert package even if it is a multiarch package
+ -X|--exclude PACKAGE:   Exclude this package from the dependency list of the
+                         built package.
+ -k|--keep-temp:         Keep the temporary archives when installing.
+
+dpkg-cross installs or removes libraries and include files for
+cross-compiling Debian packages. It reads /etc/dpkg-cross/cross-compile
+to determine the base directory of the cross compiler installation, and
+works in the subdirectories lib and include there.
+
