@@ -1,14 +1,12 @@
-apt 0.7.20.2 for armel compiled on May 13 2010 17:51:37
+apt 0.8.15.10 for amd64 compiled on Mar  6 2012 14:33:52
 Usage: apt-cache [options] command
-       apt-cache [options] add file1 [file2 ...]
        apt-cache [options] showpkg pkg1 [pkg2 ...]
        apt-cache [options] showsrc pkg1 [pkg2 ...]
 
-apt-cache is a low-level tool used to manipulate APT's binary
-cache files, and query information from them
+apt-cache is a low-level tool used to query information
+from APT's binary cache files
 
 Commands:
-   add - Add a package file to the source cache
    gencaches - Build both the package and source cache
    showpkg - Show some general information for a single package
    showsrc - Show source records
