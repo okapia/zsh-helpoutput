@@ -1,4 +1,4 @@
-apt 0.7.20.2 for armel compiled on May 13 2010 17:53:22
+apt 0.8.15.10 for amd64 compiled on Mar  6 2012 14:33:57
 Usage: apt-get [options] command
        apt-get [options] install|remove pkg1 [pkg2 ...]
        apt-get [options] source pkg1 [pkg2 ...]
@@ -13,7 +13,7 @@ Commands:
    install - Install new packages (pkg is libc6 not libc6.deb)
    remove - Remove packages
    autoremove - Remove automatically all unused packages
-   purge - Remove and purge packages
+   purge - Remove packages and config files
    source - Download source archives
    build-dep - Configure build-dependencies for source packages
    dist-upgrade - Distribution upgrade, see apt-get(8)
@@ -21,6 +21,8 @@ Commands:
    clean - Erase downloaded archive files
    autoclean - Erase old downloaded archive files
    check - Verify that there are no broken dependencies
+   changelog - Download and display the changelog for the given package
+   download - Download the binary package into the current directory
 
 Options:
   -h  This help text.
