@@ -1,0 +1,4 @@
+Usage: mergechanges [-h|--help|--version] [-f] <file1> <file2> [<file> ...]
+  Merge the changes files <file1>, <file2>, ....  Output on stdout
+  unless -f option given, in which case, output to
+  <package>_<version>_multi.changes in the same directory as <file1>.
