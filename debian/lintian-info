@@ -1,0 +1,8 @@
+Usage: lintian-info [log-file...] ...
+       lintian-info --annotate [overrides ...]
+       lintian-info --tags tag ...
+
+Options:
+    -a, --annotate    display descriptions of tags in Lintian overrides
+    -t, --tags        display tag descriptions
+    --profile X       use vendor profile X to determine severities
