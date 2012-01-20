@@ -5,15 +5,17 @@ Commands:
   -p|--print-avail <package> ...   Display available version details.
   -L|--listfiles <package> ...     List files `owned' by package(s).
   -l|--list [<pattern> ...]        List packages concisely.
-  -W|--show <pattern> ...          Show information on package(s).
+  -W|--show [<pattern> ...]        Show information on package(s).
   -S|--search <pattern> ...        Find package(s) owning file(s).
+  -c|--control-path <package> [<file>]
+                                   Print path for package control file.
 
   -h|--help                        Show this help message.
   --version                        Show the version.
-  --license|--licence              Show the copyright licensing terms.
 
 Options:
   --admindir=<directory>           Use <directory> instead of /var/lib/dpkg.
+  --load-avail                     Use available file on --show and --list.
   -f|--showformat=<format>         Use alternative format for --show.
 
 Format syntax:
