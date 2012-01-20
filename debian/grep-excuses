@@ -1,0 +1,15 @@
+Usage: grep-excuses [options] [<maintainer>|<package>]
+  Grep the Debian update_excuses file to find out about the packages
+  of <maintainer> or <package>.  If neither are given, use the configuration
+  file setting or the environment variable DEBFULLNAME to determine the
+  maintainer name.
+Options:
+  --no-conf, --noconf Don't read devscripts config files;
+                      must be the first option given
+  --wipnity, -w       Check <http://release.debian.org/migration/>.  A package
+                      name must be given when using this option.
+  --help              Show this help
+  --version           Give version information
+
+Default settings modified by devscripts configuration files:
+  (none)
