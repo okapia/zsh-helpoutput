@@ -1,0 +1,68 @@
+pbuilder - a personal builder
+Copyright 2001-2007 Junichi Uekawa
+Distributed under GNU Public License version 2 or later
+
+pbuilder [operation] [pbuilder-options]
+pdebuild [pdebuild-options] -- [pbuilder-options]
+
+command lines:
+pbuilder --create [--basetgz base.tgz-path] [--distribution sid|experimental|...]
+  Creates a base.tgz
+
+pbuilder --update [--basetgz base.tgz-path] [--distribution sid|experimental|...]
+  Updates a base.tgz
+
+pbuilder --build [--basetgz base.tgz-path] pbuilder_2.2.0-1.dsc
+  Builds using the base.tgz. Requires a .dsc filename
+
+pbuilder --clean
+  Cleans the temporal build directory.
+
+pbuilder --login
+pbuilder --execute -- [command] [command-options]
+  Logs in to the build environment and execute command.
+
+pbuilder --dumpconfig
+  Dumps configuration information to stdout for debugging.
+
+pbuilder-options:
+ --basetgz [base.tgz location]
+ --buildplace [location of build]
+ --mirror [mirror location]
+ --othermirror [other mirror location in apt deb-line format, delimited with | signs]
+ --http-proxy [proxy]
+ --distribution [distribution(sid|experimental|...)]
+ --architecture [architecture]
+ --components [components]
+ --buildresult [location-to-copy-build-result]
+ --aptcache [location of retrieved package files]
+ --removepackages [packages-to-remove on pbuilder create]
+ --extrapackages [packages-to-add on pbuilder create]
+ --configfile [configuration file to load]
+ --hookdir [hook directory]
+ --debemail [mail address]
+ --debbuildopts [dpkg-buildpackage options]
+ --logfile [filename to output log]
+ --pkgname-logfile
+ --aptconfdir [overriding apt config dir]
+ --timeout [timeout time]
+ --override-config 
+ --binary-arch
+ --preserve-buildplace
+ --bindmounts [bind-mount-point]
+ --debug
+ --twice
+ --autocleanaptcache
+ --compressprog [program]
+ --debootstrapopts [debootstrap options]
+ --save-after-login/--save-after-exec
+ --debootstrap [debootstrap|cdebootstrap]
+
+pdebuild-specific pbuilder-options:
+ --pbuilderroot [command to obtain root privilege for pbuilder] 
+ --pbuildersatisfydepends [command to satisfy build-dependencies]
+ --buildsourceroot [command to obtain root privilege for dpkg-buildpackage]
+ --use-pdebuild-internal
+ --architecture
+ --auto-debsign
+ --debsign-k [keyid]
