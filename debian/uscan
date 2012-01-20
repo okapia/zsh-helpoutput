@@ -1,0 +1,68 @@
+Usage: uscan [options] [dir ...]
+  Process watchfiles in all .../debian/ subdirs of those listed (or the
+  current directory if none listed) to check for upstream releases.
+Options:
+    --report       Only report on newer or absent versions, do not download
+    --report-status
+                   Report status of packages, but do not download
+    --debug        Dump the downloaded web pages to stdout for debugging
+                   your watch file.
+    --destdir      Path of directory to which to download.
+    --download     Report on newer and absent versions, and download (default)
+    --force-download
+                   Always download the upstream release, even if up to date
+    --no-download  Report on newer and absent versions, but don't download
+    --pasv         Use PASV mode for FTP connections
+    --no-pasv      Do not use PASV mode for FTP connections (default)
+    --timeout N    Specifies how much time, in seconds, we give remote
+                   servers to respond (default 20 seconds)
+    --symlink      Make an orig.tar.gz symlink to downloaded file (default)
+    --rename       Rename to orig.tar.gz instead of symlinking
+                   (Both will use orig.tar.bz2, orig.tar.lzma, or orig.tar.xz
+                   if appropriate)
+    --repack       Repack downloaded archives from orig.tar.bz2, orig.tar.lzma,
+                   orig.tar.xz or orig.zip to orig.tar.gz
+                   (does nothing if downloaded archive orig.tar.gz)
+    --no-symlink   Don't make symlink or rename
+    --verbose      Give verbose output
+    --no-verbose   Don't give verbose output (default)
+    --check-dirname-level N
+                   How much to check directory names:
+                   N=0   never
+                   N=1   only when program changes directory (default)
+                   N=2   always
+    --check-dirname-regex REGEX
+                   What constitutes a matching directory name; REGEX is
+                   a Perl regular expression; the string `PACKAGE' will
+                   be replaced by the package name; see manpage for details
+                   (default: 'PACKAGE(-.+)?')
+    --watchfile FILE
+                   Specify the watchfile rather than using debian/watch;
+                   no directory traversing will be done in this case
+    --upstream-version VERSION
+                   Specify the current upstream version in use rather than
+                   parsing debian/changelog to determine this
+    --download-version VERSION
+                   Specify the version which the upstream release must
+                   match in order to be considered, rather than using the
+                   release with the highest version
+    --download-current-version
+                   Download the currently packaged version
+    --package PACKAGE
+                   Specify the package name rather than examining
+                   debian/changelog; must use --upstream-version and
+                   --watchfile with this option, no directory traversing
+                   will be performed, no actions (even downloading) will be
+                   carried out
+    --no-dehs      Use traditional uscan output format (default)
+    --dehs         Use DEHS style output (XML-type)
+    --user-agent, --useragent
+                   Override the default user agent
+    --no-conf, --noconf
+                   Don't read devscripts config files;
+                   must be the first option given
+    --help         Show this message
+    --version      Show version information
+
+Default settings modified by devscripts configuration files:
+  (none)
