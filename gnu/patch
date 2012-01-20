@@ -22,6 +22,7 @@ Output options:
   -r FILE  --reject-file=FILE  Output rejects to FILE.
 
   -D NAME  --ifdef=NAME  Make merged if-then-else output using NAME.
+  -m  --merge  Merge using conflict markers instead of creating reject files.
   -E  --remove-empty-files  Remove output files that are empty after patching.
 
   -Z  --set-utc  Set times of patched files, assuming diff uses UTC (GMT).
@@ -53,11 +54,10 @@ Miscellaneous options:
   --verbose  Output extra information about the work being done.
   --dry-run  Do not actually change any files; just print what would happen.
   --posix  Conform to the POSIX standard.
-  -U  --unified-reject-files  Create unified reject files.
-  --global-reject-file=file  Put all rejects into one file.
 
   -d DIR  --directory=DIR  Change the working directory to DIR first.
-  --binary  Read and write data in binary mode (no effect on this platform).
+  --reject-format=FORMAT  Create 'context' or 'unified' rejects.
+  --binary  Read and write data in binary mode.
 
   -v  --version  Output version info.
   --help  Output this help.
