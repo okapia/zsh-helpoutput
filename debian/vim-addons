@@ -1,0 +1,18 @@
+Usage:
+  vim-addons [OPTION ...] [COMMAND [ADDON ...]]
+Commands:
+  list, status (default command), install, remove, disable, enable, files, show
+Options:
+  -h, --help          show this usage message and exit
+  -q, --query         be quiet and make the output more parseable
+  -r, --registry-dir  set the registry directory
+                        (default: /usr/share/vim/registry)
+  -s, --source-dir    set the addons source directory
+                        (default: /usr/share/vim/addons)
+  -t, --target-dir    set the addons target directory
+                        (default: $HOME/.vim)
+  -v, --verbose       increase verbosity
+  -y, --system-dir    set the system-wide target directory
+                        (default: /var/lib/vim/addons)
+  -w, --system-wide   set target directory to the system-wide one
+                        (overrides -t setting)
