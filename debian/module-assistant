@@ -1,0 +1,53 @@
+
+USAGE:
+
+  module-assistant update
+  module-assistant [options] COMMAND [ packages ]
+
+module-assistant is the tool to get debianized source of kernel modules,
+build module package from it and install them. The most frequently used
+command may be auto-install followed by the 'alli' argument.
+
+Commands:
+
+  update - refresh internal information about the packages
+  unpack - unpacks the tarballs of specified packages (or similar action)
+  get - download/install the source (package) and unpack if needed
+  build - build the specified package(s)
+  list - print information about installed/available/compiled packages
+  install - install the generated binary modules DEB package with dpkg
+  auto-install - the whole process, get & build & install (abbreviated: a-i)
+  prepare - install headers for the current kernel and set the linux symlink
+  clean - quick clean of the source (eg. wiping the build directory)
+  purge - removes cached data and existing modules packages
+  la (alias for "list all"), li (= "list all installed"), search (= "list -s")
+
+Package arguments:
+
+  Source package name(s). If -src or -source is omitted, name
+  completion will try to guess the package name. If the first argument
+  is 'all', the list will be expanded to all packages. 'alli' will be
+  expanded to "all installed".
+
+Options:
+ -h, --help        Print this help screen
+ -v, --verbose     Be verbose, show full paths, etc.
+ -q, --quiet       The opposite of verbose
+ -n, --no-rebuild  Don't rebuild when any usable modules package for 
+                   this kernel exists (even an old one)
+ -i, --non-inter   Don't stop on build failures, auto-install deps when needed
+ -o, --unpack-once Unpack the source only once after source upgrade or clean
+ -O, --not-unpack  Don't unpack the source at all
+ -s, --apt-search  Search for installation candidates in the Debian archive
+ -S, --sudo-cmd    An alternative command for sudo
+ -f, --force       Force duplicated work: source package reinstallation,
+                   rebuild though existing packages are found, etc.
+ -t, --text-mode   Text mode, no dialog boxes
+ -u, --userdir     Specifies a (writeable) replacement directory for /var&/usr
+ -k, --kernel-dir  List of kernel headers/source directories, comma separated
+ -l, --kvers-list  List of kernel versions to work on (default: current 
+version)
+Lists in options are strings separated by commas, spaces or newlines.
+
+Example:
+  m-a update ; m-a a-i nvidia-kernel ; echo Enjoy!
