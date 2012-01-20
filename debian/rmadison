@@ -1,0 +1,18 @@
+Usage: rmadison [OPTION] PACKAGE[...]
+Display information about PACKAGE(s).
+
+  -a, --architecture=ARCH    only show info for ARCH(s)
+  -b, --binary-type=TYPE     only show info for binary TYPE
+  -c, --component=COMPONENT  only show info for COMPONENT(s)
+  -g, --greaterorequal       show buildd 'dep-wait pkg >= {highest version}' info
+  -G, --greaterthan          show buildd 'dep-wait pkg >> {highest version}' info
+  -h, --help                 show this help and exit
+  -s, --suite=SUITE          only show info for this suite
+  -S, --source-and-binary    show info for the binary children of source pkgs
+  -t, --time                 show projectb snapshot date
+  -u, --url=URL              use URL instead of http://qa.debian.org/madison.php
+
+  --noconf, --no-conf        don't read devscripts configuration files
+
+ARCH, COMPONENT and SUITE can be comma (or space) separated lists, e.g.
+    --architecture=m68k,i386
