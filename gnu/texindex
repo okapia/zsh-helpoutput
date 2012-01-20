@@ -4,8 +4,6 @@ Usually FILE... is specified as `foo.??' for a document `foo.texi'.
 
 Options:
  -h, --help 	display this help and exit
- -k, --keep 	keep temporary files around after processing
- --no-keep 	do not keep temporary files around after processing (default)
  -o, --output FILE	send output to FILE
  --version 	display version information and exit
 
