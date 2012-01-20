@@ -1,0 +1,53 @@
+Lintian v2.5.6
+Syntax: lintian [action] [options] [--] [packages] ...
+Actions:
+    -c, --check               check packages (default action)
+    -C X, --check-part X      check only certain aspects
+    -F, --ftp-master-rejects  only check for automatic reject tags
+    -r, --remove              remove package from the lab
+    -R, --remove-lab          remove static lab
+    -S, --setup-lab           set up static lab
+    -T X, --tags X            only run checks needed for requested tags
+    --tags-from-file X        like --tags, but read list from file
+    -u, --unpack              only unpack packages in the lab
+    -X X, --dont-check-part X don't check certain aspects
+General options:
+    -d, --debug               turn Lintian's debug messages ON
+    -h, --help                display short help text
+    --print-version           print unadorned version number and exit
+    -q, --quiet               suppress all informational messages
+    -v, --verbose             verbose messages
+    -V, --version             display Lintian version and exit
+Behaviour options:
+    --allow-root              suppress lintian's warning when run as root
+    --color never/always/auto disable, enable, or enable color for TTY
+    --display-source X        restrict displayed tags by source
+    -E, --display-experimental display "X:" tags (normally suppressed)
+    --fail-on-warnings        return a non-zero exit status if warnings found
+    -i, --info                give detailed info about tags
+    -I, --display-info        display "I:" tags (normally suppressed)
+    --keep-lab                keep lab after run, even if temporary
+    -L, --display-level       display tags with the specified level
+    -o, --no-override         ignore overrides
+    --pedantic                display "P:" tags (normally suppressed)
+    --profile X               Use the profile X or use vendor X checks
+    --show-overrides          output tags that have been overriden
+    --suppress-tags T,...     don't show the specified tags
+    --suppress-tags-from-file X don't show the tags listed in file X
+    -U X, --unpack-info X     specify which info should be collected
+Configuration options:
+    --arch ARCH               scan packages with architecture ARCH
+    --area AREA               scan packages in this archive area (e.g. main)
+    --archivedir ARCHIVEDIR   location of Debian archive to scan for packages
+    --cfg CONFIGFILE          read CONFIGFILE for configuration
+    --no-cfg CONFIGFILE       do not read any CONFIGFILE
+    --dist DIST               scan packages in this distribution (e.g. sid)
+    --lab LABDIR              use LABDIR as permanent laboratory
+    --root ROOTDIR            use ROOTDIR instead of /usr/share/lintian
+Package selection options:
+    -a, --all                 process all packages in distribution
+    -b, --binary              process only binary packages
+    -p X, --packages-file X   process all files in file (special syntax!)
+    --packages-from-file  X   process the packages in a file (if "-" use stdin)
+    -s, --source              process only source packages
+    --udeb                    process only udeb packages
