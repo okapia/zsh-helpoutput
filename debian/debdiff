@@ -1,0 +1,52 @@
+Usage: debdiff [option]
+   or: debdiff [option] ... deb1 deb2
+   or: debdiff [option] ... changes1 changes2
+   or: debdiff [option] ... dsc1 dsc2
+   or: debdiff [option] ... --from deb1a deb1b ... --to deb2a deb2b ...
+Valid options are:
+    --no-conf, --noconf
+                          Don't read devscripts config files;
+                          must be the first option given
+   --help, -h             Display this message
+   --version, -v          Display version and copyright info
+   --move FROM TO,        The prefix FROM in first packages has
+     -m FROM TO             been renamed TO in the new packages
+                            (multiple permitted)
+   --move-regex FROM TO,  The prefix FROM in first packages has
+                            been renamed TO in the new packages
+                            (multiple permitted), using regexp substitution
+   --dirs, -d             Note changes in directories as well as files
+   --nodirs               Do not note changes in directories (default)
+   --nocontrol            Skip comparing control files
+   --control              Do compare control files
+   --controlfiles FILE,FILE,...
+                          Which control files to compare; default is just
+                            control; could include preinst, etc, config or
+                            ALL to compare all control files present
+   --wp, --wl, --wt       Pass the option -p, -l, -t respectively to wdiff
+                            (only one should be used)
+   --wdiff-source-control When processing source packages, compare control
+                            files as with --control for binary packages
+   --no-wdiff-source-control
+                          Do not do so (default)
+   --show-moved           Indicate also all files which have moved
+                            between packages
+   --noshow-moved         Do not also indicate all files which have moved
+                            between packages (default)
+   --renamed FROM TO      The package formerly called FROM has been
+                            renamed TO; only of interest with --show-moved
+                            (multiple permitted)
+   --quiet, -q            Be quiet if no differences were found
+   --exclude PATTERN      Exclude files that match PATTERN
+   --ignore-space, -w     Ignore whitespace in diffs
+   --diffstat             Include the result of diffstat before the diff
+   --no-diffstat          Do not do so (default)
+   --auto-ver-sort        When comparing source packages, ensure the
+                          comparison is performed in version order
+   --no-auto-ver-sort     Do not do so (default)
+   --unpack-tarballs      Unpack tarballs found in the top level source
+                          directory (default)
+   --no-unpack-tarballs   Do not do so
+
+Default settings modified by devscripts configuration files:
+  (none)
