@@ -1,4 +1,4 @@
-apt 0.7.20.2 for armel compiled on May 13 2010 17:56:45
+apt 0.8.15.10 for amd64 compiled on Mar  6 2012 14:34:07
 Usage: apt-cdrom [options] command
 
 apt-cdrom is a tool to add CDROM's to APT's source list. The
@@ -16,6 +16,7 @@ Options:
   -m   No mounting
   -f   Fast mode, don't check package files
   -a   Thorough scan mode
+  --auto-detect Auto detect drive and mount point
   -c=? Read this configuration file
   -o=? Set an arbitrary configuration option, eg -o dir::cache=/tmp
 See fstab(5)
