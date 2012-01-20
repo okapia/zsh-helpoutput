@@ -9,11 +9,12 @@ Commands:
   -e|--control <deb> [<directory>] Extract control info.
   -x|--extract <deb> <directory>   Extract files.
   -X|--vextract <deb> <directory>  Extract & list files.
+  -R|--raw-extract <deb> <directory>
+                                   Extract control info and files.
   --fsys-tarfile <deb>             Output filesystem tarfile.
 
   -h|--help                        Show this help message.
   --version                        Show the version.
-  --license|--licence              Show the copyright licensing terms.
 
 <deb> is the filename of a Debian format archive.
 <cfile> is the name of an administrative file component.
@@ -21,13 +22,16 @@ Commands:
 
 Options:
   --showformat=<format>            Use alternative format for --show.
+  -v, --verbose                    Enable verbose output.
   -D                               Enable debugging output.
   --old, --new                     Select archive format.
   --nocheck                        Suppress control file check (build bad
                                      packages).
   -z#                              Set the compression level when building.
   -Z<type>                         Set the compression type used when building.
-                                     Allowed values: gzip, bzip2, lzma, none.
+                                     Allowed types: gzip, xz, bzip2, lzma, none.
+  -S<strategy>                     Set the compression strategy when building.
+                                     Allowed values: extreme (xz).
 
 Format syntax:
   A format is a string that will be output for each package. The format
