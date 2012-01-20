@@ -1,0 +1,31 @@
+Usage: debsign [options] [changes, dsc or commands file]
+  Options:
+    -r [username@]remotehost
+                    The machine on which the changes/dsc files live.
+                    A changes file with full pathname (or relative
+                    to the remote home directory) must be given in
+                    such a case
+    -k<keyid>       The key to use for signing
+    -p<sign-command>  The command to use for signing
+    -e<maintainer>  Sign using key of <maintainer> (takes precedence over -m)
+    -m<maintainer>  The same as -e
+    -S              Use changes file made for source-only upload
+    -a<arch>        Use changes file made for Debian target architecture <arch>
+    -t<target>      Use changes file made for GNU target architecture <target>
+    --multi         Use most recent multiarch .changes file found
+    --re-sign       Re-sign if the file is already signed.
+    --no-re-sign    Don't re-sign if the file is already signed.
+    --debs-dir <directory>
+                    The location of the .changes / .dsc files when called from
+                    within a source tree (default ..)
+    --no-conf, --noconf
+                    Don't read devscripts config files;
+                    must be the first option given
+    --help          Show this message
+    --version       Show version and copyright information
+  If a commands or dsc or changes file is specified, it and any .dsc files in
+  the changes file are signed, otherwise debian/changelog is parsed to find
+  the changes file.
+
+Default settings modified by devscripts configuration files:
+  (none)
