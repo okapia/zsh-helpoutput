@@ -50,6 +50,7 @@ Options for HTML:
       --css-include=FILE      include FILE in HTML <style> output;
                                 read stdin if FILE is -.
       --css-ref=URL           generate reference to a CSS file.
+      --internal-links=FILE   produce list of internal links in FILE.
       --transliterate-file-names
                               produce file names in ASCII transliteration.
 
