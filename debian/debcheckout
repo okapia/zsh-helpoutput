@@ -1,0 +1,83 @@
+Usage:
+    debcheckout [*OPTIONS*] *PACKAGE* [*DESTDIR*]
+    debcheckout [*OPTIONS*] *REPOSITORY_URL* [*DESTDIR*]
+    debcheckout --help
+
+Options:
+    GENERAL OPTIONS
+
+    -a, --auth
+        Work in authenticated mode; this means that for known repositories
+        (mainly those hosted on *http://alioth.debian.org*) URL rewriting is
+        attempted before checking out, to ensure that the repository can be
+        committed to. For example, for subversion repositories hosted on
+        alioth this means that *svn+ssh://svn.debian.org/...* will be used
+        instead of *svn://svn.debian.org/...*.
+
+    -d, --details
+        Only print a list of detailed information about the package
+        repository, without checking it out; the output format is a list of
+        fields, each field being a pair of TAB-separated field name and
+        field value. The actual fields depend on the repository type. This
+        action might require a network connection to the remote repository.
+
+        Also see -p. This option and -p are mutually exclusive.
+
+    -h, --help
+        Print a detailed help message and exit.
+
+    -p, --print
+        Only print a summary about package repository information, without
+        checking it out; the output format is TAB-separated with two fields:
+        repository type, repository URL. This action works offline, it only
+        uses "static" information as known by APT's cache.
+
+        Also see -d. This option and -d are mutually exclusive.
+
+    -t *TYPE*, --type *TYPE*
+        Override the repository type (which defaults to some heuristics
+        based on the URL or, in case of heuristic failure, the fallback
+        "svn"); should be one of the currently supported repository types.
+
+    -u *USERNAME*, --user *USERNAME*
+        Specify the login name to be used in authenticated mode (see -a).
+        This option implies -a: you don't need to specify both.
+
+    -f, --file
+        Specify that the named file should be extracted from the repository
+        and placed in the destination directory. May be used more than once
+        to extract mutliple files.
+
+    --source=never|auto|download-only|always
+        Some packages only place the debian directory in version control.
+        debcheckout can retrieve the remaining parts of the source using
+        apt-get source and move the files into the checkout.
+
+        never
+            Only use the repository.
+
+        auto (default)
+            If the repository only contains the debian directory, retrieve
+            the source package, unpack it, and also place the .orig.tar.gz
+            file into the current directory. Else, do nothing.
+
+        download-only
+            Always retrieve the *.orig.tar.gz* file, but do not unpack it.
+
+        always
+            Always retrieve the *.orig.tar.gz* file, and if the repository
+            only contains the debian directory, unpack it.
+
+    VCS-SPECIFIC OPTIONS
+
+    *GIT-SPECIFIC OPTIONS*
+
+    --git-track *BRANCHES*
+        Specify a list of remote branches which will be set up for tracking
+        (as in git branch --track, see git-branch(1)) after the remote Git
+        repository has been cloned. The list should be given as a
+        space-separated list of branch names.
+
+        As a shorthand, the string "*" can be given to require tracking of
+        all remote branches.
+
