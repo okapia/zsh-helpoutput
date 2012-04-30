@@ -3,9 +3,10 @@ Options:
   -pass-exit-codes         Exit with highest error code from a phase
   --help                   Display this information
   --target-help            Display target specific command line options
-  --help={target|optimizers|warnings|undocumented|params}[,{[^]joined|[^]separate}]
+  --help={target|optimizers|warnings|params|[^]{joined|separate|undocumented}}[,...]
                            Display specific types of command line options
   (Use '-v --help' to display command line options of sub-processes)
+  --version                Display compiler version information
   -dumpspecs               Display all of the built in spec strings
   -dumpversion             Display the version of the compiler
   -dumpmachine             Display the compiler's target processor
@@ -17,6 +18,7 @@ Options:
   -print-multi-lib         Display the mapping between command line options and
                            multiple library search directories
   -print-multi-os-directory Display the relative path to OS libraries
+  -print-sysroot           Display the target libraries directory
   -print-sysroot-headers-suffix Display the sysroot suffix used to find headers
   -Wa,<options>            Pass comma-separated <options> on to the assembler
   -Wp,<options>            Pass comma-separated <options> on to the preprocessor
@@ -51,4 +53,4 @@ Options starting with -g, -f, -m, -O, -W, or --param are automatically
  other options on to these processes the -W<letter> options must be used.
 
 For bug reporting instructions, please see:
-<file:///usr/share/doc/gcc-4.3/README.Bugs>.
+<http://bugzilla.redhat.com/bugzilla>.
