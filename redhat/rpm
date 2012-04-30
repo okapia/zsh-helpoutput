@@ -1,70 +1,52 @@
 Usage: rpm [OPTION...]
   --quiet
 
+Query/Verify package selection options:
+  -a, --all                        query/verify all packages
+  -f, --file                       query/verify package(s) owning file
+  -g, --group                      query/verify package(s) in group
+  -p, --package                    query/verify a package file
+  -W, --ftswalk                    query/verify package(s) from TOP file tree
+                                   walk
+  --pkgid                          query/verify package(s) with package
+                                   identifier
+  --hdrid                          query/verify package(s) with header
+                                   identifier
+  --fileid                         query/verify package(s) with file identifier
+  --specfile                       query a spec file
+  --triggeredby                    query the package(s) triggered by the
+                                   package
+  --whatrequires                   query/verify the package(s) which require a
+                                   dependency
+  --whatprovides                   query/verify the package(s) which provide a
+                                   dependency
+  --nomanifest                     do not process non-package files as
+                                   manifests
+
 Query options (with -q or --query):
   -c, --configfiles                list all configuration files
   -d, --docfiles                   list all documentation files
   --dump                           dump basic file information
   -l, --list                       list files in package
-  -P, --patches                    list patches or patched files 
   --queryformat=QUERYFORMAT        use the following query format
   -s, --state                      display the states of the listed files
-  -a, --all                        query/verify all packages
-  -f, --file                       query/verify package(s) owning file
-  -g, --group                      query/verify package(s) in group
-  -p, --package                    query/verify a package file
-  -W, --ftswalk                    query/verify package(s) from TOP file tree
-                                   walk
-  --pkgid                          query/verify package(s) with package
-                                   identifier
-  --hdrid                          query/verify package(s) with header
-                                   identifier
-  --fileid                         query/verify package(s) with file identifier
-  --specfile                       query a spec file
-  --triggeredby                    query the package(s) triggered by the
-                                   package
-  --whatrequires                   query/verify the package(s) which require a
-                                   dependency
-  --whatprovides                   query/verify the package(s) which provide a
-                                   dependency
-  --nomanifest                     do not process non-package files as
-                                   manifests
 
 Verify options (with -V or --verify):
-  --nomd5                          don't verify MD5 digest of files
+  --nofiledigest                   don't verify digest of files
+  --nomd5                          don't verify digest of files
   --nofiles                        don't verify files in package
   --nodeps                         don't verify package dependencies
   --noscript                       don't execute verify script(s)
-  -a, --all                        query/verify all packages
-  -f, --file                       query/verify package(s) owning file
-  -g, --group                      query/verify package(s) in group
-  -p, --package                    query/verify a package file
-  -W, --ftswalk                    query/verify package(s) from TOP file tree
-                                   walk
-  --pkgid                          query/verify package(s) with package
-                                   identifier
-  --hdrid                          query/verify package(s) with header
-                                   identifier
-  --fileid                         query/verify package(s) with file identifier
-  --specfile                       query a spec file
-  --triggeredby                    query the package(s) triggered by the
-                                   package
-  --whatrequires                   query/verify the package(s) which require a
-                                   dependency
-  --whatprovides                   query/verify the package(s) which provide a
-                                   dependency
-  --nomanifest                     do not process non-package files as
-                                   manifests
 
 File tree walk options (with --ftswalk):
-  --comfollow                      FTS_COMFOLLOW: follow command line symlinks
-  --logical                        FTS_LOGICAL: logical walk
-  --nochdir                        FTS_NOCHDIR: don't change directories
-  --nostat                         FTS_NOSTAT: don't get stat info
-  --physical                       FTS_PHYSICAL: physical walk
-  --seedot                         FTS_SEEDOT: return dot and dot-dot
-  --xdev                           FTS_XDEV: don't cross devices
-  --whiteout                       FTS_WHITEOUT: return whiteout information
+  --comfollow                      follow command line symlinks
+  --logical                        logical walk
+  --nochdir                        don't change directories
+  --nostat                         don't get stat info
+  --physical                       physical walk
+  --seedot                         return dot and dot-dot
+  --xdev                           don't cross devices
+  --whiteout                       return whiteout information
 
 Signature options:
   --addsign                        sign package(s) (identical to --resign)
@@ -103,7 +85,8 @@ Install/Upgrade/Erase options:
   --justdb                         update the database, but do not modify the
                                    filesystem
   --nodeps                         do not verify package dependencies
-  --nomd5                          don't verify MD5 digest of files
+  --nofiledigest                   don't verify digest of files
+  --nomd5                          don't verify digest of files (obsolete)
   --nocontexts                     don't install file security contexts
   --noorder                        do not reorder package installation to
                                    satisfy dependencies
@@ -119,7 +102,6 @@ Install/Upgrade/Erase options:
   --prefix=<dir>                   relocate the package to <dir>, if
                                    relocatable
   --relocate=<old>=<new>           relocate files from path <old> to <new>
-  --repackage                      save erased package files by repackaging
   --replacefiles                   ignore file conflicts between packages
   --replacepkgs                    reinstall if the package is already present
   --test                           don't install, but tell if it would work or
@@ -153,11 +135,6 @@ Options implemented via popt alias/exec:
                                    this package
   --provides                       list capabilities that this package provides
   --requires                       list capabilities required by package(s)
-  --suggests                       list capabilities this package suggests
-  --recommends                     list capabilities this package recommends
-  --enhances                       list capabilities this package enhances
-  --supplements                    list capabilities this package supplements
-  --basedon                        list packages this patch-rpm is based on
   --info                           list descriptive information from package(s)
   --changelog                      list change logs for this package
   --xml                            list metadata in xml
@@ -168,18 +145,11 @@ Options implemented via popt alias/exec:
   --filesbypkg                     list all files from each package
   --fileclass                      list file names with classes
   --filecolor                      list file names with colors
-  --filecontext                    list file names with security context from
-                                   header
   --fscontext                      list file names with security context from
                                    file system
-  --recontext                      list file names with security context from
-                                   policy RE
   --fileprovide                    list file names with provides
   --filerequire                    list file names with requires
-  --buildpolicy=<policy>           set buildroot <policy> (e.g. compress man
-                                   pages)
-  --with=<option>                  enable configure <option> for build
-  --without=<option>               disable configure <option> for build
+  --filecaps                       list file names with POSIX1.e capabilities
 
 Help options:
   -?, --help                       Show this help message
