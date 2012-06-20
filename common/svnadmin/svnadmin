@@ -14,6 +14,7 @@ Available subcommands:
    load
    lslocks
    lstxns
+   pack
    recover
    rmlocks
    rmtxns

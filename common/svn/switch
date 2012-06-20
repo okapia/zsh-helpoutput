@@ -3,7 +3,7 @@ usage: 1. switch URL[@PEGREV] [PATH]
        2. switch --relocate FROM TO [PATH...]
 
   1. Update the working copy to mirror a new URL within the repository.
-     This behaviour is similar to 'svn update', and is the way to
+     This behavior is similar to 'svn update', and is the way to
      move a working copy to a branch or tag within the same repository.
      If specified, PEGREV determines in which revision the target is first
      looked up.
@@ -20,14 +20,15 @@ usage: 1. switch URL[@PEGREV] [PATH]
      are applied to the obstructing path.
 
      Use the --set-depth option to set a new working copy depth on the
-     targets of this operation.  Currently, the depth of a working copy
-     directory can only be increased (telescoped more deeply); you cannot
-     make a directory more shallow.
+     targets of this operation.
 
   2. Rewrite working copy URL metadata to reflect a syntactic change only.
      This is used when repository's root URL changes (such as a scheme
      or hostname change) but your working copy still reflects the same
      directory within the same repository.
+
+  See also 'svn help update' for a list of possible characters
+  reporting the action taken.
 
 Valid options:
   -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
@@ -41,15 +42,16 @@ Valid options:
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
                             'immediates', or 'infinity')
-  --set-depth ARG          : set new working copy depth to ARG ('empty',
-                            'files', 'immediates', or 'infinity')
+  --set-depth ARG          : set new working copy depth to ARG ('exclude',
+                            'empty', 'files', 'immediates', or 'infinity')
   -q [--quiet]             : print nothing, or only summary information
   --diff3-cmd ARG          : use ARG as merge command
   --relocate               : relocate via URL-rewriting
   --ignore-externals       : ignore externals definitions
   --force                  : force operation to run
   --accept ARG             : specify automatic conflict resolution action
-                            ('postpone', 'base', 'mine-full', 'theirs-full',
+                            ('postpone', 'base', 'mine-conflict',
+                             'theirs-conflict', 'mine-full', 'theirs-full',
                              'edit', 'launch')
 
 Global options:
@@ -57,5 +59,12 @@ Global options:
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
+  --trust-server-cert      : accept unknown SSL server certificates without
+                             prompting (but only with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
+  --config-option ARG      : set user configuration option in the format:
+                                 FILE:SECTION:OPTION=[VALUE]
+                             For example:
+                                 servers:global:http-library=serf
+
 
