@@ -2,15 +2,15 @@ propset (pset, ps): Set the value of a property on files, dirs, or revisions.
 usage: 1. propset PROPNAME PROPVAL PATH...
        2. propset PROPNAME --revprop -r REV PROPVAL [TARGET]
 
-  1. Creates a versioned, local propchange in working copy.
-  2. Creates an unversioned, remote propchange on repos revision.
-     TARGET only determines which repository to access.
+  1. Changes a versioned file or directory property in a working copy.
+  2. Changes an unversioned property on a repository revision.
+     (TARGET only determines which repository to access.)
 
   The value may be provided with the --file option instead of PROPVAL.
 
   Note: svn recognizes the following special versioned properties
   but will store any arbitrary properties set:
-    svn:ignore     - A newline separated list of file patterns to ignore.
+    svn:ignore     - A newline separated list of file glob patterns to ignore.
     svn:keywords   - Keywords to be expanded.  Valid keywords are:
       URL, HeadURL             - The URL for the head version of the object.
       Author, LastChangedBy    - The last person to modify the file.
@@ -19,6 +19,7 @@ usage: 1. propset PROPNAME PROPVAL PATH...
       LastChangedRevision
       Id                       - A compressed summary of the previous
                                    4 keywords.
+      Header                   - Similar to Id but includes the full URL.
     svn:executable - If present, make the file executable.  Use
       'svn propdel svn:executable PATH...' to clear.
     svn:eol-style  - One of 'native', 'LF', 'CR', 'CRLF'.
@@ -83,5 +84,12 @@ Global options:
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
+  --trust-server-cert      : accept unknown SSL server certificates without
+                             prompting (but only with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
+  --config-option ARG      : set user configuration option in the format:
+                                 FILE:SECTION:OPTION=[VALUE]
+                             For example:
+                                 servers:global:http-library=serf
+
 

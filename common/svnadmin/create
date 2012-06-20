@@ -11,4 +11,6 @@ Valid options:
                              earlier than 1.4
   --pre-1.5-compatible     : use format compatible with Subversion versions
                              earlier than 1.5
+  --pre-1.6-compatible     : use format compatible with Subversion versions
+                             earlier than 1.6
 

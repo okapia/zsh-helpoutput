@@ -6,7 +6,7 @@ usage: status [PATH...]
   With -u, add working revision and server out-of-date information.
   With -v, print full revision information on every item.
 
-  The first six columns in the output are each one character wide:
+  The first seven columns in the output are each one character wide:
     First column: Says if item was added, deleted, or otherwise changed
       ' ' no modifications
       'A' Added
@@ -15,7 +15,7 @@ usage: status [PATH...]
       'I' Ignored
       'M' Modified
       'R' Replaced
-      'X' item is unversioned, but is used by an externals definition
+      'X' an unversioned directory created by an externals definition
       '?' item is not under version control
       '!' item is missing (removed by non-svn command) or incomplete
       '~' versioned item obstructed by some item of a different kind
@@ -29,9 +29,10 @@ usage: status [PATH...]
     Fourth column: Scheduled commit will contain addition-with-history
       ' ' no history scheduled with commit
       '+' history scheduled with commit
-    Fifth column: Whether the item is switched relative to its parent
+    Fifth column: Whether the item is switched or a file external
       ' ' normal
-      'S' switched
+      'S' the item has a Switched URL relative to the parent
+      'X' a versioned file created by an eXternals definition
     Sixth column: Repository lock token
       (without -u)
       ' ' no lock token
@@ -42,8 +43,13 @@ usage: status [PATH...]
       'O' locked in repository, lock token in some Other working copy
       'T' locked in repository, lock token present but sTolen
       'B' not locked in repository, lock token present but Broken
+    Seventh column: Whether the item is the victim of a tree conflict
+      ' ' normal
+      'C' tree-Conflicted
+    If the item is a tree conflict victim, an additional line is printed
+    after the item's status line, explaining the nature of the conflict.
 
-  The out-of-date information appears in the eighth column (with -u):
+  The out-of-date information appears in the ninth column (with -u):
       '*' a newer revision exists on the server
       ' ' the working copy is up to date
 
@@ -71,6 +77,12 @@ usage: status [PATH...]
                  965       687 joe          wc/zig.c
     Status against revision:   981
 
+    svn status
+     M      wc/bar.c
+    !     C wc/qaz.c
+          >   local missing, incoming edit upon update
+    D       wc/qax.c
+
 Valid options:
   -u [--show-updates]      : display update information
   -v [--verbose]           : print extra information
@@ -90,5 +102,12 @@ Global options:
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
+  --trust-server-cert      : accept unknown SSL server certificates without
+                             prompting (but only with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
+  --config-option ARG      : set user configuration option in the format:
+                                 FILE:SECTION:OPTION=[VALUE]
+                             For example:
+                                 servers:global:http-library=serf
+
 
