@@ -1,6 +1,8 @@
 Usage: uniq [OPTION]... [INPUT [OUTPUT]]
-Discard all but one of successive identical lines from INPUT (or
-standard input), writing to OUTPUT (or standard output).
+Filter adjacent matching lines from INPUT (or standard input),
+writing to OUTPUT (or standard output).
+
+With no options, matching lines are merged to the first occurrence.
 
 Mandatory arguments to long options are mandatory for short options too.
   -c, --count           prefix lines by the number of occurrences
@@ -17,10 +19,14 @@ Mandatory arguments to long options are mandatory for short options too.
       --help     display this help and exit
       --version  output version information and exit
 
-A field is a run of whitespace, then non-whitespace characters.
-Fields are skipped before chars.
+A field is a run of blanks (usually spaces and/or TABs), then non-blank
+characters.  Fields are skipped before chars.
 
 Note: 'uniq' does not detect repeated lines unless they are adjacent.
 You may want to sort the input first, or use `sort -u' without `uniq'.
+Also, comparisons honor the rules specified by `LC_COLLATE'.
 
-Report bugs to <bug-coreutils@gnu.org>.
+Report uniq bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+For complete documentation, run: info coreutils 'uniq invocation'
