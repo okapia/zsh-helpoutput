@@ -1,0 +1,72 @@
+
+    Usage:  matlab [-h|-help] | [-n | -e]
+                   [-arch | v=variant | v=arch/variant]
+                   [-c licensefile] [-display Xdisplay | -nodisplay]
+                   [-nosplash] [-mwvisual visualid] [-debug] [-softwareopengl]
+                   [-desktop | -nodesktop | -nojvm]
+                   [-memmgr manager | -check_malloc]
+                   [-r MATLAB_command] [-logfile log] [-timing]
+                   [-Ddebugger [options]]
+
+    -h|-help             - Display arguments.
+    -n                   - Display final environment variables,
+                           arguments, and other diagnostic
+                           information. MATLAB is not run.
+    -e                   - Display ALL the environment variables and
+                           their values to standard output. MATLAB
+                           is not run. If the exit status is not
+                           0 on return then the variables and values
+                           may not be correct.
+    -arch                - Start MATLAB assuming architecture arch.
+    v=variant            - Start the version of MATLAB found
+                           in bin/sol64/variant instead of bin/sol64.
+    v=arch/variant       - Start the version of MATLAB found
+                           in bin/arch/variant instead of bin/sol64.
+    -c licensefile       - Set location of the license file that MATLAB
+                           should use.  It can have the form port@host or
+                           be a colon separated list of license files.
+                           The LM_LICENSE_FILE and MLM_LICENSE_FILE
+                           environment variables will be ignored.
+    -display Xdisplay    - Send X commands to X server display, Xdisplay.
+    -nodisplay           - Do not display any X commands. The MATLAB
+                           desktop will not be started. However, unless
+                           -nojvm is also provided the Java virtual machine
+                           will be started.
+    -nosplash            - Do not display the splash screen during startup.
+    -mwvisual visualid   - The default X visual to use for figure windows.
+    -debug               - Provide debugging information especially for X
+                           based problems.
+    -desktop             - Allow the MATLAB desktop to be started by a
+                           process without a controlling terminal. This is
+                           usually a required command line argument when
+                           attempting to start MATLAB from a window manager
+                           menu or desktop icon.
+    -nodesktop           - Do not start the MATLAB desktop. Use the current
+                           terminal for commands. The Java virtual machine
+                           will be started.
+    -nojvm               - Shut off all Java support by not starting the
+                           Java virtual machine. In particular the MATLAB
+                           desktop will not be started.
+    -memmgr manager      - Set environment variable MATLAB_MEM_MGR to
+                           manager. manager can have one of the following
+                           values:
+                           cache   - Default.
+                           compact - (32-bit addressing only) For large
+                                     models or MATLAB code that uses many
+                                     structure or object variables. It is
+                                     not helpful for large arrays.
+                           debug   - Does memory integrity checking. Useful
+                                     for debugging memory problems caused by
+                                     user mex files.
+    -check_malloc        - Same as '-memmgr debug'.
+    -r MATLAB_command    - Start MATLAB and execute the MATLAB_command.
+    -logfile log         - Make a copy of any output to the command window
+                           in file log. This includes all crash reports.
+    -timing              - Print a summary of startup time to the command
+                           window. It is also recorded in a timing log, the
+                           name of which is printed to the shell window that
+                           started up MATLAB.
+    -Ddebugger [options] - Start debugger to debug MATLAB.
+
+    Revision #: 1.100.4.42
+
