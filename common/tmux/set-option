@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: set-option [-agsuw] [-t target-session|target-window] option [value]

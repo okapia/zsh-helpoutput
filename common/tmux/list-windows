@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: list-windows [-a] [-F format] [-t target-session]

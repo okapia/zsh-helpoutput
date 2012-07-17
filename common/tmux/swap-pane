@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: swap-pane [-dDU] [-s src-pane] [-t dst-pane]

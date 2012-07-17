@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: rename-window [-t target-window] new-name

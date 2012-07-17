@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: clock-mode [-t target-pane]

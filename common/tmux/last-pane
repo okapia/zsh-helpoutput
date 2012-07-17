@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: last-pane [-t target-window]

@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: pipe-pane [-o] [-t target-pane] [command]

@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: rename-session [-t target-session] new-name

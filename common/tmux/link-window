@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: link-window [-dk] [-s src-window] [-t dst-window]

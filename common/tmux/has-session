@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: has-session [-t target-session]

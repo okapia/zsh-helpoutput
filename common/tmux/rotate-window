@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: rotate-window [-DU] [-t target-window]

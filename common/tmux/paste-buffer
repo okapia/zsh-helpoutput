@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: paste-buffer [-dr] [-s separator] [-b buffer-index] [-t target-pane]

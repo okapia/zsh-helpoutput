@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: confirm-before [-p prompt] [-t target-client] command

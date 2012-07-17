@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: set-environment [-gru] [-t target-session] name [value]

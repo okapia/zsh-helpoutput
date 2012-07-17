@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: display-message [-p] [-c target-client] [-t target-pane] [message]

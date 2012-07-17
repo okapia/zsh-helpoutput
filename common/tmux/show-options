@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: show-options [-gsw] [-t target-session|target-window]

@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: resize-pane [-DLRU] [-t target-pane] [adjustment]

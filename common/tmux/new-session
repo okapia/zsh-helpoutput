@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: new-session [-d] [-n window-name] [-s session-name] [-t target-session] [-x width] [-y height] [command]

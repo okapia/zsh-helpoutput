@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: new-window [-adk] [-n window-name] [-t target-window] [command]

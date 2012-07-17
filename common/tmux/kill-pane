@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: kill-pane [-a] [-t target-pane]

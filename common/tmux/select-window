@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: select-window [-lnp] [-t target-window]

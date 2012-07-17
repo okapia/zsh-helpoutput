@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: command-prompt [-I inputs] [-p prompts] [-t target-client] [template]

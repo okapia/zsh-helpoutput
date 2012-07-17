@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: respawn-window [-k] [-t target-window] [command]

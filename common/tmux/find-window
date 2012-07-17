@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: find-window [-t target-window] match-string
