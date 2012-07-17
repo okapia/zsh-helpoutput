@@ -1,0 +1,3 @@
+tmux: unknown option -- ?
+usage: tmux [-28lquvV] [-c shell-command] [-f file] [-L socket-name]
+            [-S socket-path] [command [flags]]
