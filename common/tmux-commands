@@ -1,0 +1,81 @@
+attach-session [-dr] [-t target-session]
+bind-key [-cnr] [-t key-table] key command [arguments]
+break-pane [-d] [-t target-pane]
+capture-pane [-b buffer-index] [-E end-line] [-S start-line] [-t target-pane]
+choose-buffer [-t target-window] [template]
+choose-client [-t target-window] [template]
+choose-session [-t target-window] [template]
+choose-window [-t target-window] [template]
+clear-history [-t target-pane]
+clock-mode [-t target-pane]
+command-prompt [-I inputs] [-p prompts] [-t target-client] [template]
+confirm-before [-p prompt] [-t target-client] command
+copy-mode [-u] [-t target-pane]
+delete-buffer [-b buffer-index]
+detach-client [-P] [-s target-session] [-t target-client]
+display-message [-p] [-c target-client] [-t target-pane] [message]
+display-panes [-t target-client]
+find-window [-t target-window] match-string
+has-session [-t target-session]
+if-shell shell-command command [command]
+join-pane [-dhv] [-p percentage|-l size] [-s src-pane] [-t dst-pane]
+kill-pane [-a] [-t target-pane]
+kill-server 
+kill-session [-t target-session]
+kill-window [-t target-window]
+last-pane [-t target-window]
+last-window [-t target-session]
+link-window [-dk] [-s src-window] [-t dst-window]
+list-buffers 
+list-clients [-F format] [-t target-session]
+list-commands 
+list-keys [-t key-table]
+list-panes [-as] [-F format] [-t target]
+list-sessions [-F format]
+list-windows [-a] [-F format] [-t target-session]
+load-buffer [-b buffer-index] path
+lock-client [-t target-client]
+lock-server 
+lock-session [-t target-session]
+move-window [-dk] [-s src-window] [-t dst-window]
+new-session [-d] [-n window-name] [-s session-name] [-t target-session] [-x width] [-y height] [command]
+new-window [-adk] [-n window-name] [-t target-window] [command]
+next-layout [-t target-window]
+next-window [-a] [-t target-session]
+paste-buffer [-dr] [-s separator] [-b buffer-index] [-t target-pane]
+pipe-pane [-o] [-t target-pane] [command]
+previous-layout [-t target-window]
+previous-window [-a] [-t target-session]
+refresh-client [-S] [-t target-client]
+rename-session [-t target-session] new-name
+rename-window [-t target-window] new-name
+resize-pane [-DLRU] [-t target-pane] [adjustment]
+respawn-pane [-k] [-t target-pane] [command]
+respawn-window [-k] [-t target-window] [command]
+rotate-window [-DU] [-t target-window]
+run-shell command
+save-buffer [-a] [-b buffer-index]
+select-layout [-np] [-t target-window] [layout-name]
+select-pane [-lDLRU] [-t target-pane]
+select-window [-lnp] [-t target-window]
+send-keys [-R] [-t target-pane] key ...
+send-prefix [-2] [-t target-pane]
+server-info 
+set-buffer [-b buffer-index] data
+set-environment [-gru] [-t target-session] name [value]
+set-option [-agsuw] [-t target-session|target-window] option [value]
+set-window-option [-agu] [-t target-window] option [value]
+show-buffer [-b buffer-index]
+show-environment [-g] [-t target-session]
+show-messages [-t target-client]
+show-options [-gsw] [-t target-session|target-window]
+show-window-options [-g] [-t target-window]
+source-file path
+split-window [-dhvP] [-p percentage|-l size] [-t target-pane] [command]
+start-server 
+suspend-client [-t target-client]
+swap-pane [-dDU] [-s src-pane] [-t dst-pane]
+swap-window [-d] [-s src-window] [-t dst-window]
+switch-client [-lnpr] [-c target-client] [-t target-session]
+unbind-key [-acn] [-t key-table] key
+unlink-window [-k] [-t target-window]
