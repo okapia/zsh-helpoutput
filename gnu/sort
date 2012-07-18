@@ -1,4 +1,5 @@
 Usage: sort [OPTION]... [FILE]...
+  or:  sort [OPTION]... --files0-from=F
 Write sorted concatenation of all FILE(s) to standard output.
 
 Mandatory arguments to long options are mandatory for short options too.
@@ -10,21 +11,29 @@ Ordering options:
   -g, --general-numeric-sort  compare according to general numerical value
   -i, --ignore-nonprinting    consider only printable characters
   -M, --month-sort            compare (unknown) < `JAN' < ... < `DEC'
+  -h, --human-numeric-sort    compare human readable numbers (e.g., 2K 1G)
   -n, --numeric-sort          compare according to string numerical value
   -R, --random-sort           sort by random hash of keys
-      --random-source=FILE    get random bytes from FILE (default /dev/urandom)
-      --sort=WORD             sort according to WORD:
-                                general-numeric -g, month -M, numeric -n,
-                                random -R
+      --random-source=FILE    get random bytes from FILE
   -r, --reverse               reverse the result of comparisons
+      --sort=WORD             sort according to WORD:
+                                general-numeric -g, human-numeric -h, month -M,
+                                numeric -n, random -R, version -V
+  -V, --version-sort          natural sort of (version) numbers within text
 
 Other options:
 
+      --batch-size=NMERGE   merge at most NMERGE inputs at once;
+                            for more use temp files
   -c, --check, --check=diagnose-first  check for sorted input; do not sort
   -C, --check=quiet, --check=silent  like -c, but do not report first bad line
       --compress-program=PROG  compress temporaries with PROG;
                               decompress them with PROG -d
-  -k, --key=POS1[,POS2]     start a key at POS1, end it at POS2 (origin 1)
+      --files0-from=F       read input from the files specified by
+                            NUL-terminated names in file F;
+                            If F is - then read names from standard input
+  -k, --key=POS1[,POS2]     start a key at POS1 (origin 1), end it at POS2
+                            (default end of line)
   -m, --merge               merge already sorted files; do not sort
   -o, --output=FILE         write result to FILE instead of standard output
   -s, --stable              stabilize sort by disabling last-resort comparison
@@ -54,4 +63,7 @@ The locale specified by the environment affects sort order.
 Set LC_ALL=C to get the traditional sort order that uses
 native byte values.
 
-Report bugs to <bug-coreutils@gnu.org>.
+Report sort bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+For complete documentation, run: info coreutils 'sort invocation'
