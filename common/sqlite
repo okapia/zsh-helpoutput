@@ -2,20 +2,21 @@ Usage: sqlite3 [OPTIONS] FILENAME [SQL]
 FILENAME is the name of an SQLite database. A new database is created
 if the file does not previously exist.
 OPTIONS include:
-   -help                show this message
-   -init filename       read/process named file
-   -echo                print commands before execution
-   -[no]header          turn headers on or off
    -bail                stop after hitting an error
-   -interactive         force interactive I/O
    -batch               force batch I/O
    -column              set output mode to 'column'
+   -cmd command         run "command" before reading stdin
    -csv                 set output mode to 'csv'
+   -echo                print commands before execution
+   -init filename       read/process named file
+   -[no]header          turn headers on or off
+   -help                show this message
    -html                set output mode to HTML
+   -interactive         force interactive I/O
    -line                set output mode to 'line'
    -list                set output mode to 'list'
+   -nullvalue 'text'    set text string for NULL values
    -separator 'x'       set output field separator (|)
    -stats               print memory stats before each finalize
-   -nullvalue 'text'    set text string for NULL values
    -version             show SQLite version
    -vfs NAME            use NAME as the default VFS
