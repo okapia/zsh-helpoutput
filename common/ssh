@@ -1,5 +1,5 @@
 ssh: illegal option -- ?
-usage: ssh [-1246AaCfgKkMNnqsTtVvXxY] [-b bind_address] [-c cipher_spec]
+usage: ssh [-1246AaCfgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec]
            [-D [bind_address:]port] [-e escape_char] [-F configfile]
            [-i identity_file] [-L [bind_address:]port:host:hostport]
            [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
