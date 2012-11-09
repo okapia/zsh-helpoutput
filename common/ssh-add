@@ -9,3 +9,7 @@ Options:
   -X          Unlock agent.
   -t life     Set lifetime (in seconds) when adding identities.
   -c          Require confirmation to sign using identities
+  -s pkcs11   Add keys from PKCS#11 provider.
+  -e pkcs11   Remove keys provided by PKCS#11 provider.
+  -n          Add keys in NSS key.
+  -T          Name NSS key explicitly.
