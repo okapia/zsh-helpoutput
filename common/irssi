@@ -1,0 +1,15 @@
+Usage: irssi [OPTION...]
+  --config=PATH             Configuration file location (~/.irssi/config)
+  --home=PATH               Irssi home dir location (~/.irssi)
+  -c, --connect=SERVER      Automatically connect to server/network
+  -w, --password=PASSWORD   Autoconnect password
+  -p, --port=PORT           Autoconnect port
+  -!, --noconnect           Disable autoconnecting
+  -n, --nick=ARG            Specify nick to use
+  -h, --hostname=ARG        Specify host name to use
+  -d, --dummy               Use the dummy terminal mode
+  -v, --version             Display irssi version
+
+Help options
+  -?, --help                Show this help message
+  --usage                   Display brief usage message
