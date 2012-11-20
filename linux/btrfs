@@ -1,0 +1,144 @@
+usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
+
+    btrfs subvolume create [<dest>/]<name>
+        Create a subvolume
+
+        Create a subvolume <name> in <dest>.  If <dest> is not given
+        subvolume <name> will be created in the current directory.
+
+    btrfs subvolume delete <name>
+        Delete a subvolume
+
+    btrfs subvolume list [-p] <path>
+        List subvolumes (and snapshots)
+
+        -p     print parent ID
+
+    btrfs subvolume snapshot [-r] <source> [<dest>/]<name>
+        Create a snapshot of the subvolume
+
+        Create a writable/readonly snapshot of the subvolume <source> with
+        the name <name> in the <dest> directory
+
+        -r     create a readonly snapshot
+
+    btrfs subvolume get-dafault <path>
+        Get the default subvolume of a filesystem
+
+    btrfs subvolume set-dafault <subvolid> <path>
+        Set the default subvolume of a filesystem
+
+    btrfs subvolume find-new <path> <lastgen>
+        List the recently modified files in a filesystem
+
+    btrfs filesystem df <path>
+        Show space usage information for a mount point
+
+    btrfs filesystem show [--all-devices] [<uuid>|<label>]
+        Show the structure of a filesystem
+
+        If no argument is given, structure of all present filesystems is shown.
+
+    btrfs filesystem sync <path>
+        Force a sync on a filesystem
+
+    btrfs filesystem defragment [options] <file>|<dir> [<file>|<dir>...]
+        Defragment a file or a directory
+
+        -v             be verbose
+        -c[zlib,lzo]   compress the file while defragmenting
+        -f             flush data to disk immediately after defragmenting
+        -s start       defragment only from byte onward
+        -l len         defragment only up to len bytes
+        -t size        minimal size of file to be considered for defragmenting
+
+    btrfs filesystem resize [+/-]<newsize>[gkm]|max <path>
+        Resize a filesystem
+
+        If 'max' is passed, the filesystem will occupy all available space
+        on the device.
+
+    btrfs filesystem label <device> [<newlabel>]
+        Get or change the label of an unmounted filesystem
+
+        With one argument, get the label of filesystem on <device>.
+        If <newlabel> is passed, set the filesystem label to <newlabel>.
+
+    btrfs [filesystem] balance start [options] <path>
+        Balance chunks across the devices
+
+        Balance and/or convert (change allocation profile of) chunks that
+        passed all filters in a comma-separated list of filters for a
+        particular chunk type.  If filter list is not given balance all
+        chunks of that type.  In case none of the -d, -m or -s options is
+        given balance all chunks in a filesystem.
+
+        -d[filters]    act on data chunks
+        -m[filters]    act on metadata chunks
+        -s[filetrs]    act on system chunks (only under -f)
+        -v             be verbose
+        -f             force reducing of metadata integrity
+
+    btrfs [filesystem] balance pause <path>
+        Pause running balance
+
+    btrfs [filesystem] balance cancel <path>
+        Cancel running or paused balance
+
+    btrfs [filesystem] balance resume <path>
+        Resume interrupted balance
+
+    btrfs [filesystem] balance status [-v] <path>
+        Show status of running or paused balance
+
+        -v     be verbose
+
+    btrfs device add <device> [<device>...] <path>
+        Add a device to a filesystem
+
+    btrfs device delete <device> [<device>...] <path>
+        Remove a device from a filesystem
+
+    btrfs device scan [<device>...]
+        Scan devices for a btrfs filesystem
+
+    btrfs scrub start [-Bdqr] <path>|<device>
+        Start a new scrub
+
+        -B     do not background
+        -d     stats per device (-B only)
+        -q     be quiet
+        -r     read only mode
+
+    btrfs scrub cancel <path>|<device>
+        Cancel a running scrub
+
+    btrfs scrub resume [-Bdqr] <path>|<device>
+        Resume previously canceled or interrupted scrub
+
+        -B     do not background
+        -d     stats per device (-B only)
+        -q     be quiet
+        -r     read only mode
+
+    btrfs scrub status [-dR] <path>|<device>
+        Show status of running or finished scrub
+
+        -d     stats per device
+        -R     print raw stats
+
+    btrfs inspect-internal inode-resolve [-v] <inode> <path>
+        Get file system paths for the given inode
+
+    btrfs inspect-internal logical-resolve [-Pv] <logical> <path>
+        Get file system paths for the given logical address
+
+    btrfs help [--full]
+        Dislay help information
+
+        --full     display detailed help on every command
+
+    btrfs version
+        Display btrfs-progs version
+
+Use --help as an argument for information on a specific group or command.
