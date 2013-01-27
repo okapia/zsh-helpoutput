@@ -45,6 +45,9 @@ Camera and software configuration
   --set-config-value=STRING              Set configuration value
 
 Capture an image from or on the camera
+  --keep                                 Keep images on camera after capturing
+  --no-keep                              Remove images from camera after
+                                         capturing
   --wait-event[=COUNT]                   Wait for event(s) from camera
   --wait-event-and-download[=COUNT]      Wait for event(s) from the camera and
                                          download new images
@@ -56,11 +59,13 @@ Capture an image from or on the camera
   --reset-interval                       Reset capture interval on signal
                                          (default=no)
   --capture-image                        Capture an image
+  --trigger-capture                      Trigger capture of an image
   --capture-image-and-download           Capture an image and download it
   --capture-movie[=COUNT or SECONDS]     Capture a movie
   --capture-sound                        Capture an audio clip
   --capture-tethered[=COUNT]             Wait for shutter release on the
                                          camera and download
+  --trigger-capture                      Trigger image capture
 
 Downloading, uploading and manipulating files
   -l, --list-folders                     List folders in folder
