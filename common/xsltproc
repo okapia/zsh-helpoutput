@@ -8,10 +8,12 @@ Usage: xsltproc [options] stylesheet file [file ...]
 	--debug: dump the tree of the result instead
 	--dumpextensions: dump the registered extension elements and functions to stdout
 	--novalid skip the Dtd loading phase
+	--nodtdattr do not default attributes from the DTD
 	--noout: do not dump the result
 	--maxdepth val : increase the maximum depth
+	--maxparserdepth val : increase the maximum parser depth
 	--html: the input document is(are) an HTML file(s)
-	--docbook: the input document is SGML docbook
+	--encoding: the input document character encoding
 	--param name value : pass a (parameter,value) pair
 	       value is an UTF8 XPath expression.
 	       string values must be quoted like "'string'"
@@ -25,8 +27,10 @@ Usage: xsltproc [options] stylesheet file [file ...]
 	--catalogs : use SGML catalogs from $SGML_CATALOG_FILES
 	             otherwise XML Catalogs starting from 
 	         file:///etc/xml/catalog are activated by default
-	--xinclude : do XInclude processing on document intput
-	--profile or --norman : dump profiling informations 
+	--xinclude : do XInclude processing on document input
+	--xincludestyle : do XInclude processing on stylesheets
+	--load-trace : print trace of all external entites loaded
+	--profile or --norman : dump profiling information 
 
 Project libxslt home page: http://xmlsoft.org/XSLT/
 To report bugs and get help: http://xmlsoft.org/XSLT/bugs.html
