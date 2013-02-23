@@ -1,5 +1,5 @@
 
-eSpeak text-to-speech: 1.39  08.Sep.08
+eSpeak text-to-speech: 1.40  22.Dec.08
 
 speak [options] ["<words>"]
 
@@ -19,7 +19,7 @@ spoken from stdin, each line separately.
 -p <integer>
 	   Pitch adjustment, 0 to 99, default is 50
 -s <integer>
-	   Speed in words per minute, 80 to 370, default is 170
+	   Speed in words per minute, 80 to 390, default is 170
 -v <voice name>
 	   Use voice file of this name from espeak-data/voices
 -w <wave file name>
@@ -34,6 +34,10 @@ spoken from stdin, each line separately.
 --compile=<voice name>
 	   Compile the pronunciation rules and dictionary in the current
 	   directory. =<voice name> is optional and specifies which language
+--path="<path>"
+	   Specifies the directory containing the espeak-data directory
+--phonout="<filename>"
+	   Write output from -x -X commands and mbrola phoneme data to this file
 --punct="<characters>"
 	   Speak the names of punctuation characters during speaking.  If
 	   =<characters> is omitted, all punctuation is spoken.
