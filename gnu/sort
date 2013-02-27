@@ -29,11 +29,13 @@ Other options:
   -C, --check=quiet, --check=silent  like -c, but do not report first bad line
       --compress-program=PROG  compress temporaries with PROG;
                               decompress them with PROG -d
+      --debug               annotate the part of the line used to sort,
+                              and warn about questionable usage to stderr
       --files0-from=F       read input from the files specified by
                             NUL-terminated names in file F;
                             If F is - then read names from standard input
   -k, --key=POS1[,POS2]     start a key at POS1 (origin 1), end it at POS2
-                            (default end of line)
+                            (default end of line).  See POS syntax below
   -m, --merge               merge already sorted files; do not sort
   -o, --output=FILE         write result to FILE instead of standard output
   -s, --stable              stabilize sort by disabling last-resort comparison
@@ -41,6 +43,7 @@ Other options:
   -t, --field-separator=SEP  use SEP instead of non-blank to blank transition
   -T, --temporary-directory=DIR  use DIR for temporaries, not $TMPDIR or /tmp;
                               multiple options specify multiple directories
+      --parallel=N          change the number of sorts run concurrently to N
   -u, --unique              with -c, check for strict ordering;
                               without -c, output only the first of an equal run
   -z, --zero-terminated     end lines with 0 byte, not newline
