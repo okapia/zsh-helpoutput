@@ -1,20 +1,28 @@
-diffstat: illegal option -- ?
 Usage: diffstat [options] [files]
 
 Reads from one or more input files which contain output from 'diff',
 producing a histogram of total lines changed for each file referenced.
-If no filename is given on the command line, reads from stdin.
+If no filename is given on the command line, reads from standard input.
 
 Options:
   -c      prefix each line with comment (#)
+  -d      debug - prints a lot of information
+  -D PATH specify location of patched files, use for unchanged-count
   -e FILE redirect standard error to FILE
-  -f NUM  format (0=concise, 1=normal)
+  -f NUM  format (0=concise, 1=normal, 2=filled, 4=values)
   -h      print this message
   -k      do not merge filenames
+  -l      list filenames only
+  -m      merge insert/delete data in chunks as modified-lines
   -n NUM  specify minimum width for the filenames (default: auto)
+  -N NUM  specify maximum width for the filenames (default: auto)
   -o FILE redirect standard output to FILE
   -p NUM  specify number of pathname-separators to strip (default: common)
+  -q      suppress the "0 files changed" message for empty diffs
+  -r NUM  specify rounding for histogram (0=none, 1=simple, 2=adjusted)
+  -S PATH specify location of original files, use for unchanged-count
+  -t      print a table (comma-separated-values) rather than histogram
   -u      do not sort the input list
-  -v      makes output more verbose
+  -v      show progress if output is redirected to a file
   -V      prints the version number
   -w NUM  specify maximum width of the output (default: 80)
