@@ -10,6 +10,8 @@ usage: git push [<options>] [<repository> [<refspec>...]]
     -n, --dry-run         dry run
     --porcelain           machine-readable output
     -f, --force           force updates
+    --recurse-submodules[=<check>]
+                          controls recursive pushing of submodules
     --thin                use thin pack
     --receive-pack <receive-pack>
                           receive pack program
@@ -17,4 +19,5 @@ usage: git push [<options>] [<repository> [<refspec>...]]
                           receive pack program
     -u, --set-upstream    set upstream for git pull/status
     --progress            force progress reporting
+    --prune               prune locally removed refs
 

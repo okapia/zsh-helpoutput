@@ -1,4 +1,4 @@
-usage: git am [options] [<mbox>|<Maildir>...]
+usage: git am [options] [(<mbox>|<Maildir>)...]
    or: git am [options] (--resolved | --skip | --abort)
 
     -i, --interactive     run interactively
@@ -7,6 +7,7 @@ usage: git am [options] [<mbox>|<Maildir>...]
     -s, --signoff         add a Signed-off-by line to the commit message
     -u, --utf8            recode into utf8 (default)
     -k, --keep            pass -k flag to git-mailinfo
+    --keep-non-patch      pass -b flag to git-mailinfo
     --keep-cr             pass --keep-cr flag to git-mailsplit for mbox format
     --no-keep-cr          do not pass --keep-cr flag to git-mailsplit independent of am.keepcr
     -c, --scissors        strip everything before a scissors line
@@ -15,6 +16,7 @@ usage: git am [options] [<mbox>|<Maildir>...]
                           pass it through git-apply
     --ignore-whitespace   pass it through git-apply
     --directory ...       pass it through git-apply
+    --exclude ...         pass it through git-apply
     -C ...                pass it through git-apply
     -p ...                pass it through git-apply
     --patch-format ...    format the patch(es) are in

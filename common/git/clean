@@ -1,9 +1,11 @@
-usage: git clean [-d] [-f] [-n] [-q] [-x | -X] [--] <paths>...
+usage: git clean [-d] [-f] [-n] [-q] [-e <pattern>] [-x | -X] [--] <paths>...
 
-    -q, --quiet           be quiet
+    -q, --quiet           do not print names of files removed
     -n, --dry-run         dry run
     -f, --force           force
     -d                    remove whole directories
+    -e, --exclude <pattern>
+                          add <pattern> to ignore rules
     -x                    remove ignored files, too
     -X                    remove only ignored files
 

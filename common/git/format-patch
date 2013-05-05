@@ -30,4 +30,7 @@ Messaging
     --inline[=<boundary>]
                           inline the patch
     --thread[=<style>]    enable message threading, styles: shallow, deep
+    --signature <signature>
+                          add a signature
+    --quiet               don't print the patch filenames
 

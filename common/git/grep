@@ -1,7 +1,9 @@
-usage: git grep [options] [-e] <pattern> [<rev>...] [[--] path...]
+usage: git grep [options] [-e] <pattern> [<rev>...] [[--] <path>...]
 
     --cached              search in index instead of in the work tree
-    --index               --no-index finds in contents not managed by git
+    --no-index            finds in contents not managed by git
+    --untracked           search in both tracked and untracked files
+    --exclude-standard    search also in ignored files
 
     -v, --invert-match    show non-matching lines
     -i, --ignore-case     case insensitive matching
@@ -14,8 +16,9 @@ usage: git grep [options] [-e] <pattern> [<rev>...] [[--] path...]
                           use extended POSIX regular expressions
     -G, --basic-regexp    use basic POSIX regular expressions (default)
     -F, --fixed-strings   interpret patterns as fixed strings
+    -P, --perl-regexp     use Perl-compatible regular expressions
 
-    -n                    show line numbers
+    -n, --line-number     show line numbers
     -h                    don't show filenames
     -H                    show filenames
     --full-name           show filenames relative to top directory
@@ -27,12 +30,18 @@ usage: git grep [options] [-e] <pattern> [<rev>...] [[--] path...]
     -z, --null            print NUL after filenames
     -c, --count           show the number of matches instead of matching lines
     --color[=<when>]      highlight matches
+    --break               print empty line between matches from different files
+    --heading             show filename only once above matches from same file
 
-    -C <n>                show <n> context lines before and after matches
-    -B <n>                show <n> context lines before matches
-    -A <n>                show <n> context lines after matches
+    -C, --context <n>     show <n> context lines before and after matches
+    -B, --before-context <n>
+                          show <n> context lines before matches
+    -A, --after-context <n>
+                          show <n> context lines after matches
     -NUM                  shortcut for -C NUM
     -p, --show-function   show a line with the function name before matches
+    -W, --function-context
+                          show the surrounding function
 
     -f <file>             read patterns from file
     -e <pattern>          match <pattern>
@@ -44,5 +53,7 @@ usage: git grep [options] [-e] <pattern> [<rev>...] [[--] path...]
     -q, --quiet           indicate hit with exit status without output
     --all-match           show only matches from files that match all patterns
 
+    -O, --open-files-in-pager[=<pager>]
+                          show matching files in the pager
     --ext-grep            allow calling of grep(1) (ignored by this build)
 

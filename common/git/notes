@@ -4,8 +4,12 @@ usage: git notes [--ref <notes_ref>] [list [<object>]]
    or: git notes [--ref <notes_ref>] append [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]
    or: git notes [--ref <notes_ref>] edit [<object>]
    or: git notes [--ref <notes_ref>] show [<object>]
-   or: git notes [--ref <notes_ref>] remove [<object>]
-   or: git notes [--ref <notes_ref>] prune
+   or: git notes [--ref <notes_ref>] merge [-v | -q] [-s <strategy> ] <notes_ref>
+   or: git notes merge --commit [-v | -q]
+   or: git notes merge --abort [-v | -q]
+   or: git notes [--ref <notes_ref>] remove [<object>...]
+   or: git notes [--ref <notes_ref>] prune [-n | -v]
+   or: git notes [--ref <notes_ref>] get-ref
 
     --ref <notes_ref>     use notes from <notes_ref>
 

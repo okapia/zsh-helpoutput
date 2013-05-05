@@ -19,13 +19,16 @@ Available commands:
                      --config-dir <arg>
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
+                     --ignore-refs <arg>
                      --localtime 
                      --log-window-size <num>
                      --minimize-url, --m! 
                      --no-auth-cache 
                      --no-checkout 
                      --no-metadata 
+                     --placeholder-filename <arg>
                      --prefix <arg>
+                     --preserve-empty-dirs 
                      --quiet, --q+ 
                      --repack-flags, --repack-args, --repack-opts <arg>
                      --repack <num>
@@ -65,9 +68,12 @@ Available commands:
                      --find-copies-harder 
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
+                     --ignore-refs <arg>
+                     --interactive, -i 
                      -l <num>
                      --localtime 
                      --log-window-size <num>
+                     --mergeinfo <arg>
                      --merge, -m, -M 
                      --no-auth-cache 
                      --no-checkout 
@@ -89,6 +95,7 @@ Available commands:
                      --fetch-all, --all 
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
+                     --ignore-refs <arg>
                      --localtime 
                      --log-window-size <num>
                      --no-auth-cache 
@@ -109,6 +116,7 @@ Available commands:
                      --branches, --b=s@ 
                      --config-dir <arg>
                      --ignore-paths <arg>
+                     --ignore-refs <arg>
                      --minimize-url, --m! 
                      --no-auth-cache 
                      --no-metadata 
@@ -138,6 +146,7 @@ Available commands:
 		        previous versions of git-svn
                      --config-dir <arg>
                      --ignore-paths <arg>
+                     --ignore-refs <arg>
                      --minimize 
                      --no-auth-cache 
                      --username <arg>
@@ -156,6 +165,7 @@ Available commands:
                      --fetch-all, --all 
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
+                     --ignore-refs <arg>
                      --localtime 
                      --local, -l 
                      --log-window-size <num>
@@ -182,6 +192,7 @@ Available commands:
                      --find-copies-harder 
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
+                     --ignore-refs <arg>
                      -l <num>
                      --localtime 
                      --log-window-size <num>
