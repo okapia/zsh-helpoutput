@@ -3,7 +3,8 @@ usage: git config [options]
 Config file location
     --global              use global config file
     --system              use system config file
-    -f, --file <FILE>     use given config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
 
 Action
     --get                 get value: name [value-regex]
@@ -29,4 +30,5 @@ Type
 
 Other
     -z, --null            terminate values with NUL byte
+    --includes            respect include directives on lookup
 

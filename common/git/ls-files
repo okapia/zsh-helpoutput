@@ -1,4 +1,4 @@
-usage: git ls-files [options] [<file>]*
+usage: git ls-files [options] [<file>...]
 
     -z                    paths are separated with NUL character
     -t                    identify the file status with tags
@@ -26,4 +26,5 @@ usage: git ls-files [options] [<file>]*
     --with-tree <tree-ish>
                           pretend that paths removed since <tree-ish> are still present
     --abbrev[=<n>]        use <n> digits to display SHA-1s
+    --debug               show debugging data
 

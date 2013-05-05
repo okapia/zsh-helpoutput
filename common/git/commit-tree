@@ -1,1 +1,1 @@
-usage: git commit-tree <sha1> [-p <sha1>]* < changelog
+usage: git commit-tree [(-p <sha1>)...] [-S<signer>] [-m <message>] [-F <file>] <sha1> <changelog

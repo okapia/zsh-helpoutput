@@ -11,7 +11,7 @@ usage: git apply [options] [<patch>...]
     --index               make sure the patch is applicable to the current index
     --cached              apply a patch without touching the working tree
     --apply               also apply the patch (use with --stat/--summary/--check)
-    --build-fake-ancestor <FILE>
+    --build-fake-ancestor <file>
                           build a temporary index based on embedded index information
     -z                    paths are separated with NUL character
     -C <n>                ensure at least <n> lines of context match
@@ -23,6 +23,7 @@ usage: git apply [options] [<patch>...]
     -R, --reverse         apply the patch in reverse
     --unidiff-zero        don't expect at least one line of context
     --reject              leave the rejected hunks in corresponding *.rej files
+    --allow-overlap       allow overlapping hunks
     -v, --verbose         be verbose
     --inaccurate-eof      tolerate incorrectly detected missing new-line at the end of file
     --recount             do not trust the line counts in the hunk headers

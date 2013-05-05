@@ -1,10 +1,14 @@
 usage: git rev-list [OPTION] <commit-id>... [ -- paths... ]
   limiting output:
-    --max-count=nr
-    --max-age=epoch
-    --min-age=epoch
+    --max-count=<n>
+    --max-age=<epoch>
+    --min-age=<epoch>
     --sparse
     --no-merges
+    --min-parents=<n>
+    --no-min-parents
+    --max-parents=<n>
+    --no-max-parents
     --remove-empty
     --all
     --branches
@@ -22,7 +26,7 @@ usage: git rev-list [OPTION] <commit-id>... [ -- paths... ]
     --objects | --objects-edge
     --unpacked
     --header | --pretty
-    --abbrev=nr | --no-abbrev
+    --abbrev=<n> | --no-abbrev
     --abbrev-commit
     --left-right
   special purpose:
