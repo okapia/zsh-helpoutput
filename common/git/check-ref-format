@@ -1,0 +1,2 @@
+usage: git check-ref-format [--print] <refname>
+   or: git check-ref-format --branch <branchname-shorthand>

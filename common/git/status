@@ -1,31 +1,9 @@
-usage: git-status [options] [--] <filepattern>...
+usage: git status [options] [--] <filepattern>...
 
-    -q, --quiet           be quiet
     -v, --verbose         be verbose
-
-Commit message options
-    -F, --file <FILE>     read log from file
-    --author <AUTHOR>     override author for commit
-    -m, --message <MESSAGE>
-                          specify commit message
-    -c, --reedit-message <COMMIT>
-                          reuse and edit message from specified commit 
-    -C, --reuse-message <COMMIT>
-                          reuse message from specified commit
-    -s, --signoff         add Signed-off-by:
-    -t, --template <FILE>
-                          use specified template file
-    -e, --edit            force edit of commit
-
-Commit contents options
-    -a, --all             commit all changed files
-    -i, --include         add specified files to index for commit
-    --interactive         interactively add files
-    -o, --only            commit only specified files
-    -n, --no-verify       bypass pre-commit hook
-    --amend               amend previous commit
-    -u, --untracked-files
-                          show all untracked files
-    --allow-empty         ok to record an empty change
-    --cleanup <default>   how to strip spaces and #comments from message
+    -s, --short           show status concisely
+    --porcelain           show porcelain output format
+    -z, --null            terminate entries with NUL
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
 

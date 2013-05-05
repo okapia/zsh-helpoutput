@@ -1,1 +1,1 @@
-usage: git-merge-tree <base-tree> <branch1> <branch2>
+usage: git merge-tree <base-tree> <branch1> <branch2>

@@ -1,13 +1,21 @@
-usage: git-fetch [options] [<repository> <refspec>...]
+usage: git fetch [<options>] [<repository> [<refspec>...]]
+   or: git fetch [<options>] <group>
+   or: git fetch --multiple [<options>] [<repository> | <group>]...
+   or: git fetch --all [<options>]
 
-    -q, --quiet           be quiet
-    -v, --verbose         be verbose
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --all                 fetch from all remotes
     -a, --append          append to .git/FETCH_HEAD instead of overwriting
     --upload-pack <PATH>  path to upload pack on remote end
     -f, --force           force overwrite of local branch
+    -m, --multiple        fetch from multiple remotes
     -t, --tags            fetch all tags and associated objects
     -n                    do not fetch all tags (--no-tags)
+    -p, --prune           prune tracking branches no longer on remote
+    --dry-run             dry run
     -k, --keep            keep downloaded pack
     -u, --update-head-ok  allow updating of HEAD ref
+    --progress            force progress reporting
     --depth <DEPTH>       deepen history of shallow clone
 

@@ -1,0 +1,3 @@
+usage: git difftool [-t|--tool=<tool>] [-x|--extcmd=<cmd>]
+                    [-y|--no-prompt]   [-g|--gui]
+                    ['git diff' options]

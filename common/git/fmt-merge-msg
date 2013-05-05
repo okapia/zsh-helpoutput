@@ -1,1 +1,5 @@
-usage: git-fmt-merge-msg [--log] [--no-log] [--file <file>]
+usage: git fmt-merge-msg [--log|--no-log] [--file <file>]
+
+    --log                 populate log with the shortlog
+    -F, --file <FILE>     file to read from
+

@@ -1,4 +1,4 @@
-usage: git-diff-files [-q] [-0/-1/2/3 |-c|--cc] [<common diff options>] [<path>...]
+usage: git diff-files [-q] [-0/-1/2/3 |-c|--cc] [<common diff options>] [<path>...]
 common diff options:
   -z            output diff-raw with lines terminated with NUL.
   -p            output patch format.

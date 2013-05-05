@@ -1,1 +1,4 @@
-usage: git-merge-base [--all] <commit-id> <commit-id>
+usage: git merge-base [-a|--all] <commit> <commit>...
+
+    -a, --all             outputs all common ancestors
+

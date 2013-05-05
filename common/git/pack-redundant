@@ -1,1 +1,1 @@
-usage: git-pack-redundant [ --verbose ] [ --alt-odb ] < --all | <.pack filename> ...>
+usage: git pack-redundant [ --verbose ] [ --alt-odb ] < --all | <.pack filename> ...>

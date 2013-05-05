@@ -1,13 +1,21 @@
-usage: git-merge [options] <remote>...
-   or: git-merge [options] <msg> HEAD <remote>
+usage: git merge [options] <remote>...
+   or: git merge [options] <msg> HEAD <remote>
 
+    -n                    do not show a diffstat at the end of the merge
     --stat                show a diffstat at the end of the merge
-    -n                    don't show a diffstat at the end of the merge
     --summary             (synonym to --stat)
     --log                 add list of one-line log to merge commit message
     --squash              create a single commit instead of doing a merge
     --commit              perform a commit if the merge succeeds (default)
-    --ff                  allow fast forward (default)
-    -s, --strategy ...    merge strategy to use
-    -m, --message ...     message to be used for the merge commit (if any)
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          message to be used for the merge commit (if any)
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
 

@@ -1,4 +1,4 @@
-usage: git-count-objects [-v]
+usage: git count-objects [-v]
 
     -v, --verbose         be verbose
 

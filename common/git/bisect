@@ -1,4 +1,4 @@
-Usage: /usr/bin/git-bisect [help|start|bad|good|skip|next|reset|visualize|replay|log|run]
+Usage: git bisect [help|start|bad|good|skip|next|reset|visualize|replay|log|run]
 
 git bisect help
         print this long help message.
@@ -8,12 +8,12 @@ git bisect bad [<rev>]
         mark <rev> a known-bad revision.
 git bisect good [<rev>...]
         mark <rev>... known-good revisions.
-git bisect skip [<rev>...]
+git bisect skip [(<rev>|<range>)...]
         mark <rev>... untestable revisions.
 git bisect next
         find next bisection to test and check it out.
-git bisect reset [<branch>]
-        finish bisection search and go back to branch.
+git bisect reset [<commit>]
+        finish bisection search and go back to commit.
 git bisect visualize
         show bisect status in gitk.
 git bisect replay <logfile>

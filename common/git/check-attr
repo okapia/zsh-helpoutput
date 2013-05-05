@@ -1,0 +1,6 @@
+usage: git check-attr attr... [--] pathname...
+   or: git check-attr --stdin attr... < <list-of-paths>
+
+    --stdin               read file names from stdin
+    -z                    input paths are terminated by a null character
+
