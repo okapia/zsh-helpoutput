@@ -1,4 +1,4 @@
-usage: git-diff-index [-m] [--cached] [<common diff options>] <tree-ish> [<path>...]
+usage: git diff-index [-m] [--cached] [<common diff options>] <tree-ish> [<path>...]
 common diff options:
   -z            output diff-raw with lines terminated with NUL.
   -p            output patch format.

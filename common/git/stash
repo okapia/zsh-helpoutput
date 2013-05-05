@@ -1,1 +1,7 @@
-Usage: /usr/bin/git-stash [  | save | list | show | apply | clear | drop | pop | create ]
+Usage: git stash list [<options>]
+   or: git stash show [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet] [<message>]]
+   or: git stash clear

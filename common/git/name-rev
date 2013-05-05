@@ -1,4 +1,4 @@
-usage: git-name-rev [options] ( --all | --stdin | <commit>... )
+usage: git name-rev [options] ( --all | --stdin | <commit>... )
 
     --name-only           print only names (no SHA-1)
     --tags                only use tags to name the commits

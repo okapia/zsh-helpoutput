@@ -1,1 +1,1 @@
-usage: git-merge-index [-o] [-q] <merge-program> (-a | [--] <filename>*)
+usage: git merge-index [-o] [-q] <merge-program> (-a | [--] <filename>*)

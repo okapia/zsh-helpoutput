@@ -1,1 +1,11 @@
-usage: git merge-file [-p | --stdout] [-q | --quiet] [-L name1 [-L orig [-L name2]]] file1 orig_file file2
+usage: git merge-file [options] [-L name1 [-L orig [-L name2]]] file1 orig_file file2
+
+    -p, --stdout          send results to standard output
+    --diff3               use a diff3 based merge
+    --ours                for conflicts, use our version
+    --theirs              for conflicts, use their version
+    --union               for conflicts, use a union version
+    --marker-size <n>     for conflicts, use this marker size
+    -q, --quiet           be quiet
+    -L <name>             set labels for file1/orig_file/file2
+

@@ -1,0 +1,4 @@
+usage: git verify-tag [-v|--verbose] <tag>...
+
+    -v, --verbose         be verbose
+

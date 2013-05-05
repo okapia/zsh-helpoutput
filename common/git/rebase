@@ -1,4 +1,4 @@
-Usage: /usr/bin/git-rebase [--interactive | -i] [-v] [--onto <newbase>] <upstream> [<branch>]
+Usage: git rebase [--interactive | -i] [-v] [--force-rebase | -f] [--no-ff] [--onto <newbase>] [<upstream>|--root] [<branch>] [--quiet | -q]
 
 git-rebase replaces <branch> with a new branch of the
 same name.  When the --onto option is provided the new branch starts
@@ -10,8 +10,8 @@ It is possible that a merge failure will prevent this process from being
 completely automatic.  You will have to resolve any such merge failure
 and run git rebase --continue.  Another option is to bypass the commit
 that caused the merge failure with git rebase --skip.  To restore the
-original <branch> and remove the .dotest working files, use the command
-git rebase --abort instead.
+original <branch> and remove the .git/rebase-apply working files, use the
+command git rebase --abort instead.
 
 Note that if <branch> is not specified on the command line, the
 currently checked out branch is used.

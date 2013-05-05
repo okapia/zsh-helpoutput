@@ -1,4 +1,4 @@
-usage: git-quiltimport [options]
+usage: git quiltimport [options]
 
     -n, --dry-run         dry run
     --author ...          author name and email address for patches without any

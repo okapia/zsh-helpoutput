@@ -1,4 +1,4 @@
-usage: git-for-each-ref [options] [<pattern>]
+usage: git for-each-ref [options] [<pattern>]
 
     -s, --shell           quote placeholders suitably for shells
     -p, --perl            quote placeholders suitably for perl

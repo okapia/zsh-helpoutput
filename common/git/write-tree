@@ -1,1 +1,5 @@
-usage: git-write-tree [--missing-ok] [--prefix=<prefix>/]
+usage: git write-tree [--missing-ok] [--prefix=<prefix>/]
+
+    --missing-ok          allow missing objects
+    --prefix <prefix>/    write tree object for a subdirectory <prefix>
+

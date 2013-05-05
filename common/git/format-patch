@@ -1,4 +1,4 @@
-usage: git format-patch [<options>] [<since> | <revision-range>]
+usage: git format-patch [options] [<since> | <revision range>]
 
     -n, --numbered        use [PATCH n/m] even with a single patch
     -N, --no-numbered     use [PATCH] even with multiple patches
@@ -8,8 +8,6 @@ usage: git format-patch [<options>] [<since> | <revision-range>]
     --numbered-files      use simple number sequence for output file names
     --suffix <sfx>        use <sfx> instead of '.patch'
     --start-number <n>    start numbering patches at <n> instead of 1
-    -v, --reroll-count <n>
-                          mark the series as Nth re-roll
     --subject-prefix <prefix>
                           Use [<prefix>] instead of [PATCH]
     -o, --output-directory <dir>
@@ -25,7 +23,6 @@ Messaging
                           add email header
     --to <email>          add To: header
     --cc <email>          add Cc: header
-    --from[=<ident>]      set From address to <ident> (or committer ident if absent)
     --in-reply-to <message-id>
                           make first mail a reply to <message-id>
     --attach[=<boundary>]
@@ -33,9 +30,4 @@ Messaging
     --inline[=<boundary>]
                           inline the patch
     --thread[=<style>]    enable message threading, styles: shallow, deep
-    --signature <signature>
-                          add a signature
-    --signature-file <file>
-                          add a signature from a file
-    -q, --quiet           don't print the patch filenames
 

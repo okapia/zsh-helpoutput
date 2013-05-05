@@ -1,1 +1,1 @@
-usage: git-var [-l | <variable>]
+usage: git var (-l | <variable>)

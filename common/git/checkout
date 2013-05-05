@@ -5,6 +5,10 @@ usage: git checkout [options] <branch>
     -b <new branch>       branch
     -l                    log for new branch
     -t, --track           track
-    -f                    force
-    -m                    merge
+    -2, --ours            stage
+    -3, --theirs          stage
+    -f, --force           force
+    -m, --merge           merge
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
 

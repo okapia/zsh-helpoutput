@@ -1,19 +1,31 @@
-usage: git-am [options] <mbox>|<Maildir>...
-   or: git-am [options] --resolved
-   or: git-am [options] --skip
+usage: git am [options] [<mbox>|<Maildir>...]
+   or: git am [options] (--resolved | --skip | --abort)
 
-    -d, --dotest ...      (removed -- do not use)
     -i, --interactive     run interactively
-    -b, --binary          pass --allow-binary-replacement to git-apply
     -3, --3way            allow fall back on 3way merging if needed
+    -q, --quiet           be quiet
     -s, --signoff         add a Signed-off-by line to the commit message
     -u, --utf8            recode into utf8 (default)
     -k, --keep            pass -k flag to git-mailinfo
+    --keep-cr             pass --keep-cr flag to git-mailsplit for mbox format
+    --no-keep-cr          do not pass --keep-cr flag to git-mailsplit independent of am.keepcr
+    -c, --scissors        strip everything before a scissors line
     --whitespace ...      pass it through git-apply
+    --ignore-space-change
+                          pass it through git-apply
+    --ignore-whitespace   pass it through git-apply
+    --directory ...       pass it through git-apply
     -C ...                pass it through git-apply
     -p ...                pass it through git-apply
+    --patch-format ...    format the patch(es) are in
+    --reject              pass it through git-apply
     --resolvemsg ...      override error message when patch failure occurs
-    -r, --resolved        to be used after a patch failure
+    --continue            continue applying patches after resolving a conflict
+    -r, --resolved        synonyms for --continue
     --skip                skip the current patch
-    --rebasing            (internal use for git-rebase)
+    --abort               restore the original branch and abort the patching operation.
+    --committer-date-is-author-date
+                          lie about committer date
+    --ignore-date         use current timestamp for author date
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
 

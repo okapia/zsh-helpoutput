@@ -1,18 +1,21 @@
-usage: git-tag [-a|-s|-u <key-id>] [-f] [-m <msg>|-F <file>] <tagname> [<head>]
-   or: git-tag -d <tagname>...
-   or: git-tag -l [-n[<num>]] [<pattern>]
-   or: git-tag -v <tagname>...
+usage: git tag [-a|-s|-u <key-id>] [-f] [-m <msg>|-F <file>] <tagname> [<head>]
+   or: git tag -d <tagname>...
+   or: git tag -l [-n[<num>]] [<pattern>]
+   or: git tag -v <tagname>...
 
     -l                    list tag names
-    -n[<n>]               print n lines of each tag message
+    -n[<n>]               print <n> lines of each tag message
     -d                    delete tags
     -v                    verify tags
 
 Tag creation options
     -a                    annotated tag, needs a message
     -m <msg>              message for the tag
-    -F <file>             message in a file
+    -F <FILE>             message in a file
     -s                    annotated and GPG-signed tag
     -u <key-id>           use another key to sign the tag
-    -f                    replace the tag if exists
+    -f, --force           replace the tag if exists
+
+Tag listing options
+    --contains <commit>   print only tags that contain the commit
 
