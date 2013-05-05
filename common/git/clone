@@ -10,13 +10,19 @@ usage: git clone [options] [--] <repo> [<dir>]
     --no-hardlinks        don't use local hardlinks, always copy
     -s, --shared          setup as shared repository
     --recursive           initialize submodules in the clone
-    --template <path>     path the template repository
+    --recurse-submodules  initialize submodules in the clone
+    --template <template-directory>
+                          directory from which templates will be used
     --reference <repo>    reference repository
-    -o, --origin <branch>
-                          use <branch> instead of 'origin' to track upstream
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
     -b, --branch <branch>
                           checkout <branch> instead of the remote's HEAD
     -u, --upload-pack <path>
                           path to git-upload-pack on the remote
     --depth <depth>       create a shallow clone of that depth
+    --single-branch       clone only one branch, HEAD or --branch
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
 

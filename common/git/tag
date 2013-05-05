@@ -1,21 +1,26 @@
 usage: git tag [-a|-s|-u <key-id>] [-f] [-m <msg>|-F <file>] <tagname> [<head>]
    or: git tag -d <tagname>...
-   or: git tag -l [-n[<num>]] [<pattern>]
+   or: git tag -l [-n[<num>]] [--contains <commit>] [--points-at <object>] 
+		[<pattern>...]
    or: git tag -v <tagname>...
 
-    -l                    list tag names
+    -l, --list            list tag names
     -n[<n>]               print <n> lines of each tag message
-    -d                    delete tags
-    -v                    verify tags
+    -d, --delete          delete tags
+    -v, --verify          verify tags
 
 Tag creation options
-    -a                    annotated tag, needs a message
-    -m <msg>              message for the tag
-    -F <FILE>             message in a file
-    -s                    annotated and GPG-signed tag
-    -u <key-id>           use another key to sign the tag
+    -a, --annotate        annotated tag, needs a message
+    -m, --message <message>
+                          tag message
+    -F, --file <file>     read message from file
+    -s, --sign            annotated and GPG-signed tag
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -u, --local-user <key-id>
+                          use another key to sign the tag
     -f, --force           replace the tag if exists
 
 Tag listing options
     --contains <commit>   print only tags that contain the commit
+    --points-at <object>  print only tags of the object
 

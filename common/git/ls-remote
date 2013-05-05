@@ -1,1 +1,2 @@
-usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>] <repository> <refs>...
+usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>]
+                     [-q|--quiet] [--exit-code] [<repository> [<refs>...]]

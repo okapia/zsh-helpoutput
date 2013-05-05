@@ -1,5 +1,6 @@
 usage: git symbolic-ref [options] name [ref]
 
-    -q, --quiet           be quiet
+    -q, --quiet           suppress error message for non-symbolic (detached) refs
+    --short               shorten ref output
     -m <reason>           reason of the update
 

@@ -10,14 +10,17 @@ usage: git blame [options] [rev-opts] [rev] [--] file
     -f, --show-name       Show original filename (Default: auto)
     -n, --show-number     Show original linenumber (Default: off)
     -p, --porcelain       Show in a format designed for machine consumption
+    --line-porcelain      Show porcelain format with per-line commit information
     -c                    Use the same output mode as git-annotate (Default: off)
     -t                    Show raw timestamp (Default: off)
     -l                    Show long commit SHA1 (Default: off)
     -s                    Suppress author name and timestamp (Default: off)
+    -e, --show-email      Show author email instead of name (Default: off)
     -w                    Ignore whitespace differences
     -S <file>             Use revisions from <file> instead of calling git-rev-list
     --contents <file>     Use <file>'s contents as the final image
     -C[<score>]           Find line copies within and across files
     -M[<score>]           Find line movements within and across files
     -L <n,m>              Process only line range n,m, counting from 1
+    --abbrev[=<n>]        use <n> digits to display SHA-1s
 

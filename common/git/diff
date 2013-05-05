@@ -1,1 +1,1 @@
-usage: git diff <options> <rev>{0,2} -- <path>*
+usage: git diff [<options>] [<commit> [<commit>]] [--] [<path>...]

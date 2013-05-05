@@ -1,1 +1,10 @@
-git: 'daemon' is not a git command. See 'git --help'.
+usage: git daemon [--verbose] [--syslog] [--export-all]
+           [--timeout=<n>] [--init-timeout=<n>] [--max-connections=<n>]
+           [--strict-paths] [--base-path=<path>] [--base-path-relaxed]
+           [--user-path | --user-path=<path>]
+           [--interpolated-path=<path>]
+           [--reuseaddr] [--pid-file=<file>]
+           [--(enable|disable|allow-override|forbid-override)=<service>]
+           [--inetd | [--listen=<host_or_ipaddr>] [--port=<n>]
+                      [--detach] [--user=<user> [--group=<group>]]
+           [<directory>...]

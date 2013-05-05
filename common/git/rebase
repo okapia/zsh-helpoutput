@@ -1,24 +1,35 @@
-Usage: git rebase [--interactive | -i] [-v] [--force-rebase | -f] [--no-ff] [--onto <newbase>] [<upstream>|--root] [<branch>] [--quiet | -q]
+usage: git rebase [-i] [options] [--onto <newbase>] [<upstream>] [<branch>]
+   or: git rebase [-i] [options] --onto <newbase> --root [<branch>]
+   or: git-rebase [-i] --continue | --abort | --skip
 
-git-rebase replaces <branch> with a new branch of the
-same name.  When the --onto option is provided the new branch starts
-out with a HEAD equal to <newbase>, otherwise it is equal to <upstream>
-It then attempts to create a new commit for each commit from the original
-<branch> that does not exist in the <upstream> branch.
+Available options are
+    -v, --verbose         display a diffstat of what changed upstream
+    -q, --quiet           be quiet. implies --no-stat
+    --onto ...            rebase onto given branch instead of upstream
+    -p, --preserve-merges
+                          try to recreate merges instead of ignoring them
+    -s, --strategy ...    use the given merge strategy
+    --no-ff               cherry-pick all commits, even if unchanged
+    -m, --merge           use merging strategies to rebase
+    -i, --interactive     let the user edit the list of commits to rebase
+    -f, --force-rebase    force rebase even if branch is up to date
+    -X, --strategy-option ...
+                          pass the argument through to the merge strategy
+    --stat                display a diffstat of what changed upstream
+    -n, --no-stat         do not show diffstat of what changed upstream
+    --verify              allow pre-rebase hook to run
+    --rerere-autoupdate   allow rerere to update index with resolved conflicts
+    --root                rebase all reachable commits up to the root(s)
+    --autosquash          move commits that begin with squash!/fixup! under -i
+    --committer-date-is-author-date
+                          passed to 'git am'
+    --ignore-date         passed to 'git am'
+    --whitespace ...      passed to 'git apply'
+    --ignore-whitespace   passed to 'git apply'
+    -C ...                passed to 'git apply'
 
-It is possible that a merge failure will prevent this process from being
-completely automatic.  You will have to resolve any such merge failure
-and run git rebase --continue.  Another option is to bypass the commit
-that caused the merge failure with git rebase --skip.  To restore the
-original <branch> and remove the .git/rebase-apply working files, use the
-command git rebase --abort instead.
-
-Note that if <branch> is not specified on the command line, the
-currently checked out branch is used.
-
-Example:       git-rebase master~1 topic
-
-        A---B---C topic                   A'--B'--C' topic
-       /                   -->           /
-  D---E---F---G master          D---E---F---G master
+Actions:
+    --continue            continue
+    --abort               abort and check out the original branch
+    --skip                skip current patch and continue
 
