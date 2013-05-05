@@ -1,0 +1,11 @@
+usage: git notes [--ref <notes_ref>] [list [<object>]]
+   or: git notes [--ref <notes_ref>] add [-f] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]
+   or: git notes [--ref <notes_ref>] copy [-f] <from-object> <to-object>
+   or: git notes [--ref <notes_ref>] append [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]
+   or: git notes [--ref <notes_ref>] edit [<object>]
+   or: git notes [--ref <notes_ref>] show [<object>]
+   or: git notes [--ref <notes_ref>] remove [<object>]
+   or: git notes [--ref <notes_ref>] prune
+
+    --ref <notes_ref>     use notes from <notes_ref>
+

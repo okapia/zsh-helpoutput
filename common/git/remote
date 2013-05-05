@@ -1,9 +1,14 @@
-usage: git remote
-   or: git remote add <name> <url>
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--mirror] <name> <url>
+   or: git remote rename <old> <new>
    or: git remote rm <name>
-   or: git remote show <name>
-   or: git remote prune <name>
-   or: git remote update [group]
+   or: git remote set-head <name> (-a | -d | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [group | remote]
+   or: git remote set-url <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
 
-    -v, --verbose         be verbose
+    -v, --verbose         be verbose; must be placed before a subcommand
 

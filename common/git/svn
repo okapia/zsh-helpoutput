@@ -1,0 +1,211 @@
+git-svn - bidirectional operations between a single Subversion tree and git
+Usage: git svn <command> [options] [arguments]
+
+Available commands:
+  blame            Show what revision and author last modified each line of a file
+                     --git-format 
+  branch           Create a branch in the SVN repository
+                     --commit-url <arg>
+                     --destination, -d <arg>
+                     --dry-run, -n 
+                     --message, -m <arg>
+                     --tag, -t 
+                     --username <arg>
+  clone            Initialize and fetch revisions
+                     --add-author-from 
+                     --authors-file, -A <arg>
+                     --authors-prog <arg>
+                     --branches, --b=s@ 
+                     --config-dir <arg>
+                     --follow-parent, --follow! 
+                     --ignore-paths <arg>
+                     --localtime 
+                     --log-window-size <num>
+                     --minimize-url, --m! 
+                     --no-auth-cache 
+                     --no-checkout 
+                     --no-metadata 
+                     --prefix <arg>
+                     --quiet, --q+ 
+                     --repack-flags, --repack-args, --repack-opts <arg>
+                     --repack <num>
+                     --revision, -r <arg>
+                     --rewrite-root <arg>
+                     --rewrite-uuid <arg>
+                     --shared <arg>
+                     --stdlayout, -s 
+                     --tags, --t=s@ 
+                     --template <arg>
+                     --trunk, -T <arg>
+                     --use-log-author 
+                     --use-svm-props 
+                     --use-svnsync-props 
+                     --username <arg>
+  commit-diff      Commit a diff between two trees
+                     --copy-similarity, -C <num>
+                     --edit, -e 
+                     --file, -F <arg>
+                     --find-copies-harder 
+                     -l <num>
+                     --message, -m <arg>
+                     --revision, -r <arg>
+                     --rmdir 
+  create-ignore    Create a .gitignore per svn:ignore
+                     --revision, -r <num>
+  dcommit          Commit several diffs to merge with upstream
+                     --add-author-from 
+                     --authors-file, -A <arg>
+                     --authors-prog <arg>
+                     --commit-url <arg>
+                     --config-dir <arg>
+                     --copy-similarity, -C <num>
+                     --dry-run, -n 
+                     --edit, -e 
+                     --fetch-all, --all 
+                     --find-copies-harder 
+                     --follow-parent, --follow! 
+                     --ignore-paths <arg>
+                     -l <num>
+                     --localtime 
+                     --log-window-size <num>
+                     --merge, -m, -M 
+                     --no-auth-cache 
+                     --no-checkout 
+                     --no-rebase 
+                     --quiet, --q+ 
+                     --repack-flags, --repack-args, --repack-opts <arg>
+                     --repack <num>
+                     --revision, -r <num>
+                     --rmdir 
+                     --strategy, -s <arg>
+                     --use-log-author 
+                     --username <arg>
+                     --verbose, -v 
+  fetch            Download new revisions from SVN
+                     --add-author-from 
+                     --authors-file, -A <arg>
+                     --authors-prog <arg>
+                     --config-dir <arg>
+                     --fetch-all, --all 
+                     --follow-parent, --follow! 
+                     --ignore-paths <arg>
+                     --localtime 
+                     --log-window-size <num>
+                     --no-auth-cache 
+                     --no-checkout 
+                     --parent, -p 
+                     --quiet, --q+ 
+                     --repack-flags, --repack-args, --repack-opts <arg>
+                     --repack <num>
+                     --revision, -r <arg>
+                     --use-log-author 
+                     --username <arg>
+  find-rev         Translate between SVN revision numbers and tree-ish
+  gc               Compress unhandled.log files in .git/svn and remove index files in .git/svn
+  info             Show info about the latest SVN revision
+		     on the current branch
+                     --url 
+  init             Initialize a repo for tracking (requires URL argument)
+                     --branches, --b=s@ 
+                     --config-dir <arg>
+                     --ignore-paths <arg>
+                     --minimize-url, --m! 
+                     --no-auth-cache 
+                     --no-metadata 
+                     --prefix <arg>
+                     --rewrite-root <arg>
+                     --rewrite-uuid <arg>
+                     --shared <arg>
+                     --stdlayout, -s 
+                     --tags, --t=s@ 
+                     --template <arg>
+                     --trunk, -T <arg>
+                     --use-svm-props 
+                     --use-svnsync-props 
+                     --username <arg>
+  log              Show commit logs
+                     --authors-file, -A <arg>
+                     --color 
+                     --incremental 
+                     --limit <num>
+                     --non-recursive 
+                     --oneline 
+                     --pager <arg>
+                     --revision, -r <arg>
+                     --show-commit 
+                     --verbose, -v 
+  migrate          Migrate configuration/metadata/layout from
+		        previous versions of git-svn
+                     --config-dir <arg>
+                     --ignore-paths <arg>
+                     --minimize 
+                     --no-auth-cache 
+                     --username <arg>
+  mkdirs           recreate empty directories after a checkout
+                     --revision, -r <num>
+  propget          Print the value of a property on a file or directory
+                     --revision, -r <num>
+  proplist         List all properties of a file or directory
+                     --revision, -r <num>
+  rebase           Fetch and rebase your working directory
+                     --add-author-from 
+                     --authors-file, -A <arg>
+                     --authors-prog <arg>
+                     --config-dir <arg>
+                     --dry-run, -n 
+                     --fetch-all, --all 
+                     --follow-parent, --follow! 
+                     --ignore-paths <arg>
+                     --localtime 
+                     --local, -l 
+                     --log-window-size <num>
+                     --merge, -m, -M 
+                     --no-auth-cache 
+                     --no-checkout 
+                     --quiet, --q+ 
+                     --repack-flags, --repack-args, --repack-opts <arg>
+                     --repack <num>
+                     --strategy, -s <arg>
+                     --use-log-author 
+                     --username <arg>
+                     --verbose, -v 
+  reset            Undo fetches back to the specified SVN revision
+                     --parent, -p 
+                     --revision, -r <arg>
+  set-tree         Set an SVN repository to a git tree-ish
+                     --add-author-from 
+                     --authors-file, -A <arg>
+                     --authors-prog <arg>
+                     --config-dir <arg>
+                     --copy-similarity, -C <num>
+                     --edit, -e 
+                     --find-copies-harder 
+                     --follow-parent, --follow! 
+                     --ignore-paths <arg>
+                     -l <num>
+                     --localtime 
+                     --log-window-size <num>
+                     --no-auth-cache 
+                     --no-checkout 
+                     --quiet, --q+ 
+                     --repack-flags, --repack-args, --repack-opts <arg>
+                     --repack <num>
+                     --rmdir 
+                     --stdin 
+                     --use-log-author 
+                     --username <arg>
+  show-externals   Show svn:externals listings
+                     --revision, -r <num>
+  show-ignore      Show svn:ignore listings
+                     --revision, -r <num>
+  tag              Create a tag in the SVN repository
+                     --commit-url <arg>
+                     --destination, -d <arg>
+                     --dry-run, -n 
+                     --message, -m <arg>
+                     --username <arg>
+
+GIT_SVN_ID may be set in the environment or via the --id/-i switch to an
+arbitrary identifier if you're tracking multiple SVN branches/repositories in
+one git repository and want to keep them separate.  See git-svn(1) for more
+information.

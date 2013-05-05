@@ -1,9 +1,9 @@
-usage: git-rm [options] [--] <file>...
+usage: git rm [options] [--] <file>...
 
     -n, --dry-run         dry run
     -q, --quiet           be quiet
     --cached              only remove from the index
-    -f                    override the up-to-date check
+    -f, --force           override the up-to-date check
     -r                    allow recursive removal
     --ignore-unmatch      exit with a zero status even if nothing matched
 

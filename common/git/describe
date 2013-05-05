@@ -1,4 +1,5 @@
-usage: git-describe [options] <committish>*
+usage: git describe [options] <committish>*
+   or: git describe [options] --dirty
 
     --contains            find the tag that comes after the commit
     --debug               debug search strategy on stderr
@@ -10,4 +11,5 @@ usage: git-describe [options] <committish>*
     --candidates <n>      consider <n> most recent tags (default: 10)
     --match <pattern>     only consider tags matching <pattern>
     --always              show abbreviated commit object as fallback
+    --dirty[=<mark>]      append <mark> on dirty working tree (default: "-dirty")
 

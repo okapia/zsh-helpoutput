@@ -1,2 +1,21 @@
-Usage: /usr/bin/git-rebase--interactive (--continue | --abort | --skip | [--preserve-merges] [--verbose]
-	[--onto <branch>] <upstream> [<branch>])
+usage: git-rebase [-i] [options] [--] <upstream> [<branch>]
+   or: git-rebase [-i] (--continue | --abort | --skip)
+
+Available options are
+    -v, --verbose         display a diffstat of what changed upstream
+    --onto ...            rebase onto given branch instead of upstream
+    -p, --preserve-merges
+                          try to recreate merges instead of ignoring them
+    -s, --strategy ...    use the given merge strategy
+    --no-ff               cherry-pick all commits, even if unchanged
+    -m, --merge           always used (no-op)
+    -i, --interactive     always used (no-op)
+
+Actions:
+    --continue            continue rebasing process
+    --abort               abort rebasing process and restore original branch
+    --skip                skip current patch and continue rebasing process
+    --no-verify           override pre-rebase hook from stopping the operation
+    --root                rebase all reachable commmits up to the root(s)
+    --autosquash          move commits that begin with squash!/fixup! under -i
+

@@ -1,1 +1,5 @@
-usage: git-verify-pack [-v] <pack>...
+usage: git verify-pack [-v|--verbose] [-s|--stat-only] <pack>...
+
+    -v, --verbose         verbose
+    -s, --stat-only       show statistics only
+

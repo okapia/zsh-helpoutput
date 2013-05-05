@@ -1,11 +1,11 @@
-usage: git-cat-file [-t|-s|-e|-p|<type>] <sha1>
-   or: git-cat-file [--batch|--batch-check] < <list_of_sha1s>
+usage: git cat-file (-t|-s|-e|-p|<type>) <object>
+   or: git cat-file (--batch|--batch-check) < <list_of_objects>
 
 <type> can be one of: blob, tree, commit, tag
     -t                    show object type
     -s                    show object size
     -e                    exit with zero when there's no error
     -p                    pretty-print object's content
-    --batch               show info and content of objects feeded on stdin
-    --batch-check         show info about objects feeded on stdin
+    --batch               show info and content of objects fed from the standard input
+    --batch-check         show info about objects fed from the standard input
 

@@ -1,4 +1,4 @@
-usage: git-revert [options] <commit-ish>
+usage: git revert [options] <commit-ish>
 
     -n, --no-commit       don't automatically commit
     -e, --edit            edit the commit message
@@ -6,4 +6,5 @@ usage: git-revert [options] <commit-ish>
     -r                    no-op (backward compatibility)
     -s, --signoff         add Signed-off-by:
     -m, --mainline <n>    parent number
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
 

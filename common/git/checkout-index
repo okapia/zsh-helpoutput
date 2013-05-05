@@ -1,1 +1,13 @@
-usage: git-checkout-index [-u] [-q] [-a] [-f] [-n] [--stage=[123]|all] [--prefix=<string>] [--temp] [--] <file>...
+usage: git checkout-index [options] [--] <file>...
+
+    -a, --all             checks out all files in the index
+    -f, --force           forces overwrite of existing files
+    -q, --quiet           be quiet
+    -n, --no-create       don't checkout new files
+    -u, --index           update stat information in the index file
+    -z                    paths are separated with NUL character
+    --stdin               read list of paths from the standard input
+    --temp                write the content to temporary files
+    --prefix <string>     when creating files, prepend <string>
+    --stage ...           copy out the files from named stage
+

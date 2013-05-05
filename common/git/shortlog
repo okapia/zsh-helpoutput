@@ -1,1 +1,9 @@
-usage: git-shortlog [-n] [-s] [-e] [-w] [<commit-id>... ]
+usage: git shortlog [-n] [-s] [-e] [-w] [rev-opts] [--] [<commit-id>... ]
+
+    [rev-opts] are documented in git-rev-list(1)
+
+    -n, --numbered        sort output according to the number of commits per author
+    -s, --summary         Suppress commit descriptions, only provides commit count
+    -e, --email           Show the email address of each author
+    -w[<w[,i1[,i2]]>]     Linewrap output
+

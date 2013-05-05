@@ -1,4 +1,4 @@
-Usage: /usr/bin/git-request-pull <commit> <url> [<head>]
+usage: git request-pull [options] start url [end]
 
-Summarizes the changes since <commit> to the standard output,
-and includes <url> in the message generated.
+    -p                    show patch text as well
+

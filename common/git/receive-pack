@@ -1,1 +1,1 @@
-usage: git-receive-pack <git-dir>
+usage: git receive-pack <git-dir>

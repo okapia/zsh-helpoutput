@@ -1,4 +1,4 @@
-usage: git-symbolic-ref [options] name [ref]
+usage: git symbolic-ref [options] name [ref]
 
     -q, --quiet           be quiet
     -m <reason>           reason of the update

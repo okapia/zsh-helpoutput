@@ -1,0 +1,4 @@
+usage: git bisect--helper --next-all
+
+    --next-all            perform 'git bisect next'
+

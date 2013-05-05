@@ -1,1 +1,10 @@
-usage: git-hash-object [ [-t <type>] [-w] [--stdin] <file>... | --stdin-paths < <list-of-paths> ]
+usage: git hash-object [-t <type>] [-w] [--path=<file>|--no-filters] [--stdin] [--] <file>...
+   or: git hash-object  --stdin-paths < <list-of-paths>
+
+    -t <type>             object type
+    -w                    write the object into the object database
+    --stdin               read the object from stdin
+    --stdin-paths         read file names from stdin
+    --no-filters          store file as is without filters
+    --path <file>         process file as it were from this path
+

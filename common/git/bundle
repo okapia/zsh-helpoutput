@@ -1,1 +1,4 @@
-usage: git-bundle (create <bundle> <git-rev-list args> | verify <bundle> | list-heads <bundle> [refname]... | unbundle <bundle> [refname]... )
+usage: git bundle create <file> <git-rev-list args>
+   or: git bundle verify <file>
+   or: git bundle list-heads <file> [refname...]
+   or: git bundle unbundle <file> [refname...]
