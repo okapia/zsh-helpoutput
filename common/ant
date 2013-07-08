@@ -17,6 +17,7 @@ Options:
   -diagnostics           print information that might be helpful to
                          diagnose or report problems.
   -quiet, -q             be extra quiet
+  -silent, -S            print nothing but task outputs and build failures
   -verbose, -v           be extra verbose
   -debug, -d             print debugging information
   -emacs, -e             produce logging information without adornments
@@ -37,10 +38,8 @@ Options:
   -inputhandler <class>  the class which will handle input requests
   -find <file>           (s)earch for buildfile towards the root of
     -s  <file>           the filesystem and use it
-  -nice  number          A niceness value for the main thread:
-                         1 (lowest) to 10 (highest); 5 is the default
-  -nouserlib             Run ant without using the jar files from
-                         ${user.home}/.ant/lib
+  -nice  number          A niceness value for the main thread:                         1 (lowest) to 10 (highest); 5 is the default
+  -nouserlib             Run ant without using the jar files from                         ${user.home}/.ant/lib
   -noclasspath           Run ant without using CLASSPATH
   -autoproxy             Java1.5+: use the OS proxy settings
   -main <class>          override Ant's normal entry point
