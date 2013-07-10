@@ -1,0 +1,23 @@
+The notmuch mail system.
+
+Usage: notmuch --help
+       notmuch --version
+       notmuch <command> [args...]
+
+The available commands are as follows:
+
+  setup        Interactively setup notmuch for first use.
+  new          Find and import new messages to the notmuch database.
+  search       Search for messages matching the given search terms.
+  show         Show all messages matching the search terms.
+  count        Count messages matching the search terms.
+  reply        Construct a reply template for a set of messages.
+  tag          Add/remove tags for all messages matching the search terms.
+  dump         Create a plain-text dump of the tags for each message.
+  restore      Restore the tags from the given dump file (see 'dump').
+  config       Get or set settings in the notmuch configuration file.
+  help         This message, or more detailed help for the named command.
+
+Use "notmuch help <command>" for more details on each command
+and "notmuch help search-terms" for the common search-terms syntax.
+
