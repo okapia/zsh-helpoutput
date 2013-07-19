@@ -43,6 +43,7 @@ Camera and software configuration
   --set-config-index=STRING              Set configuration value index in
                                          choices
   --set-config-value=STRING              Set configuration value
+  --reset                                Reset device port
 
 Capture an image from or on the camera
   --keep                                 Keep images on camera after capturing
