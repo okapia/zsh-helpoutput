@@ -8,6 +8,8 @@ usage: git format-patch [options] [<since> | <revision range>]
     --numbered-files      use simple number sequence for output file names
     --suffix <sfx>        use <sfx> instead of '.patch'
     --start-number <n>    start numbering patches at <n> instead of 1
+    -v, --reroll-count <n>
+                          mark the series as Nth re-roll
     --subject-prefix <prefix>
                           Use [<prefix>] instead of [PATCH]
     -o, --output-directory <dir>

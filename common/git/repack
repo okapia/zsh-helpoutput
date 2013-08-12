@@ -8,6 +8,8 @@ usage: git repack [options]
     -n                    do not run git-update-server-info
     -q, --quiet           be quiet
     -l                    pass --local to git-pack-objects
+    --unpack-unreachable ...
+                          with -A, do not loosen objects older than this
 
 Packing constraints
     --window ...          size of the window used for delta compression

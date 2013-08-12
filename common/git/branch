@@ -5,8 +5,12 @@ usage: git branch [options] [-r | -a] [--merged | --no-merged]
 
 Generic options
     -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
     -t, --track           set up tracking mode (see git-pull(1))
     --set-upstream        change upstream info
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      Unset the upstream info
     --color[=<when>]      use colored output
     -r, --remotes         act on remote-tracking branches
     --contains <commit>   print only branches that contain the commit
@@ -24,4 +28,5 @@ Specific git-branch actions:
     -f, --force           force creation (when already exists)
     --no-merged <commit>  print only not merged branches
     --merged <commit>     print only merged branches
+    --column[=<style>]    list branches in columns
 
