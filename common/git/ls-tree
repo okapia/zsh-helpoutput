@@ -1,4 +1,4 @@
-usage: git ls-tree [<options>] <tree-ish> [path...]
+usage: git ls-tree [<options>] <tree-ish> [<path>...]
 
     -d                    only show trees
     -r                    recurse into subtrees

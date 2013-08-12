@@ -1,4 +1,4 @@
-usage: git commit [options] [--] <filepattern>...
+usage: git commit [options] [--] <pathspec>...
 
     -q, --quiet           suppress summary after successful commit
     -v, --verbose         show diff in commit message template
@@ -36,6 +36,7 @@ Commit contents options
     --short               show status concisely
     --branch              show branch information
     --porcelain           machine-readable output
+    --long                show status in long format (default)
     -z, --null            terminate entries with NUL
     --amend               amend previous commit
     --no-post-rewrite     bypass post-rewrite hook

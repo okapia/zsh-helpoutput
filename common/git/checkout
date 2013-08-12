@@ -16,4 +16,6 @@ usage: git checkout [options] <branch>
     --overwrite-ignore    update ignored files (default)
     --conflict <style>    conflict style (merge or diff3)
     -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
 

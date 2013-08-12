@@ -1,1 +1,3 @@
-usage: git stripspace [-s | --strip-comments] < <stream>
+usage: 
+  git stripspace [-s | --strip-comments] < input
+  git stripspace [-c | --comment-lines] < input

@@ -1,5 +1,5 @@
 git-svn - bidirectional operations between a single Subversion tree and git
-Usage: git svn <command> [options] [arguments]
+usage: git svn <command> [options] [arguments]
 
 Available commands:
   blame            Show what revision and author last modified each line of a file
@@ -9,6 +9,7 @@ Available commands:
                      --destination, -d <arg>
                      --dry-run, -n 
                      --message, -m <arg>
+                     --parents 
                      --tag, -t 
                      --username <arg>
   clone            Initialize and fetch revisions
@@ -20,6 +21,7 @@ Available commands:
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
                      --ignore-refs <arg>
+                     --include-paths <arg>
                      --localtime 
                      --log-window-size <num>
                      --minimize-url, --m! 
@@ -69,6 +71,7 @@ Available commands:
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
                      --ignore-refs <arg>
+                     --include-paths <arg>
                      --interactive, -i 
                      -l <num>
                      --localtime 
@@ -96,6 +99,7 @@ Available commands:
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
                      --ignore-refs <arg>
+                     --include-paths <arg>
                      --localtime 
                      --log-window-size <num>
                      --no-auth-cache 
@@ -108,6 +112,8 @@ Available commands:
                      --use-log-author 
                      --username <arg>
   find-rev         Translate between SVN revision numbers and tree-ish
+                     --after 
+                     --before 
   gc               Compress unhandled.log files in .git/svn and remove index files in .git/svn
   info             Show info about the latest SVN revision
 		     on the current branch
@@ -117,6 +123,7 @@ Available commands:
                      --config-dir <arg>
                      --ignore-paths <arg>
                      --ignore-refs <arg>
+                     --include-paths <arg>
                      --minimize-url, --m! 
                      --no-auth-cache 
                      --no-metadata 
@@ -147,6 +154,7 @@ Available commands:
                      --config-dir <arg>
                      --ignore-paths <arg>
                      --ignore-refs <arg>
+                     --include-paths <arg>
                      --minimize 
                      --no-auth-cache 
                      --username <arg>
@@ -166,12 +174,14 @@ Available commands:
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
                      --ignore-refs <arg>
+                     --include-paths <arg>
                      --localtime 
                      --local, -l 
                      --log-window-size <num>
                      --merge, -m, -M 
                      --no-auth-cache 
                      --no-checkout 
+                     --preserve-merges, -p 
                      --quiet, --q+ 
                      --repack-flags, --repack-args, --repack-opts <arg>
                      --repack <num>
@@ -193,6 +203,7 @@ Available commands:
                      --follow-parent, --follow! 
                      --ignore-paths <arg>
                      --ignore-refs <arg>
+                     --include-paths <arg>
                      -l <num>
                      --localtime 
                      --log-window-size <num>
@@ -214,6 +225,7 @@ Available commands:
                      --destination, -d <arg>
                      --dry-run, -n 
                      --message, -m <arg>
+                     --parents 
                      --username <arg>
 
 GIT_SVN_ID may be set in the environment or via the --id/-i switch to an

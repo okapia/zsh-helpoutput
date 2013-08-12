@@ -12,6 +12,7 @@ usage: git merge [options] [<commit>...]
     --ff                  allow fast-forward (default)
     --ff-only             abort if fast-forward is not possible
     --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   Verify that the named commit has a valid GPG signature
     -s, --strategy <strategy>
                           merge strategy to use
     -X, --strategy-option <option=value>

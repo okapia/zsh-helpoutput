@@ -20,4 +20,5 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     -u, --update-head-ok  allow updating of HEAD ref
     --progress            force progress reporting
     --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
 
