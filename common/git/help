@@ -1,6 +1,7 @@
-usage: git help [--all] [--man|--web|--info] [command]
+usage: git help [--all] [--guides] [--man|--web|--info] [command]
 
     -a, --all             print all available commands
+    -g, --guides          print list of useful guides
     -m, --man             show man page
     -w, --web             show manual in web browser
     -i, --info            show info page

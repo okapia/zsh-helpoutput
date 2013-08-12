@@ -1,1 +1,9 @@
-git: 'check-ignore' is not a git command. See 'git --help'.
+usage: git check-ignore [options] pathname...
+   or: git check-ignore [options] --stdin < <list-of-paths>
+
+    -q, --quiet           suppress progress reporting
+    -v, --verbose         be verbose
+
+    --stdin               read file names from stdin
+    -z                    input paths are terminated by a null character
+

@@ -1,1 +1,30 @@
-usage: git update-index [-q] [--add] [--replace] [--remove] [--unmerged] [--refresh] [--really-refresh] [--cacheinfo] [--chmod=(+|-)x] [--assume-unchanged] [--skip-worktree|--no-skip-worktree] [--info-only] [--force-remove] [--stdin] [--index-info] [--unresolve] [--again | -g] [--ignore-missing] [-z] [--verbose] [--] <file>...
+usage: git update-index [options] [--] [<file>...]
+
+    -q                    continue refresh even when index needs update
+    --ignore-submodules   refresh: ignore submodules
+    --add                 do not ignore new files
+    --replace             let files replace directories and vice-versa
+    --remove              notice files missing from worktree
+    --unmerged            refresh even if index contains unmerged entries
+    --refresh             refresh stat information
+    --really-refresh      like --refresh, but ignore assume-unchanged setting
+    --cacheinfo <mode> <object> <path>
+                          add the specified entry to the index
+    --chmod (+/-)x        override the executable bit of the listed files
+    --assume-unchanged    mark files as "not changing"
+    --no-assume-unchanged
+                          clear assumed-unchanged bit
+    --skip-worktree       mark files as "index-only"
+    --no-skip-worktree    clear skip-worktree bit
+    --info-only           add to index only; do not add content to object database
+    --force-remove        remove named paths even if present in worktree
+    -z                    with --stdin: input lines are terminated by null bytes
+    --stdin               read list of paths to be updated from standard input
+    --index-info          add entries from standard input to the index
+    --unresolve           repopulate stages #2 and #3 for the listed paths
+    -g, --again           only update entries that differ from HEAD
+    --ignore-missing      ignore files missing from worktree
+    --verbose             report actions to standard output
+    --clear-resolve-undo  (for porcelains) forget saved unresolved conflicts
+    --index-version <n>   write index in this format
+

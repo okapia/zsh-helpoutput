@@ -1,4 +1,4 @@
-usage: git cherry-pick [options] <commit-ish>
+usage: git cherry-pick [options] <commit-ish>...
    or: git cherry-pick <subcommand>
 
     --quit                end revert or cherry-pick sequence
@@ -15,4 +15,9 @@ usage: git cherry-pick [options] <commit-ish>
                           option for merge strategy
     -x                    append commit name
     --ff                  allow fast-forward
+    --allow-empty         preserve initially empty commits
+    --allow-empty-message
+                          allow commits with empty messages
+    --keep-redundant-commits
+                          keep redundant, empty commits
 

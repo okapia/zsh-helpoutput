@@ -1,5 +1,5 @@
 usage: git check-attr [-a | --all | attr...] [--] pathname...
-   or: git check-attr --stdin [-a | --all | attr...] < <list-of-paths>
+   or: git check-attr --stdin [-z] [-a | --all | attr...] < <list-of-paths>
 
     -a, --all             report all attributes set on file
     --cached              use .gitattributes only from the index

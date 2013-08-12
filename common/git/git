@@ -1,7 +1,7 @@
-usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+usage: git [--version] [--help] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
            [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [-c name=value] [--help]
            <command> [<args>]
 
 The most commonly used git commands are:
@@ -14,7 +14,7 @@ The most commonly used git commands are:
    diff       Show changes between commits, commit and working tree, etc
    fetch      Download objects and refs from another repository
    grep       Print lines matching a pattern
-   init       Create an empty git repository or reinitialize an existing one
+   init       Create an empty Git repository or reinitialize an existing one
    log        Show commit logs
    merge      Join two or more development histories together
    mv         Move or rename a file, a directory, or a symlink
@@ -27,4 +27,6 @@ The most commonly used git commands are:
    status     Show the working tree status
    tag        Create, list, delete or verify a tag object signed with GPG
 
-See 'git help <command>' for more information on a specific command.
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
