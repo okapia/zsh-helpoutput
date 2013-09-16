@@ -1,0 +1,13 @@
+hdiutil flatten: embed any resource fork into UDIF data fork
+Usage:	hdiutil flatten <image>
+	Flatten options:
+	    -xml		embed XML (default)
+	    -rsrcfork	embed resource fork (default)
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -verbose
+	    -debug
+	    -quiet

@@ -1,0 +1,9 @@
+hdiutil unflatten: extract any UDIF metadata into resource fork
+Usage:	hdiutil unflatten <image>
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -verbose
+	    -debug
+	    -quiet

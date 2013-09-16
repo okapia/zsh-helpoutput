@@ -1,0 +1,3 @@
+sed: illegal option -- ?
+usage: sed script [-Ean] [-i extension] [file ...]
+       sed [-an] [-i extension] [-e script] ... [-f script_file] ... [file ...]

@@ -1,0 +1,2 @@
+last: illegal option -- ?
+usage: last [-#] [-f file] [-t tty] [-h hostname] [user ...]

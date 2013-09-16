@@ -1,0 +1,14 @@
+	eject is a synonym for detach...
+hdiutil detach: detach disk image from system
+Usage:	hdiutil detach <devname>
+
+	Note: you can specify a mount point (e.g. /Volumes/MyDisk)
+	      instead of a dev node (e.g. /dev/disk1)
+
+	Options:
+	    -force		forcibly detach
+
+	Common options:
+	    -verbose
+	    -debug
+	    -quiet

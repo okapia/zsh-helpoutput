@@ -1,0 +1,16 @@
+hdiutil imageinfo: print information about a given image
+Usage:	hdiutil imageinfo <image>
+	Imageinfo options:
+	    -format	just display the image format
+	    -checksum	just display the image checksum
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -plist			return results in plist format
+	    -verbose
+	    -debug

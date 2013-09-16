@@ -1,0 +1,9 @@
+hdiutil unmount: unmount a mounted partition
+Usage:	hdiutil unmount <mountpoint>
+	Options:
+	    -force		force unmount
+
+	Common options:
+	    -verbose
+	    -debug
+	    -quiet

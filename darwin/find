@@ -1,0 +1,2 @@
+find: illegal option -- ?
+usage: find [-H | -L | -P] [-EXdsx] [-f file] [file ...] [expression]

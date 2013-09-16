@@ -1,0 +1,7 @@
+hdiutil plugins: display information about DiskImages plugins
+Usage:	hdiutil plugins
+	Common options:
+	    -plist			return results in plist format
+	    -verbose
+	    -debug
+	    -quiet

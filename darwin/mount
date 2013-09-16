@@ -1,0 +1,4 @@
+mount: illegal option -- ?
+usage: mount [-dfruvw] [-o options] [-t ufs | external_type] special node
+       mount [-adfruvw] [-t ufs | external_type]
+       mount [-dfruvw] special | node

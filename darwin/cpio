@@ -1,0 +1,5 @@
+usage: cpio -o [-aABcLvVzZ] [-C bytes] [-H format] [-O archive]
+               [-F archive] < name-list [> archive]
+       cpio -i [-bBcdfmnrsStuvVzZ6] [-C bytes] [-E file] [-H format]
+               [-I archive] [-F archive] [pattern...] [< archive]
+       cpio -p [-adlLmuvV] destination-directory < name-list
