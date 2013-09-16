@@ -1,0 +1,15 @@
+hdiutil internet-enable: enable one-shot image processing flag
+Usage:	hdiutil internet-enable <image>
+	Enable options:
+	    -no		disable
+	    -yes	[default]
+	    -query	return true/false
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -plist			return results in plist format
+	    -verbose
+	    -debug
+	    -quiet

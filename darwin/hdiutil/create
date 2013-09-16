@@ -1,0 +1,97 @@
+hdiutil create: create a disk image image
+Usage:	hdiutil create <sizespec> <imagepath>
+	Size specifiers:
+	    -size < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e >
+	        (mkfile(8) plus terabytes, petabytes, & exabytes)
+	    -sectors <count>
+	    -megabytes <count>
+
+	Image options:
+	    -layout <layout>			[SPUD unless -fs -> NONE]
+		SPCD - single partition CD/DVD
+		SPUD - single partition
+		UNIVERSAL CD - CD/DVD
+		NONE - no partition map
+		UNIVERSAL HD - hard disk
+	    -partitionType <partitionType>	[Apple_HFS or per -fs]
+	    -align <sector alignment>		[4 aka 2K]
+	    -ov
+
+	Filesystem options:
+	    -fs <filesystem>
+		Case-sensitive HFS+ - Mac OS Extended (Case-sensitive)
+		Journaled HFS+ - Mac OS Extended (Journaled)
+		Case-sensitive Journaled HFS+ - Mac OS Extended (Case-sensitive, Journaled)
+		HFS+ - Mac OS Extended
+		HFS - Mac OS Standard
+		MS-DOS FAT32 - MS-DOS File System (FAT32)
+		MS-DOS FAT16 - MS-DOS File System (FAT16)
+		MS-DOS - MS-DOS File System
+		MS-DOS FAT12 - MS-DOS File System (FAT12)
+		UFS - UNIX File System
+	   -volname <volumename>		["untitled"]
+	   -stretch < ?? | ?b | ??k | ??m | ??g | ??t | ??p | ??e > (HFS+)
+
+	New Blank Image options:
+	    -type <image type>			[UDIF]
+		UDIF - read/write disk image
+		SPARSE - sparse disk image
+
+	Image from Folder options:
+	   -srcfolder <source folder>
+	   -(no)anyowners		do (not) attempt to preserve owners
+	   -(no)skipunreadable		do (not) skip unreadable files/directories [no]
+	   -format <image type>			[UDZO]
+		DC42 - Disk Copy 4.2
+		RdWr - NDIF read/write
+		Rdxx - NDIF read-only
+		ROCo - NDIF compressed
+		Rken - NDIF compressed (KenCode)
+		UDRO - read-only
+		UDCO - compressed (ADC)
+		UDZO - compressed
+		UDBZ - compressed (bzip2)
+		UFBI - entire device
+		IPOD - iPod image
+		UDxx - UDIF stub
+		UDRW - read/write
+		UDTO - DVD/CD master
+		UDSP - sparse
+		UDIF - read/write disk image
+		SPARSE - sparse disk image
+
+	Image from Device options:
+	   -srcdevice <source dev node, e.g. disk1, disk2s1>
+	   -format <image type>			[UDZO]
+		DC42 - Disk Copy 4.2
+		RdWr - NDIF read/write
+		Rdxx - NDIF read-only
+		ROCo - NDIF compressed
+		Rken - NDIF compressed (KenCode)
+		UDRO - read-only
+		UDCO - compressed (ADC)
+		UDZO - compressed
+		UDBZ - compressed (bzip2)
+		UFBI - entire device
+		IPOD - iPod image
+		UDxx - UDIF stub
+		UDRW - read/write
+		UDTO - DVD/CD master
+		UDSP - sparse
+	    -segmentSize < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e >
+	        (blocks, bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, exabytes)
+
+	Attach options:
+	   -attach			attach image after creation
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -certificate <path-to-cert-file>
+	    -imagekey <key>=<value>
+	    -tgtimagekey <key>=<value>
+	    -plist			return results in plist format
+	    -puppetstrings
+	    -verbose
+	    -debug
+	    -quiet

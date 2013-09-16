@@ -1,0 +1,3 @@
+od: illegal option -- ?
+usage: od [-aBbcDdeFfHhIiLlOosvXx] [-A base] [-j skip] [-N length] [-t type]
+          [[+]offset[.][Bb]] [file ...]

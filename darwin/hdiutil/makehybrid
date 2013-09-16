@@ -1,0 +1,62 @@
+hdiutil makehybrid: generate cross-platform hybrid images
+Usage:	hdiutil makehybrid -o <outfile> <source>
+	Filesystem Options (one or more, defaults to all):
+	    -hfs			Generate an HFS+ filesystem
+	    -iso			Generate an ISO9660 filesystem
+	    -joliet			Generate Joliet extensions to ISO9660
+	    -udf			Generate a UDF filesystem
+
+	HFS+-specific Options:
+	    -hfs-blessed-directory <directory>	Blessed directory
+	    -hfs-openfolder <directory>		First Finder open folder
+	    -hfs-startupfile-size <number>	Startup File size in bytes
+	    -hfs-volume-name <string>	Volume name for HFS+ filesystem
+	    -hide-hfs <string>		Glob expression to hide in HFS+
+	    -only-hfs <string>		Glob expression to only include in HFS+
+
+	ISO9660-specific Options:
+	    -abstract-file <file>	Path to abstract file
+	    -bibliography-file <file>	Path to bibliography file
+	    -copyright-file <file>	Path to copyright file
+	    -application <string>	Creator application name
+	    -preparer <string>		Data preparer name
+	    -publisher <string>		Publisher name
+	    -system-id <string>		System Identifier
+	    -keep-mac-specific		Keep Macintosh-specific files
+	    -eltorito-boot		Path to El Torito Boot Image
+	    -hard-disk-boot		Use El Torito Hard Disk emulation mode
+	    -no-emul-boot		Use El Torito No Emulation mode
+	    -iso-volume-name <string>	Volume name for ISO9660 filesystem
+	    -joliet-volume-name <string>	Volume name for Joliet
+	    -hide-iso <string>		Glob expression to hide in ISO9660
+	    -hide-joliet <string>	Glob expression to hide in Joliet
+	    -only-iso <string>		Glob expression to only include in ISO9660
+	    -only-joliet <string>	Glob expression to only include in Joliet
+
+	UDF-specific Options:
+	    -udf-version <string>	One of "1.02", "1.50"
+	    -udf-volume-name <string>	Volume name for UDF filesystem
+	    -hide-udf <string>		Glob expression to hide in UDF
+	    -only-udf <string>		Glob expression to only include in UDF
+
+	Filesystem-independant Options:
+	    -default-volume-name <string>	Default volume name
+	    -hide-all <string>		Glob expression to hide
+
+	Options:
+	    -ov			Overwrite output if already present
+	    -print-size		Print size estimate and quit
+	    -plistin		Accept command-line options as a plist on stdin
+	    -(no)verify		When source is a disk image, do (not) verify it
+	    -(no)kernel		When source is a disk image, force it to be
+	               			attach out- (or in-) kernel
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -verbose
+	    -debug
+	    -quiet

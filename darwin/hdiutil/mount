@@ -1,0 +1,33 @@
+hdiutil attach: attach disk image to the system
+Usage:	hdiutil attach <image>
+	Device options:
+	    -readonly		force read-only
+	    -nokernel		do not attach the image in-kernel
+
+	Mount options:
+	    -mount <required|optional|suppressed>  mount volumes?
+	    -nomount		same as -mount suppressed
+	    -mountroot <path>	mount volumes inside <path> instead of /Volumes
+	    -mountrandom <path>	mount volumes inside <path> instead of /Volumes, but with a randomized mount point directory
+	    -mountpoint <path>	mount at <path> instead of inside /Volumes
+
+	Processing options (defaults per framework preferences):
+	    -(no)verify		(do not) verify image checksums
+	    -(no)autofsck		(do not) perform automatic filesystem checks
+	    -(no)idme		(do not) process IDME enabled images
+	    -(no)autoopen	(do not) open root of new mounts
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -recover <keychain-file>
+	    -imagekey <key>=<value>
+	    -drivekey <key>=<value>
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -plist			return results in plist format
+	    -puppetstrings
+	    -verbose
+	    -debug
+	    -quiet

@@ -1,0 +1,20 @@
+hdiutil segment: segment a UDIF disk image
+Usage:	hdiutil segment -o <outfile> -segmentCount <num> <image>
+	hdiutil segment -o <outfile> -segmentSize <size> <image>
+	size: <?? | ??b | ??k | ??m | ??g | ??t> - sectors by default
+	        (blocks, bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, exabytes)
+	Options:
+	    -firstSegmentSize <size>	size of first segment
+	    -restricted			make restricted segments
+	    -ov		overwrite target file(s) if it already exists
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -tgtimagekey <key>=<value>
+	    -plist			return results in plist format
+	    -puppetstrings
+	    -verbose
+	    -debug
+	    -quiet

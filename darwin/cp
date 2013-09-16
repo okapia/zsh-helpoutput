@@ -1,0 +1,2 @@
+usage: cp [-R [-H | -L | -P]] [-f | -i | -n] [-pv] src target
+       cp [-R [-H | -L | -P]] [-f | -i | -n] [-pv] src1 ... srcN directory

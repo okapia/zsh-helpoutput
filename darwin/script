@@ -1,0 +1,2 @@
+script: illegal option -- ?
+usage: script [-a] [file]

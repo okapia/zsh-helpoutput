@@ -1,0 +1,4 @@
+cut: illegal option -- ?
+usage: cut -b list [-n] [file ...]
+       cut -c list [file ...]
+       cut -f list [-s] [-d delim] [file ...]

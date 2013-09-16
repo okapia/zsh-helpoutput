@@ -1,0 +1,2 @@
+comm: illegal option -- ?
+usage: comm [-123] file1 file2
