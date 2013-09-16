@@ -1,0 +1,14 @@
+hdiutil compact: compacts a SPARSE disk image
+Usage:	hdiutil compact <image>
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -plist			return results in plist format
+	    -puppetstrings
+	    -verbose
+	    -debug
+	    -quiet

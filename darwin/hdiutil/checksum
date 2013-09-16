@@ -1,0 +1,28 @@
+hdiutil checksum: calculate checksums for images
+Usage:	hdiutil checksum -type <checksumType> <image>
+	Checksum Types:
+	    UDIF-CRC32 - CRC-32 image checksum
+	    UDIF-MD5 - MD5 image checksum
+	    IPOD - iPod image checksum
+	    DC42 - Disk Copy 4.2
+	    CRC28 - CRC-32 (NDIF)
+	    CRC32 - CRC-32
+	    MD5 - MD5
+	    SHA - SHA
+	    SHA1 - SHA-1
+	    SHA256 - SHA-256
+	    SHA384 - SHA-384
+	    SHA512 - SHA-512
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -plist			return results in plist format
+	    -puppetstrings
+	    -verbose
+	    -debug
+	    -quiet

@@ -1,0 +1,7 @@
+hdiutil mountvol: mount a volume
+Usage:	hdiutil mountvol <devname>
+	Common options:
+	    -plist			return results in plist format
+	    -verbose
+	    -debug
+	    -quiet

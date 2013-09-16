@@ -1,0 +1,7 @@
+id: illegal option -- ?
+usage: id [user]
+       id -G [-n] [user]
+       id -P [user]
+       id -g [-nr] [user]
+       id -p [user]
+       id -u [-nr] [user]

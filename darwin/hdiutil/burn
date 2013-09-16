@@ -1,0 +1,34 @@
+hdiutil burn: burn an image to optical media
+Usage:	hdiutil burn <image>
+	Options:
+	    -speed <speed e.g. 1, 2, 4, 8, ... max>
+	    -device <OpenFirmware path>
+	    -sizequery		just calculate size of disc required
+	    -testburn		don't turn on laser
+
+	Toggles:
+	    -noeject		don't eject disc after burning
+	    -noverifyburn	don't verify disc contents after burn
+	    -noaddpmap		don't add partition map
+	    -noskipfinalfree	don't skip burning final free partition
+	    -optimizeimage	optimize filesystem for burning
+	    -forceclose		close disc after burning
+	    -nounderrun		disable buffer underrun protection
+	    -[no]synth		synthesize new filesystem from volume
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -puppetstrings
+	    -verbose
+	    -debug
+	    -quiet
+
+	Related actions:
+	    -erase		erase disc (quickly)
+	    -fullerase		completely erase disc
+	    -list		list all burning devices, for -device

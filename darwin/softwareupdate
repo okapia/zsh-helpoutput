@@ -1,0 +1,16 @@
+usage: softwareupdate <mode> [<args> ...]
+
+	-l | --list		List all appropriate updates
+	-d | --download		Download Only
+	-i | --install		Install
+		<label> ...	specific updates
+		-a | --all		all appropriate updates
+		-r | --recommended	only recommended updates
+		-u | --url <url> ...	from signed package URLs
+
+	Per-user preferences:
+	--ignore <label> ...	Ignore specific updates
+	--reset-ignored		Clear all ignored updates
+	--schedule (on | off)	Set automatic checking
+
+	-h | --help	Print this help

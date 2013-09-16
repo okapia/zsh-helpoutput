@@ -1,0 +1,7 @@
+hdiutil info: display information about attached images
+Usage:	hdiutil info
+	Common options:
+	    -plist			return results in plist format
+	    -verbose
+	    -debug
+	    -quiet

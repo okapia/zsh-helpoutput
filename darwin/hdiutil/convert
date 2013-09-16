@@ -1,0 +1,41 @@
+hdiutil convert: convert an image into a different format
+Usage:	hdiutil convert -format <format> -o <outfile> <image>
+	Image Formats:
+	    DC42 - Disk Copy 4.2
+	    RdWr - NDIF read/write
+	    Rdxx - NDIF read-only
+	    ROCo - NDIF compressed
+	    Rken - NDIF compressed (KenCode)
+	    UDRO - read-only
+	    UDCO - compressed (ADC)
+	    UDZO - compressed
+	    UDBZ - compressed (bzip2)
+	    UFBI - entire device
+	    IPOD - iPod image
+	    UDxx - UDIF stub
+	    UDRW - read/write
+	    UDTO - DVD/CD master
+	    UDSP - sparse
+
+	Convert options:
+	    -ov		overwrite target file(s) if it already exists
+	    -align [<sector alignment>]	[4 aka 2K]
+	    -pmap
+	    -segmentSize < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e >
+	        (blocks, bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, exabytes)
+	    -tasks <task count>		[1]
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -certificate <path-to-cert-file>
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -tgtimagekey <key>=<value>
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -plist			return results in plist format
+	    -puppetstrings
+	    -verbose
+	    -debug
+	    -quiet

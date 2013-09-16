@@ -1,0 +1,29 @@
+hdiutil resize: resize partition or image
+Usage:	hdiutil resize <sizespec> <image>
+	Size specifiers:
+	    -size < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e | min | max >
+	        (bytes, blocks, kilobytes, megabytes, gigabytes, terabytes, petabytes, exabytes)
+	    -sectors <sector count>
+		min		minimum size
+		max		maximum size
+
+	Resize options:
+	    -imageonly		only change image file size
+	    -partitiononly	only change the partition size
+	    -partitionNumber <#> resize given partition [last]
+	    -limits		for given options, print min/current/max sizes
+	    -growonly		only allow image to grow
+	    -shrinkonly		only allow image to shrink
+	    -nofinalgap		allow elimination of trailing free partition
+
+	Common options:
+	    -encryption <crypto method>
+	    -stdinpass
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -shadow <shadowfile>
+	    -insecurehttp
+	    -cacert <file|dir>
+	    -plist			return results in plist format
+	    -verbose
+	    -debug
+	    -quiet

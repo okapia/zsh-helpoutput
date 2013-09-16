@@ -1,0 +1,32 @@
+Usage: system_profiler [-listDataTypes]
+       system_profiler [-xml] [-detailLevel n]
+       system_profiler [-xml] [dataType1 ... dataTypeN]
+
+  -detailLevel n    specifies the level of detail for the report
+                      mini = short report (contains no identifying or personal information)
+                      basic = basic hardware and network information
+                      full = all available information
+
+  -listDataTypes    lists all the available datatypes
+
+  -xml              generates xml output instead of plain text
+                    if redirected to a file with the extension ".spx"
+                    the file can be opened in System Profiler.app
+
+Examples:
+
+  system_profiler
+     Generates a text report with the standard detail level.
+
+  system_profiler -detailLevel mini
+     Generates a short report without identifying/personal information.
+
+  system_profiler -listDataTypes
+     Shows a list of the available data types.
+
+  system_profiler SPSoftwareDataType SPNetworkDataType
+     Generates a text report containing only software and network data.
+
+  system_profiler -xml >MySystem.spx
+     Creates a XML file which can be opened by System Profiler.app
+

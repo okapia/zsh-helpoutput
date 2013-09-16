@@ -1,0 +1,10 @@
+Usage: open [-e] [-t] [-f] [-b <bundle identifier>] [-a <appname>] [filenames]
+Help: Open opens files from a shell.
+      By default, opens each file using the default application for that file.  
+      If the file is in the form of a URL, the file will be opened as a URL.
+Options: 
+      -a  Opens with the specified application.
+      -b  Opens with the specified application bundle identifier.
+      -e  Opens with TextEdit.
+      -t  Opens with default text editor.
+      -f  Reads input from standard input and opens with TextEdit.

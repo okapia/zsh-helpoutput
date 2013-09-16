@@ -1,0 +1,3 @@
+date: illegal option -- ?
+usage: date [-nu] [-r seconds] [+format]
+       date [-u] mmddhhmm[[cc]yy]

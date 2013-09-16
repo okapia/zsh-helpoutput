@@ -1,0 +1,12 @@
+hdiutil chpass: change passphrase for a given image
+Usage:	hdiutil chpass <image>
+	Password options:
+	    -oldstdinpass
+	    -newstdinpass
+
+	Common options:
+	    -recover <keychain-file>
+	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
+	    -verbose
+	    -debug
+	    -quiet
