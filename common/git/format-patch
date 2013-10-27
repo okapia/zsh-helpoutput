@@ -25,6 +25,7 @@ Messaging
                           add email header
     --to <email>          add To: header
     --cc <email>          add Cc: header
+    --from[=<ident>]      set From address to <ident> (or committer ident if absent)
     --in-reply-to <message-id>
                           make first mail a reply to <message-id>
     --attach[=<boundary>]
