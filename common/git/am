@@ -1,5 +1,5 @@
 usage: git am [options] [(<mbox>|<Maildir>)...]
-   or: git am [options] (--resolved | --skip | --abort)
+   or: git am [options] (--continue | --skip | --abort)
 
     -i, --interactive     run interactively
     -3, --3way            allow fall back on 3way merging if needed

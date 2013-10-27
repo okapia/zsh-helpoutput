@@ -7,6 +7,7 @@ usage: git cat-file (-t|-s|-e|-p|<type>|--textconv) <object>
     -e                    exit with zero when there's no error
     -p                    pretty-print object's content
     --textconv            for blob objects, run textconv on object's content
-    --batch               show info and content of objects fed from the standard input
-    --batch-check         show info about objects fed from the standard input
+    --batch[=<format>]    show info and content of objects fed from the standard input
+    --batch-check[=<format>]
+                          show info about objects fed from the standard input
 

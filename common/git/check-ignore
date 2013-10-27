@@ -6,4 +6,5 @@ usage: git check-ignore [options] pathname...
 
     --stdin               read file names from stdin
     -z                    input paths are terminated by a null character
+    -n, --non-matching    show non-matching input paths
 
