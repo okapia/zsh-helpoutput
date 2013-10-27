@@ -3,9 +3,10 @@ usage: git describe [options] <committish>*
 
     --contains            find the tag that comes after the commit
     --debug               debug search strategy on stderr
-    --all                 use any ref in .git/refs
-    --tags                use any tag in .git/refs/tags
+    --all                 use any ref
+    --tags                use any tag, even unannotated
     --long                always use long format
+    --first-parent        only follow first parent
     --abbrev[=<n>]        use <n> digits to display SHA-1s
     --exact-match         only output exact matches
     --candidates <n>      consider <n> most recent tags (default: 10)
