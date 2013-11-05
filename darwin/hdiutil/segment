@@ -10,10 +10,13 @@ Usage:	hdiutil segment -o <outfile> -segmentCount <num> <image>
 
 	Common options:
 	    -encryption <crypto method>
+	    	AES-128 - 128-bit AES encryption (recommended)
+	    	AES-256 - 256-bit AES encryption (more secure, but slower)
 	    -stdinpass
+	    -agentpass
 	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
 	    -tgtimagekey <key>=<value>
-	    -plist			return results in plist format
+	    -plist
 	    -puppetstrings
 	    -verbose
 	    -debug

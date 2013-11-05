@@ -2,45 +2,56 @@ hdiutil create: create a disk image image
 Usage:	hdiutil create <sizespec> <imagepath>
 	Size specifiers:
 	    -size < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e >
-	        (mkfile(8) plus terabytes, petabytes, & exabytes)
 	    -sectors <count>
 	    -megabytes <count>
 
 	Image options:
-	    -layout <layout>			[SPUD unless -fs -> NONE]
-		SPCD - single partition CD/DVD
-		SPUD - single partition
+	    -library <MKDrivers>
+	    -layout <layout>			[GPTSPUD or per -fs]
+		GPTSPUD - Single partition - GUID Partition Map
+		MBRSPUD - Single partition - Master Boot Record Partition Map
+		ISOCD - Single partition - CD/DVD with ISO data
 		UNIVERSAL CD - CD/DVD
-		NONE - no partition map
-		UNIVERSAL HD - hard disk
+		NONE - No partition map
+		SPCD - Single partition - CD/DVD
+		UNIVERSAL HD - Hard disk
+		SPUD - Single partition - Apple Partition Map
 	    -partitionType <partitionType>	[Apple_HFS or per -fs]
-	    -align <sector alignment>		[4 aka 2K]
+	    -align <sector alignment>		[8 sectors]
 	    -ov
 
 	Filesystem options:
 	    -fs <filesystem>
-		Case-sensitive HFS+ - Mac OS Extended (Case-sensitive)
 		Journaled HFS+ - Mac OS Extended (Journaled)
+		Case-sensitive HFS+ - Mac OS Extended (Case-sensitive)
 		Case-sensitive Journaled HFS+ - Mac OS Extended (Case-sensitive, Journaled)
 		HFS+ - Mac OS Extended
-		HFS - Mac OS Standard
-		MS-DOS FAT32 - MS-DOS File System (FAT32)
-		MS-DOS FAT16 - MS-DOS File System (FAT16)
-		MS-DOS - MS-DOS File System
-		MS-DOS FAT12 - MS-DOS File System (FAT12)
-		UFS - UNIX File System
+		MS-DOS FAT12 - MS-DOS (FAT12)
+		MS-DOS - MS-DOS (FAT)
+		MS-DOS FAT32 - MS-DOS (FAT32)
+		MS-DOS FAT16 - MS-DOS (FAT16)
+		UDF - Universal Disk Format (UDF)
 	   -volname <volumename>		["untitled"]
 	   -stretch < ?? | ?b | ??k | ??m | ??g | ??t | ??p | ??e > (HFS+)
 
 	New Blank Image options:
 	    -type <image type>			[UDIF]
 		UDIF - read/write disk image
+		UDTO - DVD/CD master
 		SPARSE - sparse disk image
+		SPARSEBUNDLE - sparse bundle disk image
+	   -[no]spotlight		do (not) create a Spotlight™ index
 
 	Image from Folder options:
 	   -srcfolder <source folder>
-	   -(no)anyowners		do (not) attempt to preserve owners
-	   -(no)skipunreadable		do (not) skip unreadable files/directories [no]
+	   -[no]spotlight		do (not) create a Spotlight™ index
+	   -[no]anyowners		do (not) attempt to preserve owners
+	   -[no]skipunreadable		do (not) skip unreadable objects [no]
+	   -srcowners on|off|any|auto [auto]
+	   		on	enable owners on source
+	   		off	disable owners on source
+	   		any	leave owners state on source unchanged
+	   		auto	enable owners if source is a volume
 	   -format <image type>			[UDZO]
 		DC42 - Disk Copy 4.2
 		RdWr - NDIF read/write
@@ -57,10 +68,15 @@ Usage:	hdiutil create <sizespec> <imagepath>
 		UDRW - read/write
 		UDTO - DVD/CD master
 		UDSP - sparse
+		UDSB - sparsebundle
+		UNIV - hybrid image (HFS+/ISO/UDF)
 		UDIF - read/write disk image
+		UDTO - DVD/CD master
 		SPARSE - sparse disk image
+		SPARSEBUNDLE - sparse bundle disk image
 
 	Image from Device options:
+	Note: Filesystem options (-fs, -volname, -stretch) ignored with -srcdevice
 	   -srcdevice <source dev node, e.g. disk1, disk2s1>
 	   -format <image type>			[UDZO]
 		DC42 - Disk Copy 4.2
@@ -78,19 +94,24 @@ Usage:	hdiutil create <sizespec> <imagepath>
 		UDRW - read/write
 		UDTO - DVD/CD master
 		UDSP - sparse
+		UDSB - sparsebundle
 	    -segmentSize < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e >
-	        (blocks, bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, exabytes)
+	                 (sectors, bytes, KiB, MiB, GiB, TiB, PiB, EiB)
 
 	Attach options:
 	   -attach			attach image after creation
 
 	Common options:
 	    -encryption <crypto method>
+	    	AES-128 - 128-bit AES encryption (recommended)
+	    	AES-256 - 256-bit AES encryption (more secure, but slower)
 	    -stdinpass
+	    -agentpass
 	    -certificate <path-to-cert-file>
+	    -pubKey <public-key-hash>[,pkh2,...]
 	    -imagekey <key>=<value>
 	    -tgtimagekey <key>=<value>
-	    -plist			return results in plist format
+	    -plist
 	    -puppetstrings
 	    -verbose
 	    -debug

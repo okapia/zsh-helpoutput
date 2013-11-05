@@ -7,22 +7,26 @@ Usage:	hdiutil burn <image>
 	    -testburn		don't turn on laser
 
 	Toggles:
-	    -noeject		don't eject disc after burning
-	    -noverifyburn	don't verify disc contents after burn
-	    -noaddpmap		don't add partition map
-	    -noskipfinalfree	don't skip burning final free partition
-	    -optimizeimage	optimize filesystem for burning
-	    -forceclose		close disc after burning
-	    -nounderrun		disable buffer underrun protection
-	    -[no]synth		synthesize new filesystem from volume
+	    -[no]eject		do (not) eject disc after burning [default: eject]
+	    -[no]verifyburn	do (not) verify disc contents after burn [default: verifyburn]
+
+	    -[no]addpmap	do (not) add partition map [default: addpmap only if necessary]
+	    -[no]synth		do (not) synthesize new filesystem from volume [default: synth only if necessary]
+	    -[no]skipfinalfree	do (not) skip burning final free partition [default: skipfinalfree]
+	    -[no]optimizeimage	do (not) optimize filesystem for burning [default: nooptimizeimage]
+	    -[no]forceclose	do (not) close disc (e.g. allow appending) after burning [default: noforceclose]
+	    -[no]underrun	do (not) enable buffer underrun protection [default: nounderrun]
 
 	Common options:
 	    -encryption <crypto method>
+	    	AES-128 - 128-bit AES encryption (recommended)
+	    	AES-256 - 256-bit AES encryption (more secure, but slower)
 	    -stdinpass
+	    -agentpass
 	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
 	    -shadow <shadowfile>
 	    -insecurehttp
-	    -cacert <file|dir>
+	    -cacert <file | dir>
 	    -puppetstrings
 	    -verbose
 	    -debug

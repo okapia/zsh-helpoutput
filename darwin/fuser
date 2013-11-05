@@ -1,0 +1,4 @@
+fuser: [-cfu] file ...
+	-c	file is treated as mount point
+	-f	the report is only for the named files
+	-u	print username of pid in parenthesis

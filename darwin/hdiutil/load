@@ -1,6 +1,30 @@
-hdiutil load: manually load the disk image driver
-Usage:	hdiutil load
-	Common options:
-	    -verbose
-	    -debug
-	    -quiet
+hdiutil: load: verb not recognized
+Usage: hdiutil <verb> <options>
+<verb> is one of the following:
+help
+attach
+detach
+eject
+verify
+create
+compact
+convert
+burn
+info
+checksum
+chpass
+unflatten
+flatten
+imageinfo
+internet-enable
+isencrypted
+makehybrid
+mount
+mountvol
+unmount
+plugins
+resize
+segment
+pmap
+udifderez
+udifrez

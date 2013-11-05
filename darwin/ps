@@ -1,3 +1,5 @@
 ps: illegal option -- ?
-usage: ps [-aACcehjlmMrSTuvwx] [-O|o fmt] [-p pid] [-t tty] [-U user]
+usage: ps [-AaCcEefhjlMmrSTvwXx] [-O fmt | -o fmt] [-G gid[,gid...]]
+          [-g grp[,grp...]] [-u [uid,uid...]]
+          [-p pid[,pid...]] [-t tty[,tty...]] [-U user[,user...]]
        ps [-L]

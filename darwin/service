@@ -1,1 +1,4 @@
-Usage: service --list | <service-name> <command>
+usage: service service command
+       service --list
+       service --test-if-configured-on service
+       service --test-if-available service

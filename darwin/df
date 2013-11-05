@@ -1,2 +1,2 @@
 df: illegal option -- ?
-usage: df [-b | -H | -h | -k | -m | -P] [-ailn] [-T type] [-t] [file | filesystem ...]
+usage: df [-b | -H | -h | -k | -m | -g | -P] [-ailn] [-T type] [-t] [filesystem ...]

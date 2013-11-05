@@ -1,2 +1,0 @@
-su: illegal option -- ?
-usage: su [-] [-flm] [-c class] [login [args]]
