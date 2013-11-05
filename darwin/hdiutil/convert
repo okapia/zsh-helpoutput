@@ -16,6 +16,7 @@ Usage:	hdiutil convert -format <format> -o <outfile> <image>
 	    UDRW - read/write
 	    UDTO - DVD/CD master
 	    UDSP - sparse
+	    UDSB - sparsebundle
 
 	Convert options:
 	    -ov		overwrite target file(s) if it already exists
@@ -27,14 +28,17 @@ Usage:	hdiutil convert -format <format> -o <outfile> <image>
 
 	Common options:
 	    -encryption <crypto method>
+	    	AES-128 - 128-bit AES encryption (recommended)
+	    	AES-256 - 256-bit AES encryption (more secure, but slower)
 	    -stdinpass
+	    -agentpass
 	    -certificate <path-to-cert-file>
 	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
 	    -tgtimagekey <key>=<value>
 	    -shadow <shadowfile>
 	    -insecurehttp
-	    -cacert <file|dir>
-	    -plist			return results in plist format
+	    -cacert <file | dir>
+	    -plist
 	    -puppetstrings
 	    -verbose
 	    -debug

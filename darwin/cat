@@ -1,2 +1,2 @@
 cat: illegal option -- ?
-usage: cat [-benstuv] [-] [file ...]
+usage: cat [-benstuv] [file ...]

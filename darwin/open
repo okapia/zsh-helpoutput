@@ -1,10 +1,17 @@
-Usage: open [-e] [-t] [-f] [-b <bundle identifier>] [-a <appname>] [filenames]
+open: unrecognized option `--help'
+Usage: open [-e] [-t] [-f] [-W] [-R] [-n] [-g] [-h] [-b <bundle identifier>] [-a <application>] [filenames] [--args arguments]
 Help: Open opens files from a shell.
       By default, opens each file using the default application for that file.  
       If the file is in the form of a URL, the file will be opened as a URL.
 Options: 
-      -a  Opens with the specified application.
-      -b  Opens with the specified application bundle identifier.
-      -e  Opens with TextEdit.
-      -t  Opens with default text editor.
-      -f  Reads input from standard input and opens with TextEdit.
+      -a                Opens with the specified application.
+      -b                Opens with the specified application bundle identifier.
+      -e                Opens with TextEdit.
+      -t                Opens with default text editor.
+      -f                Reads input from standard input and opens with TextEdit.
+      -R, --reveal      Selects in the Finder instead of opening.
+      -W, --wait-apps   Blocks until the used applications are closed (even if they were already running).
+          --args        All remaining arguments are passed in argv to the application's main() function instead of opened.
+      -n, --new         Open a new instance of the application even if one is already running.
+      -g, --background  Does not bring the application to the foreground.
+      -h, --header      Searches header file locations for headers matching the given filenames, and opens them.
