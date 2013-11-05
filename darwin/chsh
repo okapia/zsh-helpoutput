@@ -1,0 +1,2 @@
+chsh: illegal option -- ?
+usage: chpass [-l location] [-u authname] [-s shell] [user]

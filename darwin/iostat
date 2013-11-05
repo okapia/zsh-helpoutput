@@ -1,2 +1,2 @@
-usage: iostat [-CdIKoT?] [-c count] [-n devs]
+usage: iostat [-CUdIKoT?] [-c count] [-n devs]
 	      [-w wait] [drives]

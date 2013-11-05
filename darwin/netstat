@@ -1,6 +1,10 @@
 netstat: illegal option -- ?
-usage: netstat [-Aan] [-f address_family] [-M core] [-N system]
-       netstat [-bdghimnrs] [-f address_family] [-M core] [-N system]
-       netstat [-bdn] [-I interface] [-M core] [-N system] [-w wait]
-       netstat -m [-M core] [-N system]
-       netstat [-M core] [-N system] [-p protocol]
+Usage:	netstat [-AaLlnW] [-f address_family | -p protocol]
+	netstat [-gilns] [-f address_family]
+	netstat -i | -I interface [-w wait] [-abdgt]
+	netstat -s [-s] [-f address_family | -p protocol] [-w wait]
+	netstat -i | -I interface -s [-f address_family | -p protocol]
+	netstat -m [-m]
+	netstat -r [-Aaln] [-f address_family]
+	netstat -rs [-s]
+

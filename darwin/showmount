@@ -1,0 +1,2 @@
+showmount: illegal option -- ?
+usage: showmount [-Ae3] [-a|-d] host

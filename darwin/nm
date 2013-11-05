@@ -1,0 +1,2 @@
+nm: invalid argument -h
+Usage: nm [-agnoprumxjlfAP[s segname sectname] [-] [-t format] [[-arch <arch_flag>] ...] [file ...]

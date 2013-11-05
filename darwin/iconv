@@ -1,7 +1,3 @@
-id: illegal option -- ?
-usage: id [user]
-       id -G [-n] [user]
-       id -P [user]
-       id -g [-nr] [user]
-       id -p [user]
-       id -u [-nr] [user]
+Usage: iconv [-c] [-s] [-f fromcode] [-t tocode] [file ...]
+or:    iconv -l
+Try `iconv --help' for more information.

@@ -53,10 +53,13 @@ Usage:	hdiutil makehybrid -o <outfile> <source>
 
 	Common options:
 	    -encryption <crypto method>
+	    	AES-128 - 128-bit AES encryption (recommended)
+	    	AES-256 - 256-bit AES encryption (more secure, but slower)
 	    -stdinpass
+	    -agentpass
 	    -shadow <shadowfile>
 	    -insecurehttp
-	    -cacert <file|dir>
+	    -cacert <file | dir>
 	    -verbose
 	    -debug
 	    -quiet

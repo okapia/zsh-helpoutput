@@ -1,3 +1,4 @@
 xargs: illegal option -- ?
-usage: xargs [-0pt] [-E eofstr] [-I replstr [-R replacements]] [-J replstr]
-             [-L number] [-n number [-x] [-s size] [utility [argument ...]]
+usage: xargs [-0opt] [-E eofstr] [-I replstr [-R replacements]] [-J replstr]
+             [-L number] [-n number [-x]] [-P maxprocs] [-s size]
+             [utility [argument ...]]

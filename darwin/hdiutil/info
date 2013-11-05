@@ -1,7 +1,9 @@
 hdiutil info: display information about attached images
 Usage:	hdiutil info
+	Options:
+	    -s			display framework and driver version only
 	Common options:
-	    -plist			return results in plist format
+	    -plist
 	    -verbose
 	    -debug
 	    -quiet

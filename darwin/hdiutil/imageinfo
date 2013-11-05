@@ -6,11 +6,14 @@ Usage:	hdiutil imageinfo <image>
 
 	Common options:
 	    -encryption <crypto method>
+	    	AES-128 - 128-bit AES encryption (recommended)
+	    	AES-256 - 256-bit AES encryption (more secure, but slower)
 	    -stdinpass
+	    -agentpass
 	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
 	    -shadow <shadowfile>
 	    -insecurehttp
-	    -cacert <file|dir>
-	    -plist			return results in plist format
+	    -cacert <file | dir>
+	    -plist
 	    -verbose
 	    -debug

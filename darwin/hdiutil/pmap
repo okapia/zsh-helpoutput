@@ -1,26 +1,23 @@
-hdiutil pmap: display partition map
-Usage:	hdiutil pmap [-options <optstr>] <image|device>
-	Option string values ["xsSgcvk"]:
-	    r raw		- process all without modification
-	    x extended		- process all entries 2K & 512 and merge
-	    s sectorize		- return all quantities in sectors
-	    S sort		- sort all entries by block number
-	    g generate free	- account for all space
-	    c combine free	- combine adjacent freespace entries
-	    f fix final		- final entry will end at end of device!
-	    v volume synthesize - no map -> single entry
-	    k skip zero-length	- skip zero length entries
-	    K skip void/free	- skip all free & void partitions
-	    m merge free space	- try to merge small free entries into previous
-	    i ignore shims	- ignore small alignment entries (<32 blocks)
+Usage: hdiutil pmap [options] <image|device>
+	pmap options:
+	    -simple       - MediaKit's minimal report
+	    -standard     - MediaKit's standard report including offsets
+	    -complete     - MediaKit's maximum comprehensive report
+
+	    -endoffsets   - show last block of partitions
+	    -nofreespace  - don't show free space
+	    -shims        - show small islands of space < 32 blocks
+	    -uuids        - show uuid of gpt partitions
+
+	    -some         - limit types of partitions shown
+
+	The default behaviour is to produce a standard report
+	listing all partitions with starting offsets.
 
 	Common options:
-	    -encryption <crypto method>
-	    -stdinpass
-	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
 	    -shadow <shadowfile>
 	    -insecurehttp
-	    -cacert <file|dir>
+	    -cacert <file | dir>
 	    -verbose
 	    -debug
 	    -quiet

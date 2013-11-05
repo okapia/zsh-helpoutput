@@ -1,7 +1,11 @@
 hdiutil mountvol: mount a volume
 Usage:	hdiutil mountvol <devname>
+	Options:
+	    -whole		mount all partitions on same disk
+	    -notimeout		no timeout when mounting
+	    -timeout <secs>	mount but timeout after <secs> seconds [default: 30]
 	Common options:
-	    -plist			return results in plist format
+	    -plist
 	    -verbose
 	    -debug
 	    -quiet

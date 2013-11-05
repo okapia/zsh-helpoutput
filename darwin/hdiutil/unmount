@@ -2,6 +2,9 @@ hdiutil unmount: unmount a mounted partition
 Usage:	hdiutil unmount <mountpoint>
 	Options:
 	    -force		force unmount
+	    -whole		unmount all partitions on same disk
+	    -notimeout		no timeout when unmounting
+	    -timeout <secs>	unmount but timeout after <secs> seconds [default: 30]
 
 	Common options:
 	    -verbose
