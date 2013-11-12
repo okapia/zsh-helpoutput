@@ -1,0 +1,47 @@
+pkgutil 2.6.6, install Solaris packages the easy way.
+
+Usage: pkgutil [option]... [package](-[version])...
+
+  -i, --install         Install package
+  -u, --upgrade         Upgrade package
+  -r, --remove          Remove package (experimental)
+  -d, --download        Download only
+  -U, --catalog         Update catalog
+  -a, --available       Show available packages
+      --describe        Describe available packages
+  -c, --compare         Compare installed packages to current
+  -C, --compare-diff    Same as -c but only show different versions
+  -A, --compare-avail   Compare available packages to those installed
+  -e, --email=address   Send e-mail with available updates
+  -t, --temp=site       Temporarily use this site as primary for download
+  -x, --exclude=pattern Pattern to exclude
+  -W, --workdir=path    Path to use for work directory
+  -P, --pkgdir=path     Path to use for package downloads
+  -R, --rootpath=path   Path to use for root_path
+      --config=file     Use this configuration file
+  -y, --yes             Answer yes on all prompts
+  -f, --force           Force updates (sync with mirror)
+  -n, --nomod           No modifications are made to the system
+  -N, --nodeps          No dependencies
+  -D, --debug           Debug mode
+      --trace           Set trace mode (-v) for pkgadd/pkgrm
+  -h, --help            Show this help
+  -v, --version         Show version
+  -V, --syscheck        System check
+  -l, --list            List installed packages
+  -L, --listfile        List files in package
+  -F, --findfile        Find files in package
+      --deptree=depth   Display dependency tree
+      --extract         Extract package content (use with -d)
+  -s, --stream          Build a package stream (use with -d)
+  -o, --output=file     File name for package stream (use with -s)
+  -T, --target=arch:rel Specify architecture and OS release for download
+      --single          Single package check (use with -c)
+  -p, --param=opt:val   Override configuration option
+      --parse           Machine parsable output
+      --cleanup         Clean up obsolete packages
+      --catinfo         Catalog info
+
+Example: pkgutil -i CSWwget (install wget and its dependencies)
+
+Written and maintained by Peter Bonivart. Web site: http://pkgutil.net.
