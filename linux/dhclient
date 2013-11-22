@@ -1,0 +1,18 @@
+Internet Systems Consortium DHCP Client 4.1.1-P1
+Copyright 2004-2010 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Usage: dhclient [-4|-6] [-SNTP1dvrx] [-nw] [-p <port>] [-s server]
+                [-cf config-file] [-lf lease-file][-pf pid-file] [-e VAR=val]
+                [-I <dhcp-client-identifier>] [-B]
+                [-H <host-name> | -F <fqdn.fqdn>] [-timeout <timeout>]
+                [-V <vendor-class-identifier>]
+                [-R <request option list>]
+                [-sf script-file] [interface]
+
+This version of ISC DHCP is based on the release available
+on ftp.isc.org.  Features have been added and other changes
+have been made to the base software release in order to make
+it work better with this distribution.
+
+exiting.
