@@ -1,0 +1,4 @@
+Usage: iostat [ options ] [ <interval> [ <count> ] ]
+Options are:
+[ -c ] [ -d ] [ -N ] [ -n ] [ -h ] [ -k | -m ] [ -t ] [ -V ] [ -x ]
+[ <device> [ ... ] | ALL ] [ -p [ <device> | ALL ] ]

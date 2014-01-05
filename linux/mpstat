@@ -1,0 +1,3 @@
+Usage: mpstat [ options ] [ <interval> [ <count> ] ]
+Options are:
+[ -A ] [ -I { SUM | CPU | ALL } ] [ -u ] [ -P { <cpu> | ALL } ] [ -V ]

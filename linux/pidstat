@@ -1,0 +1,4 @@
+Usage: pidstat [ options ] [ <interval> [ <count> ] ]
+Options are:
+[ -C <command> ] [ -d ] [ -I ] [ -r ] [ -t ] [ -u ] [ -V ] [ -w ]
+[ -p { <pid> | SELF | ALL } ] [ -T { TASK | CHILD | ALL } ]
