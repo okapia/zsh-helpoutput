@@ -1,0 +1,106 @@
+qiv (Quick Image Viewer) v2.2.4
+Usage: qiv [options] files ...
+
+General options:
+    --file, -F x           Read file names from text file x or stdin
+    --bg_color, -o x       Set root background color to x
+    --brightness, -b x     Set brightness to x (-32..32)
+    --browse, -B           Scan directory of file for browsing
+    --center, -e           Disable window centering
+    --contrast, -c x       Set contrast to x (-32..32)
+    --cycle, -C            do not cycle after last image
+    --display x            Open qiv window on display x
+    --do_grab, -a          Grab the pointer in windowed mode
+    --disable_grab, -G     Disable pointer/kbd grab in fullscreen mode
+    --fixed_width, -w x    Window with fixed width x
+    --fixed_zoom, -W x     Window with fixed zoom factor (percentage x)
+    --fullscreen, -f       Use fullscreen window on start-up
+    --gamma, -g x          Set gamma to x (-32..32)
+    --help, -h             This help screen
+    --ignore_path_sort, -P Sort filenames by the name only
+    --readonly, -R         Disable the deletion feature
+    --maxpect, -m          Zoom to screen size and preserve aspect ratio
+    --merged_case_sort, -M Sort filenames with AaBbCc... alpha order
+    --no_filter, -n        Do not filter images by extension
+    --no_statusbar, -i     Disable statusbar
+    --statusbar, -I        Enable statusbar
+    --no_sort, -D          Do not apply any sorting to the list of files
+    --numeric_sort, -N     Sort filenames with numbers intuitively
+    --root, -x             Set centered desktop background and exit
+    --root_t, -y           Set tiled desktop background and exit
+    --root_s, -z           Set stretched desktop background and exit
+    --scale_down, -t       Shrink image(s) larger than the screen to fit
+    --transparency, -p     Enable transparency for transparent images
+    --watch, -T            Reload the image if it has changed on disk
+    --recursivedir, -u     Recursively include all files
+    --select_dir, -A x     Store the selected files in dir x (default is .qiv-select)
+    --autorotate, -l       Autorotate JPEGs according to EXIF rotation tag
+    --rotate, -q x         Rotate 90(x=1),180(x=2),270(x=3) degrees clockwise
+    --xineramascreen, -X x Use screen x as preferred Xinerama screen
+    --version, -v          Print version information and exit
+
+Slideshow options:
+This can also be used for the desktop background (x/y/z)
+    --slide, -s            Start slideshow immediately
+    --random, -r           Random order
+    --shuffle, -S          Shuffled order
+    --delay, -d x          Wait x seconds between images [default=3]
+
+Keys:
+    space/left mouse/wheel down      next picture
+    backspace/right mouse/wheel up   previous picture
+    PgDn                             5 pictures forward
+    PgUp                             5 pictures backward
+    q/ESC/middle mouse               exit
+    
+    0-9                  Run 'qiv-command <key> <current-img>'
+    ^<string><return>    Run 'qiv-command ^<string> <current-img>'
+    ?/F1                 show keys (in fullscreen mode)
+    F11/F12              in/decrease slideshow delay (1 second)
+    a/A                  copy current image to .qiv-select
+    d/D/del              move picture to .qiv-trash
+    u                    undelete the previously trashed image
+    +/=/wheel r/btn fwd  zoom in (10%)
+    -/wheel l/btn back   zoom out (10%)
+    e                    center mode on/off
+    f                    fullscreen mode on/off
+    m                    scale to screen size on/off
+    t                    scale down on/off
+    X                    cycle through xinerama screens
+    s                    slide show on/off
+    p                    transparency on/off
+    r                    random order on/off
+    b                    - brightness
+    B                    + brightness
+    c                    - contrast
+    C                    + contrast
+    g                    - gamma
+    G                    + gamma
+    o                    reset brightness, contrast, gamma
+    h                    flip horizontal
+    v                    flip vertical
+    k                    rotate right
+    l                    rotate left
+    jtx<return>          jump to image number x
+    jfx<return>          jump forward x images
+    jbx<return>          jump backward x images
+    enter/return         reset zoom, rotation and color settings
+    i                    statusbar on/off
+    I                    iconify window
+    w                    watch file on/off
+    x                    center image on background
+    y                    tile image on background
+    z                    stretch image on background
+    <                    turn on/off magnifying window
+    arrow keys                 move image (in fullscreen mode)
+    arrow keys+Shift           move image faster (in fullscreen mode)
+    NumPad-arrow keys+NumLock  move image faster (in fullscreen mode)
+
+Valid image extensions:
+Use --no_filter/-n to disable
+    .jpg .jpeg .jpe .gif .tif .tiff .xpm .png
+    .pjpeg .ppm .pnm .pgm .pbm .pcx .bmp .eim
+    .ico .wmf .svg
+
+Homepage: http://qiv.spiegl.de/
+Please mail bug reports and comments to Andy Spiegl <qiv.andy@spiegl.de>
