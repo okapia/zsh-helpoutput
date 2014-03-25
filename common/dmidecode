@@ -6,4 +6,6 @@ Options are:
  -s, --string KEYWORD   Only display the value of the given DMI string
  -t, --type TYPE        Only display the entries of given type
  -u, --dump             Do not decode the entries
+     --dump-bin FILE    Dump the DMI data to a binary file
+     --from-dump FILE   Read the DMI data from a binary file
  -V, --version          Display the version and exit
