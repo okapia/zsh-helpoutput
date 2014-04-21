@@ -1,4 +1,4 @@
-attach-session (attach) [-dr] [-t target-session]
+attach-session (attach) [-dr] [-c working-directory] [-t target-session]
 bind-key (bind) [-cnr] [-t key-table] key command [arguments]
 break-pane (breakp) [-dP] [-F format] [-t target-pane]
 capture-pane (capturep) [-aCeJpPq] [-b buffer-index] [-E end-line] [-S start-line][-t target-pane]
@@ -41,7 +41,7 @@ lock-server (lock)
 lock-session (locks) [-t target-session]
 move-pane (movep) [-bdhv] [-p percentage|-l size] [-s src-pane] [-t dst-pane]
 move-window (movew) [-dkr] [-s src-window] [-t dst-window]
-new-session (new) [-AdDP] [-F format] [-n window-name] [-s session-name] [-t target-session] [-x width] [-y height] [command]
+new-session (new) [-AdDP] [-c start-directory] [-F format] [-n window-name] [-s session-name] [-t target-session] [-x width] [-y height] [command]
 new-window (neww) [-adkP] [-c start-directory] [-F format] [-n window-name] [-t target-window] [command]
 next-layout (nextl) [-t target-window]
 next-window (next) [-a] [-t target-session]
@@ -49,7 +49,7 @@ paste-buffer (pasteb) [-dpr] [-s separator] [-b buffer-index] [-t target-pane]
 pipe-pane (pipep) [-o] [-t target-pane] [command]
 previous-layout (prevl) [-t target-window]
 previous-window (prev) [-a] [-t target-session]
-refresh-client (refresh) [-S] [-C size][-t target-client]
+refresh-client (refresh) [-S] [-C size] [-t target-client]
 rename-session (rename) [-t target-session] new-name
 rename-window (renamew) [-t target-window] new-name
 resize-pane (resizep) [-DLRUZ] [-x width] [-y height] [-t target-pane] [adjustment]
@@ -70,7 +70,7 @@ set-option (set) [-agosquw] [-t target-session|target-window] option [value]
 set-window-option (setw) [-agoqu] [-t target-window] option [value]
 show-buffer (showb) [-b buffer-index]
 show-environment (showenv) [-g] [-t target-session] [name]
-show-messages (showmsgs) [-t target-client]
+show-messages (showmsgs) [-IJT] [-t target-client]
 show-options (show) [-gqsvw] [-t target-session|target-window] [option]
 show-window-options (showw) [-gv] [-t target-window] [option]
 source-file (source) path
@@ -82,4 +82,4 @@ swap-window (swapw) [-d] [-s src-window] [-t dst-window]
 switch-client (switchc) [-lnpr] [-c target-client] [-t target-session]
 unbind-key (unbind) [-acn] [-t key-table] key
 unlink-window (unlinkw) [-k] [-t target-window]
-wait-for (wait) [-LSU] channel
+wait-for (wait) [-L|-S|-U] channel
