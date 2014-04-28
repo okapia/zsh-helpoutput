@@ -10,13 +10,7 @@ Usage:
 
 Options:
  -e | --encryption <type> enable data encryption with specified <name/num>
- -H | --phash <type>      hash password using specified algorithm (sha512/sha256/sha384/rmd160/none)
  -h | --help              this help
- -k | --keybits <num>     specify number of bits in the hashed key given
-                          to the cipher.  Some ciphers support several key
-                          sizes and might be more efficient with a smaller
-                          key size.  Key sizes < 128 are generally not
-                          recommended
  -o | --offset <num>      start at offset <num> into file
       --sizelimit <num>   loop limited to only <num> bytes of the file
  -p | --pass-fd <num>     read passphrase from file descriptor <num>
