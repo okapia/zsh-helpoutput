@@ -1,6 +1,6 @@
-gpg (GnuPG) 2.0.14
-libgcrypt 1.4.5
-Copyright (C) 2009 Free Software Foundation, Inc.
+gpg (GnuPG) 2.0.22
+libgcrypt 1.5.3
+Copyright (C) 2013 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -8,14 +8,14 @@ There is NO WARRANTY, to the extent permitted by law.
 Home: ~/.gnupg
 Supported algorithms:
 Pubkey: RSA, ELG, DSA
-Cipher: 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH, CAMELLIA128, 
-        CAMELLIA192, CAMELLIA256
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
 Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
 Compression: Uncompressed, ZIP, ZLIB, BZIP2
 
 Syntax: gpg [options] [files]
-sign, check, encrypt or decrypt
-default operation depends on the input data
+Sign, check, encrypt or decrypt
+Default operation depends on the input data
 
 Commands:
  
@@ -32,12 +32,13 @@ Commands:
      --fingerprint          list keys and fingerprints
  -K, --list-secret-keys     list secret keys
      --gen-key              generate a new key pair
+     --gen-revoke           generate a revocation certificate
      --delete-keys          remove keys from the public keyring
      --delete-secret-keys   remove keys from the secret keyring
      --sign-key             sign a key
      --lsign-key            sign a key locally
      --edit-key             sign or edit a key
-     --gen-revoke           generate a revocation certificate
+     --passwd               change a passphrase
      --export               export keys
      --send-keys            export keys to a key server
      --recv-keys            import keys from a key server
