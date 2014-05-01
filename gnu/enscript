@@ -9,20 +9,20 @@ Mandatory arguments to long options are mandatory for short options too.
   -b, --header=HEADER        set page header
   -B, --no-header            no page headers
   -c, --truncate-lines       cut long lines (default is to wrap)
-  -C, --line-numbers[=START]
+  -C[START], --line-numbers[=START]
                              precede each line with its line number
   -d                         an alias for option --printer
   -D, --setpagedevice=KEY[:VALUE]
                              pass a page device definition to output
-  -e, --escapes[=CHAR]       enable special escape interpretation
-  -E, --highlight[=LANG]     highlight source code
+  -e[CHAR], --escapes[=CHAR]       enable special escape interpretation
+  -E[LANG], --highlight[=LANG]     highlight source code
   -f, --font=NAME            use font NAME for body text
   -F, --header-font=NAME     use font NAME for header texts
   -g, --print-anyway         nothing (compatibility option)
   -G                         same as --fancy-header
       --fancy-header[=NAME]  select fancy page header
   -h, --no-job-header        suppress the job header page
-  -H, --highlight-bars=NUM   specify how high highlight bars are
+  -H[NUM], --highlight-bars[=NUM]  specify how high highlight bars are
   -i, --indent=NUM           set line indent to NUM characters
   -I, --filter=CMD           read input files through input filter CMD
   -j, --borders              print borders around columns
@@ -52,12 +52,12 @@ Mandatory arguments to long options are mandatory for short options too.
   -t, --title=TITLE          set banner page's job title to TITLE.  Option
                              sets also the name of the input file stdin.
   -T, --tabsize=NUM          set tabulator size to NUM
-  -u, --underlay[=TEXT]      print TEXT under every page
+  -u[TEXT], --underlay[=TEXT]      print TEXT under every page
   -U, --nup=NUM              print NUM logical pages on each output page
   -v, --verbose              tell what we are doing
   -V, --version              print version number
   -w, --language=LANG        set output language to LANG
-  -W, --options=APP,OPTION   pass option OPTION to helper application APP
+  -W, --option=APP,OPTION   pass option OPTION to helper application APP
   -X, --encoding=NAME        use input encoding NAME
   -z, --no-formfeed          do not interpret form feed characters
   -Z, --pass-through         pass through PostScript and PCL files
@@ -74,7 +74,7 @@ Long-only options:
   --help                     print this help and exit
   --help-highlight           describe all supported --highlight languages
                              and file formats
-  --highlight-bar-gray=NUM   print highlight bars with gray NUM (0 - 1)
+  --highlight-bar-gray=NUM   print highlight bars with grey NUM (0 - 1)
   --list-media               list names of all known media
   --margins=LEFT:RIGHT:TOP:BOTTOM
                              adjust page marginals
