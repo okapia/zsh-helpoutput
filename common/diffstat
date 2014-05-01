@@ -5,13 +5,16 @@ producing a histogram of total lines changed for each file referenced.
 If no filename is given on the command line, reads from standard input.
 
 Options:
+  -b      ignore lines matching "Binary files XXX and YYY differ"
   -c      prefix each line with comment (#)
+  -C      add SGR color escape sequences to highlight the histogram
   -d      debug - prints a lot of information
   -D PATH specify location of patched files, use for unchanged-count
   -e FILE redirect standard error to FILE
   -f NUM  format (0=concise, 1=normal, 2=filled, 4=values)
   -h      print this message
   -k      do not merge filenames
+  -K      resolve ambiguity of "only" filenames
   -l      list filenames only
   -m      merge insert/delete data in chunks as modified-lines
   -n NUM  specify minimum width for the filenames (default: auto)
@@ -20,6 +23,8 @@ Options:
   -p NUM  specify number of pathname-separators to strip (default: common)
   -q      suppress the "0 files changed" message for empty diffs
   -r NUM  specify rounding for histogram (0=none, 1=simple, 2=adjusted)
+  -R      assume patch was created with old and new files swapped
+  -s      show only the summary line
   -S PATH specify location of original files, use for unchanged-count
   -t      print a table (comma-separated-values) rather than histogram
   -u      do not sort the input list
