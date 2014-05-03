@@ -23,6 +23,7 @@ Options are:
   -center           toggle center alignment in HTML TABLE (off)
   -cfg=FILENAME     specifies a lynx.cfg file other than the default
   -child            exit on left-arrow in startfile, and disable save to disk
+  -child_relaxed    exit on left-arrow in startfile (allows save to disk)
   -cmd_log=FILENAME log keystroke commands to the given file
   -cmd_script=FILENAME
                     read keystroke commands from the given file
@@ -68,6 +69,7 @@ Options are:
                     hidden links: options are merge, listonly, or ignore
   -historical       toggles use of '>' or '-->' as terminator for comments (off)
   -homepage=URL     set homepage separate from start page
+  -html5_charsets   toggles use of HTML5 charset replacements (off)
   -image_links      toggles inclusion of links for all images (off)
   -index=URL        set the default index file to URL
   -ismap            toggles inclusion of ISMAP links when client-side
@@ -78,7 +80,7 @@ Options are:
   -localhost        disable URLs that point to remote hosts (off)
   -lss=FILENAME     specifies a lynx.lss file other than the default
   -mime_header      include mime headers and force source dump
-  -minimal          toggles minimal versus valid comment parsing (off)
+  -minimal          toggles minimal versus valid comment parsing (on)
   -newschunksize=NUMBER
                     number of articles in chunked news listings
   -newsmaxchunk=NUMBER
@@ -90,7 +92,9 @@ Options are:
   -nofilereferer    disable transmission of Referer headers for file URLs (on)
   -nolist           disable the link list feature in dumps (off)
   -nolog            disable mailing of error messages to document owners (on)
-  -nomargins        disable the right/left margins in the default style-sheet (off)
+  -nomargins        disable the right/left margins in the default
+                    style-sheet (off)
+  -nomore           disable -more- string in statusline messages
   -nonrestarting_sigwinch 
                     make window size change handler non-restarting (off)
   -nonumbers        disable the link/form numbering feature in dumps (off)
@@ -108,6 +112,7 @@ Options are:
   -partial_thres    [=NUMBER]
                     number of lines to render before repainting display
                     with partial-display logic (-1)
+  -passive-ftp      toggles passive ftp connection (on)
   -pauth=id:pw      authentication information for protected proxy server
   -popup            toggles handling of single-choice SELECT options via
                     popup windows or as lists of radio buttons (off)
@@ -122,6 +127,7 @@ Options are:
   -raw              toggles default setting of 8-bit character translations
                     or CJK mode for the startup character set (off)
   -realm            restricts access to URLs in the starting realm (off)
+  -read_timeout=N   set the N-second read-timeout (18000)
   -reload           flushes the cache on a proxy server
                     (only the first document affected) (off)
   -restrictions=[options]
@@ -133,37 +139,50 @@ Options are:
   -scrollbar        toggles showing scrollbar (off)
   -scrollbar_arrow  toggles showing arrows at ends of the scrollbar (on)
   -selective        require .www_browsable files to browse directories
+  -session=FILENAME resumes from specified file on startup and
+                    saves session to that file on exit
+  -sessionin=FILENAME
+                    resumes session from specified file
+  -sessionout=FILENAME
+                    saves session to specified file
   -short_url        enables examination of beginning and end of long URL in
                     status line (off)
+  -show_cfg         Show `LYNX.CFG' setting (off)
   -show_cursor      toggles hiding of the cursor in the lower right corner (on)
   -show_rate        toggles display of transfer rate (on)
-  -soft_dquotes     toggles emulation of the old Netscape and Mosaic bug which
-                    treated '>' as a co-terminator for double-quotes and tags (off)
+  -soft_dquotes     toggles emulation of the old Netscape and Mosaic
+                    bug which treated '>' as a co-terminator for
+                    double-quotes and tags (off)
   -source           dump the source of the first file to stdout and exit
   -stack_dump       disable SIGINT cleanup handler (off)
   -startfile_ok     allow non-http startfile and homepage with -validate (off)
-  -stderr           write warning messages to standard error when -dump -or -source is used (off)
+  -stderr           write warning messages to standard error when -dump
+                    or -source is used (off)
   -stdin            read startfile from standard input (off)
   -tagsoup          use TagSoup rather than SortaSGML parser (off)
   -telnet           disable telnets (off)
   -term=TERM        set terminal type to TERM
-  -tlog             toggles use of a Lynx Trace Log for the current session (on)
+  -tlog             toggles use of a Lynx Trace Log for the current
+                    session (on)
   -tna              turn on "Textfields Need Activation" mode (off)
   -trace            turns on Lynx trace mode (off)
   -trace_mask       customize Lynx trace mode (0)
   -traversal        traverse all http links derived from startfile
-  -trim_input_fields trim input text/textarea fields in forms (off)
+  -trim_input_fields 
+                    trim input text/textarea fields in forms (off)
   -underline_links  toggles use of underline/bold attribute for links (off)
   -underscore       toggles use of _underline_ format in dumps (off)
+  -unique_urls      toggles use of unique-urls setting for -dump and -listonly options (off)
   -use_mouse        turn on mouse support (off)
   -useragent=Name   set alternate Lynx User-Agent header
   -validate         accept only http URLs (meant for validation)
                     implies more restrictions than -anonymous, but
                     goto is allowed for http and https (off)
-  -verbose          toggles [LINK], [IMAGE] and [INLINE] comments 
+  -verbose          toggles [LINK], [IMAGE] and [INLINE] comments
                     with filenames of these images (on)
   -version          print Lynx version information
   -vikeys           enable vi-like key movement (off)
   -width=NUMBER     screen width for formatting of dumps (default is 80)
   -with_backspaces  emit backspaces in output if -dumping or -crawling
                     (like 'man' does) (off)
+  -xhtml-parsing    enable XHTML 1.0 parsing (off)
