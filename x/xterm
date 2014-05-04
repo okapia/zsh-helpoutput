@@ -1,4 +1,5 @@
-X.Org 6.8.99.903(253) usage:
+xterm: ambiguous option "-hold" vs "-hm"
+X.Org 7.6.0(295) usage:
     xterm [-options ...] [-e command args]
 
 where options include:
@@ -37,6 +38,7 @@ where options include:
     -fi fontname                 icon font for active icon
     -fn fontname                 normal text font
     -fs size                     FreeType font-size
+    -/+fullscreen                turn on/off fullscreen on startup
     -fw fontname                 doublewidth text font
     -fwb fontname                doublewidth bold text font
     -fx fontname                 XIM fontset
