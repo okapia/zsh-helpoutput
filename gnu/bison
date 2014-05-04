@@ -1,5 +1,7 @@
 Usage: bison [OPTION]... FILE
-Generate LALR(1) and GLR parsers.
+Generate a deterministic LR or generalized LR (GLR) parser employing
+LALR(1), IELR(1), or canonical LR(1) parser tables.  IELR(1) and
+canonical LR(1) support is experimental.
 
 Mandatory arguments to long options are mandatory for short options too.
 The same is true for optional arguments.
@@ -10,17 +12,20 @@ Operation modes:
       --print-localedir      output directory containing locale-dependent data
       --print-datadir        output directory containing skeletons and XSLT
   -y, --yacc                 emulate POSIX Yacc
-  -W, --warnings=[CATEGORY]  report the warnings falling in CATEGORY
+  -W, --warnings[=CATEGORY]  report the warnings falling in CATEGORY
+  -f, --feature[=FEATURE]    activate miscellaneous features
 
 Parser:
-  -L, --language=LANGUAGE    specify the output programming language
-                             (this is an experimental feature)
-  -S, --skeleton=FILE        specify the skeleton to use
-  -t, --debug                instrument the parser for debugging
-      --locations            enable locations computation
-  -p, --name-prefix=PREFIX   prepend PREFIX to the external symbols
-  -l, --no-lines             don't generate `#line' directives
-  -k, --token-table          include a table of token names
+  -L, --language=LANGUAGE          specify the output programming language
+  -S, --skeleton=FILE              specify the skeleton to use
+  -t, --debug                      instrument the parser for debugging
+      --locations                  enable location support
+  -D, --define=NAME[=VALUE]        similar to '%define NAME "VALUE"'
+  -F, --force-define=NAME[=VALUE]  override '%define NAME "VALUE"'
+  -p, --name-prefix=PREFIX         prepend PREFIX to the external symbols
+                                   deprecated by '-Dapi.prefix=PREFIX'
+  -l, --no-lines                   don't generate '#line' directives
+  -k, --token-table                include a table of token names
 
 Output:
       --defines[=FILE]       also produce a header file
@@ -36,7 +41,11 @@ Output:
 
 Warning categories include:
   `midrule-values'  unset or unused midrule values
-  `yacc'            incompatibilities with POSIX YACC
+  `yacc'            incompatibilities with POSIX Yacc
+  `conflicts-sr'    S/R conflicts (enabled by default)
+  `conflicts-rr'    R/R conflicts (enabled by default)
+  `deprecated'      obsolete constructs
+  `other'           all other warnings (enabled by default)
   `all'             all the warnings
   `no-CATEGORY'     turn off warnings in CATEGORY
   `none'            turn off all the warnings
@@ -50,3 +59,12 @@ THINGS is a list of comma separated words that can include:
   `all'          include all the above information
   `none'         disable the report
 
+FEATURE is a list of comma separated words that can include:
+  `caret'        show errors with carets
+  `all'          all of the above
+  `none'         disable all of the above
+  
+GNU Bison home page: <http://www.gnu.org/software/bison/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
+Report translation bugs to <http://translationproject.org/team/>.
+For complete documentation, run: info bison.
