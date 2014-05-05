@@ -1,17 +1,17 @@
-ethtool version 6
+ethtool version 3.5
 Usage:
-ethtool DEVNAME	Display standard information about device
+        ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
-		[ speed 10|100|1000|2500|10000 ]
+		[ speed %d ]
 		[ duplex half|full ]
 		[ port tp|aui|bnc|mii|fibre ]
 		[ autoneg on|off ]
-		[ advertise %%x ]
-		[ phyad %%d ]
+		[ advertise %x ]
+		[ phyad %d ]
 		[ xcvr internal|external ]
 		[ wol p|u|m|b|a|g|s|d... ]
-		[ sopass %%x:%%x:%%x:%%x:%%x:%%x ]
-		[ msglvl %%d ] 
+		[ sopass %x:%x:%x:%x:%x:%x ]
+		[ msglvl %d | msglvl type on|off ... ]
         ethtool -a|--show-pause DEVNAME	Show pause options
         ethtool -A|--pause DEVNAME	Set pause options
 		[ autoneg on|off ]
@@ -47,15 +47,9 @@ ethtool DEVNAME	Display standard information about device
 		[ rx-mini N ]
 		[ rx-jumbo N ]
 		[ tx N ]
-        ethtool -k|--show-offload DEVNAME	Get protocol offload information
-        ethtool -K|--offload DEVNAME	Set protocol offload
-		[ rx on|off ]
-		[ tx on|off ]
-		[ sg on|off ]
-		[ tso on|off ]
-		[ ufo on|off ]
-		[ gso on|off ]
-               [ lro on|off ]
+        ethtool -k|--show-features|--show-offload DEVNAME	Get state of protocol offload and other features
+        ethtool -K|--features|--offload DEVNAME	Set protocol offload and other features
+		FEATURE on|off ...
         ethtool -i|--driver DEVNAME	Show driver information
         ethtool -d|--register-dump DEVNAME	Do a register dump
 		[ raw on|off ]
@@ -67,15 +61,66 @@ ethtool DEVNAME	Display standard information about device
         ethtool -E|--change-eeprom DEVNAME	Change bytes in device EEPROM
 		[ magic N ]
 		[ offset N ]
+		[ length N ]
 		[ value N ]
-        ethtool -r|--negotiate DEVNAME	Restart N-WAY negotation
+        ethtool -r|--negotiate DEVNAME	Restart N-WAY negotiation
         ethtool -p|--identify DEVNAME	Show visible port identification (e.g. blinking)
                [ TIME-IN-SECONDS ]
         ethtool -t|--test DEVNAME	Execute adapter self test
-               [ online | offline ]
+               [ online | offline | external_lb ]
         ethtool -S|--statistics DEVNAME	Show adapter statistics
-        ethtool -n|--show-nfc DEVNAME	Show Rx network flow classificationoptions
-		[ rx-flow-hash tcp4|udp4|ah4|sctp4|tcp6|udp6|ah6|sctp6 ]
-        ethtool -N|--config-nfc DEVNAME	Configure Rx network flow classification options
-		[ rx-flow-hash tcp4|udp4|ah4|sctp4|tcp6|udp6|ah6|sctp6 p|m|v|t|s|d|f|n|r... ]
-        ethtool -h|--help DEVNAME	Show this help
+        ethtool -n|-u|--show-nfc|--show-ntuple DEVNAME	Show Rx network flow classification options or rules
+		[ rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 |
+		  rule %d ]
+        ethtool -N|-U|--config-nfc|--config-ntuple DEVNAME	Configure Rx network flow classification options or rules
+		rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 m|v|t|s|d|f|n|r... |
+		flow-type ether|ip4|tcp4|udp4|sctp4|ah4|esp4
+			[ src %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
+			[ dst %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
+			[ proto %d [m %x] ]
+			[ src-ip %d.%d.%d.%d [m %d.%d.%d.%d] ]
+			[ dst-ip %d.%d.%d.%d [m %d.%d.%d.%d] ]
+			[ tos %d [m %x] ]
+			[ l4proto %d [m %x] ]
+			[ src-port %d [m %x] ]
+			[ dst-port %d [m %x] ]
+			[ spi %d [m %x] ]
+			[ vlan-etype %x [m %x] ]
+			[ vlan %x [m %x] ]
+			[ user-def %x [m %x] ]
+			[ action %d ]
+			[ loc %d]] |
+		delete %d
+        ethtool -T|--show-time-stamping DEVNAME	Show time stamping capabilities
+        ethtool -x|--show-rxfh-indir DEVNAME	Show Rx flow hash indirection
+        ethtool -X|--set-rxfh-indir DEVNAME	Set Rx flow hash indirection
+		equal N | weight W0 W1 ...
+        ethtool -f|--flash DEVNAME	Flash firmware image from the specified file to a region on the device
+               FILENAME [ REGION-NUMBER-TO-FLASH ]
+        ethtool -P|--show-permaddr DEVNAME	Show permanent hardware address
+        ethtool -w|--get-dump DEVNAME	Get dump flag, data
+		[ data FILENAME ]
+        ethtool -W|--set-dump DEVNAME	Set dump flag of the device
+		N
+        ethtool -l|--show-channels DEVNAME	Query Channels
+        ethtool -L|--set-channels DEVNAME	Set Channels
+               [ rx N ]
+               [ tx N ]
+               [ other N ]
+               [ combined N ]
+        ethtool --show-priv-flags DEVNAME	Query private flags
+        ethtool --set-priv-flags DEVNAME	Set private flags
+		FLAG on|off ...
+        ethtool -m|--dump-module-eeprom DEVNAME	Qeuery/Decode Module EEPROM information
+		[ raw on|off ]
+		[ hex on|off ]
+		[ offset N ]
+		[ length N ]
+        ethtool --show-eee DEVNAME	Show EEE settings
+        ethtool --set-eee DEVNAME	Set EEE settings
+		[ eee on|off ]
+		[ advertise %x ]
+		[ tx-lpi on|off ]
+		[ tx-timer %d ]
+        ethtool -h|--help 		Show this help
+        ethtool --version 		Show version number
