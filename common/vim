@@ -1,4 +1,4 @@
-VIM - Vi IMproved 7.1 (2007 May 12, compiled Oct 18 2008 22:34:39)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled May  4 2014 20:15:24)
 
 usage: vim [arguments] [file ..]       edit specified file(s)
    or: vim [arguments] -               read text from stdin
@@ -9,6 +9,7 @@ Arguments:
    --			Only file names after this
    -v			Vi mode (like "vi")
    -e			Ex mode (like "ex")
+   -E			Improved Ex mode
    -s			Silent (batch) mode (only for "ex")
    -d			Diff mode (like "vimdiff")
    -y			Easy mode (like "evim", modeless)
@@ -31,7 +32,7 @@ Arguments:
    -F			Start in Farsi mode
    -T <terminal>	Set terminal type to <terminal>
    -u <vimrc>		Use <vimrc> instead of any .vimrc
-   --noplugin		Don't load plugin scripts
+   --noplugin		Do not load plugin scripts
    -p[N]		Open N tab pages (default: one for each file)
    -o[N]		Open N windows (default: one for each file)
    -O[N]		Like -o but split vertically
@@ -44,6 +45,7 @@ Arguments:
    -w <scriptout>	Append all typed commands to file <scriptout>
    -W <scriptout>	Write all typed commands to file <scriptout>
    -x			Edit encrypted files
+   --startuptime <file>	Write startup timing messages to <file>
    -i <viminfo>		Use <viminfo> instead of .viminfo
    -h  or  --help	Print Help (this message) and exit
    --version		Print version information and exit
