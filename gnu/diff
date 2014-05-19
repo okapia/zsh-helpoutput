@@ -23,9 +23,10 @@ Mandatory arguments to long options are mandatory for short options too.
   -T, --initial-tab             make tabs line up by prepending a tab
       --tabsize=NUM             tab stops every NUM (default 8) print columns
       --suppress-blank-empty    suppress space or tab before empty output lines
-  -l, --paginate                pass output through `pr' to paginate it
+  -l, --paginate                pass output through 'pr' to paginate it
 
   -r, --recursive                 recursively compare any subdirectories found
+      --no-dereference            don't follow symbolic links
   -N, --new-file                  treat absent files as empty
       --unidirectional-new-file   treat absent first files as empty
       --ignore-file-name-case     ignore case when comparing file names
@@ -43,19 +44,19 @@ Mandatory arguments to long options are mandatory for short options too.
   -Z, --ignore-trailing-space     ignore white space at line end
   -b, --ignore-space-change       ignore changes in the amount of white space
   -w, --ignore-all-space          ignore all white space
-  -B, --ignore-blank-lines        ignore changes whose lines are all blank
-  -I, --ignore-matching-lines=RE  ignore changes whose lines all match RE
+  -B, --ignore-blank-lines        ignore changes where lines are all blank
+  -I, --ignore-matching-lines=RE  ignore changes where all lines match RE
 
   -a, --text                      treat all files as text
       --strip-trailing-cr         strip trailing carriage return on input
 
-  -D, --ifdef=NAME                output merged file with `#ifdef NAME' diffs
+  -D, --ifdef=NAME                output merged file with '#ifdef NAME' diffs
       --GTYPE-group-format=GFMT   format GTYPE input groups with GFMT
       --line-format=LFMT          format all input lines with LFMT
       --LTYPE-line-format=LFMT    format LTYPE input lines with LFMT
     These format options provide fine-grained control over the output
       of diff, generalizing -D/--ifdef.
-    LTYPE is `old', `new', or `unchanged'.  GTYPE is LTYPE or `changed'.
+    LTYPE is 'old', 'new', or 'unchanged'.  GTYPE is LTYPE or 'changed'.
     GFMT (only) may contain:
       %<  lines from FILE1
       %>  lines from FILE2
@@ -85,9 +86,9 @@ Mandatory arguments to long options are mandatory for short options too.
       --help               display this help and exit
   -v, --version            output version information and exit
 
-FILES are `FILE1 FILE2' or `DIR1 DIR2' or `DIR FILE...' or `FILE... DIR'.
+FILES are 'FILE1 FILE2' or 'DIR1 DIR2' or 'DIR FILE...' or 'FILE... DIR'.
 If --from-file or --to-file is given, there are no restrictions on FILE(s).
-If a FILE is `-', read standard input.
+If a FILE is '-', read standard input.
 Exit status is 0 if inputs are the same, 1 if different, 2 if trouble.
 
 GNU diffutils home page: <http://www.gnu.org/software/diffutils/>
