@@ -1,7 +1,8 @@
 Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
-       ip [ -force ] [-batch filename
+       ip [ -force ] -batch filename
 where  OBJECT := { link | addr | addrlabel | route | rule | neigh | ntable |
-                   tunnel | maddr | mroute | monitor | xfrm }
+                   tunnel | maddr | mroute | mrule | monitor | xfrm | token }
        OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
                     -f[amily] { inet | inet6 | ipx | dnet | link } |
-                    -o[neline] | -t[imestamp] }
+                    -o[neline] | -t[imestamp] | -b[atch] [filename] |
+                    -rc[vbuf] [size]}
