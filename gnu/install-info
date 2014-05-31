@@ -1,8 +1,14 @@
 Usage: install-info [OPTION]... [INFO-FILE [DIR-FILE]]
 
 Add or remove entries in INFO-FILE from the Info directory DIR-FILE.
+INFO-FILE and DIR-FILE are required unless the --info-file
+or --dir-file (or --info-dir) options are given, respectively.
 
 Options:
+ --add-once          add only to first matching section, not all.
+ --align=COL         start description of new entries at column COL.
+ --calign=COL        format second and subsequent description lines to
+                       start at column COL.
  --debug             report what is being done.
  --delete            delete existing entries for INFO-FILE from DIR-FILE;
                       don't insert any new entries.
@@ -12,22 +18,20 @@ Options:
  --dir-file=NAME     specify file name of Info directory file;
                       equivalent to using the DIR-FILE argument.
  --dry-run           same as --test.
- --entry=TEXT        insert TEXT as an Info directory entry.
+ --entry=TEXT        insert TEXT as an Info directory entry,
+                      overriding any corresponding entry from DIR-FILE.
                       TEXT is written as an Info menu item line followed
                        by zero or more extra lines starting with whitespace.
                       If you specify more than one entry, all are added.
                       If you don't specify any entries, they are determined
                        from information in the Info file itself.
-                      When removing, TEXT specifies the entry to remove.
-                      TEXT is only removed as a last resort, if the
-                      entry as determined from the Info file is not present,
-                      and the basename of the Info file isn't found either.
  --help              display this help and exit.
  --info-dir=DIR      same as --dir-file=DIR/dir.
  --info-file=FILE    specify Info file to install in the directory;
                       equivalent to using the INFO-FILE argument.
  --item=TEXT         same as --entry=TEXT.
  --keep-old          do not replace entries, or remove empty sections.
+ --maxwidth, --max-width=COL  wrap description at column COL.
  --menuentry=TEXT    same as --name=TEXT.
  --name=TEXT         the name of the entry is TEXT; used with --description
                       to become synonymous with the --entry option.
