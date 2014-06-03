@@ -1,4 +1,4 @@
-GNU TLS debug client
+GnuTLS debug client
 Usage: gnutls-cli-debug [options] hostname
 
 

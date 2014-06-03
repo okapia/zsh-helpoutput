@@ -1,4 +1,4 @@
-GNU TLS test client
+GnuTLS test client
 Usage:  gnutls-cli [options] hostname
 
 
@@ -7,6 +7,7 @@ Usage:  gnutls-cli [options] hostname
                               again and resume this session.
      -e, --rehandshake        Connect, establish a session and 
                               rehandshake immediately.
+     --noticket               Doen't accept session tickets.
      -s, --starttls           Connect, establish a plain session and 
                               start TLS when EOF or a SIGALRM is 
                               received.
@@ -30,15 +31,17 @@ Usage:  gnutls-cli [options] hostname
                               Certificate types to enable.
      --priority PRIORITY STRING  
                               Priorities string.
-     --x509cafile FILE        Certificate file to use.
+     --x509cafile FILE        Certificate file or PKCS #11 URL to 
+                              use.
      --x509crlfile FILE       CRL file to use.
      --pgpkeyfile FILE        PGP Key file to use.
      --pgpkeyring FILE        PGP Key ring file to use.
      --pgpcertfile FILE       PGP Public Key (certificate) file to 
                               use.
      --pgpsubkey HEX|auto     PGP subkey to use.
-     --x509keyfile FILE       X.509 key file to use.
-     --x509certfile FILE      X.509 Certificate file to use.
+     --x509keyfile FILE       X.509 key file or PKCS #11 URL to use.
+     --x509certfile FILE      X.509 Certificate file or PKCS #11 URL 
+                              to use.
      --srpusername NAME       SRP username to use.
      --srppasswd PASSWD       SRP password to use.
      --pskusername NAME       PSK username to use.
