@@ -20,6 +20,7 @@ Usage: certtool [options]
      --get-dh-params          Get the included PKCS #3 encoded 
                               Diffie-Hellman parameters.
      --load-privkey FILE      Private key file to use.
+     --load-pubkey FILE       Public key file to use.
      --load-request FILE      Certificate request file to use.
      --load-certificate FILE  
                               Certificate file to use.
@@ -30,6 +31,7 @@ Usage: certtool [options]
                               file to use.
      --password PASSWORD      Password to use.
      -i, --certificate-info   Print information on a certificate.
+     --certificate-pubkey     Print certificate public key.
      --pgp-certificate-info   Print information on a OpenPGP 
                               certificate.
      --pgp-ring-info          Print information on a keyring 
@@ -37,6 +39,8 @@ Usage: certtool [options]
      -l, --crl-info           Print information on a CRL.
      --crq-info               Print information on a Certificate 
                               Request.
+     --no-crq-extensions      Do not use extensions in certificate 
+                              requests.
      --p12-info               Print information on a PKCS #12 
                               structure.
      --p7-info                Print information on a PKCS #7 
@@ -45,6 +49,7 @@ Usage: certtool [options]
      -k, --key-info           Print information on a private key.
      --pgp-key-info           Print information on a OpenPGP private 
                               key.
+     --pubkey-info            Print information on a public key.
      --fix-key                Regenerate the parameters in a private 
                               key.
      --v1                     Generate an X.509 version 1 certificate 
@@ -66,6 +71,8 @@ Usage: certtool [options]
                               certificates and private keys.
      --bits BITS              specify the number of bits for key 
                               generation.
+     --sec-param PARAM        specify the security level 
+                              [low|normal|high|ultra].
      --disable-quick-random   Use /dev/random for key generationg, 
                               thus increasing the quality of 
                               randomness used.
@@ -73,6 +80,9 @@ Usage: certtool [options]
      --infile FILE            Input file.
      --template FILE          Template file to use for non 
                               interactive operation.
+     --pkcs-cipher CIPHER     Cipher to use for pkcs operations 
+                              (3des,3des-pkcs12,aes-128,aes-192,aes-25
+                              6,rc2-40,arcfour).
      -d, --debug LEVEL        specify the debug level. Default is 1.
      -h, --help               shows this help text
      -v, --version            shows the program's version
