@@ -15,10 +15,10 @@ Usage: certtool [options]
                               The last certificate in the chain must 
                               be a self signed one.
      --verify-crl             Verify a CRL.
-     --generate-dh-params     Generate PKCS #3 encoded Diffie Hellman 
+     --generate-dh-params     Generate PKCS #3 encoded Diffie-Hellman 
                               parameters.
-     --get-dh-params          Get the included PKCS #3 encoded Diffie 
-                              Hellman parameters.
+     --get-dh-params          Get the included PKCS #3 encoded 
+                              Diffie-Hellman parameters.
      --load-privkey FILE      Private key file to use.
      --load-request FILE      Certificate request file to use.
      --load-certificate FILE  
@@ -35,6 +35,8 @@ Usage: certtool [options]
      --pgp-ring-info          Print information on a keyring 
                               structure.
      -l, --crl-info           Print information on a CRL.
+     --crq-info               Print information on a Certificate 
+                              Request.
      --p12-info               Print information on a PKCS #12 
                               structure.
      --p7-info                Print information on a PKCS #7 
