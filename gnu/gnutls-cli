@@ -1,57 +1,77 @@
-GnuTLS test client
-Usage:  gnutls-cli [options] hostname
+gnutls-cli - GnuTLS client
+Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
 
+   -d, --debug=num            Enable debugging.
+				- it must be in the range:
+				  0 to 9999
+   -V, --verbose              More verbose output
+				- may appear multiple times
+       --tofu                 Enable trust on first use authentication
+				- disabled as '--no-tofu'
+       --dane                 Enable DANE certificate verification (DNSSEC)
+				- disabled as '--no-dane'
+       --local-dns            Use the local DNS server for DNSSEC resolving.
+				- disabled as '--no-local-dns'
+       --ca-verification      Disable CA certificate verification
+				- disabled as '--no-ca-verification'
+				- enabled by default
+       --ocsp                 Enable OCSP certificate verification
+				- disabled as '--no-ocsp'
+   -r, --resume               Establish a session and resume
+   -b, --heartbeat            Activate heartbeat support
+   -e, --rehandshake          Establish a session and rehandshake
+       --noticket             Don't accept session tickets
+   -s, --starttls             Connect, establish a plain session and start TLS.
+   -u, --udp                  Use DTLS (datagram TLS) over UDP
+       --mtu=num              Set MTU for datagram TLS
+				- it must be in the range:
+				  0 to 17000
+       --srtp-profiles=str    Offer SRTP profiles
+       --crlf                 Send CR LF instead of LF
+       --x509fmtder           Use DER format for certificates to read from
+   -f, --fingerprint          Send the openpgp fingerprint, instead of the key
+       --disable-extensions   Disable all the TLS extensions
+       --print-cert           Print peer's certificate in PEM format
+       --recordsize=num       The maximum record size to advertize
+				- it must be in the range:
+				  0 to 4096
+       --dh-bits=num          The minimum number of bits allowed for DH
+       --priority=str         Priorities string
+       --x509cafile=str       Certificate file or PKCS #11 URL to use
+       --x509crlfile=file     CRL file to use
+				- file must pre-exist
+       --pgpkeyfile=file      PGP Key file to use
+				- file must pre-exist
+       --pgpkeyring=file      PGP Key ring file to use
+				- file must pre-exist
+       --pgpcertfile=file     PGP Public Key (certificate) file to use
+				- file must pre-exist
+       --x509keyfile=str      X.509 key file or PKCS #11 URL to use
+       --x509certfile=str     X.509 Certificate file or PKCS #11 URL to use
+       --pgpsubkey=str        PGP subkey to use (hex or auto)
+       --srpusername=str      SRP username to use
+       --srppasswd=str        SRP password to use
+       --pskusername=str      PSK username to use
+       --pskkey=str           PSK key (in hex) to use
+   -p, --port=str             The port or service to connect to
+       --insecure             Don't abort program if server certificate can't be validated
+       --ranges               Use length-hiding padding to prevent traffic analysis
+       --benchmark-ciphers    Benchmark individual ciphers
+       --benchmark-soft-ciphers  Benchmark individual software ciphers (no hw acceleration)
+       --benchmark-tls-kx     Benchmark TLS key exchange methods
+   -!, --benchmark-tls-ciphers  Benchmark TLS ciphers
+   -l, --list                 Print a list of the supported algorithms and modes
+   -", --disable-sni          Do not send a Server Name Indication (SNI)
+   -v, --version[=arg]        output version information and exit
+   -h, --help                 display extended usage information and exit
+   -!, --more-help            extended usage information passed thru pager
 
-     -d, --debug integer      Enable debugging
-     -r, --resume             Connect, establish a session. Connect 
-                              again and resume this session.
-     -e, --rehandshake        Connect, establish a session and 
-                              rehandshake immediately.
-     --noticket               Doen't accept session tickets.
-     -s, --starttls           Connect, establish a plain session and 
-                              start TLS when EOF or a SIGALRM is 
-                              received.
-     --crlf                   Send CR LF instead of LF.
-     --x509fmtder             Use DER format for certificates to read 
-                              from.
-     -f, --fingerprint        Send the openpgp fingerprint, instead 
-                              of the key.
-     --disable-extensions     Disable all the TLS extensions.
-     --print-cert             Print the certificate in PEM format.
-     --recordsize integer     The maximum record size to advertize.
-     -V, --verbose            More verbose output.
-     --ciphers cipher1 cipher2...  
-                              Ciphers to enable.
-     --protocols protocol1 protocol2...  
-                              Protocols to enable.
-     --comp comp1 comp2...    Compression methods to enable.
-     --macs mac1 mac2...      MACs to enable.
-     --kx kx1 kx2...          Key exchange methods to enable.
-     --ctypes certType1 certType2...  
-                              Certificate types to enable.
-     --priority PRIORITY STRING  
-                              Priorities string.
-     --x509cafile FILE        Certificate file or PKCS #11 URL to 
-                              use.
-     --x509crlfile FILE       CRL file to use.
-     --pgpkeyfile FILE        PGP Key file to use.
-     --pgpkeyring FILE        PGP Key ring file to use.
-     --pgpcertfile FILE       PGP Public Key (certificate) file to 
-                              use.
-     --pgpsubkey HEX|auto     PGP subkey to use.
-     --x509keyfile FILE       X.509 key file or PKCS #11 URL to use.
-     --x509certfile FILE      X.509 Certificate file or PKCS #11 URL 
-                              to use.
-     --srpusername NAME       SRP username to use.
-     --srppasswd PASSWD       SRP password to use.
-     --pskusername NAME       PSK username to use.
-     --pskkey KEY             PSK key (in hex) to use.
-     --opaque-prf-input DATA  
-                              Use Opaque PRF Input DATA.
-     -p, --port PORT          The port to connect to.
-     --insecure               Don't abort program if server 
-                              certificate can't be validated.
-     -l, --list               Print a list of the supported 
-                              algorithms and modes.
-     -h, --help               prints this help
-     -v, --version            prints the program's version number
+Options are specified by doubled hyphens and their name or by a single
+hyphen and the flag character.
+Operands and options may be intermixed.  They will be reordered.
+
+Simple client program to set up a TLS connection to some other computer.  It
+sets up a TLS connection and forwards data from the standard input to the
+secured socket and vice versa.
+
+Please send bug reports to:  <bugs@gnutls.org>
