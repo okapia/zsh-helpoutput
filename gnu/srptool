@@ -1,0 +1,29 @@
+srptool - GnuTLS SRP tool
+Usage:  srptool [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
+
+   -d, --debug=num            Enable debugging.
+				- it must be in the range:
+				  0 to 9999
+   -i, --index=num            specify the index of the group parameters in tpasswd.conf to use.
+   -u, --username=str         specify a username
+   -p, --passwd=str           specify a password file.
+   -s, --salt=num             specify salt size.
+       --verify               just verify the password.
+   -v, --passwd-conf=str      specify a password conf file.
+       --create-conf=str      Generate a password configuration file.
+   -v, --version[=arg]        output version information and exit
+   -h, --help                 display extended usage information and exit
+   -!, --more-help            extended usage information passed thru pager
+
+Options are specified by doubled hyphens and their name or by a single
+hyphen and the flag character.
+
+Simple program that emulates the programs in the Stanford SRP (Secure
+Remote Password) libraries using GnuTLS.  It is intended for use in places
+where you don't expect SRP authentication to be the used for system users.
+
+In brief, to use SRP you need to create two files.  These are the password
+file that holds the users and the verifiers associated with them and the
+configuration file to hold the group parameters (called tpasswd.conf).
+
+Please send bug reports to:  <bugs@gnutls.org>
