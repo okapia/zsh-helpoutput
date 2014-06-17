@@ -2,3 +2,7 @@ pack: usage: svnadmin pack REPOS_PATH
 
 Possibly compact the repository into a more efficient storage model.
 This may not apply to all repositories, in which case, exit.
+
+Valid options:
+  -q [--quiet]             : no progress (only errors) to stderr
+

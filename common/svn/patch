@@ -1,0 +1,71 @@
+patch: Apply a patch to a working copy.
+usage: patch PATCHFILE [WCPATH]
+
+  Apply a unidiff patch in PATCHFILE to the working copy WCPATH.
+  If WCPATH is omitted, '.' is assumed.
+
+  A unidiff patch suitable for application to a working copy can be
+  produced with the 'svn diff' command or third-party diffing tools.
+  Any non-unidiff content of PATCHFILE is ignored.
+
+  Changes listed in the patch will either be applied or rejected.
+  If a change does not match at its exact line offset, it may be applied
+  earlier or later in the file if a match is found elsewhere for the
+  surrounding lines of context provided by the patch.
+  A change may also be applied with fuzz, which means that one
+  or more lines of context are ignored when matching the change.
+  If no matching context can be found for a change, the change conflicts
+  and will be written to a reject file with the extension .svnpatch.rej.
+
+  For each patched file a line will be printed with characters reporting
+  the action taken. These characters have the following meaning:
+
+    A  Added
+    D  Deleted
+    U  Updated
+    C  Conflict
+    G  Merged (with local uncommitted changes)
+
+  Changes applied with an offset or fuzz are reported on lines starting
+  with the '>' symbol. You should review such changes carefully.
+
+  If the patch removes all content from a file, that file is scheduled
+  for deletion. If the patch creates a new file, that file is scheduled
+  for addition. Use 'svn revert' to undo deletions and additions you
+  do not agree with.
+
+  Hint: If the patch file was created with Subversion, it will contain
+        the number of a revision N the patch will cleanly apply to
+        (look for lines like "--- foo/bar.txt        (revision N)").
+        To avoid rejects, first update to the revision N using 
+        'svn update -r N', apply the patch, and then update back to the
+        HEAD revision. This way, conflicts can be resolved interactively.
+
+Valid options:
+  -q [--quiet]             : print nothing, or only summary information
+  --dry-run                : try operation but make no changes
+  --strip ARG              : number of leading path components to strip from
+                             paths parsed from the patch file. --strip 0
+                             is the default and leaves paths unmodified.
+                             --strip 1 would change the path
+                             'doc/fudge/crunchy.html' to 'fudge/crunchy.html'.
+                             --strip 2 would leave just 'crunchy.html'
+                             The expected component separator is '/' on all
+                             platforms. A leading '/' counts as one component.
+  --reverse-diff           : apply the unidiff in reverse
+  --ignore-whitespace      : ignore whitespace during pattern matching
+
+Global options:
+  --username ARG           : specify a username ARG
+  --password ARG           : specify a password ARG
+  --no-auth-cache          : do not cache authentication tokens
+  --non-interactive        : do no interactive prompting
+  --trust-server-cert      : accept SSL server certificates from unknown
+                             certificate authorities without prompting (but only
+                             with '--non-interactive')
+  --config-dir ARG         : read user configuration files from directory ARG
+  --config-option ARG      : set user configuration option in the format:
+                                 FILE:SECTION:OPTION=[VALUE]
+                             For example:
+                                 servers:global:http-library=serf
+

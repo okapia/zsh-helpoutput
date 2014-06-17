@@ -1,0 +1,38 @@
+relocate: Relocate the working copy to point to a different repository root URL.
+usage: 1. relocate FROM-PREFIX TO-PREFIX [PATH...]
+       2. relocate TO-URL [PATH]
+
+  Rewrite working copy URL metadata to reflect a syntactic change only.
+  This is used when a repository's root URL changes (such as a scheme
+  or hostname change) but your working copy still reflects the same
+  directory within the same repository.
+
+  1. FROM-PREFIX and TO-PREFIX are initial substrings of the working
+     copy's current and new URLs, respectively.  (You may specify the
+     complete old and new URLs if you wish.)  Use 'svn info' to determine
+     the current working copy URL.
+
+  2. TO-URL is the (complete) new repository URL to use for PATH.
+
+  Examples:
+    svn relocate http:// svn:// project1 project2
+    svn relocate http://www.example.com/repo/project \
+                 svn://svn.example.com/repo/project
+
+Valid options:
+  --ignore-externals       : ignore externals definitions
+
+Global options:
+  --username ARG           : specify a username ARG
+  --password ARG           : specify a password ARG
+  --no-auth-cache          : do not cache authentication tokens
+  --non-interactive        : do no interactive prompting
+  --trust-server-cert      : accept SSL server certificates from unknown
+                             certificate authorities without prompting (but only
+                             with '--non-interactive')
+  --config-dir ARG         : read user configuration files from directory ARG
+  --config-option ARG      : set user configuration option in the format:
+                                 FILE:SECTION:OPTION=[VALUE]
+                             For example:
+                                 servers:global:http-library=serf
+
