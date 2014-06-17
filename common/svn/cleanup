@@ -1,6 +1,6 @@
 cleanup: Recursively clean up the working copy, removing locks, resuming
 unfinished operations, etc.
-usage: cleanup [PATH...]
+usage: cleanup [WCPATH...]
 
 Valid options:
   --diff3-cmd ARG          : use ARG as merge command
@@ -10,12 +10,12 @@ Global options:
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --trust-server-cert      : accept unknown SSL server certificates without
-                             prompting (but only with '--non-interactive')
+  --trust-server-cert      : accept SSL server certificates from unknown
+                             certificate authorities without prompting (but only
+                             with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]
                              For example:
                                  servers:global:http-library=serf
-
 

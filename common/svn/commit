@@ -10,7 +10,7 @@ Valid options:
   -q [--quiet]             : print nothing, or only summary information
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
-                            'immediates', or 'infinity')
+                             'immediates', or 'infinity')
   --targets ARG            : pass contents of file ARG as additional args
   --no-unlock              : don't unlock the targets
   -m [--message] ARG       : specify log message ARG
@@ -20,8 +20,7 @@ Valid options:
   --encoding ARG           : treat value as being in charset encoding ARG
   --with-revprop ARG       : set revision property ARG in new revision
                              using the name[=value] format
-  --changelist ARG         : operate only on members of changelist ARG
-                             [aliases: --cl]
+  --changelist [--cl] ARG  : operate only on members of changelist ARG
   --keep-changelists       : don't delete changelists after commit
 
 Global options:
@@ -29,12 +28,12 @@ Global options:
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --trust-server-cert      : accept unknown SSL server certificates without
-                             prompting (but only with '--non-interactive')
+  --trust-server-cert      : accept SSL server certificates from unknown
+                             certificate authorities without prompting (but only
+                             with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]
                              For example:
                                  servers:global:http-library=serf
-
 

@@ -37,8 +37,9 @@ Valid options:
   --new ARG                : use ARG as the newer target
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
-                            'immediates', or 'infinity')
+                             'immediates', or 'infinity')
   --diff-cmd ARG           : use ARG as diff command
+  --internal-diff          : override diff-cmd specified in config file
   -x [--extensions] ARG    : Default: '-u'. When Subversion is invoking an
                              external diff program, ARG is simply passed along
                              to the program. But when Subversion is using its
@@ -56,24 +57,25 @@ Valid options:
                                 -p (--show-c-function):
                                    Show C function name in diff output.
   --no-diff-deleted        : do not print differences for deleted files
+  --show-copies-as-adds    : don't diff copied or moved files with their source
   --notice-ancestry        : notice ancestry when calculating differences
   --summarize              : show a summary of the results
-  --changelist ARG         : operate only on members of changelist ARG
-                             [aliases: --cl]
+  --changelist [--cl] ARG  : operate only on members of changelist ARG
   --force                  : force operation to run
   --xml                    : output in XML
+  --git                    : use git's extended diff format
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --trust-server-cert      : accept unknown SSL server certificates without
-                             prompting (but only with '--non-interactive')
+  --trust-server-cert      : accept SSL server certificates from unknown
+                             certificate authorities without prompting (but only
+                             with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]
                              For example:
                                  servers:global:http-library=serf
-
 

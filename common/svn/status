@@ -54,10 +54,16 @@ usage: status [PATH...]
       ' ' the working copy is up to date
 
   Remaining fields are variable width and delimited by spaces:
-    The working revision (with -u or -v)
+    The working revision (with -u or -v; '-' if the item is copied)
     The last committed revision and last committed author (with -v)
     The working copy path is always the final field, so it can
       include spaces.
+
+  The presence of a question mark ('?') where a working revision, last
+  committed revision, or last committed author was expected indicates
+  that the information is unknown or irrelevant given the state of the
+  item (for example, when the item is the result of a copy operation).
+  The question mark serves as a visual placeholder to facilitate parsing.
 
   Example output:
     svn status wc
@@ -67,13 +73,13 @@ usage: status [PATH...]
     svn status -u wc
      M           965    wc/bar.c
            *     965    wc/foo.c
-    A  +         965    wc/qax.c
+    A  +           -    wc/qax.c
     Status against revision:   981
 
     svn status --show-updates --verbose wc
      M           965       938 kfogel       wc/bar.c
            *     965       922 sussman      wc/foo.c
-    A  +         965       687 joe          wc/qax.c
+    A  +           -       687 joe          wc/qax.c
                  965       687 joe          wc/zig.c
     Status against revision:   981
 
@@ -88,26 +94,25 @@ Valid options:
   -v [--verbose]           : print extra information
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
-                            'immediates', or 'infinity')
-  -q [--quiet]             : print nothing, or only summary information
+                             'immediates', or 'infinity')
+  -q [--quiet]             : don't print unversioned items
   --no-ignore              : disregard default and svn:ignore property ignores
   --incremental            : give output suitable for concatenation
   --xml                    : output in XML
   --ignore-externals       : ignore externals definitions
-  --changelist ARG         : operate only on members of changelist ARG
-                             [aliases: --cl]
+  --changelist [--cl] ARG  : operate only on members of changelist ARG
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --trust-server-cert      : accept unknown SSL server certificates without
-                             prompting (but only with '--non-interactive')
+  --trust-server-cert      : accept SSL server certificates from unknown
+                             certificate authorities without prompting (but only
+                             with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]
                              For example:
                                  servers:global:http-library=serf
-
 
