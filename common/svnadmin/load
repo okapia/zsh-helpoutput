@@ -12,4 +12,8 @@ Valid options:
   --use-pre-commit-hook    : call pre-commit hook before committing revisions
   --use-post-commit-hook   : call post-commit hook after committing revisions
   --parent-dir ARG         : load at specified directory in repository
+  --bypass-prop-validation : bypass property validation logic
+  -M [--memory-cache-size] ARG : size of the extra in-memory cache in MB used to
+                             minimize redundant operations. Default: 16.
+                             [used for FSFS repositories only]
 

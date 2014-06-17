@@ -13,7 +13,7 @@ Valid options:
   -q [--quiet]             : print nothing, or only summary information
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
-                            'immediates', or 'infinity')
+                             'immediates', or 'infinity')
   --auto-props             : enable automatic properties
   --force                  : force operation to run
   --no-auto-props          : disable automatic properties
@@ -31,12 +31,12 @@ Global options:
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting
-  --trust-server-cert      : accept unknown SSL server certificates without
-                             prompting (but only with '--non-interactive')
+  --trust-server-cert      : accept SSL server certificates from unknown
+                             certificate authorities without prompting (but only
+                             with '--non-interactive')
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]
                              For example:
                                  servers:global:http-library=serf
-
 

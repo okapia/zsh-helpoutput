@@ -1,17 +1,10 @@
-resolve: Resolve conflicts on working copy files or directories.
-usage: resolve --accept=ARG [PATH...]
+upgrade: Upgrade the metadata storage format for a working copy.
+usage: upgrade [WCPATH...]
 
-  Note:  the --accept option is currently required.
+  Local modifications are preserved.
 
 Valid options:
-  --targets ARG            : pass contents of file ARG as additional args
-  -R [--recursive]         : descend recursively, same as --depth=infinity
-  --depth ARG              : limit operation by depth ARG ('empty', 'files',
-                             'immediates', or 'infinity')
   -q [--quiet]             : print nothing, or only summary information
-  --accept ARG             : specify automatic conflict resolution source
-                             ('base', 'working', 'mine-conflict',
-                             'theirs-conflict', 'mine-full', 'theirs-full')
 
 Global options:
   --username ARG           : specify a username ARG
