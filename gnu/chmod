@@ -2,18 +2,21 @@ Usage: chmod [OPTION]... MODE[,MODE]... FILE...
   or:  chmod [OPTION]... OCTAL-MODE FILE...
   or:  chmod [OPTION]... --reference=RFILE FILE...
 Change the mode of each FILE to MODE.
+With --reference, change the mode of each FILE to that of RFILE.
 
-  -c, --changes           like verbose but report only when a change is made
-      --no-preserve-root  do not treat `/' specially (the default)
-      --preserve-root     fail to operate recursively on `/'
-  -f, --silent, --quiet   suppress most error messages
-  -v, --verbose           output a diagnostic for every file processed
-      --reference=RFILE   use RFILE's mode instead of MODE values
-  -R, --recursive         change files and directories recursively
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's mode instead of MODE values
+  -R, --recursive        change files and directories recursively
       --help     display this help and exit
       --version  output version information and exit
 
-Each MODE is one or more of the letters ugoa, one of the symbols +-= and
-one or more of the letters rwxXstugo.
+Each MODE is of the form '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
 
-Report bugs to <bug-coreutils@gnu.org>.
+Report chmod bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+For complete documentation, run: info coreutils 'chmod invocation'
