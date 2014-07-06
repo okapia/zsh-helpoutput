@@ -1,0 +1,12 @@
+print this help
+erb [switches] [inputfile]
+  -x               print ruby script
+  -n               print ruby script with line number
+  -v               enable verbose mode
+  -d               set $DEBUG to true
+  -r library       load a library
+  -S safe_level    set $SAFE (0..3)
+  -E ex[:in]       set default external/internal encodings
+  -U               set default encoding to UTF-8.
+  -T trim_mode     specify trim_mode (0..2, -)
+  -P               ignore lines which start with "%"
