@@ -16,17 +16,18 @@ Usage: perl [switches] [--] [programfile] [arguments]
   -[mM][-]module    execute "use/no module..." before executing program
   -n                assume "while (<>) { ... }" loop around program
   -p                assume loop like -n but print line also, like sed
-  -P                run program through C preprocessor before compilation
   -s                enable rudimentary parsing for switches after programfile
   -S                look for programfile using PATH environment variable
   -t                enable tainting warnings
   -T                enable tainting checks
   -u                dump core after parsing program
   -U                allow unsafe operations
-  -v                print version, subversion (includes VERY IMPORTANT perl info)
+  -v                print version, patchlevel and license
   -V[:variable]     print configuration summary (or a single Config.pm variable)
-  -w                enable many useful warnings (RECOMMENDED)
+  -w                enable many useful warnings
   -W                enable all warnings
-  -x[directory]     strip off text before #!perl line and perhaps cd to directory
+  -x[directory]     ignore text before #!perl line (optionally cd to directory)
   -X                disable all warnings
   
+Run 'perldoc perl' for more help with Perl.
+
