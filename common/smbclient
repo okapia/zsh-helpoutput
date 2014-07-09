@@ -7,8 +7,6 @@ Usage: smbclient service <password>
                                             of stdout
   -L, --list=HOST                           Get a list of shares available on
                                             a host
-  -t, --terminal=CODE                       Terminal I/O code
-                                            {sjis|euc|jis7|jis8|junet|hex}
   -m, --max-protocol=LEVEL                  Set the max protocol level
   -T, --tar=<c|x>IXFqgbNan                  Command line tar
   -D, --directory=DIR                       Start from directory
@@ -28,6 +26,8 @@ Common samba options:
   -s, --configfile=CONFIGFILE               Use alternate configuration file
   -l, --log-basename=LOGFILEBASE            Base name for log files
   -V, --version                             Print version
+  --option=name=value                       Set smb.conf option from command
+                                            line
 
 Connection options:
   -O, --socket-options=SOCKETOPTIONS        socket options to use
@@ -45,3 +45,5 @@ Authentication options:
   -P, --machine-pass                        Use stored machine account password
   -e, --encrypt                             Encrypt SMB transport (UNIX
                                             extended servers only)
+  -C, --use-ccache                          Use the winbind ccache for
+                                            authentication
