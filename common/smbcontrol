@@ -10,11 +10,13 @@ Common samba options:
   -s, --configfile=CONFIGFILE        Use alternate configuration file
   -l, --log-basename=LOGFILEBASE     Base name for log files
   -V, --version                      Print version
+  --option=name=value                Set smb.conf option from command line
 
 <destination> is one of "nmbd", "smbd", "winbindd" or a process ID
 
 <message-type> is one of:
 	debug                         Set debuglevel
+	idmap                         Manipulate idmap cache
 	force-election                Force a browse election
 	ping                          Elicit a response
 	profile                       
@@ -24,6 +26,7 @@ Common samba options:
 	debuglevel                    Display current debuglevels
 	printnotify                   Send a print notify message
 	close-share                   Forcibly disconnect a share
+	ip-dropped                    Tell winbind that an IP got dropped
 	lockretry                     Force a blocking lock retry
 	brl-revalidate                Revalidate all brl entries
 	samsync                       Initiate SAM synchronisation
