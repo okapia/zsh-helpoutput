@@ -1,0 +1,23 @@
+Distributed Shell / Dancer's shell version 0.25.9 
+Copyright 2001-2005 Junichi Uekawa, 
+distributed under the terms and conditions of GPL version 2
+
+-v --verbose                   Verbose output
+-q --quiet                     Quiet
+-M --show-machine-names        Prepend the host name on output
+-H --hide-machine-names        Do not prepend host name on output
+-i --duplicate-input           Duplicate input given to dsh
+-b --bufsize                   Change buffer size used in input duplication
+-m --machine [machinename]     Execute on machine
+-n --num-topology              How to divide the machines
+-a --all                       Execute on all machines
+-g --group [groupname]         Execute on group member
+-f --file [file]               Use the file as list of machines
+-r --remoteshell [shellname]   Execute using shell (rsh/ssh)
+-o --remoteshellopt [option]   Option to give to shell 
+-h --help                      Give out this message
+-w --wait-shell                Sequentially execute shell
+-c --concurrent-shell          Execute shell concurrently
+-F --forklimit [fork limit]    Concurrent with limit on number
+-V --version                   Give out version information
+
