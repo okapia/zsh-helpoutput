@@ -16,10 +16,11 @@ Tag creation options
     -F, --file <file>     read message from file
     -s, --sign            annotated and GPG-signed tag
     --cleanup <mode>      how to strip spaces and #comments from message
-    -u, --local-user <key id>
+    -u, --local-user <key-id>
                           use another key to sign the tag
     -f, --force           replace the tag if exists
     --column[=<style>]    show tag list in columns
+    --sort <type>         sort tags
 
 Tag listing options
     --contains <commit>   print only tags that contain the commit

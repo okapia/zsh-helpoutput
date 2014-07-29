@@ -1,8 +1,9 @@
 usage: git replace [-f] <object> <replacement>
    or: git replace -d <object>...
-   or: git replace -l [<pattern>]
+   or: git replace [--format=<format>] [-l [<pattern>]]
 
-    -l                    list replace refs
-    -d                    delete replace refs
-    -f                    replace the ref if it exists
+    -l, --list            list replace refs
+    -d, --delete          delete replace refs
+    -f, --force           replace the ref if it exists
+    --format <format>     use this format
 

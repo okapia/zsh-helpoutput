@@ -31,4 +31,5 @@ usage: git am [options] [(<mbox>|<Maildir>)...]
                           lie about committer date
     --ignore-date         use current timestamp for author date
     --rerere-autoupdate   update the index with reused conflict resolution if possible
+    -S, --gpg-sign[=...]  GPG-sign commits
 

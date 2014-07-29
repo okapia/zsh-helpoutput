@@ -10,6 +10,8 @@ usage: git push [<options>] [<repository> [<refspec>...]]
     -n, --dry-run         dry run
     --porcelain           machine-readable output
     -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
     --recurse-submodules[=<check>]
                           control recursive pushing of submodules
     --thin                use thin pack

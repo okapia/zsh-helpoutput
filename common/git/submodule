@@ -2,7 +2,7 @@ usage: git submodule [--quiet] add [-b <branch>] [-f|--force] [--name <name>] [-
    or: git submodule [--quiet] status [--cached] [--recursive] [--] [<path>...]
    or: git submodule [--quiet] init [--] [<path>...]
    or: git submodule [--quiet] deinit [-f|--force] [--] <path>...
-   or: git submodule [--quiet] update [--init] [--remote] [-N|--no-fetch] [-f|--force] [--rebase] [--reference <repository>] [--merge] [--recursive] [--] [<path>...]
+   or: git submodule [--quiet] update [--init] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--reference <repository>] [--recursive] [--] [<path>...]
    or: git submodule [--quiet] summary [--cached|--files] [--summary-limit <n>] [commit] [--] [<path>...]
    or: git submodule [--quiet] foreach [--recursive] <command>
    or: git submodule [--quiet] sync [--recursive] [--] [<path>...]

@@ -13,4 +13,6 @@ usage: git revert [options] <commit-ish>
                           merge strategy
     -X, --strategy-option <option>
                           option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
 

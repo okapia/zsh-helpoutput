@@ -14,7 +14,7 @@ usage: git show-branch [-a|--all] [-r|--remotes] [--topo-order | --date-order] [
     --topo-order          show commits in topological order
     --topics              show only commits not on the first branch
     --sparse              show merges reachable from only one tip
-    --date-order          show commits where no parent comes before its children
+    --date-order          topologically sort, maintaining date order where possible
     -g, --reflog[=<n>[,<base>]]
                           show <n> most recent ref-log entries starting at base
 

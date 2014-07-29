@@ -5,6 +5,7 @@ usage: git check-ignore [options] pathname...
     -v, --verbose         be verbose
 
     --stdin               read file names from stdin
-    -z                    input paths are terminated by a null character
+    -z                    terminate input and output records by a NUL character
     -n, --non-matching    show non-matching input paths
+    --no-index            ignore index when checking
 

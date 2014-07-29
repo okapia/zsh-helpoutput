@@ -13,6 +13,8 @@ usage: git cherry-pick [options] <commit-ish>...
                           merge strategy
     -X, --strategy-option <option>
                           option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
     -x                    append commit name
     --ff                  allow fast-forward
     --allow-empty         preserve initially empty commits
