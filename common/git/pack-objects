@@ -32,4 +32,6 @@ usage: git pack-objects --stdout [options...] [< ref-list | < object-list]
     --honor-pack-keep     ignore packs that have companion .keep file
     --compression <n>     pack compression level
     --keep-true-parents   do not hide commits by grafts
+    --use-bitmap-index    use a bitmap index if available to speed up counting objects
+    --write-bitmap-index  write a bitmap index together with the pack index
 

@@ -1,4 +1,6 @@
-usage: git name-rev [options] ( --all | --stdin | <commit>... )
+usage: git name-rev [options] <commit>...
+   or: git name-rev [options] --all
+   or: git name-rev [options] --stdin
 
     --name-only           print only names (no SHA-1)
     --tags                only use tags to name the commits
@@ -6,6 +8,6 @@ usage: git name-rev [options] ( --all | --stdin | <commit>... )
 
     --all                 list all commits reachable from all refs
     --stdin               read from stdin
-    --undefined           allow to print `undefined` names
+    --undefined           allow to print `undefined` names (default)
     --always              show abbreviated commit object as fallback
 

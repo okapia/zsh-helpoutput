@@ -10,6 +10,7 @@ usage: git grep [options] [-e] <pattern> [<rev>...] [[--] <path>...]
     -w, --word-regexp     match patterns only at word boundaries
     -a, --text            process binary files as text
     -I                    don't match patterns in binary files
+    --textconv            process binary files with textconv filters
     --max-depth <depth>   descend at most <depth> levels
 
     -E, --extended-regexp

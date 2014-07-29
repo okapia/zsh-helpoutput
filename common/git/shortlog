@@ -1,6 +1,4 @@
-usage: git shortlog [-n] [-s] [-e] [-w] [rev-opts] [--] [<commit-id>... ]
-
-    [rev-opts] are documented in git-rev-list(1)
+usage: git shortlog [<options>] [<revision range>] [[--] [<path>...]]
 
     -n, --numbered        sort output according to the number of commits per author
     -s, --summary         Suppress commit descriptions, only provides commit count

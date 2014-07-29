@@ -21,4 +21,5 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     --progress            force progress reporting
     --depth <depth>       deepen history of shallow clone
     --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
 

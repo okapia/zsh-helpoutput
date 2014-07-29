@@ -11,6 +11,7 @@ Action
     --get                 get value: name [value-regex]
     --get-all             get all values: key [value-regex]
     --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
     --replace-all         replace all matching variables: name value [value_regex]
     --add                 add a new variable: name value
     --unset               remove a variable: name [value-regex]
