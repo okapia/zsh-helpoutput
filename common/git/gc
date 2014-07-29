@@ -1,7 +1,8 @@
 usage: git gc [options]
 
-    -q, --quiet           be quiet
+    -q, --quiet           suppress progress reporting
     --prune[=<date>]      prune unreferenced objects
     --aggressive          be more thorough (increased runtime)
     --auto                enable auto-gc mode
+    --force               force running gc even if there may be another gc running
 

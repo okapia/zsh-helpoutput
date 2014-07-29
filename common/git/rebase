@@ -5,6 +5,8 @@ usage: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] [<upstream>] 
 Available options are
     -v, --verbose         display a diffstat of what changed upstream
     -q, --quiet           be quiet. implies --no-stat
+    --autostash           automatically stash/stash pop before and after
+    --fork-point          use 'merge-base --fork-point' to refine upstream
     --onto ...            rebase onto given branch instead of upstream
     -p, --preserve-merges
                           try to recreate merges instead of ignoring them
@@ -29,6 +31,7 @@ Available options are
     --whitespace ...      passed to 'git apply'
     --ignore-whitespace   passed to 'git apply'
     -C ...                passed to 'git apply'
+    -S, --gpg-sign[=...]  GPG-sign commits
 
 Actions:
     --continue            continue

@@ -2,9 +2,11 @@ usage: git merge-base [-a|--all] <commit> <commit>...
    or: git merge-base [-a|--all] --octopus <commit>...
    or: git merge-base --independent <commit>...
    or: git merge-base --is-ancestor <commit> <commit>
+   or: git merge-base --fork-point <ref> [<commit>]
 
     -a, --all             output all common ancestors
     --octopus             find ancestors for a single n-way merge
     --independent         list revs not reachable from others
     --is-ancestor         is the first one ancestor of the other?
+    --fork-point          find where <commit> forked from reflog of <ref>
 
