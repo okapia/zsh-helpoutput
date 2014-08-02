@@ -18,7 +18,8 @@ Operation modes:
 Parser:
   -L, --language=LANGUAGE          specify the output programming language
   -S, --skeleton=FILE              specify the skeleton to use
-  -t, --debug                      instrument the parser for debugging
+  -t, --debug                      instrument the parser for tracing
+                                   same as '-Dparse.trace'
       --locations                  enable location support
   -D, --define=NAME[=VALUE]        similar to '%define NAME "VALUE"'
   -F, --force-define=NAME[=VALUE]  override '%define NAME "VALUE"'
@@ -32,7 +33,7 @@ Output:
   -d                         likewise but cannot specify FILE (for POSIX Yacc)
   -r, --report=THINGS        also produce details on the automaton
       --report-file=FILE     write report to FILE
-  -v, --verbose              same as `--report=state'
+  -v, --verbose              same as '--report=state'
   -b, --file-prefix=PREFIX   specify a PREFIX for output files
   -o, --output=FILE          leave output to FILE
   -g, --graph[=FILE]         also output a graph of the automaton
@@ -40,29 +41,31 @@ Output:
                              (the XML schema is experimental)
 
 Warning categories include:
-  `midrule-values'  unset or unused midrule values
-  `yacc'            incompatibilities with POSIX Yacc
-  `conflicts-sr'    S/R conflicts (enabled by default)
-  `conflicts-rr'    R/R conflicts (enabled by default)
-  `deprecated'      obsolete constructs
-  `other'           all other warnings (enabled by default)
-  `all'             all the warnings
-  `no-CATEGORY'     turn off warnings in CATEGORY
-  `none'            turn off all the warnings
-  `error'           treat warnings as errors
+  'midrule-values'    unset or unused midrule values
+  'yacc'              incompatibilities with POSIX Yacc
+  'conflicts-sr'      S/R conflicts (enabled by default)
+  'conflicts-rr'      R/R conflicts (enabled by default)
+  'deprecated'        obsolete constructs
+  'empty-rule'        empty rules without %empty
+  'precedence'        useless precedence and associativity
+  'other'             all other warnings (enabled by default)
+  'all'               all the warnings except 'yacc'
+  'no-CATEGORY'       turn off warnings in CATEGORY
+  'none'              turn off all the warnings
+  'error[=CATEGORY]'  treat warnings as errors
 
 THINGS is a list of comma separated words that can include:
-  `state'        describe the states
-  `itemset'      complete the core item sets with their closure
-  `lookahead'    explicitly associate lookahead tokens to items
-  `solved'       describe shift/reduce conflicts solving
-  `all'          include all the above information
-  `none'         disable the report
+  'state'        describe the states
+  'itemset'      complete the core item sets with their closure
+  'lookahead'    explicitly associate lookahead tokens to items
+  'solved'       describe shift/reduce conflicts solving
+  'all'          include all the above information
+  'none'         disable the report
 
 FEATURE is a list of comma separated words that can include:
-  `caret'        show errors with carets
-  `all'          all of the above
-  `none'         disable all of the above
+  'caret'        show errors with carets
+  'all'          all of the above
+  'none'         disable all of the above
   
 GNU Bison home page: <http://www.gnu.org/software/bison/>.
 General help using GNU software: <http://www.gnu.org/gethelp/>.
