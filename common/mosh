@@ -1,0 +1,25 @@
+Usage: /usr/bin/mosh [options] [--] [user@]host [command...]
+        --client=PATH        mosh client on local machine
+                                (default: "mosh-client")
+        --server=COMMAND     mosh server on remote machine
+                                (default: "mosh-server")
+
+        --predict=adaptive      local echo for slower links [default]
+-a      --predict=always        use local echo even on fast links
+-n      --predict=never         never use local echo
+        --predict=experimental  aggressively echo even when incorrect
+
+-p PORT[:PORT2]
+        --port=PORT[:PORT2]  server-side UDP port or range
+
+        --ssh=COMMAND        ssh command to run when setting up session
+                                (example: "ssh -p 2222")
+                                (default: "ssh")
+
+        --no-init            do not send terminal initialization string
+
+        --help               this message
+        --version            version and copyright information
+
+Please report bugs to mosh-devel@mit.edu.
+Mosh home page: http://mosh.mit.edu
