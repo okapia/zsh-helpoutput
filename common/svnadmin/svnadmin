@@ -7,11 +7,13 @@ Available subcommands:
    create
    deltify
    dump
+   freeze
    help (?, h)
    hotcopy
    list-dblogs
    list-unused-dblogs
    load
+   lock
    lslocks
    lstxns
    pack
@@ -21,6 +23,7 @@ Available subcommands:
    setlog
    setrevprop
    setuuid
+   unlock
    upgrade
    verify
 

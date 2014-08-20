@@ -7,8 +7,11 @@ usage: 1. proplist [TARGET[@REV]...]
   2. Lists unversioned remote props on repos revision.
      TARGET only determines which repository to access.
 
+  With --verbose, the property values are printed as well, like 'svn propget
+  --verbose'.  With --quiet, the paths are not printed.
+
 Valid options:
-  -v [--verbose]           : print extra information
+  -v [--verbose]           : print path, name and value on separate lines
   -R [--recursive]         : descend recursively, same as --depth=infinity
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
                              'immediates', or 'infinity')
@@ -20,16 +23,20 @@ Valid options:
                                 'BASE'       base rev of item's working copy
                                 'COMMITTED'  last commit at or before BASE
                                 'PREV'       revision just before COMMITTED
-  -q [--quiet]             : print nothing, or only summary information
+  -q [--quiet]             : don't print the path
   --revprop                : operate on a revision property (use with -r)
   --xml                    : output in XML
   --changelist [--cl] ARG  : operate only on members of changelist ARG
+  --show-inherited-props   : retrieve target's inherited properties
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

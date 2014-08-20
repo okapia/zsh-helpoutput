@@ -4,9 +4,12 @@ Read a 'dumpfile'-formatted stream from stdin, committing
 new revisions into the repository's filesystem.  If the repository
 was previously empty, its UUID will, by default, be changed to the
 one specified in the stream.  Progress feedback is sent to stdout.
+If --revision is specified, limit the loaded revisions to only those
+in the dump stream whose revision numbers match the specified range.
 
 Valid options:
   -q [--quiet]             : no progress (only errors) to stderr
+  -r [--revision] ARG      : specify revision number ARG (or X:Y range)
   --ignore-uuid            : ignore any repos UUID found in the stream
   --force-uuid             : set repos UUID to that found in stream, if any
   --use-pre-commit-hook    : call pre-commit hook before committing revisions

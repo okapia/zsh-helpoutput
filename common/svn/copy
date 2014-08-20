@@ -1,22 +1,19 @@
-copy (cp): Duplicate something in working copy or repository, remembering
-history.
+copy (cp): Copy files and directories in a working copy or repository.
 usage: copy SRC[@REV]... DST
-
-When copying multiple sources, they will be added as children of DST,
-which must be a directory.
 
   SRC and DST can each be either a working copy (WC) path or URL:
     WC  -> WC:   copy and schedule for addition (with history)
     WC  -> URL:  immediately commit a copy of WC to URL
     URL -> WC:   check out URL into WC, schedule for addition
     URL -> URL:  complete server-side copy;  used to branch and tag
-  All the SRCs must be of the same type.
+  All the SRCs must be of the same type. When copying multiple sources,
+  they will be added as children of DST, which must be a directory.
 
-WARNING: For compatibility with previous versions of Subversion,
-copies performed using two working copy paths (WC -> WC) will not
-contact the repository.  As such, they may not, by default, be able
-to propagate merge tracking information from the source of the copy
-to the destination.
+  WARNING: For compatibility with previous versions of Subversion,
+  copies performed using two working copy paths (WC -> WC) will not
+  contact the repository.  As such, they may not, by default, be able
+  to propagate merge tracking information from the source of the copy
+  to the destination.
 
 Valid options:
   -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
@@ -42,7 +39,10 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

@@ -1,6 +1,16 @@
-cleanup: Recursively clean up the working copy, removing locks, resuming
+cleanup: Recursively clean up the working copy, removing write locks, resuming
 unfinished operations, etc.
 usage: cleanup [WCPATH...]
+
+  Finish any unfinished business in the working copy at WCPATH, and remove
+  write locks (shown as 'L' by the 'svn status' command) from the working
+  copy. Usually, this is only necessary if a Subversion client has crashed
+  while using the working copy, leaving it in an unusable state.
+
+  WARNING: There is no mechanism that will protect write locks still
+           being used by other Subversion clients. Running this command
+           while another client is using the working copy can corrupt
+           the working copy beyond repair!
 
 Valid options:
   --diff3-cmd ARG          : use ARG as merge command
@@ -9,7 +19,10 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')
