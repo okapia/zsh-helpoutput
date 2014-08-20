@@ -7,16 +7,18 @@ usage: 1. propget PROPNAME [TARGET[@REV]...]
   2. Prints unversioned remote prop on repos revision.
      TARGET only determines which repository to access.
 
-  By default, this subcommand will add an extra newline to the end
-  of the property values so that the output looks pretty.  Also,
-  whenever there are multiple paths involved, each property value
-  is prefixed with the path with which it is associated.  Use the
-  --strict option to disable these beautifications (useful when
-  redirecting a binary property value to a file, but available only
-  if you supply a single TARGET to a non-recursive propget operation).
+  With --verbose, the target path and the property name are printed on
+  separate lines before each value, like 'svn proplist --verbose'.
+  Otherwise, if there is more than one TARGET or a depth other than
+  'empty', the target path is printed on the same line before each value.
+
+  By default, an extra newline is printed after the property value so that
+  the output looks pretty.  With a single TARGET and depth 'empty', you can
+  use the --strict option to disable this (useful when redirecting a binary
+  property value to a file, for example).
 
 Valid options:
-  -v [--verbose]           : print extra information
+  -v [--verbose]           : print path, name and value on separate lines
   -R [--recursive]         : descend recursively, same as --depth=infinity
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
                              'immediates', or 'infinity')
@@ -29,15 +31,19 @@ Valid options:
                                 'COMMITTED'  last commit at or before BASE
                                 'PREV'       revision just before COMMITTED
   --revprop                : operate on a revision property (use with -r)
-  --strict                 : use strict semantics
+  --strict                 : don't print an extra newline
   --xml                    : output in XML
   --changelist [--cl] ARG  : operate only on members of changelist ARG
+  --show-inherited-props   : retrieve target's inherited properties
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

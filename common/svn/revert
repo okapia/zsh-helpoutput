@@ -1,8 +1,12 @@
-revert: Restore pristine working copy file (undo most local edits).
+revert: Restore pristine working copy state (undo local changes).
 usage: revert PATH...
 
-  Note:  this subcommand does not require network access, and resolves
-  any conflicted states.
+  Revert changes in the working copy at or within PATH, and remove
+  conflict markers as well, if any.
+
+  This subcommand does not revert already committed changes.
+  For information about undoing already committed changes, search
+  the output of 'svn help merge' for 'undo'.
 
 Valid options:
   --targets ARG            : pass contents of file ARG as additional args
@@ -16,7 +20,10 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

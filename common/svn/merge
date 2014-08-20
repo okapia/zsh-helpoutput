@@ -1,24 +1,21 @@
 merge: Merge changes into a working copy.
 usage: 1. merge SOURCE[@REV] [TARGET_WCPATH]
-          (the 'sync' merge)
+          (the 'complete' merge)
        2. merge [-c M[,N...] | -r N:M ...] SOURCE[@REV] [TARGET_WCPATH]
           (the 'cherry-pick' merge)
-       3. merge --reintegrate SOURCE[@REV] [TARGET_WCPATH]
-          (the 'reintegrate' merge)
-       4. merge SOURCE1[@N] SOURCE2[@M] [TARGET_WCPATH]
+       3. merge SOURCE1[@REV1] SOURCE2[@REV2] [TARGET_WCPATH]
           (the '2-URL' merge)
 
-  1. This form is called a 'sync' (or 'catch-up') merge:
+  1. This form, with one source path and no revision range, is called
+     a 'complete' merge:
 
        svn merge SOURCE[@REV] [TARGET_WCPATH]
 
-     A sync merge is used to fetch all the latest changes made on a parent
-     branch. In other words, the target branch has originally been created
-     by copying the source branch, and any changes committed on the source
-     branch since branching are applied to the target branch. This uses
-     merge tracking to skip all those revisions that have already been
-     merged, so a sync merge can be repeated periodically to stay up-to-
-     date with the source branch.
+     The complete merge is used for the 'sync' and 'reintegrate' merges
+     in the 'feature branch' pattern described below. It finds all the
+     changes on the source branch that have not already been merged to the
+     target branch, and merges them into the working copy. Merge tracking
+     is used to know which changes have already been merged.
 
      SOURCE specifies the branch from where the changes will be pulled, and
      TARGET_WCPATH specifies a working copy of the target branch to which
@@ -34,27 +31,60 @@ usage: 1. merge SOURCE[@REV] [TARGET_WCPATH]
      used, and the default value of 'REV' is the base revision (usually the
      revision last updated to).
 
-     TARGET_WCPATH is a working copy path; if omitted, '.' is assumed.
+     TARGET_WCPATH is a working copy path; if omitted, '.' is generally
+     assumed. There are some special cases:
+
+       - If SOURCE is a URL:
+
+           - If the basename of the URL and the basename of '.' are the
+             same, then the differences are applied to '.'. Otherwise,
+             if a file with the same basename as that of the URL is found
+             within '.', then the differences are applied to that file.
+             In all other cases, the target defaults to '.'.
+
+       - If SOURCE is a working copy path:
+
+           - If the source is a file, then differences are applied to that
+             file (useful for reverse-merging earlier changes). Otherwise,
+             if the source is a directory, then the target defaults to '.'.
+
+     In normal usage the working copy should be up to date, at a single
+     revision, with no local modifications and no switched subtrees.
+
+       - The 'Feature Branch' Merging Pattern -
+
+     In this commonly used work flow, known also as the 'development
+     branch' pattern, a developer creates a branch and commits a series of
+     changes that implement a new feature. The developer periodically
+     merges all the latest changes from the parent branch so as to keep the
+     development branch up to date with those changes. When the feature is
+     complete, the developer performs a merge from the feature branch to
+     the parent branch to re-integrate the changes.
+
+         parent --+----------o------o-o-------------o--
+                   \            \           \      /
+                    \          merge      merge  merge
+                     \            \           \  /
+         feature      +--o-o-------o----o-o----o-------
+
+     A merge from the parent branch to the feature branch is called a
+     'sync' or 'catch-up' merge, and a merge from the feature branch to the
+     parent branch is called a 'reintegrate' merge.
 
        - Sync Merge Example -
-
-     A feature is being developed on a branch called 'feature', which has
-     originally been a copy of trunk. The feature branch has been regularly
-     synced with trunk to keep up with the changes made there. The previous
-     sync merges are not shown on this diagram, and the last of them was
-     done when HEAD was r100. Currently, HEAD is r200.
-
-                feature  +------------------------o-----
-                        /                         ^
-                       /            ............  |
-                      /            .            . /
-         trunk ------+------------L--------------R------
-                                r100           r200
+                                 ............
+                                .            .
+         trunk  --+------------L--------------R------
+                   \                           \
+                    \                          |
+                     \                         v
+         feature      +------------------------o-----
+                             r100            r200
 
      Subversion will locate all the changes on 'trunk' that have not yet
      been merged into the 'feature' branch. In this case that is a single
-     range, r100:200. In the diagram above, L marks the left side
-     (trunk@100) and R marks the right side (trunk@200) of the merge. The
+     range, r100:200. In the diagram above, L marks the left side (trunk@100)
+     and R marks the right side (trunk@200) of the merge source. The
      difference between L and R will be applied to the target working copy
      path. In this case, the working copy is a clean checkout of the entire
      'feature' branch.
@@ -68,6 +98,39 @@ usage: 1. merge SOURCE[@REV] [TARGET_WCPATH]
      needs to be committed to the repository so that it can be seen by
      others. You can review the changes and you may have to resolve
      conflicts before you commit the merge.
+
+       - Reintegrate Merge Example -
+
+     The feature branch was last synced with trunk up to revision X. So the
+     difference between trunk@X and feature@HEAD contains the complete set
+     of changes that implement the feature, and no other changes. These
+     changes are applied to trunk.
+
+                    rW                   rX
+         trunk ------+--------------------L------------------o
+                      \                    .                 ^
+                       \                    .............   /
+                        \                                . /
+         feature         +--------------------------------R
+
+     In the diagram above, L marks the left side (trunk@X) and R marks the
+     right side (feature@HEAD) of the merge. The difference between the
+     left and right side is merged into trunk, the target.
+
+     To perform the merge, have a clean working copy of trunk and run the
+     following command in its top-level directory:
+
+         svn merge ^/feature
+
+     To prevent unnecessary merge conflicts, a reintegrate merge requires
+     that TARGET_WCPATH is not a mixed-revision working copy, has no local
+     modifications, and has no switched subtrees.
+
+     A reintegrate merge also requires that the source branch is coherently
+     synced with the target -- in the above example, this means that all
+     revisions between the branch point W and the last merged revision X
+     are merged to the feature branch, so that there are no unmerged
+     revisions in-between.
 
 
   2. This form is called a 'cherry-pick' merge:
@@ -86,7 +149,9 @@ usage: 1. merge SOURCE[@REV] [TARGET_WCPATH]
      path, the corresponding URL of the path is used, and the default value
      of 'REV' is the base revision (usually the revision last updated to).
 
-     TARGET_WCPATH is a working copy path; if omitted, '.' is assumed.
+     TARGET_WCPATH is a working copy path; if omitted, '.' is generally
+     assumed. The special cases noted above in the 'complete' merge form
+     also apply here.
 
      The revision ranges to be merged are specified by the '-r' and/or '-c'
      options. '-r N:M' refers to the difference in the history of the
@@ -103,7 +168,8 @@ usage: 1. merge SOURCE[@REV] [TARGET_WCPATH]
      source and target refer to the same branch, a previously committed
      revision can be 'undone'. In a reverse range, N is greater than M in
      '-r N:M', or the '-c' option is used with a negative number: '-c -M'
-     is equivalent to '-r M:<M-1>'.
+     is equivalent to '-r M:<M-1>'. Undoing changes like this is also known
+     as performing a 'reverse merge'.
 
      Multiple '-c' and/or '-r' options may be specified and mixing of
      forward and reverse ranges is allowed.
@@ -139,87 +205,27 @@ usage: 1. merge SOURCE[@REV] [TARGET_WCPATH]
          svn merge -c50,54,60 -r65:68 ^/trunk
 
 
-  3. This form is called a 'reintegrate merge':
+  3. This form is called a '2-URL merge':
 
-       svn merge --reintegrate SOURCE[@REV] [TARGET_WCPATH]
-
-     In a reintegrate merge, an (e.g. feature) branch is merged back to its
-     originating branch. In other words, the source branch has originally
-     been created by copying the target branch, development has concluded
-     on the source branch and it should now be merged back into the target
-     branch.
-     
-     SOURCE is the URL of a branch to be merged back. If REV is specified,
-     it is used as the peg revision for SOURCE; if REV is not specified,
-     the HEAD revision is assumed.
-
-     TARGET_WCPATH is a working copy of the branch the changes will be
-     applied to.
-
-       - Reintegrate Merge Example -
-
-     A feature has been developed on a branch called 'feature'. The feature
-     branch started as a copy of trunk@W. Work on the feature has completed
-     and it should be merged back into the trunk.
-
-     The feature branch was last synced with trunk up to revision X. So the
-     difference between trunk@X and feature@HEAD contains the complete set
-     of changes that implement the feature, and no other changes. These
-     changes are applied to trunk.
-
-                feature  +--------------------------------R
-                        /                                . \
-                       /                    .............   \
-                      /                    .                 v
-         trunk ------+--------------------L------------------o
-                    rW                   rX
-
-     In the diagram above, L marks the left side (trunk@X) and R marks the
-     right side (feature@HEAD) of the merge. The difference between the
-     left and right side is merged into trunk, the target.
-
-     To perform the merge, have a clean working copy of trunk and run the
-     following command in its top-level directory:
-
-         svn merge --reintegrate ^/feature
-
-     To prevent unnecessary merge conflicts, a reintegrate merge requires
-     that TARGET_WCPATH is not a mixed-revision working copy, has no local
-     modifications, and has no switched subtrees.
-
-     A reintegrate merge also requires that the source branch is coherently
-     synced with the target -- in the above example, this means that all
-     revisions between the branch point W and the last merged revision X
-     are merged to the feature branch, so that there are no unmerged
-     revisions in-between.
-
-     After the reintegrate merge, the feature branch cannot be synced to
-     the trunk again without merge conflicts. If further work must be done
-     on the feature branch, it should be deleted and then re-created.
-
-
-  4. This form is called a '2-URL merge':
-
-       svn merge SOURCE1[@N] SOURCE2[@M] [TARGET_WCPATH]
-
-     Two source URLs are specified, together with two revisions N and M.
-     The two sources are compared at the specified revisions, and the
-     difference is applied to TARGET_WCPATH, which is a path to a working
-     copy of another branch. The three branches involved can be completely
-     unrelated.
+       svn merge SOURCE1[@REV1] SOURCE2[@REV2] [TARGET_WCPATH]
 
      You should use this merge variant only if the other variants do not
      apply to your situation, as this variant can be quite complex to
      master.
 
-     If TARGET_WCPATH is omitted, a default value of '.' is assumed.
-     However, in the special case where both sources refer to a file node
-     with the same basename and a similarly named file is also found within
-     '.', the differences will be applied to that local file.  The source
-     revisions default to HEAD if omitted.
+     Two source URLs are specified, identifying two trees on the same
+     branch or on different branches. The trees are compared and the
+     difference from SOURCE1@REV1 to SOURCE2@REV2 is applied to the
+     working copy of the target branch at TARGET_WCPATH. The target
+     branch may be the same as one or both sources, or different again.
+     The three branches involved can be completely unrelated.
 
-     The sources can also be specified as working copy paths, in which case
-     the URLs of the merge sources are derived from the working copies.
+     TARGET_WCPATH is a working copy path; if omitted, '.' is generally
+     assumed. The special cases noted above in the 'complete' merge form
+     also apply here.
+
+     SOURCE1 and/or SOURCE2 can also be specified as a working copy path,
+     in which case the merge source URL is derived from the working copy.
 
        - 2-URL Merge Example -
 
@@ -331,6 +337,8 @@ Valid options:
                                 'PREV'       revision just before COMMITTED
   -c [--change] ARG        : the change made by revision ARG (like -r ARG-1:ARG)
                              If ARG is negative this is like -r ARG:ARG-1
+                             If ARG is of the form ARG1-ARG2 then this is like
+                             ARG1:ARG2, where ARG1 is inclusive
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
                              'immediates', or 'infinity')
@@ -339,38 +347,35 @@ Valid options:
   --dry-run                : try operation but make no changes
   --diff3-cmd ARG          : use ARG as merge command
   --record-only            : merge only mergeinfo differences
-  -x [--extensions] ARG    : Default: '-u'. When Subversion is invoking an
-                             external diff program, ARG is simply passed along
-                             to the program. But when Subversion is using its
-                             default internal diff implementation, or when
-                             Subversion is displaying blame annotations, ARG
-                             could be any of the following:
-                                -u (--unified):
-                                   Output 3 lines of unified context.
-                                -b (--ignore-space-change):
-                                   Ignore changes in the amount of white space.
-                                -w (--ignore-all-space):
-                                   Ignore all white space.
-                                --ignore-eol-style:
-                                   Ignore changes in EOL style.
-                                -p (--show-c-function):
-                                   Show C function name in diff output.
-  --ignore-ancestry        : ignore ancestry when calculating merges
+  -x [--extensions] ARG    : Specify differencing options for external diff or
+                             internal diff or blame. Default: '-u'. Options are
+                             separated by spaces. Internal diff and blame take:
+                               -u, --unified: Show 3 lines of unified context
+                               -b, --ignore-space-change: Ignore changes in
+                                 amount of white space
+                               -w, --ignore-all-space: Ignore all white space
+                               --ignore-eol-style: Ignore changes in EOL style
+                               -p, --show-c-function: Show C function name
+  --ignore-ancestry        : disable merge tracking; diff nodes as if related
   --accept ARG             : specify automatic conflict resolution action
                              ('postpone', 'working', 'base', 'mine-conflict',
                              'theirs-conflict', 'mine-full', 'theirs-full',
                              'edit', 'launch')
                              (shorthand: 'p', 'mc', 'tc', 'mf', 'tf', 'e', 'l')
-  --reintegrate            : merge a branch back into its parent branch
-  --allow-mixed-revisions  : Allow merge into mixed-revision working copy.
+  --reintegrate            : deprecated
+  --allow-mixed-revisions  : Allow operation on mixed-revision working copy.
                              Use of this option is not recommended!
                              Please run 'svn update' instead.
+  -v [--verbose]           : print extra information
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

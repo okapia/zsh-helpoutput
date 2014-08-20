@@ -9,7 +9,8 @@ Valid options:
                              'immediates', or 'infinity')
   -q [--quiet]             : print nothing, or only summary information
   --force                  : force operation to run
-  --no-ignore              : disregard default and svn:ignore property ignores
+  --no-ignore              : disregard default and svn:ignore and
+                             svn:global-ignores property ignores
   --auto-props             : enable automatic properties
   --no-auto-props          : disable automatic properties
   --parents                : add intermediate parents
@@ -18,7 +19,10 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')
