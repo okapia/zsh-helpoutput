@@ -1,10 +1,29 @@
 mergeinfo: Display merge-related information.
-usage: mergeinfo SOURCE[@REV] [TARGET[@REV]]
+usage: 1. mergeinfo SOURCE[@REV] [TARGET[@REV]]
+       2. mergeinfo --show-revs=WHICH SOURCE[@REV] [TARGET[@REV]]
 
-  Display information related to merges (or potential merges) between
-  SOURCE and TARGET (default: '.').  Display the type of information
-  specified by the --show-revs option.  If --show-revs isn't passed,
-  it defaults to --show-revs='merged'.
+  1. Summarize the history of merging between SOURCE and TARGET. The graph
+     shows, from left to right:
+       the youngest common ancestor of the branches;
+       the latest full merge in either direction, and thus the common base
+         that will be used for the next complete merge;
+       the repository path and revision number of the tip of each branch.
+
+  2. Print the revision numbers on SOURCE that have been merged to TARGET
+     (with --show-revs=merged), or that have not been merged to TARGET
+     (with --show-revs=eligible). Print only revisions in which there was
+     at least one change in SOURCE.
+
+     If --revision (-r) is provided, filter the displayed information to
+     show only that which is associated with the revisions within the
+     specified range.  Revision numbers, dates, and the 'HEAD' keyword are
+     valid range values.
+
+  SOURCE and TARGET are the source and target branch URLs, respectively.
+  (If a WC path is given, the corresponding base URL is used.) The default
+  TARGET is the current working directory ('.'). REV specifies the revision
+  to be considered the tip of the branch; the default for SOURCE is HEAD,
+  and the default for TARGET is HEAD for a URL or BASE for a WC path.
 
   The depth can be 'empty' or 'infinity'; the default is 'empty'.
 
@@ -27,7 +46,10 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

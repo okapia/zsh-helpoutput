@@ -1,0 +1,9 @@
+lock: usage: svnadmin lock REPOS_PATH PATH USERNAME COMMENT-FILE [TOKEN]
+
+Lock PATH by USERNAME setting comments from COMMENT-FILE.
+If provided, use TOKEN as lock token.  Use --bypass-hooks to avoid
+triggering the pre-lock and post-lock hook scripts.
+
+Valid options:
+  --bypass-hooks           : bypass the repository hook system
+

@@ -7,10 +7,9 @@ Valid options:
   --bdb-log-keep           : disable automatic log file removal [Berkeley DB]
   --config-dir ARG         : read user configuration files from directory ARG
   --fs-type ARG            : type of repository: 'fsfs' (default) or 'bdb'
-  --pre-1.4-compatible     : use format compatible with Subversion versions
-                             earlier than 1.4
-  --pre-1.5-compatible     : use format compatible with Subversion versions
-                             earlier than 1.5
-  --pre-1.6-compatible     : use format compatible with Subversion versions
-                             earlier than 1.6
+  --compatible-version ARG : use repository format compatible with Subversion
+                             version ARG ("1.5.5", "1.7", etc.)
+  --pre-1.4-compatible     : deprecated; see --compatible-version
+  --pre-1.5-compatible     : deprecated; see --compatible-version
+  --pre-1.6-compatible     : deprecated; see --compatible-version
 

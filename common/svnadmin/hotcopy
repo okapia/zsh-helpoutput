@@ -1,8 +1,11 @@
 hotcopy: usage: svnadmin hotcopy REPOS_PATH NEW_REPOS_PATH
 
-Makes a hot copy of a repository.
+Make a hot copy of a repository.
+If --incremental is passed, data which already exists at the destination
+is not copied again.  Incremental mode is implemented for FSFS repositories.
 
 Valid options:
   --clean-logs             : remove redundant Berkeley DB log files
                              from source repository [Berkeley DB]
+  --incremental            : dump or hotcopy incrementally
 

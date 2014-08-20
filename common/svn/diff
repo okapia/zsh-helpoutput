@@ -1,26 +1,38 @@
-diff (di): Display the differences between two revisions or paths.
-usage: 1. diff [-c M | -r N[:M]] [TARGET[@REV]...]
-       2. diff [-r N[:M]] --old=OLD-TGT[@OLDREV] [--new=NEW-TGT[@NEWREV]] \
+diff (di): Display local changes or differences between two revisions or paths.
+usage: 1. diff
+       2. diff [-c M | -r N[:M]] [TARGET[@REV]...]
+       3. diff [-r N[:M]] --old=OLD-TGT[@OLDREV] [--new=NEW-TGT[@NEWREV]] \
                [PATH...]
-       3. diff OLD-URL[@OLDREV] NEW-URL[@NEWREV]
+       4. diff OLD-URL[@OLDREV] NEW-URL[@NEWREV]
+       5. diff OLD-URL[@OLDREV] NEW-PATH[@NEWREV]
+       6. diff OLD-PATH[@OLDREV] NEW-URL[@NEWREV]
 
-  1. Display the changes made to TARGETs as they are seen in REV between
+  1. Use just 'svn diff' to display local modifications in a working copy.
+
+  2. Display the changes made to TARGETs as they are seen in REV between
      two revisions.  TARGETs may be all working copy paths or all URLs.
      If TARGETs are working copy paths, N defaults to BASE and M to the
      working copy; if URLs, N must be specified and M defaults to HEAD.
      The '-c M' option is equivalent to '-r N:M' where N = M-1.
      Using '-c -M' does the reverse: '-r M:N' where N = M-1.
 
-  2. Display the differences between OLD-TGT as it was seen in OLDREV and
+  3. Display the differences between OLD-TGT as it was seen in OLDREV and
      NEW-TGT as it was seen in NEWREV.  PATHs, if given, are relative to
      OLD-TGT and NEW-TGT and restrict the output to differences for those
      paths.  OLD-TGT and NEW-TGT may be working copy paths or URL[@REV].
      NEW-TGT defaults to OLD-TGT if not specified.  -r N makes OLDREV default
      to N, -r N:M makes OLDREV default to N and NEWREV default to M.
+     If OLDREV or NEWREV are not specified, they default to WORKING for
+     working copy targets and to HEAD for URL targets.
 
-  3. Shorthand for 'svn diff --old=OLD-URL[@OLDREV] --new=NEW-URL[@NEWREV]'
+     Either or both OLD-TGT and NEW-TGT may also be paths to unversioned
+     targets. Revisions cannot be specified for unversioned targets.
+     Both targets must be of the same node kind (file or directory).
+     Diffing unversioned targets against URL targets is not supported.
 
-  Use just 'svn diff' to display local modifications in a working copy.
+  4. Shorthand for 'svn diff --old=OLD-URL[@OLDREV] --new=NEW-URL[@NEWREV]'
+  5. Shorthand for 'svn diff --old=OLD-URL[@OLDREV] --new=NEW-PATH[@NEWREV]'
+  6. Shorthand for 'svn diff --old=OLD-PATH[@OLDREV] --new=NEW-URL[@NEWREV]'
 
 Valid options:
   -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
@@ -33,6 +45,8 @@ Valid options:
                                 'PREV'       revision just before COMMITTED
   -c [--change] ARG        : the change made by revision ARG (like -r ARG-1:ARG)
                              If ARG is negative this is like -r ARG:ARG-1
+                             If ARG is of the form ARG1-ARG2 then this is like
+                             ARG1:ARG2, where ARG1 is inclusive
   --old ARG                : use ARG as the older target
   --new ARG                : use ARG as the newer target
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
@@ -40,36 +54,38 @@ Valid options:
                              'immediates', or 'infinity')
   --diff-cmd ARG           : use ARG as diff command
   --internal-diff          : override diff-cmd specified in config file
-  -x [--extensions] ARG    : Default: '-u'. When Subversion is invoking an
-                             external diff program, ARG is simply passed along
-                             to the program. But when Subversion is using its
-                             default internal diff implementation, or when
-                             Subversion is displaying blame annotations, ARG
-                             could be any of the following:
-                                -u (--unified):
-                                   Output 3 lines of unified context.
-                                -b (--ignore-space-change):
-                                   Ignore changes in the amount of white space.
-                                -w (--ignore-all-space):
-                                   Ignore all white space.
-                                --ignore-eol-style:
-                                   Ignore changes in EOL style.
-                                -p (--show-c-function):
-                                   Show C function name in diff output.
+  -x [--extensions] ARG    : Specify differencing options for external diff or
+                             internal diff or blame. Default: '-u'. Options are
+                             separated by spaces. Internal diff and blame take:
+                               -u, --unified: Show 3 lines of unified context
+                               -b, --ignore-space-change: Ignore changes in
+                                 amount of white space
+                               -w, --ignore-all-space: Ignore all white space
+                               --ignore-eol-style: Ignore changes in EOL style
+                               -p, --show-c-function: Show C function name
+  --no-diff-added          : do not print differences for added files
   --no-diff-deleted        : do not print differences for deleted files
+  --ignore-properties      : ignore properties during the operation
+  --properties-only        : show only properties during the operation
   --show-copies-as-adds    : don't diff copied or moved files with their source
-  --notice-ancestry        : notice ancestry when calculating differences
+  --notice-ancestry        : diff unrelated nodes as delete and add
   --summarize              : show a summary of the results
   --changelist [--cl] ARG  : operate only on members of changelist ARG
   --force                  : force operation to run
   --xml                    : output in XML
   --git                    : use git's extended diff format
+  --patch-compatible       : generate diff suitable for generic third-party
+                             patch tools; currently the same as
+                             --show-copies-as-adds --ignore-properties
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

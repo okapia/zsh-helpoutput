@@ -23,9 +23,10 @@ usage: status [PATH...]
       ' ' no modifications
       'C' Conflicted
       'M' Modified
-    Third column: Whether the working copy directory is locked
-      ' ' not locked
-      'L' locked
+    Third column: Whether the working copy is locked for writing by
+                  another Subversion client modifying the working copy
+      ' ' not locked for writing
+      'L' locked for writing
     Fourth column: Scheduled commit will contain addition-with-history
       ' ' no history scheduled with commit
       '+' history scheduled with commit
@@ -33,16 +34,16 @@ usage: status [PATH...]
       ' ' normal
       'S' the item has a Switched URL relative to the parent
       'X' a versioned file created by an eXternals definition
-    Sixth column: Repository lock token
+    Sixth column: Whether the item is locked in repository for exclusive commit
       (without -u)
-      ' ' no lock token
-      'K' lock token present
+      ' ' not locked by this working copy
+      'K' locked by this working copy, but lock might be stolen or broken
       (with -u)
-      ' ' not locked in repository, no lock token
-      'K' locked in repository, lock toKen present
-      'O' locked in repository, lock token in some Other working copy
-      'T' locked in repository, lock token present but sTolen
-      'B' not locked in repository, lock token present but Broken
+      ' ' not locked in repository, not locked by this working copy
+      'K' locked in repository, lock owned by this working copy
+      'O' locked in repository, lock owned by another working copy
+      'T' locked in repository, lock owned by this working copy was stolen
+      'B' not locked in repository, lock owned by this working copy is broken
     Seventh column: Whether the item is the victim of a tree conflict
       ' ' normal
       'C' tree-Conflicted
@@ -67,20 +68,20 @@ usage: status [PATH...]
 
   Example output:
     svn status wc
-     M     wc/bar.c
-    A  +   wc/qax.c
+     M      wc/bar.c
+    A  +    wc/qax.c
 
     svn status -u wc
-     M           965    wc/bar.c
-           *     965    wc/foo.c
-    A  +           -    wc/qax.c
+     M             965   wc/bar.c
+            *      965   wc/foo.c
+    A  +             -   wc/qax.c
     Status against revision:   981
 
     svn status --show-updates --verbose wc
-     M           965       938 kfogel       wc/bar.c
-           *     965       922 sussman      wc/foo.c
-    A  +           -       687 joe          wc/qax.c
-                 965       687 joe          wc/zig.c
+     M             965      938 kfogel       wc/bar.c
+            *      965      922 sussman      wc/foo.c
+    A  +             -      687 joe          wc/qax.c
+                   965      687 joe          wc/zig.c
     Status against revision:   981
 
     svn status
@@ -96,7 +97,8 @@ Valid options:
   --depth ARG              : limit operation by depth ARG ('empty', 'files',
                              'immediates', or 'infinity')
   -q [--quiet]             : don't print unversioned items
-  --no-ignore              : disregard default and svn:ignore property ignores
+  --no-ignore              : disregard default and svn:ignore and
+                             svn:global-ignores property ignores
   --incremental            : give output suitable for concatenation
   --xml                    : output in XML
   --ignore-externals       : ignore externals definitions
@@ -106,7 +108,10 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')

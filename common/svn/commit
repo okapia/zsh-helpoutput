@@ -22,12 +22,18 @@ Valid options:
                              using the name[=value] format
   --changelist [--cl] ARG  : operate only on members of changelist ARG
   --keep-changelists       : don't delete changelists after commit
+  --include-externals      : Also commit file and dir externals reached by
+                             recursion. This does not include externals with a
+                             fixed revision. (See the svn:externals property)
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG
   --no-auth-cache          : do not cache authentication tokens
-  --non-interactive        : do no interactive prompting
+  --non-interactive        : do no interactive prompting (default is to prompt
+                             only if standard input is a terminal device)
+  --force-interactive      : do interactive prompting even if standard input
+                             is not a terminal device
   --trust-server-cert      : accept SSL server certificates from unknown
                              certificate authorities without prompting (but only
                              with '--non-interactive')
