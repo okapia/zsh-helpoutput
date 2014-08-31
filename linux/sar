@@ -1,8 +1,8 @@
 Usage: sar [ options ] [ <interval> [ <count> ] ]
 Options are:
-[ -A ] [ -b ] [ -B ] [ -C ] [ -d ] [ -p ] [ -q ] [ -r ] [ -R ]
+[ -A ] [ -b ] [ -B ] [ -C ] [ -d ] [ -h ] [ -m ] [ -p ] [ -q ] [ -r ] [ -R ]
 [ -S ] [ -t ] [ -u [ ALL ] ] [ -v ] [ -V ] [ -w ] [ -W ] [ -y ]
-[ -I { <int> | SUM | ALL | XALL } ] [ -P { <cpu> | ALL } ]
-[ -n { DEV | EDEV | NFS | NFSD | SOCK | ALL } ]
-[ -o [ <filename> ] | -f [ <filename> ] ]
+[ -I { <int> [,...] | SUM | ALL | XALL } ] [ -P { <cpu> [,...] | ALL } ]
+[ -j { ID | LABEL | PATH | UUID | ... } ] [ -n { <keyword> [,...] | ALL } ]
+[ -o [ <filename> ] | -f [ <filename> ] ] [ --legacy ]
 [ -i <interval> ] [ -s [ <hh:mm:ss> ] ] [ -e [ <hh:mm:ss> ] ]
