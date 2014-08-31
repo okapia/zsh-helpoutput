@@ -1,0 +1,3 @@
+Usage: cifsiostat [ options ] [ <interval> [ <count> ] ]
+Options are:
+[ -h ] [ -k | -m ] [ -t ] [ -V ]
