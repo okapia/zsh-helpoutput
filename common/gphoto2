@@ -6,6 +6,8 @@ Common options
       --usage                                Print short message on program
                                              usage
       --debug                                Turn on debugging
+      --debug-loglevel=STRING                Set debug level
+                                             [error|debug|data|all]
       --debug-logfile=FILENAME               Name of file to write debug info
                                              to
       --quiet                                Quiet output (default=verbose)
