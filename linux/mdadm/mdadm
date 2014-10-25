@@ -23,7 +23,11 @@ Some common options are:
   --examine-bitmap -X: Display the detail of a bitmap file
   --monitor     -F   : monitor (follow) some arrays
   --grow        -G   : resize/ reshape and array
-  --incremental -I   : add a single device to an array as appropriate
+  --incremental -I   : add/remove a single device to/from an array as appropriate
   --query       -Q   : Display general information about how a
                        device relates to the md driver
   --auto-detect      : Start arrays auto-detected by the kernel
+  --offroot          : Set first character of argv[0] to @ to indicate the
+                       application was launched from initrd/initramfs and
+                       should not be shutdown by systemd as part of the
+                       regular shutdown process.

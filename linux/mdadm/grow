@@ -13,7 +13,12 @@ Options that are valid with the grow (-G --grow) mode are:
   --layout=      -p   : For a FAULTY array, set/change the error mode.
   --size=        -z   : Change the active size of devices in an array.
                       : This is useful if all devices have been replaced
-                      : with larger devices.
-  --raid-disks=  -n   : Change the number of active devices in an array.
-                      : array.
+                      : with larger devices.   Value is in Kilobytes, or
+                      : the special word 'max' meaning 'as large as possible'.
+  --raid-devices= -n  : Change the number of active devices in an array.
   --bitmap=      -b   : Add or remove a write-intent bitmap.
+  --backup-file= file : A file on a differt device to store data for a
+                      : short time while increasing raid-devices on a
+                      : RAID4/5/6 array. Not needed when a spare is present.
+  --array-size=  -Z   : Change visible size of array.  This does not change
+                      : any data on the device, and is not stable across restarts.
