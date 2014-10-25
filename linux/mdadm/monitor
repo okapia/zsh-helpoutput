@@ -13,6 +13,8 @@ Options that are valid with the monitor (-F --follow) mode are:
   --mail=       -m   : Address to mail alerts of failure to
   --program=    -p   : Program to run when an event is detected
   --alert=           : same as --program
+  --syslog      -y   : Report alerts via syslog
+  --increment=  -r   : Report RebuildNN events in the given increment. default=20
   --delay=      -d   : seconds of delay between polling state. default=60
   --config=     -c   : specify a different config file
   --scan        -s   : find mail-address/program in config file

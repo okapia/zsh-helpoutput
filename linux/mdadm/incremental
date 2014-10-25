@@ -1,14 +1,20 @@
-Usage: mdadm --incremental [-Rqrs] device
+Usage: mdadm --incremental [-Rqrsf] device
 
 This usage allows for incremental assembly of md arrays.  Devices can be
 added one at a time as they are discovered.  Once an array has all expected
 devices, it will be started.
 
-Options that are valid with incremental assembly (-I --incremental) more are:
-  --run       -R  : run arrays as soon as a minimal number of devices are
-                  : present rather than waiting for all expected.
-  --quiet     -q  : Don't print any information messages, just errors.
-  --rebuild   -r  : Rebuild the 'map' file that mdadm uses for tracking
-                  : partial arrays.
-  --scan      -s  : Use with -R to start any arrays that have the minimal
-                  : required number of devices, but are not yet started.
+Optionally, the process can be reversed by using the fail option.
+When fail mode is invoked, mdadm will see if the device belongs to an array
+and then both fail (if needed) and remove the device from that array.
+
+Options that are valid with incremental assembly (-I --incremental) are:
+  --run         -R : Run arrays as soon as a minimal number of devices are
+                   : present rather than waiting for all expected.
+  --quiet       -q : Don't print any information messages, just errors.
+  --rebuild-map -r : Rebuild the 'map' file that mdadm uses for tracking
+                   : partial arrays.
+  --scan        -s : Use with -R to start any arrays that have the minimal
+                   : required number of devices, but are not yet started.
+  --fail      -f  : First fail (if needed) and then remove device from
+                  : any array that it is a member of.
