@@ -1,17 +1,17 @@
-rxvt-unicode (urxvt) v9.07 - released: 2009-12-27
-options: perl,xft,styles,combining,blink,iso14755,encodings=eu+vn+jp+jp-ext+kr+zh+zh-ext,fade,transparent,tint,afterimage,XIM,frills,selectionscrolling,wheel,slipwheel,smart-resize,cursorBlink,pointerBlank,scrollbars=plain+rxvt+NeXT+xterm
+rxvt-unicode (urxvt) v9.20 - released: 2014-04-26
+options: perl,xft,styles,combining,blink,iso14755,encodings=eu+vn,fade,transparent,tint,pixbuf,XIM,frills,selectionscrolling,wheel,slipwheel,cursorBlink,pointerBlank,scrollbars=plain+rxvt+NeXT+xterm
 Usage: urxvt [-help] [--help]
  [-display string] [-tn string] [-geometry geometry] [-C] [-iconic]
  [-cd string] [-/+rv] [-/+ls] [-/+j] [-/+ss] [-/+ptab] [-/+sb] [-/+sr] [-/+st]
  [-sbt number] [-/+si] [-/+sk] [-/+sw] [-/+ip] [-/+tr] [-tint color]
- [-sh number] [-fade number] [-fadecolor color] [-/+ut] [-/+vb] [-/+tcw]
- [-/+insecure] [-/+uc] [-/+bc] [-/+pb] [-bg color] [-fg color] [-hc color]
- [-cr color] [-pr color] [-pr2 color] [-bd color] [-pixmap file[;geom]]
- [-fn fontname] [-fb fontname] [-fi fontname] [-fbi fontname] [-/+is]
- [-im name] [-pt style] [-imlocale string] [-imfont fontname] [-name string]
- [-title string] [-n string] [-sl number] [-embed windowid] [-depth number]
+ [-sh number] [-blr HxV] [-fade number] [-fadecolor color] [-/+ut] [-/+vb]
+ [-/+tcw] [-/+insecure] [-/+uc] [-/+bc] [-/+pb] [-bg color] [-fg color]
+ [-hc color] [-cr color] [-pr color] [-pr2 color] [-bd color]
+ [-pixmap file[;geom]] [-icon file] [-fn fontname] [-fb fontname]
+ [-fi fontname] [-fbi fontname] [-/+is] [-im name] [-pt style]
+ [-imlocale string] [-imfont fontname] [-name string] [-title string]
+ [-n string] [-sl number] [-embed windowid] [-depth number] [-visual number]
  [-/+override-redirect] [-pty-fd fileno] [-/+hold] [-w number] [-b number]
  [-/+bl] [-lsp number] [-letsp number] [-/+sbg] [-mod modifier] [-/+ssc]
- [-/+ssr] [-pe string] [-blt string] [-blr HxV] [-icon file]
- [-e command arg ...]
+ [-/+ssr] [-pe string] [-e command arg ...]
 
