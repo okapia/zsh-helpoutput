@@ -20,27 +20,28 @@ Miscellaneous:
   -v, --invert-match        select non-matching lines
   -V, --version             print version information and exit
       --help                display this help and exit
-      --mmap                ignored for backwards compatibility
+      --mmap                deprecated no-op; evokes a warning
 
 Output control:
   -m, --max-count=NUM       stop after NUM matches
   -b, --byte-offset         print the byte offset with output lines
   -n, --line-number         print line number with output lines
       --line-buffered       flush output on every line
-  -H, --with-filename       print the filename for each match
-  -h, --no-filename         suppress the prefixing filename on output
-      --label=LABEL         print LABEL as filename for standard input
+  -H, --with-filename       print the file name for each match
+  -h, --no-filename         suppress the file name prefix on output
+      --label=LABEL         use LABEL as the standard input file name prefix
   -o, --only-matching       show only the part of a line matching PATTERN
   -q, --quiet, --silent     suppress all normal output
       --binary-files=TYPE   assume that binary files are TYPE;
-                            TYPE is `binary', `text', or `without-match'
+                            TYPE is 'binary', 'text', or 'without-match'
   -a, --text                equivalent to --binary-files=text
   -I                        equivalent to --binary-files=without-match
   -d, --directories=ACTION  how to handle directories;
-                            ACTION is `read', `recurse', or `skip'
+                            ACTION is 'read', 'recurse', or 'skip'
   -D, --devices=ACTION      how to handle devices, FIFOs and sockets;
-                            ACTION is `read' or `skip'
-  -R, -r, --recursive       equivalent to --directories=recurse
+                            ACTION is 'read' or 'skip'
+  -r, --recursive           like --directories=recurse
+  -R, --dereference-recursive  likewise, but follow all symlinks
       --include=FILE_PATTERN  search only files that match FILE_PATTERN
       --exclude=FILE_PATTERN  skip files and directories matching FILE_PATTERN
       --exclude-from=FILE   skip files matching any file pattern from FILE
@@ -58,15 +59,17 @@ Context control:
   -NUM                      same as --context=NUM
       --color[=WHEN],
       --colour[=WHEN]       use markers to highlight the matching strings;
-                            WHEN is `always', `never', or `auto'
-  -U, --binary              do not strip CR characters at EOL (MSDOS)
-  -u, --unix-byte-offsets   report offsets as if CRs were not there (MSDOS)
+                            WHEN is 'always', 'never', or 'auto'
+  -U, --binary              do not strip CR characters at EOL (MSDOS/Windows)
+  -u, --unix-byte-offsets   report offsets as if CRs were not there
+                            (MSDOS/Windows)
 
-`egrep' means `grep -E'.  `fgrep' means `grep -F'.
-Direct invocation as either `egrep' or `fgrep' is deprecated.
-With no FILE, or when FILE is -, read standard input.  If less than two FILEs
-are given, assume -h.  Exit status is 0 if any line was selected, 1 otherwise;
-if any error occurs and -q was not given, the exit status is 2.
+'egrep' means 'grep -E'.  'fgrep' means 'grep -F'.
+Direct invocation as either 'egrep' or 'fgrep' is deprecated.
+When FILE is -, read standard input.  With no FILE, read . if a command-line
+-r is given, - otherwise.  If fewer than two FILEs are given, assume -h.
+Exit status is 0 if any line is selected, 1 otherwise;
+if any error occurs and -q is not given, the exit status is 2.
 
 GNU Grep home page: <http://www.gnu.org/software/grep/>
 General help using GNU software: <http://www.gnu.org/gethelp/>
