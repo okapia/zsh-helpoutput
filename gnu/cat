@@ -1,8 +1,8 @@
-Usage: cat [OPTION] [FILE]...
+Usage: cat [OPTION]... [FILE]...
 Concatenate FILE(s), or standard input, to standard output.
 
   -A, --show-all           equivalent to -vET
-  -b, --number-nonblank    number nonempty output lines
+  -b, --number-nonblank    number nonempty output lines, overrides -n
   -e                       equivalent to -vE
   -E, --show-ends          display $ at end of each line
   -n, --number             number all output lines
@@ -20,4 +20,7 @@ Examples:
   cat f - g  Output f's contents, then standard input, then g's contents.
   cat        Copy standard input to standard output.
 
-Report bugs to <bug-coreutils@gnu.org>.
+Report gcat bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+For complete documentation, run: info coreutils 'gcat invocation'
