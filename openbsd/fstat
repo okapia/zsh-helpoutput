@@ -1,0 +1,2 @@
+fstat: unknown option -- ?
+usage: fstat [-fnosv] [-M core] [-N system] [-p pid] [-u user] [file ...]

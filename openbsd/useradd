@@ -1,0 +1,8 @@
+usage: useradd -D [-b base-directory] [-e expiry-time] [-f inactive-time]
+               [-g gid | name | =uid] [-k skel-directory] [-L login-class]
+               [-r low..high] [-s shell]
+       useradd [-mov] [-b base-directory] [-c comment] [-d home-directory]
+               [-e expiry-time] [-f inactive-time]
+               [-G secondary-group[,group,...]] [-g gid | name | =uid]
+               [-k skel-directory] [-L login-class] [-p password] [-r low..high]
+               [-s shell] [-u uid] user

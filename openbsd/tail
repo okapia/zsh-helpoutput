@@ -1,0 +1,2 @@
+tail: unknown option -- ?
+usage: tail [-f | -r] [-b number | -c number | -n number | -number] [file ...]

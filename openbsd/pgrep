@@ -1,0 +1,2 @@
+usage: pgrep [-flnoqvx] [-d delim] [-G gid] [-g pgrp] [-P ppid] [-s sid]
+	[-T rtable] [-t tty] [-U uid] [-u euid] [pattern ...]

@@ -1,0 +1,4 @@
+mount: unknown option -- ?
+usage: mount [-AadfNruvw] [-t type]
+       mount [-dfrsuvw] special | node
+       mount [-dfruvw] [-o options] [-t type] special node
