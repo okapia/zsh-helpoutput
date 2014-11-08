@@ -1,0 +1,2 @@
+usage: ln [-fhLnPs] source [target]
+       ln [-fLPs] source ... [directory]

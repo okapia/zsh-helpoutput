@@ -1,0 +1,5 @@
+usage: pfctl [-deghnPqrvz] [-a anchor] [-D macro=value] [-F modifier]
+	[-f file] [-i interface] [-K host | network]
+	[-k host | network | label | id] [-L statefile] [-o level] [-p device]
+	[-S statefile] [-s modifier [-R id]] [-t table -T command [address ...]]
+	[-x level]

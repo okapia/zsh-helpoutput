@@ -1,0 +1,2 @@
+vmstat: unknown option -- ?
+usage: vmstat [-fimstvz] [-c count] [-M core] [-N system] [-w wait] [disk ...]

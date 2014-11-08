@@ -1,0 +1,2 @@
+finger: unknown option -- ?
+usage: finger [-hlMmops] [login ...]

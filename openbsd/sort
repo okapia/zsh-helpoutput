@@ -1,0 +1,3 @@
+sort: unknown option -- ?
+usage: sort [-bCcdfHimnrsuz] [-k field1[,field2]] [-o output] [-R char]
+	[-T dir] [-t char] [file ...]

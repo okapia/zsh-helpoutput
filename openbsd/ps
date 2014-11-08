@@ -1,0 +1,3 @@
+ps: unknown option -- ?
+usage: ps [-AaCceHhjkLlmrSTuvwx] [-M core] [-N system] [-O fmt] [-o fmt] [-p pid]
+          [-t tty] [-U username] [-W swap]

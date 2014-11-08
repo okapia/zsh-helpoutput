@@ -1,0 +1,2 @@
+cat: unknown option -- ?
+usage: cat [-benstuv] [file ...]

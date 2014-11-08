@@ -1,0 +1,5 @@
+usage: usermod [-moUvZ] [-c comment] [-d home-directory] [-e expiry-time]
+               [-f inactive-time] [-G secondary-group[,group,...]]
+               [-g gid | name | =uid] [-L login-class] [-l new-login]
+               [-p password] [-S secondary-group[,group,...]]
+               [-s shell] [-u uid] user

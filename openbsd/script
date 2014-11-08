@@ -1,0 +1,2 @@
+script: unknown option -- ?
+usage: script [-a] [file]

@@ -1,0 +1,4 @@
+xargs: unknown option -- ?
+usage: xargs [-0oprt] [-E eofstr] [-I replstr [-R replacements]] [-J replstr]
+             [-L number] [-n number [-x]] [-P maxprocs] [-s size]
+             [utility [argument ...]]

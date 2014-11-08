@@ -1,0 +1,2 @@
+head: unknown option -- ?
+usage: head [-count | -n count] [file ...]

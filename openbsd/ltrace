@@ -1,0 +1,1 @@
+usage: ltrace [-ai] [-f trfile] [-t trstr] [-u trspec] command
