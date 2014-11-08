@@ -1,0 +1,2 @@
+last: unknown option -- ?
+usage: last [-csT] [-d date] [-f file] [-h host] [-n number] [-t tty] [user ...]

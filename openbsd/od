@@ -1,0 +1,3 @@
+od: unknown option -- ?
+usage: od [-aBbcDdeFfHhIiLlOosvXx] [-A base] [-j offset] [-N length]
+	[-t type_string] [[+]offset[.][Bb]] [file ...]

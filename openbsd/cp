@@ -1,0 +1,2 @@
+usage: cp [-fip] [-R [-H | -L | -P]] source target
+       cp [-fip] [-R [-H | -L | -P]] source ... directory

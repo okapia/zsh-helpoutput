@@ -1,0 +1,3 @@
+top: unknown option -- ?
+usage: top [-1bCHIinqSu] [-d count] [-g string] [-o field] [-p pid] [-s time]
+	[-U [-]user] [number]

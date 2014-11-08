@@ -1,0 +1,3 @@
+date: unknown option -- ?
+usage: date [-aju] [-d dst] [-r seconds] [-t minutes_west] [-z output_zone]
+            [+format] [[[[[[cc]yy]mm]dd]HH]MM[.SS]]

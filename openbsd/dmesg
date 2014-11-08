@@ -1,0 +1,2 @@
+dmesg: unknown option -- ?
+usage: dmesg [-M core] [-N system]

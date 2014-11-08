@@ -1,0 +1,2 @@
+cu: unknown option -- ?
+usage: cu [-l line] [-s speed | -speed] [host]
