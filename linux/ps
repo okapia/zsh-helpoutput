@@ -1,22 +1,80 @@
-********* simple selection *********  ********* selection by list *********
--A all processes                      -C by command name
--N negate selection                   -G by real group ID (supports names)
--a all w/ tty except session leaders  -U by real user ID (supports names)
--d all except session leaders         -g by session OR by effective group name
--e all processes                      -p by process ID
-T  all processes on this terminal     -s processes in the sessions given
-a  all w/ tty, including other users  -t by tty
-g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
-r  only running processes             U  processes for specified users
-x  processes w/o controlling ttys     t  by tty
-*********** output format **********  *********** long options ***********
--o,o user-defined  -f full            --Group --User --pid --cols --ppid
--j,j job control   s  signal          --group --user --sid --rows --info
--O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
--l,l long          u  user-oriented   --sort --tty --forest --version
--F   extra full    X  registers       --heading --no-heading --context
-                    ********* misc options *********
--V,V  show version      L  list format codes  f  ASCII art forest
--m,m,-L,-T,H  threads   S  children in sum    -y change -l format
--M,Z  security data     c  true command name  -c scheduling class
--w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+
+Usage:
+ ps [options]
+
+Basic options:
+ -A, -e               all processes
+ -a                   all with tty, except session leaders
+  a                   all with tty, including other users
+ -d                   all except session leaders
+ -N, --deselect       negate selection
+  r                   only running processes
+  T                   all processes on this terminal
+  x                   processes without controlling ttys
+
+Selection by list:
+ -C <command>         command name
+ -G, --Group <GID>    real group id or name
+ -g, --group <group>  session or effective group name
+ -p, p, --pid <PID>   process id
+        --ppid <PID>  parent process id
+ -q, q, --quick-pid <PID>
+                      process id (quick mode)
+ -s, --sid <session>  session id
+ -t, t, --tty <tty>   terminal
+ -u, U, --user <UID>  effective user id or name
+ -U, --User <UID>     real user id or name
+
+  The selection options take as their argument either:
+    a comma-separated list e.g. '-u root,nobody' or
+    a blank-separated list e.g. '-p 123 4567'
+
+Output formats:
+ -F                   extra full
+ -f                   full-format, including command lines
+  f, --forest         ascii art process tree
+ -H                   show process hierarchy
+ -j                   jobs format
+  j                   BSD job control format
+ -l                   long format
+  l                   BSD long format
+ -M, Z                add security data (for SELinux)
+ -O <format>          preloaded with default columns
+  O <format>          as -O, with BSD personality
+ -o, o, --format <format>
+                      user-defined format
+  s                   signal format
+  u                   user-oriented format
+  v                   virtual memory format
+  X                   register format
+ -y                   do not show flags, show rss vs. addr (used with -l)
+     --context        display security context (for SELinux)
+     --headers        repeat header lines, one per page
+     --no-headers     do not print header at all
+     --cols, --columns, --width <num>
+                      set screen width
+     --rows, --lines <num>
+                      set screen height
+
+Show threads:
+  H                   as if they were processes
+ -L                   possibly with LWP and NLWP columns
+ -m, m                after processes
+ -T                   possibly with SPID column
+
+Miscellaneous options:
+ -c                   show scheduling class with -l option
+  c                   show true command name
+  e                   show the environment after command
+  k,    --sort        specify sort order as: [+|-]key[,[+|-]key[,...]]
+  L                   show format specifiers
+  n                   display numeric uid and wchan
+  S,    --cumulative  include some dead child process data
+ -y                   do not show flags, show rss (only with -l)
+ -V, V, --version     display version information and exit
+ -w, w                unlimited output width
+
+        --help <simple|list|output|threads|misc|all>
+                      display help and exit
+
+For more details see ps(1).
