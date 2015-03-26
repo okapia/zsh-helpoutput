@@ -1,0 +1,56 @@
+
+FreeRDP - A Free Remote Desktop Protocol Client
+See http://www.freerdp.com for more information
+
+Usage: xfreerdp [options] server:port
+  -0: connect to console session
+  -a: set color depth in bits, default is 16
+  -c: shell working directory
+  -D: hide window decorations
+  -T: window title
+  -d: domain
+  -f: fullscreen mode
+  -g: set geometry, using format WxH or X% or 'workarea', default is 1024x768
+  -h: print this help
+  -k: set keyboard layout ID
+  -K: do not interfere with window manager bindings (don't grab keyboard)
+  -n: hostname
+  -o: console audio
+  -p: password
+  -s: set startup-shell
+  -t: alternative port number, default is 3389
+  -u: username
+  -x: performance flags (m[odem], b[roadband] l[an], or a bit-mask)
+  -X: embed into another window with a given XID.
+  -z: enable compression
+  --app: RemoteApp connection. This implies -g workarea
+  --ext: load an extension
+  --no-auth: disable authentication
+  --authonly: authentication only, no UI
+  --from-stdin: unspecified username, password, domain and hostname params are prompted
+  --help: print this help
+  --no-fastpath: disable fast-path
+  --gdi: graphics rendering (hw, sw)
+  --no-motion: don't send mouse motion events
+  --no-osb: disable offscreen bitmaps
+  --no-bmp-cache: disable bitmap cache
+  --plugin: load a virtual channel plugin
+  --rfx: enable RemoteFX
+  --rfx-mode: RemoteFX operational flags (v[ideo], i[mage]), default is video
+  --nsc: enable NSCodec (experimental)
+  --disable-wallpaper: disables wallpaper
+  --composition: enable desktop composition
+  --disable-full-window-drag: disables full window drag
+  --disable-menu-animations: disables menu animations
+  --disable-theming: disables theming
+  --kbd-list: list all keyboard layout ids used by -k
+  --no-rdp: disable Standard RDP encryption
+  --no-tls: disable TLS encryption
+  --no-nla: disable network level authentication
+  --ntlm: force NTLM authentication protocol version (1 or 2)
+  --certificate-name: use the argument as the logon certificate, instead of the server name
+  --ignore-certificate: ignore verification of logon certificate
+  --sec: force protocol security (rdp, tls or nla)
+  --secure-checksum: use salted checksums with Standard RDP encryption
+  --version: print version information
+
