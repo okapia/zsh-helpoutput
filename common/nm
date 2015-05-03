@@ -1,0 +1,43 @@
+Usage: nm [OPTION...] [FILE...]
+List symbols from FILEs (a.out by default).
+
+ Output selection:
+  -a, --debug-syms           Display debugger-only symbols
+      --defined-only         Display only defined symbols
+  -D, --dynamic              Display dynamic symbols instead of normal symbols
+  -g, --extern-only          Display only external symbols
+  -s, --print-armap          Include index for symbols from archive members
+  -u, --undefined-only       Display only undefined symbols
+
+ Output format:
+  -A, --print-file-name      Print name of the input file before every symbol
+  -B                         Same as --format=bsd
+  -f, --format=FORMAT        Use the output format FORMAT.  FORMAT can be
+                             `bsd', `sysv' or `posix'.  The default is `sysv'
+      --mark-special         Mark special symbols
+  -P, --portability          Same as --format=posix
+  -S, --print-size           Print size of defined symbols
+  -t, --radix=RADIX          Use RADIX for printing symbol values
+
+
+ Output formatting
+      --color[=WHEN]         colorize the output.  WHEN defaults to 'always' or
+                             can be 'auto' or 'never'
+
+ Output options:
+  -C, --demangle             Decode low-level symbol names into source code
+                             names
+  -n, --numeric-sort         Sort symbols numerically by address
+  -p, --no-sort              Do not sort the symbols
+  -r, --reverse-sort         Reverse the sense of the sort
+
+ Miscellaneous:
+
+  -?, --help                 Give this help list
+      --usage                Give a short usage message
+  -V, --version              Print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+Report bugs to https://bugzilla.redhat.com/.

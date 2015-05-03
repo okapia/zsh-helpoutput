@@ -1,0 +1,47 @@
+Usage: readelf [OPTION...] FILE...
+Print information from ELF file in human-readable form.
+
+ ELF input selection:
+      --elf-section[=SECTION]   Use the named SECTION (default .gnu_debugdata)
+                             as (compressed) ELF input data
+
+ ELF output selection:
+  -a, --all                  All these plus -p .strtab -p .dynstr -p .comment
+  -A, --arch-specific        Display architecture specific information, if any
+  -d, --dynamic              Display the dynamic segment
+  -e, --exception            Display sections for exception handling
+  -h, --file-header          Display the ELF file header
+  -I, --histogram            Display histogram of bucket list lengths
+  -l, --program-headers      Display the program headers
+  -n, --notes                Display the ELF notes
+  -r, --relocs               Display relocations
+  -s, --symbols              Display the symbol table
+  -S, --section-headers      Display the sections' headers
+  -V, --version-info         Display versioning information
+
+ Additional output selection:
+  -c, --archive-index        Display the symbol index of an archive
+  -p, --strings[=SECTION]    Print string contents of sections
+  -w, --debug-dump[=SECTION] Display DWARF section content.  SECTION can be one
+                             of abbrev, aranges, decodedaranges, frame,
+                             gdb_index, info, loc, line, decodedline, ranges,
+                             pubnames, str, macinfo, macro or exception
+  -x, --hex-dump=SECTION     Dump the uninterpreted contents of SECTION, by
+                             number or name
+
+ Output control:
+  -N, --numeric-addresses    Do not find symbol names for addresses in DWARF
+                             data
+  -U, --unresolved-address-offsets
+                             Display just offsets instead of resolving values
+                             to addresses in DWARF data
+  -W, --wide                 Ignored for compatibility (lines always wide)
+
+  -?, --help                 Give this help list
+      --usage                Give a short usage message
+      --version              Print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+Report bugs to https://bugzilla.redhat.com/.
