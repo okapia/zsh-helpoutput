@@ -1,5 +1,5 @@
-usage: git cat-file (-t|-s|-e|-p|<type>|--textconv) <object>
-   or: git cat-file (--batch|--batch-check) < <list_of_objects>
+usage: git cat-file (-t | -s | -e | -p | <type> | --textconv) <object>
+   or: git cat-file (--batch | --batch-check) < <list-of-objects>
 
 <type> can be one of: blob, tree, commit, tag
     -t                    show object type

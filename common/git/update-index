@@ -1,4 +1,4 @@
-usage: git update-index [options] [--] [<file>...]
+usage: git update-index [<options>] [--] [<file>...]
 
     -q                    continue refresh even when index needs update
     --ignore-submodules   refresh: ignore submodules
@@ -8,7 +8,7 @@ usage: git update-index [options] [--] [<file>...]
     --unmerged            refresh even if index contains unmerged entries
     --refresh             refresh stat information
     --really-refresh      like --refresh, but ignore assume-unchanged setting
-    --cacheinfo <mode> <object> <path>
+    --cacheinfo <mode>,<object>,<path>
                           add the specified entry to the index
     --chmod (+/-)x        override the executable bit of the listed files
     --assume-unchanged    mark files as "not changing"
@@ -27,4 +27,5 @@ usage: git update-index [options] [--] [<file>...]
     --verbose             report actions to standard output
     --clear-resolve-undo  (for porcelains) forget saved unresolved conflicts
     --index-version <n>   write index in this format
+    --split-index         enable or disable split index
 

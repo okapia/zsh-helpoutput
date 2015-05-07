@@ -23,12 +23,14 @@ usage: git pack-objects --stdout [options...] [< ref-list | < object-list]
     --unpacked            limit the objects to those that are not yet packed
     --all                 include objects reachable from any reference
     --reflog              include objects referred by reflog entries
+    --indexed-objects     include objects referred to by the index
     --stdout              output pack to stdout
     --include-tag         include tag objects that refer to objects to be packed
     --keep-unreachable    keep unreachable objects
     --unpack-unreachable[=<time>]
                           unpack unreachable objects newer than <time>
     --thin                create thin packs
+    --shallow             create packs suitable for shallow fetches
     --honor-pack-keep     ignore packs that have companion .keep file
     --compression <n>     pack compression level
     --keep-true-parents   do not hide commits by grafts

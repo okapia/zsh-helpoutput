@@ -1,4 +1,4 @@
-usage: git format-patch [options] [<since> | <revision range>]
+usage: git format-patch [<options>] [<since> | <revision-range>]
 
     -n, --numbered        use [PATCH n/m] even with a single patch
     -N, --no-numbered     use [PATCH] even with multiple patches
@@ -35,5 +35,7 @@ Messaging
     --thread[=<style>]    enable message threading, styles: shallow, deep
     --signature <signature>
                           add a signature
+    --signature-file <file>
+                          add a signature from a file
     -q, --quiet           don't print the patch filenames
 

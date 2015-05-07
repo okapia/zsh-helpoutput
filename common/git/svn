@@ -86,6 +86,7 @@ Available commands:
                      --repack <num>
                      --revision, -r <num>
                      --rmdir 
+                     --set-svn-props <arg>
                      --strategy, -s <arg>
                      --use-log-author 
                      --username <arg>
@@ -112,8 +113,8 @@ Available commands:
                      --use-log-author 
                      --username <arg>
   find-rev         Translate between SVN revision numbers and tree-ish
-                     --after 
-                     --before 
+                     -A, --after 
+                     -B, --before 
   gc               Compress unhandled.log files in .git/svn and remove index files in .git/svn
   info             Show info about the latest SVN revision
 		     on the current branch
@@ -164,6 +165,7 @@ Available commands:
                      --revision, -r <num>
   proplist         List all properties of a file or directory
                      --revision, -r <num>
+  propset          Set the value of a property on a file or directory - will be set on commit
   rebase           Fetch and rebase your working directory
                      --add-author-from 
                      --authors-file, -A <arg>
