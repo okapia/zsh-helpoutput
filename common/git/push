@@ -12,7 +12,7 @@ usage: git push [<options>] [<repository> [<refspec>...]]
     -f, --force           force updates
     --force-with-lease[=<refname>:<expect>]
                           require old value of ref to be at this value
-    --recurse-submodules[=<check>]
+    --recurse-submodules[=<check|on-demand>]
                           control recursive pushing of submodules
     --thin                use thin pack
     --receive-pack <receive-pack>
@@ -24,4 +24,6 @@ usage: git push [<options>] [<repository> [<refspec>...]]
     --prune               prune locally removed refs
     --no-verify           bypass pre-push hook
     --follow-tags         push missing but relevant tags
+    --signed              GPG sign the push
+    --atomic              request atomic transaction on remote side
 
