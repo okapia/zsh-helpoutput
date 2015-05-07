@@ -1,1 +1,6 @@
-usage: git imap-send < <mbox>
+usage: git imap-send [-v] [-q] [--[no-]curl] < <mbox>
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --curl                use libcurl to communicate with the IMAP server
+

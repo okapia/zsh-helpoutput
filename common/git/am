@@ -8,6 +8,7 @@ usage: git am [options] [(<mbox>|<Maildir>)...]
     -u, --utf8            recode into utf8 (default)
     -k, --keep            pass -k flag to git-mailinfo
     --keep-non-patch      pass -b flag to git-mailinfo
+    -m, --message-id      pass -m flag to git-mailinfo
     --keep-cr             pass --keep-cr flag to git-mailsplit for mbox format
     --no-keep-cr          do not pass --keep-cr flag to git-mailsplit independent of am.keepcr
     -c, --scissors        strip everything before a scissors line

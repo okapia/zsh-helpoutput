@@ -22,4 +22,5 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     --depth <depth>       deepen history of shallow clone
     --unshallow           convert to a complete repository
     --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
 

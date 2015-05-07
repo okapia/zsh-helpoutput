@@ -1,6 +1,6 @@
-usage: git tag [-a|-s|-u <key-id>] [-f] [-m <msg>|-F <file>] <tagname> [<head>]
+usage: git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] <tagname> [<head>]
    or: git tag -d <tagname>...
-   or: git tag -l [-n[<num>]] [--contains <commit>] [--points-at <object>] 
+   or: git tag -l [-n[<num>]] [--contains <commit>] [--points-at <object>]
 		[<pattern>...]
    or: git tag -v <tagname>...
 
@@ -19,10 +19,10 @@ Tag creation options
     -u, --local-user <key-id>
                           use another key to sign the tag
     -f, --force           replace the tag if exists
-    --column[=<style>]    show tag list in columns
-    --sort <type>         sort tags
 
 Tag listing options
+    --column[=<style>]    show tag list in columns
+    --sort <type>         sort tags
     --contains <commit>   print only tags that contain the commit
     --points-at <object>  print only tags of the object
 

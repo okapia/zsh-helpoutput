@@ -1,4 +1,4 @@
-usage: git clone [options] [--] <repo> [<dir>]
+usage: git clone [<options>] [--] <repo> [<dir>]
 
     -v, --verbose         be more verbose
     -q, --quiet           be more quiet
@@ -21,6 +21,7 @@ usage: git clone [options] [--] <repo> [<dir>]
                           path to git-upload-pack on the remote
     --depth <depth>       create a shallow clone of that depth
     --single-branch       clone only one branch, HEAD or --branch
+    --dissociate          use --reference only while cloning
     --separate-git-dir <gitdir>
                           separate git dir from working tree
     -c, --config <key=value>

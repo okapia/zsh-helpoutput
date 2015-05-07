@@ -13,4 +13,6 @@ usage: git fast-export [rev-list-opts]
     --full-tree           Output full tree for each commit
     --use-done-feature    Use the done feature to terminate the stream
     --no-data             Skip output of blob data
+    --refspec <refspec>   Apply refspec to exported refs
+    --anonymize           anonymize output
 
