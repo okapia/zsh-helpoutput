@@ -1,10 +1,9 @@
 attach-session (attach) [-dr] [-c working-directory] [-t target-session]
-bind-key (bind) [-cnr] [-t key-table] key command [arguments]
+bind-key (bind) [-cnr] [-t mode-table] key command [arguments]
 break-pane (breakp) [-dP] [-F format] [-t target-pane]
-capture-pane (capturep) [-aCeJpPq] [-b buffer-index] [-E end-line] [-S start-line][-t target-pane]
+capture-pane (capturep) [-aCeJpPq] [-b buffer-name] [-E end-line] [-S start-line][-t target-pane]
 choose-buffer [-t target-window] [-F format] [template]
 choose-client [-t target-window] [-F format] [template]
-choose-list [-l items] [-t target-window][template]
 choose-session [-t target-window] [-F format] [template]
 choose-tree [-suw] [-b session-template] [-c window template] [-S format] [-W format] [-t target-window]
 choose-window [-t target-window][-F format] [template]
@@ -13,19 +12,19 @@ clock-mode [-t target-pane]
 command-prompt [-I inputs] [-p prompts] [-t target-client] [template]
 confirm-before (confirm) [-p prompt] [-t target-client] command
 copy-mode [-u] [-t target-pane]
-delete-buffer (deleteb) [-b buffer-index]
+delete-buffer (deleteb) [-b buffer-name]
 detach-client (detach) [-P] [-a] [-s target-session] [-t target-client]
 display-message (display) [-p] [-c target-client] [-F format] [-t target-pane] [message]
 display-panes (displayp) [-t target-client]
 find-window (findw) [-CNT] [-F format] [-t target-window] match-string
 has-session (has) [-t target-session]
-if-shell (if) [-b] [-t target-pane] shell-command command [command]
+if-shell (if) [-bF] [-t target-pane] shell-command command [command]
 join-pane (joinp) [-bdhv] [-p percentage|-l size] [-s src-pane] [-t dst-pane]
 kill-pane (killp) [-a] [-t target-pane]
 kill-server 
 kill-session [-a] [-t target-session]
 kill-window (killw) [-a] [-t target-window]
-last-pane (lastp) [-t target-window]
+last-pane (lastp) [-de] [-t target-window]
 last-window (last) [-t target-session]
 link-window (linkw) [-dk] [-s src-window] [-t dst-window]
 list-buffers (lsb) [-F format]
@@ -35,7 +34,7 @@ list-keys (lsk) [-t key-table]
 list-panes (lsp) [-as] [-F format] [-t target-window]
 list-sessions (ls) [-F format]
 list-windows (lsw) [-a] [-F format] [-t target-session]
-load-buffer (loadb) [-b buffer-index] path
+load-buffer (loadb) [-b buffer-name] path
 lock-client (lockc) [-t target-client]
 lock-server (lock) 
 lock-session (locks) [-t target-session]
@@ -45,7 +44,7 @@ new-session (new) [-AdDP] [-c start-directory] [-F format] [-n window-name] [-s 
 new-window (neww) [-adkP] [-c start-directory] [-F format] [-n window-name] [-t target-window] [command]
 next-layout (nextl) [-t target-window]
 next-window (next) [-a] [-t target-session]
-paste-buffer (pasteb) [-dpr] [-s separator] [-b buffer-index] [-t target-pane]
+paste-buffer (pasteb) [-dpr] [-s separator] [-b buffer-name] [-t target-pane]
 pipe-pane (pipep) [-o] [-t target-pane] [command]
 previous-layout (prevl) [-t target-window]
 previous-window (prev) [-a] [-t target-session]
@@ -57,29 +56,29 @@ respawn-pane (respawnp) [-k] [-t target-pane] [command]
 respawn-window (respawnw) [-k] [-t target-window] [command]
 rotate-window (rotatew) [-DU] [-t target-window]
 run-shell (run) [-b] [-t target-pane] shell-command
-save-buffer (saveb) [-a] [-b buffer-index] path
+save-buffer (saveb) [-a] [-b buffer-name] path
 select-layout (selectl) [-np] [-t target-window] [layout-name]
-select-pane (selectp) [-lDLRU] [-t target-pane]
+select-pane (selectp) [-DdeLlRU] [-t target-pane]
 select-window (selectw) [-lnpT] [-t target-window]
 send-keys (send) [-lR] [-t target-pane] key ...
 send-prefix [-2] [-t target-pane]
 server-info (info) 
-set-buffer (setb) [-b buffer-index] data
+set-buffer (setb) [-a] [-b buffer-name] [-n new-buffer-name] data
 set-environment (setenv) [-gru] [-t target-session] name [value]
 set-option (set) [-agosquw] [-t target-session|target-window] option [value]
 set-window-option (setw) [-agoqu] [-t target-window] option [value]
-show-buffer (showb) [-b buffer-index]
+show-buffer (showb) [-b buffer-name]
 show-environment (showenv) [-g] [-t target-session] [name]
 show-messages (showmsgs) [-IJT] [-t target-client]
 show-options (show) [-gqsvw] [-t target-session|target-window] [option]
 show-window-options (showw) [-gv] [-t target-window] [option]
 source-file (source) path
-split-window (splitw) [-dhvP] [-c start-directory] [-F format] [-p percentage|-l size] [-t target-pane] [command]
+split-window (splitw) [-bdhvP] [-c start-directory] [-F format] [-p percentage|-l size] [-t target-pane] [command]
 start-server (start) 
 suspend-client (suspendc) [-t target-client]
 swap-pane (swapp) [-dDU] [-s src-pane] [-t dst-pane]
 swap-window (swapw) [-d] [-s src-window] [-t dst-window]
 switch-client (switchc) [-lnpr] [-c target-client] [-t target-session]
-unbind-key (unbind) [-acn] [-t key-table] key
+unbind-key (unbind) [-acn] [-t mode-table] key
 unlink-window (unlinkw) [-k] [-t target-window]
 wait-for (wait) [-L|-S|-U] channel
