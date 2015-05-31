@@ -1,2 +1,2 @@
 du: unknown option -- ?
-usage: du [-a | -s] [-chkrx] [-H | -L | -P] [file ...]
+usage: du [-achkrsx] [-H | -L | -P] [-d depth] [file ...]
