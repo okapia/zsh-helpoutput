@@ -1,4 +1,4 @@
 make: unknown option -- ?
-usage: make [-BeiknPqrSst] [-D variable] [-d flags] [-f makefile]
-	    [-I directory] [-j max_jobs] [-m directory] [-V variable]
+usage: make [-BeiknpqrSst] [-C directory] [-D variable] [-d flags] [-f mk]
+	    [-I directory] [-j max_processes] [-m directory] [-V variable]
 	    [NAME=value] [target ...]

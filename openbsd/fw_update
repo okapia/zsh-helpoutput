@@ -1,1 +1,2 @@
-usage: fw_update [-adnv] [-p path] [driver ...]
+fw_update: Unknown option -?
+Usage: fw_update [-adinv] [-D keyword] [-p path] [driver...]
