@@ -16,8 +16,8 @@ where options include:
     -connect <connector-name>:<name1>=<value1>,...
                       connect to target VM using named connector with listed argument values
     -dbgtrace [flags] print info for debugging jdb
-    -tclient          run the application in the Hotspot(tm) Performance Engine (Client)
-    -tserver          run the application in the Hotspot(tm) Performance Engine (Server)
+    -tclient          run the application in the HotSpot(TM) Client Compiler
+    -tserver          run the application in the HotSpot(TM) Server Compiler
 
 options forwarded to debuggee process:
     -v -verbose[:class|gc|jni]

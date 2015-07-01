@@ -21,6 +21,7 @@ usage: javadoc [options] [packagenames] [sourcefiles] [@files]
 -encoding <name>          Source file encoding name
 -quiet                    Do not display status messages
 -J<flag>                  Pass <flag> directly to the runtime system
+-X                        Print a synopsis of nonstandard options
 
 Provided by Standard doclet:
 -d <directory>                    Destination directory for output files
@@ -53,6 +54,7 @@ Provided by Standard doclet:
 -tag <name>:<locations>:<header>  Specify single argument custom tags
 -taglet                           The fully qualified name of Taglet to register
 -tagletpath                       The path to Taglets
+-Xdocrootparent <url>             Replaces all appearances of @docRoot followed by /.. in doc comments with <url>
 -charset <charset>                Charset for cross-platform viewing of generated documentation.
 -helpfile <file>                  Include file that help link links to
 -linksource                       Generate source in HTML
