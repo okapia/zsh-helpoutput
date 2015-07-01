@@ -1,2 +1,4 @@
-Special  options:
--Xnodate                      Do not include generation date in output
+-Xmaxerrs <number>        Set the maximum number of errors to print
+-Xmaxwarns <number>       Set the maximum number of warnings to print
+
+These options are non-standard and subject to change without notice.

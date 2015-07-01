@@ -1,4 +1,4 @@
-Usage: jar {ctxui}[vfm0Me] [jar-file] [manifest-file] [entry-point] [-C dir] files ...
+Usage: jar {ctxui}[vfm0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...
 Options:
     -c  create new archive
     -t  list table of contents for archive
@@ -10,6 +10,7 @@ Options:
     -e  specify application entry point for stand-alone application 
         bundled into an executable jar file
     -0  store only; use no ZIP compression
+    -P  preserve leading '/' (absolute path) and ".." (parent directory) components from file names
     -M  do not create a manifest file for the entries
     -i  generate index information for the specified jar files
     -C  change to the specified directory and include the following file

@@ -1,5 +1,5 @@
 Usage: jarsigner [options] jar-file alias
-       jarsigner -verify [options] jar-file
+       jarsigner -verify [options] jar-file [alias...]
 
 [-keystore <url>]           keystore location
 
@@ -8,6 +8,8 @@ Usage: jarsigner [options] jar-file alias
 [-storetype <type>]         keystore type
 
 [-keypass <password>]       password for private key (if different)
+
+[-certchain <file>]         name of alternative certchain file
 
 [-sigfile <file>]           name of .SF/.DSA file
 
@@ -19,13 +21,18 @@ Usage: jarsigner [options] jar-file alias
 
 [-verify]                   verify a signed JAR file
 
-[-verbose]                  verbose output when signing/verifying
+[-verbose[:suboptions]]     verbose output when signing/verifying.
+                            suboptions can be all, grouped or summary
 
 [-certs]                    display certificates when verbose and verifying
 
 [-tsa <url>]                location of the Timestamping Authority
 
 [-tsacert <alias>]          public key certificate for Timestamping Authority
+
+[-tsapolicyid <oid>]        TSAPolicyID for Timestamping Authority
+
+[-tsadigestalg <algorithm>] algorithm of digest data in timestamping request
 
 [-altsigner <class>]        class name of an alternative signing mechanism
 
@@ -41,4 +48,6 @@ Usage: jarsigner [options] jar-file alias
 
 [-providerClass <class>     name of cryptographic service provider's
   [-providerArg <arg>]] ... master class file and constructor argument
+
+[-strict]                   treat warnings as errors
 
