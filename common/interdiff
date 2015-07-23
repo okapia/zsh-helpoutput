@@ -1,0 +1,29 @@
+usage: interdiff [OPTIONS] patch1 patch2
+       interdiff --version|--help
+OPTIONS are:
+  -U N, --unified=N
+                  max lines of context to carry
+  -i, --ignore-case
+                  Consider upper- and lower-case to be the same
+  -w, --ignore-all-space
+                  ignore whitespace changes in patches
+  -b, --ignore-space-change
+                  ignore changes in the amount of whitespace
+  -B, --ignore-blank-lines
+                  ignore changes whose lines are all blank
+  -p N, --strip-match=N
+                  pathname components to ignore
+  -q, --quiet
+                  don't add rationale text
+  -d PAT, --drop-context=PAT
+                  drop context on matching files
+  -z, --decompress
+                  decompress .gz and .bz2 files
+  --interpolate   run as 'interdiff'
+  --combine       run as 'combinediff'
+  --flip          run as 'flipdiff'
+  --no-revert-omitted
+                  (interdiff) When a patch from patch1 is not in patch2,
+                  don't revert it
+  --in-place      (flipdiff) Write the output to the original input
+                  files
