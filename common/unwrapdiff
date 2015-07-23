@@ -1,0 +1,3 @@
+usage: unwrapdiff [OPTIONS] [FILE...]
+OPTIONS are:
+  -v              verbose output (to stderr)
