@@ -1,0 +1,44 @@
+usage: filterdiff [OPTION]... [files ...]
+Options:
+  -x PAT, --exclude=PAT
+            exclude files matching PAT
+  -X FILE, --exclude-from-file=FILE
+            exclude files that match any pattern in FILE
+  -i PAT, --include=PAT
+            include only files matching PAT
+  -I FILE, --include-from-file=FILE
+            include only files that match any pattern in FILE
+  --hunks=H, -# H
+            include only hunks in range H
+  --lines=L include only hunks with (original) lines in range L
+  --files=F include only files in range F
+  --annotate 
+            annotate each hunk with the filename and hunk number 
+  --as-numbered-lines=before|after 
+            display lines as they would look before, or after, the 
+            patch is applied 
+  --format=context|unified 
+            set output format 
+  --remove-timestamps 
+            don't show timestamps from output 
+  --clean 
+            remove all comments (non-diff lines) from output 
+  -z, --decompress
+            decompress .gz and .bz2 files
+  -n, --line-number
+  -p N, --strip-match=N
+            initial pathname components to ignore
+  --strip=N initial pathname components to strip
+  --addprefix=PREFIX
+            prefix pathnames with PREFIX
+  --addoldprefix=PREFIX
+            prefix pathnames in old files with PREFIX
+  --addnewprefix=PREFIX
+            prefix pathnames in new files with PREFIX
+  -s, --status
+  -v, --verbose
+            verbose output -- use more than once for extra verbosity
+  -E, --extended-regexp
+  -f FILE, --file=FILE
+  --list    run as 'lsdiff' 
+  --grep    run as 'grepdiff' 
