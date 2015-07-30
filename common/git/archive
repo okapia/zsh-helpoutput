@@ -1,6 +1,6 @@
-usage: git archive [options] <tree-ish> [<path>...]
+usage: git archive [<options>] <tree-ish> [<path>...]
    or: git archive --list
-   or: git archive --remote <repo> [--exec <cmd>] [options] <tree-ish> [<path>...]
+   or: git archive --remote <repo> [--exec <cmd>] [<options>] <tree-ish> [<path>...]
    or: git archive --remote <repo> [--exec <cmd>] --list
 
     --format <fmt>        archive format

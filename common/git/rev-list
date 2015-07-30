@@ -29,6 +29,7 @@ usage: git rev-list [OPTION] <commit-id>... [ -- paths... ]
     --abbrev=<n> | --no-abbrev
     --abbrev-commit
     --left-right
+    --count
   special purpose:
     --bisect
     --bisect-vars

@@ -28,4 +28,7 @@ usage: git update-index [<options>] [--] [<file>...]
     --clear-resolve-undo  (for porcelains) forget saved unresolved conflicts
     --index-version <n>   write index in this format
     --split-index         enable or disable split index
+    --untracked-cache     enable/disable untracked cache
+    --force-untracked-cache
+                          enable untracked cache without testing the filesystem
 
