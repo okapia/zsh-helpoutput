@@ -1,106 +1,91 @@
 Usage: gphoto2 [OPTION...]
 
 Common options
-  -?, --help                                 Print complete help message on
-                                             program usage
-      --usage                                Print short message on program
-                                             usage
-      --debug                                Turn on debugging
-      --debug-loglevel=STRING                Set debug level
-                                             [error|debug|data|all]
-      --debug-logfile=FILENAME               Name of file to write debug info
-                                             to
-      --quiet                                Quiet output (default=verbose)
-      --hook-script=FILENAME                 Hook script to call after
-                                             downloads, captures, etc.
+  -?, --help                                                                      Print complete help message on program usage
+      --usage                                                                     Print short message on program usage
+      --debug                                                                     Turn on debugging
+      --debug-loglevel=STRING                                                     Set debug level [error|debug|data|all]
+      --debug-logfile=FILENAME                                                    Name of file to write debug info to
+      --quiet                                                                     Quiet output (default=verbose)
+      --hook-script=FILENAME                                                      Hook script to call after downloads, captures, etc.
 
 Miscellaneous options (unsorted)
-      --stdout                               Send file to stdout
-      --stdout-size                          Print filesize before data
-      --auto-detect                          List auto-detected cameras
-      --show-exif=STRING                     Show EXIF information
-      --show-info=STRING                     Show info
-      --summary                              Show summary
-      --manual                               Show camera driver manual
-      --about                                About the camera driver manual
-      --storage-info                         Show storage information
-      --shell                                gPhoto shell
+      --stdout                                                                    Send file to stdout
+      --stdout-size                                                               Print filesize before data
+      --auto-detect                                                               List auto-detected cameras
+      --show-exif=STRING                                                          Show EXIF information of JPEG images
+      --show-info=STRING                                                          Show image information, like width, height, and capture time
+      --summary                                                                   Show camera summary
+      --manual                                                                    Show camera driver manual
+      --about                                                                     About the camera driver manual
+      --storage-info                                                              Show storage information
+      --shell                                                                     gPhoto shell
 
 Get information on software and host system (not from the camera)
-  -v, --version                              Display version and exit
-      --list-cameras                         List supported camera models
-      --list-ports                           List supported port devices
-  -a, --abilities                            Display camera/driver abilities
+  -v, --version                                                                   Display version and exit
+      --list-cameras                                                              List supported camera models
+      --list-ports                                                                List supported port devices
+  -a, --abilities                                                                 Display the camera/driver abilities in the libgphoto2 database
 
 Specify the camera to use
-      --port=FILENAME                        Specify device port
-      --speed=SPEED                          Specify serial transfer speed
-      --camera=MODEL                         Specify camera model
-      --usbid=USBIDs                         (expert only) Override USB IDs
+      --port=FILENAME                                                             Specify device port
+      --speed=SPEED                                                               Specify serial transfer speed
+      --camera=MODEL                                                              Specify camera model
+      --usbid=USBIDs                                                              (expert only) Override USB IDs
 
 Camera and software configuration
-      --list-config                          List configuration tree
-      --list-all-config                      Dump full configuration tree
-      --get-config=STRING                    Get configuration value
-      --set-config=STRING                    Set configuration value or index
-                                             in choices
-      --set-config-index=STRING              Set configuration value index in
-                                             choices
-      --set-config-value=STRING              Set configuration value
-      --reset                                Reset device port
+      --list-config                                                               List configuration tree
+      --list-all-config                                                           Dump full configuration tree
+      --get-config=STRING                                                         Get configuration value
+      --set-config=STRING                                                         Set configuration value or index in choices
+      --set-config-index=STRING                                                   Set configuration value index in choices
+      --set-config-value=STRING                                                   Set configuration value
+      --reset                                                                     Reset device port
 
 Capture an image from or on the camera
-      --keep                                 Keep images on camera after
-                                             capturing
-      --no-keep                              Remove images from camera after
-                                             capturing
-      --wait-event[=COUNT]                   Wait for event(s) from camera
-      --wait-event-and-download[=COUNT]      Wait for event(s) from the camera
-                                             and download new images
-      --capture-preview                      Capture a quick preview
-  -B, --bulb=SECONDS                         Set bulb exposure time in seconds
-  -F, --frames=COUNT                         Set number of frames to capture
-                                             (default=infinite)
-  -I, --interval=SECONDS                     Set capture interval in seconds
-      --reset-interval                       Reset capture interval on signal
-                                             (default=no)
-      --capture-image                        Capture an image
-      --trigger-capture                      Trigger capture of an image
-      --capture-image-and-download           Capture an image and download it
-      --capture-movie[=COUNT or SECONDS]     Capture a movie
-      --capture-sound                        Capture an audio clip
-      --capture-tethered[=COUNT]             Wait for shutter release on the
-                                             camera and download
-      --trigger-capture                      Trigger image capture
+      --keep                                                                      Keep images on camera after capturing
+      --keep-raw                                                                  Keep RAW images on camera after capturing
+      --no-keep                                                                   Remove images from camera after capturing
+      --wait-event[=COUNT, SECONDS, MILLISECONDS or MATCHSTRING]                  Wait for event(s) from camera
+      --wait-event-and-download[=COUNT, SECONDS, MILLISECONDS or MATCHSTRING]     Wait for event(s) from the camera and download new images
+      --capture-preview                                                           Capture a quick preview
+      --show-preview                                                              Show a quick preview as Ascii Art
+  -B, --bulb=SECONDS                                                              Set bulb exposure time in seconds
+  -F, --frames=COUNT                                                              Set number of frames to capture (default=infinite)
+  -I, --interval=SECONDS                                                          Set capture interval in seconds
+      --reset-interval                                                            Reset capture interval on signal (default=no)
+      --capture-image                                                             Capture an image
+      --trigger-capture                                                           Trigger capture of an image
+      --capture-image-and-download                                                Capture an image and download it
+      --capture-movie[=COUNT or SECONDS]                                          Capture a movie
+      --capture-sound                                                             Capture an audio clip
+      --capture-tethered[=COUNT, SECONDS, MILLISECONDS or MATCHSTRING]            Wait for shutter release on the camera and download
+      --trigger-capture                                                           Trigger image capture
 
 Downloading, uploading and manipulating files
-  -l, --list-folders                         List folders in folder
-  -L, --list-files                           List files in folder
-  -m, --mkdir=DIRNAME                        Create a directory
-  -r, --rmdir=DIRNAME                        Remove a directory
-  -n, --num-files                            Display number of files
-  -p, --get-file=RANGE                       Get files given in range
-  -P, --get-all-files                        Get all files from folder
-  -t, --get-thumbnail=RANGE                  Get thumbnails given in range
-  -T, --get-all-thumbnails                   Get all thumbnails from folder
-      --get-metadata=RANGE                   Get metadata given in range
-      --get-all-metadata                     Get all metadata from folder
-      --upload-metadata=STRING               Upload metadata for file
-      --get-raw-data=RANGE                   Get raw data given in range
-      --get-all-raw-data                     Get all raw data from folder
-      --get-audio-data=RANGE                 Get audio data given in range
-      --get-all-audio-data                   Get all audio data from folder
-  -d, --delete-file=RANGE                    Delete files given in range
-  -D, --delete-all-files                     Delete all files in folder
-                                             (--no-recurse by default)
-  -u, --upload-file=FILENAME                 Upload a file to camera
-      --filename=FILENAME_PATTERN            Specify a filename or filename
-                                             pattern
-  -f, --folder=FOLDER                        Specify camera folder
-                                             (default="/")
-  -R, --recurse                              Recursion (default for download)
-      --no-recurse                           No recursion (default for
-                                             deletion)
-      --new                                  Process new files only
-      --force-overwrite                      Overwrite files without asking
-      --skip-existing                        Skip existing files
+  -l, --list-folders                                                              List folders in folder
+  -L, --list-files                                                                List files in folder
+  -m, --mkdir=DIRNAME                                                             Create a directory
+  -r, --rmdir=DIRNAME                                                             Remove a directory
+  -n, --num-files                                                                 Display number of files
+  -p, --get-file=RANGE                                                            Get files given in range
+  -P, --get-all-files                                                             Get all files from folder
+  -t, --get-thumbnail=RANGE                                                       Get thumbnails given in range
+  -T, --get-all-thumbnails                                                        Get all thumbnails from folder
+      --get-metadata=RANGE                                                        Get metadata given in range
+      --get-all-metadata                                                          Get all metadata from folder
+      --upload-metadata=STRING                                                    Upload metadata for file
+      --get-raw-data=RANGE                                                        Get raw data given in range
+      --get-all-raw-data                                                          Get all raw data from folder
+      --get-audio-data=RANGE                                                      Get audio data given in range
+      --get-all-audio-data                                                        Get all audio data from folder
+  -d, --delete-file=RANGE                                                         Delete files given in range
+  -D, --delete-all-files                                                          Delete all files in folder (--no-recurse by default)
+  -u, --upload-file=FILENAME                                                      Upload a file to camera
+      --filename=FILENAME_PATTERN                                                 Specify a filename or filename pattern
+  -f, --folder=FOLDER                                                             Specify camera folder (default="/")
+  -R, --recurse                                                                   Recursion (default for download)
+      --no-recurse                                                                No recursion (default for deletion)
+      --new                                                                       Process new files only
+      --force-overwrite                                                           Overwrite files without asking
+      --skip-existing                                                             Skip existing files
