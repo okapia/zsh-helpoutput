@@ -9,8 +9,12 @@ Usage: /usr/bin/mosh [options] [--] [user@]host [command...]
 -n      --predict=never         never use local echo
         --predict=experimental  aggressively echo even when incorrect
 
+-4      --family=inet        use IPv4 only [default]
+-6      --family=inet6       use IPv6 only
 -p PORT[:PORT2]
         --port=PORT[:PORT2]  server-side UDP port or range
+        --bind-server={ssh|any|IP}  ask the server to reply from an IP address
+                                       (default: "ssh")
 
         --ssh=COMMAND        ssh command to run when setting up session
                                 (example: "ssh -p 2222")
