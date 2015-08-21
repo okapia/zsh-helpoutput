@@ -1,0 +1,3 @@
+last: unknown option -- ?
+usage: last [-#] [-nTx] [-f file] [-H hostsize] [-h host] [-L linesize]
+	    [-N namesize] [-t tty] [user ...]

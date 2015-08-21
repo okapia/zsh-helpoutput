@@ -1,0 +1,2 @@
+usage: join [-a fileno | -v fileno] [-e string] [-j fileno field]
+            [-o list] [-t char] [-1 field] [-2 field] file1 file2

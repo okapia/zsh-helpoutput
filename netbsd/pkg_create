@@ -1,0 +1,10 @@
+pkg_create: unknown option -- ?
+usage: pkg_create [-ElOUVv] [-B build-info-file] [-b build-version-file]
+                  [-C cpkgs] [-D displayfile] [-F compression] 
+                  [-I realprefix] [-i iscript]
+                  [-K pkg_dbdir] [-k dscript]
+                  [-n preserve-file] [-P dpkgs] [-p prefix] [-r rscript]
+                  [-S size-all-file] [-s size-pkg-file]
+                  [-T buildpkgs] [-u owner] [-g group]
+                  -c comment -d description -f packlist
+                  pkg-name

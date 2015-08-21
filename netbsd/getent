@@ -1,0 +1,4 @@
+Usage: getent database [key ...]
+	database may be one of:
+		disktab ethers gettytab group hosts netgroup networks
+		passwd printcap protocols rpc services shells

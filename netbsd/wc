@@ -1,0 +1,2 @@
+wc: unknown option -- ?
+usage: wc [-c | -m] [-Llw] [file ...]

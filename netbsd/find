@@ -1,0 +1,1 @@
+usage: find [-H | -L | -P] [-dEhsXx] [-f file] file [file ...] [expression]

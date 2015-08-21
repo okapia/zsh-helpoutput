@@ -1,0 +1,3 @@
+sed: unknown option -- ?
+usage:	sed [-aEnr] script [file ...]
+	sed [-aEnr] [-e script] ... [-f script_file] ... [file ...]

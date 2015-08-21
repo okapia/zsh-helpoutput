@@ -1,0 +1,3 @@
+systat: unknown option -- ?
+usage: systat [-n] [-M core] [-N system] [-w wait] [-t turns]
+		[display] [refresh-interval]
