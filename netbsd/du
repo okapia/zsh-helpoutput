@@ -1,0 +1,2 @@
+du: unknown option -- ?
+usage: du [-H | -L | -P] [-a | -d depth | -s] [-cghkmnrx] [file ...]

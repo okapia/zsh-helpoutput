@@ -1,0 +1,2 @@
+uniq: unknown option -- ?
+Usage: uniq [-cdu] [-f fields] [-s chars] [input [output]]

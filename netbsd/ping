@@ -1,0 +1,4 @@
+usage: 
+ping [-aCDdfLnoPQqRrv] [-c count] [-g gateway] [-h host] [-I addr] [-i interval]
+     [-l preload] [-p pattern] [-s size] [-T ttl] [-t tos] [-w maxwait] 
+     [-E policy] host

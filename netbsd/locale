@@ -1,0 +1,3 @@
+locale: unknown option -- ?
+usage: locale [ -a | -m ]
+       locale [ -ck ] name ...

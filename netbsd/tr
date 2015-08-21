@@ -1,0 +1,5 @@
+tr: unknown option -- ?
+usage: tr [-cs] string1 string2
+       tr [-c] -d string1
+       tr [-c] -s string1
+       tr [-c] -ds string1 string2

@@ -1,0 +1,3 @@
+Usage:	cut -b list [-n] [file ...]
+	cut -c list [file1 ...]
+	cut -f list [-d delim] [-s] [file ...]

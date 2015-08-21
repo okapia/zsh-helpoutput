@@ -1,0 +1,3 @@
+vmstat: unknown option -- ?
+usage: vmstat [-CefHiLlmstUvW] [-c count] [-h hashname] [-M core] [-N system]
+		[-u histname] [-w wait] [disks]

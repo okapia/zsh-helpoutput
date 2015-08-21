@@ -1,0 +1,2 @@
+date: unknown option -- ?
+Usage: date [-ajnu] [-d date] [-r seconds] [+format] [[[[[[CC]yy]mm]dd]HH]MM[.SS]]
