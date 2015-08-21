@@ -1,0 +1,2 @@
+usage:	ln [-fhinsv] file1 file2
+	ln [-fhinsv] file ... directory

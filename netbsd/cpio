@@ -1,0 +1,6 @@
+cpio: unknown option -- ?
+usage: cpio -o [-aABcLvzZ] [-C bytes] [-F archive] [-H format] [-O archive]
+               < name-list [> archive]
+       cpio -i [-bBcdfmrsStuvzZ6] [-C bytes] [-E file] [-F archive] [-H format] 
+               [-I archive] [pattern ...] [< archive]
+       cpio -p [-adlLmuv] destination-directory < name-list

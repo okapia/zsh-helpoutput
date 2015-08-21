@@ -1,0 +1,25 @@
+ifconfig: unknown option -- ?
+usage: ifconfig [-h] [-m] [-v] [-z] [-L] interface
+	[ af [ address [ dest_addr ] ] [ netmask mask ] [ prefixlen n ]
+		[ alias | -alias ] ]
+	[ up ] [ down ] [ metric n ] [ mtu n ]
+	[ maxupd n ] [ syncdev iface ] [syncpeer peer_addr]
+	[ vlan n vlanif i ]
+	[ [ af ] tunnel src_addr dest_addr ] [ deletetunnel ]
+	[ media type ] [ mediaopt opts ] [ -mediaopt opts ] [ instance minst ]
+	[ nwid network_id ] [ nwkey network_key | -nwkey ]
+	[ list scan ]
+	[ powersave | -powersave ] [ powersavesleep duration ]
+	[ hidessid | -hidessid ] [ apbridge | -apbridge ]
+	[ agrport i ] [ -agrport i ]
+	[ anycast | -anycast ] [ deprecated | -deprecated ]
+	[ tentative | -tentative ] [ pltime n ] [ vltime n ] [ eui64 ]
+	[ advbase n ] [ advskew n ] [ carpdev iface ] [ pass passphrase ] [ state state ] [ vhid n ]
+	[ arp | -arp ]
+	[ preference n ]
+	[ link0 | -link0 ] [ link1 | -link1 ] [ link2 | -link2 ]
+       ifconfig -a [-b] [-d] [-h] [-m] [-u] [-v] [-z] [ af ]
+       ifconfig -l [-b] [-d] [-s] [-u]
+       ifconfig -C
+       ifconfig interface create
+       ifconfig interface destroy

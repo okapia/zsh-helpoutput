@@ -1,0 +1,7 @@
+sysctl: unknown option -- ?
+usage:	sysctl [-dneq] [-x[x]|-r] variable ...
+	sysctl [-ne] [-q] -w variable=value ...
+	sysctl [-dne] -a
+	sysctl [-dne] -A
+	sysctl [-ne] -M
+	sysctl [-dne] [-q] -f file

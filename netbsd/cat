@@ -1,0 +1,2 @@
+cat: unknown option -- ?
+usage: cat [-beflnstuv] [-] [file ...]

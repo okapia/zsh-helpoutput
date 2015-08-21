@@ -1,0 +1,4 @@
+usage: usermod [-FmoSv] [-C yes/no] [-c comment] [-d home-dir] [-e expiry-time]
+	[-f inactive] [-G secondary-group] [-g gid | name | =uid]
+	[-L login-class] [-l new-login] [-p password] [-s shell] [-u uid]
+	user

@@ -1,0 +1,2 @@
+ls: unknown option -- ?
+usage: ls [-AaBbCcdFfghikLlMmnopqRrSsTtuWwx1] [file ...]

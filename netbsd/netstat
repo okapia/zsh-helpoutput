@@ -1,0 +1,9 @@
+netstat: unknown option -- ?
+usage: netstat [-Aan] [-f address_family] [-M core] [-N system]
+       netstat [-bdgiLmnqrsSv] [-f address_family] [-M core] [-N system]
+       netstat [-dn] [-I interface] [-M core] [-N system] [-w wait]
+       netstat [-p protocol] [-M core] [-N system]
+       netstat [-p protocol] [-M core] [-N system] -P pcbaddr
+       netstat [-p protocol] [-i] [-I Interface] 
+       netstat [-s] [-f address_family] [-i] [-I Interface]
+       netstat [-s] [-B] [-I interface]

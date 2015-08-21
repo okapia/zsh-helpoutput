@@ -1,0 +1,2 @@
+su: unknown option -- ?
+Usage: su [-dflmc:] [login[:group] [shell arguments]]

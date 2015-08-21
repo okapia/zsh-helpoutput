@@ -1,0 +1,15 @@
+BSD tip/cu
+Usage: cu [options] [phone-number|"dir"]
+ -E,--escape char: Use this escape character
+ -F,--flow {hard,soft,none}: Use RTS/CTS, ^S/^Q, no flow control
+ -f: Use no flow control
+ --nostop: Do not use software flow control
+ -a, -p,--port port: Use this port as ACU/Dialer
+ -c,--phone number: Call this number
+ -h,--halfduplex: Echo characters locally (use "half duplex")
+ -e: Use even parity
+ -o: Use odd parity
+ -P,--parity {even,odd,none}: use even, odd, no parity
+ -l,--line line: Use this device (ttyXX)
+ -s,--speed,--baud speed,-#: Use this speed
+ -t: Connect via hard-wired connection

@@ -1,0 +1,2 @@
+head: unknown option -- ?
+usage: head [-n lines] [file ...]

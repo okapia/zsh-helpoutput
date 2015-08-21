@@ -1,0 +1,1 @@
+usage: groupadd [-ov] [-g gid] [-r lowgid..highgid] group

@@ -1,0 +1,2 @@
+script: unknown option -- ?
+Usage: script [-c <command>][-adfpqr] [file]
