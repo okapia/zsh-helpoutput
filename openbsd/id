@@ -1,5 +1,6 @@
 id: unknown option -- ?
 usage: id [user]
+       id -c [user]
        id -G [-n] [user]
        id -g [-nr] [user]
        id -p [user]

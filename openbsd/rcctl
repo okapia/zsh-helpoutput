@@ -1,2 +1,2 @@
-usage: rcctl [-df] enable|disable|get|set|getdef|getall|order|action
-             [service | daemon [variable [arguments]] | daemons]
+usage: rcctl [-df] action|get|getdef|ls|order|set
+                [service | daemon [variable [arguments]] | daemons | lsarg]
