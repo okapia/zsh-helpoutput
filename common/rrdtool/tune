@@ -1,0 +1,26 @@
+RRDtool 1.4.8  Copyright 1997-2013 by Tobias Oetiker <tobi@oetiker.ch>
+               Compiled Sep  9 2015 22:14:36
+
+Usage: rrdtool [options] command command_options
+ * tune -  Modify some basic properties of an RRD
+
+	rrdtool tune filename
+		[--heartbeat|-h ds-name:heartbeat]
+		[--data-source-type|-d ds-name:DST]
+		[--data-source-rename|-r old-name:new-name]
+		[--minimum|-i ds-name:min] [--maximum|-a ds-name:max]
+		[--deltapos scale-value] [--deltaneg scale-value]
+		[--failure-threshold integer]
+		[--window-length integer]
+		[--alpha adaptation-parameter]
+
+		[--beta adaptation-parameter]
+		[--gamma adaptation-parameter]
+		[--gamma-deviation adaptation-parameter]
+		[--aberrant-reset ds-name]
+
+RRDtool is distributed under the Terms of the GNU General
+Public License Version 2. (www.gnu.org/copyleft/gpl.html)
+
+For more information read the RRD manpages
+

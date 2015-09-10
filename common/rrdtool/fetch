@@ -1,0 +1,16 @@
+RRDtool 1.4.8  Copyright 1997-2013 by Tobias Oetiker <tobi@oetiker.ch>
+               Compiled Sep  9 2015 22:14:36
+
+Usage: rrdtool [options] command command_options
+* fetch - fetch data out of an RRD
+
+	rrdtool fetch filename.rrd CF
+		[-r|--resolution resolution]
+		[-s|--start start] [-e|--end end]
+		[--daemon <address>]
+
+RRDtool is distributed under the Terms of the GNU General
+Public License Version 2. (www.gnu.org/copyleft/gpl.html)
+
+For more information read the RRD manpages
+
