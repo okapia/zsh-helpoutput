@@ -1,0 +1,13 @@
+RRDtool 1.4.8  Copyright 1997-2013 by Tobias Oetiker <tobi@oetiker.ch>
+               Compiled Sep  9 2015 22:14:36
+
+Usage: rrdtool [options] command command_options
+* first - show first update time for RRA within an RRD
+
+	rrdtool first filename.rrd [--rraindex number]
+
+RRDtool is distributed under the Terms of the GNU General
+Public License Version 2. (www.gnu.org/copyleft/gpl.html)
+
+For more information read the RRD manpages
+

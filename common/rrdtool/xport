@@ -1,0 +1,19 @@
+RRDtool 1.4.8  Copyright 1997-2013 by Tobias Oetiker <tobi@oetiker.ch>
+               Compiled Sep  9 2015 22:14:36
+
+Usage: rrdtool [options] command command_options
+* xport - generate XML dump from one or several RRD
+
+	rrdtool xport [-s|--start seconds] [-e|--end seconds]
+		[-m|--maxrows rows]
+		[--step seconds]
+		[--enumds] [--json]
+		[DEF:vname=rrd:ds-name:CF]
+		[CDEF:vname=rpn-expression]
+		[XPORT:vname:legend]
+
+RRDtool is distributed under the Terms of the GNU General
+Public License Version 2. (www.gnu.org/copyleft/gpl.html)
+
+For more information read the RRD manpages
+

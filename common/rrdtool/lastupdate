@@ -1,0 +1,14 @@
+RRDtool 1.4.8  Copyright 1997-2013 by Tobias Oetiker <tobi@oetiker.ch>
+               Compiled Sep  9 2015 22:14:36
+
+Usage: rrdtool [options] command command_options
+* lastupdate - returns the most recent datum stored for
+  each DS in an RRD
+
+	rrdtool lastupdate filename.rrd
+
+RRDtool is distributed under the Terms of the GNU General
+Public License Version 2. (www.gnu.org/copyleft/gpl.html)
+
+For more information read the RRD manpages
+
