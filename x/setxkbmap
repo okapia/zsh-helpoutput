@@ -1,0 +1,23 @@
+Usage: setxkbmap [options] [<layout> [<variant> [<option> ... ]]]
+Options:
+  -?, -help           Print this message
+  -compat <name>      Specifies compatibility map component name
+  -config <file>      Specifies configuration file to use
+  -device <deviceid>  Specifies the device ID to use
+  -display <dpy>      Specifies display to use
+  -geometry <name>    Specifies geometry component name
+  -I<dir>             Add <dir> to list of directories to be used
+  -keycodes <name>    Specifies keycodes component name
+  -keymap <name>      Specifies name of keymap to load
+  -layout <name>      Specifies layout used to choose component names
+  -model <name>       Specifies model used to choose component names
+  -option <name>      Adds an option used to choose component names
+  -print              Print a complete xkb_keymap description and exit
+  -query              Print the current layout settings and exit
+  -rules <name>       Name of rules file to use
+  -symbols <name>     Specifies symbols component name
+  -synch              Synchronize request with X server
+  -types <name>       Specifies types component name
+  -v[erbose] [<lvl>]  Sets verbosity (1..10).  Higher values yield
+                      more messages
+  -variant <name>     Specifies layout variant used to choose component names
