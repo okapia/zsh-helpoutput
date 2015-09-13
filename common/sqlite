@@ -5,18 +5,19 @@ OPTIONS include:
    -bail                stop after hitting an error
    -batch               force batch I/O
    -column              set output mode to 'column'
-   -cmd command         run "command" before reading stdin
+   -cmd COMMAND         run "COMMAND" before reading stdin
    -csv                 set output mode to 'csv'
    -echo                print commands before execution
-   -init filename       read/process named file
+   -init FILENAME       read/process named file
    -[no]header          turn headers on or off
    -help                show this message
    -html                set output mode to HTML
    -interactive         force interactive I/O
    -line                set output mode to 'line'
    -list                set output mode to 'list'
-   -nullvalue 'text'    set text string for NULL values
-   -separator 'x'       set output field separator (|)
+   -mmap N              default mmap size set to N
+   -nullvalue TEXT      set text string for NULL values. Default ''
+   -separator SEP       set output field separator. Default: '|'
    -stats               print memory stats before each finalize
    -version             show SQLite version
    -vfs NAME            use NAME as the default VFS
