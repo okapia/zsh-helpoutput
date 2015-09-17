@@ -1,5 +1,5 @@
-rsync  version 3.0.6  protocol version 30
-Copyright (C) 1996-2009 by Andrew Tridgell, Wayne Davison, and others.
+rsync  version 3.0.9  protocol version 30
+Copyright (C) 1996-2011 by Andrew Tridgell, Wayne Davison, and others.
 Web site: http://rsync.samba.org/
 Capabilities:
     64-bit files, 64-bit inums, 64-bit timestamps, 64-bit long ints,
@@ -76,7 +76,7 @@ Options
      --del                   an alias for --delete-during
      --delete                delete extraneous files from destination dirs
      --delete-before         receiver deletes before transfer, not during
-     --delete-during         receiver deletes during transfer (default)
+     --delete-during         receiver deletes during the transfer
      --delete-delay          find deletions during, delete after
      --delete-after          receiver deletes after transfer, not during
      --delete-excluded       also delete excluded files from destination dirs
@@ -135,10 +135,11 @@ Options
      --read-batch=FILE       read a batched update from FILE
      --protocol=NUM          force an older protocol version to be used
      --iconv=CONVERT_SPEC    request charset conversion of filenames
+     --checksum-seed=NUM     set block/file checksum seed (advanced)
  -4, --ipv4                  prefer IPv4
  -6, --ipv6                  prefer IPv6
      --version               print version number
-(-h) --help                  show this help (-h works with no other options)
+(-h) --help                  show this help (-h is --help only if used alone)
 
 Use "rsync --daemon --help" to see the daemon-mode command-line options.
 Please see the rsync(1) and rsyncd.conf(5) man pages for full documentation.
