@@ -1,8 +1,8 @@
 
 Wiggle - apply patches that 'patch' rejects.
 
-Wiggle provides three distinct but related functions:
-merge, diff, and extract.
+Wiggle provides four distinct but related functions:
+merge, diff, extract, and browse.
 To get more detailed help on a function, select the function
 before requesting help.  e.g.
     wiggle --diff --help
@@ -11,6 +11,7 @@ Options:
    --extract   -x    : select 'extract' function.
    --diff      -d    : select 'diff' function.
    --merge     -m    : select 'merge' function (default).
+   --browse    -B    : select 'browse' function.
 
    --words     -w    : word-wise diff and merge.
    --lines     -l    : line-wise diff and merge.
@@ -18,6 +19,8 @@ Options:
    --patch     -p    : treat last file as a patch file.
    -1  -2  -3        : select which component of patch or merge to use.
    --reverse   -R    : swap 'before' and 'after' for diff function.
+   --no-ignore -i    : Don't ignore already-applied changes.
+   --show-wiggle -W  : Report wiggles like conflicts with an extra stanza.
 
    --help      -h    : get help.
    --version   -V    : get version of wiggle.
@@ -25,6 +28,8 @@ Options:
    --quiet     -q    : don't print un-necessary messages.
 
    --replace   -r    : replace first file with result of merger.
+
+   --strip=    -p    : number of path components to strip from file names.
 
 Wiggle needs to be given 1, 2, or 3 files.  Any one of these can
 be given as '-' to signify standard input.
