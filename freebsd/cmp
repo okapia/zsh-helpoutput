@@ -1,0 +1,2 @@
+cmp: illegal option -- ?
+usage: cmp [-l | -s | -x] [-hz] file1 file2 [skip1 [skip2]]

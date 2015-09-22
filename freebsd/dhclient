@@ -1,0 +1,1 @@
+usage: dhclient [-bdqu] [-c conffile] [-l leasefile] interface

@@ -1,0 +1,26 @@
+usage: freebsd-update [options] command ... [path]
+
+Options:
+  -b basedir   -- Operate on a system mounted at basedir
+                  (default: /)
+  -d workdir   -- Store working files in workdir
+                  (default: /var/db/freebsd-update/)
+  -f conffile  -- Read configuration options from conffile
+                  (default: /etc/freebsd-update.conf)
+  -F           -- Force a fetch operation to proceed
+  -k KEY       -- Trust an RSA key with SHA256 hash of KEY
+  -r release   -- Target for upgrade (e.g., 6.2-RELEASE)
+  -s server    -- Server from which to fetch updates
+                  (default: update.FreeBSD.org)
+  -t address   -- Mail output of cron command, if any, to address
+                  (default: root)
+  --not-running-from-cron
+               -- Run without a tty, for use by automated tools
+Commands:
+  fetch        -- Fetch updates from server
+  cron         -- Sleep rand(3600) seconds, fetch updates, and send an
+                  email if updates were found
+  upgrade      -- Fetch upgrades to FreeBSD version specified via -r option
+  install      -- Install downloaded updates or upgrades
+  rollback     -- Uninstall most recently installed updates
+  IDS          -- Compare the system against an index of "known good" files.

@@ -1,0 +1,2 @@
+usage: truss [-cfaedDS] [-o file] [-s strsize] -p pid
+       truss [-cfaedDS] [-o file] [-s strsize] command [args]

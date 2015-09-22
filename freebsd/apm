@@ -1,0 +1,2 @@
+apm: illegal option -- ?
+usage: apm [-ablstzZ] [-d enable ] [ -e enable ] [ -h enable ] [-r delta]

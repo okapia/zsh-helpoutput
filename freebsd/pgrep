@@ -1,0 +1,3 @@
+usage: pgrep [-LSfilnoqvx] [-d delim] [-F pidfile] [-G gid] [-M core] [-N system]
+             [-P ppid] [-U uid] [-c class] [-g pgrp] [-j jid]
+             [-s sid] [-t tty] [-u euid] pattern ...

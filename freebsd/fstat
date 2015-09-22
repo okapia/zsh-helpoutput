@@ -1,0 +1,2 @@
+fstat: illegal option -- ?
+usage: fstat [-fmnv] [-M core] [-N system] [-p pid] [-u user] [file ...]

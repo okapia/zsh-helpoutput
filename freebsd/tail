@@ -1,0 +1,2 @@
+tail: illegal option -- ?
+usage: tail [-F | -f | -r] [-q] [-b # | -c # | -n #] [file ...]

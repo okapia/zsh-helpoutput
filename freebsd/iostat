@@ -1,0 +1,2 @@
+usage: iostat [-CdhIKoTxz?] [-c count] [-M core] [-n devs] [-N system]
+	      [-t type,if,pass] [-w wait] [drives]

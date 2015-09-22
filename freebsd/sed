@@ -1,0 +1,3 @@
+sed: illegal option -- ?
+usage: sed script [-Ealnru] [-i extension] [file ...]
+	sed [-Ealnu] [-i extension] [-e script] ... [-f script_file] ... [file ...]

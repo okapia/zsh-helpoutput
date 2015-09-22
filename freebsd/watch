@@ -1,0 +1,2 @@
+watch: illegal option -- ?
+usage: watch [-ciotnW] [tty name]

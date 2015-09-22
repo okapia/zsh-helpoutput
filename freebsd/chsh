@@ -1,0 +1,2 @@
+chsh: illegal option -- ?
+usage: chpass [-d domain] [-h host] [-a list] [-p encpass] [-s shell] [-e mmm dd yy] [user]

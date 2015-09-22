@@ -1,0 +1,2 @@
+gcore: illegal option -- ?
+usage: gcore [-s] [-c core] [executable] pid

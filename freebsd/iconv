@@ -1,0 +1,4 @@
+Usage:	iconv [-cs] -f <from_code> -t <to_code> [file ...]
+	iconv -f <from_code> [-cs] [-t <to_code>] [file ...]
+	iconv -t <to_code> [-cs] [-f <from_code>] [file ...]
+	iconv -l

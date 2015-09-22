@@ -1,0 +1,30 @@
+Usage: sysrc [OPTIONS] name[[+|-]=value] ...
+OPTIONS:
+	-a         Dump a list of all non-default configuration variables.
+	-A         Dump a list of all configuration variables (incl. defaults).
+	-c         Check. Return success if set or no changes, else error.
+	-d         Print a description of the given variable.
+	-D         Show default value(s) only (this is the same as setting
+	           RC_CONFS to NULL or passing `-f' with a NULL file-argument).
+	-e         Print query results as `var=value' (useful for producing
+	           output to be fed back in). Ignored if `-n' is specified.
+	-f file    Operate on the specified file(s) instead of rc_conf_files.
+	           Can be specified multiple times for additional files.
+	-F         Show only the last rc.conf(5) file each directive is in.
+	-h         Print a short usage statement to stderr and exit.
+	--help     Print this message to stderr and exit.
+	-i         Ignore unknown variables.
+	-j jail    The jid or name of the jail to operate within (overrides
+	           `-R dir'; requires jexec(8)).
+	-n         Show only variable values, not their names.
+	-N         Show only variable names, not their values.
+	-q         Quiet. Disable verbose and hide certain errors.
+	-R dir     Operate within the root directory `dir' rather than `/'.
+	-v         Verbose. Print the pathname of the specific rc.conf(5)
+	           file where the directive was found.
+	--version  Print version information to stdout and exit.
+	-x         Remove variable(s) from specified file(s).
+
+ENVIRONMENT:
+	RC_CONFS         Override default rc_conf_files (even if set to NULL).
+	RC_DEFAULTS      Location of `/etc/defaults/rc.conf' file.
