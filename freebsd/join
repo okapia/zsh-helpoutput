@@ -1,0 +1,3 @@
+join: illegal option -- ?
+usage: join [-a fileno | -v fileno ] [-e string] [-1 field] [-2 field]
+            [-o list] [-t char] file1 file2

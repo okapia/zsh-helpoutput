@@ -1,0 +1,5 @@
+Brief Usage:
+  List:    cpio -it < archive
+  Extract: cpio -i < archive
+  Create:  cpio -o < filenames > archive
+  Help:    cpio --help

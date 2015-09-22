@@ -1,0 +1,3 @@
+locate: illegal option -- ?
+usage: locate [-0Scims] [-l limit] [-d database] pattern ...
+

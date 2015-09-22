@@ -1,0 +1,3 @@
+vmstat: illegal option -- ?
+usage: vmstat [-afHhimPsz] [-c count] [-M core [-N system]] [-w wait]
+              [-n devs] [-p type,if,pass] [disks]

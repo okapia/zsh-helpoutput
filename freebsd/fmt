@@ -1,0 +1,13 @@
+fmt: illegal option -- ?
+usage:   fmt [-cmps] [-d chars] [-l num] [-t num]
+             [-w width | -width | goal [maximum]] [file ...]
+Options: -c     center each line instead of formatting
+         -d <chars> double-space after <chars> at line end
+         -l <n> turn each <n> spaces at start of line into a tab
+         -m     try to make sure mail header lines stay separate
+         -n     format lines beginning with a dot
+         -p     allow indented paragraphs
+         -s     coalesce whitespace inside lines
+         -t <n> have tabs every <n> columns
+         -w <n> set maximum width to <n>
+         goal   set target width to goal

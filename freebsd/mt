@@ -1,0 +1,2 @@
+mt: illegal option -- ?
+usage: mt [-f device] command [count]
