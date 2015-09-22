@@ -1,0 +1,4 @@
+locale: illegal option -- ?
+Usage: locale [ -a | -m ]
+       locale -k list [prefix]
+       locale [ -ck ] [keyword ...]

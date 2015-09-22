@@ -1,0 +1,27 @@
+usage: portsnap [options] command ... [path]
+
+Options:
+  -d workdir   -- Store working files in workdir
+                  (default: /var/db/portsnap/)
+  -f conffile  -- Read configuration options from conffile
+                  (default: /etc/portsnap.conf)
+  -I           -- Update INDEX only. (update command only)
+  -k KEY       -- Trust an RSA key with SHA256 hash of KEY
+  -l descfile  -- Merge the specified local describes file into the INDEX.
+  -p portsdir  -- Location of uncompressed ports tree
+                  (default: /usr/ports/)
+  -s server    -- Server from which to fetch updates.
+                  (default: portsnap.FreeBSD.org)
+  --interactive -- interactive: override auto-detection of calling process
+                  (use this when calling portsnap from an interactive, non-
+                  terminal application AND NEVER ELSE).
+  path         -- Extract only parts of the tree starting with the given
+                  string.  (extract command only)
+Commands:
+  fetch        -- Fetch a compressed snapshot of the ports tree,
+                  or update an existing snapshot.
+  cron         -- Sleep rand(3600) seconds, and then fetch updates.
+  extract      -- Extract snapshot of ports tree, replacing existing
+                  files and directories.
+  update       -- Update ports tree to match current snapshot, replacing
+                  files and directories which have changed.

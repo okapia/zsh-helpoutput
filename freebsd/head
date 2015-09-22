@@ -1,0 +1,2 @@
+head: illegal option -- ?
+usage: head [-n lines | -c bytes] [file ...]

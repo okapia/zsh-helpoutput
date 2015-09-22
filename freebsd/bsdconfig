@@ -1,0 +1,32 @@
+Usage:
+	bsdconfig [-h]
+	bsdconfig command [-h]
+	bsdconfig [OPTIONS] [command [OPTIONS]]
+
+OPTIONS:
+	-d         Provide lots of debugging info on standard-out when running.
+	-D file    Send debugging info to file. If file begins with a plus-sign
+	           debug info is sent to both standard-out and file (minus the
+	           leading plus).
+	-f file    Load file as script and then exit. If multiple occurrences,
+	           program will only exit after last occurrence. If file is a
+	           single dash (`-'), bsdconfig reads from standard input.
+	-h         Print this usage statement and exit.
+	-S         Secure X11 mode (implies `-X'). As root, always prompt-for
+	           and validate sudo(8) username/password before starting.
+	-X         Use Xdialog(1) in place of dialog(1).
+
+COMMANDS:
+	api                 console             defaultrouter       diskmgmt         
+	docsinstall         dot                 groupadd            groupdel         
+	groupedit           groupmgmt           hostname            includes         
+	kern_securelevel    mouse               mouse_disable       mouse_enable     
+	mouse_flags         mouse_port          mouse_type          nameservers      
+	netdev              networking          packages            password         
+	security            startup             startup_misc        startup_rcadd    
+	startup_rcconf      startup_rcdelete    startup_rcvar       syscons_font     
+	syscons_keymap      syscons_repeat      syscons_saver       syscons_screenmap
+	syscons_ttys        timezone            ttys                useradd          
+	userdel             useredit            usermgmt            vt_font          
+	vt_keymap           vt_repeat           vt_saver            vt_screenmap     
+	vt_ttys          

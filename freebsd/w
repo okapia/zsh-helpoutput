@@ -1,0 +1,2 @@
+w: illegal option -- ?
+usage: w [-dhin] [-M core] [-N system] [user ...]

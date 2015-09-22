@@ -1,0 +1,2 @@
+finger: illegal option -- ?
+usage: finger [-46gklmpsho] [user ...] [user@host ...]

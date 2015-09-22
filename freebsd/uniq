@@ -1,0 +1,2 @@
+uniq: illegal option -- ?
+usage: uniq [-c | -d | -u] [-i] [-f fields] [-s chars] [input [output]]

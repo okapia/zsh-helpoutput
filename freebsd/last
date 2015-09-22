@@ -1,0 +1,3 @@
+last: illegal option -- ?
+usage: last [-swy] [-d [[CC]YY][MMDD]hhmm[.SS]] [-f file] [-h host]
+            [-n maxrec] [-t tty] [user ...]
