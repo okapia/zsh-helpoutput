@@ -1,0 +1,101 @@
+Usage: xz [OPTION]... [FILE]...
+Compress or decompress FILEs in the .xz format.
+
+Mandatory arguments to long options are mandatory for short options too.
+
+ Operation mode:
+
+  -z, --compress      force compression
+  -d, --decompress    force decompression
+  -t, --test          test compressed file integrity
+  -l, --list          list information about .xz files
+
+ Operation modifiers:
+
+  -k, --keep          keep (don't delete) input files
+  -f, --force         force overwrite of output file and (de)compress links
+  -c, --stdout        write to standard output and don't delete input files
+      --single-stream decompress only the first stream, and silently
+                      ignore possible remaining input data
+      --no-sparse     do not create sparse files when decompressing
+  -S, --suffix=.SUF   use the suffix `.SUF' on compressed files
+      --files[=FILE]  read filenames to process from FILE; if FILE is
+                      omitted, filenames are read from the standard input;
+                      filenames must be terminated with the newline character
+      --files0[=FILE] like --files but use the null character as terminator
+
+ Basic file format and compression options:
+
+  -F, --format=FMT    file format to encode or decode; possible values are
+                      `auto' (default), `xz', `lzma', and `raw'
+  -C, --check=CHECK   integrity check type: `none' (use with caution),
+                      `crc32', `crc64' (default), or `sha256'
+      --ignore-check  don't verify the integrity check when decompressing
+  -0 ... -9           compression preset; default is 6; take compressor *and*
+                      decompressor memory usage into account before using 7-9!
+  -e, --extreme       try to improve compression ratio by using more CPU time;
+                      does not affect decompressor memory requirements
+  -T, --threads=NUM   use at most NUM threads; the default is 1; set to 0
+                      to use as many threads as there are processor cores
+      --block-size=SIZE
+                      start a new .xz block after every SIZE bytes of input;
+                      use this to set the block size for threaded compression
+      --block-list=SIZES
+                      start a new .xz block after the given comma-separated
+                      intervals of uncompressed data
+      --flush-timeout=TIMEOUT
+                      when compressing, if more than TIMEOUT milliseconds has
+                      passed since the previous flush and reading more input
+                      would block, all pending data is flushed out
+      --memlimit-compress=LIMIT
+      --memlimit-decompress=LIMIT
+  -M, --memlimit=LIMIT
+                      set memory usage limit for compression, decompression,
+                      or both; LIMIT is in bytes, % of RAM, or 0 for defaults
+      --no-adjust     if compression settings exceed the memory usage limit,
+                      give an error instead of adjusting the settings downwards
+
+ Custom filter chain for compression (alternative for using presets):
+
+  --lzma1[=OPTS]      LZMA1 or LZMA2; OPTS is a comma-separated list of zero or
+  --lzma2[=OPTS]      more of the following options (valid values; default):
+                        preset=PRE reset options to a preset (0-9[e])
+                        dict=NUM   dictionary size (4KiB - 1536MiB; 8MiB)
+                        lc=NUM     number of literal context bits (0-4; 3)
+                        lp=NUM     number of literal position bits (0-4; 0)
+                        pb=NUM     number of position bits (0-4; 2)
+                        mode=MODE  compression mode (fast, normal; normal)
+                        nice=NUM   nice length of a match (2-273; 64)
+                        mf=NAME    match finder (hc3, hc4, bt2, bt3, bt4; bt4)
+                        depth=NUM  maximum search depth; 0=automatic (default)
+
+  --x86[=OPTS]        x86 BCJ filter (32-bit and 64-bit)
+  --powerpc[=OPTS]    PowerPC BCJ filter (big endian only)
+  --ia64[=OPTS]       IA-64 (Itanium) BCJ filter
+  --arm[=OPTS]        ARM BCJ filter (little endian only)
+  --armthumb[=OPTS]   ARM-Thumb BCJ filter (little endian only)
+  --sparc[=OPTS]      SPARC BCJ filter
+                      Valid OPTS for all BCJ filters:
+                        start=NUM  start offset for conversions (default=0)
+
+  --delta[=OPTS]      Delta filter; valid OPTS (valid values; default):
+                        dist=NUM   distance between bytes being subtracted
+                                   from each other (1-256; 1)
+
+ Other options:
+
+  -q, --quiet         suppress warnings; specify twice to suppress errors too
+  -v, --verbose       be verbose; specify twice for even more verbose
+  -Q, --no-warn       make warnings not affect the exit status
+      --robot         use machine-parsable messages (useful for scripts)
+
+      --info-memory   display the total amount of RAM and the currently active
+                      memory usage limits, and exit
+  -h, --help          display the short help (lists only the basic options)
+  -H, --long-help     display this long help and exit
+  -V, --version       display the version number and exit
+
+With no FILE, or when FILE is -, read standard input.
+
+Report bugs to <lasse.collin@tukaani.org> (in English or Finnish).
+XZ Utils home page: <http://tukaani.org/xz/>
