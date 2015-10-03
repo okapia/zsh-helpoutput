@@ -3,7 +3,7 @@ Options:
   -pass-exit-codes         Exit with highest error code from a phase
   --help                   Display this information
   --target-help            Display target specific command line options
-  --help={target|optimizers|warnings|params|[^]{joined|separate|undocumented}}[,...]
+  --help={common|optimizers|params|target|warnings|[^]{joined|separate|undocumented}}[,...]
                            Display specific types of command line options
   (Use '-v --help' to display command line options of sub-processes)
   --version                Display compiler version information
@@ -14,6 +14,8 @@ Options:
   -print-libgcc-file-name  Display the name of the compiler's companion library
   -print-file-name=<lib>   Display the full path to library <lib>
   -print-prog-name=<prog>  Display the full path to compiler component <prog>
+  -print-multiarch         Display the target's normalized GNU triplet, used as
+                           a component in the library path
   -print-multi-directory   Display the root directory for versions of libgcc
   -print-multi-lib         Display the mapping between command line options and
                            multiple library search directories
@@ -26,8 +28,10 @@ Options:
   -Xassembler <arg>        Pass <arg> on to the assembler
   -Xpreprocessor <arg>     Pass <arg> on to the preprocessor
   -Xlinker <arg>           Pass <arg> on to the linker
-  -combine                 Pass multiple source files to compiler at once
   -save-temps              Do not delete intermediate files
+  -save-temps=<arg>        Do not delete intermediate files
+  -no-canonical-prefixes   Do not canonicalize paths when building relative
+                           prefixes to other gcc components
   -pipe                    Use pipes rather than intermediate files
   -time                    Time the execution of each subprocess
   -specs=<file>            Override built-in specs with the contents of <file>
@@ -35,14 +39,14 @@ Options:
   --sysroot=<directory>    Use <directory> as the root directory for headers
                            and libraries
   -B <directory>           Add <directory> to the compiler's search paths
-  -b <machine>             Run gcc for target <machine>, if installed
-  -V <version>             Run gcc version number <version>, if installed
   -v                       Display the programs invoked by the compiler
   -###                     Like -v but options quoted and commands not executed
   -E                       Preprocess only; do not compile, assemble or link
   -S                       Compile only; do not assemble or link
   -c                       Compile and assemble, but do not link
   -o <file>                Place the output into <file>
+  -pie                     Create a position independent executable
+  -shared                  Create a shared library
   -x <language>            Specify the language of the following input files
                            Permissible languages include: c c++ assembler none
                            'none' means revert to the default behavior of
