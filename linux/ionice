@@ -2,13 +2,16 @@
 ionice - sets or gets process io scheduling class and priority.
 
 Usage:
-  ionice [ options ] -p <pid> [<pid> ...]
-  ionoce [ options ] <command> [<arg> ...]
+  ionice [OPTION] -p PID [PID...]
+  ionice [OPTION] COMMAND
 
 Options:
-  -n <classdata>      class data (0-7, lower being higher prio)
-  -c <class>          scheduling class
-                      0: none, 1: realtime, 2: best-effort, 3: idle
-  -t                  ignore failures
-  -h                  this help
+  -c, --class <class>   scheduling class name or number
+                           0: none, 1: realtime, 2: best-effort, 3: idle
+  -n, --classdata <num> scheduling class data
+                           0-7 for realtime and best-effort classes
+  -p, --pid=PID         view or modify already running process
+  -t, --ignore          ignore failures
+  -V, --version         output version information and exit
+  -h, --help            display this help and exit
 
