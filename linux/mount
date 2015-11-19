@@ -1,32 +1,56 @@
-Usage: mount -V                 : print version
-       mount -h                 : print this help
-       mount                    : list mounted filesystems
-       mount -l                 : idem, including volume labels
-So far the informational part. Next the mounting.
-The command is `mount [-t fstype] something somewhere'.
-Details found in /etc/fstab may be omitted.
-       mount -a [-t|-O] ...     : mount all stuff from /etc/fstab
-       mount device             : mount device at the known place
-       mount directory          : mount known device here
-       mount -t type dev dir    : ordinary mount command
-Note that one does not really mount a device, one mounts
-a filesystem (of the given type) found on the device.
-One can also mount an already visible directory tree elsewhere:
-       mount --bind olddir newdir
-or move a subtree:
-       mount --move olddir newdir
-One can change the type of mount containing the directory dir:
-       mount --make-shared dir
-       mount --make-slave dir
-       mount --make-private dir
-       mount --make-unbindable dir
-One can change the type of all the mounts in a mount subtree
-containing the directory dir:
-       mount --make-rshared dir
-       mount --make-rslave dir
-       mount --make-rprivate dir
-       mount --make-runbindable dir
-A device can be given by name, say /dev/hda1 or /dev/cdrom,
-or by label, using  -L label  or by uuid, using  -U uuid .
-Other options: [-nfFrsvw] [-o options] [-p passwdfd].
-For many more details, say  man 8 mount .
+
+Usage:
+ mount [-lhV]
+ mount -a [options]
+ mount [options] [--source] <source> | [--target] <directory>
+ mount [options] <source> <directory>
+ mount <operation> <mountpoint> [<target>]
+
+Options:
+ -a, --all               mount all filesystems mentioned in fstab
+ -c, --no-canonicalize   don't canonicalize paths
+ -f, --fake              dry run; skip the mount(2) syscall
+ -F, --fork              fork off for each device (use with -a)
+ -T, --fstab <path>      alternative file to /etc/fstab
+ -h, --help              display this help text and exit
+ -i, --internal-only     don't call the mount.<type> helpers
+ -l, --show-labels       lists all mounts with LABELs
+ -n, --no-mtab           don't write to /etc/mtab
+ -o, --options <list>    comma-separated list of mount options
+ -O, --test-opts <list>  limit the set of filesystems (use with -a)
+ -r, --read-only         mount the filesystem read-only (same as -o ro)
+ -t, --types <list>      limit the set of filesystem types
+     --source <src>      explicitly specifies source (path, label, uuid)
+     --target <target>   explicitly specifies mountpoint
+ -v, --verbose           say what is being done
+ -V, --version           display version information and exit
+ -w, --rw, --read-write  mount the filesystem read-write (default)
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+Source:
+ -L, --label <label>     synonym for LABEL=<label>
+ -U, --uuid <uuid>       synonym for UUID=<uuid>
+ LABEL=<label>           specifies device by filesystem label
+ UUID=<uuid>             specifies device by filesystem UUID
+ PARTLABEL=<label>       specifies device by partition label
+ PARTUUID=<uuid>         specifies device by partition UUID
+ <device>                specifies device by path
+ <directory>             mountpoint for bind mounts (see --bind/rbind)
+ <file>                  regular file for loopdev setup
+
+Operations:
+ -B, --bind              mount a subtree somewhere else (same as -o bind)
+ -M, --move              move a subtree to some other place
+ -R, --rbind             mount a subtree and all submounts somewhere else
+ --make-shared           mark a subtree as shared
+ --make-slave            mark a subtree as slave
+ --make-private          mark a subtree as private
+ --make-unbindable       mark a subtree as unbindable
+ --make-rshared          recursively mark a whole subtree as shared
+ --make-rslave           recursively mark a whole subtree as slave
+ --make-rprivate         recursively mark a whole subtree as private
+ --make-runbindable      recursively mark a whole subtree as unbindable
+
+For more details see mount(8).

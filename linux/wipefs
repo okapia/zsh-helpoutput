@@ -1,0 +1,16 @@
+
+Usage:
+ wipefs [options] <device>
+
+Options:
+ -a, --all           wipe all magic strings (BE CAREFUL!)
+ -f, --force         force erasure
+ -h, --help          show this help text
+ -n, --no-act        do everything except the actual write() call
+ -o, --offset <num>  offset to erase, in bytes
+ -p, --parsable      print out in parsable instead of printable format
+ -q, --quiet         suppress output messages
+ -t, --types <list>  limit the set of filesystem, RAIDs or partition tables
+ -V, --version       output version information and exit
+
+For more information see wipefs(8).
