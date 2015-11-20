@@ -1,9 +1,10 @@
-Internet Systems Consortium DHCP Client 4.1.1-P1
-Copyright 2004-2010 Internet Systems Consortium.
+Internet Systems Consortium DHCP Client 4.2.5
+Copyright 2004-2013 Internet Systems Consortium.
 All rights reserved.
 For info, please visit https://www.isc.org/software/dhcp/
-Usage: dhclient [-4|-6] [-SNTP1dvrx] [-nw] [-p <port>] [-s server]
-                [-cf config-file] [-lf lease-file][-pf pid-file] [-e VAR=val]
+Usage: dhclient [-4|-6] [-SNTP1dvrx] [-nw] [-p <port>] [-D LL|LLT]
+                [-s server-addr] [-cf config-file] [-lf lease-file]
+                [-pf pid-file] [--no-pid] [-e VAR=val]
                 [-I <dhcp-client-identifier>] [-B]
                 [-H <host-name> | -F <fqdn.fqdn>] [-timeout <timeout>]
                 [-V <vendor-class-identifier>]
