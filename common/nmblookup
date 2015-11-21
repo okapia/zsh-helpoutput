@@ -20,6 +20,7 @@ Common samba options:
   -s, --configfile=CONFIGFILE            Use alternate configuration file
   -l, --log-basename=LOGFILEBASE         Base name for log files
   -V, --version                          Print version
+      --option=name=value                Set smb.conf option from command line
 
 Connection options:
   -O, --socket-options=SOCKETOPTIONS     socket options to use
