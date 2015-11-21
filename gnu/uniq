@@ -6,11 +6,13 @@ With no options, matching lines are merged to the first occurrence.
 
 Mandatory arguments to long options are mandatory for short options too.
   -c, --count           prefix lines by the number of occurrences
-  -d, --repeated        only print duplicate lines
-  -D, --all-repeated[=delimit-method]  print all duplicate lines
-                        delimit-method={none(default),prepend,separate}
-                        Delimiting is done with blank lines.
+  -d, --repeated        only print duplicate lines, one for each group
+  -D, --all-repeated[=METHOD]  print all duplicate lines
+                          groups can be delimited with an empty line
+                          METHOD={none(default),prepend,separate}
   -f, --skip-fields=N   avoid comparing the first N fields
+      --group[=METHOD]  show all items, separating groups with an empty line
+                          METHOD={separate(default),prepend,append,both}
   -i, --ignore-case     ignore differences in case when comparing
   -s, --skip-chars=N    avoid comparing the first N characters
   -u, --unique          only print unique lines
@@ -23,10 +25,8 @@ A field is a run of blanks (usually spaces and/or TABs), then non-blank
 characters.  Fields are skipped before chars.
 
 Note: 'uniq' does not detect repeated lines unless they are adjacent.
-You may want to sort the input first, or use `sort -u' without `uniq'.
-Also, comparisons honor the rules specified by `LC_COLLATE'.
+You may want to sort the input first, or use 'sort -u' without 'uniq'.
+Also, comparisons honor the rules specified by 'LC_COLLATE'.
 
-Report uniq bugs to bug-coreutils@gnu.org
-GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
-General help using GNU software: <http://www.gnu.org/gethelp/>
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
 For complete documentation, run: info coreutils 'uniq invocation'
