@@ -5,9 +5,14 @@ Usage: strip <option(s)> in-file(s)
   -O --output-target=<bfdname>     Create an output file in format <bfdname>
   -F --target=<bfdname>            Set both input and output format to <bfdname>
   -p --preserve-dates              Copy modified/access timestamps to the output
+  -D --enable-deterministic-archives
+                                   Produce deterministic output when stripping archives
+  -U --disable-deterministic-archives
+                                   Disable -D behavior (default)
   -R --remove-section=<name>       Remove section <name> from the output
   -s --strip-all                   Remove all symbol and relocation information
   -g -S -d --strip-debug           Remove all debugging symbols & sections
+     --strip-dwo                   Remove all DWO sections
      --strip-unneeded              Remove all symbols not needed by relocations
      --only-keep-debug             Strip everything but the debug information
   -N --strip-symbol=<name>         Do not copy symbol <name>
@@ -21,4 +26,3 @@ Usage: strip <option(s)> in-file(s)
   -h --help                        Display this output
      --info                        List object formats & architectures supported
   -o <file>                        Place stripped output into <file>
-strip: supported targets: elf32-littlearm elf32-bigarm elf32-little elf32-big srec symbolsrec tekhex binary ihex
