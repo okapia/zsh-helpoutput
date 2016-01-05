@@ -1,0 +1,14 @@
+Usage:	cpupower [-d|--debug] [-c|--cpu cpulist ] <command> [<args>]
+Supported commands are:
+	frequency-info
+	frequency-set
+	idle-info
+	idle-set
+	set
+	info
+	monitor
+	help
+
+Not all commands can make use of the -c cpulist option.
+
+Use 'cpupower help <command>' for getting help for above commands.
