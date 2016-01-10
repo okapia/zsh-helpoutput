@@ -1,0 +1,3 @@
+Usage: showmount [-adehv]
+       [--all] [--directories] [--exports]
+       [--no-headers] [--help] [--version] [host]
