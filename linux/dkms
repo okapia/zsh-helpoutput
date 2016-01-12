@@ -1,0 +1,11 @@
+Error!  Unknown option: -?
+Usage: /usr/bin/dkms [action] [options]
+  [action]  = { add | remove | build | install | uninstall | match | autoinstall
+               | mkdriverdisk | mktarball | ldtarball | mkrpm | mkkmp | mkdeb | status }
+  [options] = [-m module] [-v module-version] [-k kernel-version] [-a arch]
+              [-d distro] [-c dkms.conf-location] [-q] [--force] [--all]
+              [--templatekernel=kernel] [--directive='cli-directive=cli-value']
+              [--config=kernel-.config-location] [--archive=tarball-location]
+              [--kernelsourcedir=source-location] [--no-prepare-kernel] [--no-initrd]
+              [--binaries-only] [--source-only] [-r release (SuSE)] [--verbose]
+              [--size] [--spec=specfile] [--media=floppy|iso|tar] [--legacy-postinst=0|1]
