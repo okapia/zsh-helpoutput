@@ -27,10 +27,14 @@ Application Options:
   --max-version=VERSION                   return 0 if the module is at no newer than version VERSION
   --list-all                              list all known packages
   --debug                                 show verbose debug information
-  --print-errors                          show verbose information about missing or conflicting packages,default if --cflags or --libs given on the command line
-  --silence-errors                        be silent about errors (default unless --cflags or --libsgiven on the command line)
+  --print-errors                          show verbose information about missing or conflicting packages (default unless --exists or --atleast/exact/max-version given on the command line)
+  --silence-errors                        be silent about errors (default when --exists or --atleast/exact/max-version given on the command line)
   --errors-to-stdout                      print errors from --print-errors to stdout not stderr
   --print-provides                        print which packages the package provides
   --print-requires                        print which packages the package requires
   --print-requires-private                print which packages the package requires for static linking
+  --validate                              validate a package's .pc file
+  --define-prefix                         try to override the value of prefix for each .pc file found with a guesstimated value based on the location of the .pc file
+  --dont-define-prefix                    don't try to override the value of prefix for each .pc file found with a guesstimated value based on the location of the .pc file
+  --prefix-variable=PREFIX                set the name of the variable that pkg-config automatically sets
 
