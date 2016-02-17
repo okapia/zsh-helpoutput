@@ -13,6 +13,7 @@ Usage: smbclient service <password>
   -c, --command=STRING                      Execute semicolon separated
                                             commands
   -b, --send-buffer=BYTES                   Changes the transmit/send buffer
+  -t, --timeout=SECONDS                     Changes the per-operation timeout
   -p, --port=PORT                           Port to connect to
   -g, --grepable                            Produce grepable output
   -B, --browse                              Browse SMB servers using DNS
@@ -47,3 +48,5 @@ Authentication options:
                                             extended servers only)
   -C, --use-ccache                          Use the winbind ccache for
                                             authentication
+  --pw-nt-hash                              The supplied password is the NT
+                                            hash
