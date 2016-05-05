@@ -5,8 +5,17 @@ Verify the data stored in the repository.
 Valid options:
   -t [--transaction] ARG   : specify transaction name ARG
   -r [--revision] ARG      : specify revision number ARG (or X:Y range)
-  -q [--quiet]             : no progress (only errors) to stderr
+  -q [--quiet]             : no progress (only errors to stderr)
+  --keep-going             : continue verification after detecting a corruption
   -M [--memory-cache-size] ARG : size of the extra in-memory cache in MB used to
                              minimize redundant operations. Default: 16.
                              [used for FSFS repositories only]
+  --check-normalization    : report any names within the same directory or
+                             svn:mergeinfo property value that differ only
+                             in character representation, but are otherwise
+                             identical
+  --metadata-only          : verify metadata only (ignored for BDB),
+                             checking against external corruption in
+                             Subversion 1.9+ format repositories.
+
 

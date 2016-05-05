@@ -13,9 +13,11 @@ usage: 1. propget PROPNAME [TARGET[@REV]...]
   'empty', the target path is printed on the same line before each value.
 
   By default, an extra newline is printed after the property value so that
-  the output looks pretty.  With a single TARGET and depth 'empty', you can
-  use the --strict option to disable this (useful when redirecting a binary
-  property value to a file, for example).
+  the output looks pretty.  With a single TARGET, depth 'empty' and without
+  --show-inherited-props, you can use the --no-newline option to disable this
+  (useful when redirecting a binary property value to a file, for example).
+
+  See 'svn help propset' for descriptions of the svn:* special properties.
 
 Valid options:
   -v [--verbose]           : print path, name and value on separate lines
@@ -31,22 +33,30 @@ Valid options:
                                 'COMMITTED'  last commit at or before BASE
                                 'PREV'       revision just before COMMITTED
   --revprop                : operate on a revision property (use with -r)
-  --strict                 : don't print an extra newline
+  --strict                 : (deprecated; use --no-newline)
+  --no-newline             : do not output the trailing newline
   --xml                    : output in XML
   --changelist [--cl] ARG  : operate only on members of changelist ARG
-  --show-inherited-props   : retrieve target's inherited properties
+  --show-inherited-props   : retrieve properties set on parents of the target
 
 Global options:
   --username ARG           : specify a username ARG
-  --password ARG           : specify a password ARG
+  --password ARG           : specify a password ARG (caution: on many operating
+                             systems, other users will be able to see this)
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)
   --force-interactive      : do interactive prompting even if standard input
                              is not a terminal device
-  --trust-server-cert      : accept SSL server certificates from unknown
-                             certificate authorities without prompting (but only
-                             with '--non-interactive')
+  --trust-server-cert      : deprecated; same as
+                             --trust-server-cert-failures=unknown-ca
+  --trust-server-cert-failures ARG : with --non-interactive, accept SSL server
+                             certificates with failures; ARG is comma-separated
+                             list of 'unknown-ca' (Unknown Authority),
+                             'cn-mismatch' (Hostname mismatch), 'expired'
+                             (Expired certificate), 'not-yet-valid' (Not yet
+                             valid certificate) and 'other' (all other not
+                             separately classified certificate errors).
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]

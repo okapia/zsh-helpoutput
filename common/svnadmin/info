@@ -1,0 +1,3 @@
+info: usage: svnadmin info REPOS_PATH
+
+Print information about the repository at REPOS_PATH.
