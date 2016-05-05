@@ -5,6 +5,21 @@ usage: info [TARGET[@REV]...]
   TARGET may be either a working-copy path or URL.  If specified, REV
   determines in which revision the target is first looked up.
 
+  With --show-item, print only the value of one item of information
+  about TARGET. One of the following items can be selected:
+     kind                  the kind of TARGET
+     url                   the URL of TARGET in the repository
+     relative-url          the repository-relative URL
+     repos-root-url        the repository root URL
+     repos-uuid            the repository UUID
+     revision              the revision of TARGET (defaults to BASE
+                           for working copy paths and HEAD for URLs)
+     last-changed-revision the most recent revision in which TARGET
+                           was changed
+     last-changed-date     the date of the last-changed revision
+     last-changed-author   the author of the last-changed revision
+     wc-root               the root of TARGET's working copy
+
 Valid options:
   -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
                              A revision argument can be one of:
@@ -21,18 +36,33 @@ Valid options:
   --incremental            : give output suitable for concatenation
   --xml                    : output in XML
   --changelist [--cl] ARG  : operate only on members of changelist ARG
+  --include-externals      : also operate on externals defined by
+                             svn:externals properties
+  --show-item ARG          : print only the item identified by ARG ('kind',
+                             'url', 'relative-url', 'repos-root-url',
+                             'repos-uuid', 'revision', 'last-changed-revision',
+                             'last-changed-date', 'last-changed-author',
+                             'wc-root')
+  --no-newline             : do not output the trailing newline
 
 Global options:
   --username ARG           : specify a username ARG
-  --password ARG           : specify a password ARG
+  --password ARG           : specify a password ARG (caution: on many operating
+                             systems, other users will be able to see this)
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)
   --force-interactive      : do interactive prompting even if standard input
                              is not a terminal device
-  --trust-server-cert      : accept SSL server certificates from unknown
-                             certificate authorities without prompting (but only
-                             with '--non-interactive')
+  --trust-server-cert      : deprecated; same as
+                             --trust-server-cert-failures=unknown-ca
+  --trust-server-cert-failures ARG : with --non-interactive, accept SSL server
+                             certificates with failures; ARG is comma-separated
+                             list of 'unknown-ca' (Unknown Authority),
+                             'cn-mismatch' (Hostname mismatch), 'expired'
+                             (Expired certificate), 'not-yet-valid' (Not yet
+                             valid certificate) and 'other' (all other not
+                             separately classified certificate errors).
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]

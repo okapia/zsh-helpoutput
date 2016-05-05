@@ -4,5 +4,8 @@ Possibly compact the repository into a more efficient storage model.
 This may not apply to all repositories, in which case, exit.
 
 Valid options:
-  -q [--quiet]             : no progress (only errors) to stderr
+  -q [--quiet]             : no progress (only errors to stderr)
+  -M [--memory-cache-size] ARG : size of the extra in-memory cache in MB used to
+                             minimize redundant operations. Default: 16.
+                             [used for FSFS repositories only]
 

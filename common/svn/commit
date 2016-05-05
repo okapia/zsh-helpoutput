@@ -6,6 +6,10 @@ usage: commit [PATH...]
   If any targets are (or contain) locked items, those will be
   unlocked after a successful commit.
 
+  If --include-externals is given, also commit file and directory
+  externals reached by recursion. Do not commit externals with a
+  fixed revision.
+
 Valid options:
   -q [--quiet]             : print nothing, or only summary information
   -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
@@ -22,21 +26,27 @@ Valid options:
                              using the name[=value] format
   --changelist [--cl] ARG  : operate only on members of changelist ARG
   --keep-changelists       : don't delete changelists after commit
-  --include-externals      : Also commit file and dir externals reached by
-                             recursion. This does not include externals with a
-                             fixed revision. (See the svn:externals property)
+  --include-externals      : also operate on externals defined by
+                             svn:externals properties
 
 Global options:
   --username ARG           : specify a username ARG
-  --password ARG           : specify a password ARG
+  --password ARG           : specify a password ARG (caution: on many operating
+                             systems, other users will be able to see this)
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)
   --force-interactive      : do interactive prompting even if standard input
                              is not a terminal device
-  --trust-server-cert      : accept SSL server certificates from unknown
-                             certificate authorities without prompting (but only
-                             with '--non-interactive')
+  --trust-server-cert      : deprecated; same as
+                             --trust-server-cert-failures=unknown-ca
+  --trust-server-cert-failures ARG : with --non-interactive, accept SSL server
+                             certificates with failures; ARG is comma-separated
+                             list of 'unknown-ca' (Unknown Authority),
+                             'cn-mismatch' (Hostname mismatch), 'expired'
+                             (Expired certificate), 'not-yet-valid' (Not yet
+                             valid certificate) and 'other' (all other not
+                             separately classified certificate errors).
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]

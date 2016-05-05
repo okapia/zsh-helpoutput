@@ -2,30 +2,50 @@ cleanup: Recursively clean up the working copy, removing write locks, resuming
 unfinished operations, etc.
 usage: cleanup [WCPATH...]
 
-  Finish any unfinished business in the working copy at WCPATH, and remove
-  write locks (shown as 'L' by the 'svn status' command) from the working
-  copy. Usually, this is only necessary if a Subversion client has crashed
-  while using the working copy, leaving it in an unusable state.
+  By default, finish any unfinished business in the working copy at WCPATH,
+  and remove write locks (shown as 'L' by the 'svn status' command) from
+  the working copy. Usually, this is only necessary if a Subversion client
+  has crashed while using the working copy, leaving it in an unusable state.
 
   WARNING: There is no mechanism that will protect write locks still
            being used by other Subversion clients. Running this command
            while another client is using the working copy can corrupt
            the working copy beyond repair!
 
+  If the --remove-unversioned option or the --remove-ignored option
+  is given, remove any unversioned or ignored items within WCPATH.
+  To prevent accidental working copy corruption, unversioned or ignored
+  items can only be removed if the working copy is not already locked
+  for writing by another Subversion client.
+  Note that the 'svn status' command shows unversioned items as '?',
+  and ignored items as 'I' if the --no-ignore option is given to it.
+
 Valid options:
   --diff3-cmd ARG          : use ARG as merge command
+  --remove-unversioned     : remove unversioned items
+  --remove-ignored         : remove ignored items
+  --include-externals      : also operate on externals defined by
+                             svn:externals properties
+  -q [--quiet]             : print nothing, or only summary information
 
 Global options:
   --username ARG           : specify a username ARG
-  --password ARG           : specify a password ARG
+  --password ARG           : specify a password ARG (caution: on many operating
+                             systems, other users will be able to see this)
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)
   --force-interactive      : do interactive prompting even if standard input
                              is not a terminal device
-  --trust-server-cert      : accept SSL server certificates from unknown
-                             certificate authorities without prompting (but only
-                             with '--non-interactive')
+  --trust-server-cert      : deprecated; same as
+                             --trust-server-cert-failures=unknown-ca
+  --trust-server-cert-failures ARG : with --non-interactive, accept SSL server
+                             certificates with failures; ARG is comma-separated
+                             list of 'unknown-ca' (Unknown Authority),
+                             'cn-mismatch' (Hostname mismatch), 'expired'
+                             (Expired certificate), 'not-yet-valid' (Not yet
+                             valid certificate) and 'other' (all other not
+                             separately classified certificate errors).
   --config-dir ARG         : read user configuration files from directory ARG
   --config-option ARG      : set user configuration option in the format:
                                  FILE:SECTION:OPTION=[VALUE]
