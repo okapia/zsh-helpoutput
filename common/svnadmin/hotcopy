@@ -8,4 +8,5 @@ Valid options:
   --clean-logs             : remove redundant Berkeley DB log files
                              from source repository [Berkeley DB]
   --incremental            : dump or hotcopy incrementally
+  -q [--quiet]             : no progress (only errors to stderr)
 

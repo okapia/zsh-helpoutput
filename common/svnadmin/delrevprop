@@ -1,16 +1,16 @@
-setrevprop: usage: 1. svnadmin setrevprop REPOS_PATH -r REVISION NAME FILE
-                   2. svnadmin setrevprop REPOS_PATH -t TXN NAME FILE
+delrevprop: usage: 1. svnadmin delrevprop REPOS_PATH -r REVISION NAME
+                   2. svnadmin delrevprop REPO_PATH -t TXN NAME
 
-1. Set the property NAME on revision REVISION to the contents of FILE.
+1. Delete the property NAME on revision REVISION.
 
 Use --use-pre-revprop-change-hook/--use-post-revprop-change-hook to
 trigger the revision property-related hooks (for example, if you want
 an email notification sent from your post-revprop-change hook).
 
 NOTE: Revision properties are not versioned, so this command will
-overwrite the previous value of the property.
+irreversibly destroy the previous value of the property.
 
-2. Set the property NAME on transaction TXN to the contents of FILE.
+2. Delete the property NAME on transaction TXN.
 
 Valid options:
   -r [--revision] ARG      : specify revision number ARG (or X:Y range)
