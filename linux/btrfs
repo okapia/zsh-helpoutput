@@ -98,6 +98,19 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -g|--gbytes        show sizes in GiB, or GB with --si
         -t|--tbytes        show sizes in TiB, or TB with --si
 
+    btrfs filesystem du [options] <path> [<path>..]
+        Summarize disk usage of each file.
+
+        -s|--summarize     display only a total for each argument
+        --raw              raw numbers in bytes
+        --human-readable   human friendly numbers, base 1024 (default)
+        --iec              use 1024 as a base (KiB, MiB, GiB, TiB)
+        --si               use 1000 as a base (kB, MB, GB, TB)
+        --kbytes           show sizes in KiB, or kB with --si
+        --mbytes           show sizes in MiB, or MB with --si
+        --gbytes           show sizes in GiB, or GB with --si
+        --tbytes           show sizes in TiB, or TB with --si
+
     btrfs filesystem show [options] [<path>|<uuid>|<device>|label]
         Show the structure of a filesystem
 
@@ -162,13 +175,16 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         passed all filters in a comma-separated list of filters for a
         particular chunk type.  If filter list is not given balance all
         chunks of that type.  In case none of the -d, -m or -s options is
-        given balance all chunks in a filesystem.
+        given balance all chunks in a filesystem. This is potentially
+        long operation and the user is warned before this start, with
+        a delay to stop it.
 
         -d[filters]    act on data chunks
         -m[filters]    act on metadata chunks
         -s[filters]    act on system chunks (only under -f)
         -v             be verbose
         -f             force reducing of metadata integrity
+        --full-balance do not print warning and do not delay start
 
     btrfs balance pause <path>
         Pause running balance
@@ -190,8 +206,8 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -K|--nodiscard    do not perform whole device TRIM
         -f|--force        force overwrite existing filesystem on the disk
 
-    btrfs device delete <device> [<device>...] <path>
-    btrfs device remove <device> [<device>...] <path>
+    btrfs device delete <device>|<devid> [<device>|<devid>...] <path>
+    btrfs device remove <device>|<devid> [<device>|<devid>...] <path>
         Remove a device from a filesystem
 
     btrfs device scan [(-d|--all-devices)|<device> [<device>...]]
@@ -255,17 +271,26 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -R     print raw stats
 
     btrfs check [options] <device>
-        Check an unmounted btrfs filesystem.
+        Check structural inegrity of a filesystem (unmounted).
+
+        Check structural inegrity of an unmounted filesystem. Verify internal
+        trees' consistency and item connectivity. In the repair mode try to
+        fix the problems found.
+        WARNING: the repair mode is considered dangerous
 
         -s|--super <superblock>     use this superblock copy
-        -b|--backup                 use the backup root copy
+        -b|--backup                 use the first valid backup root copy
         --repair                    try to repair the filesystem
+        --readonly                  run in read-only mode (default)
         --init-csum-tree            create a new CRC tree
         --init-extent-tree          create a new extent tree
         --check-data-csum           verify checkums of data blocks
-        --qgroup-report             print a report on qgroup consistency
-        --subvol-extents <subvolid> print subvolume extents and sharing state
-        --tree-root <bytenr>        use the given bytenr for the tree root
+        -Q|--qgroup-report           print a report on qgroup consistency
+        -E|--subvol-extents <subvolid>
+                                    print subvolume extents and sharing state
+        -r|--tree-root <bytenr>     use the given bytenr for the tree root
+        --chunk-root <bytenr>       use the given bytenr for the chunk tree root
+        -p|--progress               indicate progress
 
     btrfs rescue chunk-recover [options] <device>
         Recover the chunk tree by scanning the devices one by one.
@@ -333,6 +358,36 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         device id 1 is used by default.
         --id DEVID   specify the device id to query
 
+    btrfs inspect-internal dump-tree [options] device
+        Dump tree structures from a given device
+
+        Dump tree structures from a given device in textual form, expand keys to human
+        readable equivalents where possible.
+        Note: contains file names, consider that if you're asked to send the dump
+        for analysis.
+
+        -e|--extents           print only extent info: extent and device trees
+        -d|--device            print only device info: tree root, chunk and device trees
+        -r|--roots             print only short root node info
+        -R|--backups           same as --roots plus print backup root info
+        -u|--uuid              print only the uuid tree
+        -b|--block <block_num> print info from the specified block only
+        -t|--tree <tree_id>    print only tree with the given id (string or number)
+
+    btrfs inspect-internal dump-super [options] device [device...]
+        Dump superblock from a device in a textual form
+
+        -f|--full           print full superblock information
+        -a|--all            print information about all superblocks
+        -i <super_mirror>   specify which mirror to print out
+        -F|--force          attempt to dump superblocks with bad magic
+        -s <bytenr>         specify alternate superblock offset
+
+    btrfs inspect-internal tree-stats [options] <device>
+        Print various stats for trees
+
+        -b		raw numbers in bytes
+
     btrfs property get [-t <type>] <object> [<name>]
         Gets a property from a btrfs object.
 
@@ -360,6 +415,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         Send the subvolume(s) to stdout.
 
         Sends the subvolume(s) specified by <subvol> to stdout.
+        <subvol> should be read-only here.
         By default, this will send the whole subvolume. To do an incremental
         send, use '-p <parent>'. If you want to allow btrfs to clone from
         any additional local snapshots, use '-c <clone-src>' (multiple times
@@ -437,7 +493,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         Assign SRC as the child qgroup of DST
 
         --rescan       schedule qutoa rescan if needed
-        --no-rescan    
+        --no-rescan    don't schedule quota rescan
 
     btrfs qgroup remove <src> <dst> <path>
         Remove a child qgroup SRC from DST.
@@ -475,6 +531,8 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs qgroup limit [options] <size>|none [<qgroupid>] <path>
         Set the limits a subvolume quota group.
 
+        -c   limit amount of data after compression. This is the default,
+             it is currently not possible to turn off this option.
         -e   limit space exclusively assigned to this qgroup
 
     btrfs replace start [-Bfr] <srcdev>|<devid> <targetdev> <mount_point>
