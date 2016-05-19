@@ -1,6 +1,6 @@
 Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
        ip [ -force ] -batch filename
-where  OBJECT := { link | address | addrlabel | route | rule | neighbor | ntable |
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
                    tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
                    netns | l2tp | fou | tcp_metrics | token | netconf }
        OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
