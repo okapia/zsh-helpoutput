@@ -1,0 +1,2 @@
+gcore: unknown option -- ?
+Usage: gcore [-c <corename>] <pid> [<pid> ...]

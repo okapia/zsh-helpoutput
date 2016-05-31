@@ -1,0 +1,3 @@
+chsh: unknown option -- ?
+usage: chsh [-a list] [-s shell] [-l] [user]
+       chsh [-a list] [-s shell] [-y] [user]

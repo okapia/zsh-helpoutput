@@ -1,0 +1,2 @@
+fortune: unknown option -- ?
+Usage: fortune [-aefilosw] [-m pattern][ [#%] file/directory/all]

@@ -1,2 +1,2 @@
 fstat: unknown option -- ?
-Usage: fstat [-fnv] [-p pid] [-u user] [-N system] [-M core] [file ...]
+Usage: fstat [-Afnv] [-M core] [-N system] [-p pid] [-u user] [file ...]
