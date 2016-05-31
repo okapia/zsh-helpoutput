@@ -1,2 +1,2 @@
 cat: unknown option -- ?
-usage: cat [-beflnstuv] [-] [file ...]
+Usage: cat [-beflnstuv] [-B bsize] [-] [file ...]
