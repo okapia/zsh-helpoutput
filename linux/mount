@@ -6,15 +6,16 @@ Usage:
  mount [options] <source> <directory>
  mount <operation> <mountpoint> [<target>]
 
+Mount a filesystem.
+
 Options:
  -a, --all               mount all filesystems mentioned in fstab
  -c, --no-canonicalize   don't canonicalize paths
  -f, --fake              dry run; skip the mount(2) syscall
  -F, --fork              fork off for each device (use with -a)
  -T, --fstab <path>      alternative file to /etc/fstab
- -h, --help              display this help text and exit
  -i, --internal-only     don't call the mount.<type> helpers
- -l, --show-labels       lists all mounts with LABELs
+ -l, --show-labels       show also filesystem labels
  -n, --no-mtab           don't write to /etc/mtab
  -o, --options <list>    comma-separated list of mount options
  -O, --test-opts <list>  limit the set of filesystems (use with -a)
@@ -23,7 +24,6 @@ Options:
      --source <src>      explicitly specifies source (path, label, uuid)
      --target <target>   explicitly specifies mountpoint
  -v, --verbose           say what is being done
- -V, --version           display version information and exit
  -w, --rw, --read-write  mount the filesystem read-write (default)
 
  -h, --help     display this help and exit
