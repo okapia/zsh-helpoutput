@@ -7,14 +7,17 @@ Usage: xsltproc [options] stylesheet file [file ...]
 	--repeat: run the transformation 20 times
 	--debug: dump the tree of the result instead
 	--dumpextensions: dump the registered extension elements and functions to stdout
-	--novalid skip the Dtd loading phase
+	--novalid skip the DTD loading phase
 	--nodtdattr do not default attributes from the DTD
 	--noout: do not dump the result
-	--maxdepth val : increase the maximum depth
+	--maxdepth val : increase the maximum depth (default 3000)
+	--maxvars val : increase the maximum variables (default 15000)
 	--maxparserdepth val : increase the maximum parser depth
+	--seed-rand val : initialize pseudo random number generator with specific seed
 	--html: the input document is(are) an HTML file(s)
 	--encoding: the input document character encoding
 	--param name value : pass a (parameter,value) pair
+	       name is a QName or a string of the form {URI}NCName.
 	       value is an UTF8 XPath expression.
 	       string values must be quoted like "'string'"
  or	       use stringparam to avoid it
@@ -30,7 +33,7 @@ Usage: xsltproc [options] stylesheet file [file ...]
 	--xinclude : do XInclude processing on document input
 	--xincludestyle : do XInclude processing on stylesheets
 	--load-trace : print trace of all external entites loaded
-	--profile or --norman : dump profiling information 
+	--profile or --norman : dump profiling informations 
 
 Project libxslt home page: http://xmlsoft.org/XSLT/
 To report bugs and get help: http://xmlsoft.org/XSLT/bugs.html
