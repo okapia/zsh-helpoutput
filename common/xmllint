@@ -11,7 +11,7 @@ Usage : xmllint [options] XMLfiles ...
 	--noenc : ignore any encoding specified inside the document
 	--noout : don't output the result tree
 	--path 'paths': provide a set of paths for resources
-	--load-trace : print trace of all external entites loaded
+	--load-trace : print trace of all external entities loaded
 	--nonet : refuse to fetch DTDs or entities over network
 	--nocompact : do not generate compact text nodes
 	--htmlout : output results as HTML
@@ -29,12 +29,13 @@ Usage : xmllint [options] XMLfiles ...
 	--xmlout : force to use the XML serializer when using --html
 	--nodefdtd : do not default HTML doctype
 	--push : use the push mode of the parser
+	--pushsmall : use the push mode of the parser using tiny increments
 	--memory : parse from memory
 	--maxmem nbbytes : limits memory allocation to nbbytes bytes
 	--nowarning : do not emit warnings from parser/validator
 	--noblanks : drop (ignorable?) blanks spaces
 	--nocdata : replace cdata section with text nodes
-	--format : reformat/reindent the input
+	--format : reformat/reindent the output
 	--encode encoding : output in the given encoding
 	--dropdtd : remove the DOCTYPE of the input docs
 	--pretty STYLE : pretty-print in a particular style
@@ -66,7 +67,7 @@ Usage : xmllint [options] XMLfiles ...
 	--sax1: use the old SAX1 interfaces for processing
 	--sax: do not build a tree but work just at the SAX level
 	--oldxml10: use XML-1.0 parsing rules before the 5th edition
-	--xpath expr: evaluate the XPath expression, inply --noout
+	--xpath expr: evaluate the XPath expression, imply --noout
 
 Libxml project home page: http://xmlsoft.org/
 To report bugs or get some help check: http://xmlsoft.org/bugs.html
