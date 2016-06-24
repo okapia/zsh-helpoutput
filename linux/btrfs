@@ -271,9 +271,9 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -R     print raw stats
 
     btrfs check [options] <device>
-        Check structural inegrity of a filesystem (unmounted).
+        Check structural integrity of a filesystem (unmounted).
 
-        Check structural inegrity of an unmounted filesystem. Verify internal
+        Check structural integrity of an unmounted filesystem. Verify internal
         trees' consistency and item connectivity. In the repair mode try to
         fix the problems found.
         WARNING: the repair mode is considered dangerous
@@ -284,7 +284,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         --readonly                  run in read-only mode (default)
         --init-csum-tree            create a new CRC tree
         --init-extent-tree          create a new extent tree
-        --check-data-csum           verify checkums of data blocks
+        --check-data-csum           verify checksums of data blocks
         -Q|--qgroup-report           print a report on qgroup consistency
         -E|--subvol-extents <subvolid>
                                     print subvolume extents and sharing state
@@ -427,8 +427,6 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         clone sources itself.
         
 
-        -v               Enable verbose debug output. Each occurrence of
-                         this option increases the verbose level more.
         -e               If sending multiple subvols at once, use the new
                          format and omit the end-cmd between the subvols.
         -p <parent>      Send an incremental stream from <parent> to
@@ -442,6 +440,9 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
                          does not contain any file data and thus cannot be used
                          to transfer changes. This mode is faster and useful to
                          show the differences in metadata.
+        -v|--verbose     enable verbose output to stderr, each occurrence of
+                         this option increases verbosity
+        -q|--quiet       suppress all messages, except errors
 
     btrfs receive [-ve] [-f <infile>] [--max-errors <N>] <mount>
         Receive subvolumes from stdin.
