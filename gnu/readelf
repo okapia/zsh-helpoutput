@@ -18,7 +18,7 @@ Usage: readelf <option(s)> elf-file(s)
   -u --unwind            Display the unwind info (if present)
   -d --dynamic           Display the dynamic section (if present)
   -V --version-info      Display the version sections (if present)
-  -A --arch-specific     Display architecture specific information (if any).
+  -A --arch-specific     Display architecture specific information (if any)
   -c --archive-index     Display the symbol/file index in an archive
   -D --use-dynamic       Use the dynamic section info when displaying symbols
   -x --hex-dump=<number|name>
@@ -27,10 +27,12 @@ Usage: readelf <option(s)> elf-file(s)
                          Dump the contents of section <number|name> as strings
   -R --relocated-dump=<number|name>
                          Dump the contents of section <number|name> as relocated bytes
+  -z --decompress        Decompress section before dumping it
   -w[lLiaprmfFsoRt] or
   --debug-dump[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,
                =frames-interp,=str,=loc,=Ranges,=pubtypes,
-               =gdb_index,=trace_info,=trace_abbrev,=trace_aranges]
+               =gdb_index,=trace_info,=trace_abbrev,=trace_aranges,
+               =addr,=cu_index]
                          Display the contents of DWARF2 debug sections
   --dwarf-depth=N        Do not display DIEs at depth N or greater
   --dwarf-start=N        Display DIEs starting with N, at the same depth
