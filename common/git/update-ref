@@ -1,10 +1,11 @@
-usage: git update-ref [options] -d <refname> [<oldval>]
-   or: git update-ref [options]    <refname> <newval> [<oldval>]
-   or: git update-ref [options] --stdin [-z]
+usage: git update-ref [<options>] -d <refname> [<old-val>]
+   or: git update-ref [<options>]    <refname> <new-val> [<old-val>]
+   or: git update-ref [<options>] --stdin [-z]
 
     -m <reason>           reason of the update
     -d                    delete the reference
     --no-deref            update <refname> not the one it points to
     -z                    stdin has NUL-terminated arguments
     --stdin               read updates from stdin
+    --create-reflog       create a reflog
 

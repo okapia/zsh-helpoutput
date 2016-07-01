@@ -1,13 +1,18 @@
-usage: git bisect [help|start|bad|good|skip|next|reset|visualize|replay|log|run]
+usage: git bisect [help|start|bad|good|new|old|terms|skip|next|reset|visualize|replay|log|run]
 
 git bisect help
 	print this long help message.
-git bisect start [--no-checkout] [<bad> [<good>...]] [--] [<pathspec>...]
+git bisect start [--term-{old,good}=<term> --term-{new,bad}=<term>]
+		 [--no-checkout] [<bad> [<good>...]] [--] [<pathspec>...]
 	reset bisect state and start bisection.
-git bisect bad [<rev>]
-	mark <rev> a known-bad revision.
-git bisect good [<rev>...]
-	mark <rev>... known-good revisions.
+git bisect (bad|new) [<rev>]
+	mark <rev> a known-bad revision/
+		a revision after change in a given property.
+git bisect (good|old) [<rev>...]
+	mark <rev>... known-good revisions/
+		revisions before change in a given property.
+git bisect terms [--term-good | --term-bad]
+	show the terms used for old and new commits (default: bad, good)
 git bisect skip [(<rev>|<range>)...]
 	mark <rev>... untestable revisions.
 git bisect next

@@ -1,0 +1,5 @@
+usage: git worktree add [<options>] <path> [<branch>]
+   or: git worktree prune [<options>]
+   or: git worktree list [<options>]
+
+
