@@ -31,5 +31,6 @@ Type
 
 Other
     -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
     --includes            respect include directives on lookup
 

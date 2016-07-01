@@ -16,6 +16,7 @@ usage: git format-patch [<options>] [<since> | <revision-range>]
                           store resulting files in <dir>
     -k, --keep-subject    don't strip/add [PATCH]
     --no-binary           don't output binary diffs
+    --zero-commit         output all-zero hash in From header
     --ignore-if-in-upstream
                           don't include a patch matching a commit upstream
     -p, --no-stat         show patch format instead of default (patch + stat)
