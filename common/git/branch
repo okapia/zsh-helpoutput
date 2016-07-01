@@ -1,7 +1,8 @@
-usage: git branch [options] [-r | -a] [--merged | --no-merged]
-   or: git branch [options] [-l] [-f] <branchname> [<start-point>]
-   or: git branch [options] [-r] (-d | -D) <branchname>...
-   or: git branch [options] (-m | -M) [<oldbranch>] <newbranch>
+usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
 
 Generic options
     -v, --verbose         show hash and subject, give twice for upstream branch
@@ -25,8 +26,10 @@ Specific git-branch actions:
     --list                list branch names
     -l, --create-reflog   create the branch's reflog
     --edit-description    edit the description for the branch
-    -f, --force           force creation (when already exists)
-    --no-merged <commit>  print only not merged branches
-    --merged <commit>     print only merged branches
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
     --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
 

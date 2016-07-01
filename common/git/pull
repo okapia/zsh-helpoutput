@@ -1,6 +1,4 @@
-usage: git pull [options] [<repository> [<refspec>...]]
-
-    Fetch one or more remote refs and integrate it/them with the current HEAD.
+usage: git pull [<options>] [<repository> [<refspec>...]]
 
     -v, --verbose         be more verbose
     -q, --quiet           be more quiet
@@ -11,17 +9,16 @@ Options related to merging
                           incorporate changes by rebasing rather than merging
     -n                    do not show a diffstat at the end of the merge
     --stat                show a diffstat at the end of the merge
-    --summary             (synonym to --stat)
     --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
     --squash              create a single commit instead of doing a merge
     --commit              perform a commit if the merge succeeds (default)
-    -e, --edit            edit message before committing
+    --edit                edit message before committing
     --ff                  allow fast-forward
     --ff-only             abort if fast-forward is not possible
     --verify-signatures   verify that the named commit has a valid GPG signature
     -s, --strategy <strategy>
                           merge strategy to use
-    -X, --strategy-option <option>
+    -X, --strategy-option <option=value>
                           option for selected merge strategy
     -S, --gpg-sign[=<key-id>]
                           GPG sign commit

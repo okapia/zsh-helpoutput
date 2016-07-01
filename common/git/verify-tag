@@ -1,4 +1,5 @@
-usage: git verify-tag [-v|--verbose] <tag>...
+usage: git verify-tag [-v | --verbose] <tag>...
 
-    -v, --verbose         be verbose
+    -v, --verbose         print tag contents
+    --raw                 print raw gpg status output
 

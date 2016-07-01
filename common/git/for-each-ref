@@ -1,11 +1,18 @@
-usage: git for-each-ref [options] [<pattern>]
+usage: git for-each-ref [<options>] [<pattern>]
+   or: git for-each-ref [--points-at <object>]
+   or: git for-each-ref [(--merged | --no-merged) [<object>]]
+   or: git for-each-ref [--contains [<object>]]
 
     -s, --shell           quote placeholders suitably for shells
     -p, --perl            quote placeholders suitably for perl
     --python              quote placeholders suitably for python
-    --tcl                 quote placeholders suitably for tcl
+    --tcl                 quote placeholders suitably for Tcl
 
     --count <n>           show only <n> matched refs
     --format <format>     format to use for the output
     --sort <key>          field name to sort on
+    --points-at <object>  print only refs which points at the given object
+    --merged <commit>     print only refs that are merged
+    --no-merged <commit>  print only refs that are not merged
+    --contains <commit>   print only refs which contain the commit
 

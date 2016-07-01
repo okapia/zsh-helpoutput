@@ -20,4 +20,5 @@ usage: git checkout [<options>] <branch>
                           do not limit pathspecs to sparse entries only
     --ignore-other-worktrees
                           do not check if another worktree is holding the given ref
+    --progress            force progress reporting
 
