@@ -1,6 +1,6 @@
-Mutt 1.5.21 (2010-09-15)
+Mutt 1.6.2 (2016-07-01)
 usage: mutt [<options>] [-z] [-f <file> | -yZ]
-       mutt [<options>] [-x] [-Hi <file>] [-s <subj>] [-bc <addr>] [-a <file> [...] --] <addr> [...]
+       mutt [<options>] [-Ex] [-Hi <file>] [-s <subj>] [-bc <addr>] [-a <file> [...] --] <addr> [...]
        mutt [<options>] [-x] [-s <subj>] [-bc <addr>] [-a <file> [...] --] <addr> [...] < message
        mutt [<options>] -p
        mutt [<options>] -A <alias> [...]
@@ -15,6 +15,7 @@ options:
   -b <address>	specify a blind carbon-copy (BCC) address
   -c <address>	specify a carbon-copy (CC) address
   -D		print the value of all variables to stdout
+  -E		edit the draft (-H) or include (-i) file
   -e <command>	specify a command to be executed after initialization
   -f <file>	specify which mailbox to read
   -F <file>	specify an alternate muttrc file
