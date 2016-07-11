@@ -12,6 +12,7 @@ Options:
  -f, --full                use full process name to match
  -g, --pgroup <PGID,...>   match listed process group IDs
  -G, --group <GID,...>     match real group IDs
+ -i, --ignore-case         match case insensitively
  -n, --newest              select most recently started
  -o, --oldest              select least recently started
  -P, --parent <PPID,...>   match only child processes of the given parent
