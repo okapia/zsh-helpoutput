@@ -1,0 +1,249 @@
+cmd cat
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd chmod
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd chown
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd bison
+version 3.0.4
+emit -V | field -1 | getversion
+emit -h | nobug | getusage
+
+cmd cmp
+version 3.5
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd date
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd diff
+version 3.5
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd du
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd enscript
+version 1.6.6
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd env
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd find
+version 4.6.0
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd gcc
+version 6.1.1
+variant ! 'LLVM' -- --version
+emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9].//' | guess | getversion
+emit --help | getusage
+
+cmd gdb
+version 7.11.1
+emit --version | tr -d '()' | guess | getversion
+emit -h | nobug | grep -v 'user-specific init file' | getusage
+
+cmd getent
+version 2.24
+variant 'GNU' -- --version
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd gprof
+version 2.27
+variant -g GNU -- --version
+emit --version | guess | getversion
+emit --help | nobug | getusage
+
+cmd grep
+version 2.25
+variant -g 'GNU' -- -V
+emit -V | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd gzip
+version 1.8
+variant 'GNU' -- -V
+emit -V | field -1 | getversion
+emit -h | nobug | getusage
+
+cmd iconv
+version 2.24
+variant 'GNU' -- -V
+emit -V | field -1 | getversion
+emit --help | getusage
+
+cmd info
+version 6.1
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd install-info
+version 6.1
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd makeinfo
+version 6.1
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd texi2dvi
+version 6.1
+emit --version | field -2 | sed 's/)$//' | getversion
+emit --help | nobug | getusage
+
+cmd texindex
+version 6.1
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ldd
+version 2.24
+variant 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd ln
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd ls
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd make
+version 4.2.1
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd md5sum
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd nm
+version 2.27
+variant -g GNU -- -V
+emit -V | guess | getversion
+emit -h | getusage
+
+cmd objdump
+version 2.27
+variant -g GNU -- -V
+emit -V | guess | getversion
+emit --help | nobug | getusage
+
+cmd patch
+version 2.7.5
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd ranlib
+version 2.27
+variant -g GNU -- -V
+emit -V | guess | getversion
+emit -h | getusage
+
+cmd readelf
+version 2.27
+variant -g GNU -- -v
+emit -v | guess | getversion
+emit -H | nobug | getusage
+
+cmd sed
+version 4.2.2
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd sort
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd strip
+version 2.27
+variant -g 'GNU' -- --version
+emit -V | guess | getversion
+emit -h | egrep -v '(supported targets|Report bugs to)' | getusage
+
+cmd stty
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd tar
+version 1.20
+variant -g 'GNU' -- --version
+emit --version | field -1 | getusage
+emit --help | nobug | getusage
+
+cmd touch
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd unexpand
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd uniq
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd wget
+version 1.18
+emit -V | field 3 | getversion
+emit --help | getusage
+
+cmd xargs
+version 4.6.0
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+

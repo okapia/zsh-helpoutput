@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Be careful with this script. You may lose local changes and this is
+# quite a nasty hack
+
+set -ex
+
+[[ -d .git ]] || exit 1
+tmp=../.zh-overlay-$$
+git checkout usage
+git worktree add $tmp master
+mv $tmp/.git .s.git
+print ~+/.s.git(:A) > .git/worktrees/.zh-overlay-$$/gitdir
+rm -rf $tmp
+git --git-dir=.s.git reset --hard HEAD
+print -l .s.git LICENSE Synopses *.md updates changes overlay >> .git/info/exclude

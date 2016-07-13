@@ -1,0 +1,514 @@
+cmd a2ps
+version 4.14
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd ant
+version 1.9.2
+emit -version | field 4 | getversion
+emit -help | getusage
+
+cmd antiword
+version 0.37
+emit -h | line 4 | field 2 | getversion
+emit -h | getusage
+
+cmd arping
+version 2.15
+variant 'Thomas Habets' --
+emit | tr -d , | field 2 | getversion
+emit --help | getusage
+
+cmd augtool
+version 1.6.0
+emit --version | field 2 | getversion
+emit --help | getusage
+emit help | getusage commands
+
+cmd bzip2
+version 1.0.6
+emit -h | line 1 | field 7 | tr -d ',' | getversion
+emit -h | getusage
+
+cmd dbus-monitor
+version 1.11.4
+pack | getversion
+emit -h | getusage
+
+cmd dbus-send
+version 1.11.4
+pack | getversion
+emit -h | getusage
+
+cmd dmidecode
+version 3.0
+emit -V | getversion
+emit -h | getusage
+
+cmd dict
+version 1.12.1
+emit -V | tr '/' ' ' | field 2 | getversion
+emit --help | getusage
+
+cmd diffstat
+version 1.57
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd dig
+version 9.10.4-P2
+emit -v | field 2 | getversion
+emit -h | getusage
+
+cmd elinks
+version 0.12pre6
+emit -version | field 2 | getversion
+emit -help | getusage
+
+cmd erb
+version 2.1.0
+emit --version | field 2 | cut -c 2- | getversion
+emit --help | getusage
+
+cmd espeak
+version 1.48.03
+emit --version | field 3 | getversion
+emit -h | grep -v 'Data at:' | getusage
+
+cmd ffmpeg
+version 0.10.2
+emit -version | field 3 | getversion
+emit -help | getusage
+
+cmd fakeroot
+version 1.12.2
+emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd fetchmail
+version 6.3.26
+emit  -V | field -1 | sed 's/+.*//' | getversion
+emit -? | getusage
+
+cmd figlet
+version 20205
+emit -I 1 | getversion
+emit -? | getusage
+
+cmd flex
+version 2.6.1
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd irb
+version 2.1.0
+emit -v | field 2 | cut -d \( -f 1 | getversion
+emit -h | getusage
+
+cmd less
+version 481
+emit -V | field 2 | getversion
+unset LESSOPEN
+emit -? | getusage
+
+cmd lftp
+version 3.7.3
+emit --version | field 4 | getversion
+emit -h | getusage
+
+cmd lldb
+version 350.0.21.9
+emit -v | sed 's/^lldb-//' | getversion
+emit -h | getusage
+
+cmd links
+version 2.8
+variant -n links2 ! ELinks -- -version
+emit -version | field 2 | getversion
+emit -help | getusage
+
+cmd lynx
+version 2.8.8dev.15
+emit -version | field 3 | getversion
+emit -help | getusage
+
+cmd getmail
+version 4.6.4
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd git
+version 2.10.0
+subdir
+emit --version | field -1 | getversion
+emit --help | getusage
+subcmds @ -h
+
+cmd gpg
+version 2.1.11
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd gphoto2
+version 2.5.10
+emit --version | field -1 | getversion
+emit -? | getusage
+
+cmd gsettings
+version 2.49.5
+subdir
+emit --version | getversion
+emit -h | getusage
+subcmds help @
+
+cmd irssi
+version 0.8.19
+emit --version | field 2 | getversion
+emit --help | getusage
+
+cmd lsof
+version 4.90
+emit -v | line 2 | field 2 | getversion
+emit -? | sed '/default device cache/ d' | getusage
+
+cmd lzop
+version 1.03
+emit -V | sed -n 's/^lzop version: v//p' | field 1 | tr -d , | getversion
+emit -h | getusage
+
+cmd mosh
+version 1.2.6
+emit --version | field 2 | getversion
+emit --help | getusage
+
+cmd mutt
+version 1.6.2
+emit -v | line 1 | field 2 | getversion
+emit -h | getusage
+
+cmd php
+version 5.6.19
+emit -v | field 2 | getversion
+emit -h | getusage
+
+cmd pigz
+version 2.3.3
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd pkg-config
+version 0.29.1
+variant ! pkgconf -- --help
+emit --version | getversion
+emit --help | getusage
+
+cmd postconf
+version 2.10.1
+pack | getversion
+emit -? | getusage
+
+cmd postqueue
+version 2.10.1
+pack | getversion
+emit | getusage
+
+cmd nmap
+version 7.12
+emit -V | line 2 | field 3 | getversion
+emit -h | getusage
+
+cmd nmblookup
+version 4.4.5
+emit -V | sed 's/-.*//' | field -1 | getversion
+emit --help | getusage
+
+cmd notmuch
+version 0.15.2
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd perl
+version 5.24.0
+emit --version | line 2 | tr -d '()v' | guess | getversion
+emit --help | getusage
+
+cmd prove
+version 3.36
+emit --version | field 2 | tr -d v | getversion
+emit --help | getusage
+
+cmd python
+version 3.5.1
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ruby
+version 2.3.1p112
+emit --version | field 2 | getversion
+emit --help | getusage
+
+cmd rsync
+version 3.1.2
+emit --version | line 1 | field 3 | getversion
+emit -h | getusage
+emit --daemon -h | getusage daemon
+
+cmd screen
+version 4.02.00
+emit -v | field 3 | getversion
+emit -h | getusage
+
+cmd sqlite
+version 3.14.1
+variant -n sqlite3
+emit -version | field 1 | getversion
+emit -help | getusage
+
+cmd ssh
+version 7.3p1
+variant OpenSSH -- -V
+emit -V | field 1 | sed 's/^.*_//' | getversion
+sshver="$_verinst"
+emit -? | getusage
+
+cmd scp
+version 7.3p1
+getversion <<<$sshver
+emit | getusage
+
+cmd sftp
+version 7.3p1
+getversion <<<$sshver
+emit | getusage
+
+cmd ssh-add
+version 7.3p1
+getversion <<<$sshver
+emit -? | getusage
+
+cmd ssh-keygen
+version 7.3p1
+getversion <<<$sshver
+emit -? | getusage
+
+cmd sshfs
+version 2.5
+emit -V | grep SSHFS | field -1 | getversion
+emit -h | getusage
+
+cmd sudo
+version 1.8.17p1
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd surfraw
+version 2.1.7
+emit -version | grep version | tr -d '()' | field -1 | getversion
+emit -help | getusage
+
+cmd sv # runit
+version 2.1.2
+pack | getversion
+emit | getusage
+
+cmd svn
+version 1.9.4
+subdir
+emit --version --quiet | getversion
+emit help | getusage
+subcmds help @
+
+cmd svnadmin
+version 1.9.4
+subdir
+emit --version | field 3 | getversion
+emit help | getusage
+subcmds help @
+
+cmd tardy
+version 1.12.D002
+emit -VERS | field -1 | getversion
+emit -H | getusage
+
+cmd tcpdump
+version 4.8.0
+variant ! 'Apple' -- --version
+emit --version | grep -v 'unrecognized option' | field -1 | getversion
+emit -h | getusage
+
+cmd tin
+version 2.4.0
+emit -V | line 2 | field 3 | getversion
+emit -h | getusage
+
+cmd tree
+version 1.7.0
+emit --version | field 2 | tr -d v | getversion
+emit --help | getusage
+
+cmd tmux
+version 2.2
+subdir
+emit -V | field -1 | getversion
+emit -h | getusage
+subcmds @ -h
+
+cmd unrar
+version 5.40
+emit | line 2 | field 2 | getversion
+emit | getusage
+
+cmd unzip
+version 6.00
+emit -h | field 2 | getversion
+emit -hh | getusage
+
+cmd whois
+[[ $OSTYPE = solaris* ]] && _present=0
+version 4.7.30
+variant ! jwhois -- --version
+emit --version | field 2 | sed 's/\.$//' | getversion
+emit --help | getusage
+
+cmd jwhois
+version 4.0
+variant jwhois -- --version
+emit --version | field 3 | sed 's/\,$//' | getversion
+emit --help | getusage
+
+cmd valgrind
+version 3.11.0
+emit --version | cut -d- -f2 | getversion
+emit --help | getusage
+
+cmd vim
+version 7.4
+emit -version | field 5 | getversion
+emit -h | getusage
+
+cmd w3m
+version 0.5.3
+emit -version | sed 's@.*/\([^,]*\).*@\1@' | getversion
+emit -help | getusage
+
+cmd wiggle
+version 1.0
+emit -V | tr -d v | guess | getversion
+emit -h | getusage
+
+cmd xmllint
+version 20904
+emit --version | line 1 | field 5 | getversion
+emit | getusage
+
+cmd xsltproc
+version 10129
+emit -V | line 1 | field 5 | getversion
+emit | getusage
+
+cmd xxd
+version 1.10
+emit -v | field 2 | tr -d V | getversion
+emit -h | getusage
+
+cmd xz
+version 5.2.2
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd yafc
+version 1.1.1
+emit -V | field 2 | getversion
+emit -h | getusage
+
+cmd yodl
+version 3.05.01
+emit -h | field 3 | getversion
+emit -h | getusage
+
+cmd zip
+version 3.0
+emit -h | sed 's/^This is //' | grep '^Zip' | field 2 | getversion
+emit -h2 | getusage
+
+cmd zipinfo
+version 3.00
+emit -h | field 2 | getversion
+emit -h | getusage
+
+# patchutils
+
+cmd combinediff
+version 0.3.4
+emit --version | field -1 | getversion
+emit | getusage
+
+cmd interdiff
+version 0.3.4
+emit --version | field -1 | getversion
+emit | getusage
+
+cmd filterdiff
+version 0.3.4
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd flipdiff
+version 0.3.4
+emit --version | field -1 | getversion
+emit | getusage
+
+cmd grepdiff
+version 0.3.4
+emit --version | field -1 | getversion
+emit | getusage
+
+cmd lsdiff
+version 0.3.4
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd splitdiff
+version 0.3.4
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd unwrapdiff
+version 0.3.4
+emit --version | field -1 | getversion
+emit --help | getusage
+
+# vorbis tools
+
+cmd ogg123
+version 1.4.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd oggenc
+version 1.4.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd oggdec
+version 1.4.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ogginfo
+version 1.4.0
+emit -V | field -1 | getversion
+emit -h | getusage
+
+# elfutils
+cmd readelf
+version 0.167
+variant -p 'eu-' elfutils -- --version
+emit --version | guess | getversion
+emit --help | nobug | getusage
+
+cmd nm
+version 0.167
+variant -p 'eu-' elfutils -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage

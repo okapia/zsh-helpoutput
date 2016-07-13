@@ -1,0 +1,144 @@
+cmd apt-get
+version 0.8.15.10
+emit -h | field 2 | getversion
+emit -h | getusage
+
+cmd apt-cache
+version 0.8.15.10
+emit -h | field 2 | getversion
+emit -h | getusage
+
+cmd apt-cdrom
+version 0.8.15.10
+emit -h | field 2 | getversion
+emit -h | getusage
+
+cmd apt-config
+version 0.8.15.10
+emit -h | field 2 | getversion
+emit -h | getusage
+
+cmd aptitude
+version 0.6.6
+emit -h | field 2 | getversion
+emit -h | getusage
+
+cmd axi-cache
+version 0.45
+emit --version | field 2 | getversion
+emit help | getusage
+
+cmd chsh
+version 4.2
+pack | getversion
+emit -h | getusage
+
+cmd debcheckout
+version 2.11.6
+dpkg-query -W --showformat='${version}' devscripts |& getversion
+emit --help | getusage
+
+cmd debdiff
+version 2.11.6
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd debsign
+version 2.11.6
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd dpkg
+version 1.16.2
+emit --version | field -2 | getversion
+emit -h | getusage
+
+cmd dpkg-cross
+version 2.6.6
+emit --version | grep version | field -1 | getversion
+emit --help | getusage
+
+cmd dpkg-deb
+version 1.16.2
+emit --version | field -2 | getversion
+emit -h | getusage
+
+cmd dpkg-query
+version 1.16.2
+emit -W --showformat='${version}' dpkg |& getversion
+emit -h | getusage
+
+cmd dpkg-reconfigure
+version 1.5.42
+dpkg-query -W --showformat='${version}' debconf |& getversion
+emit -h | getusage
+
+cmd dpkg-buildpackage
+version 1.16.2
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd dpkg-source
+version 1.16.2
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd grep-excuses
+version 2.11.6
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd invoke-rc.d
+version 2.88dsf-22.1
+dpkg-query -W --showformat='${version}' sysv-rc | getversion
+emit --help | getusage
+
+cmd lintian
+version 2.5.6
+emit --version | field -1 | sed 's/^v//' | getversion
+emit --help | getusage
+
+cmd lintian-info
+version 2.5.6
+lintian --version |& field -1 | sed 's/^v//' | getversion
+emit --help | getusage
+
+cmd mergechanges
+version 2.11.6
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd module-assistant
+version 0.11.4
+dpkg-query -W --showformat='${version}' module-assistant |& getversion
+emit --help | getusage
+
+cmd pbuilder
+version 0.210
+dpkg-query -W --showformat='${version}' pbuilder |& getversion
+emit --help | getusage
+
+cmd rmadison
+version 0.4
+emit --version | field 2 | getversion
+emit --help | getusage
+
+cmd update-alternatives
+version 1.16.2
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd update-rc.d
+version 2.88dsf-22.1
+dpkg-query -W --showformat='${version}' sysv-rc |& getversion
+emit | getusage
+
+cmd uscan
+version 2.11.6
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd vim-addons
+version 0.4.4
+dpkg-query -W --showformat='${version}' vim-addon-manager |& getversion
+emit --help | getusage

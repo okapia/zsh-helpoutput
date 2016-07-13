@@ -1,0 +1,274 @@
+#!/usr/bin/env zsh
+
+setopt extendedglob
+zmodload zsh/parameter
+
+path+=( {,/usr,/usr/local}/sbin(N) )
+export LC_CTYPE=$LANG  # keep charset from local
+export LANG=C
+
+dirs=( common external gnu x ${${OSTYPE%%[0-9.]#}%-gnu*} )
+[[ -e /etc/redhat-release ]] && dirs+=redhat && pkg=rpm
+[[ -e /etc/SuSE-release ]] && dirs+=( redhat suse ) && pkg=rpm
+[[ -e /etc/debian_version ]] && dirs+=debian && pkg=dpkg
+[[ -e /etc/os-release && $(sed -n 's/^NAME="\(.*\)"$/\1/p' /etc/os-release) = void ]] && pkg=xbps
+[[ $OSTYPE = freebsd* ]] && pkg=pkg
+[[ $OSTYPE = solaris2.10 ]] && pkg=sol10
+[[ $OSTYPE = (net|open)bsd* ]] && pkg=pkgsrc
+
+AWK=${commands[nawk]:-awk}
+ED=${commands[ed]:-ex}
+
+usage() {
+  print -r "Usage: $1 [-achsu] [command...]"
+  print -r "   -a  show all commands including those that aren't found"
+  print -r "   -c  commit update (with -u or -s)"
+  print -r "   -u  update usage file for specified commands"
+  print -r "   -s  update Synopses file for specified commands"
+  print -r "   -h  print help information"
+  exit
+}
+typeset -a _edits
+typeset -A _opts
+(( _present = 1 ))
+
+while getopts 'achus' opt; do
+  if [[ $opt = [acus] ]]; then
+    _opts[$opt]=1
+  elif [[ $opt = h ]]; then
+    usage ${0:t}
+  fi
+done
+shift $(( OPTIND - 1 ))
+
+targets=( "$@" )
+
+# split a version number into components
+split() {
+  set -A "$1" ${=${2//[_.-]/ }//(#m)[0-9][a-zA-Z]/$MATCH[1] $MATCH[2]}
+}
+
+# compare two version numbers
+compare() {
+  typeset -A letters
+  letters=( # default for letters is +1
+    'a*' -3       # alpha
+    'b*' -2       # beta
+    '(pre|rc)' -1 # release candidate
+  )
+  [[ $1 = $2 ]] && return
+  # returns 1 if right greater
+  # returns -1 if left greater
+  split lhs $1
+  split rhs $2
+  # skip over equal components
+  while [[ $lhs[1] == $rhs[1] ]]; do
+    shift lhs
+    shift rhs
+    (( $#lhs && !$#rhs )) && return -1
+    (( $#rhs && !$#lhs )) && return 1
+  done
+  # multiply both by 5 and apply letter offsets
+  (( left = ${${(M)lhs[1]##[0-9]#}:-1} * 5 + ${letters[(k)${lhs[1]##[0-9]#}]:-1} ))
+  (( right = ${${(M)rhs[1]##[0-9]#}:-1} * 5 + ${letters[(k)${rhs[1]##[0-9]#}]:-1} ))
+  (( left > right )) && return -1
+  (( right > left )) && return 1
+  return 0
+}
+
+cmd() {
+  missing
+  _cmd="$1"
+  _runcmd="$1"
+  _subdir=""
+  _aux=()
+  if (( ! $#targets || ${+targets[(r)$_cmd]} )); then
+    _run=1
+    _tmp="${TMPDIR:-/tmp}/${_cmd}.$$"
+  else
+    _run=0
+  fi
+  [[ -x $commands[$_cmd] ]]
+  (( _present=!$? ))
+}
+
+subdir() {
+  _subdir="${1:-$_cmd}/"
+}
+
+version() {
+  _verzsh="$1"
+}
+
+alias emit='(( _run && _present )) && noglob 2>&1 $_runcmd'
+alias step='(( _run && _present )) &&'
+
+pack() {
+  (( _run && _present )) || return
+  local file
+  file=( =$_runcmd(:A) )
+  case $pkg in
+    rpm) rpm -qf $file --qf '%{VERSION}' ;;
+    dpkg) dpkg-query -W --showformat='${version}' ${"$(dpkg --search $file)"%:*} | sed -r 's/[^:]*:+([^-]*).*/\1/' ;;
+    pkg) pkg which -q $file | sed -e 's/.*-//' -e 's/_.*//' ;;
+    pkgsrc) pkg_info -FI $file | sed -e 's/ .*//' -e 's/.*-//' ;;
+    xbps) xbps-query -v -o $file | sed -n 's/^[^-]*-\([0-9.a-z]*\)_.*/\1/p' ;;
+    sol10) pkginfo -l $(fgrep $file /var/sadm/install/contents | $AWK '{ print $10 }')|$AWK '/VERSION:/ {print $2}'|sed 's/[,_].*//' ;;
+    *) echo unknown ;;
+  esac
+}
+
+field() {
+  (( _run && _present )) || return
+  ${AWK} "FNR==1 { FIELD=${1/-/NF+1-}; print \$FIELD }"
+}
+
+guess() {
+  (( _run && _present )) || return
+  tr '\011 ' '\012\012' | grep '^[0-9][0-9.][0-9.]' | head -1 | sed 's/[,)-].*$//'
+}
+
+line() {
+  (( _run  && _present )) || return
+  sed -n "$1p"
+}
+
+# GNU programs tend to end with this and it gets customised by Redhat, SuSE etc
+nobug() {
+  grep -v '^Report bugs to'
+}
+
+# usage: variant [options] [[!]pattern -- args]
+# -g : see if the command exists with a g prefix, common for GNU stuff
+# -p : see if the command exists with a custom prefix
+# -n : see if the command exists under a different name
+# command is invoked with args and the output matched against pattern
+# to see if it is the correct variant. with ! this is negated
+variant() {
+  local invert=0 opt OPTARG OPTIND trycmd
+  if getopts 'gp:n:' opt; then
+    case $opt in
+      g) trycmd=g$_cmd ;;
+      p) trycmd=$OPTARG$_cmd; shift ;;
+      n) trycmd=$OPTARG; shift ;;
+      *) print -u2 "variant: unknown option: $opt"
+    esac
+    if (( $+commands[$trycmd] )); then
+      _present=1
+      _runcmd=$trycmd
+      if (( ${+targets[(r)$trycmd]} )); then
+	_run=1
+	_tmp="${TMPDIR:-/tmp}/${_cmd}.$$"
+      fi
+    fi
+    shift
+  fi
+
+  (( _run && _present )) || return
+  if [[ $1 = \! ]]; then
+    shift
+    invert=1
+  fi
+  (( $# )) || return
+  i=$argv[(i)--]
+  $_runcmd "${(@)argv[i+1,-1]}" 2>&1 | egrep -- "$1" >/dev/null
+  _present=$?
+  (( invert || (_present = !_present) ))
+}
+
+if (( $+_opts[u] && $#targets )); then
+  getusage() {
+    (( _run && _present )) || return
+    local aux="${1:+-$1}"
+    local ref="${_dir:h}/$_subdir$_cmd$aux"
+    _aux+=( $ref )
+    cat - > $ref
+    if (( _opts[c] && _opts[u] )); then
+      git commit -m "$_cmd ${_verinst}" -i $ref $ref
+    fi
+  }
+  subcmds() {
+    (( _run && _present )) || return
+    for sub in ${_dir:h}/${_subdir:-${_cmd}-}*(N); do
+      [[ -n ${(M)_aux:#$sub:q} ]] && continue
+      $_runcmd "${(@)argv/(#s)@(#e)/${${sub#[^/]#-}:t}}" >& $sub
+    done
+  }
+else
+  getusage() {
+    (( _run && _present )) || return
+    local aux="${1:+-$1}"
+    local ref="${_dir:h}/$_subdir$_cmd$aux"
+    _aux+=( $ref )
+    if (( $#targets && !$+_opts[s] )); then
+      cat - > $_tmp
+      if cmp -s $_tmp $ref; then
+	echo "${(l.20.)}No differences..."
+      elif [[ -e $ref ]]; then
+	${commands[git]} diff -u -w $ref $_tmp
+      else
+	echo "${(l.20.)}Old help output not found..."
+      fi
+      rm $_tmp
+    else
+      cat - > /dev/null
+    fi
+  }
+  subcmds() {
+    (( _run && _present )) || return
+    (( $#targets )) || return
+    for sub in ${_dir:h}/${_subdir:-${_cmd}-}*(N); do
+      [[ -n ${(M)_aux:#$sub:q} ]] && continue
+      $_runcmd "${(@)argv/(#s)@(#e)/${${sub#[^/]#-}:t}}" >& $_tmp
+      if cmp -s $_tmp $sub; then
+	echo "${(l.20.)}No differences... (${sub:t})"
+      else
+	${commands[git]} diff -u -w $sub $_tmp
+      fi
+    done
+  }
+fi
+
+
+getversion() {
+  (( _run && _present )) || return
+  read _verinst
+  _verinst=${${_verinst%[.,]}#v}
+  compare $_verinst $_verzsh
+  fg=${${${?/-1/red}/0/blue}/1/yellow}
+
+  print -P "%F{$fg}${(l.20.)_runcmd}   ${(r.12.)_verinst} ${(r.12.)_verzsh}%f"
+  (( _opts[s] )) && _edits+=( ${_dir:h}:${_cmd}:${_verinst} )
+}
+
+missing() {
+  (( _opts[a] && !_present )) || return
+  _verinst="MISSING"
+  print -P "%F{magenta}${(l.20.)_cmd}   ${(r.12.)_verinst} ${(r.12.)_verzsh}%f"
+}
+
+for _dir in $^dirs/Synopses(N); do
+  . $_dir
+done
+missing
+
+# edits done at the end - not good to modify the file while sourcing it
+if (( _opts[s] )); then
+  for file in ${(u)_edits%%:*}; do
+    {
+      for edit in ${(M)_edits:#${file}:*}; do
+	print "/^cmd ${${edit#*:}%:*}$/"
+	print +
+	print "s/ [^ ]*\$/ ${edit##*:}/"
+      done
+      print w
+    } | ${ED} $file/Synopses >&/dev/null
+    if (( $_opts[c] )); then
+      s=( (../)#.s.git )
+      count=$(git rev-list --count origin/master..master)
+      message="new versions"
+      (( count )) && message="fixup! $message"
+      git ${s:+--git-dir=${s[1]}} commit -m 'new versions' -i $file/Synopses $file/Synopses
+    fi
+  done
+fi

@@ -1,0 +1,40 @@
+cmd qiv
+version 2.3.1
+emit -v | field 5 | cut -c 2- | getversion
+emit -h | getusage
+
+cmd tkinfo
+version 2.8
+step sed -n 's/^set tki_version //p' =tkinfo | getversion
+emit --help | getusage
+
+cmd rdesktop
+version 1.7.1
+emit | line 2 | field 2 | getversion
+emit | getusage
+
+cmd setxkbmap
+version 7.7
+pack | getversion
+emit -? | getusage
+
+cmd urxvt
+version 9.22
+emit -h | tr -d v | field 3 | getversion
+emit -h | getusage
+
+cmd xclip
+version 0.12
+emit -version | field -1 | getversion
+emit -h | getusage
+
+cmd xfreerdp
+version 1.0.2
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd xterm
+version 7.6.0
+[[ $OSTYPE = solaris* ]] && (( _present=0 ))
+emit -v | tr '(' ' ' | field 2 | getversion
+emit -h | getusage

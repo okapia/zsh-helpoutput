@@ -1,0 +1,15 @@
+cmd khal
+version 0.8.2
+emit --version | field -1 | getversion
+emit --help | getusage
+subcmds @ --help
+
+cmd khard
+version 0.9.0
+emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd pkgutil
+version 2.6.7
+emit -v | getversion
+emit -h | getusage

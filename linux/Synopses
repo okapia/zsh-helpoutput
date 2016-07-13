@@ -1,0 +1,158 @@
+cmd arp
+version 2.10-alpha
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd arping
+version 20160308
+emit -V | sed 's/.*s//' | getversion
+emit -? | getusage
+
+cmd attr
+version 2.4.47
+pack | getversion
+emit | getusage
+
+cmd btrfs
+version 4.7
+emit --version | field 2 | sed 's/^v//' | getversion
+emit help --full | getusage
+
+cmd chsh
+version 2.28.1
+variant util-linux -- -v
+emit -v | field -1 | getversion
+emit -u | getusage
+
+cmd chsh
+version 3.2.8
+variant pwdutils -- -v
+emit -v | field -1 | getversion
+emit --help | getusage pwdutils
+
+cmd cpupower
+version 4.1
+emit --version | field 2 | sed 's/[_-].*//' | getversion
+emit -h | getusage
+
+cmd dhclient
+version 4.2.5
+emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
+emit -? | sed '/^Please report/ {N;N;d}' | getusage
+
+cmd dkms
+version 2.2.1.0
+emit -V | field -1 | getversion
+emit | getusage
+
+cmd getfattr
+version 2.4.47
+emit --version | field 2 | getversion
+emit --help | getusage
+
+cmd htop
+version 2.0.2
+emit -v | field 2 | getversion
+emit -h | getusage
+
+cmd ifconfig
+version 2.10-alpha
+emit -V | field 2 | getversion
+emit -h | getusage
+
+cmd look
+version 2.28.1
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd pgrep
+version 3.3.12
+emit -V | tr -d \) | field -1 | getversion
+emit -h | getusage
+
+cmd ps
+version 3.3.12
+emit -V | field -1 | getversion
+emit --help all | getusage
+
+cmd showmount
+version 1.3.3
+emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd ss
+version 160808
+emit -V | sed 's/.*-ss//' | getversion
+emit -h | getusage
+
+cmd strace
+version 4.13
+emit -V | field 4 | getversion
+emit -h | getusage
+
+cmd ltrace
+version 0.7.91
+emit -V | line 1 | field -1 | sed 's/\.$//' | getversion
+emit -h | getusage
+
+cmd modinfo
+version 23
+emit -V | line 1 | field 3 | getversion
+emit -h | getusage
+
+cmd modprobe
+version 23
+emit -V | line 1 | field 3 | getversion
+emit -h | getusage
+
+cmd insmod
+version 22
+emit -V | line 1 | field 3 | getversion
+emit -h | getusage
+
+cmd rmmod
+version 22
+emit -V | line 1 | field 3 | getversion
+emit -h | getusage
+
+cmd script
+version 2.28.1
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd setfattr
+version 2.4.47
+emit --version | field 2 | getversion
+emit --help | getusage
+
+cmd vmstat
+version 3.3.12
+emit -V | field -1 | getversion
+emit -h | getusage
+
+# shadow-utils
+
+cmd gpasswd
+version 4.2.1
+pack | getversion
+emit -h | getusage
+
+cmd groupadd
+version 4.2.1
+pack | getversion
+emit -h | getusage
+
+cmd groupmod
+version 4.2.1
+pack | getversion
+emit -h | getusage
+
+cmd useradd
+version 4.2.1
+pack | getversion
+emit -h | getusage
+
+cmd usermod
+version 4.2.1
+pack | getversion
+emit -h | getusage
