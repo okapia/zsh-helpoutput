@@ -1,0 +1,10 @@
+Usage: khal printcalendars [OPTIONS]
+
+  List all calendars.
+
+Options:
+  -d, --exclude-calendar CAL  Exclude the given calendar. Can be specified
+                              multiple times.
+  -a, --include-calendar CAL  Include the given calendar. Can be specified
+                              multiple times.
+  --help                      Show this message and exit.
