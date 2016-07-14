@@ -5,7 +5,7 @@ erb [switches] [inputfile]
   -v               enable verbose mode
   -d               set $DEBUG to true
   -r library       load a library
-  -S safe_level    set $SAFE (0..3)
+  -S safe_level    set $SAFE (0..4)
   -E ex[:in]       set default external/internal encodings
   -U               set default encoding to UTF-8.
   -T trim_mode     specify trim_mode (0..2, -)
