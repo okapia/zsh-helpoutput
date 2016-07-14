@@ -1,0 +1,16 @@
+Usage: khal new [OPTIONS] START [END] [TIMEZONE] SUMMARY [:: DESCRIPTION]
+
+  Create a new event from this command's arguments.
+
+  START and END can be either dates, times or datetimes, please have a look
+  at the man page for details. Everthing than can not be interpreted as a
+  (date)times or a timezone is assumed to be the event's summary, if two
+  colons (::) are present, everything behind them is taken as the event's
+  description.
+
+Options:
+  -a, --calendar CAL
+  -l, --location TEXT  The location of the new event.
+  -r, --repeat TEXT    Repeat event: daily, weekly, monthly or yearly.
+  -u, --until TEXT     Stop an event repeating on this date.
+  --help               Show this message and exit.
