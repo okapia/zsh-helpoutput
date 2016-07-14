@@ -1,4 +1,4 @@
-qiv (Quick Image Viewer) v2.2.4
+qiv (Quick Image Viewer) v2.3.1
 Usage: qiv [options] files ...
 
 General options:
@@ -33,10 +33,13 @@ General options:
     --transparency, -p     Enable transparency for transparent images
     --watch, -T            Reload the image if it has changed on disk
     --recursivedir, -u     Recursively include all files
+    --followlinks, -L      Follow symlinks to directories (requires --recursivedir)
     --select_dir, -A x     Store the selected files in dir x (default is .qiv-select)
     --autorotate, -l       Autorotate JPEGs according to EXIF rotation tag
-    --rotate, -q x         Rotate 90(x=1),180(x=2),270(x=3) degrees clockwise
-    --xineramascreen, -X x Use screen x as preferred Xinerama screen
+    --rotate, -q x         Rotate 90(x=1),180(x=2),270(x=3) degrees clockwise (11 & 13 for conditional)
+    --xineramascreen, -X x Use monitor x as preferred screen
+    --source_profile, -Y x Use color profile file x as source profile for all images
+    --display_profile,-Z x Use color profile file x as display profile for all images
     --version, -v          Print version information and exit
 
 Slideshow options:
@@ -45,6 +48,8 @@ This can also be used for the desktop background (x/y/z)
     --random, -r           Random order
     --shuffle, -S          Shuffled order
     --delay, -d x          Wait x seconds between images [default=3]
+    --vikeys               Enable movement with h/j/k/l, vi-style
+                           (HJKL will do what hjkl previously did)
 
 Keys:
     space/left mouse/wheel down      next picture
@@ -66,7 +71,7 @@ Keys:
     f                    fullscreen mode on/off
     m                    scale to screen size on/off
     t                    scale down on/off
-    X                    cycle through xinerama screens
+    X                    cycle through monitors
     s                    slide show on/off
     p                    transparency on/off
     r                    random order on/off
@@ -85,12 +90,14 @@ Keys:
     jfx<return>          jump forward x images
     jbx<return>          jump backward x images
     enter/return         reset zoom, rotation and color settings
+    E                    display Exif information
     i                    statusbar on/off
     I                    iconify window
     w                    watch file on/off
     x                    center image on background
     y                    tile image on background
     z                    stretch image on background
+    ,                    grab on/off
     <                    turn on/off magnifying window
     arrow keys                 move image (in fullscreen mode)
     arrow keys+Shift           move image faster (in fullscreen mode)
