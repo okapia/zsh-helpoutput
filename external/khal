@@ -1,18 +1,21 @@
 Usage: khal [OPTIONS] COMMAND [ARGS]...
 
 Options:
-  -c, --config PATH  The config file to use.
-  -v, --verbose      Output debugging information.
-  --version          Show the version and exit.
-  --help             Show this message and exit.
+  -c, --config PATH     The config file to use.
+  -v, --verbose         Output debugging information.
+  --color / --no-color  Use colored/uncolored output. Default is to only
+                        enable colors when not part of a pipe.
+  --version             Show the version and exit.
+  --help                Show this message and exit.
 
 Commands:
   agenda          Print agenda.
   at              Show all events scheduled for DATETIME.
   calendar        Print calendar with agenda.
+  configure       Helper for initial configuration of khal.
   import          Import events from an .ics file.
   interactive     Interactive UI.
-  new             Create a new event from this command's...
+  new             Create a new event from arguments.
   printcalendars  List all calendars.
   printformats    Print a date in all formats.
   search          Search for events matching SEARCH_STRING.
