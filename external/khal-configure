@@ -1,0 +1,6 @@
+Usage: khal configure [OPTIONS]
+
+  Helper for initial configuration of khal.
+
+Options:
+  --help  Show this message and exit.
