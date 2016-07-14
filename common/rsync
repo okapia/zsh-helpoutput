@@ -1,10 +1,10 @@
-rsync  version 3.0.9  protocol version 30
-Copyright (C) 1996-2011 by Andrew Tridgell, Wayne Davison, and others.
+rsync  version 3.1.2  protocol version 31
+Copyright (C) 1996-2015 by Andrew Tridgell, Wayne Davison, and others.
 Web site: http://rsync.samba.org/
 Capabilities:
     64-bit files, 64-bit inums, 64-bit timestamps, 64-bit long ints,
     socketpairs, hardlinks, symlinks, IPv6, batchfiles, inplace,
-    append, ACLs, xattrs, iconv, symtimes
+    append, ACLs, xattrs, iconv, symtimes, prealloc
 
 rsync comes with ABSOLUTELY NO WARRANTY.  This is free software, and you
 are welcome to redistribute it under certain conditions.  See the GNU
@@ -25,6 +25,9 @@ to an rsync daemon, and require SRC or DEST to start with a module name.
 
 Options
  -v, --verbose               increase verbosity
+     --info=FLAGS            fine-grained informational verbosity
+     --debug=FLAGS           fine-grained debug verbosity
+     --msgs2stderr           special output handling for debugging
  -q, --quiet                 suppress non-error messages
      --no-motd               suppress daemon-mode MOTD (see manpage caveat)
  -c, --checksum              skip based on checksum, not mod-time & size
@@ -45,6 +48,7 @@ Options
  -L, --copy-links            transform symlink into referent file/dir
      --copy-unsafe-links     only "unsafe" symlinks are transformed
      --safe-links            ignore symlinks that point outside the source tree
+     --munge-links           munge symlinks to make them safer (but unusable)
  -k, --copy-dirlinks         transform symlink to a dir into referent dir
  -K, --keep-dirlinks         treat symlinked dir on receiver as dir
  -H, --hard-links            preserve hard links
@@ -56,14 +60,15 @@ Options
  -o, --owner                 preserve owner (super-user only)
  -g, --group                 preserve group
      --devices               preserve device files (super-user only)
-     --copy-devices          copy device contents as regular file
      --specials              preserve special files
  -D                          same as --devices --specials
  -t, --times                 preserve modification times
  -O, --omit-dir-times        omit directories from --times
+ -J, --omit-link-times       omit symlinks from --times
      --super                 receiver attempts super-user activities
      --fake-super            store/recover privileged attrs using xattrs
  -S, --sparse                handle sparse files efficiently
+     --preallocate           allocate dest files before writing them
  -n, --dry-run               perform a trial run with no changes made
  -W, --whole-file            copy files whole (without delta-xfer algorithm)
  -x, --one-file-system       don't cross filesystem boundaries
@@ -80,6 +85,8 @@ Options
      --delete-delay          find deletions during, delete after
      --delete-after          receiver deletes after transfer, not during
      --delete-excluded       also delete excluded files from destination dirs
+     --ignore-missing-args   ignore missing source args without error
+     --delete-missing-args   delete missing source args from destination
      --ignore-errors         delete even if there are I/O errors
      --force                 force deletion of directories even if not empty
      --max-delete=NUM        don't delete more than NUM files
@@ -90,9 +97,13 @@ Options
      --delay-updates         put all updated files into place at transfer's end
  -m, --prune-empty-dirs      prune empty directory chains from the file-list
      --numeric-ids           don't map uid/gid values by user/group name
+     --usermap=STRING        custom username mapping
+     --groupmap=STRING       custom groupname mapping
+     --chown=USER:GROUP      simple username/groupname mapping
      --timeout=SECONDS       set I/O timeout in seconds
      --contimeout=SECONDS    set daemon connection timeout in seconds
  -I, --ignore-times          don't skip files that match in size and mod-time
+ -M, --remote-option=OPTION  send OPTION to the remote side only
      --size-only             skip files that match in size
      --modify-window=NUM     compare mod-times with reduced accuracy
  -T, --temp-dir=DIR          create temporary files in directory DIR
@@ -129,7 +140,8 @@ Options
      --log-file-format=FMT   log updates using the specified FMT
      --password-file=FILE    read daemon-access password from FILE
      --list-only             list the files instead of copying them
-     --bwlimit=KBPS          limit I/O bandwidth; KBytes per second
+     --bwlimit=RATE          limit socket I/O bandwidth
+     --outbuf=N|L|B          set output buffering to None, Line, or Block
      --write-batch=FILE      write a batched update to FILE
      --only-write-batch=FILE like --write-batch but w/o updating destination
      --read-batch=FILE       read a batched update from FILE
