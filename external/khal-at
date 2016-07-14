@@ -1,0 +1,13 @@
+Usage: khal at [OPTIONS] [DATETIME]...
+
+  Show all events scheduled for DATETIME.
+
+  if DATETIME is given (or the string `now`) all events scheduled for this
+  moment are shown, if only a time is given, the date is assumed to be today
+
+Options:
+  -d, --exclude-calendar CAL  Exclude the given calendar. Can be specified
+                              multiple times.
+  -a, --include-calendar CAL  Include the given calendar. Can be specified
+                              multiple times.
+  --help                      Show this message and exit.

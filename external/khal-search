@@ -1,0 +1,12 @@
+Usage: khal search [OPTIONS] SEARCH_STRING
+
+  Search for events matching SEARCH_STRING.
+
+  For repetitive events only one event is currently shown.
+
+Options:
+  -d, --exclude-calendar CAL  Exclude the given calendar. Can be specified
+                              multiple times.
+  -a, --include-calendar CAL  Include the given calendar. Can be specified
+                              multiple times.
+  --help                      Show this message and exit.

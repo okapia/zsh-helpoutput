@@ -1,0 +1,13 @@
+Usage: khal calendar [OPTIONS] [DATES]...
+
+  Print calendar with agenda.
+
+Options:
+  --events INTEGER            How many events to include.
+  --days INTEGER              How many days to include.
+  -d, --exclude-calendar CAL  Exclude the given calendar. Can be specified
+                              multiple times.
+  -a, --include-calendar CAL  Include the given calendar. Can be specified
+                              multiple times.
+  -f, --full                  Print description and location with event
+  --help                      Show this message and exit.
