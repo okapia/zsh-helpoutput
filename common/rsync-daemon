@@ -1,10 +1,10 @@
-rsync  version 3.0.9  protocol version 30
-Copyright (C) 1996-2011 by Andrew Tridgell, Wayne Davison, and others.
+rsync  version 3.1.2  protocol version 31
+Copyright (C) 1996-2015 by Andrew Tridgell, Wayne Davison, and others.
 Web site: http://rsync.samba.org/
 Capabilities:
-    64-bit files, 64-bit inums, 64-bit timestamps, 64-bit long ints,
+    64-bit files, 32-bit inums, 64-bit timestamps, 64-bit long ints,
     socketpairs, hardlinks, symlinks, IPv6, batchfiles, inplace,
-    append, ACLs, xattrs, iconv, symtimes
+    append, ACLs, xattrs, no iconv, symtimes, no prealloc, file-flags
 
 rsync comes with ABSOLUTELY NO WARRANTY.  This is free software, and you
 are welcome to redistribute it under certain conditions.  See the GNU
@@ -12,8 +12,9 @@ General Public Licence for details.
 
 Usage: rsync --daemon [OPTION]...
      --address=ADDRESS       bind to the specified address
-     --bwlimit=KBPS          limit I/O bandwidth; KBytes per second
+     --bwlimit=RATE          limit socket I/O bandwidth
      --config=FILE           specify alternate rsyncd.conf file
+ -M, --dparam=OVERRIDE       override global daemon config parameter
      --no-detach             do not detach from the parent
      --port=PORT             listen on alternate port number
      --log-file=FILE         override the "log file" setting
