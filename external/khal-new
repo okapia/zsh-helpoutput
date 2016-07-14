@@ -1,6 +1,6 @@
 Usage: khal new [OPTIONS] START [END] [TIMEZONE] SUMMARY [:: DESCRIPTION]
 
-  Create a new event from this command's arguments.
+  Create a new event from arguments.
 
   START and END can be either dates, times or datetimes, please have a look
   at the man page for details. Everthing than can not be interpreted as a
@@ -13,4 +13,5 @@ Options:
   -l, --location TEXT  The location of the new event.
   -r, --repeat TEXT    Repeat event: daily, weekly, monthly or yearly.
   -u, --until TEXT     Stop an event repeating on this date.
+  -m, --alarm TEXT     Alarm time for the new event.
   --help               Show this message and exit.

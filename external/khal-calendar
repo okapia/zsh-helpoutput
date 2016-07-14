@@ -4,6 +4,7 @@ Usage: khal calendar [OPTIONS] [DATES]...
 
 Options:
   --events INTEGER            How many events to include.
+  -w, --week                  Include all events in one week.
   --days INTEGER              How many days to include.
   -d, --exclude-calendar CAL  Exclude the given calendar. Can be specified
                               multiple times.
