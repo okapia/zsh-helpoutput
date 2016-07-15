@@ -1,2 +1,2 @@
 usage:
-	clear [-nF] <pool> [device]
+	clear [-nF] [-f] <pool> [device]

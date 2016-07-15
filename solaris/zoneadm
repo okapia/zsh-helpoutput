@@ -7,9 +7,13 @@ Subcommands:
 help
 	Print usage message.
 
-boot [-- boot_arguments]
+boot [-w|-W] [-- boot_arguments]
 	Activates (boots) specified zone.  See zoneadm(1m) for valid boot
 	arguments.
+
+shutdown [-r [-- boot_arguments]
+	Cleanly shut down (or reboot) the zone.
+	See zoneadm(1m) for valid boot arguments.
 
 halt
 	Halts specified zone, bypassing shutdown scripts and removing runtime
@@ -19,10 +23,9 @@ ready
 	Prepares a zone for running applications but does not start any user
 	processes in the zone.
 
-reboot [-- boot_arguments]
+reboot [-w|-W] [-- boot_arguments]
 	Restarts the zone (equivalent to a halt / boot sequence).
-	Fails if the zone is not active.  See zoneadm(1m) for valid boot
-	arguments.
+	See zoneadm(1m) for valid boot arguments.
 
 list [-cipv]
 	Lists the current zones, or a specific zone if indicated.  By default,
@@ -40,48 +43,74 @@ verify
 	Check to make sure the configuration can safely be instantiated
 	on the machine: physical network interfaces exist, etc.
 
-install [-x nodataset] [brand-specific args]
-	Install the configuration on to the system.  The -x nodataset option
-	can be used to prevent the creation of a new ZFS file system for the
-	zone (assuming the zonepath is within a ZFS file system).
+install [-x force-zpool-import|force-zpool-create|force-zpool-create-all]
+		[brand-specific args]
+	Install the configuration on to the  system.
+	The -x force-zpool-import option can be used to forcibly re-use
+	existing zpool resources for installation. The -x force-zpool-create-all
+	option can be used to forcibly create all zpool resources.
+	Use -x force-zpool-create=zpoolname{,zpoolname,zpoolname,...} to limit
+	this option to a specific set of zpools.
 	All other arguments are passed to the brand installation function;
-	see brand(4) for more information.
+	see brands(5) for more information.
 
-uninstall [-F]
+uninstall [-F] [-x force-zpool-destroy|force-zpool-destroy-all]
+		[brand-specific args]
 	Uninstall the configuration from the system.  The -F flag can be used
 	to force the action.
+	The -x force-zpool-destroy-all option can be used to destroy all zpools.
+	Use -x force-zpool-destroy=zpoolname{,zpoolname,zpoolname,...} to
+	limit this option to a specific set of zpools.
+	All other arguments are passed to the brand uninstall function;
+	see brands(5) for more information.
 
-clone [-m method] [-s <ZFS snapshot>] zonename
+clone [-m method] [-s <ZFS snapshot>]
+		[-x force-zpool-import|force-zpool-create|force-zpool-create-all]
+		[brand-specific args] zonename
 	Clone the installation of another zone.  The -m option can be used to
 	specify 'copy' which forces a copy of the source zone.  The -s option
 	can be used to specify the name of a ZFS snapshot that was taken from
 	a previous clone command.  The snapshot will be used as the source
 	instead of creating a new ZFS snapshot.
+	The -x force-zpool-import option can be used to forcibly re-use
+	existing zpool resources. The -x force-zpool-create-all option can be
+	used to forcibly create all zpool resources.
+	Use -x force-zpool-create=zpoolname{,zpoolname,zpoolname,...} to limit
+	this option to a specific set of zpools.
+	All other arguments are passed to the brand clone function;
+	see brands(5) for more information.
 
 move zonepath
 	Move the zone to a new zonepath.
 
-detach [-n]
+detach [-n] [brand-specific args]
 	Detach the zone from the system. The zone state is changed to
 	'configured' (but the files under the zonepath are untouched).
 	The zone can subsequently be attached, or can be moved to another
-	system and attached there. The -n option can be used to specify
-	'no-execute' mode. When -n is used, the information needed to attach
-	the zone is sent to stdout but the zone is not actually detached.
+	system and attached there.  The -n option can be used to specify
+	'no-execute' mode.  When -n is used, the information needed to attach
+	the zone is sent to standard output but the zone is not actually
+	detached.  All other arguments are passed to the brand detach function;
+	see brands(5) for more information.
 
-attach [-F] [-n <path>] [-b patchid]* [-u|-U]
+attach [-F] [-x force-zpool-import|force-zpool-create|force-zpool-create-all]
+		[-n <path>] [brand-specific args]
 	Attach the zone to the system.  The zone state must be 'configured'
 	prior to attach; upon successful completion, the zone state will be
 	'installed'.  The system software on the current system must be
-	compatible with the software on the zone's original system or use
-	the -u|U option to update the zone to the current system software.
-	Specify one or more -b patchid options to backout the patch from the
-	zone.  Specify -F to force the attach and skip software compatibility
-	tests.  The -n option can be used to specify 'no-execute' mode.  When
-	-n is used, the information needed to attach the zone is read from the
+	compatible with the software on the zone's original system.
+	Specify -F to force the attach and skip software compatibility tests.
+	The -n option can be used to specify 'no-execute' mode.  When -n is
+	used, the information needed to attach the zone is read from the
 	specified path and the configuration is only validated.  The path can
-	be '-' to specify standard input.  The -F, -n and -u|U options are
-	mutually exclusive.
+	be '-' to specify standard input.  The -F and -n options are mutually
+	exclusive.
+	Specify -x force-zpool-import to forcibly re-use existing zpool resources
+	Specify -x force-zpool-create-all to forcibly create all zpool resources.
+	Use -x force-zpool-create=zpoolname{,zpoolname,zpoolname,...} to limit
+	this option to a specific set of zpools
+	All other arguments are passed to the brand attachfunction;
+	see brands(5) for more information.
 
 mark incomplete
 	Set the state of the zone.  This can be used to force the zone

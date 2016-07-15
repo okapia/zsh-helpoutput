@@ -1,0 +1,3 @@
+usage:
+    show-linkprop    [-PZ] [[-c] -o <field>,...] [-p <prop>,...] [-z <zone>,...]
+		      <link>

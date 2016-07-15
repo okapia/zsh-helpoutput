@@ -1,0 +1,2 @@
+usage:
+    delete-vnic      [-t] [-R root-dir] <vnic-link>

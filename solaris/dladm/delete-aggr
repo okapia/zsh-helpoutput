@@ -1,0 +1,2 @@
+usage:
+    delete-aggr      [-t] [-R root-dir] <aggr-link>

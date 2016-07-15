@@ -1,0 +1,2 @@
+usage:
+    show-secobj      [-P] [[-p] -o <field>,...] [<secobj>,...]

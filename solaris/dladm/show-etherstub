@@ -1,0 +1,2 @@
+usage:
+    show-etherstub   [-tZ] [[-p] -o <field>,...] [-z <zone>,...] [<etherstub>]

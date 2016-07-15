@@ -1,2 +1,4 @@
 usage:
-	share <-a | filesystem>
+	share [-u] [-o property=value] ... <filesystem%share>
+	share <filesystem|mountpoint|filesystem%share>
+	share <-a | -r filesystem>

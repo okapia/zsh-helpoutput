@@ -1,0 +1,3 @@
+usage:
+	show-flowprop	[-P] [[-c] -o <field>,...] [-l <link>] [-p <prop>,...]
+			[<flow>]

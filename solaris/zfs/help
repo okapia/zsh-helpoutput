@@ -2,5 +2,5 @@ usage:
 	help
 	help <command>
 	help permission
-	help property
+	help [-l] property
 	help [property] <property>

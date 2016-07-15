@@ -1,0 +1,2 @@
+usage:
+    rename-link [-R root-dir]  <oldlink> <newlink>

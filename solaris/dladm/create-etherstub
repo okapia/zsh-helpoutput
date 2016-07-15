@@ -1,0 +1,2 @@
+usage:
+    create-etherstub [-t] [-R root-dir] <etherstub>

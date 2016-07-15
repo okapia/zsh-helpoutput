@@ -1,0 +1,16 @@
+
+Usage:
+    beadm subcommand cmd_options
+
+    subcommands:
+
+    beadm activate beName
+    beadm create [-a] [-d description]
+        [-e non-activeBeName | beName@snapshot]
+        [-o property=value] ... [-p zpool] beName
+    beadm create beName@snapshot
+    beadm destroy [-fF] beName | beName@snapshot
+    beadm list [[-a] | [-d] [-s]] [-H] [beName]
+    beadm mount beName mountpoint
+    beadm rename beName newBeName
+    beadm unmount [-f] beName

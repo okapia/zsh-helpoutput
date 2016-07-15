@@ -1,0 +1,3 @@
+usage:
+    show-ether       [-xZ] [-P <protocol> ] [[-p] -o <field>,...]
+ 		     [-z <zone>,...] [link]

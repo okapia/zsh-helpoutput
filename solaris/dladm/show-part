@@ -1,0 +1,3 @@
+usage:
+    show-part        [-P] [[-p] -o <field>,...] [-l <linkover>]
+		     [<part-link>]

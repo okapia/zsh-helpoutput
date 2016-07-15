@@ -1,2 +1,2 @@
 ls: illegal option -- ?
-usage: ls -1RaAdCxmnlhogrtuvVcpFbqisfHLeE@ [files]
+usage: ls -aAbBcCdeEfFghHiklLmnopqrRsStuUwxvV1@/[c | v]%[atime | crtime | ctime | mtime | all] [files]
