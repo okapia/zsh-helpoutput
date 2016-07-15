@@ -1,2 +1,2 @@
 usage:
-    show-vlan        [-PZ] [[-p] -o <field>,...] [-z <zone>,...] [<vlan-link>]
+    show-vlan        [-P | -VZ] [[-p] -o <field>,...] [-z <zone>,...] [<vlan-link>]

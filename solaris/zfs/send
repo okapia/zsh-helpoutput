@@ -1,3 +1,3 @@
 usage:
-	send [-RDpb] [-[iI] snapshot] <snapshot>
-	send -r [-Dpbc] [-i snapshot] <snapshot>
+	send [-DvRpbn] [-[iI] snapshot] [-s streamsize] <snapshot>
+	send -r [-Dvbcpn] [-i snapshot] [-s streamsize] <snapshot>

@@ -1,2 +1,2 @@
 usage:
-	show-flow	[-P] [[-p] -o <field>,...] [-l <link>] [<flow>]
+	show-flow	[-P] [[-p] -o <field>,...] [{-l <link> | <flow>}]
