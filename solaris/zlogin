@@ -1,1 +1,1 @@
-usage: zlogin [ -dCES ] [ -e cmdchar ] [-l user] zonename [command [args ...] ]
+usage: zlogin [ -dCESTU ] [ -e cmdchar ] [-l user] zonename [command [args ...] ]

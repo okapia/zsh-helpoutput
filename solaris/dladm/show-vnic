@@ -1,3 +1,6 @@
 usage:
-    show-vnic        [-PZ] [[-p] -o <field>,...] [-l <link>]
-		     [-s [-i <interval>]] [-z <zone>,...] [<vnic-link>]
+    show-vnic        [-P | {-z <zone>,..} | -c] [[-p] -o <field>,..]
+		     [-l <link>] [<vnic-link>]
+
+    show-vnic        [-mVZ] [-l <link>] [<vnic-link>]
+
