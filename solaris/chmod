@@ -12,9 +12,9 @@ where 	<attribute-operation> is a comma-separated list of
 	[+|-|=]v[<verbose-attribute-setting>|'{'<verbose-attribute-setting-list>'}']
 	[+|-|=]a
 where 	<compact-attribute-list> is a list of zero or more of
-	[A|H|R|S|a|d|i|m|q|u|O|s]
+	[A|H|R|S|a|d|i|m|q|u|O|s|T]
 where 	<verbose-attribute-setting> is one of
-	[archive|hidden|readonly|system|appendonly|nodump|immutable|av_modified|av_quarantined|nounlink|offline|sparse]
+	[archive|hidden|readonly|system|appendonly|nodump|immutable|av_modified|av_quarantined|nounlink|offline|sparse|sensitive]
 	and can be, optionally, immediately preceded by "no"
 
 where 	<ACL-operation> is one of the following

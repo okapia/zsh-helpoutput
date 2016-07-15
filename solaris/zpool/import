@@ -2,7 +2,8 @@ usage:
 	import [-d path ... ] [-D]
 	import [-d path ... | -c cachefile] [-F [-n]] <pool | id>
 	import [-o mntopts] [-o property=value] ...
-	    [-d path ... | -c cachefile] [-D] [-f] [-m] [-N] [-R root] [-F [-n [-l]]] -a
+	    [-d path ... | -c cachefile] [-D] [-f] [-m] [-N] [-R root]
+	    [-F [-n [-l]]] -a
 	import [-o mntopts] [-o property=value] ...
-	    [-d path ... | -c cachefile] [-D] [-f] [-m] [-N] [-R root] [-F [-n [-l]]]
-	    <pool | id> [newpool]
+	    [-d path ... | -c cachefile] [-D] [-f] [-m] [-N] [-R root]
+	    [-t tmppool] [-F [-n [-l]]] <pool | id> [newpool]

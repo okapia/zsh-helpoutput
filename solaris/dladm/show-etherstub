@@ -1,2 +1,2 @@
 usage:
-    show-etherstub   [-tZ] [[-p] -o <field>,...] [-z <zone>,...] [<etherstub>]
+    show-etherstub   [-PZ] [[-p] -o <field>,...] [-z <zone>,...] [<etherstub>]

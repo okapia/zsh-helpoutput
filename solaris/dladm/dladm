@@ -2,6 +2,7 @@ The following subcommands are supported:
 Bridge		: add-bridge	 create-bridge	 delete-bridge
       		  modify-bridge	 remove-bridge	 show-bridge
 Etherstub	: create-etherstub delete-etherstub show-etherstub
+EoIB		: create-eoib	 delete-eoib	 show-eoib
 IB		: create-part	 delete-part	 show-ib	 show-part
 IP tunnel	: create-iptun	 delete-iptun	 modify-iptun	 show-iptun
 Link Aggregation: add-aggr	 create-aggr	 delete-aggr
@@ -11,6 +12,7 @@ Link		: rename-link	 reset-linkprop	 set-linkprop
 Secure Object	: create-secobj	 delete-secobj	 show-secobj
 VLAN		: create-vlan	 delete-vlan	 modify-vlan	 show-vlan
 VNIC		: create-vnic	 delete-vnic	 modify-vnic	 show-vnic
+VXLAN		: create-vxlan	 delete-vxlan	 show-vxlan
 Wifi		: connect-wifi	 disconnect-wifi scan-wifi	 show-wifi
-Miscellaneous	: delete-phys	 show-ether	 show-phys	 show-usage
+Miscellaneous	: delete-phys	 show-ether	 show-phys
 For more info, run: dladm help <subcommand>

@@ -1,3 +1,3 @@
 usage:
-    show-aggr        [-PLZx] [[-p] -o <field>,...] [-s [-i <interval>]]
+    show-aggr        [-PLZxnS] [[-p] -o <field>,...]
 		     [-z <zone>,...] [<aggr-link>]

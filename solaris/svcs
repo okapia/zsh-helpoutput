@@ -1,7 +1,8 @@
 Usage: svcs [-aHpv] [-o col[,col ... ]] [-R restarter] [-sS col] [<service> ...]
        svcs -d | -D [-Hpv] [-o col[,col ... ]] [-sS col] [<service> ...]
        svcs -l <service> ...
-       svcs -x [-v] [<service> ...]
+       svcs -L [-v] <service> ...
+       svcs -x [-L] [-v] [<service> ...]
        svcs -?
 
 	-a  list all service instances rather than only those that are enabled
@@ -9,6 +10,7 @@ Usage: svcs [-aHpv] [-o col[,col ... ]] [-R restarter] [-sS col] [<service> ...]
 	-D  list dependents of the specified service(s)
 	-H  omit header line from output
 	-l  list detailed information about the specified service(s)
+	-L  print the logfile path of the specified service(s)
 	-o  list only the specified columns in the output
 	-p  list process IDs and names associated with each service
 	-R  list only those services with the specified restarter

@@ -1,5 +1,2 @@
-usage:
-    show-usage       [-a] [-d | -F <format>] [-s <DD/MM/YYYY,HH:MM:SS>]
-		     [-e <DD/MM/YYYY,HH:MM:SS>] -f <logfile> [<link>]
-Note: This subcommand is obsolete. Please use dlstat(1m)
-
+Unrecognized subcommand: 'show-usage'
+For more info, run: dladm help

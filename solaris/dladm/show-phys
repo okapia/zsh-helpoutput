@@ -1,3 +1,3 @@
 usage:
-    show-phys        [-PHLZm] [-D <dcb-feature>] [[-p] -o <field>,...]
+    show-phys        [-PHLVZm] [-D <dcb-feature> [-lr]] [[-p] -o <field>,...]
 		     [-z <zone>,...] [<link>]

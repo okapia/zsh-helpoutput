@@ -7,7 +7,7 @@ Subcommands:
 help
 	Print usage message.
 
-boot [-w|-W] [-- boot_arguments]
+boot [-R] [-w|-W] [-- boot_arguments]
 	Activates (boots) specified zone.  See zoneadm(1m) for valid boot
 	arguments.
 
@@ -27,7 +27,7 @@ reboot [-w|-W] [-- boot_arguments]
 	Restarts the zone (equivalent to a halt / boot sequence).
 	See zoneadm(1m) for valid boot arguments.
 
-list [-cipv]
+list [-ci] [-p|-s|-v]
 	Lists the current zones, or a specific zone if indicated.  By default,
 	all running zones are listed, though this can be expanded to all
 	installed zones with the -i option or all configured zones with the
@@ -109,7 +109,7 @@ attach [-F] [-x force-zpool-import|force-zpool-create|force-zpool-create-all]
 	Specify -x force-zpool-create-all to forcibly create all zpool resources.
 	Use -x force-zpool-create=zpoolname{,zpoolname,zpoolname,...} to limit
 	this option to a specific set of zpools
-	All other arguments are passed to the brand attachfunction;
+	All other arguments are passed to the brand attach function;
 	see brands(5) for more information.
 
 mark incomplete
@@ -117,4 +117,32 @@ mark incomplete
 	state to 'incomplete' administratively if some activity has rendered
 	the zone permanently unusable.  The only valid state that may be
 	specified is 'incomplete'.
+
+apply [-n] [-q]
+	Reconfigure a running zone to match persistent configuration of a zone
+	maintained through zonecfg(1M) actions. See respective brand man page
+	for details on resources supported by the live zone reconfiguration.
+
+	The following options are supported:
+	-n
+		Run the reconfiguration in a dry-run mode.
+	-q
+		Quiet mode. Suppress all messages and return a status code
+		only.
+
+suspend
+	Suspend a running zone to disk.
+
+savecore [-L] [-f <crash dump>]
+	Save a crash dump of the zone.
+
+set-prom [-c] variable=[value]
+	
+
+get-prom [variable]
+	
+
+rename zonename
+	Rename a zone to a new zonename.
+	The zone must be in configured or installed state.
 

@@ -1,13 +1,21 @@
 Usage: svcadm [-v] [cmd [args ... ]]
 
-	svcadm enable [-rst] <service> ...	- enable and online service(s)
-	svcadm disable [-st] <service> ...	- disable and offline service(s)
-	svcadm restart <service> ...		- restart specified service(s)
-	svcadm refresh <service> ...		- re-read service configuration
-	svcadm mark [-It] <state> <service> ...	- set maintenance state
-	svcadm clear <service> ...		- clear maintenance state
-	svcadm milestone [-d] <milestone>	- advance to a service milestone
-	svcadm delegate [-s] <restarter> <svc> ...	- delegate service to a restarter
+	svcadm enable [-rt] [-s [-T timeout]] <service> ...
+		enable and online service(s)
+	svcadm disable [-t] [-s [-T timeout]] <service> ...
+		disable and offline service(s)
+	svcadm restart [-s [-T timeout]] <service> ...
+		restart specified service(s)
+	svcadm refresh [-s [-T timeout]] <service> ...
+		re-read service configuration
+	svcadm mark [-It] [-s [-T timeout]] <state> <service> ...
+		set maintenance state
+	svcadm clear [-s [-T timeout]] <service> ...
+		clear maintenance state
+	svcadm milestone [-d] [-s [-T timeout]] <milestone>
+		advance to a service milestone
+	svcadm delegate [-s] <restarter> <svc> ...
+		delegate service to a restarter
 
 	Services can be specified using an FMRI, abbreviation, or fnmatch(5)
 	pattern, as shown in these examples for svc:/network/smtp:sendmail

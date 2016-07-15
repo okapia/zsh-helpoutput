@@ -1,5 +1,5 @@
 usage:
     modify-vnic      [-t] -l <link> [-m <value> | auto |
 		     {factory [-n <slot-id>]} | {random [-r <prefix>]} |
-		     {vrrp -V <vrid> -A {inet | inet6}} [-v <vid> [-f]]
+		     {vrrp -V <vrid> -A {inet | inet6}}] [-v <vid> [-f]]
 		     [-R root-dir] {<vnic-link>[,...] | -L <link>}
