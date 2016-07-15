@@ -1,2 +1,2 @@
 grep: illegal option -- ?
-Usage: grep -hblcnsviw pattern file . . .
+Usage: grep [-c|-l|-q] -bhinsvw pattern file . . .

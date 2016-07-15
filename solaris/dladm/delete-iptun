@@ -1,0 +1,2 @@
+usage:
+    delete-iptun     [-t] [-R root-dir] <iptun-link>

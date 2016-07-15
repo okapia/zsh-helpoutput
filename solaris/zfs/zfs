@@ -1,7 +1,7 @@
 For more info, run: zfs help <command>
 The following commands are supported:
 allow       clone       create      destroy     diff        get         
-groupspace  help        hold        holds       inherit     list        
-mount       promote     receive     release     rename      rollback    
-send        set         share       snapshot    unallow     unmount     
-unshare     upgrade     userspace   
+groupspace  help        hold        holds       inherit     key         
+list        mount       promote     receive     release     rename      
+rollback    send        set         share       snapshot    unallow     
+unmount     unshare     upgrade     userspace   

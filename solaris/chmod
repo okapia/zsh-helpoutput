@@ -1,8 +1,22 @@
 usage:	chmod [-fR] <absolute-mode> file ...
+	chmod [-fR] [-@ attribute] ... S<attribute-operation> file ...
 	chmod [-fR] <ACL-operation> file ...
 	chmod [-fR] <symbolic-mode-list> file ...
+
 where 	<symbolic-mode-list> is a comma-separated list of
 	[ugoa]{+|-|=}[rwxXlstugo]
+
+where 	<attribute-operation> is a comma-separated list of
+	one or more of the following
+	[+|-|=]c[<compact-attribute-list>|{<compact-attribute-list>}]
+	[+|-|=]v[<verbose-attribute-setting>|'{'<verbose-attribute-setting-list>'}']
+	[+|-|=]a
+where 	<compact-attribute-list> is a list of zero or more of
+	[A|H|R|S|a|d|i|m|q|u|O|s]
+where 	<verbose-attribute-setting> is one of
+	[archive|hidden|readonly|system|appendonly|nodump|immutable|av_modified|av_quarantined|nounlink|offline|sparse]
+	and can be, optionally, immediately preceded by "no"
+
 where 	<ACL-operation> is one of the following
 	A-<acl_specification>
 	A[number]-

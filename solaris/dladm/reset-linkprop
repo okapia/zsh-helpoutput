@@ -1,0 +1,2 @@
+usage:
+    reset-linkprop   [-t] [-R root-dir] [-p <prop>,...] <link>

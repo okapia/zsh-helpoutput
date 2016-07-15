@@ -1,0 +1,2 @@
+usage:
+    delete-etherstub [-t] [-R root-dir] <etherstub>

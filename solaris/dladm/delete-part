@@ -1,0 +1,2 @@
+usage:
+    delete-part      [-t] [-R <root-dir>] <part-link>

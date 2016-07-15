@@ -1,5 +1,5 @@
 usage:
 	help
 	help <command>
-	help property
+	help [-l] property
 	help [property] <property>

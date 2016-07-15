@@ -1,0 +1,4 @@
+usage:
+    connect-wifi     [-e <essid>] [-i <bssid>] [-k <key>,...] [-s none|wep|wpa]
+		     [-a open|shared] [-b bss|ibss] [-c] [-m a|b|g|n] [-T <time>]
+		     [<link>]

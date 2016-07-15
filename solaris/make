@@ -1,4 +1,4 @@
-Usage : make [ -f makefile ][ -K statefile ]... [ -d ][ -dd ][ -D ][ -DD ]
+Usage : make [ -f makefile ][ -K statefile ][ -x MODE_NAME=VALUE ]... [ -d ][ -dd ][ -D ][ -DD ]
              [ -e ][ -i ][ -k ][ -n ][ -p ][ -P ][ -q ][ -r ][ -s ][ -S ][ -t ]
              [ -u ][ -w ][ -V ][ target... ][ macro=value... ][ "macro +=value"... ]
 make: Fatal error: Unknown option `-?'

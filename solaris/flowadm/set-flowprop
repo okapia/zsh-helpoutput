@@ -1,0 +1,2 @@
+usage:
+	set-flowprop	[-t] [-R <root-dir>] -p <prop>=<value>[,...] <flow>

@@ -1,0 +1,2 @@
+usage:
+    delete-secobj    [-t] [-R root-dir] <secobj>[,...]

@@ -1,0 +1,2 @@
+usage:
+	reset-flowprop	[-t] [-R <root-dir>] [-p <prop>,...] <flow>

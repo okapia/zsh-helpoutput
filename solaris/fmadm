@@ -1,12 +1,40 @@
 Usage: fmadm [-P prog] [-q] [cmd [args ... ]]
 
-	fmadm config                   - display fault manager configuration
-	fmadm faulty [-afgiprsv] [-u <uuid>] [-n <max_fault>] - display list of faulty resources
-	fmadm flush <fmri> ...         - flush cached state for resource
-	fmadm load <path>              - load specified fault manager module
-	fmadm repaired <fmri>|label>   - notify fault manager that resource has been repaired
-	fmadm acquit <fmri> [<uuid>] | label [<uuid>] | <uuid> - acquit resource or acquit case
-	fmadm replaced <fmri>|label    - notify fault manager that resource has been replaced
-	fmadm reset [-s serd] <module> - reset module or sub-component
-	fmadm rotate <logname>         - rotate log file
-	fmadm unload <module>          - unload specified fault manager module
+    Fault Status and Administration
+	fmadm faulty [-afgiprsv] [-n <max_fault>] [-u <uuid>]
+		display list of faulty resources
+	fmadm acquit <fmri> [<uuid>] | <label> [<uuid>] | <uuid>
+		acquit resource or acquit case
+	fmadm replaced <fmri> | <label>
+		notify fault manager that resource has been replaced
+	fmadm repaired <fmri> | <label>
+		notify fault manager that resource has been repaired
+
+    Chassis Alias Administration
+	fmadm add-alias <chassis-name>.<chassis-serial> <alias-id> ['comment']
+		add alias to /etc/dev/chassis_aliases database
+	fmadm remove-alias <alias-id> | <chassis-name>.<chassis-serial>
+		remove mapping from /etc/dev/chassis_aliases database
+	fmadm lookup-alias <alias-id> | <chassis-name>.<chassis-serial>
+		lookup mapping in /etc/dev/chassis_aliases database
+	fmadm list-alias 
+		list current /etc/dev/chassis_aliases database
+	fmadm sync-alias 
+		verify /etc/dev/chassis_aliases contents and sync
+
+    Caution: Documented Fault Repair Procedures Only...
+      Module Administration
+	fmadm config 
+		display fault manager configuration
+	fmadm load <path>
+		load specified fault manager module
+	fmadm unload <module>
+		unload specified fault manager module
+	fmadm reset [-s serd] <module>
+		reset module or sub-component
+      Log Administration
+	fmadm rotate <logname>
+		rotate log file
+      Fault Administration
+	fmadm flush <fmri> ...
+		flush cached state for resource

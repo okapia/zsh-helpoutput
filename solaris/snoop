@@ -1,8 +1,9 @@
 
 Usage:  snoop
 	[ -a ]			# Listen to packets on audio
-	[ -d device ]		# Listen on interface named device
+	[ -d link ]		# Listen on named link
 	[ -s snaplen ]		# Truncate packets
+	[ -I IP interface ]		# Listen on named IP interface
 	[ -c count ]		# Quit after count packets
 	[ -P ]			# Turn OFF promiscuous mode
 	[ -D ]			# Report dropped packets

@@ -1,0 +1,2 @@
+usage:
+    add-aggr         [-t] [-R root-dir] -l <link> [-l <link>...] <aggr-link>

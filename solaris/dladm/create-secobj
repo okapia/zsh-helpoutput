@@ -1,0 +1,2 @@
+usage:
+    create-secobj    [-t] [-R root-dir] [-f <file>] -c <class> <secobj>

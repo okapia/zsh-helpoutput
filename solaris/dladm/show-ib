@@ -1,0 +1,2 @@
+usage:
+    show-ib          [[-p] -o <field>,...] [<link>]
