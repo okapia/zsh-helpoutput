@@ -1,0 +1,3 @@
+usage:
+    create-part      [-t] [-f] -l <link> -P <pkey>
+		     [-p <prop>=<value>[,...]] [-R <root-dir>] <part-link>

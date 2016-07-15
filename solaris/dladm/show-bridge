@@ -1,0 +1,5 @@
+usage:
+    show-bridge      [[-p] -o <field>,...] [-s [-i <interval>]] [<bridge>]
+    show-bridge      -l [[-p] -o <field>,...] [-s [-i <interval>]] <bridge>
+    show-bridge      -f [[-p] -o <field>,...] [-s [-i <interval>]] <bridge>
+    show-bridge      -t [[-p] -o <field>,...] [-s [-i <interval>]] <bridge>

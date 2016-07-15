@@ -1,0 +1,2 @@
+usage:
+    modify-iptun     [-t] [-R root-dir] -a {local|remote}=<addr>,... <iptun-link>

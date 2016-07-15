@@ -1,5 +1,5 @@
 cpio: One of -i, -o or -p must be specified.
 USAGE:
 	cpio -i[bcdfkmrstuv@BSV6] [-C size] [-E file] [-H hdr] [-I file [-M msg]] [-R id] [patterns]
-	cpio -o[acv@ABLV] [-C size] [-H hdr] [-O file [-M msg]]
-	cpio -p[adlmuv@LV] [-R id] directory
+	cpio -o[acv@ABLV0] [-C size] [-H hdr] [-O file [-M msg]]
+	cpio -p[adlmuv@LV0] [-R id] directory

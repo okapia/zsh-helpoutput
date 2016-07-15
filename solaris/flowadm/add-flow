@@ -1,0 +1,3 @@
+usage:
+	add-flow	[-t] [-R <root-dir>] -l <link> -a <attr>=<value>[,...]
+			[-p <prop>=<value>,...] <flow>

@@ -1,0 +1,2 @@
+usage:
+    delete-vlan      [-t] [-R root-dir] <vlan-link>

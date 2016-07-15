@@ -1,4 +1,4 @@
-mail: illegal option -- ?
-mail: Usage: [-ehpPqr] [-f file] [-x debuglevel]
-or	[-tw] [-m message_type] [-T file] [-x debuglevel] persons
-or	[-x debuglevel]
+Usage : make [ -f makefile ][ -K statefile ][ -x MODE_NAME=VALUE ]... [ -d ][ -dd ][ -D ][ -DD ]
+             [ -e ][ -i ][ -k ][ -n ][ -p ][ -P ][ -q ][ -r ][ -s ][ -S ][ -t ]
+             [ -u ][ -w ][ -V ][ target... ][ macro=value... ][ "macro +=value"... ]
+make: Fatal error: Unknown option `-?'

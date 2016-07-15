@@ -1,0 +1,2 @@
+usage:
+    scan-wifi        [[-p] -o <field>,...] [<link>]

@@ -1,2 +1,2 @@
 usage:
-	clone [-p] [-o property=value] ... <snapshot> <filesystem|volume>
+	clone [-p] [-K] [-o property=value] ... <snapshot> <filesystem|volume>

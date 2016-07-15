@@ -1,2 +1,2 @@
 xargs: illegal option -- ?
-xargs: Usage: xargs: [-t] [-p] [-e[eofstr]] [-E eofstr] [-I replstr] [-i[replstr]] [-L #] [-l[#]] [-n # [-x]] [-s size] [cmd [args ...]]
+xargs: Usage: xargs: [-t] [-p] [-0] [-e[eofstr]] [-E eofstr] [-I replstr] [-i[replstr]] [-L #] [-l[#]] [-n # [-x]] [-s size] [cmd [args ...]]

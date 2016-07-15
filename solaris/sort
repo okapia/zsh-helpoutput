@@ -1,3 +1,3 @@
 sort: illegal option -- ?
-usage: sort [-cmu] [-o output] [-T directory] [-S mem] [-z recsz]
+usage: sort [-cmu] [-o output] [-T directory] [-S mem]
 	[-dfiMnr] [-b] [-t char] [-k keydef] [+pos1 [-pos2]] files...

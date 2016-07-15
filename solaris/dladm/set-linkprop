@@ -1,0 +1,2 @@
+usage:
+    set-linkprop     [-t] [-R root-dir] -p <prop>=<value>[,...] <link>

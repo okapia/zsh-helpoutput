@@ -1,0 +1,2 @@
+usage:
+    delete-bridge    [-R <root-dir>] <bridge>

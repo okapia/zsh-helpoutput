@@ -1,0 +1,4 @@
+The following subcommands are supported:
+Flow	: add-flow	 remove-flow	 reset-flowprop
+    	  set-flowprop	 show-flow	 show-flowprop
+For more info, run: flowadm help <subcommand>

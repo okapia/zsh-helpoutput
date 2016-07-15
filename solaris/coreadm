@@ -3,4 +3,3 @@ usage:
             [ -e {global | process | global-setid | proc-setid | log} ]
             [ -d {global | process | global-setid | proc-setid | log} ]
     coreadm [ -p pattern ] [ -P content ] [ pid ... ]
-    coreadm -u

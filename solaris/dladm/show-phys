@@ -1,0 +1,3 @@
+usage:
+    show-phys        [-PHLZm] [-D <dcb-feature>] [[-p] -o <field>,...]
+		     [-z <zone>,...] [<link>]

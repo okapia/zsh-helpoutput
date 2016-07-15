@@ -1,14 +1,16 @@
-usage: dladm create-aggr [-t] [-R <root-dir>] [-P <policy>]
-                    [-l <mode>] [-T <time>]
-                    [-u <address>] -d <dev> ... <key>
-             delete-aggr [-t] [-R <root-dir>] <key>
-             add-aggr    [-t] [-R <root-dir>] -d <dev> ... <key>
-             remove-aggr [-t] [-R <root-dir>] -d <dev> ... <key>
-             modify-aggr [-t] [-R <root-dir>] [-P <policy>]
-                    [-l <mode>] [-T <time>] [-u <address>] <key>
-             show-aggr [-L] [-s] [-i <interval>] [-p] [<key>]
-             show-dev [-s] [-i <interval>] [-p] [<dev>]
-             show-link [-s] [-i <interval>] [-p] [<name>]
-             set-linkprop [-t] -p <prop>=<value>[,...] <name>
-             reset-linkprop [-t] [-p <prop>,...] <name>
-             show-linkprop [-cP][-p <prop>,...] <name>
+The following subcommands are supported:
+Bridge		: add-bridge	 create-bridge	 delete-bridge
+      		  modify-bridge	 remove-bridge	 show-bridge
+Etherstub	: create-etherstub delete-etherstub show-etherstub
+IB		: create-part	 delete-part	 show-ib	 show-part
+IP tunnel	: create-iptun	 delete-iptun	 modify-iptun	 show-iptun
+Link Aggregation: add-aggr	 create-aggr	 delete-aggr
+                  modify-aggr	 remove-aggr	 show-aggr
+Link		: rename-link	 reset-linkprop	 set-linkprop
+    		  show-link	 show-linkprop
+Secure Object	: create-secobj	 delete-secobj	 show-secobj
+VLAN		: create-vlan	 delete-vlan	 modify-vlan	 show-vlan
+VNIC		: create-vnic	 delete-vnic	 modify-vnic	 show-vnic
+Wifi		: connect-wifi	 disconnect-wifi scan-wifi	 show-wifi
+Miscellaneous	: delete-phys	 show-ether	 show-phys	 show-usage
+For more info, run: dladm help <subcommand>

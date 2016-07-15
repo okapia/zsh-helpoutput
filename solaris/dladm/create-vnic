@@ -1,0 +1,5 @@
+usage:
+    create-vnic      [-t] -l <link> [-m <value> | auto |
+		     {factory [-n <slot-id>]} | {random [-r <prefix>]} |
+		     {vrrp -V <vrid> -A {inet | inet6}} [-v <vid> [-f]]
+		     [-p <prop>=<value>[,...]] [-R root-dir] <vnic-link>

@@ -1,0 +1,2 @@
+usage:
+    show-wifi        [-Z] [[-p] -o <field>,...] [-z <zone>,...] [<link>]

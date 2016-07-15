@@ -1,2 +1,3 @@
 usage:
-	unshare <-a | filesystem|mountpoint>
+	unshare <filesystem|mountpoint|filesystem%share>
+	unshare <-a | -r filesystem>

@@ -7,6 +7,7 @@ Usage: svcadm [-v] [cmd [args ... ]]
 	svcadm mark [-It] <state> <service> ...	- set maintenance state
 	svcadm clear <service> ...		- clear maintenance state
 	svcadm milestone [-d] <milestone>	- advance to a service milestone
+	svcadm delegate [-s] <restarter> <svc> ...	- delegate service to a restarter
 
 	Services can be specified using an FMRI, abbreviation, or fnmatch(5)
 	pattern, as shown in these examples for svc:/network/smtp:sendmail

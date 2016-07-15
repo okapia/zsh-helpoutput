@@ -1,0 +1,3 @@
+usage:
+    show-link        [-PZ] [[-p] -o <field>,...] [-s [-i <interval>]]
+		     [-z <zone>,...] [<link>]

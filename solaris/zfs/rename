@@ -1,4 +1,5 @@
 usage:
-	rename <filesystem|volume|snapshot> <filesystem|volume|snapshot>
+	rename <filesystem|volume|snapshot|share> <filesystem|volume|snapshot|share>
 	rename -p <filesystem|volume> <filesystem|volume>
 	rename -r <snapshot> <snapshot>
+	rename <share> <share>
