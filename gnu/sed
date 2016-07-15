@@ -9,7 +9,7 @@ Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
   --follow-symlinks
                  follow symlinks when processing in place
   -i[SUFFIX], --in-place[=SUFFIX]
-                 edit files in place (makes backup if extension supplied)
+                 edit files in place (makes backup if SUFFIX supplied)
   -l N, --line-length=N
                  specify the desired line-wrap length for the `l' command
   --posix
@@ -22,6 +22,8 @@ Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
   -u, --unbuffered
                  load minimal amounts of data from the input files and flush
                  the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
       --help     display this help and exit
       --version  output version information and exit
 
@@ -32,5 +34,5 @@ specified, then the standard input is read.
 
 GNU sed home page: <http://www.gnu.org/software/sed/>.
 General help using GNU software: <http://www.gnu.org/gethelp/>.
-E-mail bug reports to: <bug-gnu-utils@gnu.org>.
+E-mail bug reports to: <bug-sed@gnu.org>.
 Be sure to include the word ``sed'' somewhere in the ``Subject:'' field.
