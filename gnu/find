@@ -17,10 +17,12 @@ tests (N can be +N or -N or N): -amin N -anewer FILE -atime N -cmin N
       -cnewer FILE -ctime N -empty -false -fstype TYPE -gid N -group NAME
       -ilname PATTERN -iname PATTERN -inum N -iwholename PATTERN -iregex PATTERN
       -links N -lname PATTERN -mmin N -mtime N -name PATTERN -newer FILE
-      -nouser -nogroup -path PATTERN -perm [+-]MODE -regex PATTERN
+      -nouser -nogroup -path PATTERN -perm [-/]MODE -regex PATTERN
       -readable -writable -executable
       -wholename PATTERN -size N[bcwkMG] -true -type [bcdpflsD] -uid N
       -used N -user NAME -xtype [bcdpfls]
+      -context CONTEXT
+
 
 actions: -delete -print0 -printf FORMAT -fprintf FILE FORMAT -print 
       -fprint0 FILE -fprint FILE -ls -fls FILE -prune -quit
