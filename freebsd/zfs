@@ -19,7 +19,7 @@ where 'command' is one of the following:
 	list [-Hp] [-r|-d max] [-o property[,...]] [-s property]...
 	    [-S property]... [-t type[,...]] [filesystem|volume|snapshot] ...
 
-	set <property=value> <filesystem|volume|snapshot> ...
+	set <property=value> ... <filesystem|volume|snapshot> ...
 	get [-rHp] [-d max] [-o "all" | field[,...]]
 	    [-t type[,...]] [-s source[,...]]
 	    <"all" | property[,...]> [filesystem|volume|snapshot] ...
@@ -39,8 +39,10 @@ where 'command' is one of the following:
 
 	send [-DnPpRvLe] [-[iI] snapshot] <snapshot>
 	send [-Le] [-i snapshot|bookmark] <filesystem|volume|snapshot>
-	receive|recv [-vnFu] <filesystem|volume|snapshot>
-	receive|recv [-vnFu] [-d | -e] <filesystem>
+	send [-nvPe] -t <receive_resume_token>
+	receive|recv [-vnsFu] <filesystem|volume|snapshot>
+	receive|recv [-vnsFu] [-o origin=<snapshot>] [-d | -e] <filesystem>
+	receive|recv -A <filesystem|volume>
 
 	allow <filesystem|volume>
 	allow [-ldug] <"everyone"|user|group>[,...] <perm|@setname>[,...]

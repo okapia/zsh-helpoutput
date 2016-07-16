@@ -1,4 +1,6 @@
 Usage: sysrc [OPTIONS] name[[+|-]=value] ...
+Usage: sysrc [OPTIONS] -a | -A
+Usage: sysrc [OPTIONS] -l | -L [name ...]
 OPTIONS:
 	-a         Dump a list of all non-default configuration variables.
 	-A         Dump a list of all configuration variables (incl. defaults).
@@ -8,6 +10,7 @@ OPTIONS:
 	           RC_CONFS to NULL or passing `-f' with a NULL file-argument).
 	-e         Print query results as `var=value' (useful for producing
 	           output to be fed back in). Ignored if `-n' is specified.
+	-E         Existing files only with `-[lL]' or when changing a setting.
 	-f file    Operate on the specified file(s) instead of rc_conf_files.
 	           Can be specified multiple times for additional files.
 	-F         Show only the last rc.conf(5) file each directive is in.
@@ -16,9 +19,13 @@ OPTIONS:
 	-i         Ignore unknown variables.
 	-j jail    The jid or name of the jail to operate within (overrides
 	           `-R dir'; requires jexec(8)).
+	-l         List configuration files used at startup on stdout and exit.
+	-L         List all configuration files including rc.conf.d entries.
 	-n         Show only variable values, not their names.
 	-N         Show only variable names, not their values.
 	-q         Quiet. Disable verbose and hide certain errors.
+	-s name    Process additional `rc.conf.d' entries for service name.
+	           Ignored if `-f file' is given.
 	-R dir     Operate within the root directory `dir' rather than `/'.
 	-v         Verbose. Print the pathname of the specific rc.conf(5)
 	           file where the directive was found.
