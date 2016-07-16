@@ -16,6 +16,8 @@ Options:
                   (default: root)
   --not-running-from-cron
                -- Run without a tty, for use by automated tools
+  --currently-running release
+               -- Update as if currently running this release
 Commands:
   fetch        -- Fetch updates from server
   cron         -- Sleep rand(3600) seconds, fetch updates, and send an

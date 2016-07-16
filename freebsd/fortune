@@ -1,0 +1,2 @@
+fortune: illegal option -- ?
+fortune [-aDefilosw] [-m pattern] [[N%] file/directory/all]
