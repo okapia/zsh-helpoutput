@@ -12,6 +12,8 @@ Options:
  --debug             report what is being done.
  --delete            delete existing entries for INFO-FILE from DIR-FILE;
                       don't insert any new entries.
+ --defsection=TEXT   like --section, but only use TEXT if no sections
+                      are present in INFO-FILE (replacing "Miscellaneous").
  --description=TEXT  the description of the entry is TEXT; used with
                       the --name option to become synonymous with the
                       --entry option.
@@ -46,7 +48,10 @@ Options:
                       If you specify more than one section, all the entries
                        are added in each of the sections.
                       If you don't specify any sections, they are determined
-                       from information in the Info file itself.
+                       from information in the Info file itself;
+                       if nothing is available there, the --defsection
+                       value is used; if that is not specified, the
+                       final default is "Miscellaneous".
  --section R SEC     equivalent to --regex=R --section=SEC --add-once.
  --silent            suppress warnings.
  --test              suppress updating of DIR-FILE.
