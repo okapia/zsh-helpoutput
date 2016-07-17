@@ -3,9 +3,9 @@ Generate a sorted index for each TeX output FILE.
 Usually FILE... is specified as `foo.??' for a document `foo.texi'.
 
 Options:
- -h, --help 	display this help and exit
- -o, --output FILE	send output to FILE
- --version 	display version information and exit
+ -h, --help   display this help and exit
+ --version    display version information and exit
+ --           end option processing
 
 Email bug reports to bug-texinfo@gnu.org,
 general questions and discussion to help-texinfo@gnu.org.
