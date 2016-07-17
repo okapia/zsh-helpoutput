@@ -1,8 +1,10 @@
 Usage: makeinfo [OPTION]... TEXINFO-FILE...
-  or:  texi2any [OPTION]... TEXINFO-FILE...
 
 Translate Texinfo source documentation to various other formats, by default
 Info files suitable for reading online with Emacs or standalone GNU Info.
+
+This program is commonly installed as both `makeinfo' and `texi2any';
+the behavior is identical, and does not depend on the installed name.
 
 General options:
       --document-language=STR locale to use in translating Texinfo keywords
@@ -15,7 +17,7 @@ General options:
       --conf-dir=DIR          search also for initialization files in DIR.
       --init-file=FILE        load FILE to modify the default behavior.
   -c, --set-customization-variable VAR=VAL  set customization variable VAR 
-                                to VAL.
+                                to value VAL.
   -v, --verbose               explain what is being done.
       --version               display version information and exit.
 
@@ -24,7 +26,8 @@ Output format selection (default is to produce Info):
       --html                  output HTML rather than Info.
       --plaintext             output plain text rather than Info.
       --xml                   output Texinfo XML rather than Info.
-      --dvi, --dvipdf, --ps, --pdf  call texi2dvi to generate given output.
+      --dvi, --dvipdf, --ps, --pdf  call texi2dvi to generate given output,
+                                after checking validity of TEXINFO-FILE.
 
 General output options:
   -E, --macro-expand=FILE     output macro-expanded source to FILE,
@@ -33,7 +36,7 @@ General output options:
                                 from Info output (thus producing plain text)
                                 or from HTML (thus producing shorter output).
                                 Also, if producing Info, write to
-                                standard output by default 
+                                standard output by default.
       --no-split              suppress any splitting of the output;
                                 generate only one output file.
       --[no-]number-sections  output chapter and sectioning numbers;
@@ -80,6 +83,7 @@ Options for DVI/PS/PDF:
 Input file options:
       --commands-in-node-names  does nothing, retained for compatibility.
   -D VAR                        define the variable VAR, as with @set.
+  -D 'VAR VAL'                  define VAR to VAL (one shell argument).
   -I DIR                        append DIR to the @include search path.
   -P DIR                        prepend DIR to the @include search path.
   -U VAR                        undefine the variable VAR, as with @clear.
