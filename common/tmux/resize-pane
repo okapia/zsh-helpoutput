@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: resize-pane [-DLRU] [-t target-pane] [adjustment]
+usage: resize-pane [-DLMRUZ] [-x width] [-y height] [-t target-pane] [adjustment]

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: choose-buffer [-t target-window] [template]
+usage: choose-buffer [-t target-window] [-F format] [template]

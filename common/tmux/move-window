@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: move-window [-dk] [-s src-window] [-t dst-window]
+usage: move-window [-dkr] [-s src-window] [-t dst-window]

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: show-buffer [-b buffer-index]
+usage: show-buffer [-b buffer-name]

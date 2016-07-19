@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: delete-buffer [-b buffer-index]
+usage: delete-buffer [-b buffer-name]

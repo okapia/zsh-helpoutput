@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: last-pane [-t target-window]
+usage: last-pane [-de] [-t target-window]

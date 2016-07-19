@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: run-shell command
+usage: run-shell [-b] [-t target-pane] shell-command

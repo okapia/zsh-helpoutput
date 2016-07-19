@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: attach-session [-dr] [-t target-session]
+usage: attach-session [-dEr] [-c working-directory] [-t target-session]

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: choose-session [-t target-window] [template]
+usage: choose-session [-t target-window] [-F format] [template]

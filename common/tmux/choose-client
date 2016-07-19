@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: choose-client [-t target-window] [template]
+usage: choose-client [-t target-window] [-F format] [template]

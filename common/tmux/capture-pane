@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: capture-pane [-b buffer-index] [-E end-line] [-S start-line] [-t target-pane]
+usage: capture-pane [-aCeJpPq] [-b buffer-name] [-E end-line] [-S start-line][-t target-pane]

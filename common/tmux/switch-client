@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: switch-client [-lnpr] [-c target-client] [-t target-session]
+usage: switch-client [-Elnpr] [-c target-client] [-t target-session] [-T key-table]

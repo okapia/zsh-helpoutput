@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: set-hook [-gu] [-t target-session] hook-name [command]

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: show-environment [-g] [-t target-session]
+usage: show-environment [-gs] [-t target-session] [name]

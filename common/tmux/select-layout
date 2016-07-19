@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: select-layout [-np] [-t target-window] [layout-name]
+usage: select-layout [-nop] [-t target-window] [layout-name]

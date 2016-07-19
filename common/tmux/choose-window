@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: choose-window [-t target-window] [template]
+usage: choose-window [-t target-window][-F format] [template]

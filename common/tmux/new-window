@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: new-window [-adk] [-n window-name] [-t target-window] [command]
+usage: new-window [-adkP] [-c start-directory] [-F format] [-n window-name] [-t target-window] [command]

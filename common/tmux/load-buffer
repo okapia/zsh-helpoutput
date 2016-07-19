@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: load-buffer [-b buffer-index] path
+usage: load-buffer [-b buffer-name] path

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: list-panes [-as] [-F format] [-t target]
+usage: list-panes [-as] [-F format] [-t target-window]

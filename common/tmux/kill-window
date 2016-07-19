@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: kill-window [-t target-window]
+usage: kill-window [-a] [-t target-window]

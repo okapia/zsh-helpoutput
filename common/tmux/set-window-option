@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: set-window-option [-agu] [-t target-window] option [value]
+usage: set-window-option [-agoqu] [-t target-window] option [value]

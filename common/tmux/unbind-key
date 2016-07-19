@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: unbind-key [-acn] [-t key-table] key
+usage: unbind-key [-acn] [-t mode-table] [-T key-table] key

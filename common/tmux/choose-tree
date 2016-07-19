@@ -1,0 +1,2 @@
+tmux: unknown option -- h
+usage: choose-tree [-suw] [-b session-template] [-c window template] [-S format] [-W format] [-t target-window]

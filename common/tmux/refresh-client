@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: refresh-client [-S] [-t target-client]
+usage: refresh-client [-S] [-C size] [-t target-client]

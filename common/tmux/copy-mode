@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: copy-mode [-u] [-t target-pane]
+usage: copy-mode [-Mu] [-t target-pane]

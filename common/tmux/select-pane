@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: select-pane [-lDLRU] [-t target-pane]
+usage: select-pane [-DdegLlMmRU] [-P style] [-t target-pane]

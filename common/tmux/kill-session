@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: kill-session [-t target-session]
+usage: kill-session [-aC] [-t target-session]

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: show-window-options [-g] [-t target-window]
+usage: show-window-options [-gv] [-t target-window] [option]

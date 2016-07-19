@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: detach-client [-P] [-s target-session] [-t target-client]
+usage: detach-client [-P] [-a] [-s target-session] [-t target-client]

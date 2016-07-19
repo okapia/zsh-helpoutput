@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: break-pane [-d] [-t target-pane]
+usage: break-pane [-dP] [-F format] [-s src-pane] [-t dst-window]

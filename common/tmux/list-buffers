@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: list-buffers 
+usage: list-buffers [-F format]

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: bind-key [-cnr] [-t key-table] key command [arguments]
+usage: bind-key [-cnr] [-t mode-table] [-T key-table] key command [arguments]

@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: set-buffer [-b buffer-index] data
+usage: set-buffer [-a] [-b buffer-name] [-n new-buffer-name] data

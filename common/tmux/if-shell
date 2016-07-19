@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: if-shell shell-command command [command]
+usage: if-shell [-bF] [-t target-pane] shell-command command [command]

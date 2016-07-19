@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: show-messages [-t target-client]
+usage: show-messages [-JT] [-t target-client]

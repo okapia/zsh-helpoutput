@@ -1,2 +1,2 @@
 tmux: unknown option -- h
-usage: list-keys [-t key-table]
+usage: list-keys [-t mode-table] [-T key-table]
