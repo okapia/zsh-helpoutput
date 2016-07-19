@@ -8,15 +8,16 @@ Options:
             include only files matching PAT
   -I FILE, --include-from-file=FILE
             include only files that match any pattern in FILE
-  --hunks=H, -# H
-            include only hunks in range H
-  --lines=L include only hunks with (original) lines in range L
-  --files=F include only files in range F
+  -# H, --hunks=H
+            include only hunks in range H, if range begins with x show all excluding range H
+  --lines=L include only hunks with (original) lines in range L, if range begins with x show all excluding range L
+  -F F, --files=F
+            include only files in range F, if range begins with x show all excluding range F
   -z, --decompress
             decompress .gz and .bz2 files
-  -n, --line-number
+  -n, --line-number 
             show line numbers 
-  --number-files 
+  -N, --number-files 
             show file numbers, for use with filterdiff's --files option 
   -H, --with-filename 
             show patch file names 
@@ -31,13 +32,11 @@ Options:
             prefix pathnames in old files with PREFIX
   --addnewprefix=PREFIX
             prefix pathnames in new files with PREFIX
-  -s, --status
+  -s, --status 
             show file additions and removals 
   -v, --verbose
             verbose output -- use more than once for extra verbosity
-  -E, --extended-regexp
   -E, --empty-files-as-absent 
             treat empty files as absent 
-  -f FILE, --file=FILE
   --filter  run as 'filterdiff' 
   --grep    run as 'grepdiff' 
