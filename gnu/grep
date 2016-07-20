@@ -18,9 +18,8 @@ Regexp selection and interpretation:
 Miscellaneous:
   -s, --no-messages         suppress error messages
   -v, --invert-match        select non-matching lines
-  -V, --version             print version information and exit
-      --help                display this help and exit
-      --mmap                deprecated no-op; evokes a warning
+  -V, --version             display version information and exit
+      --help                display this help text and exit
 
 Output control:
   -m, --max-count=NUM       stop after NUM matches
@@ -41,12 +40,15 @@ Output control:
   -D, --devices=ACTION      how to handle devices, FIFOs and sockets;
                             ACTION is 'read' or 'skip'
   -r, --recursive           like --directories=recurse
-  -R, --dereference-recursive  likewise, but follow all symlinks
-      --include=FILE_PATTERN  search only files that match FILE_PATTERN
-      --exclude=FILE_PATTERN  skip files and directories matching FILE_PATTERN
+  -R, --dereference-recursive
+                            likewise, but follow all symlinks
+      --include=FILE_PATTERN
+                            search only files that match FILE_PATTERN
+      --exclude=FILE_PATTERN
+                            skip files and directories matching FILE_PATTERN
       --exclude-from=FILE   skip files matching any file pattern from FILE
-      --exclude-dir=PATTERN  directories that match PATTERN will be skipped.
-  -L, --files-without-match  print only names of FILEs containing no match
+      --exclude-dir=PATTERN directories that match PATTERN will be skipped.
+  -L, --files-without-match print only names of FILEs containing no match
   -l, --files-with-matches  print only names of FILEs containing matches
   -c, --count               print only a count of matching lines per FILE
   -T, --initial-tab         make tabs line up (if needed)
@@ -57,6 +59,8 @@ Context control:
   -A, --after-context=NUM   print NUM lines of trailing context
   -C, --context=NUM         print NUM lines of output context
   -NUM                      same as --context=NUM
+      --group-separator=SEP use SEP as a group separator
+      --no-group-separator  use empty string as a group separator
       --color[=WHEN],
       --colour[=WHEN]       use markers to highlight the matching strings;
                             WHEN is 'always', 'never', or 'auto'
