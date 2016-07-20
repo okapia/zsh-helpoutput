@@ -1,8 +1,11 @@
-tcpdump version 4.4.0
-libpcap version 1.4.0
-Usage: tcpdump [-aAbdDefhHIJKlLnNOpqRStuUvxX] [ -B size ] [ -c count ]
+tcpdump version 4.7.4
+libpcap version 1.7.4
+LibreSSL 2.3.6
+Usage: tcpdump [-aAbdDefhHIJKlLnNOpqRStuUvxX#] [ -B size ] [ -c count ]
 		[ -C file_size ] [ -E algo:secret ] [ -F file ] [ -G seconds ]
-		[ -i interface ] [ -j tstamptype ] [ -M secret ]
-		[ -r file ] [ -s snaplen ] [ -T type ] [ -V file ] [ -w file ]
-		[ -W filecount ] [ -y datalinktype ] [ -z command ]
+		[ -i interface ] [ -j tstamptype ] [ -M secret ] [ --number ]
+		[ -Q in|out|inout ]
+		[ -r file ] [ -s snaplen ] [ --time-stamp-precision precision ]
+		[ --immediate-mode ] [ -T type ] [ --version ] [ -V file ]
+		[ -w file ] [ -W filecount ] [ -y datalinktype ] [ -z command ]
 		[ -Z user ] [ expression ]
