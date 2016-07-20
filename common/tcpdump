@@ -1,0 +1,8 @@
+tcpdump version 4.4.0
+libpcap version 1.4.0
+Usage: tcpdump [-aAbdDefhHIJKlLnNOpqRStuUvxX] [ -B size ] [ -c count ]
+		[ -C file_size ] [ -E algo:secret ] [ -F file ] [ -G seconds ]
+		[ -i interface ] [ -j tstamptype ] [ -M secret ]
+		[ -r file ] [ -s snaplen ] [ -T type ] [ -V file ] [ -w file ]
+		[ -W filecount ] [ -y datalinktype ] [ -z command ]
+		[ -Z user ] [ expression ]
