@@ -1,16 +1,16 @@
-usage: scl <action> [<collection>...] <command>
-   or: scl -l|--list [<collection>...]
-   or: scl register <path>
-   or: scl deregister <collection> [--force]
+usage: scl enable|run [<collection>...] <command>
+       scl load|unload [<collection>...]
+       scl list-collections
+       scl list-packages|man|register|deregister <collection>
+       scl --help
 
-Options:
-    -l, --list            list installed Software Collections or packages
-                          that belong to them
-    -h, --help            display this help and exit
-
-Actions:
-    enable                calls enable script from Software Collection
-                          (enables a Software Collection)
-    <SCL script name>     calls arbitrary script from a Software Collection
+description:
+    enable|run            run given command from Software Collection 
+    load|unload           enable/disable collection in current shell
+    list-collections      list installed Software Collections
+    list-packages         list pacages in Sofware Collection
+    man                   show manual paga about Software Collection
+    register|deregister   register/deregister Sofware Collection
+    --help                show this help
 
 Use '-' as <command> to read the command from standard input.
