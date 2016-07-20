@@ -1,0 +1,89 @@
+usage: dnf [options] COMMAND
+
+List of Main Commands
+
+autoremove                remove all unneeded packages that were originally installed as dependencies
+check-update              check for available package upgrades
+clean                     remove cached data
+distro-sync               synchronize installed packages to the latest available versions
+downgrade                 downgrade a package
+group                     display, or use, the groups information
+help                      display a helpful usage message
+history                   display, or use, the transaction history
+info                      display details about a package or group of packages
+install                   install a package or packages on your system
+list                      list a package or groups of packages
+makecache                 generate the metadata cache
+mark                      mark or unmark installed packages as installed by user.
+provides                  find what package provides the given value
+reinstall                 reinstall a package
+remove                    remove a package or packages from your system
+repolist                  display the configured software repositories
+repository-packages       run commands on top of all packages in given repository
+search                    search package details for the given string
+updateinfo                display advisories about packages
+upgrade                   upgrade a package or packages on your system
+upgrade-to                upgrade a package on your system to the specified version
+
+List of Plugin Commands
+
+builddep                  Install build dependencies for package or spec file
+config-manager            manage dnf configuration options and repositories
+copr                      Interact with Copr repositories.
+debuginfo-install         install debuginfo packages
+download                  Download package to current directory
+langavailable             Search available langpack packages
+langinfo                  Show langpack packages for a given language
+langinstall               Install the given packages
+langlist                  Show installed languages
+langremove                Remove the given packages
+needs-restarting          determine updated binaries that need restarting
+playground                Interact with Playground repository.
+repoquery                 search for packages matching keyword
+reposync                  download all packages from remote repo
+
+optional arguments:
+  --allowerasing        allow erasing of installed packages to resolve
+                        dependencies
+  -b, --best            try the best available package versions in
+                        transactions.
+  -C, --cacheonly       run entirely from system cache, don't update cache
+  -c [config file], --config [config file]
+                        config file location
+  -d [debug level], --debuglevel [debug level]
+                        debugging output level
+  --debugsolver         dumps detailed solving results into files
+  --showduplicates      show duplicates, in repos, in list/search commands
+  -e ERRORLEVEL, --errorlevel ERRORLEVEL
+                        error output level
+  --rpmverbosity [debug level name]
+                        debugging output level for rpm
+  -q, --quiet           quiet operation
+  -v, --verbose         verbose operation
+  -y, --assumeyes       Automatically answer yes for all questions
+  --assumeno            Automatically answer no for all questions
+  --version             show DNF version and exit
+  --installroot [path]  set install root
+  --enablerepo [repo]
+  --disablerepo [repo]
+  -x [package], --exclude [package]
+                        exclude packages by name or glob
+  --disableexcludes [repo]
+                        disable excludes
+  --repofrompath [repo,path]
+                        label and path to additional repository, can be
+                        specified multiple times.
+  --noplugins           disable all plugins
+  --nogpgcheck          disable gpg signature checking
+  --disableplugin [plugin]
+                        disable plugins by name
+  --color COLOR         control whether colour is used
+  --releasever RELEASEVER
+                        override the value of $releasever in config and repo
+                        files
+  --setopt SETOPTS      set arbitrary config and repo options
+  --refresh             set metadata as expired before running the command
+  -4                    resolve to IPv4 addresses only
+  -6                    resolve to IPv6 addresses only
+  --downloadonly        only download packages
+  -h, --help            show help
