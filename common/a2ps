@@ -1,6 +1,7 @@
 Usage: a2ps [OPTION]... [FILE]...
 
-Convert FILE(s) or standard input to PostScript.
+Convert FILE(s) or standard input to PostScript.  By default, the output
+is sent to the default printer.  An output file may be specified with -o.
 
 Mandatory arguments to long options are mandatory for short options too.
 Long options marked with * require a yes/no argument, corresponding
@@ -98,6 +99,7 @@ Output:
   --suffix=SUFFIX            override the usual backup suffix
   -P, --printer=NAME         send output to printer NAME
   -d                         send output to the default printer
+                             (this is the default behavior)
 
 PostScript:
       --prologue=FILE        include FILE.pro as PostScript prologue
@@ -128,5 +130,5 @@ To print as a booklet on the default printer, which is Duplex capable,
 
     $ a2ps -=book paper.dvi.gz -d
 
-News, updates and documentation: visit http://www.inf.enst.fr/~demaille/a2ps/.
+News, updates and documentation: visit http://www.gnu.org/software/a2ps/.
 Report bugs to <bug-a2ps@gnu.org>.
