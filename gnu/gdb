@@ -18,11 +18,12 @@ Options:
                      Execute a single GDB command.
                      May be used multiple times and in conjunction
                      with --command.
+  --init-command=FILE, -ix Like -x but execute it before loading inferior.
+  --init-eval-command=COMMAND, -iex Like -ex but before loading inferior.
   --core=COREFILE    Analyze the core dump COREFILE.
   --pid=PID          Attach to running process PID.
   --dbx              DBX compatibility mode.
   --directory=DIR    Search for source files in DIR.
-  --epoch            Output information used by epoch emacs-GDB interface.
   --exec=EXECFILE    Use EXECFILE as the executable.
   --fullname         Output information used by emacs-GDB interface.
   --help             Print this message.
@@ -30,7 +31,8 @@ Options:
                      Select a specific interpreter / user interface
   -l TIMEOUT         Set timeout in seconds for remote debugging.
   --nw		     Do not use a window interface.
-  --nx               Do not read .gdbinit file.
+  --nx               Do not read any .gdbinit files.
+  --nh               Do not read .gdbinit file from home directory.
   --python, -P       Following argument is Python script file; remaining
                      arguments are passed to script.
   --quiet            Do not print version number on startup.
@@ -46,6 +48,7 @@ Options:
   --xdb              XDB compatibility mode.
 
 At startup, GDB reads the following init files and executes their commands:
+   * system-wide init file: /etc/gdbinit
 
 For more information, type "help" from within GDB, or consult the
 GDB manual (available as on-line info or a printed manual).
