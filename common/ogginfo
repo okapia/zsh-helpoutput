@@ -1,9 +1,9 @@
-ogginfo from vorbis-tools 1.2.0
+ogginfo from vorbis-tools 1.4.0
  by the Xiph.Org Foundation (http://www.xiph.org/)
 
 (c) 2003-2005 Michael Smith <msmith@xiph.org>
 
-Usage: ogginfo [flags] file1.ogg [file2.ogg ... fileN.ogg]
+Usage: ogginfo [flags] file1.ogg [file2.ogx ... fileN.ogv]
 Flags supported:
 	-h Show this help message
 	-q Make less verbose. Once will remove detailed informative
