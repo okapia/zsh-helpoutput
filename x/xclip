@@ -9,9 +9,10 @@ Access an X server selection for reading or writing.
   -d, -display     X display to connect to (eg localhost:0")
   -h, -help        usage information
       -selection   selection to access ("primary", "secondary", "clipboard" or "buffer-cut")
+      -noutf8      don't treat text as utf-8, use old unicode
       -version     version information
       -silent      errors only, run in background (default)
       -quiet       run in foreground, show what's happening
       -verbose     running commentary
 
-Report bugs to <kims@debian.org>
+Report bugs to <astrand@lysator.liu.se>
