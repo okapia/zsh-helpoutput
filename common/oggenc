@@ -1,5 +1,4 @@
-oggenc from vorbis-tools 1.2.0 
-(c) 2000-2005 Michael Smith <msmith@xiph.org>
+oggenc from vorbis-tools 1.4.0 by the Xiph.Org Foundation (http://www.xiph.org/)
 
 Usage: oggenc [options] inputfile [...]
 
@@ -7,12 +6,12 @@ OPTIONS:
  General:
  -Q, --quiet          Produce no output to stderr
  -h, --help           Print this help text
- -v, --version        Print the version number
+ -V, --version        Print the version number
  -k, --skeleton       Adds an Ogg Skeleton bitstream
  -r, --raw            Raw mode. Input files are read directly as PCM data
- -B, --raw-bits=n     Set bits/sample for raw input. Default is 16
- -C, --raw-chan=n     Set number of channels for raw input. Default is 2
- -R, --raw-rate=n     Set samples/sec for raw input. Default is 44100
+ -B, --raw-bits=n     Set bits/sample for raw input; default is 16
+ -C, --raw-chan=n     Set number of channels for raw input; default is 2
+ -R, --raw-rate=n     Set samples/sec for raw input; default is 44100
  --raw-endianness     1 for bigendian, 0 for little (defaults to 0)
  -b, --bitrate        Choose a nominal bitrate to encode at. Attempt
                       to encode at a bitrate averaging this. Takes an
@@ -46,11 +45,14 @@ OPTIONS:
  --resample n         Resample input data to sampling rate n (Hz)
  --downmix            Downmix stereo to mono. Only allowed on stereo
                       input.
+ --scale              Input scaling factor (helps with clipping inputs).
  -s, --serial         Specify a serial number for the stream. If encoding
                       multiple files, this will be incremented for each
                       stream after the first.
  --discard-comments   Prevents comments in FLAC and Ogg FLAC files from
                       being copied to the output Ogg Vorbis file.
+ --ignorelength       Ignore the datalength in Wave headers. This allows
+                      support for files > 4GB and STDIN data streams. 
 
  Naming:
  -o, --output=fn      Write file to fn (only valid in single-file mode)
@@ -66,6 +68,9 @@ OPTIONS:
                       characters are just removed.
                       Default settings for the above two arguments are platform
                       specific.
+ --utf8               Tells oggenc that the command line parameters date, title,
+                      album, artist, genre, and comment are already in UTF-8.
+                      On Windows, this switch applies to file names too.
  -c, --comment=c      Add the given string as an extra comment. This may be
                       used multiple times. The argument should be in the
                       format "tag=value".
@@ -75,24 +80,29 @@ OPTIONS:
  -l, --album          Name of album
  -a, --artist         Name of artist
  -G, --genre          Genre of track
+ -L, --lyrics         Include lyrics from given file (.srt or .lrc format)
+ -Y, --lyrics-language  Sets the language for the lyrics
                       If multiple input files are given, then multiple
-                      instances of the previous five arguments will be used,
+                      instances of the previous eight arguments will be used,
                       in the order they are given. If fewer titles are
                       specified than files, OggEnc will print a warning, and
                       reuse the final one for the remaining files. If fewer
                       track numbers are given, the remaining files will be
-                      unnumbered. For the others, the final tag will be reused
-                      for all others without warning (so you can specify a date
-                      once, for example, and have it used for all the files)
+                      unnumbered. If fewer lyrics are given, the remaining
+                      files will not have lyrics added. For the others, the
+                      final tag will be reused for all others without warning
+                      (so you can specify a date once, for example, and have
+                      it used for all the files)
 
 INPUT FILES:
- OggEnc input files must currently be 24, 16, or 8 bit PCM WAV, AIFF, or AIFF/C
- files, 32 bit IEEE floating point WAV, and optionally FLAC or Ogg FLAC. Files
+ OggEnc input files must currently be 24, 16, or 8 bit PCM Wave, AIFF, or AIFF/C
+ files, 32 bit IEEE floating point Wave, and optionally FLAC or Ogg FLAC. Files
   may be mono or stereo (or more channels) and any sample rate.
  Alternatively, the --raw option may be used to use a raw PCM data file, which
- must be 16 bit stereo little-endian PCM ('headerless wav'), unless additional
+ must be 16 bit stereo little-endian PCM ('headerless Wave'), unless additional
  parameters for raw mode are specified.
  You can specify taking the file from stdin by using - as the input filename.
  In this mode, output is to stdout unless an output filename is specified
  with -o
+ Lyrics files may be in SubRip (.srt) or LRC (.lrc) format
 

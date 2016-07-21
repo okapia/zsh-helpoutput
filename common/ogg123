@@ -1,4 +1,4 @@
-ogg123 from vorbis-tools 1.2.0
+ogg123 from vorbis-tools 1.4.0
  by the Xiph.Org Foundation (http://www.xiph.org/)
 
 Usage: ogg123 [options] file ...
@@ -8,7 +8,7 @@ Available codecs: FLAC, Speex, Ogg Vorbis.
 
 Output options
   -d dev, --device dev    Use output device "dev". Available devices:
-                          Live:  alsa, oss, null
+                          Live:  pulse, alsa, oss, null
                           File:  wav, raw, au
 
   -f file, --file file    Set the output filename for a file device
@@ -38,6 +38,7 @@ Decode options
   -y n, --ntimes n        Repeat every played block 'n' times
 
 Miscellaneous options
+  -c c, --config c        Config options from command-line.
   -l s, --delay s         Set termination timeout in milliseconds. ogg123
                           will skip to the next song on SIGINT (Ctrl-C),
                           and will terminate if two SIGINTs are received
