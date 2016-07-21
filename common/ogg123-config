@@ -1,0 +1,6 @@
+Available options:
+Name           Description             Type   Default
+-----------------------------------------------------
+default_device default output device   string (NULL)
+shuffle        shuffle playlist        bool   0
+repeat         repeat playlist forever bool   0
