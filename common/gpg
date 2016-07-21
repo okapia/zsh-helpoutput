@@ -1,16 +1,16 @@
-gpg (GnuPG) 2.0.22
-libgcrypt 1.5.3
-Copyright (C) 2013 Free Software Foundation, Inc.
+gpg (GnuPG) 2.1.11
+libgcrypt 1.6.4
+Copyright (C) 2016 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
 Home: ~/.gnupg
 Supported algorithms:
-Pubkey: RSA, ELG, DSA
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
 Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
         CAMELLIA128, CAMELLIA192, CAMELLIA256
-Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
 Compression: Uncompressed, ZIP, ZLIB, BZIP2
 
 Syntax: gpg [options] [files]
@@ -32,9 +32,14 @@ Commands:
      --fingerprint          list keys and fingerprints
  -K, --list-secret-keys     list secret keys
      --gen-key              generate a new key pair
+     --quick-gen-key        quickly generate a new key pair
+     --quick-adduid         quickly add a new user-id
+     --full-gen-key         full featured key pair generation
      --gen-revoke           generate a revocation certificate
      --delete-keys          remove keys from the public keyring
      --delete-secret-keys   remove keys from the secret keyring
+     --quick-sign-key       quickly sign a key
+     --quick-lsign-key      quickly sign a key locally
      --sign-key             sign a key
      --lsign-key            sign a key locally
      --edit-key             sign or edit a key
@@ -51,6 +56,7 @@ Commands:
      --update-trustdb       update the trust database
      --print-md             print message digests
      --server               run in server mode
+     --tofu-policy VALUE    set the TOFU policy for a key (good, unknown, bad, ask, auto)
 
 Options:
  
