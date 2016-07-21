@@ -20,6 +20,7 @@ Debugging:
   -T, --trace             flex should run in trace mode
   -w, --nowarn            do not generate warnings
   -v, --verbose           write summary of scanner statistics to stdout
+      --hex               use hexadecimal numbers instead of octal in debug outputs
 
 Files:
   -o, --outfile=FILE      specify output filename
