@@ -1,1 +1,1 @@
-Usage: dbus-monitor [--system | --session | --address ADDRESS] [--monitor | --profile ] [watch expressions]
+Usage: dbus-monitor [--system | --session | --address ADDRESS] [--monitor | --profile | --pcap | --binary ] [watch expressions]
