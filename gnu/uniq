@@ -7,16 +7,17 @@ With no options, matching lines are merged to the first occurrence.
 Mandatory arguments to long options are mandatory for short options too.
   -c, --count           prefix lines by the number of occurrences
   -d, --repeated        only print duplicate lines, one for each group
-  -D, --all-repeated[=METHOD]  print all duplicate lines
-                          groups can be delimited with an empty line
-                          METHOD={none(default),prepend,separate}
+  -D                    print all duplicate lines
+      --all-repeated[=METHOD]  like -D, but allow separating groups
+                                 with an empty line;
+                                 METHOD={none(default),prepend,separate}
   -f, --skip-fields=N   avoid comparing the first N fields
-      --group[=METHOD]  show all items, separating groups with an empty line
+      --group[=METHOD]  show all items, separating groups with an empty line;
                           METHOD={separate(default),prepend,append,both}
   -i, --ignore-case     ignore differences in case when comparing
   -s, --skip-chars=N    avoid comparing the first N characters
   -u, --unique          only print unique lines
-  -z, --zero-terminated  end lines with 0 byte, not newline
+  -z, --zero-terminated     line delimiter is NUL, not newline
   -w, --check-chars=N   compare no more than N characters in lines
       --help     display this help and exit
       --version  output version information and exit
@@ -29,4 +30,5 @@ You may want to sort the input first, or use 'sort -u' without 'uniq'.
 Also, comparisons honor the rules specified by 'LC_COLLATE'.
 
 GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-For complete documentation, run: info coreutils 'uniq invocation'
+Full documentation at: <http://www.gnu.org/software/coreutils/uniq>
+or available locally via: info '(coreutils) uniq invocation'
