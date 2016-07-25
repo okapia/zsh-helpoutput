@@ -1,4 +1,4 @@
-usage: git add [options] [--] <pathspec>...
+usage: git add [<options>] [--] <pathspec>...
 
     -n, --dry-run         dry run
     -v, --verbose         be verbose
@@ -14,4 +14,5 @@ usage: git add [options] [--] <pathspec>...
     --refresh             don't add, only refresh the index
     --ignore-errors       just skip files which cannot be added because of errors
     --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod <(+/-)x>      override the executable bit of the listed files
 
