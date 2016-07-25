@@ -29,6 +29,8 @@ usage: git update-index [<options>] [--] [<file>...]
     --index-version <n>   write index in this format
     --split-index         enable or disable split index
     --untracked-cache     enable/disable untracked cache
+    --test-untracked-cache
+                          test if the filesystem supports untracked cache
     --force-untracked-cache
                           enable untracked cache without testing the filesystem
 

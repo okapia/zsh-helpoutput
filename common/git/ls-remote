@@ -1,2 +1,13 @@
-usage: git ls-remote [--heads] [--tags]  [--upload-pack=<exec>]
-                     [-q | --quiet] [--exit-code] [--get-url] [<repository> [<refs>...]]
+usage: git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]
+                     [-q | --quiet] [--exit-code] [--get-url]
+                     [--symref] [<repository> [<refs>...]]
+
+    -q, --quiet           do not print remote URL
+    --upload-pack <exec>  path of git-upload-pack on the remote host
+    -t, --tags            limit to tags
+    -h, --heads           limit to heads
+    --refs                do not show peeled tags
+    --get-url             take url.<base>.insteadOf into account
+    --exit-code           exit with exit code 2 if no matching refs are found
+    --symref              show underlying ref in addition to the object pointed by it
+

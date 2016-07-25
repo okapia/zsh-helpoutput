@@ -1,5 +1,5 @@
-usage: git merge [options] [<commit>...]
-   or: git merge [options] <msg> HEAD <commit>
+usage: git merge [<options>] [<commit>...]
+   or: git merge [<options>] <msg> HEAD <commit>
    or: git merge --abort
 
     -n                    do not show a diffstat at the end of the merge
@@ -22,8 +22,10 @@ usage: git merge [options] [<commit>...]
     -v, --verbose         be more verbose
     -q, --quiet           be more quiet
     --abort               abort the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
     --progress            force progress reporting
-    -S, --gpg-sign[=<key id>]
+    -S, --gpg-sign[=<key-id>]
                           GPG sign commit
     --overwrite-ignore    update ignored files (default)
 
