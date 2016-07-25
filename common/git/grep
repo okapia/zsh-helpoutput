@@ -1,9 +1,9 @@
-usage: git grep [options] [-e] <pattern> [<rev>...] [[--] <path>...]
+usage: git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]
 
     --cached              search in index instead of in the work tree
-    --no-index            finds in contents not managed by git
+    --no-index            find in contents not managed by git
     --untracked           search in both tracked and untracked files
-    --exclude-standard    search also in ignored files
+    --exclude-standard    ignore files specified via '.gitignore'
 
     -v, --invert-match    show non-matching lines
     -i, --ignore-case     case insensitive matching
@@ -39,6 +39,7 @@ usage: git grep [options] [-e] <pattern> [<rev>...] [[--] <path>...]
                           show <n> context lines before matches
     -A, --after-context <n>
                           show <n> context lines after matches
+    --threads <n>         use <n> worker threads
     -NUM                  shortcut for -C NUM
     -p, --show-function   show a line with the function name before matches
     -W, --function-context

@@ -12,6 +12,7 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     -m, --multiple        fetch from multiple remotes
     -t, --tags            fetch all tags and associated objects
     -n                    do not fetch all tags (--no-tags)
+    -j, --jobs <n>        number of submodules fetched in parallel
     -p, --prune           prune remote-tracking branches no longer on remote
     --recurse-submodules[=<on-demand>]
                           control recursive fetching of submodules
@@ -23,4 +24,6 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     --unshallow           convert to a complete repository
     --update-shallow      accept refs that update .git/shallow
     --refmap <refmap>     specify fetch refmap
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
 

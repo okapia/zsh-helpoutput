@@ -33,4 +33,5 @@ Other
     -z, --null            terminate values with NUL byte
     --name-only           show variable names only
     --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
 

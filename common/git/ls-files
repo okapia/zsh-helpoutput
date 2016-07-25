@@ -1,4 +1,4 @@
-usage: git ls-files [options] [<file>...]
+usage: git ls-files [<options>] [<file>...]
 
     -z                    paths are separated with NUL character
     -t                    identify the file status with tags
@@ -10,7 +10,8 @@ usage: git ls-files [options] [<file>...]
     -i, --ignored         show ignored files in the output
     -s, --stage           show staged contents' object name in the output
     -k, --killed          show files on the filesystem that need to be removed
-    --directory           show 'other' directories' name only
+    --directory           show 'other' directories' names only
+    --eol                 show line endings of files
     --empty-directory     don't show empty directories
     -u, --unmerged        show unmerged files in the output
     --resolve-undo        show resolve-undo information
