@@ -1,11 +1,12 @@
-usage: git blame [options] [rev-opts] [rev] [--] file
+usage: git blame [<options>] [<rev-opts>] [<rev>] [--] <file>
 
-    [rev-opts] are documented in git-rev-list(1)
+    <rev-opts> are documented in git-rev-list(1)
 
     --incremental         Show blame entries as we find them, incrementally
     -b                    Show blank SHA-1 for boundary commits (Default: off)
     --root                Do not treat root commits as boundaries (Default: off)
     --show-stats          Show work cost statistics
+    --progress            Force progress reporting
     --score-debug         Show output score for blame entries
     -f, --show-name       Show original filename (Default: auto)
     -n, --show-number     Show original linenumber (Default: off)

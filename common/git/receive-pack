@@ -1,1 +1,4 @@
 usage: git receive-pack <git-dir>
+
+    -q, --quiet           quiet
+

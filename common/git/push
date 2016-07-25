@@ -5,7 +5,7 @@ usage: git push [<options>] [<repository> [<refspec>...]]
     --repo <repository>   repository
     --all                 push all refs
     --mirror              mirror all refs
-    --delete              delete refs
+    -d, --delete          delete refs
     --tags                push tags (can't be used with --all or --mirror)
     -n, --dry-run         dry run
     --porcelain           machine-readable output
@@ -27,4 +27,6 @@ usage: git push [<options>] [<repository> [<refspec>...]]
     --signed[=<yes|no|if-asked>]
                           GPG sign the push
     --atomic              request atomic transaction on remote side
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
 
