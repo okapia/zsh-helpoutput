@@ -1,0 +1,12 @@
+Usage:
+  gsettings [--schemadir SCHEMADIR] set SCHEMA[:PATH] KEY VALUE
+
+Set the value of KEY to VALUE
+
+Arguments:
+  SCHEMADIR A directory to search for additional schemas
+  SCHEMA    The name of the schema
+  PATH      The path, for relocatable schemas
+  KEY       The key within the schema
+  VALUE     The value to set
+

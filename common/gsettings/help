@@ -1,0 +1,9 @@
+Usage:
+  gsettings [--schemadir SCHEMADIR] help [COMMAND]
+
+Print help
+
+Arguments:
+  SCHEMADIR A directory to search for additional schemas
+  COMMAND   The (optional) command to explain
+
