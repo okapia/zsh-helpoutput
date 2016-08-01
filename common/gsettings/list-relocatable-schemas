@@ -1,0 +1,8 @@
+Usage:
+  gsettings [--schemadir SCHEMADIR] list-relocatable-schemas 
+
+List the installed relocatable schemas
+
+Arguments:
+  SCHEMADIR A directory to search for additional schemas
+

@@ -1,0 +1,11 @@
+Usage:
+  gsettings [--schemadir SCHEMADIR] writable SCHEMA[:PATH] KEY
+
+Check if KEY is writable
+
+Arguments:
+  SCHEMADIR A directory to search for additional schemas
+  SCHEMA    The name of the schema
+  PATH      The path, for relocatable schemas
+  KEY       The key within the schema
+
