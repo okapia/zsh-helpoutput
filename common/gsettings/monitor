@@ -1,0 +1,14 @@
+Usage:
+  gsettings [--schemadir SCHEMADIR] monitor SCHEMA[:PATH] [KEY]
+
+Monitor KEY for changes.
+If no KEY is specified, monitor all keys in SCHEMA.
+Use ^C to stop monitoring.
+
+
+Arguments:
+  SCHEMADIR A directory to search for additional schemas
+  SCHEMA    The name of the schema
+  PATH      The path, for relocatable schemas
+  KEY       The (optional) key within the schema
+

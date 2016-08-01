@@ -1,0 +1,10 @@
+Usage:
+  gsettings [--schemadir SCHEMADIR] reset-recursively SCHEMA[:PATH]
+
+Reset all keys in SCHEMA to their defaults
+
+Arguments:
+  SCHEMADIR A directory to search for additional schemas
+  SCHEMA    The name of the schema
+  PATH      The path, for relocatable schemas
+

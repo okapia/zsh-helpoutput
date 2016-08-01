@@ -1,0 +1,12 @@
+Usage:
+  gsettings [--schemadir SCHEMADIR] list-recursively [SCHEMA[:PATH]]
+
+List keys and values, recursively
+If no SCHEMA is given, list all keys
+
+
+Arguments:
+  SCHEMADIR A directory to search for additional schemas
+  SCHEMA    The name of the schema
+  PATH      The path, for relocatable schemas
+
