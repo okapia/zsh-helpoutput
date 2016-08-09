@@ -27,6 +27,10 @@ Usage: ss [ OPTIONS ]
    -w, --raw           display only RAW sockets
    -x, --unix          display only Unix domain sockets
    -f, --family=FAMILY display sockets of type FAMILY
+       FAMILY := {inet|inet6|link|unix|netlink|help}
+
+   -K, --kill          forcibly close sockets, display what was closed
+   -H, --no-header     Suppress header line
 
    -A, --query=QUERY, --socket=QUERY
        QUERY := {all|inet|tcp|udp|raw|unix|unix_dgram|unix_stream|unix_seqpacket|packet|netlink}[,QUERY]
