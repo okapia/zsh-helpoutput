@@ -1,4 +1,4 @@
-Usage: readelf [OPTION...] FILE...
+Usage: eu-readelf [OPTION...] FILE...
 Print information from ELF file in human-readable form.
 
  ELF input selection:
@@ -36,6 +36,9 @@ Print information from ELF file in human-readable form.
                              Display just offsets instead of resolving values
                              to addresses in DWARF data
   -W, --wide                 Ignored for compatibility (lines always wide)
+  -z, --decompress           Show compression information for compressed
+                             sections (when used with -S); decompress section
+                             before dumping data (when used with -p or -x)
 
   -?, --help                 Give this help list
       --usage                Give a short usage message
