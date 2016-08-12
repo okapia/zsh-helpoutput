@@ -16,5 +16,5 @@ Options that are valid with incremental assembly (-I --incremental) are:
                    : partial arrays.
   --scan        -s : Use with -R to start any arrays that have the minimal
                    : required number of devices, but are not yet started.
-  --fail      -f  : First fail (if needed) and then remove device from
-                  : any array that it is a member of.
+  --fail        -f : First fail (if needed) and then remove device from
+                   : any array that it is a member of.

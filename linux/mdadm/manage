@@ -3,14 +3,20 @@ Usage: mdadm arraydevice options component devices...
 This usage is for managing the component devices within an array.
 The --manage option is not needed and is assumed if the first argument
 is a device name or a management option.
-The first device listed will be taken to be an md array device, and
+The first device listed will be taken to be an md array device, any
 subsequent devices are (potential) components of that array.
 
 Options that are valid with management mode are:
   --add         -a   : hotadd subsequent devices to the array
+  --re-add           : subsequent devices are re-added if there were
+                     : recent members of the array
   --remove      -r   : remove subsequent devices, which must not be active
   --fail        -f   : mark subsequent devices a faulty
   --set-faulty       : same as --fail
+  --replace          : mark device(s) to be replaced by spares.  Once
+                     : replacement completes, device will be marked faulty
+  --with             : Indicate which spare a previous '--replace' should
+                     : prefer to use
   --run         -R   : start a partially built array
   --stop        -S   : deactivate array, releasing all resources
   --readonly    -o   : mark array as readonly
