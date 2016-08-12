@@ -20,14 +20,17 @@ Usage:  mdadm --create device -chunk=X --level=Y --raid-devices=Z devices
 
  Options that are valid with --create (-C) are:
   --bitmap=          : Create a bitmap for the array with the given filename
-  --chunk=      -c   : chunk size of kibibytes
+                     : or an internal bitmap is 'internal' is given
+  --chunk=      -c   : chunk size in kibibytes
   --rounding=        : rounding factor for linear array (==chunk size)
-  --level=      -l   : raid level: 0,1,4,5,6,linear,multipath and synonyms
+  --level=      -l   : raid level: 0,1,4,5,6,10,linear,multipath and synonyms
   --parity=     -p   : raid5/6 parity algorithm: {left,right}-{,a}symmetric
-  --layout=          : same as --parity
+  --layout=          : same as --parity, for RAID10: [fno]NN 
   --raid-devices= -n : number of active devices in array
-  --spare-devices= -x: number of spares (eXtras) devices in initial array
+  --spare-devices= -x: number of spare (eXtra) devices in initial array
   --size=       -z   : Size (in K) of each drive in RAID1/4/5/6/10 - optional
+  --data-offset=     : Space to leave between start of device and start
+                     : of array data.
   --force       -f   : Honour devices as listed on command line.  Don't
                      : insert a missing drive for RAID5.
   --run         -R   : insist of running the array even if not all
@@ -36,4 +39,5 @@ Usage:  mdadm --create device -chunk=X --level=Y --raid-devices=Z devices
   --name=       -N   : Textual name for array - max 32 characters
   --bitmap-chunk=    : bitmap chunksize in Kilobytes.
   --delay=      -d   : bitmap update delay in seconds.
+  --write-journal=   : Specify journal device for RAID-4/5/6 array
 
