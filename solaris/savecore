@@ -1,5 +1,6 @@
 savecore: illegal option -- ?
-usage: savecore [-dvV] [-D dirname] [-s secname] [-f dumpfile] [suffix]
+usage: savecore [-dNrvV] [-D dirname] [-s secname] [-f dumpfile] [suffix]
        savecore -L [-v] [-D dirname] [-s secname]
        savecore -u [-dv] [-D dirname] [-f dumpfile]
-       savecore -l [-Hv] [-f dumpfile]
+       savecore -l [-H] [-f dumpfile]
+       savecore -r [-v]

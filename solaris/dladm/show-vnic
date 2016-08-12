@@ -2,5 +2,5 @@ usage:
     show-vnic        [-P | {-z <zone>,..} | -c] [[-p] -o <field>,..]
 		     [-l <link>] [<vnic-link>]
 
-    show-vnic        [-mVZ] [-l <link>] [<vnic-link>]
+    show-vnic        [-mVZv] [-l <link>] [<vnic-link>]
 

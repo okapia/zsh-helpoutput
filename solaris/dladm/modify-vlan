@@ -1,3 +1,4 @@
 usage:
-    modify-vlan      [-ft] [-R root-dir] -l <link> -v <vid>
+    modify-vlan      [-ft] [-R root-dir] -l <link>
+		     -v <vid>[,<pvlan-svid>[,<pvlan-type>]]
 		     {<link>[,...] | -L <link>}
