@@ -1,7 +1,8 @@
 usage:
-    create-vnic      [-t] -l <link> [-m <value> | auto |
+    create-vnic      [-t] [-f] -l <link> [-m <value> | auto |
 		     {factory [-n <slot-id>]} | {random [-r <prefix>]} |
-		     {vrrp -V <vrid> -A {inet | inet6}}] [-v <vid> [-f]]
+		     {vrrp -V <vrid> -A {inet | inet6}}]
+		     [-v <vid>,[<pvlan-svid>[,<pvlan-type>]]] [-P <pkey>]
 		     [-p <prop>=<value>[,...]] [-R root-dir] <vnic-link>
 
     create-vnic      -t -c <evsname>[/<vportname>] [-T <tenant>] <vnic-link>

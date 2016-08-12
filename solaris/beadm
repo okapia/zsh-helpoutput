@@ -11,6 +11,7 @@ Usage:
     beadm create beName@snapshot
     beadm destroy [-fF] beName | beName@snapshot
     beadm list [[-a] | [-d] [-s]] [-H] [beName]
-    beadm mount beName mountpoint
+    beadm mount [-b] beName mountpoint
     beadm rename beName newBeName
+    beadm set-policy {-n policy [-n -policy2] ...} beName [beName2 ...]
     beadm unmount [-f] beName

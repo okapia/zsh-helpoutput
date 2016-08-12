@@ -1,2 +1,3 @@
 usage:
-    create-vlan      [-ft] [-R root-dir] -l <link> -v <vid> [<vlan-link>]
+    create-vlan      [-ft] [-R root-dir] -l <link>
+		     -v <vid>[,<pvlan-svid>[,<pvlan-type>]] [<vlan-link>]
