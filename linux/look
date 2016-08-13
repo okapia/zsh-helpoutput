@@ -1,0 +1,16 @@
+
+Usage:
+ look [options] <string> [<file>...]
+
+Display lines beginning with a specified string.
+
+Options:
+ -a, --alternative        use the alternative dictionary
+ -d, --alphanum           compare only blanks and alphanumeric characters
+ -f, --ignore-case        ignore case differences when comparing
+ -t, --terminate <char>   define the string-termination character
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see look(1).
