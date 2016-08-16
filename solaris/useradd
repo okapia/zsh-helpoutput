@@ -1,10 +1,11 @@
-UX: useradd: ERROR: invalid syntax.
-usage:  useradd [-u uid [-o] | -g group | -G group[[,group]...] |-d dir |
+UX: useradd: ERROR: Invalid syntax.
+usage:  useradd [-u uid [-o] | -g group | -G group[[,group]...] |-d dir | -b base_dir |
 		-s shell | -c comment | -m [-k skel_dir] | -f inactive |
-		-e expire | -A authorization [, authorization ...] |
-		-P profile [, profile ...] | -R role [, role ...] |
-		-K key=value | -p project [, project ...]] login
+		-e expire | -A authorization[[,authorization]...] |
+		-P profile[[,profile]...] | -R role[[,role]...] |
+		-K key=value | -p project[[,project]...] |
+		[-S [files | ldap]] login
 	useradd -D [-g group | -b base_dir | -f inactive | -e expire
-		-A authorization [, authorization ...] |
-		-P profile [, profile ...] | -R role [, role ...] |
-		-K key=value ... -p project]
+		-A authorization [[,authorization]...] |
+		-P profile [[,profile]...] | -R role [[,role]...] |
+		-K key=value ... -p project] | [-s shell] | [-k skel_dir]

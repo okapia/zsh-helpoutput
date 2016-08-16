@@ -1,5 +1,5 @@
 netstat: illegal option -- ?
-usage: netstat [-anv] [-f address_family] [-T d|u]
+usage: netstat [-anuvR] [-f address_family] [-P protocol]
        netstat [-n] [-f address_family] [-P protocol] [-T d|u] [-g | -p | -s [interval [count]]]
        netstat -m [-v] [-T d|u] [interval [count]]
        netstat -i [-I interface] [-an] [-f address_family] [-T d|u] [interval [count]]

@@ -1,14 +1,24 @@
 Usage: fmadm [-P prog] [-q] [cmd [args ... ]]
 
-    Fault Status and Administration
+    Problem Status and Administration
 	fmadm faulty [-afgiprsv] [-n <max_fault>] [-u <uuid>]
-		display list of faulty resources
+		display all active problems (alerts,defects,faults)
+	fmadm list [-afgprsv] [-n <max_problem>] [-u <uuid>]
+		display all active problems (alerts,defects,faults)
 	fmadm acquit <fmri> [<uuid>] | <label> [<uuid>] | <uuid>
 		acquit resource or acquit case
 	fmadm replaced <fmri> | <label>
 		notify fault manager that resource has been replaced
 	fmadm repaired <fmri> | <label>
 		notify fault manager that resource has been repaired
+	fmadm list-alert [-afgprsv] [-n <max_alert>] [-u <uuid>]
+		display list of active alerts
+	fmadm clear <uuid> | <location> | class@resource
+		clear an alert
+	fmadm list-defect [-afgprsv] [-n <max_alert>] [-u <uuid>]
+		display list of active defects
+	fmadm list-fault [-afgprsv] [-n <max_alert>] [-u <uuid>]
+		display list of active faults
 
     Chassis Alias Administration
 	fmadm add-alias <chassis-name>.<chassis-serial> <alias-id> ['comment']

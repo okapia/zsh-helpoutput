@@ -47,3 +47,6 @@ Usage: svcs [-aHpv] [-o col[,col ... ]] [-R restarter] [-sS col] [<service> ...]
 	STA     abbreviation for current state
 	STATE   name for current state
 	STIME   time of last state change
+	ASTATE  name for current auxiliary state
+	NRUN    time of next scheduled run for periodic services
+	LRUN    time of the last run for periodic services

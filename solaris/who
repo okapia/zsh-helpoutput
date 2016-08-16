@@ -1,0 +1,22 @@
+who: illegal option -- ?
+
+Usage:	who [-abdHlmpqrstTu] [utmpx_like_file]
+	who -q [-n x] [utmpx_like_file]
+	who [am i]
+	who [am I]
+a	all (bdlprtu options)
+b	boot time
+d	dead processes
+H	print header
+l	login processes
+n #	specify number of users per line for -q
+p	processes other than getty or users
+q	quick who
+r	run level
+s	short form of who (no time since last output or pid)
+t	time changes
+T	status of tty (+ writable, - not writable, ? hung)
+u	useful information
+m	information only about current terminal
+am i	information about current terminal (same as -m)
+am I	information about current terminal (same as -m)

@@ -14,5 +14,6 @@ VLAN		: create-vlan	 delete-vlan	 modify-vlan	 show-vlan
 VNIC		: create-vnic	 delete-vnic	 modify-vnic	 show-vnic
 VXLAN		: create-vxlan	 delete-vxlan	 show-vxlan
 Wifi		: connect-wifi	 disconnect-wifi scan-wifi	 show-wifi
+Capture		: create-cap	 delete-cap	 show-cap
 Miscellaneous	: delete-phys	 show-ether	 show-phys
 For more info, run: dladm help <subcommand>

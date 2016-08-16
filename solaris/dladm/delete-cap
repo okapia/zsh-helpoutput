@@ -1,0 +1,2 @@
+usage:
+    delete-cap      [-t] [-R root-dir] <caplink-name>

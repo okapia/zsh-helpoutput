@@ -1,3 +1,5 @@
 usage:
-	receive [-vnFu] [[-o property=value] | [-x property]] ... <filesystem|volume|snapshot>
-	receive [-vnFu] [[-o property=value] | [-x property]] ... [-d | -e] <filesystem>
+	receive [-vnFu] [[-o property=value] | [-x property]] ...
+	    <filesystem|volume|snapshot>
+	receive [-vnFu] [[-o property=value] | [-x property]] ...
+	    [-d | -e] <filesystem>
