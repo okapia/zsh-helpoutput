@@ -1,5 +1,6 @@
 usage:
     coreadm [ -g pattern ] [ -i pattern ] [ -G content ] [ -I content ]
-            [ -e {global | process | global-setid | proc-setid | log} ]
-            [ -d {global | process | global-setid | proc-setid | log} ]
+            [ -k pattern ]
+            [ -e {global | process | global-setid | proc-setid | log | kzone} ]
+            [ -d {global | process | global-setid | proc-setid | log | kzone} ]
     coreadm [ -p pattern ] [ -P content ] [ pid ... ]

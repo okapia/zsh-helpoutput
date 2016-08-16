@@ -1,0 +1,2 @@
+usage:
+    show-cap        [-P] [[-p] -o <field>,...]
