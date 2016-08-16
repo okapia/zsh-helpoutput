@@ -7,9 +7,11 @@ Subcommands:
 help
 	Print usage message.
 
-boot [-R] [-w|-W] [-- boot_arguments]
-	Activates (boots) specified zone.  See zoneadm(1m) for valid boot
-	arguments.
+boot [-R] [-w|-W] [-x storage-create-missing][-- boot_arguments]
+	Activates (boots) specified zone.
+	The -x storage-create-missing option can be used to create storage,
+	if needed.
+	See zoneadm(1m) for more valid boot arguments.
 
 shutdown [-r [-- boot_arguments]
 	Cleanly shut down (or reboot) the zone.
@@ -19,12 +21,17 @@ halt
 	Halts specified zone, bypassing shutdown scripts and removing runtime
 	resources of the zone.
 
-ready
+ready [-x storage-create-missing]
 	Prepares a zone for running applications but does not start any user
 	processes in the zone.
+	The -x storage-create-missing option can be used to create storage,
+	if needed.
+	
 
-reboot [-w|-W] [-- boot_arguments]
+reboot [-w|-W] [-x storage-create-missing][-- boot_arguments]
 	Restarts the zone (equivalent to a halt / boot sequence).
+	The -x storage-create-missing option can be used to create storage,
+	if needed.
 	See zoneadm(1m) for valid boot arguments.
 
 list [-ci] [-p|-s|-v]
@@ -43,29 +50,33 @@ verify
 	Check to make sure the configuration can safely be instantiated
 	on the machine: physical network interfaces exist, etc.
 
-install [-x force-zpool-import|force-zpool-create|force-zpool-create-all]
-		[brand-specific args]
+install [-x force-zpool-import|force-zpool-create|force-zpool-create-all
+		|storage-create-missing][brand-specific args]
 	Install the configuration on to the  system.
 	The -x force-zpool-import option can be used to forcibly re-use
 	existing zpool resources for installation. The -x force-zpool-create-all
 	option can be used to forcibly create all zpool resources.
 	Use -x force-zpool-create=zpoolname{,zpoolname,zpoolname,...} to limit
 	this option to a specific set of zpools.
+	The -x storage-create-missing option can be used to create storage,
+	if needed.
 	All other arguments are passed to the brand installation function;
 	see brands(5) for more information.
 
-uninstall [-F] [-x force-zpool-destroy|force-zpool-destroy-all]
-		[brand-specific args]
+uninstall [-F] [-x force-zpool-destroy|force-zpool-destroy-all
+		|force-storage-destroy-all][brand-specific args]
 	Uninstall the configuration from the system.  The -F flag can be used
 	to force the action.
 	The -x force-zpool-destroy-all option can be used to destroy all zpools.
 	Use -x force-zpool-destroy=zpoolname{,zpoolname,zpoolname,...} to
 	limit this option to a specific set of zpools.
+	The -x force-storage-destroy-all option can be used to destroy storage.
 	All other arguments are passed to the brand uninstall function;
 	see brands(5) for more information.
 
 clone [-m method] [-s <ZFS snapshot>]
-		[-x force-zpool-import|force-zpool-create|force-zpool-create-all]
+		[-x force-zpool-import|force-zpool-create
+		|force-zpool-create-all|storage-create-missing]
 		[brand-specific args] zonename
 	Clone the installation of another zone.  The -m option can be used to
 	specify 'copy' which forces a copy of the source zone.  The -s option
@@ -77,6 +88,8 @@ clone [-m method] [-s <ZFS snapshot>]
 	used to forcibly create all zpool resources.
 	Use -x force-zpool-create=zpoolname{,zpoolname,zpoolname,...} to limit
 	this option to a specific set of zpools.
+	The -x storage-create-missing option can be used to create storage,
+	if needed.
 	All other arguments are passed to the brand clone function;
 	see brands(5) for more information.
 
@@ -105,10 +118,13 @@ attach [-F] [-x force-zpool-import|force-zpool-create|force-zpool-create-all]
 	specified path and the configuration is only validated.  The path can
 	be '-' to specify standard input.  The -F and -n options are mutually
 	exclusive.
-	Specify -x force-zpool-import to forcibly re-use existing zpool resources
+	Specify -x force-zpool-import to forcibly re-use existing zpool 
+	resources.
 	Specify -x force-zpool-create-all to forcibly create all zpool resources.
 	Use -x force-zpool-create=zpoolname{,zpoolname,zpoolname,...} to limit
 	this option to a specific set of zpools
+	options are mutually
+	exclusive.
 	All other arguments are passed to the brand attach function;
 	see brands(5) for more information.
 
@@ -118,9 +134,10 @@ mark incomplete
 	the zone permanently unusable.  The only valid state that may be
 	specified is 'incomplete'.
 
-apply [-n] [-q]
+apply [-n] [-q] [-x storage-create-missing]
 	Reconfigure a running zone to match persistent configuration of a zone
-	maintained through zonecfg(1M) actions. See respective brand man page
+	maintained through zonecfg(1M) actions. 
+	See respective brand man page
 	for details on resources supported by the live zone reconfiguration.
 
 	The following options are supported:
@@ -129,12 +146,18 @@ apply [-n] [-q]
 	-q
 		Quiet mode. Suppress all messages and return a status code
 		only.
+	The -x storage-create-missing option can be used to create storage,
+	if needed.
+	
 
 suspend
 	Suspend a running zone to disk.
 
-savecore [-L] [-f <crash dump>]
+savecore [-k] [-L] [-f <crash dump>]
 	Save a crash dump of the zone.
+
+migrate [-nq] [-c cipher] user@remotehost
+	
 
 set-prom [-c] variable=[value]
 	

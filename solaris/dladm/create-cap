@@ -1,0 +1,2 @@
+usage:
+    create-cap      [-t] [-R root-dir] <caplink-name>

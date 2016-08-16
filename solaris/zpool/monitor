@@ -1,0 +1,5 @@
+usage:
+	monitor -t provider [-T d|u] [[-p] -o field[,...] [pool] ... [interval [count]]
+	Valid values for 'provider' are send, receive, scrub, and resilver
+	Valid values for 'field' are done, other, pctdone, pool, provider, speed, starttime,
+	  tag, timeleft, timestmp, total

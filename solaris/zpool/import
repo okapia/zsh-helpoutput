@@ -1,9 +1,9 @@
 usage:
-	import [-d path ... ] [-D]
+	import [-d path ... ] [-D] [-l]
 	import [-d path ... | -c cachefile] [-F [-n]] <pool | id>
 	import [-o mntopts] [-o property=value] ...
 	    [-d path ... | -c cachefile] [-D] [-f] [-m] [-N] [-R root]
-	    [-F [-n [-l]]] -a
+	    [-F [-n]] -a
 	import [-o mntopts] [-o property=value] ...
 	    [-d path ... | -c cachefile] [-D] [-f] [-m] [-N] [-R root]
-	    [-t tmppool] [-F [-n [-l]]] <pool | id> [newpool]
+	    [-t tmppool] [-F [-n]] <pool | id> [newpool]

@@ -1,0 +1,2 @@
+vmstat: illegal option -- ?
+Usage: vmstat [-ipqsS] [-T d|u] [disk ...] [interval [count]]

@@ -1,2 +1,2 @@
 UX: groupadd: ERROR: invalid syntax.
-usage: groupadd [-g gid [-o]] group
+usage: groupadd [-S [files | ldap]] [-U user1[,user2]] [-g gid [-o]] group
