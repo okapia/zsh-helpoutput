@@ -1,0 +1,28 @@
+Usage: augtool [OPTIONS] [COMMAND]
+Load the Augeas tree and modify it. If no COMMAND is given, run interactively
+Run 'augtool help' to get a list of possible commands.
+
+Options:
+
+  -c, --typecheck        typecheck lenses
+  -b, --backup           preserve originals of modified files with
+                         extension '.augsave'
+  -n, --new              save changes in files with extension '.augnew',
+                         leave original unchanged
+  -r, --root ROOT        use ROOT as the root of the filesystem
+  -I, --include DIR      search DIR for modules; can be given multiple times
+  -t, --transform XFM    add a file transform; uses the 'transform' command
+                         syntax, e.g. -t 'Fstab incl /etc/fstab.bak'
+  -l, --load-file FILE   load individual FILE in the tree
+  -e, --echo             echo commands when reading from a file
+  -f, --file FILE        read commands from FILE
+  -s, --autosave         automatically save at the end of instructions
+  -i, --interactive      run an interactive shell after evaluating
+                         the commands in STDIN and FILE
+  -S, --nostdinc         do not search the builtin default directories
+                         for modules
+  -L, --noload           do not load any files into the tree on startup
+  -A, --noautoload       do not autoload modules from the search path
+  --span                 load span positions for nodes related to a file
+  --timing               after executing each command, show how long it took
+  --version              print version information and exit.
