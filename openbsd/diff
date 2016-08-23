@@ -1,7 +1,7 @@
-usage: diff [-abdilpTtw] [-c | -e | -f | -n | -q | -u] [-I pattern] [-L label]
+usage: diff [-abdipTtw] [-c | -e | -f | -n | -q | -u] [-I pattern] [-L label]
             file1 file2
-       diff [-abdilpTtw] [-I pattern] [-L label] -C number file1 file2
-       diff [-abdiltw] [-I pattern] -D string file1 file2
-       diff [-abdilpTtw] [-I pattern] [-L label] -U number file1 file2
-       diff [-abdilNPprsTtw] [-c | -e | -f | -n | -q | -u] [-I pattern]
+       diff [-abdipTtw] [-I pattern] [-L label] -C number file1 file2
+       diff [-abditw] [-I pattern] -D string file1 file2
+       diff [-abdipTtw] [-I pattern] [-L label] -U number file1 file2
+       diff [-abdiNPprsTtw] [-c | -e | -f | -n | -q | -u] [-I pattern]
             [-L label] [-S name] [-X file] [-x pattern] dir1 dir2
