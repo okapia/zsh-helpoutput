@@ -1,2 +1,2 @@
-usage: at [-bm] [-f file] [-l [user ...]] [-q queue] -t time_arg | timespec
+usage: at [-bm] [-f file] [-l [job ...]] [-q queue] -t time_arg | timespec
        at -c | -r job ...

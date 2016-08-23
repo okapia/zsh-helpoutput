@@ -1,2 +1,2 @@
 nm: unknown option -- ?
-usage: nm [-aCDegnoprsuw] [file ...]
+usage: nm [-AaCDegnoPprsuw] [-t d|o|x] [file ...]
