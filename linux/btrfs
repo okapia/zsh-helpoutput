@@ -138,7 +138,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -f             flush data to disk immediately after defragmenting
         -s start       defragment only from byte onward
         -l len         defragment only up to len bytes
-        -t size        target extent size hint
+        -t size        target extent size hint (default: 32M)
 
     btrfs filesystem resize [devid:][+/-]<newsize>[kKmMgGtTpPeE]|[devid:]max <path>
         Resize a filesystem
@@ -185,6 +185,8 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -v             be verbose
         -f             force reducing of metadata integrity
         --full-balance do not print warning and do not delay start
+        --background|--bg
+                       run the balance as a background process
 
     btrfs balance pause <path>
         Pause running balance
