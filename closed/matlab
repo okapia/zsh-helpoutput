@@ -2,10 +2,10 @@
     Usage:  matlab [-h|-help] | [-n | -e]
                    [-arch | v=variant | v=arch/variant]
                    [-c licensefile] [-display Xdisplay | -nodisplay]
-                   [-nosplash] [-mwvisual visualid] [-debug] [-softwareopengl]
+                   [-nosplash] [-mwvisual visualid] [-debug]
+                   [-softwareopengl | -nosoftwareopengl]
                    [-desktop | -nodesktop | -nojvm]
-                   [-memmgr manager | -check_malloc]
-                   [-r MATLAB_command] [-logfile log] [-timing]
+                   [-r MATLAB_command] [-logfile log]
                    [-Ddebugger [options]]
 
     -h|-help             - Display arguments.
@@ -19,9 +19,9 @@
                            may not be correct.
     -arch                - Start MATLAB assuming architecture arch.
     v=variant            - Start the version of MATLAB found
-                           in bin/sol64/variant instead of bin/sol64.
+                           in bin/glnxa64/variant instead of bin/glnxa64.
     v=arch/variant       - Start the version of MATLAB found
-                           in bin/arch/variant instead of bin/sol64.
+                           in bin/arch/variant instead of bin/glnxa64.
     -c licensefile       - Set location of the license file that MATLAB
                            should use.  It can have the form port@host or
                            be a colon separated list of license files.
@@ -34,6 +34,11 @@
                            will be started.
     -nosplash            - Do not display the splash screen during startup.
     -mwvisual visualid   - The default X visual to use for figure windows.
+    -softwareopengl      - Force MATLAB to start with software OpenGL
+                           libraries. Not available on Mac.
+    -nosoftwareopengl    - Disable auto-selection of software OpenGL
+                           when a graphics driver with known issues is detected.
+                           Not available on Mac.
     -debug               - Provide debugging information especially for X
                            based problems.
     -desktop             - Allow the MATLAB desktop to be started by a
@@ -44,29 +49,16 @@
     -nodesktop           - Do not start the MATLAB desktop. Use the current
                            terminal for commands. The Java virtual machine
                            will be started.
+    -singleCompThread    - Limit MATLAB to a single computational thread. 
+                           By default, MATLAB makes use of the multithreading 
+                           capabilities of the computer on which it is running.
     -nojvm               - Shut off all Java support by not starting the
                            Java virtual machine. In particular the MATLAB
                            desktop will not be started.
-    -memmgr manager      - Set environment variable MATLAB_MEM_MGR to
-                           manager. manager can have one of the following
-                           values:
-                           cache   - Default.
-                           compact - (32-bit addressing only) For large
-                                     models or MATLAB code that uses many
-                                     structure or object variables. It is
-                                     not helpful for large arrays.
-                           debug   - Does memory integrity checking. Useful
-                                     for debugging memory problems caused by
-                                     user mex files.
-    -check_malloc        - Same as '-memmgr debug'.
+    -jdb [port]          - Enable remote Java debugging on port (default 4444)
     -r MATLAB_command    - Start MATLAB and execute the MATLAB_command.
     -logfile log         - Make a copy of any output to the command window
                            in file log. This includes all crash reports.
-    -timing              - Print a summary of startup time to the command
-                           window. It is also recorded in a timing log, the
-                           name of which is printed to the shell window that
-                           started up MATLAB.
     -Ddebugger [options] - Start debugger to debug MATLAB.
-
-    Revision #: 1.100.4.42
+    -nouserjavapath      - Ignore custom javaclasspath.txt and javalibrarypath.txt files.
 
