@@ -1,0 +1,2 @@
+postconf: invalid option -- '?'
+postconf: fatal: usage: postconf [-a (server SASL types)] [-A (client SASL types)] [-b (bounce templates)] [-c config_dir] [-C param_class] [-d (defaults)] [-e (edit)] [-f (fold lines)] [-# (comment-out)] [-h (no names)] [-l (lock types)] [-m (map types)] [-M (master.cf)] [-n (non-defaults)] [-v] [-X (exclude)] [name...]
