@@ -1,0 +1,1 @@
+usage: look [-df] [-t termchar] string [file]
