@@ -1,0 +1,2 @@
+usage: jot [-cnr] [-b word] [-p precision] [-s string] [-w word]
+	   [reps [begin [end [s]]]]
