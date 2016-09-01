@@ -1,0 +1,3 @@
+Usage: tcpdump [-AadefILlNnOopqStvXx] [-c count] [-D direction]
+	       [-E [espalg:]espkey] [-F file] [-i interface] [-r file]
+	       [-s snaplen] [-T type] [-w file] [-y datalinktype] [expression]
