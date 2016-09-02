@@ -8,4 +8,5 @@ Options are:
  -u, --dump             Do not decode the entries
      --dump-bin FILE    Dump the DMI data to a binary file
      --from-dump FILE   Read the DMI data from a binary file
+     --no-sysfs         Do not attempt to read DMI data from sysfs files
  -V, --version          Display the version and exit
