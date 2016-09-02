@@ -2,6 +2,8 @@ Reading config file...
 A Usenet reader.
 
 Usage: tin [options] [newsgroup[,...]]
+  -4       force connecting via IPv4
+  -6       force connecting via IPv6
   -a       toggle color flag
   -A       force authentication on connect
   -c       mark all news as read in subscribed newsgroups (batch mode)
