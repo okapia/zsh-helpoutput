@@ -1,4 +1,4 @@
-usage: git repack [options]
+usage: git repack [<options>]
 
     -a                    pack everything in a single pack
     -A                    same as -a, and turn unreachable objects loose
@@ -12,6 +12,8 @@ usage: git repack [options]
                           write bitmap index
     --unpack-unreachable <approxidate>
                           with -A, do not loosen objects older than this
+    -k, --keep-unreachable
+                          with -a, repack unreachable objects
     --window <n>          size of the window used for delta compression
     --window-memory <bytes>
                           same as the above, but limit memory size instead of entries count
