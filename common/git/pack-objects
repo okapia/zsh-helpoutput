@@ -1,5 +1,5 @@
-usage: git pack-objects --stdout [options...] [< ref-list | < object-list]
-   or: git pack-objects [options...] base-name [< ref-list | < object-list]
+usage: git pack-objects --stdout [<options>...] [< <ref-list> | < <object-list>]
+   or: git pack-objects [<options>...] <base-name> [< <ref-list> | < <object-list>]
 
     -q, --quiet           do not show progress meter
     --progress            show progress meter
@@ -27,6 +27,8 @@ usage: git pack-objects --stdout [options...] [< ref-list | < object-list]
     --stdout              output pack to stdout
     --include-tag         include tag objects that refer to objects to be packed
     --keep-unreachable    keep unreachable objects
+    --pack-loose-unreachable
+                          pack loose unreachable objects
     --unpack-unreachable[=<time>]
                           unpack unreachable objects newer than <time>
     --thin                create thin packs

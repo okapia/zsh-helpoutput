@@ -12,4 +12,5 @@ usage: git fsck [<options>] [<object>...]
     --strict              enable more strict checking
     --lost-found          write dangling objects in .git/lost-found
     --progress            show progress
+    --name-objects        show verbose names for reachable objects
 
