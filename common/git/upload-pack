@@ -1,1 +1,7 @@
-usage: git upload-pack [--strict] [--timeout=nn] <dir>
+usage: git upload-pack [<options>] <dir>
+
+    --stateless-rpc       quit after a single request/response exchange
+    --advertise-refs      exit immediately after initial ref advertisement
+    --strict              do not try <directory>/.git/ if <directory> is no Git directory
+    --timeout <n>         interrupt transfer after <n> seconds of inactivity
+

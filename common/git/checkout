@@ -5,7 +5,7 @@ usage: git checkout [<options>] <branch>
     -b <branch>           create and checkout a new branch
     -B <branch>           create/reset and checkout a branch
     -l                    create reflog for new branch
-    --detach              detach the HEAD at named commit
+    --detach              detach HEAD at named commit
     -t, --track           set upstream info for new branch
     --orphan <new-branch>
                           new unparented branch
