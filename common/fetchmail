@@ -18,16 +18,21 @@ usage:  fetchmail [options] [server ...]
       --nobounce    redirect bounces from user to postmaster.
       --nosoftbounce fetchmail deletes permanently undeliverable messages.
       --softbounce  keep permanently undeliverable messages on server (default).
+  -I, --interface   interface required specification
+  -M, --monitor     monitor interface for activity
       --ssl         enable ssl encrypted session
       --sslkey      ssl private key file
       --sslcert     ssl client certificate
       --sslcertck   do strict server certificate check (recommended)
-      --sslcertpath path to ssl certificates
+      --sslcertfile path to trusted-CA ssl certificate file
+      --sslcertpath path to trusted-CA ssl certificate directory
       --sslcommonname  expect this CommonName from server (discouraged)
       --sslfingerprint fingerprint that must match that of the server's cert.
       --sslproto    force ssl protocol (SSL2/SSL3/TLS1)
       --plugin      specify external command to open connection
       --plugout     specify external command to open smtp connection
+      --bad-header {reject|accept}
+                    specify policy for handling messages with bad headers
   -p, --protocol    specify retrieval protocol (see man page)
   -U, --uidl        force the use of UIDLs (pop3 only)
       --port        TCP port to connect to (obsolete, use --service)
