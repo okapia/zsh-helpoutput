@@ -1,0 +1,12 @@
+
+Usage:
+ chsh [options] [username]
+
+Options:
+ -s, --shell <shell>  specify login shell
+ -l, --list-shells    print list of shells and exit
+
+ -u, --help     display this help and exit
+ -v, --version  output version information and exit
+
+For more details see chsh(1).
