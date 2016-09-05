@@ -1,4 +1,4 @@
-yodl version 2.13.1
+yodl version 3.05.01
 
 Your Own Document Language
 
@@ -16,7 +16,7 @@ Options:
   -i, --index[=file]   `file' is the name of the index file. By default
                        <outputbase>.idx is used. No default for stdout.
   -I, --include=DIR    use directory DIR for system-wide includes files
-                         [.:/usr/share/yodl]
+                         [.:/usr/local/share/yodl-3.05.01]
   -k, --keep-ws        When WSLEVEL is non-zero, keep ws at line-heads
                        unless lines are terminated by \
   -l, --live-data=HOW  set "live data" policy to HOW [none]:
@@ -25,6 +25,8 @@ Options:
                            `confirm' or `1': only when confirmed
                            `report' or `2':  issuing warning
                            `ok' or `3':      always
+  -L, --legacy-include do NOT change working directory when including a
+                       Yodl file located in another directory
   -m, --messages=SET   set message level to a combination of SET acdeinw:
                           a: alert,    c: crit,    d: debug,
                           e: error,    i: info,    n: notice,
