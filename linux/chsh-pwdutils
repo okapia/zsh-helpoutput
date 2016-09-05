@@ -1,0 +1,14 @@
+Usage: chsh [-D binddn] [-P path] [-s shell] [-l] [-q]
+            [--help] [--usage] [--version] [user]
+chsh - change login shell
+
+  -D binddn      Use dn "binddn" to bind to the LDAP directory
+  -P path        Search passwd and shadow file in "path"
+  -l             List allowed shells from /etc/shells
+  -s shell       Use 'shell' as new login shell
+  --service srv  Use nameservice 'srv'
+  -q, --quiet    Don't be verbose
+      --help     Give this help list
+  -u, --usage    Give a short usage message
+  -v, --version  Print program version
+Valid services are: files, nis, nisplus, ldap
