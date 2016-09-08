@@ -1,4 +1,4 @@
-Usage:	cpupower [-d|--debug] [-c|--cpu cpulist ] <command> [<args>]
+Usage:	cpupower [-c|--cpu cpulist ] <command> [<args>]
 Supported commands are:
 	frequency-info
 	frequency-set
