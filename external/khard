@@ -1,27 +1,31 @@
-usage: khard [-h] [-d] [-v]
-             {list,details,export,email,phone,source,new,add-email,merge,modify,copy,move,remove,addressbooks}
+usage: khard [-h] [--debug] [--skip-unparsable] [-v]
+             {list,ls,details,export,birthdays,bdays,email,phone,source,new,add,add-email,merge,modify,edit,copy,cp,move,mv,remove,delete,del,rm,addressbooks,abooks}
              ...
 
 Khard is a carddav address book for the console
 
 positional arguments:
-  {list,details,export,email,phone,source,new,add-email,merge,modify,copy,move,remove,addressbooks}
-    list                list all (selected) contacts
+  {list,ls,details,export,birthdays,bdays,email,phone,source,new,add,add-email,merge,modify,edit,copy,cp,move,mv,remove,delete,del,rm,addressbooks,abooks}
+    list (ls)           list all (selected) contacts
     details             display detailed information about one contact
     export              export a contact to the custom yaml format that is also used for editing and creating contacts
-    email               list email addresses in a parsable format (address\tname\ttype)
-    phone               list phone numbers in a parsable format (number\tname\ttype)
+    birthdays (bdays)   list birthdays (sorted by month and day)
+    email               list email addresses
+    phone               list phone numbers
     source              edit the vcard file of a contact directly
-    new                 create a new contact
+    new (add)           create a new contact
     add-email           Extract email address from the "From:" field of an email header and add to an existing contact or create a new one
     merge               merge two contacts
-    modify              edit the data of a contact
-    copy                copy a contact to a different addressbook
-    move                move a contact to a different addressbook
-    remove              remove a contact
-    addressbooks        list addressbooks
+    modify (edit)       edit the data of a contact
+    copy (cp)           copy a contact to a different addressbook
+    move (mv)           move a contact to a different addressbook
+    remove (delete, del, rm)
+                        remove a contact
+    addressbooks (abooks)
+                        list addressbooks
 
 optional arguments:
   -h, --help            show this help message and exit
-  -d, --debug           enable debug output
+  --debug               enable debug output
+  --skip-unparsable     skip unparsable vcard files
   -v, --version         show program's version number and exit
