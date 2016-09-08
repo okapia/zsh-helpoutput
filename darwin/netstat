@@ -1,7 +1,7 @@
 netstat: illegal option -- ?
 Usage:	netstat [-AaLlnW] [-f address_family | -p protocol]
 	netstat [-gilns] [-f address_family]
-	netstat -i | -I interface [-w wait] [-abdgt]
+	netstat -i | -I interface [-w wait] [-abdgRtS]
 	netstat -s [-s] [-f address_family | -p protocol] [-w wait]
 	netstat -i | -I interface -s [-f address_family | -p protocol]
 	netstat -m [-m]

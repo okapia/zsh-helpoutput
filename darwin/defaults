@@ -17,6 +17,10 @@ Syntax:
   delete <domain>                      deletes domain
   delete <domain> <key>                deletes key in domain
 
+  import <domain> <path to plist>      writes the plist at path to domain
+  import <domain> -                    writes a plist from stdin to domain
+  export <domain> <path to plist>      saves domain as a binary plist to path
+  export <domain> -                    writes domain as an xml plist to stdout
   domains                              lists all domains
   find <word>                          lists all entries containing word
   help                                 print this help

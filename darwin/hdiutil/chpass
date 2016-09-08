@@ -6,7 +6,7 @@ Usage:	hdiutil chpass <image>
 
 	Common options:
 	    -recover <keychain-file>
-	    -pubKey <public-key-hash>[,pkh2,...]
+	    -pubkey <public-key-hash>[,pkh2,...]
 	    -srcimagekey <key>=<value>	(-imagekey is a synonym)
 	    -verbose
 	    -debug

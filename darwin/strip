@@ -1,2 +1,2 @@
-strip: unrecognized option: -?
-Usage: strip [-AnuSXx] [-] [-d filename] [-s filename] [-R filename] [-o output] file [...] 
+error: /Library/Developer/CommandLineTools/usr/bin/strip: unrecognized option: -?
+Usage: /Library/Developer/CommandLineTools/usr/bin/strip [-AnuSXx] [-] [-d filename] [-s filename] [-R filename] [-o output] file [...] 

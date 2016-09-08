@@ -1,2 +1,2 @@
 script: illegal option -- ?
-usage: script [-akq] [-t time] [file [command ...]]
+usage: script [-adkpqr] [-t time] [file [command ...]]

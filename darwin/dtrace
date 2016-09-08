@@ -40,5 +40,6 @@ Usage: dtrace [-aACeFHlqSvVwZ] [-arch i386|x86_64] [-b bufsz] [-c cmd] [-D name[
 	-v  set verbose mode (report stability attributes, arguments)
 	-V  report DTrace API version
 	-w  permit destructive actions
+	-W  wait for specified process and exit upon its completion
 	-x  enable or modify compiler and tracing options
 	-Z  permit probe descriptions that match zero probes

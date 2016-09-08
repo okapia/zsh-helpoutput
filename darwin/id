@@ -1,6 +1,7 @@
 id: illegal option -- ?
 usage: id [user]
        id -A
+       id -F [user]
        id -G [-n] [user]
        id -M
        id -P [user]

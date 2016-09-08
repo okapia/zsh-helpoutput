@@ -1,2 +1,2 @@
 showmount: illegal option -- ?
-usage: showmount [-Ae3] [-a|-d] host
+usage: showmount [-Ae36] [-a|-d] host

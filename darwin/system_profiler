@@ -1,6 +1,6 @@
 Usage: system_profiler [-listDataTypes]
-       system_profiler [-xml] [-detailLevel n]
-       system_profiler [-xml] [dataType1 ... dataTypeN]
+       system_profiler [-xml] [-timeout n] [-detailLevel n]
+       system_profiler [-xml] [-timeout n] [dataType1 ... dataTypeN]
 
   -detailLevel n    specifies the level of detail for the report
                       mini = short report (contains no identifying or personal information)
@@ -12,6 +12,11 @@ Usage: system_profiler [-listDataTypes]
   -xml              generates xml output instead of plain text
                     if redirected to a file with the extension ".spx"
                     the file can be opened in System Profiler.app
+
+  -timeout          specifies the maximum time to spend gathering information
+                    the default is 180 seconds, 0 means no timeout
+
+  Redirect stderr to /dev/null to suppress progress and error messages.
 
 Examples:
 

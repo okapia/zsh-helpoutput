@@ -8,26 +8,27 @@ Usage:	hdiutil create <sizespec> <imagepath>
 	Image options:
 	    -library <MKDrivers>
 	    -layout <layout>			[GPTSPUD or per -fs]
-		GPTSPUD - Single partition - GUID Partition Map
+		SPUD - Single partition - Apple Partition Map
 		MBRSPUD - Single partition - Master Boot Record Partition Map
-		ISOCD - Single partition - CD/DVD with ISO data
 		UNIVERSAL CD - CD/DVD
 		NONE - No partition map
+		GPTSPUD - Single partition - GUID Partition Map
 		SPCD - Single partition - CD/DVD
 		UNIVERSAL HD - Hard disk
-		SPUD - Single partition - Apple Partition Map
+		ISOCD - Single partition - CD/DVD with ISO data
 	    -partitionType <partitionType>	[Apple_HFS or per -fs]
 	    -align <sector alignment>		[8 sectors]
 	    -ov
 
 	Filesystem options:
 	    -fs <filesystem>
-		Journaled HFS+ - Mac OS Extended (Journaled)
-		Case-sensitive HFS+ - Mac OS Extended (Case-sensitive)
+		ExFAT - ExFAT
 		Case-sensitive Journaled HFS+ - Mac OS Extended (Case-sensitive, Journaled)
 		HFS+ - Mac OS Extended
-		MS-DOS FAT12 - MS-DOS (FAT12)
+		Journaled HFS+ - Mac OS Extended (Journaled)
+		Case-sensitive HFS+ - Mac OS Extended (Case-sensitive)
 		MS-DOS - MS-DOS (FAT)
+		MS-DOS FAT12 - MS-DOS (FAT12)
 		MS-DOS FAT32 - MS-DOS (FAT32)
 		MS-DOS FAT16 - MS-DOS (FAT16)
 		UDF - Universal Disk Format (UDF)
@@ -36,10 +37,10 @@ Usage:	hdiutil create <sizespec> <imagepath>
 
 	New Blank Image options:
 	    -type <image type>			[UDIF]
+		SPARSEBUNDLE - sparse bundle disk image
+		SPARSE - sparse disk image
 		UDIF - read/write disk image
 		UDTO - DVD/CD master
-		SPARSE - sparse disk image
-		SPARSEBUNDLE - sparse bundle disk image
 	   -[no]spotlight		do (not) create a Spotlight™ index
 
 	Image from Folder options:
@@ -53,48 +54,50 @@ Usage:	hdiutil create <sizespec> <imagepath>
 	   		any	leave owners state on source unchanged
 	   		auto	enable owners if source is a volume
 	   -format <image type>			[UDZO]
+		UDRO - read-only
+		UDCO - compressed (ADC)
+		UDZO - compressed
+		UDBZ - compressed (bzip2)
+		ULFO - compressed (lzfse)
+		UFBI - entire device
+		IPOD - iPod image
+		UDxx - UDIF stub
+		UDSB - sparsebundle
+		UDSP - sparse
+		UDRW - read/write
+		UDTO - DVD/CD master
 		DC42 - Disk Copy 4.2
 		RdWr - NDIF read/write
 		Rdxx - NDIF read-only
 		ROCo - NDIF compressed
 		Rken - NDIF compressed (KenCode)
-		UDRO - read-only
-		UDCO - compressed (ADC)
-		UDZO - compressed
-		UDBZ - compressed (bzip2)
-		UFBI - entire device
-		IPOD - iPod image
-		UDxx - UDIF stub
-		UDRW - read/write
-		UDTO - DVD/CD master
-		UDSP - sparse
-		UDSB - sparsebundle
 		UNIV - hybrid image (HFS+/ISO/UDF)
+		SPARSEBUNDLE - sparse bundle disk image
+		SPARSE - sparse disk image
 		UDIF - read/write disk image
 		UDTO - DVD/CD master
-		SPARSE - sparse disk image
-		SPARSEBUNDLE - sparse bundle disk image
 
 	Image from Device options:
 	Note: Filesystem options (-fs, -volname, -stretch) ignored with -srcdevice
 	   -srcdevice <source dev node, e.g. disk1, disk2s1>
 	   -format <image type>			[UDZO]
+		UDRO - read-only
+		UDCO - compressed (ADC)
+		UDZO - compressed
+		UDBZ - compressed (bzip2)
+		ULFO - compressed (lzfse)
+		UFBI - entire device
+		IPOD - iPod image
+		UDxx - UDIF stub
+		UDSB - sparsebundle
+		UDSP - sparse
+		UDRW - read/write
+		UDTO - DVD/CD master
 		DC42 - Disk Copy 4.2
 		RdWr - NDIF read/write
 		Rdxx - NDIF read-only
 		ROCo - NDIF compressed
 		Rken - NDIF compressed (KenCode)
-		UDRO - read-only
-		UDCO - compressed (ADC)
-		UDZO - compressed
-		UDBZ - compressed (bzip2)
-		UFBI - entire device
-		IPOD - iPod image
-		UDxx - UDIF stub
-		UDRW - read/write
-		UDTO - DVD/CD master
-		UDSP - sparse
-		UDSB - sparsebundle
 	    -segmentSize < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e >
 	                 (sectors, bytes, KiB, MiB, GiB, TiB, PiB, EiB)
 
@@ -108,7 +111,7 @@ Usage:	hdiutil create <sizespec> <imagepath>
 	    -stdinpass
 	    -agentpass
 	    -certificate <path-to-cert-file>
-	    -pubKey <public-key-hash>[,pkh2,...]
+	    -pubkey <public-key-hash>[,pkh2,...]
 	    -imagekey <key>=<value>
 	    -tgtimagekey <key>=<value>
 	    -plist
