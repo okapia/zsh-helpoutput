@@ -12,6 +12,7 @@ burn
 info
 checksum
 chpass
+erasekeys
 unflatten
 flatten
 imageinfo
@@ -62,6 +63,9 @@ Usage:	hdiutil checksum -type <checksumType> [options] <image>
 
 Usage:	hdiutil chpass [options] <image>
 	hdiutil chpass -help
+
+Usage:	hdiutil erasekeys <image>
+	hdiutil erasekeys -help
 
 Usage:	hdiutil unflatten [options] <image>
 	hdiutil unflatten -help

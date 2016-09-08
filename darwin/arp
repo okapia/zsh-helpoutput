@@ -1,5 +1,5 @@
 usage: arp [-n] [-i interface] hostname
-       arp [-n] [-i interface] -a
+       arp [-n] [-i interface] [-l] -a
        arp -d hostname [pub] [ifscope interface]
        arp -d [-i interface] -a
        arp -s hostname ether_addr [temp] [reject] [blackhole] [pub [only]] [ifscope interface]

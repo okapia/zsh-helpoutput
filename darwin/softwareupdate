@@ -1,16 +1,28 @@
 usage: softwareupdate <mode> [<args> ...]
 
-	-l | --list		List all appropriate updates
+** Catalog Management:
+	--set-catalog <URL>	Set the new catalog URL (requires privileges)
+	--clear-catalog		Clear the catalog URL back to defaults (requires privileges)
+
+** Manage Updates:
+	-l | --list		List all appropriate update labels (options:  --no-scan)
 	-d | --download		Download Only
+	-e | --cancel-download		Cancel a download
 	-i | --install		Install
 		<label> ...	specific updates
-		-a | --all		all appropriate updates
-		-r | --recommended	only recommended updates
-
-	Per-user preferences:
+		-a | --all		All appropriate updates
+		-r | --recommended	Only recommended updates
+	--background		Trigger a background scan and update operation
 	--ignore <label> ...	Ignore specific updates
 	--reset-ignored		Clear all ignored updates
-	--schedule (on | off)	Set automatic checking
 
-	-v | --verbose	Enable verbose output
-	-h | --help	Print this help
+** Other Tools:
+	--suspend-background (on | off)	Suspend background operations from occurring temporarily (uses --duration)
+		--duration <duration>)		Optional duration in seconds to suspend background operations (defaults to 5*60 seconds)
+	--dump-state		Log the internal state of the SU daemon to /var/log/install.log
+** Options:
+	--no-scan		Do not scan when listing or installing updates (use available updates previously scanned)
+	
+-v | --verbose	Enable verbose output
+-h | --help	Print this help
+
