@@ -1,0 +1,1 @@
+pfexec [-P privset] cmd [arg ..]
