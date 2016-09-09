@@ -4,7 +4,7 @@ Usage:
        xxd -r [-s [-]offset] [-c cols] [-ps] [infile [outfile]]
 Options:
     -a          toggle autoskip: A single '*' replaces nul-lines. Default off.
-    -b          binary digit dump (incompatible with -ps,-i,-r). Default hex.
+    -b          binary digit dump (incompatible with -p,-i,-r). Default hex.
     -c cols     format <cols> octets per line. Default 16 (-i: 12, -ps: 30).
     -E          show characters in EBCDIC. Default ASCII.
     -g          number of octets per group in normal output. Default 2.
