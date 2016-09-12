@@ -382,8 +382,9 @@ emit --version | cut -d- -f2 | getversion
 emit --help | getusage
 
 cmd vim
-version 7.4
+version 8.0
 emit -version | field 5 | getversion
+vimver="$_verinst"
 emit -h | getusage
 
 cmd w3m
@@ -407,8 +408,8 @@ emit -V | line 1 | field 5 | getversion
 emit | getusage
 
 cmd xxd
-version 1.10
-emit -v | field 2 | tr -d V | getversion
+version 8.0
+getversion <<<"$vimver"
 emit -h | getusage
 
 cmd xz
