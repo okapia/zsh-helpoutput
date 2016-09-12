@@ -1,4 +1,4 @@
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled May  4 2014 20:15:24)
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Sep 12 2016 13:24:03)
 
 usage: vim [arguments] [file ..]       edit specified file(s)
    or: vim [arguments] -               read text from stdin
@@ -7,6 +7,8 @@ usage: vim [arguments] [file ..]       edit specified file(s)
 
 Arguments:
    --			Only file names after this
+   -g			Run using GUI (like "gvim")
+   -f  or  --nofork	Foreground: Don't fork when starting GUI
    -v			Vi mode (like "vi")
    -e			Ex mode (like "ex")
    -E			Improved Ex mode
@@ -31,8 +33,10 @@ Arguments:
    -H			Start in Hebrew mode
    -F			Start in Farsi mode
    -T <terminal>	Set terminal type to <terminal>
+   --not-a-term		Skip warning for input/output not being a terminal
    -u <vimrc>		Use <vimrc> instead of any .vimrc
-   --noplugin		Do not load plugin scripts
+   -U <gvimrc>		Use <gvimrc> instead of any .gvimrc
+   --noplugin		Don't load plugin scripts
    -p[N]		Open N tab pages (default: one for each file)
    -o[N]		Open N windows (default: one for each file)
    -O[N]		Like -o but split vertically
@@ -45,7 +49,26 @@ Arguments:
    -w <scriptout>	Append all typed commands to file <scriptout>
    -W <scriptout>	Write all typed commands to file <scriptout>
    -x			Edit encrypted files
+   -X			Do not connect to X server
+   --remote <files>	Edit <files> in a Vim server if possible
+   --remote-silent <files>  Same, don't complain if there is no server
+   --remote-wait <files>  As --remote but wait for files to have been edited
+   --remote-wait-silent <files>  Same, don't complain if there is no server
+   --remote-tab[-wait][-silent] <files>  As --remote but use tab page per file
+   --remote-send <keys>	Send <keys> to a Vim server and exit
+   --remote-expr <expr>	Evaluate <expr> in a Vim server and print result
+   --serverlist		List available Vim server names and exit
+   --servername <name>	Send to/become the Vim server <name>
    --startuptime <file>	Write startup timing messages to <file>
    -i <viminfo>		Use <viminfo> instead of .viminfo
    -h  or  --help	Print Help (this message) and exit
    --version		Print version information and exit
+
+Arguments recognised by gvim (GTK+ version):
+   -font <font>		Use <font> for normal text (also: -fn)
+   -geometry <geom>	Use <geom> for initial geometry (also: -geom)
+   -reverse		Use reverse video (also: -rv)
+   -display <display>	Run vim on <display> (also: --display)
+   --role <role>	Set a unique role to identify the main window
+   --socketid <xid>	Open Vim inside another GTK widget
+   --echo-wid		Make gvim echo the Window ID on stdout
