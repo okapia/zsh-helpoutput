@@ -9,13 +9,9 @@ made to [Zsh](http://zsh.sourceforge.net/) completion functions.
 Git branches are used to separate out scripts and to track which updates
 are outstanding from zsh's perspective:
 
-master
-: various helper shell scripts
-usage
-: all the `--help` output files where changes have been applied to the
-  corresponding zsh completion function
-pending/*cmd*
-: like usage but where zsh completion updates are outstanding
+- **master** – various helper shell scripts
+- **usage** – all the `--help` output files where changes have been applied to the corresponding zsh completion function
+- **pending/_cmd_** – like usage but where zsh completion updates are outstanding
 
 You can happily ignore the scripts and just view the usage branch or
 one of the pending branches.
@@ -31,23 +27,12 @@ work out how to manage it if it is used collaboratively.
 
 Commands are split across several directories:
 
-system specific
-: freebsd, solaris, redhat etc
-
-external
-: software that includes a zsh completion rather than the function being part of zsh
-
-gnu
-: official GNU
-
-X
-: GUI software
-
-closed
-: Commercial, i.e. not Open source software
-
-common
-: everything else
+- **freebsd**, **solaris**, etc – system specific
+- **external** – software that includes a zsh completion rather than the function being part of zsh
+- **gnu** – official GNU
+- **x** – GUI software
+- **closed* – commercial, i.e. not Open source software
+- **common* – everything else
 
 ## Scripts
 
@@ -111,55 +96,34 @@ are stored in files named `Synopses` in each of the subdirectories.
 For each command, a number of functions are called in a particular
 order. In the order that they should be used, these are:
 
-cmd
-: Specify the name of the command
-version
-: Specify the most recent version of the command that has been examined.
-variant _(optional)_
-: Handle a command name clash between two programs or separate implementations
-subdir _(optional)_
-: Specify that a subdirectory should be used.
-getversion
-: Used at the end of a pipe to read the installed version number
-getusage
-: Used at the end of a pipe to read the usage synopsis. Can be used more
-than once: specify a parameter to give a unique name for the file.
-subcmds _(optional)_
-: Produce multiple synopsis files for different subcommands
+- `cmd` – Specify the name of the command
+- `version` – Specify the most recent version of the command that has been examined.
+- `variant` _(optional)_ – Handle a command name clash between two programs or separate implementations
+- `subdir` _(optional)_ – Specify that a subdirectory should be used.
+- `getversion` – Used at the end of a pipe to read the installed version number
+- `getusage` – Used at the end of a pipe to read the usage synopsis. Can be used more than once: specify a parameter to give a unique name for the file.
+- `subcmds` _(optional)_ – Produce multiple synopsis files for different subcommands
 
 There are also some additional functions that are useful as part of the
 pipelines for getversion and getusage:
 
-emit
-: This simply runs the command with any specified options. It is actually
+- `emit` – This simply runs the command with any specified options. It is actually
 an alias using noglob because `-?` is not uncommon for getting the
 usage. As a convention, I tend to use `-?` when any invalid option is
 required to evoke the usage synopsis from the command: it is less likely
 to become a valid option later than, say, `-h`.
-
-step
-: This runs a program but only if the command specified with cmd is
+- `step` – This runs a program but only if the command specified with cmd is
 actually present.
-
-field
-: A simple wrapper around awk to pull out whitespace separated fields. A
+- `field` – A simple wrapper around awk to pull out whitespace separated fields. A
 negative index counts from the end of the line. This is meant for version
 numbers so the first line of input is handled.
-
-guess
-: This will attempt to guess at the version number by looking for a
+- `guess` – This will attempt to guess at the version number by looking for a
 field that has the right form.
-
-line
-: Select a specified input line by index.
-
-pack
-: Attempt to determine the version number using the system packaging
+- `line` – Select a specified input line by index.
+- `pack` – Attempt to determine the version number using the system packaging
 system. This tends to be slow and doesn't work for the base system on
 a traditional Unix system so is only used as a last resort.
-
-nobug
-: Used in the middle of a pipeline to filter out lines saying "Report
+- `nobug` – Used in the middle of a pipeline to filter out lines saying "Report
 bugs to …". This is mainly useful because for some, especially GNU,
 software the line gets customised by RedHat, SuSE etc which is not
 helpful when viewing differences between releases.
