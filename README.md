@@ -31,8 +31,8 @@ Commands are split across several directories:
 - **external** – software that includes a zsh completion rather than the function being part of zsh
 - **gnu** – official GNU
 - **x** – GUI software
-- **closed* – commercial, i.e. not Open source software
-- **common* – everything else
+- **closed** – commercial, i.e. not Open source software
+- **common** – everything else
 
 ## Scripts
 

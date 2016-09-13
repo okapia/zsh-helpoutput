@@ -104,17 +104,17 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd info
-version 6.1
+version 6.3
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd install-info
-version 6.1
+version 6.3
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd makeinfo
-version 6.1
+version 6.3
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -124,7 +124,7 @@ emit --version | field -2 | sed 's/)$//' | getversion
 emit --help | nobug | getusage
 
 cmd texindex
-version 6.1
+version 6.3
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -139,6 +139,12 @@ version 8.25
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
+
+cmd locate
+version 4.6.0
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
 
 cmd ls
 version 8.25

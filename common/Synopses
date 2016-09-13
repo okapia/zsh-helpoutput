@@ -176,6 +176,12 @@ version 1.03
 emit -V | sed -n 's/^lzop version: v//p' | field 1 | tr -d , | getversion
 emit -h | getusage
 
+cmd mlocate
+version 0.26
+variant -n locate mlocate -- --version
+emit -V | field -1 | getversion
+emit -h | nobug | getusage
+
 cmd mosh
 version 1.2.6
 emit --version | field 2 | getversion
@@ -218,7 +224,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.4.5
+version 4.5.0
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -258,8 +264,13 @@ version 4.02.00
 emit -v | field 3 | getversion
 emit -h | getusage
 
+cmd smbclient
+version 4.5.0
+emit -V | sed 's/-.*//' | field -1 | getversion
+emit -? | getusage
+
 cmd sqlite
-version 3.14.1
+version 3.14.2
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
