@@ -21,6 +21,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
 
         -c|--commit-after      wait for transaction commit at the end of the operation
         -C|--commit-each       wait for transaction commit after deleting each subvolume
+        -v|--verbose           verbose output of operations
 
     btrfs subvolume list [options] [-G [+|-]value] [-C [+|-]value] [--sort=gen,ogen,rootid,path] <path>
         List subvolumes (and snapshots)
@@ -277,7 +278,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
 
         Check structural integrity of an unmounted filesystem. Verify internal
         trees' consistency and item connectivity. In the repair mode try to
-        fix the problems found.
+        fix the problems found. 
         WARNING: the repair mode is considered dangerous
 
         -s|--super <superblock>     use this superblock copy
@@ -286,6 +287,12 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         --readonly                  run in read-only mode (default)
         --init-csum-tree            create a new CRC tree
         --init-extent-tree          create a new extent tree
+        --mode <MODE>               select mode, allows to make some memory/IO
+                                    trade-offs, where MODE is one of:
+                                    original - read inodes and extents to memory (requires
+                                               more memory, does less IO)
+                                    lowmem   - try to use less memory but read blocks again
+                                               when needed
         --check-data-csum           verify checksums of data blocks
         -Q|--qgroup-report           print a report on qgroup consistency
         -E|--subvol-extents <subvolid>
@@ -379,11 +386,18 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs inspect-internal dump-super [options] device [device...]
         Dump superblock from a device in a textual form
 
-        -f|--full           print full superblock information
-        -a|--all            print information about all superblocks
-        -i <super_mirror>   specify which mirror to print out
-        -F|--force          attempt to dump superblocks with bad magic
-        -s <bytenr>         specify alternate superblock offset
+        -f|--full             print full superblock information, backup roots etc.
+        -a|--all              print information about all superblocks
+        -s|--super <super>    specify which copy to print out (values: 0, 1, 2)
+        -F|--force            attempt to dump superblocks with bad magic
+        --bytenr <offset>     specify alternate superblock offset
+
+        Deprecated syntax:
+        -s <bytenr>           specify alternate superblock offset, values other than 0, 1, 2
+                              will be interpreted as --bytenr for backward compatibility,
+                              option renamed for consistency with other tools (eg. check)
+        -i <super>            specify which copy to print out (values: 0, 1, 2), now moved
+                              to -s|--super
 
     btrfs inspect-internal tree-stats [options] <device>
         Print various stats for trees
