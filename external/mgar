@@ -1,0 +1,36 @@
+Wrapper around the GAR build system. Usage: mgar <action> [options]
+
+Main actions:
+  init [dir]          Initialize package build tree, defaults to ~/opencsw/
+  index               Build/update the package build tree index
+  locate <name>       Search a package within the package build tree index
+  up [--all]          Update current (or all) package build descriptions
+  newpkg <name> [ver] Create new package build directory
+
+Package build actions (to be called from a package build directory):
+  fetch               Download the package source
+  makesum             Generate a checksum for the package source
+  extract             Extract the packages source
+  configure           Configure the packages source
+  build               Build the package source
+  package             Assemble the package
+  platforms           Assemble packages for all platforms
+  clean               Reset current directory working files (current platform)
+  spotless            Reset the package build directory (all platforms)
+
+  commit -m <msg>     Commit build recipe (prefixes msg with package path)
+  show-srcdir         Show the location of the extracted package source
+  show-stagedir       Show the location of the package staging directory
+  show-var <varname>  Show the runtime value of a build recipe variable
+  find-file <name>    Find a file within the extracted package source
+  edit-file <name>    Edit a file within the extracted package source
+
+Other actions:
+  status              Show the VCS status of the current directory
+  modenv              Display employed compiler options
+  show-buildsys       Display the location and version of the build system
+  grep-buildsys <str> Search the build system for occurences of <str> (via ack)
+  show-pkgtree        Show the location of the package build tree
+  version|-V          Display mgar version information
+
+Report bugs, problems, and ideas via http://www.opencsw.org/packages/mgar/
