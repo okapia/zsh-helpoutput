@@ -1,3 +1,8 @@
+cmd ag
+version 0.33.0
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd khal
 version 0.8.3
 emit --version | field -1 | getversion
@@ -8,6 +13,11 @@ cmd khard
 version 0.11.2
 emit -v | field -1 | getversion
 emit -h | getusage
+
+cmd mgar
+version 0.95
+emit version | field 1 | getversion
+emit help | getusage
 
 cmd pkgutil
 version 2.6.7

@@ -63,13 +63,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd gcc
-version 6.1.1
+version 6.2.1
 variant ! 'LLVM' -- --version
-emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9].//' | guess | getversion
+emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | getversion
 emit --help | getusage
 
 cmd gdb
-version 7.11.1
+version 7.12
 emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 
