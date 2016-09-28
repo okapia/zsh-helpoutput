@@ -1,4 +1,4 @@
-Mutt 1.6.2 (2016-07-01)
+Mutt 1.7.0 (2016-08-17)
 usage: mutt [<options>] [-z] [-f <file> | -yZ]
        mutt [<options>] [-Ex] [-Hi <file>] [-s <subj>] [-bc <addr>] [-a <file> [...] --] <addr> [...]
        mutt [<options>] [-x] [-s <subj>] [-bc <addr>] [-a <file> [...] --] <addr> [...] < message
@@ -15,6 +15,7 @@ options:
   -b <address>	specify a blind carbon-copy (BCC) address
   -c <address>	specify a carbon-copy (CC) address
   -D		print the value of all variables to stdout
+  -d <level>	log debugging output to ~/.muttdebug0
   -E		edit the draft (-H) or include (-i) file
   -e <command>	specify a command to be executed after initialization
   -f <file>	specify which mailbox to read
