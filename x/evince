@@ -1,0 +1,34 @@
+Usage:
+  evince [OPTION...] [FILE…] GNOME Document Viewer
+
+Help Options:
+  -h, --help                      Show help options
+  --help-all                      Show all help options
+  --help-sm-client                Show session management options
+  --help-gtk                      Show GTK+ Options
+
+Session management options:
+  --sm-client-disable             Disable connection to session manager
+  --sm-client-state-file=FILE     Specify file containing saved configuration
+  --sm-client-id=ID               Specify session management ID
+
+GTK+ Options
+  --class=CLASS                   Program class as used by the window manager
+  --name=NAME                     Program name as used by the window manager
+  --gdk-debug=FLAGS               GDK debugging flags to set
+  --gdk-no-debug=FLAGS            GDK debugging flags to unset
+  --gtk-module=MODULES            Load additional GTK+ modules
+  --g-fatal-warnings              Make all warnings fatal
+  --gtk-debug=FLAGS               GTK+ debugging flags to set
+  --gtk-no-debug=FLAGS            GTK+ debugging flags to unset
+
+Application Options:
+  -p, --page-label=PAGE           The page label of the document to display.
+  -i, --page-index=NUMBER         The page number of the document to display.
+  -n, --named-dest=DEST           Named destination to display.
+  -f, --fullscreen                Run evince in fullscreen mode
+  -s, --presentation              Run evince in presentation mode
+  -w, --preview                   Run evince as a previewer
+  -l, --find=STRING               The word or phrase to find in the document
+  --display=DISPLAY               X display to use
+
