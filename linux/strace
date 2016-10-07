@@ -54,4 +54,3 @@ Miscellaneous:
   -v             verbose mode: print unabbreviated argv, stat, termios, etc. args
   -h             print help message
   -V             print version
-  -k             obtain stack trace between each syscall (experimental)
