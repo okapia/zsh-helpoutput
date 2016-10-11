@@ -1,6 +1,6 @@
-iptables v1.4.6
+iptables v1.4.21
 
-Usage: iptables -[AD] chain rule-specification [options]
+Usage: iptables -[ACD] chain rule-specification [options]
        iptables -I chain [rulenum] rule-specification [options]
        iptables -R chain rulenum rule-specification [options]
        iptables -D chain rulenum [options]
@@ -14,6 +14,7 @@ Usage: iptables -[AD] chain rule-specification [options]
 Commands:
 Either long or short options are allowed.
   --append  -A chain		Append to chain
+  --check   -C chain		Check for the existence of a rule
   --delete  -D chain		Delete matching rule from chain
   --delete  -D chain rulenum
 				Delete rule rulenum (1 = first) from chain
@@ -37,7 +38,9 @@ Either long or short options are allowed.
             -E old-chain new-chain
 				Change chain name, (moving any references)
 Options:
-[!] --proto	-p proto	protocol: by number or name, eg. `tcp'
+    --ipv4	-4		Nothing (line is ignored by ip6tables-restore)
+    --ipv6	-6		Error (line is ignored by iptables-restore)
+[!] --protocol	-p proto	protocol: by number or name, eg. `tcp'
 [!] --source	-s address[/mask][...]
 				source specification
 [!] --destination -d address[/mask][...]
@@ -55,6 +58,7 @@ Options:
 				network interface name ([+] for wildcard)
   --table	-t table	table to manipulate (default: `filter')
   --verbose	-v		verbose mode
+  --wait	-w [seconds]	wait for the xtables lock
   --line-numbers		print line numbers when listing
   --exact	-x		expand numbers (display exact values)
 [!] --fragment	-f		match second or further fragments only
