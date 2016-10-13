@@ -1,3 +1,8 @@
+cmd evince
+version 3.14.2
+emit --version | field -1 | getversion
+emit --help-all | getusage
+
 cmd qiv
 version 2.3.1
 emit -v | field 5 | cut -c 2- | getversion

@@ -93,6 +93,11 @@ version 6.0
 uname -r | getversion
 emit -? | getusage
 
+cmd doas
+version 6.0
+uname -r | getversion
+emit | getusage
+
 cmd du
 version 6.0
 uname -r | getversion

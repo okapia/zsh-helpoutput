@@ -86,7 +86,7 @@ emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd grep
-version 2.25
+version 2.26
 variant -g 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | nobug | getusage

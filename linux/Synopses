@@ -31,12 +31,12 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.8.0
+version 4.8.1
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd dhclient
-version 4.3.4
+version 4.3.5
 emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
 emit -? | sed '/^Please report/ {N;N;d}' | getusage
 
@@ -65,6 +65,11 @@ version 160518
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
+cmd iptables
+version 1.6.0
+emit -V | field 2 | tr -d v | getversion
+emit -h | getusage
+
 cmd look
 version 2.28.2
 emit -V | field -1 | getversion
@@ -91,7 +96,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.13
+version 4.14
 emit -V | field 4 | getversion
 emit -h | getusage
 

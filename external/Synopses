@@ -19,6 +19,11 @@ version 0.95
 emit version | field 1 | getversion
 emit help | getusage
 
+cmd pdfgrep
+version 1.3.1
+emit -V | field -1 | getversion
+emit --help | getusage
+
 cmd pkgutil
 version 2.6.7
 emit -v | getversion
