@@ -1,10 +1,11 @@
 Usage: pdfgrep [OPTION]... PATTERN FILE...
 
 Search for PATTERN in each FILE.
-PATTERN is an extended regular expression.
+PATTERN is, by default, an extended regular expression.
 
 Options:
  -i, --ignore-case		Ignore case distinctions
+ -P, --pcre			Use Perl compatible regular expressions (PCRE)
  -H, --with-filename		Print the file name for each match
  -h, --no-filename		Suppress the prefixing of file name on output
  -n, --page-number		Print page number with output lines
