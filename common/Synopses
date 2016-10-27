@@ -224,7 +224,7 @@ pack | getversion
 emit | getusage
 
 cmd nmap
-version 7.12
+version 7.31
 emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
@@ -275,7 +275,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.14.2
+version 3.15.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -347,7 +347,7 @@ emit -VERS | field -1 | getversion
 emit -H | getusage
 
 cmd tcpdump
-version 4.8.0
+version 4.8.1
 variant ! 'Apple' -- --version
 emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage
@@ -393,7 +393,7 @@ emit --version | field 3 | sed 's/\,$//' | getversion
 emit --help | getusage
 
 cmd valgrind
-version 3.11.0
+version 3.12.0
 emit --version | cut -d- -f2 | getversion
 emit --help | getusage
 

@@ -4,7 +4,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd khal
-version 0.8.3
+version 0.8.4
 emit --version | field -1 | getversion
 emit --help | getusage
 subcmds @ --help
