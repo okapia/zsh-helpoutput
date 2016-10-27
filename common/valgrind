@@ -90,6 +90,8 @@ usage: valgrind [options] prog-and-args
     --vgdb-shadow-registers=no|yes   let gdb see the shadow registers [no]
     --vgdb-prefix=<prefix>    prefix for vgdb FIFOs [/tmp/vgdb-pipe]
     --run-libc-freeres=no|yes free up glibc memory at exit on Linux? [yes]
+    --run-cxx-freeres=no|yes  free up libstdc++ memory at exit on Linux
+                              and Solaris? [yes]
     --sim-hints=hint1,hint2,...  activate unusual sim behaviours [none] 
          where hint is one of:
            lax-ioctls lax-doors fuse-compatible enable-outer
@@ -154,8 +156,11 @@ usage: valgrind [options] prog-and-args
                                      Use extra-precise definedness tracking [no]
     --freelist-vol=<number>          volume of freed blocks queue     [20000000]
     --freelist-big-blocks=<number>   releases first blocks with size>= [1000000]
-    --workaround-gcc296-bugs=no|yes  self explanatory [no]
+    --workaround-gcc296-bugs=no|yes  self explanatory [no].  Deprecated.
+                                     Use --ignore-range-below-sp instead.
     --ignore-ranges=0xPP-0xQQ[,0xRR-0xSS]   assume given addresses are OK
+    --ignore-range-below-sp=<number>-<number>  do not report errors for
+                                     accesses at the given offsets below SP
     --malloc-fill=<hexnumber>        fill malloc'd areas with given value
     --free-fill=<hexnumber>          fill free'd areas with given value
     --keep-stacktraces=alloc|free|alloc-and-free|alloc-then-free|none
