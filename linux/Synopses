@@ -31,7 +31,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.8.1
+version 4.8.6
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
