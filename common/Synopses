@@ -30,6 +30,11 @@ version 1.0.6
 emit -h | line 1 | field 7 | tr -d ',' | getversion
 emit -h | getusage
 
+cmd cscope
+version 15.8b
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd dbus-monitor
 version 1.11.6
 pack | getversion
@@ -143,7 +148,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.10.0
+version 2.10.2
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -160,7 +165,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.49.5
+version 2.50.2
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -275,7 +280,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.15.0
+version 3.15.1
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
