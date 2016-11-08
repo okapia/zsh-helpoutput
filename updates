@@ -219,7 +219,7 @@ else
     (( $#targets )) || return
     for sub in ${_dir:h}/${_subdir:-${_cmd}-}*(N); do
       [[ -n ${(M)_aux:#$sub:q} ]] && continue
-      $_runcmd "${(@)argv/(#s)@(#e)/${${sub#*/[^/]#-}:t}}" >& $_tmp
+      $_runcmd "${(@)argv/(#s)@(#e)/${sub#*/${_subdir:-[^/]#-}}}" >& $_tmp
       if cmp -s $_tmp $sub; then
 	echo "${(l.20.)}No differences... (${sub:t})"
       else
