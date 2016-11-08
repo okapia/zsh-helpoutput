@@ -245,7 +245,7 @@ emit --help | getusage
 
 cmd prove
 version 3.36
-emit --version | field 2 | tr _ ' ' | tr -d v | getversion
+emit --version | tr _ ' ' | field 2 | tr -d v | getversion
 emit --help | getusage
 
 cmd python
@@ -363,7 +363,7 @@ emit --version | field 2 | tr -d v | getversion
 emit --help | getusage
 
 cmd tmux
-version 2.2
+version 2.3
 subdir
 emit -V | field -1 | getversion
 emit -h | getusage
