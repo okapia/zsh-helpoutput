@@ -12,6 +12,7 @@ Commands:
   list-children             List children of a schema
   list-recursively          List keys and values, recursively
   range                     Queries the range of a key
+  describe                  Queries the description of a key
   get                       Get the value of a key
   set                       Set the value of a key
   reset                     Reset the value of a key
