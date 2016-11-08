@@ -1,11 +1,10 @@
-gpg (GnuPG) 2.1.11
-libgcrypt 1.6.4
+gpg (GnuPG) 2.1.15
+libgcrypt 1.7.3
 Copyright (C) 2016 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
-Home: ~/.gnupg
 Supported algorithms:
 Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
 Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
@@ -34,6 +33,7 @@ Commands:
      --gen-key              generate a new key pair
      --quick-gen-key        quickly generate a new key pair
      --quick-adduid         quickly add a new user-id
+     --quick-revuid         quickly revoke a user-id
      --full-gen-key         full featured key pair generation
      --gen-revoke           generate a revocation certificate
      --delete-keys          remove keys from the public keyring
@@ -45,9 +45,9 @@ Commands:
      --edit-key             sign or edit a key
      --passwd               change a passphrase
      --export               export keys
-     --send-keys            export keys to a key server
-     --recv-keys            import keys from a key server
-     --search-keys          search for keys on a key server
+     --send-keys            export keys to a keyserver
+     --recv-keys            import keys from a keyserver
+     --search-keys          search for keys on a keyserver
      --refresh-keys         update all keys from a keyserver
      --import               import/merge keys
      --card-status          print the card status
@@ -56,7 +56,7 @@ Commands:
      --update-trustdb       update the trust database
      --print-md             print message digests
      --server               run in server mode
-     --tofu-policy VALUE    set the TOFU policy for a key (good, unknown, bad, ask, auto)
+     --tofu-policy VALUE    set the TOFU policy for a key
 
 Options:
  
@@ -81,4 +81,3 @@ Examples:
  --list-keys [names]        show keys
  --fingerprint [names]      show fingerprints
 
-Please report bugs to <http://bugs.gnupg.org>.
