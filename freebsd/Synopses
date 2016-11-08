@@ -48,6 +48,11 @@ version 10.3-RELEASE-p7
 uname -r | getversion
 emit -? | getusage
 
+cmd jot
+version 10.3-RELEASE-p7
+uname -r | getversion
+emit -? | getusage
+
 cmd kldload
 version 10.3-RELEASE-p7
 uname -r | getversion
@@ -69,7 +74,7 @@ uname -r | getversion
 emit | getusage
 
 cmd pkgconf
-version 1.0.1
+version 1.0.2
 pack | getversion
 emit -h | getusage
 
