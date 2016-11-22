@@ -1,0 +1,19 @@
+Create a new cargo package in current directory
+
+Usage:
+    cargo init [options] [<path>]
+    cargo init -h | --help
+
+Options:
+    -h, --help          Print this message
+    --vcs VCS           Initialize a new repository for the given version
+                        control system (git or hg) or do not initialize any version
+                        control at all (none) overriding a global configuration.
+    --bin               Use a binary (application) template
+    --lib               Use a library template
+    --name NAME         Set the resulting package name
+    -v, --verbose ...   Use verbose output
+    -q, --quiet         No output printed to stdout
+    --color WHEN        Coloring: auto, always, never
+    --frozen            Require Cargo.lock and cache are up to date
+    --locked            Require Cargo.lock is up to date

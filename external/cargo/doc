@@ -1,0 +1,33 @@
+Build a package's documentation
+
+Usage:
+    cargo doc [options]
+
+Options:
+    -h, --help                   Print this message
+    --open                       Opens the docs in a browser after the operation
+    -p SPEC, --package SPEC ...  Package to document
+    --no-deps                    Don't build documentation for dependencies
+    -j N, --jobs N               Number of parallel jobs, defaults to # of CPUs
+    --lib                        Document only this package's library
+    --bin NAME                   Document only the specified binary
+    --release                    Build artifacts in release mode, with optimizations
+    --features FEATURES          Space-separated list of features to also build
+    --all-features               Build all available features
+    --no-default-features        Do not build the `default` feature
+    --target TRIPLE              Build for the target triple
+    --manifest-path PATH         Path to the manifest to document
+    -v, --verbose ...            Use verbose output
+    -q, --quiet                  No output printed to stdout
+    --color WHEN                 Coloring: auto, always, never
+    --message-format FMT         Error format: human, json [default: human]
+    --frozen                     Require Cargo.lock and cache are up to date
+    --locked                     Require Cargo.lock is up to date
+
+By default the documentation for the local package and all dependencies is
+built. The output is all placed in `target/doc` in rustdoc's usual format.
+
+If the --package argument is given, then SPEC is a package id specification
+which indicates which package should be documented. If it is not given, then the
+current package is documented. For more information on SPEC and its format, see
+the `cargo help pkgid` command.

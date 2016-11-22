@@ -1,0 +1,12 @@
+Deprecated, use `cargo metadata --no-deps` instead.
+Print a JSON representation of a Cargo.toml manifest.
+
+Usage:
+    cargo read-manifest [options]
+    cargo read-manifest -h | --help
+
+Options:
+    -h, --help               Print this message
+    -v, --verbose            Use verbose output
+    --manifest-path PATH     Path to the manifest
+    --color WHEN             Coloring: auto, always, never

@@ -1,0 +1,39 @@
+Build a package's documentation, using specified custom flags.
+
+Usage:
+    cargo rustdoc [options] [--] [<opts>...]
+
+Options:
+    -h, --help               Print this message
+    --open                   Opens the docs in a browser after the operation
+    -p SPEC, --package SPEC  Package to document
+    -j N, --jobs N           Number of parallel jobs, defaults to # of CPUs
+    --lib                    Build only this package's library
+    --bin NAME               Build only the specified binary
+    --example NAME           Build only the specified example
+    --test NAME              Build only the specified test target
+    --bench NAME             Build only the specified benchmark target
+    --release                Build artifacts in release mode, with optimizations
+    --features FEATURES      Space-separated list of features to also build
+    --all-features           Build all available features
+    --no-default-features    Do not build the `default` feature
+    --target TRIPLE          Build for the target triple
+    --manifest-path PATH     Path to the manifest to document
+    -v, --verbose ...        Use verbose output
+    -q, --quiet              No output printed to stdout
+    --color WHEN             Coloring: auto, always, never
+    --message-format FMT     Error format: human, json [default: human]
+    --frozen                 Require Cargo.lock and cache are up to date
+    --locked                 Require Cargo.lock is up to date
+
+The specified target for the current package (or package specified by SPEC if
+provided) will be documented with the specified <opts>... being passed to the
+final rustdoc invocation. Dependencies will not be documented as part of this
+command.  Note that rustdoc will still unconditionally receive arguments such
+as -L, --extern, and --crate-type, and the specified <opts>...  will simply be
+added to the rustdoc invocation.
+
+If the --package argument is given, then SPEC is a package id specification
+which indicates which package should be documented. If it is not given, then the
+current package is documented. For more information on SPEC and its format, see
+the `cargo help pkgid` command.
