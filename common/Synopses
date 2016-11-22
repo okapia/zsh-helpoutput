@@ -364,10 +364,9 @@ emit --help | getusage
 
 cmd tmux
 version 2.3
-subdir
 emit -V | field -1 | getversion
-emit -h | getusage
-subcmds @ -h
+emit -? | getusage
+emit list-commands | getusage commands
 
 cmd unrar
 version 5.40
