@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 for cmd; do
-  git log --reverse --format=format:%H $cmd|sed -e 1d -e 'a\'| while read hash; do
-    git show --unified=30 --patch -w $hash $cmd
+  git log --reverse --format=format:%H -- $cmd|sed -e 1d -e 'a\'| while read hash; do
+    git show --unified=30 --patch -w $hash -- $cmd
     read -q
   done
 done
