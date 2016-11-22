@@ -173,6 +173,11 @@ version 6.0
 uname -r | getversion
 emit | getusage
 
+cmd jot
+version 6.0
+uname -r | getversion
+emit | getusage
+
 cmd last
 version 6.0
 uname -r | getversion
