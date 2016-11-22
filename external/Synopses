@@ -3,6 +3,14 @@ version 0.33.0
 emit -V | field -1 | getversion
 emit -h | getusage
 
+cmd cargo
+version 0.13.0-nightly
+subdir
+emit -V | field 2 | getversion
+emit -h | getusage
+emit --list | getusage commands
+subcmds help @
+
 cmd khal
 version 0.8.4
 emit --version | field -1 | getversion
