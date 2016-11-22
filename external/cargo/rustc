@@ -1,0 +1,40 @@
+Compile a package and all of its dependencies
+
+Usage:
+    cargo rustc [options] [--] [<opts>...]
+
+Options:
+    -h, --help               Print this message
+    -p SPEC, --package SPEC  Package to build
+    -j N, --jobs N           Number of parallel jobs, defaults to # of CPUs
+    --lib                    Build only this package's library
+    --bin NAME               Build only the specified binary
+    --example NAME           Build only the specified example
+    --test NAME              Build only the specified test target
+    --bench NAME             Build only the specified benchmark target
+    --release                Build artifacts in release mode, with optimizations
+    --profile PROFILE        Profile to build the selected target for
+    --features FEATURES      Features to compile for the package
+    --all-features           Build all available features
+    --no-default-features    Do not compile default features for the package
+    --target TRIPLE          Target triple which compiles will be for
+    --manifest-path PATH     Path to the manifest to fetch dependencies for
+    -v, --verbose ...        Use verbose output
+    -q, --quiet              No output printed to stdout
+    --color WHEN             Coloring: auto, always, never
+    --message-format FMT     Error format: human, json [default: human]
+    --frozen                 Require Cargo.lock and cache are up to date
+    --locked                 Require Cargo.lock is up to date
+
+The specified target for the current package (or package specified by SPEC if
+provided) will be compiled along with all of its dependencies. The specified
+<opts>... will all be passed to the final compiler invocation, not any of the
+dependencies. Note that the compiler will still unconditionally receive
+arguments such as -L, --extern, and --crate-type, and the specified <opts>...
+will simply be added to the compiler invocation.
+
+This command requires that only one target is being compiled. If more than one
+target is available for the current package the filters of --lib, --bin, etc,
+must be used to select which target is compiled. To pass flags to all compiler
+processes spawned by Cargo, use the $RUSTFLAGS environment variable or the
+`build.rustflags` configuration option.

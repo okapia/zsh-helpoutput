@@ -1,0 +1,9 @@
+Show version information
+
+Usage:
+    cargo version [options]
+
+Options:
+    -h, --help               Print this message
+    -v, --verbose            Use verbose output
+    --color WHEN             Coloring: auto, always, never
