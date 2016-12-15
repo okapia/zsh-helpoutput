@@ -4,7 +4,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd arping
-version 20160308
+version 20161105
 emit -V | sed 's/.*s//' | getversion
 emit -? | getusage
 
@@ -31,7 +31,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.8.6
+version 4.8.13
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 

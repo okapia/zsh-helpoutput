@@ -36,12 +36,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.11.6
+version 1.11.8
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.11.6
+version 1.11.8
 pack | getversion
 emit -h | getusage
 
@@ -160,7 +160,7 @@ emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
 
 cmd gphoto2
-version 2.5.10
+version 2.5.11
 emit --version | field -1 | getversion
 emit -? | getusage
 
@@ -234,7 +234,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.5.0
+version 4.5.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -318,7 +318,7 @@ emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 
 cmd sudo
-version 1.8.18
+version 1.8.18p1
 emit -V | field -1 | getversion
 emit -h | getusage
 
