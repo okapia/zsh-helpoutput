@@ -28,7 +28,7 @@ Statistics:
 
 Filtering:
   -e expr        a qualifying expression: option=[!]all or option=[!]val1[,val2]...
-     options:    trace, abbrev, verbose, raw, signal, read, write
+     options:    trace, abbrev, verbose, raw, signal, read, write, fault
   -P path        trace accesses to path
 
 Tracing:
@@ -54,3 +54,4 @@ Miscellaneous:
   -v             verbose mode: print unabbreviated argv, stat, termios, etc. args
   -h             print help message
   -V             print version
+  -k             obtain stack trace between each syscall (experimental)
