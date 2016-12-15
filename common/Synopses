@@ -20,7 +20,7 @@ emit | tr -d , | field 2 | getversion
 emit --help | getusage
 
 cmd augtool
-version 1.6.0
+version 1.7.0
 emit --version | field 2 | getversion
 emit --help | getusage
 emit help | getusage commands
@@ -148,7 +148,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.10.2
+version 2.11.0
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -259,7 +259,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ruby
-version 2.3.1p112
+version 2.3.3p222
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -280,7 +280,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.15.1
+version 3.15.2
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -333,14 +333,14 @@ pack | getversion
 emit | getusage
 
 cmd svn
-version 1.9.4
+version 1.9.5
 subdir
 emit --version --quiet | getversion
 emit help | getusage
 subcmds help @
 
 cmd svnadmin
-version 1.9.4
+version 1.9.5
 subdir
 emit --version | field 3 | getversion
 emit help | getusage

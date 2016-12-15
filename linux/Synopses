@@ -91,12 +91,12 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 161009
+version 161212
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.14
+version 4.15
 emit -V | field 4 | getversion
 emit -h | getusage
 
