@@ -54,8 +54,7 @@ Mandatory arguments to long options are mandatory for short options too.
                                references rather than for the link itself
   -m                         fill width with a comma separated list of entries
   -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
-  -N, --literal              print raw entry names (don't treat e.g. control
-                               characters specially)
+  -N, --literal              print entry names without quoting
   -o                         like -l, but do not list group information
   -p, --indicator-style=slash
                              append / indicator to directories
@@ -112,5 +111,6 @@ Exit status:
  2  if serious trouble (e.g., cannot access command-line argument).
 
 GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Report ls translation bugs to <http://translationproject.org/team/>
 Full documentation at: <http://www.gnu.org/software/coreutils/ls>
 or available locally via: info '(coreutils) ls invocation'
