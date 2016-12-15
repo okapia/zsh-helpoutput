@@ -22,6 +22,7 @@ Usage: ss [ OPTIONS ]
    -6, --ipv6          display only IP version 6 sockets
    -0, --packet        display PACKET sockets
    -t, --tcp           display only TCP sockets
+   -S, --sctp          display only SCTP sockets
    -u, --udp           display only UDP sockets
    -d, --dccp          display only DCCP sockets
    -w, --raw           display only RAW sockets
