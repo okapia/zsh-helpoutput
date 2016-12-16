@@ -12,7 +12,6 @@ FUSE options:
     -o subtype=NAME        set filesystem type
     -o large_read          issue large read requests (2.4 only)
     -o max_read=N          set maximum size of read requests
-    -o numa		    enable numa
 
     -o hard_remove         immediate removal (don't hide files)
     -o use_ino             let filesystem set inode numbers
@@ -29,6 +28,7 @@ FUSE options:
     -o ac_attr_timeout=T   auto cache timeout for attributes (attr_timeout)
     -o noforget            never forget cached inodes
     -o remember=T          remember cached inodes for T seconds (0s)
+    -o nopath              don't supply path if not necessary
     -o intr                allow requests to be interrupted
     -o intr_signal=NUM     signal to send on interrupt (10)
     -o modules=M1[:M2...]  names of modules to push onto filesystem stack
@@ -76,8 +76,15 @@ SSHFS options:
     -o sync_readdir        synchronous readdir
     -o sshfs_debug         print some debugging information
     -o cache=BOOL          enable caching {yes,no} (default: yes)
+    -o cache_max_size=N    sets the maximum size of the cache (default: 10000)
     -o cache_timeout=N     sets timeout for caches in seconds (default: 20)
     -o cache_X_timeout=N   sets timeout for {stat,dir,link} cache
+    -o cache_clean_interval=N
+                           sets the interval for automatic cleaning of the
+                           cache (default: 60)
+    -o cache_min_clean_interval=N
+                           sets the interval for forced cleaning of the
+                           cache if full (default: 5)
     -o workaround=LIST     colon separated list of workarounds
              none             no workarounds enabled
              all              all workarounds enabled
@@ -85,9 +92,9 @@ SSHFS options:
              [no]nodelaysrv   set nodelay tcp flag in sshd (default: off)
              [no]truncate     fix truncate for old servers (default: off)
              [no]buflimit     fix buffer fillup bug in server (default: on)
-    -o idmap=TYPE          user/group ID mapping, possible types are:
-             none             no translation of the ID space (default)
-             user             only translate UID of connecting user
+    -o idmap=TYPE          user/group ID mapping (default: none)
+             none             no translation of the ID space
+             user             only translate UID/GID of connecting user
              file             translate UIDs/GIDs contained in uidfile/gidfile
     -o uidfile=FILE        file containing username:remote_uid mappings
     -o gidfile=FILE        file containing groupname:remote_gid mappings
