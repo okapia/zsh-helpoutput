@@ -96,6 +96,12 @@ Options are:
  -bind-address-ipv6 <ipv6 address>
   Use a specific local IPv6 address.
 
+ -no-libevent
+  Don't use libevent library.
+
+ -no-openmp
+  Don't use OpenMP.
+
  -async-dns <0>/<1>
   Asynchronous DNS resolver on(1)/off(0).
 
@@ -158,6 +164,23 @@ Options are:
   "1" causes that Links won't initiate any non-proxy connection.
     It is useful for anonymization with tor or similar networks.
 
+ -ssl.certificates <0>/<1>/<2>
+    (default 1)
+  0 - ignore invalid certificate
+  1 - warn on invalid certificate
+  2 - reject invalid certificate
+
+ -ssl.client-cert-key <filename>
+  Name of the PEM encoded file with the user private key
+  for client certificate authentication.
+
+ -ssl.client-cert-crt <filename>
+  Name of the PEM encoded file with the user certificate
+  for client certificate authentication.
+
+ -ssl.client-cert-password <text>
+  Password for the user private key.
+
  -http-bugs.http10 <0>/<1>
     (default 0)
   "1" forces using only HTTP/1.0 protocol. (useful for buggy servers
@@ -193,6 +216,10 @@ Options are:
  -http-bugs.retry-internal-errors <0>/<1>
     (default 0)
   Retry on internal server errors (50x).
+
+ -http.fake-firefox <0>/<1>
+    (default 0)
+  Fake Firefox in the HTTP header.
 
  -http.do-not-track <0>/<1>
     (default 0)
@@ -283,9 +310,6 @@ Options are:
  -bfu-aspect <fp-value>
   Display aspect ration.
 
- -aspect-on <0>/<1>
-  Enable aspect ratio correction.
-
  -dither-letters <0>/<1>
   Do letter dithering.
 
@@ -319,6 +343,9 @@ Options are:
 
  -html-frames <0>/<1>
   Render frames. (0) causes frames  rendered like in lynx.
+
+ -html-break-long-lines <0>/<1>
+  Break long lines in <pre> sections.
 
  -html-images <0>/<1>
   Display links to unnamed images as [IMG].
