@@ -275,7 +275,7 @@ emit -v | field 3 | getversion
 emit -h | getusage
 
 cmd smbclient
-version 4.5.0
+version 4.5.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
@@ -313,7 +313,7 @@ getversion <<<$sshver
 emit -? | getusage
 
 cmd sshfs
-version 2.5
+version 2.8
 emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 
