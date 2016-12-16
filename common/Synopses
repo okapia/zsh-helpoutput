@@ -132,7 +132,7 @@ emit -v | sed 's/^lldb-//' | getversion
 emit -h | getusage
 
 cmd links
-version 2.8
+version 2.14
 variant -n links2 ! ELinks -- -version
 emit -version | field 2 | getversion
 emit -help | getusage
