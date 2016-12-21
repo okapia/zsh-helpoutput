@@ -91,7 +91,7 @@ emit -version | field 3 | getversion
 emit -help | getusage
 
 cmd fakeroot
-version 1.12.2
+version 1.21
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -286,29 +286,29 @@ emit -version | field 1 | getversion
 emit -help | getusage
 
 cmd ssh
-version 7.3p1
+version 7.4p1
 variant OpenSSH -- -V
 emit -V | field 1 | sed 's/^.*_//' | getversion
 sshver="$_verinst"
 emit -? | getusage
 
 cmd scp
-version 7.3p1
+version 7.4p1
 getversion <<<$sshver
 emit | getusage
 
 cmd sftp
-version 7.3p1
+version 7.4p1
 getversion <<<$sshver
 emit | getusage
 
 cmd ssh-add
-version 7.3p1
+version 7.4p1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-keygen
-version 7.3p1
+version 7.4p1
 getversion <<<$sshver
 emit -? | getusage
 

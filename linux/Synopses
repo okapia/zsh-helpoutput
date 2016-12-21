@@ -143,26 +143,26 @@ emit -h | getusage
 # shadow-utils
 
 cmd gpasswd
-version 4.2.1
+version 4.4
 pack | getversion
 emit -h | getusage
 
 cmd groupadd
-version 4.2.1
+version 4.4
 pack | getversion
 emit -h | getusage
 
 cmd groupmod
-version 4.2.1
+version 4.4
 pack | getversion
 emit -h | getusage
 
 cmd useradd
-version 4.2.1
+version 4.4
 pack | getversion
 emit -h | getusage
 
 cmd usermod
-version 4.2.1
+version 4.4
 pack | getversion
 emit -h | getusage
