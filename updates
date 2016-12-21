@@ -12,6 +12,7 @@ dirs=( common external gnu x ${${OSTYPE%%[0-9.]#}%-gnu*} )
 [[ -e /etc/SuSE-release ]] && dirs+=( redhat suse ) && pkg=rpm
 [[ -e /etc/debian_version ]] && dirs+=debian && pkg=dpkg
 [[ -e /etc/os-release && $(sed -n 's/^NAME="\(.*\)"$/\1/p' /etc/os-release) = void ]] && pkg=xbps
+[[ -e /etc/arch-release ]] && pkg=pacman
 [[ $OSTYPE = freebsd* ]] && pkg=pkg
 [[ $OSTYPE = solaris2.10 ]] && pkg=sol10
 [[ $OSTYPE = (net|open)bsd* ]] && pkg=pkgsrc
@@ -112,6 +113,7 @@ pack() {
     dpkg) dpkg-query -W --showformat='${version}' ${"$(dpkg --search $file)"%:*} | sed -r 's/[^:]*:+([^-]*).*/\1/' ;;
     pkg) pkg which -q $file | sed -e 's/.*-//' -e 's/_.*//' ;;
     pkgsrc) pkg_info -FI $file | sed -e 's/ .*//' -e 's/.*-//' ;;
+    pacman) pacman -Q -o $file | sed -e 's/.* //' -e 's/-.*//' ;;
     xbps) xbps-query -v -o $file | sed -n 's/^[^-]*-\([0-9.a-z]*\)_.*/\1/p' ;;
     sol10) pkginfo -l $(fgrep $file /var/sadm/install/contents | $AWK '{ print $10 }')|$AWK '/VERSION:/ {print $2}'|sed 's/[,_].*//' ;;
     *) echo unknown ;;
