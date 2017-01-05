@@ -229,7 +229,7 @@ pack | getversion
 emit | getusage
 
 cmd nmap
-version 7.31
+version 7.40
 emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
@@ -280,7 +280,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.15.2
+version 3.16.1
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -433,7 +433,7 @@ getversion <<<"$vimver"
 emit -h | getusage
 
 cmd xz
-version 5.2.2
+version 5.2.3
 emit -V | field -1 | getversion
 emit -h | getusage
 
