@@ -1,0 +1,24 @@
+Usage: eu-objdump [OPTION...] [FILE...]
+Show information from FILEs (a.out by default).
+
+ Mode selection:
+  -d, --disassemble          Display assembler code of executable sections
+  -r, --reloc                Display relocation information.
+  -s, --full-contents        Display the full contents of all sections
+                             requested
+
+ Output content selection:
+  -j, --section=NAME         Only display information for section NAME.
+
+
+ Output formatting
+      --color[=WHEN]         colorize the output.  WHEN defaults to 'always' or
+                             can be 'auto' or 'never'
+
+  -?, --help                 Give this help list
+      --usage                Give a short usage message
+  -V, --version              Print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
