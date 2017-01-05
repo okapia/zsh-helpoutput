@@ -41,7 +41,7 @@ emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
 emit -? | sed '/^Please report/ {N;N;d}' | getusage
 
 cmd dkms
-version 2.2.1.0
+version 2.3.0.0
 emit -V | field -1 | getversion
 emit | getusage
 

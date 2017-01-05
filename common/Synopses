@@ -234,7 +234,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.5.2
+version 4.5.3
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -523,13 +523,13 @@ emit -h | getusage
 
 # elfutils
 cmd readelf
-version 0.167
+version 0.168
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.167
+version 0.168
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
