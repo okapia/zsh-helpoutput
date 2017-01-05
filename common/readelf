@@ -15,7 +15,7 @@ Print information from ELF file in human-readable form.
   -l, --program-headers      Display the program headers
   -n, --notes                Display the ELF notes
   -r, --relocs               Display relocations
-  -s, --symbols              Display the symbol table
+  -s, --symbols[=SECTION]    Display the symbol table sections
   -S, --section-headers      Display the sections' headers
   -V, --version-info         Display versioning information
 
@@ -47,4 +47,3 @@ Print information from ELF file in human-readable form.
 Mandatory or optional arguments to long options are also mandatory or optional
 for any corresponding short options.
 
-Report bugs to https://bugzilla.redhat.com/.
