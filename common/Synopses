@@ -346,6 +346,11 @@ emit --version | field 3 | getversion
 emit help | getusage
 subcmds help @
 
+cmd swaks
+version 20130209.0
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd tardy
 version 1.12.D002
 emit -VERS | field -1 | getversion
