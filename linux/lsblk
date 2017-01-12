@@ -1,0 +1,79 @@
+
+Usage:
+ lsblk [options] [<device> ...]
+
+List information about block devices.
+
+Options:
+ -a, --all            print all devices
+ -b, --bytes          print SIZE in bytes rather than in human readable format
+ -d, --nodeps         don't print slaves or holders
+ -D, --discard        print discard capabilities
+ -e, --exclude <list> exclude devices by major number (default: RAM disks)
+ -f, --fs             output info about filesystems
+ -i, --ascii          use ascii characters only
+ -I, --include <list> show only devices with specified major numbers
+ -J, --json           use JSON output format
+ -l, --list           use list format output
+ -m, --perms          output info about permissions
+ -n, --noheadings     don't print headings
+ -o, --output <list>  output columns
+ -O, --output-all     output all columns
+ -p, --paths          print complete device path
+ -P, --pairs          use key="value" output format
+ -r, --raw            use raw output format
+ -s, --inverse        inverse dependencies
+ -S, --scsi           output info about SCSI devices
+ -t, --topology       output info about topology
+ -x, --sort <column>  sort output by <column>
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+Available columns (for --output):
+        NAME  device name
+       KNAME  internal kernel device name
+     MAJ:MIN  major:minor device number
+      FSTYPE  filesystem type
+  MOUNTPOINT  where the device is mounted
+       LABEL  filesystem LABEL
+        UUID  filesystem UUID
+    PARTTYPE  partition type UUID
+   PARTLABEL  partition LABEL
+    PARTUUID  partition UUID
+   PARTFLAGS  partition flags
+          RA  read-ahead of the device
+          RO  read-only device
+          RM  removable device
+     HOTPLUG  removable or hotplug device (usb, pcmcia, ...)
+       MODEL  device identifier
+      SERIAL  disk serial number
+        SIZE  size of the device
+       STATE  state of the device
+       OWNER  user name
+       GROUP  group name
+        MODE  device node permissions
+   ALIGNMENT  alignment offset
+      MIN-IO  minimum I/O size
+      OPT-IO  optimal I/O size
+     PHY-SEC  physical sector size
+     LOG-SEC  logical sector size
+        ROTA  rotational device
+       SCHED  I/O scheduler name
+     RQ-SIZE  request queue size
+        TYPE  device type
+    DISC-ALN  discard alignment offset
+   DISC-GRAN  discard granularity
+    DISC-MAX  discard max bytes
+   DISC-ZERO  discard zeroes data
+       WSAME  write same max bytes
+         WWN  unique storage identifier
+        RAND  adds randomness
+      PKNAME  internal parent kernel device name
+        HCTL  Host:Channel:Target:Lun for SCSI
+        TRAN  device transport type
+  SUBSYSTEMS  de-duplicated chain of subsystems
+         REV  device revision
+      VENDOR  device vendor
+
+For more details see lsblk(8).
