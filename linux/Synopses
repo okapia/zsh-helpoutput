@@ -105,6 +105,13 @@ version 0.7.91
 emit -V | line 1 | field -1 | sed 's/\.$//' | getversion
 emit -h | getusage
 
+cmd mdadm
+version 2.6.7.1
+subdir
+emit -V | field 3 | tr -d v | getversion
+emit --help-options | getusage
+subcmds --@ -h
+
 cmd modinfo
 version 23
 emit -V | line 1 | field 3 | getversion
