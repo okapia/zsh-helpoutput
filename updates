@@ -193,7 +193,7 @@ if (( $+_opts[u] && $#targets )); then
     (( _run && _present )) || return
     for sub in ${_dir:h}/${_subdir:-${_cmd}-}*(N); do
       [[ -n ${(M)_aux:#$sub:q} ]] && continue
-      $_runcmd "${(@)argv/(#s)@(#e)/${${sub#[^/]#-}:t}}" >& $sub
+      $_runcmd "${(@)argv/@/${${sub#[^/]#-}:t}}" >& $sub
     done
   }
 else
@@ -221,7 +221,7 @@ else
     (( $#targets )) || return
     for sub in ${_dir:h}/${_subdir:-${_cmd}-}*(N); do
       [[ -n ${(M)_aux:#$sub:q} ]] && continue
-      $_runcmd "${(@)argv/(#s)@(#e)/${sub#*/${_subdir:-[^/]#-}}}" >& $_tmp
+      $_runcmd "${(@)argv/@/${sub#*/${_subdir:-[^/]#-}}}" >& $_tmp
       if cmp -s $_tmp $sub; then
 	echo "${(l.20.)}No differences... (${sub:t})"
       else
