@@ -347,7 +347,7 @@ emit help | getusage
 subcmds help @
 
 cmd swaks
-version 20130209.0
+version 20170101.0
 emit --version | field -1 | getversion
 emit --help | getusage
 
