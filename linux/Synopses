@@ -80,6 +80,11 @@ version 2.28.2
 emit -V | field -1 | getversion
 emit -h | getusage
 
+cmd lsusb
+version 0.73
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd mdadm
 version 2.6.7.1
 subdir
@@ -110,7 +115,7 @@ emit -h | getusage
 cmd strace
 version 4.15
 emit -V | field 4 | getversion
-emit -h | getusage
+emit -h | getsage
 
 cmd ltrace
 version 0.7.91
