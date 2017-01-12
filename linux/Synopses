@@ -75,6 +75,18 @@ version 2.28.2
 emit -V | field -1 | getversion
 emit -h | getusage
 
+cmd lsblk
+version 2.28.2
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd mdadm
+version 2.6.7.1
+subdir
+emit -V | field 3 | tr -d v | getversion
+emit --help-options | getusage
+subcmds --@ -h
+
 cmd pgrep
 version 3.3.12
 emit -V | tr -d \) | field -1 | getversion
@@ -104,13 +116,6 @@ cmd ltrace
 version 0.7.91
 emit -V | line 1 | field -1 | sed 's/\.$//' | getversion
 emit -h | getusage
-
-cmd mdadm
-version 2.6.7.1
-subdir
-emit -V | field 3 | tr -d v | getversion
-emit --help-options | getusage
-subcmds --@ -h
 
 cmd modinfo
 version 23
