@@ -86,7 +86,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd mdadm
-version 2.6.7.1
+version 3.4
 subdir
 emit -V | field 3 | tr -d v | getversion
 emit --help-options | getusage
