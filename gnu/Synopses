@@ -62,6 +62,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd fmt
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd gawk
 version 4.1.4
 emit -V | field 3 | tr -d , | getversion
@@ -180,6 +186,12 @@ version 2.27
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
+
+cmd paste
+version 8.25
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
 
 cmd patch
 version 2.7.5
