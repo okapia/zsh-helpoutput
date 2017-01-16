@@ -1,0 +1,1 @@
+usage: entr [-cdpr] utility [args, [/_], ...] < filenames
