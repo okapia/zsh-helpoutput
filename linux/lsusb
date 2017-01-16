@@ -1,4 +1,3 @@
-lsusb: invalid option -- h
 Usage: lsusb [options]...
 List USB devices
   -v, --verbose
@@ -11,7 +10,9 @@ List USB devices
       product ID numbers (in hexadecimal)
   -D device
       Selects which device lsusb will examine
-  -t
+  -t, --tree
       Dump the physical USB device hierarchy as a tree
   -V, --version
       Show version of program
+  -h, --help
+      Show usage and help
