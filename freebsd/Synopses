@@ -18,6 +18,11 @@ version 10.3-RELEASE-p7
 uname -r | getversion
 emit | getusage
 
+cmd fmt
+version 10.3-RELEASE-p7
+uname -r | getversion
+emit -? | getusage
+
 cmd fortune
 version 10.3-RELEASE-p7
 uname -r | getversion
@@ -62,6 +67,11 @@ cmd kldunload
 version 10.3-RELEASE-p7
 uname -r | getversion
 emit -? | getusage
+
+cmd paste
+version 10.3-RELEASE-p7
+uname -r | getversion
+emit | getusage
 
 cmd patch
 version 10.3-RELEASE-p7
