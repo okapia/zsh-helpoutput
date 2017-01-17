@@ -115,7 +115,7 @@ emit -h | getusage
 cmd strace
 version 4.15
 emit -V | field 4 | getversion
-emit -h | getsage
+emit -h | getusage
 
 cmd ltrace
 version 0.7.91

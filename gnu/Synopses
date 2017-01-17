@@ -63,7 +63,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd fmt
-version 8.25
+version 8.26
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -188,7 +188,7 @@ emit -V | guess | getversion
 emit --help | nobug | getusage
 
 cmd paste
-version 8.25
+version 8.26
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
