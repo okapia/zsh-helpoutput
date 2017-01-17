@@ -1,6 +1,6 @@
 patch: unrecognized option `--help'
 usage: patch [-bCcEeflNnRstuv] [-B backup-prefix] [-D symbol] [-d directory]
              [-F max-fuzz] [-i patchfile] [-o out-file] [-p strip-count]
-             [-r rej-name] [-V t | nil | never] [-x number] [-z backup-ext]
-             [--posix] [origfile [patchfile]]
+             [-r rej-name] [-V t | nil | never | none] [-x number]
+             [-z backup-ext] [--posix] [origfile [patchfile]]
        patch <patchfile

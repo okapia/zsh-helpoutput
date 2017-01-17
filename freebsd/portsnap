@@ -25,3 +25,5 @@ Commands:
                   files and directories.
   update       -- Update ports tree to match current snapshot, replacing
                   files and directories which have changed.
+  auto         -- Fetch updates, and either extract a new ports tree or
+                  update an existing tree.

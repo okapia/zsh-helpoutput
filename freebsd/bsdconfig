@@ -29,4 +29,4 @@ COMMANDS:
 	syscons_ttys        timezone            ttys                useradd          
 	userdel             useredit            usermgmt            vt_font          
 	vt_keymap           vt_repeat           vt_saver            vt_screenmap     
-	vt_ttys          
+	vt_ttys             wifi                wireless            wlan             

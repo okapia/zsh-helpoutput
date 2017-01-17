@@ -1,6 +1,6 @@
 ifconfig: illegal option -- ?
-usage: ifconfig [-L] [-C] [-g groupname] interface address_family [address [dest_address]]
-                [parameters]
+usage: ifconfig [-f type:format] [-L] [-C] [-g groupname] interface address_family
+                [address [dest_address]] [parameters]
        ifconfig interface create
        ifconfig -a [-L] [-C] [-g groupname] [-d] [-m] [-u] [-v] [address_family]
        ifconfig -l [-d] [-u] [address_family]

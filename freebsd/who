@@ -1,0 +1,2 @@
+who: illegal option -- ?
+usage: who [-abHmqsTu] [am I] [file]
