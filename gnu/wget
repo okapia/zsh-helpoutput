@@ -1,4 +1,4 @@
-GNU Wget 1.18, a non-interactive network retriever.
+GNU Wget 1.19, a non-interactive network retriever.
 Usage: wget [OPTION]... [URL]...
 
 Mandatory arguments to long options are mandatory for short options too.
@@ -64,10 +64,15 @@ Download:
        --user=USER                 set both ftp and http user to USER
        --password=PASS             set both ftp and http password to PASS
        --ask-password              prompt for passwords
+       --use-askpass=COMMAND       specify credential handler for requesting 
+                                     username and password.  If no COMMAND is 
+                                     specified the WGET_ASKPASS or the SSH_ASKPASS 
+                                     environment variable is used.
        --no-iri                    turn off IRI support
        --local-encoding=ENC        use ENC as the local encoding for IRIs
        --remote-encoding=ENC       use ENC as the default remote encoding
        --unlink                    remove file before clobber
+       --no-xattr                  turn off storage of metadata in extended file attributes
 
 Directories:
   -nd, --no-directories            don't create directories
@@ -123,7 +128,7 @@ HTTPS (SSL/TLS) options:
        --crl-file=FILE             file with bundle of CRLs
        --pinnedpubkey=FILE/HASHES  Public key (PEM/DER) file, or any number
                                    of base64 encoded sha256 hashes preceded by
-                                   'sha256//' and seperated by ';', to verify
+                                   'sha256//' and separated by ';', to verify
                                    peer against
        --random-file=FILE          file with random data for seeding the SSL PRNG
 
