@@ -4,7 +4,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd cargo
-version 0.13.0-nightly
+version 0.15.0
 subdir
 emit -V | field 2 | getversion
 emit -h | getusage

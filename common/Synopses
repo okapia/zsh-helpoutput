@@ -244,7 +244,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.24.0
+version 5.24.1
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
@@ -357,7 +357,7 @@ emit -VERS | field -1 | getversion
 emit -H | getusage
 
 cmd tcpdump
-version 4.8.1
+version 4.9.0
 variant ! 'Apple' -- --version
 emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage
