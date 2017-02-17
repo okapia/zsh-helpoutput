@@ -165,7 +165,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.50.2
+version 2.50.3
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -280,7 +280,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.16.2
+version 3.17.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
