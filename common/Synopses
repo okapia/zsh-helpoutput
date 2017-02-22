@@ -234,7 +234,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.5.3
+version 4.5.5
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -363,7 +363,7 @@ emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage
 
 cmd tin
-version 2.4.0
+version 2.4.1
 emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
