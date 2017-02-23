@@ -27,6 +27,11 @@ version 0.95
 emit version | field 1 | getversion
 emit help | getusage
 
+cmd ninja-build
+version 1.7.1
+emit --version | getversion
+emit -h | getusage
+
 cmd pdfgrep
 version 1.4.1
 emit -V | field -1 | getversion
