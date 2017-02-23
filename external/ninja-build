@@ -1,0 +1,20 @@
+usage: ninja-build [options] [targets...]
+
+if targets are unspecified, builds the 'default' target (see manual).
+
+options:
+  --version  print ninja version ("1.7.1")
+
+  -C DIR   change to DIR before doing anything else
+  -f FILE  specify input build file [default=build.ninja]
+
+  -j N     run N jobs in parallel [default=10, derived from CPUs available]
+  -k N     keep going until N jobs fail [default=1]
+  -l N     do not start new jobs if the load average is greater than N
+  -n       dry run (don't run commands but act like they succeeded)
+  -v       show all command lines while building
+
+  -d MODE  enable debugging (use -d list to list modes)
+  -t TOOL  run a subtool (use -t list to list subtools)
+    terminates toplevel options; further flags are passed to the tool
+  -w FLAG  adjust warnings (use -w list to list warnings)
