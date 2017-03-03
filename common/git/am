@@ -1,5 +1,5 @@
-usage: git am [options] [(<mbox>|<Maildir>)...]
-   or: git am [options] (--continue | --skip | --abort)
+usage: git am [<options>] [(<mbox> | <Maildir>)...]
+   or: git am [<options>] (--continue | --skip | --abort)
 
     -i, --interactive     run interactively
     -3, --3way            allow fall back on 3way merging if needed
@@ -12,16 +12,18 @@ usage: git am [options] [(<mbox>|<Maildir>)...]
     --keep-cr             pass --keep-cr flag to git-mailsplit for mbox format
     --no-keep-cr          do not pass --keep-cr flag to git-mailsplit independent of am.keepcr
     -c, --scissors        strip everything before a scissors line
-    --whitespace ...      pass it through git-apply
+    --whitespace <action>
+                          pass it through git-apply
     --ignore-space-change
                           pass it through git-apply
     --ignore-whitespace   pass it through git-apply
-    --directory ...       pass it through git-apply
-    --exclude ...         pass it through git-apply
-    --include ...         pass it through git-apply
-    -C ...                pass it through git-apply
-    -p ...                pass it through git-apply
-    --patch-format ...    format the patch(es) are in
+    --directory <root>    pass it through git-apply
+    --exclude <path>      pass it through git-apply
+    --include <path>      pass it through git-apply
+    -C <n>                pass it through git-apply
+    -p <num>              pass it through git-apply
+    --patch-format <format>
+                          format the patch(es) are in
     --reject              pass it through git-apply
     --resolvemsg ...      override error message when patch failure occurs
     --continue            continue applying patches after resolving a conflict
@@ -32,5 +34,6 @@ usage: git am [options] [(<mbox>|<Maildir>)...]
                           lie about committer date
     --ignore-date         use current timestamp for author date
     --rerere-autoupdate   update the index with reused conflict resolution if possible
-    -S, --gpg-sign[=...]  GPG-sign commits
+    -S, --gpg-sign[=<key-id>]
+                          GPG-sign commits
 

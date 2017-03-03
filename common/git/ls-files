@@ -23,6 +23,7 @@ usage: git ls-files [<options>] [<file>...]
                           read additional per-directory exclude patterns in <file>
     --exclude-standard    add the standard git exclusions
     --full-name           make the output relative to the project top directory
+    --recurse-submodules  recurse through submodules
     --error-unmatch       if any <file> is not in the index, treat this as an error
     --with-tree <tree-ish>
                           pretend that paths removed since <tree-ish> are still present

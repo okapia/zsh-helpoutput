@@ -1,7 +1,7 @@
-usage: git rm [options] [--] <file>...
+usage: git rm [<options>] [--] <file>...
 
     -n, --dry-run         dry run
-    -q, --quiet           be quiet
+    -q, --quiet           do not list removed files
     --cached              only remove from the index
     -f, --force           override the up-to-date check
     -r                    allow recursive removal

@@ -15,6 +15,8 @@ usage: git clone [<options>] [--] <repo> [<dir>]
     --template <template-directory>
                           directory from which templates will be used
     --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
     --dissociate          use --reference only while cloning
     -o, --origin <name>   use <name> instead of 'origin' to track upstream
     -b, --branch <branch>
@@ -22,6 +24,10 @@ usage: git clone [<options>] [--] <repo> [<dir>]
     -u, --upload-pack <path>
                           path to git-upload-pack on the remote
     --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
     --single-branch       clone only one branch, HEAD or --branch
     --shallow-submodules  any cloned submodules will be shallow
     --separate-git-dir <gitdir>

@@ -15,4 +15,5 @@ usage: git for-each-ref [<options>] [<pattern>]
     --merged <commit>     print only refs that are merged
     --no-merged <commit>  print only refs that are not merged
     --contains <commit>   print only refs which contain the commit
+    --ignore-case         sorting and filtering are case insensitive
 

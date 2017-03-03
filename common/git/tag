@@ -2,7 +2,7 @@ usage: git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] <tagname> [<h
    or: git tag -d <tagname>...
    or: git tag -l [-n[<num>]] [--contains <commit>] [--points-at <object>]
 		[--format=<format>] [--[no-]merged [<commit>]] [<pattern>...]
-   or: git tag -v <tagname>...
+   or: git tag -v [--format=<format>] <tagname>...
 
     -l, --list            list tag names
     -n[<n>]               print <n> lines of each tag message
@@ -29,4 +29,5 @@ Tag listing options
     --sort <key>          field name to sort on
     --points-at <object>  print only tags of the object
     --format <format>     format to use for the output
+    -i, --ignore-case     sorting and filtering are case insensitive
 

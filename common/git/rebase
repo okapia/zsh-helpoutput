@@ -24,7 +24,8 @@ Available options are
     --verify              allow pre-rebase hook to run
     --rerere-autoupdate   allow rerere to update index with resolved conflicts
     --root                rebase all reachable commits up to the root(s)
-    --autosquash          move commits that begin with squash!/fixup! under -i
+    --autosquash         move commits that begin with squash
+                          move commits that begin with squash!/fixup! under -i
     --committer-date-is-author-date
                           passed to 'git am'
     --ignore-date         passed to 'git am'
@@ -38,4 +39,5 @@ Actions:
     --abort               abort and check out the original branch
     --skip                skip current patch and continue
     --edit-todo           edit the todo list during an interactive rebase
+    --quit                abort but keep HEAD where it is
 

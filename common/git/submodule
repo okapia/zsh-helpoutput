@@ -6,3 +6,4 @@ usage: git submodule [--quiet] add [-b <branch>] [-f|--force] [--name <name>] [-
    or: git submodule [--quiet] summary [--cached|--files] [--summary-limit <n>] [commit] [--] [<path>...]
    or: git submodule [--quiet] foreach [--recursive] <command>
    or: git submodule [--quiet] sync [--recursive] [--] [<path>...]
+   or: git submodule [--quiet] absorbgitdirs [--] [<path>...]
