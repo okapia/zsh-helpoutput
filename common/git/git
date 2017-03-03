@@ -17,7 +17,7 @@ work on the current change (see also: git help everyday)
    rm         Remove files from the working tree and from the index
 
 examine the history and state (see also: git help revisions)
-   bisect     Find by binary search the change that introduced a bug
+   bisect     Use binary search to find the commit that introduced a bug
    grep       Print lines matching a pattern
    log        Show commit logs
    show       Show various types of objects
@@ -29,7 +29,7 @@ grow, mark and tweak your common history
    commit     Record changes to the repository
    diff       Show changes between commits, commit and working tree, etc
    merge      Join two or more development histories together
-   rebase     Forward-port local commits to the updated upstream head
+   rebase     Reapply commits on top of another base tip
    tag        Create, list, delete or verify a tag object signed with GPG
 
 collaborate (see also: git help workflows)

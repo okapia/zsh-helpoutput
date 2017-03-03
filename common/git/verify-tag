@@ -1,5 +1,6 @@
-usage: git verify-tag [-v | --verbose] <tag>...
+usage: git verify-tag [-v | --verbose] [--format=<format>] <tag>...
 
     -v, --verbose         print tag contents
     --raw                 print raw gpg status output
+    --format <format>     format to use for the output
 

@@ -10,6 +10,7 @@ usage: git format-patch [<options>] [<since> | <revision-range>]
     --start-number <n>    start numbering patches at <n> instead of 1
     -v, --reroll-count <n>
                           mark the series as Nth re-roll
+    --rfc                 Use [RFC PATCH] instead of [PATCH]
     --subject-prefix <prefix>
                           Use [<prefix>] instead of [PATCH]
     -o, --output-directory <dir>

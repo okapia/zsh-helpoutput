@@ -18,6 +18,7 @@ usage: git blame [<options>] [<rev-opts>] [<rev>] [--] <file>
     -s                    Suppress author name and timestamp (Default: off)
     -e, --show-email      Show author email instead of name (Default: off)
     -w                    Ignore whitespace differences
+    --indent-heuristic    Use an experimental heuristic to improve diffs
     --minimal             Spend extra cycles to find better match
     -S <file>             Use revisions from <file> instead of calling git-rev-list
     --contents <file>     Use <file>'s contents as the final image

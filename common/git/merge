@@ -1,6 +1,7 @@
 usage: git merge [<options>] [<commit>...]
    or: git merge [<options>] <msg> HEAD <commit>
    or: git merge --abort
+   or: git merge --continue
 
     -n                    do not show a diffstat at the end of the merge
     --stat                show a diffstat at the end of the merge
@@ -12,7 +13,7 @@ usage: git merge [<options>] [<commit>...]
     --ff                  allow fast-forward (default)
     --ff-only             abort if fast-forward is not possible
     --rerere-autoupdate   update the index with reused conflict resolution if possible
-    --verify-signatures   Verify that the named commit has a valid GPG signature
+    --verify-signatures   verify that the named commit has a valid GPG signature
     -s, --strategy <strategy>
                           merge strategy to use
     -X, --strategy-option <option=value>
@@ -22,6 +23,7 @@ usage: git merge [<options>] [<commit>...]
     -v, --verbose         be more verbose
     -q, --quiet           be more quiet
     --abort               abort the current in-progress merge
+    --continue            continue the current in-progress merge
     --allow-unrelated-histories
                           allow merging unrelated histories
     --progress            force progress reporting

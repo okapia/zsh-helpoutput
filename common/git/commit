@@ -1,4 +1,4 @@
-usage: git commit [options] [--] <pathspec>...
+usage: git commit [<options>] [--] <pathspec>...
 
     -q, --quiet           suppress summary after successful commit
     -v, --verbose         show diff in commit message template
@@ -22,7 +22,7 @@ Commit message options
     -e, --edit            force edit of commit
     --cleanup <default>   how to strip spaces and #comments from message
     --status              include status in commit message template
-    -S, --gpg-sign[=<key id>]
+    -S, --gpg-sign[=<key-id>]
                           GPG sign commit
 
 Commit contents options
@@ -31,7 +31,7 @@ Commit contents options
     --interactive         interactively add files
     -p, --patch           interactively add changes
     -o, --only            commit only specified files
-    -n, --no-verify       bypass pre-commit hook
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
     --dry-run             show what would be committed
     --short               show status concisely
     --branch              show branch information

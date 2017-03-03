@@ -32,4 +32,5 @@ Specific git-branch actions:
     --column[=<style>]    list branches in columns
     --sort <key>          field name to sort on
     --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
 
