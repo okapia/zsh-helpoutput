@@ -106,7 +106,7 @@ emit -I 1 | getversion
 emit -? | getusage
 
 cmd flex
-version 2.6.1
+version 2.6.3
 emit -V | guess | getversion
 emit -h | getusage
 
@@ -122,7 +122,7 @@ unset LESSOPEN
 emit -? | getusage
 
 cmd lftp
-version 3.7.3
+version 4.7.6
 emit --version | field 4 | getversion
 emit -h | getusage
 
