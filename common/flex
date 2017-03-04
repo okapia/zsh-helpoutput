@@ -49,8 +49,6 @@ Generated code:
        --bison-bridge      scanner for bison pure parser.
        --bison-locations   include yylloc support.
        --stdinit           initialize yyin/yyout to stdin/stdout
-       --noansi-definitions old-style function definitions
-       --noansi-prototypes  empty parameter list in prototypes
        --nounistd          do not include <unistd.h>
        --noFUNCTION        do not generate a particular FUNCTION
 
