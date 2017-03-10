@@ -108,7 +108,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 161212
+version 170220
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
