@@ -1,17 +1,17 @@
 cmd cat
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd chmod
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd chown
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -28,7 +28,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd date
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -40,7 +40,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd du
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -51,7 +51,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd env
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -63,7 +63,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd fmt
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -91,7 +91,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gprof
-version 2.27
+version 2.28
 variant -g GNU -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
@@ -146,7 +146,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ln
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -158,7 +158,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd ls
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -170,25 +170,25 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd md5sum
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd nm
-version 2.27
+version 2.28
 variant -g GNU -- -V
 emit -V | guess | getversion
-emit -h | getusage
+emit -h | nobug | getusage
 
 cmd objdump
-version 2.27
+version 2.28
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
 
 cmd paste
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -200,13 +200,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ranlib
-version 2.27
+version 2.28
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | getusage
 
 cmd readelf
-version 2.27
+version 2.28
 variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage
@@ -218,19 +218,19 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd sort
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd strip
-version 2.27
+version 2.28
 variant -g 'GNU' -- --version
 emit -V | guess | getversion
 emit -h | egrep -v '(supported targets|Report bugs to)' | getusage
 
 cmd stty
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
@@ -242,19 +242,19 @@ emit --version | field -1 | getusage
 emit --help | nobug | getusage
 
 cmd touch
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd unexpand
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd uniq
-version 8.26
+version 8.27
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage

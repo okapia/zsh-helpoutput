@@ -61,7 +61,7 @@ emit -V | field 2 | getversion
 emit -h | getusage
 
 cmd ip
-version 161212
+version 170220
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
