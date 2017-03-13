@@ -1,0 +1,8 @@
+Usage: glocate [-d path | --database=path] [-e | -E | --[non-]existing]
+      [-i | --ignore-case] [-w | --wholename] [-b | --basename] 
+      [--limit=N | -l N] [-S | --statistics] [-0 | --null] [-c | --count]
+      [-P | -H | --nofollow] [-L | --follow] [-m | --mmap] [-s | --stdio]
+      [-A | --all] [-p | --print] [-r | --regex] [--regextype=TYPE]
+      [--max-database-age D] [--version] [--help]
+      pattern...
+
