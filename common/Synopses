@@ -198,7 +198,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd mutt
-version 1.7.1
+version 1.8.0
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -234,7 +234,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.5.5
+version 4.5.6
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
