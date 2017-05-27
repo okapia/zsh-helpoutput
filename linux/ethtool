@@ -1,10 +1,11 @@
-ethtool version 3.5
+ethtool version 4.8
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
 		[ speed %d ]
 		[ duplex half|full ]
 		[ port tp|aui|bnc|mii|fibre ]
+		[ mdix auto|on|off ]
 		[ autoneg on|off ]
 		[ advertise %x ]
 		[ phyad %d ]
@@ -69,18 +70,20 @@ Usage:
         ethtool -t|--test DEVNAME	Execute adapter self test
                [ online | offline | external_lb ]
         ethtool -S|--statistics DEVNAME	Show adapter statistics
+        ethtool --phy-statistics DEVNAME	Show phy statistics
         ethtool -n|-u|--show-nfc|--show-ntuple DEVNAME	Show Rx network flow classification options or rules
 		[ rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 |
 		  rule %d ]
         ethtool -N|-U|--config-nfc|--config-ntuple DEVNAME	Configure Rx network flow classification options or rules
 		rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 m|v|t|s|d|f|n|r... |
-		flow-type ether|ip4|tcp4|udp4|sctp4|ah4|esp4
+		flow-type ether|ip4|tcp4|udp4|sctp4|ah4|esp4|ip6|tcp6|udp6|ah6|esp6|sctp6
 			[ src %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
 			[ dst %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
 			[ proto %d [m %x] ]
-			[ src-ip %d.%d.%d.%d [m %d.%d.%d.%d] ]
-			[ dst-ip %d.%d.%d.%d [m %d.%d.%d.%d] ]
+			[ src-ip IP-ADDRESS [m IP-ADDRESS] ]
+			[ dst-ip IP-ADDRESS [m IP-ADDRESS] ]
 			[ tos %d [m %x] ]
+			[ tclass %d [m %x] ]
 			[ l4proto %d [m %x] ]
 			[ src-port %d [m %x] ]
 			[ dst-port %d [m %x] ]
@@ -88,13 +91,15 @@ Usage:
 			[ vlan-etype %x [m %x] ]
 			[ vlan %x [m %x] ]
 			[ user-def %x [m %x] ]
+			[ dst-mac %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
 			[ action %d ]
 			[ loc %d]] |
 		delete %d
         ethtool -T|--show-time-stamping DEVNAME	Show time stamping capabilities
-        ethtool -x|--show-rxfh-indir DEVNAME	Show Rx flow hash indirection
-        ethtool -X|--set-rxfh-indir DEVNAME	Set Rx flow hash indirection
-		equal N | weight W0 W1 ...
+        ethtool -x|--show-rxfh-indir|--show-rxfh DEVNAME	Show Rx flow hash indirection table and/or RSS hash key
+        ethtool -X|--set-rxfh-indir|--rxfh DEVNAME	Set Rx flow hash indirection table and/or RSS hash key
+		[ equal N | weight W0 W1 ... | default ]
+		[ hkey %x:%x:%x:%x:%x:.... ]
         ethtool -f|--flash DEVNAME	Flash firmware image from the specified file to a region on the device
                FILENAME [ REGION-NUMBER-TO-FLASH ]
         ethtool -P|--show-permaddr DEVNAME	Show permanent hardware address
@@ -111,7 +116,7 @@ Usage:
         ethtool --show-priv-flags DEVNAME	Query private flags
         ethtool --set-priv-flags DEVNAME	Set private flags
 		FLAG on|off ...
-        ethtool -m|--dump-module-eeprom DEVNAME	Qeuery/Decode Module EEPROM information
+        ethtool -m|--dump-module-eeprom|--module-info DEVNAME	Query/Decode Module EEPROM information and optical diagnostics if available
 		[ raw on|off ]
 		[ hex on|off ]
 		[ offset N ]
