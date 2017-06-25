@@ -106,7 +106,7 @@ emit -I 1 | getversion
 emit -? | getusage
 
 cmd flex
-version 2.6.3
+version 2.6.4
 emit -V | guess | getversion
 emit -h | getusage
 
@@ -229,7 +229,7 @@ pack | getversion
 emit | getusage
 
 cmd nmap
-version 7.40
+version 7.50
 emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
@@ -259,7 +259,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ruby
-version 2.4.0p0
+version 2.4.1p111
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -280,30 +280,30 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.17.0
+version 3.19.3
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
 
 cmd ssh
-version 7.4p1
+version 7.5p1
 variant OpenSSH -- -V
 emit -V | field 1 | sed 's/^.*_//' | getversion
 sshver="$_verinst"
 emit -? | getusage
 
 cmd scp
-version 7.4p1
+version 7.5p1
 getversion <<<$sshver
 emit | getusage
 
 cmd sftp
-version 7.4p1
+version 7.5p1
 getversion <<<$sshver
 emit | getusage
 
 cmd ssh-add
-version 7.4p1
+version 7.5p1
 getversion <<<$sshver
 emit -? | getusage
 
@@ -441,6 +441,7 @@ cmd xz
 version 5.2.3
 emit -V | field -1 | getversion
 emit -h | getusage
+emit --long-help | getusage long
 
 cmd yafc
 version 1.3.7
@@ -528,13 +529,13 @@ emit -h | getusage
 
 # elfutils
 cmd readelf
-version 0.168
+version 0.169
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.168
+version 0.169
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage

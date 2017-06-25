@@ -22,7 +22,7 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd cmp
-version 3.5
+version 3.6
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
@@ -34,7 +34,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd diff
-version 3.5
+version 3.6
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
@@ -120,12 +120,12 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd install-info
-version 6.3
+version 6.4
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd makeinfo
-version 6.3
+version 6.4
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -135,7 +135,7 @@ emit --version | field -2 | sed 's/)$//' | getversion
 emit --help | nobug | getusage
 
 cmd texindex
-version 6.3
+version 6.4
 emit --version | field -1 | getversion
 emit -h | getusage
 
