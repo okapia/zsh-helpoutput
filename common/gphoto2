@@ -60,7 +60,6 @@ Capture an image from or on the camera
       --capture-movie[=COUNT or SECONDS]                                          Capture a movie
       --capture-sound                                                             Capture an audio clip
       --capture-tethered[=COUNT, SECONDS, MILLISECONDS or MATCHSTRING]            Wait for shutter release on the camera and download
-      --trigger-capture                                                           Trigger image capture
 
 Downloading, uploading and manipulating files
   -l, --list-folders                                                              List folders in folder
