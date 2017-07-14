@@ -148,7 +148,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.12.0
+version 2.13.2
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
