@@ -9,6 +9,7 @@ Options:
  -b, --bytes          print SIZE in bytes rather than in human readable format
  -d, --nodeps         don't print slaves or holders
  -D, --discard        print discard capabilities
+ -z, --zoned          print zone model
  -e, --exclude <list> exclude devices by major number (default: RAM disks)
  -f, --fs             output info about filesystems
  -i, --ascii          use ascii characters only
@@ -75,5 +76,6 @@ Available columns (for --output):
   SUBSYSTEMS  de-duplicated chain of subsystems
          REV  device revision
       VENDOR  device vendor
+       ZONED  zone model
 
 For more details see lsblk(8).
