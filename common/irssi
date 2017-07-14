@@ -1,5 +1,5 @@
 Usage:
-  irssi [OPTION?] 
+  irssi [OPTION...] 
 
 Help Options:
   -?, --help                  Show help options
@@ -13,6 +13,5 @@ Application Options:
   -!, --noconnect             Disable autoconnecting
   -n, --nick                  Specify nick to use
   -h, --hostname              Specify host name to use
-  -d, --dummy                 Use the dummy terminal mode
   -v, --version               Display irssi version
 
