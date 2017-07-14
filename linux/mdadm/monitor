@@ -6,8 +6,8 @@ If any devices are listed then those devices are monitored, otherwise
 all devices listed in the config file are monitored.
 The address for mailing advisories to, and the program to handle
 each change can be specified in the config file or on the command line.
-If no mail address or program are specified, then mdadm reports all
-state changes to stdout.
+There must be at least one destination for advisories, whether
+an email address, a program, or --syslog
 
 Options that are valid with the monitor (-F --follow) mode are:
   --mail=       -m   : Address to mail alerts of failure to
