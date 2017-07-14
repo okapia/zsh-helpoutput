@@ -1,8 +1,8 @@
-usage: git check-attr [-a | --all | attr...] [--] pathname...
-   or: git check-attr --stdin [-z] [-a | --all | attr...] < <list-of-paths>
+usage: git check-attr [-a | --all | <attr>...] [--] <pathname>...
+   or: git check-attr --stdin [-z] [-a | --all | <attr>...]
 
     -a, --all             report all attributes set on file
     --cached              use .gitattributes only from the index
     --stdin               read file names from stdin
-    -z                    input paths are terminated by a null character
+    -z                    terminate input and output records by a NUL character
 

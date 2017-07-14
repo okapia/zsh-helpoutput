@@ -1,7 +1,7 @@
 usage: git for-each-ref [<options>] [<pattern>]
    or: git for-each-ref [--points-at <object>]
-   or: git for-each-ref [(--merged | --no-merged) [<object>]]
-   or: git for-each-ref [--contains [<object>]]
+   or: git for-each-ref [(--merged | --no-merged) [<commit>]]
+   or: git for-each-ref [--contains [<commit>]] [--no-contains [<commit>]]
 
     -s, --shell           quote placeholders suitably for shells
     -p, --perl            quote placeholders suitably for perl
@@ -15,5 +15,7 @@ usage: git for-each-ref [<options>] [<pattern>]
     --merged <commit>     print only refs that are merged
     --no-merged <commit>  print only refs that are not merged
     --contains <commit>   print only refs which contain the commit
+    --no-contains <commit>
+                          print only refs which don't contain the commit
     --ignore-case         sorting and filtering are case insensitive
 

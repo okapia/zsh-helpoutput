@@ -9,8 +9,8 @@ usage: git clone [<options>] [--] <repo> [<dir>]
     -l, --local           to clone from a local repository
     --no-hardlinks        don't use local hardlinks, always copy
     -s, --shared          setup as shared repository
-    --recursive           initialize submodules in the clone
-    --recurse-submodules  initialize submodules in the clone
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
     -j, --jobs <n>        number of submodules cloned in parallel
     --template <template-directory>
                           directory from which templates will be used

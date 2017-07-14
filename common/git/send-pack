@@ -14,6 +14,8 @@ usage: git send-pack [--all | --mirror] [--dry-run] [--force] [--receive-pack=<g
     -f, --force           force updates
     --signed[=<yes|no|if-asked>]
                           GPG sign the push
+    --push-option <server-specific>
+                          option to transmit
     --progress            force progress reporting
     --thin                use thin pack
     --atomic              request atomic transaction on remote side

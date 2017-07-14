@@ -1,4 +1,4 @@
-usage: git read-tree [[-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>] [-u [--exclude-per-directory=<gitignore>] | -i]] [--no-sparse-checkout] [--index-output=<file>] (--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])
+usage: git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>) [-u [--exclude-per-directory=<gitignore>] | -i]] [--no-sparse-checkout] [--index-output=<file>] (--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])
 
     --index-output <file>
                           write resulting index to <file>
@@ -19,4 +19,6 @@ Merging
     -n, --dry-run         don't update the index or the work tree
     --no-sparse-checkout  skip applying sparse checkout filter
     --debug-unpack        debug unpack-trees
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
 
