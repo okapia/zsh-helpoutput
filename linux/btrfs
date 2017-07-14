@@ -210,6 +210,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -f|--force        force overwrite existing filesystem on the disk
 
     btrfs device delete <device>|<devid> [<device>|<devid>...] <path>
+
     btrfs device remove <device>|<devid> [<device>|<devid>...] <path>
         Remove a device from a filesystem
 
@@ -221,10 +222,14 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs device ready <device>
         Check device to see if it has all of its devices in cache for mounting
 
-    btrfs device stats [-z] <path>|<device>
-        Show current device IO stats.
+    btrfs device stats [options] <path>|<device>
+        Show device IO error statistics
 
-        -z                     show current stats and reset values to zero
+        Show device IO error statistics for all devices of the given filesystem
+        identified by PATH or DEVICE. The filesystem must be mounted.
+
+        -c|--check             return non-zero if any stat counter is not zero
+        -z|--reset             show current stats and reset values to zero
 
     btrfs device usage [options] <path> [<path>..]
         Show detailed information about internal allocations in devices.
@@ -287,19 +292,20 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         --readonly                  run in read-only mode (default)
         --init-csum-tree            create a new CRC tree
         --init-extent-tree          create a new extent tree
-        --mode <MODE>               select mode, allows to make some memory/IO
-                                    trade-offs, where MODE is one of:
+        --mode <MODE>               allows choice of memory/IO trade-offs
+                                    where MODE is one of:
                                     original - read inodes and extents to memory (requires
                                                more memory, does less IO)
                                     lowmem   - try to use less memory but read blocks again
                                                when needed
         --check-data-csum           verify checksums of data blocks
-        -Q|--qgroup-report           print a report on qgroup consistency
+        -Q|--qgroup-report          print a report on qgroup consistency
         -E|--subvol-extents <subvolid>
                                     print subvolume extents and sharing state
         -r|--tree-root <bytenr>     use the given bytenr for the tree root
         --chunk-root <bytenr>       use the given bytenr for the chunk tree root
         -p|--progress               indicate progress
+        --clear-space-cache v1|v2   clear space cache for v1 or v2
 
     btrfs rescue chunk-recover [options] <device>
         Recover the chunk tree by scanning the devices one by one.
@@ -322,9 +328,9 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         Try to restore files from a damaged filesystem (unmounted)
 
         -s|--snapshots       get snapshots
-        -x|--xattr           get extended attributes
+        -x|--xattr           restore extended attributes
         -m|--metadata        restore owner, mode and times
-        -S|--symlinks	      restore symbolic links
+        -S|--symlink         restore symbolic links
         -v|--verbose         verbose
         -i|--ignore-errors   ignore errors
         -o|--overwrite       overwrite
@@ -460,35 +466,34 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
                          this option increases verbosity
         -q|--quiet       suppress all messages, except errors
 
-    btrfs receive [-ve] [-f <infile>] [--max-errors <N>] <mount>
-        Receive subvolumes from stdin.
+    btrfs receive [options] <mount>
+btrfs receive --dump [options]
+        Receive subvolumes from a stream
 
         Receives one or more subvolumes that were previously
         sent with btrfs send. The received subvolumes are stored
-        into <mount>.
-        btrfs receive will fail in case a receiving subvolume
+        into MOUNT.
+        The receive will fail in case the receiving subvolume
         already exists. It will also fail in case a previously
-        received subvolume was changed after it was received.
+        received subvolume has been changed after it was received.
         After receiving a subvolume, it is immediately set to
-        read only.
+        read-only.
 
-        -v               Enable verbose debug output. Each
-                         occurrence of this option increases the
-                         verbose level more.
-        -f <infile>      By default, btrfs receive uses stdin
-                         to receive the subvolumes. Use this
-                         option to specify a file to use instead.
-        -e               Terminate after receiving an <end cmd>
-                         in the data stream. Without this option,
-                         the receiver terminates only if an error
-                         is recognized or on EOF.
+        -v               increase verbosity about performed actions
+        -f FILE          read the stream from FILE instead of stdin
+        -e               terminate after receiving an <end cmd> marker in the stream.
+                         Without this option the receiver side terminates only in case
+                         of an error on end of file.
         -C|--chroot      confine the process to <mount> using chroot
-        --max-errors <N> Terminate as soon as N errors happened while
-                         processing commands from the send stream.
+        -E|--max-errors NERR
+                         terminate as soon as NERR errors occur while
+                         stream processing commands from the stream.
                          Default value is 1. A value of 0 means no limit.
-        -m <mountpoint>  The root mount point of the destination fs.
-                         If you do not have /proc use this to tell us where 
+        -m ROOTMOUNT     the root mount point of the destination filesystem.
+                         If /proc is not accessible, use this to tell us where
                          this file system is mounted.
+        --dump           dump stream metadata, one line per operation,
+                         does not require the MOUNT parameter
 
     btrfs quota enable <path>
         Enable subvolume quota support for a filesystem.
@@ -521,7 +526,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs qgroup destroy <qgroupid> <path>
         Destroy a quota group.
 
-    btrfs qgroup show -pcreFf [--sort=qgroupid,rfer,excl,max_rfer,max_excl] <path>
+    btrfs qgroup show [options] <path>
         Show subvolume quota groups.
 
         -p             print parent qgroup id
@@ -544,6 +549,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
                        list qgroups sorted by specified items
                        you can use '+' or '-' in front of each item.
                        (+:ascending, -:descending, ascending default)
+        --sync         force sync of the filesystem before getting info
 
     btrfs qgroup limit [options] <size>|none [<qgroupid>] <path>
         Set the limits a subvolume quota group.
