@@ -3,6 +3,7 @@ usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
    or: git branch [<options>] [-r] (-d | -D) <branch-name>...
    or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
    or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
 
 Generic options
     -v, --verbose         show hash and subject, give twice for upstream branch
@@ -15,6 +16,8 @@ Generic options
     --color[=<when>]      use colored output
     -r, --remotes         act on remote-tracking branches
     --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
     --abbrev[=<n>]        use <n> digits to display SHA-1s
 
 Specific git-branch actions:
@@ -33,4 +36,5 @@ Specific git-branch actions:
     --sort <key>          field name to sort on
     --points-at <object>  print only branches of the object
     -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
 

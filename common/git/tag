@@ -1,6 +1,6 @@
 usage: git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] <tagname> [<head>]
    or: git tag -d <tagname>...
-   or: git tag -l [-n[<num>]] [--contains <commit>] [--points-at <object>]
+   or: git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--points-at <object>]
 		[--format=<format>] [--[no-]merged [<commit>]] [<pattern>...]
    or: git tag -v [--format=<format>] <tagname>...
 
@@ -24,6 +24,8 @@ Tag creation options
 Tag listing options
     --column[=<style>]    show tag list in columns
     --contains <commit>   print only tags that contain the commit
+    --no-contains <commit>
+                          print only tags that don't contain the commit
     --merged <commit>     print only tags that are merged
     --no-merged <commit>  print only tags that are not merged
     --sort <key>          field name to sort on

@@ -29,6 +29,7 @@ Available options are
     --committer-date-is-author-date
                           passed to 'git am'
     --ignore-date         passed to 'git am'
+    --signoff             passed to 'git am'
     --whitespace ...      passed to 'git apply'
     --ignore-whitespace   passed to 'git apply'
     -C ...                passed to 'git apply'
