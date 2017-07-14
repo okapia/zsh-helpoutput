@@ -9,4 +9,5 @@ Options are:
      --dump-bin FILE    Dump the DMI data to a binary file
      --from-dump FILE   Read the DMI data from a binary file
      --no-sysfs         Do not attempt to read DMI data from sysfs files
+     --oem-string N     Only display the value of the given OEM string
  -V, --version          Display the version and exit
