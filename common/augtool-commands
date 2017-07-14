@@ -1,13 +1,19 @@
 
 Admin commands:
-  help       - print help
+  context    - change how relative paths are interpreted
   load       - (re)load files under /files
-  quit       - exit the program
-  retrieve   - transform tree into text
   save       - save all pending changes
-  store      - parse text into tree
   transform  - add a file transform
   load-file  - load a specific file
+  retrieve   - transform tree into text
+  store      - parse text into tree
+  quit       - exit the program
+
+Informational commands:
+  errors     - show all errors encountered in processing files
+  info       - print runtime information
+  help       - print help
+  source     - print the file to which a node belongs
 
 Read commands:
   dump-xml   - print a subtree as XML
@@ -16,7 +22,6 @@ Read commands:
   ls         - list children of a node
   match      - print matches for a path expression
   print      - print a subtree
-  errors     - show all errors encountered in processing files
   span       - print position in input file corresponding to tree
 
 Write commands:
