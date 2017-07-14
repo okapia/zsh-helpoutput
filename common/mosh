@@ -1,4 +1,4 @@
-Usage: /usr/bin/mosh [options] [--] [user@]host [command...]
+Usage: /usr/local/bin/mosh [options] [--] [user@]host [command...]
         --client=PATH        mosh client on local machine
                                 (default: "mosh-client")
         --server=COMMAND     mosh server on remote machine
@@ -17,12 +17,15 @@ Usage: /usr/bin/mosh [options] [--] [user@]host [command...]
         --family=prefer-inet6 use all network types, but try IPv6 first
 -p PORT[:PORT2]
         --port=PORT[:PORT2]  server-side UDP port or range
+                                (No effect on server-side SSH port)
         --bind-server={ssh|any|IP}  ask the server to reply from an IP address
                                        (default: "ssh")
 
         --ssh=COMMAND        ssh command to run when setting up session
                                 (example: "ssh -p 2222")
                                 (default: "ssh")
+
+        --no-ssh-pty         do not allocate a pseudo tty on ssh connection
 
         --no-init            do not send terminal initialization string
 
@@ -36,4 +39,4 @@ Usage: /usr/bin/mosh [options] [--] [user@]host [command...]
         --version            version and copyright information
 
 Please report bugs to mosh-devel@mit.edu.
-Mosh home page: http://mosh.mit.edu
+Mosh home page: https://mosh.org
