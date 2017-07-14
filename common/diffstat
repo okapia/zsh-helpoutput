@@ -11,6 +11,7 @@ Options:
   -d      debug - prints a lot of information
   -D PATH specify location of patched files, use for unchanged-count
   -e FILE redirect standard error to FILE
+  -E      trim escape-sequences, e.g., from colordiff
   -f NUM  format (0=concise, 1=normal, 2=filled, 4=values)
   -h      print this message
   -k      do not merge filenames
@@ -27,6 +28,7 @@ Options:
   -s      show only the summary line
   -S PATH specify location of original files, use for unchanged-count
   -t      print a table (comma-separated-values) rather than histogram
+  -T      print amounts (like -t option) in addition to histogram
   -u      do not sort the input list
   -v      show progress if output is redirected to a file
   -V      prints the version number
