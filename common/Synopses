@@ -20,7 +20,7 @@ emit | tr -d , | field 2 | getversion
 emit --help | getusage
 
 cmd augtool
-version 1.7.0
+version 1.8.0
 emit --version | field 2 | getversion
 emit --help | getusage
 emit help | getusage commands
@@ -36,17 +36,17 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.11.10
+version 1.11.14
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.11.10
+version 1.11.14
 pack | getversion
 emit -h | getusage
 
 cmd dmidecode
-version 3.0
+version 3.1
 emit -V | getversion
 emit -h | getusage
 
@@ -56,12 +56,12 @@ emit -V | tr '/' ' ' | field 2 | getversion
 emit --help | getusage
 
 cmd diffstat
-version 1.57
+version 1.61
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dig
-version 9.10.4-P2
+version 9.11.1-P2
 emit -v | field 2 | sed 's/-RedHat.*//' | getversion
 emit -h | getusage
 
@@ -116,7 +116,7 @@ emit -v | field 2 | cut -d \( -f 1 | getversion
 emit -h | getusage
 
 cmd less
-version 481
+version 487
 emit -V | field 2 | getversion
 unset LESSOPEN
 emit -? | getusage
@@ -160,19 +160,19 @@ emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
 
 cmd gphoto2
-version 2.5.11
+version 2.5.14
 emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.50.3
+version 2.52.3
 subdir
 emit --version | getversion
 emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 0.8.20
+version 1.0.2
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -193,12 +193,12 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd mosh
-version 1.2.6
+version 1.3.0
 emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd mutt
-version 1.8.0
+version 1.8.3
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -308,7 +308,7 @@ getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-keygen
-version 7.4p1
+version 7.5p1
 getversion <<<$sshver
 emit -? | getusage
 
@@ -402,7 +402,7 @@ emit --version | field 3 | sed 's/\,$//' | getversion
 emit --help | getusage
 
 cmd valgrind
-version 3.12.0
+version 3.13.0
 emit --version | cut -d- -f2 | getversion
 emit --help | getusage
 

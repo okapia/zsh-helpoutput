@@ -29,7 +29,7 @@ emit -h | tr -d v | field 3 | getversion
 emit -h | getusage
 
 cmd xclip
-version 0.12
+version 0.13
 emit -version | field -1 | getversion
 emit -h | getusage
 
