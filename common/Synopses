@@ -122,7 +122,7 @@ unset LESSOPEN
 emit -? | getusage
 
 cmd lftp
-version 4.7.7
+version 4.8.0
 emit --version | field 4 | getversion
 emit -h | getusage
 
@@ -333,7 +333,7 @@ pack | getversion
 emit | getusage
 
 cmd svn
-version 1.9.5
+version 1.9.6
 subdir
 emit --version --quiet | getversion
 emit help | getusage
@@ -379,7 +379,7 @@ emit -? | getusage
 emit list-commands | getusage commands
 
 cmd unrar
-version 5.40
+version 5.50
 emit | line 2 | field 2 | getversion
 emit | getusage
 
