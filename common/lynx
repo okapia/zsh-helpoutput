@@ -40,6 +40,7 @@ Options are:
                     with -dump, format output as with -traversal, but to stdout
   -curses_pads      uses curses pad feature to support left/right shifting (on)
   -debug_partial    incremental display stages with MessageSecs delay (off)
+  -default_colors   use terminal default foreground/background colors (on)
   -delay=NNN        set NNN-second delay at statusline message (0.000)
   -display=DISPLAY  set the display variable for X exec'ed programs
   -display_charset=MIMEname
@@ -76,6 +77,7 @@ Options are:
                     MAPs are present (off)
   -justify          do justification of text (off)
   -link=NUMBER      starting count for lnk#.dat files produced by -crawl (0)
+  -list_inline      with -dump, forces it to show links inline with text (off)
   -listonly         with -dump, forces it to show only the list of links (off)
   -localhost        disable URLs that point to remote hosts (off)
   -lss=FILENAME     specifies a lynx.lss file other than the default
