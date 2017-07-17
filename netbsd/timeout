@@ -1,0 +1,1 @@
+Usage: timeout [--signal sig | -s sig] [--preserve-status] [--kill-after time | -k time] [--foreground] <duration> <command> <arg ...>

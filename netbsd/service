@@ -1,0 +1,8 @@
+Illegal option -?
+usage: service [-elv]
+       service [-ev] rc_script_name [rc_script_name2 [...]]
+       service [-v] rc_script_name action
+       -e: List enabled scripts; check if given scripts are enabled
+       -l: List all scripts in rcorder
+       -v: Verbose (mention in which directory script is found)
+rc_directories is currently set to 

@@ -1,0 +1,2 @@
+split: unknown option -- ?
+usage: split [-b byte_count] [-l line_count] [-n chunk_count] [-a suffix_length] [file [prefix]]
