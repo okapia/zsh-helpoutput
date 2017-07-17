@@ -1,2 +1,2 @@
 od: unknown option -- ?
-Usage: od [-aBbcDdeFfHhIiLlOovXx] [-A base] [-j skip] [-N length] [-t type_string] [[+]offset[.][Bb]] [file ...]
+usage: od [-aBbcDdeFfHhIiLlOovXx] [-A base] [-j skip] [-N length] [-t type_string] [[+]offset[.][Bb]] [file ...]

@@ -1,2 +1,2 @@
 uniq: unknown option -- ?
-Usage: uniq [-cdu] [-f fields] [-s chars] [input [output]]
+usage: uniq [-cdu] [-f fields] [-s chars] [input_file [output_file]]
