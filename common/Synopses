@@ -172,7 +172,7 @@ emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.0.2
+version 1.0.4
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -193,7 +193,7 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd mosh
-version 1.3.0
+version 1.3.2
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -340,7 +340,7 @@ emit help | getusage
 subcmds help @
 
 cmd svnadmin
-version 1.9.5
+version 1.9.6
 subdir
 emit --version | field 3 | getversion
 emit help | getusage
