@@ -15,12 +15,20 @@ Usage:  certtool [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
        --generate-crl         Generate a CRL
    -u, --update-certificate   Update a signed certificate
    -p, --generate-privkey     Generate a private key
+       --provable             Generate a private key or parameters from a seed using a provable method
+       --verify-provable-privkey  Verify a private key generated from a seed using a provable method
+       --seed=str             When generating a private key use the given hex-encoded seed
    -q, --generate-request     Generate a PKCS #10 certificate request
 				- prohibits the option 'infile'
    -e, --verify-chain         Verify a PEM encoded certificate chain
        --verify               Verify a PEM encoded certificate chain using a trusted list
        --verify-crl           Verify a CRL using a trusted list
 				- requires the option 'load-ca-certificate'
+       --verify-hostname=str  Specify a hostname to be used for certificate chain verification
+       --verify-email=str     Specify a email to be used for certificate chain verification
+				- prohibits the option 'verify-hostname'
+       --verify-purpose=str   Specify a purpose OID to be used for certificate chain verification
+       --verify-allow-broken  Allow broken algorithms, such as MD5 for verification
        --generate-dh-params   Generate PKCS #3 encoded Diffie-Hellman parameters
        --get-dh-params        Get the included PKCS #3 encoded Diffie-Hellman parameters
        --dh-info              Print information PKCS #3 encoded Diffie-Hellman parameters
@@ -30,12 +38,16 @@ Usage:  certtool [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
        --load-certificate=str Loads a certificate file
        --load-ca-privkey=str  Loads the certificate authority's private key file
        --load-ca-certificate=str Loads the certificate authority's certificate file
+       --load-crl=str         Loads the provided CRL
+       --load-data=str        Loads auxiliary data
        --password=str         Password to use
        --null-password        Enforce a NULL password
        --empty-password       Enforce an empty password
        --hex-numbers          Print big number in an easier format to parse
        --cprint               In certain operations it prints the information in C-friendly format
    -i, --certificate-info     Print information on the given certificate
+       --fingerprint          Print the fingerprint of the given certificate
+       --key-id               Print the key ID of the given certificate
        --certificate-pubkey   Print certificate's public key
        --pgp-certificate-info  Print information on the given OpenPGP certificate
        --pgp-ring-info        Print information on the given OpenPGP keyring structure
@@ -44,14 +56,25 @@ Usage:  certtool [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
        --no-crq-extensions    Do not use extensions in certificate requests
        --p12-info             Print information on a PKCS #12 structure
        --p12-name=str         The PKCS #12 friendly name to use
+       --p7-generate          Generate a PKCS #7 structure
+       --p7-sign              Signs using a PKCS #7 structure
+       --p7-detached-sign     Signs using a detached PKCS #7 structure
+       --p7-include-cert      The signer's certificate will be included in the cert list.
+				- disabled as '--no-p7-include-cert'
+				- enabled by default
+       --p7-time              Will include a timestamp in the PKCS #7 structure
+				- disabled as '--no-p7-time'
+       --p7-show-data         Will show the embedded data in the PKCS #7 structure
+				- disabled as '--no-p7-show-data'
        --p7-info              Print information on a PKCS #7 structure
+       --p7-verify            Verify the provided PKCS #7 structure
+       --p8-info              Print information on a PKCS #8 structure
        --smime-to-p7          Convert S/MIME to PKCS #7 structure
    -k, --key-info             Print information on a private key
        --pgp-key-info         Print information on an OpenPGP private key
        --pubkey-info          Print information on a public key
        --v1                   Generate an X.509 version 1 certificate (with no extensions)
        --to-p12               Generate a PKCS #12 structure
-				- requires the option 'load-certificate'
        --to-p8                Generate a PKCS #8 structure
    -8, --pkcs8                Use PKCS #8 format for private keys
        --rsa                  Generate RSA key

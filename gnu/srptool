@@ -1,13 +1,13 @@
 srptool - GnuTLS SRP tool
 Usage:  srptool [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
 
-   -d, --debug=num            Enable debugging.
+   -d, --debug=num            Enable debugging
 				- it must be in the range:
 				  0 to 9999
-   -i, --index=num            specify the index of the group parameters in tpasswd.conf to use.
+   -i, --index=num            specify the index of the group parameters in tpasswd.conf to use
    -u, --username=str         specify a username
-   -p, --passwd=str           specify a password file.
-   -s, --salt=num             specify salt size.
+   -p, --passwd=str           specify a password file
+   -s, --salt=num             specify salt size
        --verify               just verify the password.
    -v, --passwd-conf=str      specify a password conf file.
        --create-conf=str      Generate a password configuration file.
