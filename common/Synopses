@@ -280,7 +280,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.19.3
+version 3.20.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -357,7 +357,7 @@ emit -VERS | field -1 | getversion
 emit -H | getusage
 
 cmd tcpdump
-version 4.9.0
+version 4.9.1
 variant ! 'Apple' -- --version
 emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage

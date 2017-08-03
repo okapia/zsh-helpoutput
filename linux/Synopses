@@ -19,7 +19,7 @@ emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
 cmd chsh
-version 2.30
+version 2.30.1
 variant util-linux -- -v
 emit -v | field -1 | getversion
 emit -u | getusage
@@ -71,12 +71,12 @@ emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
 cmd look
-version 2.30
+version 2.30.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd lsblk
-version 2.30
+version 2.30.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -113,7 +113,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.17
+version 4.18
 emit -V | field 4 | getversion
 emit -h | getusage
 
@@ -143,7 +143,7 @@ emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd script
-version 2.30
+version 2.30.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
