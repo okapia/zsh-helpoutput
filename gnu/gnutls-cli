@@ -14,26 +14,30 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
 				- disabled as '--no-dane'
        --local-dns            Use the local DNS server for DNSSEC resolving
 				- disabled as '--no-local-dns'
-       --ca-verification      Disable CA certificate verification
+       --ca-verification      Enable CA certificate verification
 				- disabled as '--no-ca-verification'
 				- enabled by default
        --ocsp                 Enable OCSP certificate verification
 				- disabled as '--no-ocsp'
    -r, --resume               Establish a session and resume
    -e, --rehandshake          Establish a session and rehandshake
+       --sni-hostname=str     Server's hostname for server name indication extension
    -s, --starttls             Connect, establish a plain session and start TLS
        --app-proto=str        an alias for the 'starttls-proto' option
        --starttls-proto=str   The application protocol to be used to obtain the server's certificate
-(https, ftp, smtp, imap)
+(https, ftp, smtp, imap, ldap, xmpp, lmtp, pop3, nntp, sieve, postgres)
 				- prohibits the option 'starttls'
    -u, --udp                  Use DTLS (datagram TLS) over UDP
        --mtu=num              Set MTU for datagram TLS
 				- it must be in the range:
 				  0 to 17000
        --crlf                 Send CR LF instead of LF
+       --fastopen             Enable TCP Fast Open
        --x509fmtder           Use DER format for certificates to read from
    -f, --fingerprint          Send the openpgp fingerprint, instead of the key
        --print-cert           Print peer's certificate in PEM format
+       --save-cert=str        Save the peer's certificate chain in the specified file in PEM format
+       --save-ocsp=str        Save the peer's OCSP status response in the provided file
        --dh-bits=num          The minimum number of bits allowed for DH
        --priority=str         Priorities string
        --x509cafile=str       Certificate file or PKCS #11 URL to use
@@ -44,9 +48,11 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
        --pgpkeyring=file      PGP Key ring file to use
 				- file must pre-exist
        --pgpcertfile=file     PGP Public Key (certificate) file to use
+				- requires the option 'pgpkeyfile'
 				- file must pre-exist
        --x509keyfile=str      X.509 key file or PKCS #11 URL to use
        --x509certfile=str     X.509 Certificate file or PKCS #11 URL to use
+				- requires the option 'x509keyfile'
        --pgpsubkey=str        PGP subkey to use (hex or auto)
        --srpusername=str      SRP username to use
        --srppasswd=str        SRP password to use
@@ -60,6 +66,7 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
        --benchmark-tls-ciphers  Benchmark TLS ciphers
    -l, --list                 Print a list of the supported algorithms and modes
 				- prohibits the option 'port'
+       --priority-list        Print a list of the supported priority strings
        --noticket             Don't allow session tickets
        --srtp-profiles=str    Offer SRTP profiles
        --alpn=str             Application layer protocol
