@@ -29,6 +29,7 @@ usage: git clone [<options>] [--] <repo> [<dir>]
     --shallow-exclude <revision>
                           deepen history of shallow clone, excluding rev
     --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
     --shallow-submodules  any cloned submodules will be shallow
     --separate-git-dir <gitdir>
                           separate git dir from working tree

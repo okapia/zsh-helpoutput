@@ -18,6 +18,7 @@ usage: git repack [<options>]
     --window-memory <bytes>
                           same as the above, but limit memory size instead of entries count
     --depth <n>           limits the maximum delta depth
+    --threads <n>         limits the maximum number of threads
     --max-pack-size <bytes>
                           maximum size of each packfile
     --pack-kept-objects   repack objects in packs marked with .keep

@@ -3,6 +3,7 @@ usage: git status [<options>] [--] <pathspec>...
     -v, --verbose         be verbose
     -s, --short           show status concisely
     -b, --branch          show branch information
+    --show-stash          show stash information
     --porcelain[=<version>]
                           machine-readable output
     --long                show status in long format (default)
