@@ -148,7 +148,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.13.2
+version 2.14.0
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -229,7 +229,7 @@ pack | getversion
 emit | getusage
 
 cmd nmap
-version 7.50
+version 7.60
 emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
@@ -529,13 +529,13 @@ emit -h | getusage
 
 # elfutils
 cmd readelf
-version 0.169
+version 0.170
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.169
+version 0.170
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
