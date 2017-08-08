@@ -3,6 +3,11 @@ version 4.14
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd alpine
+version 2.20
+emit -v | field 2 | getversion
+emit -h | getusage
+
 cmd ant
 version 1.9.2
 emit -version | field 4 | getversion
@@ -227,6 +232,11 @@ cmd postqueue
 version 2.10.1
 pack | getversion
 emit | getusage
+
+cmd ngrep
+version 1.47-git
+emit -V | tr -d 'V,' | field 2 | getversion
+emit -h | getusage
 
 cmd nmap
 version 7.60
