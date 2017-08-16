@@ -20,9 +20,13 @@ where options include:
                   enable verbose output
     -version      print product version and exit
     -version:<value>
+                  Warning: this feature is deprecated and will be removed
+                  in a future release.
                   require the specified version to run
     -showversion  print product version and continue
     -jre-restrict-search | -no-jre-restrict-search
+                  Warning: this feature is deprecated and will be removed
+                  in a future release.
                   include/exclude user private JREs in the version search
     -? -help      print this help message
     -X            print help on non-standard options
