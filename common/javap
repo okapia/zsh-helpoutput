@@ -13,6 +13,7 @@ where possible options include:
   -s                       Print internal type signatures
   -sysinfo                 Show system info (path, size, date, MD5 hash)
                            of class being processed
-  -constants               Show static final constants
+  -constants               Show final constants
   -classpath <path>        Specify where to find user class files
+  -cp <path>               Specify where to find user class files
   -bootclasspath <path>    Override location of bootstrap class files

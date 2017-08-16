@@ -9,6 +9,7 @@ where [options] include:
   -jni                     Generate JNI-style header file (default)
   -force                   Always write output files
   -classpath <path>        Path from which to load classes
+  -cp <path>               Path from which to load classes
   -bootclasspath <path>    Path from which to load bootstrap classes
 <classes> are specified with their fully qualified names
 (for example, java.lang.Object).

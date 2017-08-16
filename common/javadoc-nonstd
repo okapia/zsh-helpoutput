@@ -1,4 +1,12 @@
--Xmaxerrs <number>        Set the maximum number of errors to print
--Xmaxwarns <number>       Set the maximum number of warnings to print
+  -Xmaxerrs <number>               Set the maximum number of errors to print
+  -Xmaxwarns <number>              Set the maximum number of warnings to print
+
+Provided by standard doclet:
+  -Xdocrootparent <url>            Replaces all appearances of @docRoot followed
+                                   by /.. in doc comments with <url>
+  -Xdoclint                        Enable recommended checks for problems in javadoc comments
+  -Xdoclint:(all|none|[-]<group>) 
+        Enable or disable specific checks for problems in javadoc comments,
+        where <group> is one of accessibility, html, missing, reference, or syntax.
 
 These options are non-standard and subject to change without notice.

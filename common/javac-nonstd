@@ -1,5 +1,10 @@
   -Xlint                     Enable recommended warnings
-  -Xlint:{all,cast,classfile,deprecation,dep-ann,divzero,empty,fallthrough,finally,options,overrides,path,processing,rawtypes,serial,static,try,unchecked,varargs,-cast,-classfile,-deprecation,-dep-ann,-divzero,-empty,-fallthrough,-finally,-options,-overrides,-path,-processing,-rawtypes,-serial,-static,-try,-unchecked,-varargs,none} Enable or disable specific warnings
+  -Xlint:{all,auxiliaryclass,cast,classfile,deprecation,dep-ann,divzero,empty,fallthrough,finally,options,overloads,overrides,path,processing,rawtypes,serial,static,try,unchecked,varargs,-auxiliaryclass,-cast,-classfile,-deprecation,-dep-ann,-divzero,-empty,-fallthrough,-finally,-options,-overloads,-overrides,-path,-processing,-rawtypes,-serial,-static,-try,-unchecked,-varargs,none} Enable or disable specific warnings
+  -Xdoclint                  Enable recommended checks for problems in javadoc comments
+  -Xdoclint:(all|none|[-]<group>)[/<access>] 
+        Enable or disable specific checks for problems in javadoc comments,
+        where <group> is one of accessibility, html, missing, reference, or syntax,
+        and <access> is one of public, protected, package, or private.
   -Xbootclasspath/p:<path>   Prepend to the bootstrap class path
   -Xbootclasspath/a:<path>   Append to the bootstrap class path
   -Xbootclasspath:<path>     Override location of bootstrap class files
@@ -13,5 +18,7 @@
   -XprintProcessorInfo       Print information about which annotations a processor is asked to process
   -Xprefer:{source,newer}    Specify which file to read when both a source file and class file are found for an implicitly compiled class
   -Xpkginfo:{always,legacy,nonempty} Specify handling of package-info files
+  -Xplugin:"name args"       Name and optional arguments for a plug-in to be run
+  -Xdiags:{compact,verbose}  Select a diagnostic mode
 
 These options are non-standard and subject to change without notice.

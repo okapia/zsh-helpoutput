@@ -10,6 +10,7 @@ Commands:
  -genseckey          Generates a secret key
  -gencert            Generates certificate from a certificate request
  -importcert         Imports a certificate or a certificate chain
+ -importpass         Imports a password
  -importkeystore     Imports one or all entries from another keystore
  -keypasswd          Changes the key password of an entry
  -list               Lists entries in a keystore

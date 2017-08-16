@@ -1,4 +1,4 @@
-Usage: jar {ctxui}[vfm0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...
+Usage: jar {ctxui}[vfmn0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...
 Options:
     -c  create new archive
     -t  list table of contents for archive
@@ -7,6 +7,7 @@ Options:
     -v  generate verbose output on standard output
     -f  specify archive file name
     -m  include manifest information from specified manifest file
+    -n  perform Pack200 normalization after creating a new archive
     -e  specify application entry point for stand-alone application 
         bundled into an executable jar file
     -0  store only; use no ZIP compression
