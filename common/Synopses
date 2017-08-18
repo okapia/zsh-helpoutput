@@ -160,7 +160,8 @@ emit --help | getusage
 subcmds @ -h
 
 cmd gpg
-version 2.1.16
+version 2.1.21
+variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
 
