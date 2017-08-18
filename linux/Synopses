@@ -31,7 +31,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.11.9
+version 4.12
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -61,7 +61,7 @@ emit -V | field 2 | getversion
 emit -h | getusage
 
 cmd ip
-version 170501
+version 170705
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -108,7 +108,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 170501
+version 170705
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 

@@ -160,7 +160,7 @@ emit --help | getusage
 subcmds @ -h
 
 cmd gpg
-version 2.1.21
+version 2.1.23
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -255,7 +255,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.24.1
+version 5.24.2
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
@@ -344,14 +344,14 @@ pack | getversion
 emit | getusage
 
 cmd svn
-version 1.9.6
+version 1.9.7
 subdir
 emit --version --quiet | getversion
 emit help | getusage
 subcmds help @
 
 cmd svnadmin
-version 1.9.6
+version 1.9.7
 subdir
 emit --version | field 3 | getversion
 emit help | getusage

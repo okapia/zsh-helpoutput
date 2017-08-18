@@ -91,7 +91,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gprof
-version 2.28
+version 2.29
 variant -g GNU -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
@@ -176,13 +176,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd nm
-version 2.28
+version 2.29
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | nobug | getusage
 
 cmd objdump
-version 2.28
+version 2.29
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
@@ -200,13 +200,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ranlib
-version 2.28
+version 2.29
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | getusage
 
 cmd readelf
-version 2.28
+version 2.29
 variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage
@@ -224,7 +224,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd strip
-version 2.28
+version 2.29
 variant -g 'GNU' -- --version
 emit -V | guess | getversion
 emit -h | egrep -v '(supported targets|Report bugs to)' | getusage
