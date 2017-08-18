@@ -53,6 +53,7 @@ Usage: objdump <option(s)> <file(s)>
       --insn-width=WIDTH         Display WIDTH bytes on a single line for -d
       --adjust-vma=OFFSET        Add OFFSET to all displayed section addresses
       --special-syms             Include special symbols in symbol dumps
+      --inlines                  Print all inlines for source line (with -l)
       --prefix=PREFIX            Add PREFIX to absolute paths for -S
       --prefix-strip=LEVEL       Strip initial directory names for -S
       --dwarf-depth=N        Do not display DIEs at depth N or greater
@@ -60,8 +61,8 @@ Usage: objdump <option(s)> <file(s)>
                              or deeper
       --dwarf-check          Make additional dwarf internal consistency checks.      
 
-objdump: supported targets: elf64-x86-64 elf32-i386 elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big plugin srec symbolsrec verilog tekhex binary ihex
-objdump: supported architectures: i386 i386:x86-64 i386:x64-32 i8086 i386:intel i386:x86-64:intel i386:x64-32:intel l1om l1om:intel k1om k1om:intel plugin
+objdump: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big plugin srec symbolsrec verilog tekhex binary ihex
+objdump: supported architectures: i386 i386:x86-64 i386:x64-32 i8086 i386:intel i386:x86-64:intel i386:x64-32:intel i386:nacl i386:x86-64:nacl i386:x64-32:nacl iamcu iamcu:intel l1om l1om:intel k1om k1om:intel plugin
 
 The following i386/x86-64 specific disassembler options are supported for use
 with the -M switch (multiple options should be separated by commas):
@@ -80,3 +81,5 @@ with the -M switch (multiple options should be separated by commas):
   data32      Assume 32bit data size
   data16      Assume 16bit data size
   suffix      Always display instruction suffix in AT&T syntax
+  amd64       Display instruction in AMD64 ISA
+  intel64     Display instruction in Intel64 ISA
