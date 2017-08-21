@@ -1,0 +1,2 @@
+w: unknown option -- ?
+usage: w [-ahi] [-M core] [-N system] [user]
