@@ -264,6 +264,12 @@ version 1.19.1
 emit -V | field 3 | getversion
 emit --help | getusage
 
+cmd who
+version 8.27
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd xargs
 version 4.6.0
 variant -g 'GNU' -- --version

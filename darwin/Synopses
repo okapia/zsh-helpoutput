@@ -314,6 +314,11 @@ version 10.11.6
 sw_vers -productVersion | getversion
 emit -? | getusage
 
+cmd who
+version 10.11.6
+sw_vers -productVersion | getversion
+emit -? | getusage
+
 cmd xargs
 version 10.11.6
 sw_vers -productVersion | getversion

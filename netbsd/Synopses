@@ -378,6 +378,11 @@ version 7.1
 uname -r | getversion
 emit -? | getusage
 
+cmd who
+version 7.1
+uname -r | getversion
+emit -? | getusage
+
 cmd xargs
 version 7.1
 uname -r | getversion

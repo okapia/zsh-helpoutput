@@ -334,3 +334,8 @@ cmd vmstat
 version 11.3
 uname -v | getversion
 emit -? | getusage
+
+cmd who
+version 11.3
+uname -v | getversion
+emit -? | getusage

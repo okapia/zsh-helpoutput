@@ -408,6 +408,11 @@ version 6.1
 uname -r | getversion
 emit -? | getusage
 
+cmd who
+version 6.1
+uname -r | getversion
+emit -? | getusage
+
 cmd xargs
 version 6.1
 uname -r | getversion

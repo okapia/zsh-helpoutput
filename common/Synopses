@@ -80,6 +80,11 @@ version 0.12pre6
 emit -version | field 2 | getversion
 emit -help | getusage
 
+cmd entr
+version 3.7
+emit | field -1 | getversion
+emit | sed 1d | getusage
+
 cmd erb
 version 2.1.0
 emit --version | field 2 | cut -c 2- | getversion
@@ -153,7 +158,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.14.0
+version 2.14.1
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -245,7 +250,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.5.6
+version 4.6.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
