@@ -81,7 +81,7 @@ emit -version | field 2 | getversion
 emit -help | getusage
 
 cmd entr
-version 3.7
+version 3.8
 emit | field -1 | getversion
 emit | sed 1d | getusage
 
@@ -260,12 +260,12 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.24.2
+version 5.26.0
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
 cmd prove
-version 3.36
+version 3.38
 emit --version | tr _ ' ' | field 2 | tr -d v | getversion
 emit --help | getusage
 
