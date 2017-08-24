@@ -1,0 +1,71 @@
+Usage: mpc [options] <command> [<arguments>]
+mpc version: 0.28
+
+Options:
+  -v, --verbose              Give verbose output
+  -q, --quiet                Suppress status message
+  -q, --no-status            synonym for --quiet
+  -h, --host=<host>          Connect to server on <host>
+  -P, --password=<password>  Connect to server using password <password>
+  -p, --port=<port>          Connect to server port <port>
+  -f, --format=<format>      Print status with format <format>
+  -w, --wait                 Wait for operation to finish (e.g. database update)
+
+Commands:
+  mpc                                                   Display status
+  mpc add <uri>                                         Add a song to the current playlist
+  mpc crop                                              Remove all but the currently playing song
+  mpc current                                           Show the currently playing song
+  mpc del <position>                                    Remove a song from the current playlist
+  mpc play [<position>]                                 Start playing at <position>
+  mpc next                                              Play the next song in the current playlist
+  mpc prev                                              Play the previous song in the current playlist
+  mpc pause                                             Pauses the currently playing song
+  mpc pause-if-playing                                  Pauses the currently playing song; exits with failure if not playing
+  mpc toggle                                            Toggles Play/Pause, plays if stopped
+  mpc cdprev                                            Compact disk player-like previous command
+  mpc stop                                              Stop the currently playing playlists
+  mpc seek [+-][HH:MM:SS]|<0-100>%                      Seeks to the specified position
+  mpc clear                                             Clear the current playlist
+  mpc outputs                                           Show the current outputs
+  mpc enable [only] <output # or name> [...]            Enable output(s)
+  mpc disable [only] <output # or name> [...]           Disable output(s)
+  mpc toggleoutput <output # or name> [...]             Toggle output(s)
+  mpc shuffle                                           Shuffle the current playlist
+  mpc move <from> <to>                                  Move song in playlist
+  mpc playlist [<playlist>]                             Print <playlist>
+  mpc listall [<file>]                                  List all songs in the music dir
+  mpc ls [<directory>]                                  List the contents of <directory>
+  mpc lsplaylists                                       List currently available playlists
+  mpc load <file>                                       Load <file> as a playlist
+  mpc insert <uri>                                      Insert a song to the current playlist after the current track
+  mpc save <file>                                       Save a playlist as <file>
+  mpc rm <file>                                         Remove a playlist
+  mpc volume [+-]<num>                                  Set volume to <num> or adjusts by [+-]<num>
+  mpc repeat <on|off>                                   Toggle repeat mode, or specify state
+  mpc random <on|off>                                   Toggle random mode, or specify state
+  mpc single <on|off>                                   Toggle single mode, or specify state
+  mpc consume <on|off>                                  Toggle consume mode, or specify state
+  mpc search <type> <query>                             Search for a song
+  mpc searchadd <type> <query>                          Search songs and add them to the current playlist
+  mpc find <type> <query>                               Find a song (exact match)
+  mpc findadd <type> <query>                            Find songs and add them to the current playlist
+  mpc searchplay <pattern>                              Find and play a song in the current playlist
+  mpc list <type> [<type> <query>]                      Show all tags of <type>
+  mpc crossfade [<seconds>]                             Set and display crossfade settings
+  mpc clearerror                                        Clear the current error
+  mpc mixrampdb [<dB>]                                  Set and display mixrampdb settings
+  mpc mixrampdelay [<seconds>]                          Set and display mixrampdelay settings
+  mpc update [<path>]                                   Scan music directory for updates
+  mpc sticker <uri> <get|set|list|delete|find> [args..] Sticker management
+  mpc stats                                             Display statistics about MPD
+  mpc version                                           Report version of MPD
+  mpc idle [events]                                     Idle until an event occurs
+  mpc idleloop [events]                                 Continuously idle until an event occurs
+  mpc replaygain [off|track|album]                      Set or display the replay gain mode
+  mpc channels                                          List the channels that other clients have subscribed to.
+  mpc sendmessage <channel> <message>                   Send a message to the specified channel.
+  mpc waitmessage <channel>                             Wait for at least one message on the specified channel.
+  mpc subscribe <channel>                               Subscribe to the specified channel and continuously receive messages.
+
+See man 1 mpc for more information about mpc commands and options
