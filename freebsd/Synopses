@@ -411,6 +411,11 @@ version 11.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
+cmd w
+version 11.1-RELEASE
+uname -r | getversion
+emit -? | getusage
+
 cmd watch
 version 11.1-RELEASE
 uname -r | getversion

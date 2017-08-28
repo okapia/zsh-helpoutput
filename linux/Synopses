@@ -157,6 +157,11 @@ version 3.3.12
 emit -V | field -1 | getversion
 emit -h | getusage
 
+cmd w
+version 3.3.10
+emit -V | field -1 | getversion
+emit --help | getusage
+
 # shadow-utils
 
 cmd gpasswd

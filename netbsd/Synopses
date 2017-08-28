@@ -373,6 +373,11 @@ version 7.1
 uname -r | getversion
 emit -? | getusage
 
+cmd w
+version 7.1
+uname -r | getversion
+emit -? | getusage
+
 cmd wc
 version 7.1
 uname -r | getversion

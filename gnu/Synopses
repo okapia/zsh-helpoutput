@@ -90,6 +90,31 @@ variant 'GNU' -- --version
 emit -V | field -1 | getversion
 emit -? | getusage
 
+cmd gnutls-cli
+version 3.5.14
+emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd gnutls-cli-debug
+version 3.5.14
+emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd gnutls-serv
+version 3.5.14
+emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd certtool
+version 3.5.14
+emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd srptool
+version 3.5.14
+emit --version | field -1 | getversion
+emit -h | getusage
+
 cmd gprof
 version 2.29
 variant -g GNU -- --version

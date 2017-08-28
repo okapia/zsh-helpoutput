@@ -403,6 +403,11 @@ version 6.1
 uname -r | getversion
 emit -? | getusage
 
+cmd w
+version 6.1
+uname -r | getversion
+emit -? | getusage
+
 cmd wc
 version 6.1
 uname -r | getversion
