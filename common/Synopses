@@ -296,7 +296,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd sqlite
-version 3.20.0
+version 3.20.1
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -335,6 +335,7 @@ emit -h | getusage
 
 cmd sudo
 version 1.8.20p2
+variant ! 'doas' -- -V
 emit -V | field -1 | getversion
 emit -h | getusage
 
