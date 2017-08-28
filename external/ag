@@ -25,11 +25,14 @@ Output Options:
                           (Enabled by default)
   -C --context [LINES]    Print lines before and after matches (Default: 2)
      --[no]group          Same as --[no]break --[no]heading
-  -g PATTERN              Print filenames matching PATTERN
+  -g --filename-pattern PATTERN
+                          Print filenames matching PATTERN
   -l --files-with-matches Only print filenames that contain matches
                           (don't print the matching lines)
   -L --files-without-matches
                           Only print filenames that don't contain matches
+     --print-all-files    Print headings for all files searched, even those that
+                          don't contain matches
      --[no]numbers        Print line numbers. Default is to omit line numbers
                           when searching streams
   -o --only-matching      Prints only the matching part of the lines
@@ -70,7 +73,7 @@ Search Options:
   -u --unrestricted       Search all files (ignore .ignore, .gitignore, etc.;
                           searches binary and hidden files as well)
   -U --skip-vcs-ignores   Ignore VCS ignore files
-                          (.gitignore, .hgignore, .svnignore; still obey .ignore)
+                          (.gitignore, .hgignore; still obey .ignore)
   -v --invert-match
   -w --word-regexp        Only match whole words
   -W --width NUM          Truncate match lines after NUM characters
@@ -84,3 +87,5 @@ The search can be restricted to certain types of files. Example:
 For a list of supported file types run:
   ag --list-file-types
 
+ag was originally created by Geoff Greer. More information (and the latest release)
+can be found at http://geoff.greer.fm/ag
