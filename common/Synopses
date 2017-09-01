@@ -291,7 +291,7 @@ emit -h | getusage
 emit --daemon -h | getusage daemon
 
 cmd screen
-version 4.02.00
+version 4.06.01
 emit -v | field 3 | getversion
 emit -h | getusage
 
@@ -383,6 +383,11 @@ version 4.9.1
 variant ! 'Apple' -- --version
 emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage
+
+cmd tidy
+version 5.4.0
+emit -v | field -1 | getversion
+emit -? | getusage
 
 cmd tin
 version 2.4.1
