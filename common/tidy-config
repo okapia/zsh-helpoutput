@@ -27,9 +27,12 @@ char-encoding               Encoding   raw, ascii, latin0, latin1, utf8,
                                        iso2022, mac, win1252, ibm858, utf16le, 
                                        utf16be, utf16, big5, shiftjis          
 clean                       Boolean    y/n, yes/no, t/f, true/false, 1/0       
+coerce-endtags              Boolean    y/n, yes/no, t/f, true/false, 1/0       
 css-prefix                  String     -                                       
 decorate-inferred-ul        Boolean    y/n, yes/no, t/f, true/false, 1/0       
-doctype                     DocType    omit, auto, strict, transitional, user  
+doctype                     DocType    html5, omit, auto, strict, transitional,
+                                       user                                    
+drop-empty-elements         Boolean    y/n, yes/no, t/f, true/false, 1/0       
 drop-empty-paras            Boolean    y/n, yes/no, t/f, true/false, 1/0       
 drop-font-tags              Boolean    y/n, yes/no, t/f, true/false, 1/0       
 drop-proprietary-attributes Boolean    y/n, yes/no, t/f, true/false, 1/0       
@@ -37,10 +40,12 @@ enclose-block-text          Boolean    y/n, yes/no, t/f, true/false, 1/0
 enclose-text                Boolean    y/n, yes/no, t/f, true/false, 1/0       
 error-file                  String     -                                       
 escape-cdata                Boolean    y/n, yes/no, t/f, true/false, 1/0       
+escape-scripts              Boolean    y/n, yes/no, t/f, true/false, 1/0       
 fix-backslash               Boolean    y/n, yes/no, t/f, true/false, 1/0       
 fix-bad-comments            Boolean    y/n, yes/no, t/f, true/false, 1/0       
 fix-uri                     Boolean    y/n, yes/no, t/f, true/false, 1/0       
 force-output                Boolean    y/n, yes/no, t/f, true/false, 1/0       
+gdoc                        Boolean    y/n, yes/no, t/f, true/false, 1/0       
 gnu-emacs                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
 gnu-emacs-file              String     -                                       
 hide-comments               Boolean    y/n, yes/no, t/f, true/false, 1/0       
@@ -49,6 +54,7 @@ indent                      AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0
 indent-attributes           Boolean    y/n, yes/no, t/f, true/false, 1/0       
 indent-cdata                Boolean    y/n, yes/no, t/f, true/false, 1/0       
 indent-spaces               Integer    0, 1, 2, ...                            
+indent-with-tabs            Boolean    y/n, yes/no, t/f, true/false, 1/0       
 input-encoding              Encoding   raw, ascii, latin0, latin1, utf8,       
                                        iso2022, mac, win1252, ibm858, utf16le, 
                                        utf16be, utf16, big5, shiftjis          
@@ -62,6 +68,7 @@ logical-emphasis            Boolean    y/n, yes/no, t/f, true/false, 1/0
 lower-literals              Boolean    y/n, yes/no, t/f, true/false, 1/0       
 markup                      Boolean    y/n, yes/no, t/f, true/false, 1/0       
 merge-divs                  AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
+merge-emphasis              Boolean    y/n, yes/no, t/f, true/false, 1/0       
 merge-spans                 AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
 ncr                         Boolean    y/n, yes/no, t/f, true/false, 1/0       
 new-blocklevel-tags         Tag names  tagX, tagY, ...                         
@@ -70,6 +77,7 @@ new-inline-tags             Tag names  tagX, tagY, ...
 new-pre-tags                Tag names  tagX, tagY, ...                         
 newline                     enum       LF, CRLF, CR                            
 numeric-entities            Boolean    y/n, yes/no, t/f, true/false, 1/0       
+omit-optional-tags          Boolean    y/n, yes/no, t/f, true/false, 1/0       
 output-bom                  AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
 output-encoding             Encoding   raw, ascii, latin0, latin1, utf8,       
                                        iso2022, mac, win1252, ibm858, utf16le, 
@@ -88,15 +96,18 @@ repeated-attributes         enum       keep-first, keep-last
 replace-color               Boolean    y/n, yes/no, t/f, true/false, 1/0       
 show-body-only              AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
 show-errors                 Integer    0, 1, 2, ...                            
+show-info                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
 show-warnings               Boolean    y/n, yes/no, t/f, true/false, 1/0       
+skip-nested                 Boolean    y/n, yes/no, t/f, true/false, 1/0       
 slide-style                 String     -                                       
 sort-attributes             enum       none, alpha                             
 split                       Boolean    y/n, yes/no, t/f, true/false, 1/0       
+strict-tags-attributes      Boolean    y/n, yes/no, t/f, true/false, 1/0       
 tab-size                    Integer    0, 1, 2, ...                            
 tidy-mark                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
 uppercase-attributes        Boolean    y/n, yes/no, t/f, true/false, 1/0       
 uppercase-tags              Boolean    y/n, yes/no, t/f, true/false, 1/0       
-vertical-space              Boolean    y/n, yes/no, t/f, true/false, 1/0       
+vertical-space              AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
 word-2000                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
 wrap                        Integer    0 (no wrapping), 1, 2, ...              
 wrap-asp                    Boolean    y/n, yes/no, t/f, true/false, 1/0       
