@@ -388,6 +388,7 @@ cmd tidy
 version 5.4.0
 emit -v | field -1 | getversion
 emit -? | getusage
+emit -help-config | getusage config
 
 cmd tin
 version 2.4.1
