@@ -162,6 +162,11 @@ version 3.3.12
 emit -V | field -1 | getversion
 emit --help | getusage
 
+cmd wipefs
+version 2.23.2
+emit -V | field -1 | getversion
+emit -h | getusage
+
 # shadow-utils
 
 cmd gpasswd

@@ -279,6 +279,12 @@ version 3.5.1
 emit --version | field -1 | getversion
 emit -h | getusage
 
+cmd rrdtool
+version 1.4.8
+subdir
+emit | field 2 | getversion
+subcmds help @
+
 cmd ruby
 version 2.4.1p111
 emit --version | field 2 | getversion
@@ -564,6 +570,12 @@ emit --help | nobug | getusage
 
 cmd nm
 version 0.170
+variant -p 'eu-' elfutils -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd objdump
+version 0.168
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
