@@ -1,4 +1,4 @@
 dumpadm: illegal option -- ?
 Usage: dumpadm [-enpuy] [-c {kernel|curproc|allproc|all}[{+|-}zfs]]
-	[-d dump-device | swap | none] [-m min {k|m|%} ] [-s savecore-dir]
+	[-d dump-device | swap] [-m min {k|m|%} ] [-s savecore-dir]
 	[-r root-dir] [-z on|off]

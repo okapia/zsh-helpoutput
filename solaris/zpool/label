@@ -1,0 +1,5 @@
+usage:
+	label [-d path ... | -c cachefile] -C <pool | id> [device]
+	label -C <device>
+	label [-d path ... | -c cachefile] -R <pool | id> [device]
+	label -R <device>
