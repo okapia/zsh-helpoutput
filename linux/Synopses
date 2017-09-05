@@ -51,7 +51,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd getfacl
-version 2.2.51
+version 2.2.52
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -118,7 +118,7 @@ emit -V | field -1 | getversion
 emit --help all | getusage
 
 cmd setfacl
-version 2.2.51
+version 2.2.52
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -183,7 +183,7 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd wipefs
-version 2.23.2
+version 2.30
 emit -V | field -1 | getversion
 emit -h | getusage
 
