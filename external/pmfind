@@ -1,0 +1,14 @@
+Usage: pmfind [options]
+
+Discovery options:
+  -m NAME, --mechanism=NAME
+                        set the discovery method to use [avahi|probe=<subnet>|all]
+  -r, --resolve         resolve addresses
+  -s NAME, --service=NAME
+                        discover services [pmcd|pmproxy|pmwebd|...|all]
+  -t N.N, --timeout=N.N timeout in seconds
+
+Reporting options:
+  -q, --quiet           quiet mode, do not write to stdout
+  -V, --version         display version number and exit
+  -?, --help            show this usage message and exit

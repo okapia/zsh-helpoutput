@@ -1,0 +1,16 @@
+Usage: pmstore [options] metricname value
+
+General options:
+  -h HOST, --host=HOST  metrics source is PMCD on host
+  -L, --local-PMDA      metrics source is local connection to a PMDA
+  -K SPEC, --spec-local=SPEC
+                        optional additional PMDA spec for local connection
+  -n FILE, --namespace=FILE
+                        use an alternative PMNS
+  -V, --version         display version number and exit
+  -?, --help            show this usage message and exit
+
+Value options:
+  -f, --force           store the value even if there is no current value set
+  -i INSTS, --insts=INSTS
+                        restrict store to comma-separated list of instances
