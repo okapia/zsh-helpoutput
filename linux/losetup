@@ -3,27 +3,35 @@ Usage:
  losetup [options] [<loopdev>]
  losetup [options] -f | <loopdev> <file>
 
+Set up and control loop devices.
+
 Options:
  -a, --all                     list all used devices
- -d, --detach <loopdev> [...]  detach one or more devices
+ -d, --detach <loopdev>...     detach one or more devices
  -D, --detach-all              detach all used devices
  -f, --find                    find first unused device
- -c, --set-capacity <loopdev>  resize device
+ -c, --set-capacity <loopdev>  resize the device
  -j, --associated <file>       list all devices associated with <file>
+ -L, --nooverlap               avoid possible conflict between devices
 
- -l, --list                    list info about all or specified
  -o, --offset <num>            start at offset <num> into file
- -O, --output <cols>           specify columns to output for --list
-     --sizelimit <num>         device limited to <num> bytes of the file
- -P, --partscan                create partitioned loop device
- -r, --read-only               setup read-only loop device
+     --sizelimit <num>         device is limited to <num> bytes of the file
+ -P, --partscan                create a partitioned loop device
+ -r, --read-only               set up a read-only loop device
+     --direct-io[=<on|off>]    open backing file with O_DIRECT
      --show                    print device name after setup (with -f)
  -v, --verbose                 verbose mode
+
+ -J, --json                    use JSON --list output format
+ -l, --list                    list info about all or specified (default)
+ -n, --noheadings              don't print headings for --list output
+ -O, --output <cols>           specify columns to output for --list
+     --raw                     use raw --list output format
 
  -h, --help     display this help and exit
  -V, --version  output version information and exit
 
-Available --list columns:
+Available --output columns:
          NAME  loop device name
     AUTOCLEAR  autoclear flag set
     BACK-FILE  device backing file
@@ -34,5 +42,6 @@ Available --list columns:
      PARTSCAN  partscan flag set
            RO  read-only device
     SIZELIMIT  size limit of the file in bytes
+          DIO  access backing file with direct-io
 
 For more details see losetup(8).
