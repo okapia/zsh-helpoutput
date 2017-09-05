@@ -1,0 +1,23 @@
+Usage: pmdumplog [options] [archive [metricname ...]]
+
+Options:
+  -a, --all             dump everything
+  -d, --descs           dump metric descriptions
+  -i, --insts           dump instance domain descriptions
+  -L                    more verbose form of archive label dump
+  -l, --label           dump the archive label
+  -m, --metrics         dump values of the metrics (default)
+  -n FILE, --namespace=FILE
+                        use an alternative PMNS
+  -r, --reverse         process archive in reverse chronological order
+  -S TIME, --start=TIME start of the time window
+  -s, --sizes           report size of data records in archive
+  -T TIME, --finish=TIME
+                        end of the time window
+  -t                    dump the temporal index
+  -v FILE               verbose hex dump of a physical file in raw format
+  -x                    include date in reported timestamps
+  -Z TZ, --timezone=TZ  set reporting timezone
+  -z, --hostzone        set reporting timezone to local time of metrics source
+  -V, --version         display version number and exit
+  -?, --help            show this usage message and exit

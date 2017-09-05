@@ -1,0 +1,35 @@
+Usage: pcp [options] [[...] command [...]]
+
+Summary Options:
+  -a FILE, --archive=FILE
+                        metrics source is a PCP log archive
+  -h HOST, --host=HOST  metrics source is PMCD on host
+  -O TIME, --origin=TIME
+                        initial sample time within the time window
+  -P, --pmie            display pmie evaluation statistics
+  -?, --help            show this usage message and exit
+
+Command Options:
+  -A TIME, --align=TIME align sample times on natural boundaries
+  -a FILE, --archive=FILE
+                        metrics source is a PCP log archive
+  -g, --guimode         start in GUI mode with new time control
+  -h HOST, --host=HOST  metrics source is PMCD on host
+  -n FILE, --namespace=FILE
+                        use an alternative PMNS
+  -O TIME, --origin=TIME
+                        initial sample time within the time window
+  -p N, --guiport=N     port for connection to existing time control
+  -S TIME, --start=TIME start of the time window
+  -s N, --samples=N     terminate after this many samples
+  -T TIME, --finish=TIME
+                        end of the time window
+  -t DELTA, --interval=DELTA
+                        sampling interval
+  -Z TZ, --timezone=TZ  set reporting timezone
+  -z, --hostzone        set reporting timezone to local time of metrics source
+  -V, --version         display version number and exit
+
+Available Commands:     atop atopsar collectl dmcache free
+           iostat ipcs lvmcache mpstat numastat pidstat python shping
+           summary uptime verify vmstat

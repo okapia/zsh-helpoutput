@@ -1,0 +1,33 @@
+Usage: pmiostat [options]
+
+General options:
+  -A TIME, --align=TIME align sample times on natural boundaries
+  -a FILE, --archive=FILE
+                        metrics source is a PCP log archive
+  -G method, --aggregate=method
+                        aggregate values for devices matching -R regex using 'method' (sum, avg, min or max)
+  -h HOST, --host=HOST  metrics source is PMCD on host
+  -O TIME, --origin=TIME
+                        initial sample time within the time window
+  -P N, --precision=N   N digits after the decimal separator
+  -R pattern, --regex=pattern
+                        only report for devices names matching pattern, e.g. 'sd[a-zA-Z]+'. See also -G.
+  -S TIME, --start=TIME start of the time window
+  -s N, --samples=N     terminate after this many samples
+  -T TIME, --finish=TIME
+                        end of the time window
+  -t DELTA, --interval=DELTA
+                        sampling interval
+  -u, --no-interpolation
+                        disable interpolation mode with archives
+  -V, --version         display version number and exit
+  -Z TZ, --timezone=TZ  set reporting timezone
+  -z, --hostzone        set reporting timezone to local time of metrics source
+  -?, --help            show this usage message and exit
+
+Extended options:
+  -x LIST               comma separated extended options: [[dm],[t],[h],[noidle]]
+		dm	show device-mapper statistics (default is sd devices)
+		t	precede every line with a timestamp in ctime format
+		h	suppress headings
+		noidle	do not display idle devices

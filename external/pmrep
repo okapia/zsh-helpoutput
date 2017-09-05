@@ -1,0 +1,60 @@
+Usage: pmrep [option...] metricspec [...]
+
+General options:
+  -a FILE, --archive=FILE
+                        metrics source is a PCP log archive
+  --archive-folio=FILE  read metric source archives from a folio
+  --container=NAME      specify an individual container to be queried
+  -h HOST, --host=HOST  metrics source is PMCD on host
+  -L, --local-PMDA      metrics source is local connection to a PMDA
+  -K SPEC, --spec-local=SPEC
+                        optional additional PMDA spec for local connection
+  -c FILE, --config=FILE
+                        config file path
+  -C, --check           check config and metrics and exit
+  -o OUTPUT, --output=OUTPUT
+                        output target: archive, csv, stdout (default), or zabbix
+  -F OUTFILE, --output-file=OUTFILE
+                        output file
+  -e FILE|DFNT, --derived=FILE|DFNT
+                        derived metrics definitions
+  -V, --version         display version number and exit
+  -?, --help            show this usage message and exit
+
+Reporting options:
+  -H, --no-header       omit headers
+  -U, --no-unit-info    omit unit info from headers
+  -G, --no-globals      omit global metrics
+  -p, --timestamps      print timestamps
+  -A TIME, --align=TIME align sample times on natural boundaries
+  -S TIME, --start=TIME start of the time window
+  -T TIME, --finish=TIME
+                        end of the time window
+  -O TIME, --origin=TIME
+                        initial sample time within the time window
+  -s N, --samples=N     terminate after this many samples
+  -t DELTA, --interval=DELTA
+                        sampling interval
+  -Z TZ, --timezone=TZ  set reporting timezone
+  -z, --hostzone        set reporting timezone to local time of metrics source
+  -d, --delay           delay, pause between updates for archive replay
+  -r, --raw             output raw counter values (no rate conversion)
+  -i STR, --instances=STR
+                        instances to report (default: all current)
+  -X STR, --colxrow=STR swap stdout columns and rows using header label
+  -w N, --width=N       default column width
+  -P N, --precision=N   N digits after the decimal separator (if width enough)
+  -l STR, --delimiter=STR
+                        delimiter to separate csv/stdout columns
+  -x, --extended-header display extended header
+  -E N, --repeat-header=N
+                        repeat stdout headers every N lines
+  -f STR, --timestamp-format=STR
+                        strftime string for timestamp format
+  -u, --no-interpol     disable interpolation mode with archives
+  -q SCALE, --count-scale=SCALE
+                        default count unit
+  -b SCALE, --space-scale=SCALE
+                        default space unit
+  -y SCALE, --time-scale=SCALE
+                        default time unit

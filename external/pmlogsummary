@@ -1,0 +1,27 @@
+Usage: pmlogsummary [options] archive [metricname ...]
+
+Options:
+  -a, --all             print all information (equivalent to -blmMy)
+  -b                    print both stochastic and time averages for counter metrics
+  -B N, --bins=N        print value distribution across a number of bins
+  -f                    print using "spreadsheet" format (tab delimited fields)
+  -F                    print using "spreadsheet" format (comma separated values)
+  -H, --header          print one-line header at start showing each column
+  -i, --mintime         also print timestamp for minimum value
+  -I, --maxtime         also print timestamp for maximum value
+  -l, --label           also print the archive label and time window
+  -m, --minimum         also print minimum value
+  -M, --maximum         also print maximum value
+  -n FILE, --namespace=FILE
+                        use an alternative PMNS
+  -N                    suppress warnings from individual archive fetches (default)
+  -p, --precision       number of digits to display after the decimal point
+  -S TIME, --start=TIME start of the time window
+  -T TIME, --finish=TIME
+                        end of the time window
+  -v, --verbose         verbose, enable warnings from individual archive fetches
+  -x                    print only stochastic averages for counter metrics
+  -Z TZ, --timezone=TZ  set reporting timezone
+  -z, --hostzone        set reporting timezone to local time of metrics source
+  -V, --version         display version number and exit
+  -?, --help            show this usage message and exit
