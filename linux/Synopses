@@ -183,7 +183,7 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd wipefs
-version 2.30
+version 2.30.1
 emit -V | field -1 | getversion
 emit -h | getusage
 

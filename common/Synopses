@@ -586,7 +586,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
-version 0.169
+version 0.170
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
