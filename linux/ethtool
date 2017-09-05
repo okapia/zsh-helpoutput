@@ -1,4 +1,4 @@
-ethtool version 4.8
+ethtool version 4.11
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
@@ -100,6 +100,7 @@ Usage:
         ethtool -X|--set-rxfh-indir|--rxfh DEVNAME	Set Rx flow hash indirection table and/or RSS hash key
 		[ equal N | weight W0 W1 ... | default ]
 		[ hkey %x:%x:%x:%x:%x:.... ]
+		[ hfunc FUNC ]
         ethtool -f|--flash DEVNAME	Flash firmware image from the specified file to a region on the device
                FILENAME [ REGION-NUMBER-TO-FLASH ]
         ethtool -P|--show-permaddr DEVNAME	Show permanent hardware address
@@ -127,5 +128,9 @@ Usage:
 		[ advertise %x ]
 		[ tx-lpi on|off ]
 		[ tx-timer %d ]
+        ethtool --set-phy-tunable DEVNAME	Set PHY tunable
+		[ downshift on|off [count N] ]
+        ethtool --get-phy-tunable DEVNAME	Get PHY tunable
+		[ downshift ]
         ethtool -h|--help 		Show this help
         ethtool --version 		Show version number
