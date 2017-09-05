@@ -562,6 +562,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 # elfutils
+
 cmd readelf
 version 0.170
 variant -p 'eu-' elfutils -- --version
@@ -579,3 +580,73 @@ version 0.168
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
+
+# java
+
+cmd appletviewer
+version 1.7.0
+step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
+
+cmd extcheck
+version 1.7.0
+step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
+
+cmd jar
+version 1.7.0
+step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
+
+cmd jarsigner
+version 1.7.0
+step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
+
+cmd java
+version 1.8.0
+emit -version | field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit -? | getusage
+emit -X | getusage nonstd
+
+cmd javac
+version 1.7.0
+emit -version | field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit -help | getusage
+emit -X | getusage nonstd
+
+cmd javadoc
+version 1.7.0
+javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit -help | getusage
+emit -X | getusage nonstd
+
+cmd javah
+version 1.7.0
+emit -version | field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit -help | getusage
+
+cmd javap
+version 1.7.0
+emit -version | sed 's/_.*//' | getversion
+emit -? | getusage
+
+cmd jdb
+version 1.7.0
+emit -version | field -1 | tr -d \"\) | sed 's/_.*//' | getversion
+emit -help | getusage
+
+cmd keytool
+version 1.8.0
+step java -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
+
+cmd rmic
+version 1.7.0
+step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
+
+cmd serialver
+version 1.7.0
+step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
