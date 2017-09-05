@@ -224,6 +224,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd printenv
+version 8.27
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd ranlib
 version 2.29
 variant -g GNU -- -V

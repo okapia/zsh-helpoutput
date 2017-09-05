@@ -306,6 +306,11 @@ version 4.5.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
+cmd smbcontrol
+version 4.6.2
+emit -V | sed 's/-.*//' | field -1 | getversion
+emit | getusage
+
 cmd sqlite
 version 3.20.1
 variant -n sqlite3
@@ -444,6 +449,11 @@ cmd vim
 version 8.0
 emit -version | field 5 | getversion
 vimver="$_verinst"
+emit -h | getusage
+
+cmd vimdiff
+version 8.0
+emit --version | field 5 | getversion
 emit -h | getusage
 
 cmd w3m

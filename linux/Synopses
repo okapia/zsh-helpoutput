@@ -45,6 +45,16 @@ version 2.3.0.0
 emit -V | field -1 | getversion
 emit | getusage
 
+cmd ethtool
+version 4.8
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd getfacl
+version 2.2.51
+emit -v | field -1 | getversion
+emit -h | getusage
+
 cmd getfattr
 version 2.4.47
 emit --version | field 2 | getversion
@@ -92,6 +102,11 @@ emit -V | field 3 | tr -d v | getversion
 emit --help-options | getusage
 subcmds --@ -h
 
+cmd mii-tool
+version 2.10-alpha
+emit -V | field -1 | getversion
+emit -? | getusage
+
 cmd pgrep
 version 3.3.12
 emit -V | tr -d \) | field -1 | getversion
@@ -101,6 +116,11 @@ cmd ps
 version 3.3.12
 emit -V | field -1 | getversion
 emit --help all | getusage
+
+cmd setfacl
+version 2.2.51
+emit -v | field -1 | getversion
+emit -h | getusage
 
 cmd showmount
 version 2.1.1
@@ -193,3 +213,30 @@ cmd usermod
 version 4.5
 pack | getversion
 emit -h | getusage
+
+# sysstat
+
+cmd cifsiostat
+version 10.1.5
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd mpstat
+version 10.1.5
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pidstat
+version 10.1.5
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd sadf
+version 10.1.5
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd sar
+version 10.1.5
+emit -V | field -1 | getversion
+emit -? | getusage

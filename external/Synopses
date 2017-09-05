@@ -41,3 +41,55 @@ cmd pkgutil
 version 2.6.7
 emit -v | getversion
 emit -h | getusage
+
+# PCP
+
+cmd pcp
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pmdiff
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pmdumplog
+version 3.11.8
+emit --version | field -1 | getversion
+emit -? | getusage
+
+cmd pmfind
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pminfo
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pmiostat
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pmlogsummary
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pmrep
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pmstore
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
+
+cmd pmval
+version 3.11.8
+emit -V | field -1 | getversion
+emit -? | getusage
