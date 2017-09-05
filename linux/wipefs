@@ -2,8 +2,11 @@
 Usage:
  wipefs [options] <device>
 
+Wipe signatures from a device.
+
 Options:
  -a, --all           wipe all magic strings (BE CAREFUL!)
+ -b, --backup        create a signature backup in $HOME
  -f, --force         force erasure
  -h, --help          show this help text
  -n, --no-act        do everything except the actual write() call
@@ -13,4 +16,4 @@ Options:
  -t, --types <list>  limit the set of filesystem, RAIDs or partition tables
  -V, --version       output version information and exit
 
-For more information see wipefs(8).
+For more details see wipefs(8).

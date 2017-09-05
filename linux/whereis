@@ -1,12 +1,14 @@
 
 Usage:
- whereis [options] file
+ whereis [options] [-BMS <dir>... -f] <name>
+
+Locate the binary, source, and manual-page files for a command.
 
 Options:
  -b         search only for binaries
  -B <dirs>  define binaries lookup path
- -m         search only for manuals
- -M <dirs>  define man lookup path
+ -m         search only for manuals and infos
+ -M <dirs>  define man and info lookup path
  -s         search only for sources
  -S <dirs>  define sources lookup path
  -f         terminate <dirs> argument list
