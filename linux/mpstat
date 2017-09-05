@@ -1,4 +1,4 @@
 Usage: mpstat [ options ] [ <interval> [ <count> ] ]
 Options are:
-[ -A ] [ -I { SUM | CPU | ALL } ] [ -u ]
-[ -P { <cpu> [,...] | ON | ALL } ] [ -V ]
+[ -A ] [ -u ] [ -V ] [ -I { SUM | CPU | SCPU | ALL } ]
+[ -P { <cpu> [,...] | ON | ALL } ]
