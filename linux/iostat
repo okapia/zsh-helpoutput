@@ -1,5 +1,6 @@
 Usage: iostat [ options ] [ <interval> [ <count> ] ]
 Options are:
-[ -c ] [ -d ] [ -N ] [ -n ] [ -h ] [ -k | -m ] [ -t ] [ -V ] [ -x ] [ -y ] [ -z ]
-[ -j { ID | LABEL | PATH | UUID | ... } [ <device> [...] | ALL ] ]
-[ <device> [...] | ALL ] [ -p [ <device> [,...] | ALL ] ]
+[ -c ] [ -d ] [ -h ] [ -k | -m ] [ -N ] [ -t ] [ -V ] [ -x ] [ -y ] [ -z ]
+[ -j { ID | LABEL | PATH | UUID | ... } ]
+[ [ -T ] -g <group_name> ] [ -p [ <device> [,...] | ALL ] ]
+[ <device> [...] | ALL ]
