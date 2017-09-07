@@ -18,6 +18,11 @@ version 4.9.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
+cmd chrt
+version 2.30.1
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd chsh
 version 2.30.1
 variant util-linux -- -v
@@ -70,6 +75,11 @@ version 2.10-alpha
 emit -V | field 2 | getversion
 emit -h | getusage
 
+cmd ionice
+version 2.30.1
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd ip
 version 170705
 emit -V | sed 's/.*-ss//' | getversion
@@ -81,6 +91,11 @@ emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
 cmd look
+version 2.30.1
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd losetup
 version 2.30.1
 emit -V | field -1 | getversion
 emit -h | getusage
@@ -181,6 +196,11 @@ cmd w
 version 3.3.12
 emit -V | field -1 | getversion
 emit --help | getusage
+
+cmd whereis
+version 2.30.1
+emit -V | field -1 | getversion
+emit -h | getusage
 
 cmd wipefs
 version 2.30.1

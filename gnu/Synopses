@@ -242,6 +242,11 @@ variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage
 
+cmd screen
+version 4.06.01
+emit -v | field 3 | getversion
+emit -h | getusage
+
 cmd sed
 version 4.4
 variant -g 'GNU' -- --version
@@ -306,4 +311,3 @@ version 4.6.0
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
-

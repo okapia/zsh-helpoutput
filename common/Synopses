@@ -95,6 +95,11 @@ version 1.48.03
 emit --version | field 3 | getversion
 emit -h | grep -v 'Data at:' | getusage
 
+cmd fusermount
+version 2.9.4
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd ffmpeg
 version 0.10.2
 emit -version | field 3 | getversion
@@ -197,6 +202,11 @@ version 1.03
 emit -V | sed -n 's/^lzop version: v//p' | field 1 | tr -d , | getversion
 emit -h | getusage
 
+cmd metaflac
+version 1.3.0
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd mlocate
 version 0.26
 variant -n locate mlocate -- --version
@@ -295,11 +305,6 @@ version 3.1.2
 emit --version | line 1 | field 3 | getversion
 emit -h | getusage
 emit --daemon -h | getusage daemon
-
-cmd screen
-version 4.06.01
-emit -v | field 3 | getversion
-emit -h | getusage
 
 cmd smbclient
 version 4.5.2
@@ -449,11 +454,6 @@ cmd vim
 version 8.0
 emit -version | field 5 | getversion
 vimver="$_verinst"
-emit -h | getusage
-
-cmd vimdiff
-version 8.0
-emit --version | field 5 | getversion
 emit -h | getusage
 
 cmd w3m
