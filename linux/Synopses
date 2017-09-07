@@ -221,6 +221,11 @@ version 10.1.5
 emit -V | field -1 | getversion
 emit -? | getusage
 
+cmd iostat
+version 10.1.5
+emit -V | field -1 | getversion
+emit -? | getusage
+
 cmd mpstat
 version 10.1.5
 emit -V | field -1 | getversion
