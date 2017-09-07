@@ -114,7 +114,7 @@ uname -r | getversion
 emit -? | getusage
 
 cmd gcore
-version 6.1.5
+version 7.1
 uname -r | getversion
 emit -? | getusage
 
@@ -307,6 +307,11 @@ cmd sed
 version 7.1
 uname -r | getversion
 emit -? | getusage
+
+cmd service
+version 7.1
+uname -r | getversion
+emit | getusage
 
 cmd showmount
 version 7.1
