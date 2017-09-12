@@ -41,12 +41,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.11.14
+version 1.11.16
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.11.14
+version 1.11.16
 pack | getversion
 emit -h | getusage
 
@@ -96,7 +96,7 @@ emit --version | field 3 | getversion
 emit -h | grep -v 'Data at:' | getusage
 
 cmd fusermount
-version 2.9.4
+version 2.9.7
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -181,7 +181,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.52.3
+version 2.53.7
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -224,7 +224,7 @@ emit help | line 2 | field -1 | getversion
 emit help | getusage
 
 cmd mutt
-version 1.8.3
+version 1.9.0
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -265,7 +265,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.6.2
+version 4.7.0rc5
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -280,7 +280,7 @@ emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
 cmd prove
-version 3.38
+version 3.39
 emit --version | tr _ ' ' | field 2 | tr -d v | getversion
 emit --help | getusage
 
@@ -307,7 +307,7 @@ emit -h | getusage
 emit --daemon -h | getusage daemon
 
 cmd smbclient
-version 4.5.2
+version 4.7.0rc5
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
@@ -395,7 +395,7 @@ emit -VERS | field -1 | getversion
 emit -H | getusage
 
 cmd tcpdump
-version 4.9.1
+version 4.9.2
 variant ! 'Apple' -- --version
 emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage
@@ -467,12 +467,12 @@ emit -V | tr -d v | guess | getversion
 emit -h | getusage
 
 cmd xmllint
-version 20904
+version 20905
 emit --version | line 1 | field 5 | getversion
 emit | getusage
 
 cmd xsltproc
-version 10129
+version 10130
 emit -V | line 1 | field 5 | getversion
 emit | getusage
 

@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.9.1
+version 4.13
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -36,12 +36,12 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.12
+version 4.13.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd dhclient
-version 4.3.5
+version 4.3.6b1
 emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
 emit -? | sed '/^Please report/ {N;N;d}' | getusage
 
@@ -51,7 +51,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 4.8
+version 4.11
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -148,7 +148,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.18
+version 4.19
 emit -V | field 4 | getversion
 emit -h | getusage
 
