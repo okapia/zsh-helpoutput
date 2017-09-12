@@ -42,6 +42,8 @@ Mandatory arguments to long options are mandatory for short options too.
                                that points to a directory
       --hide=PATTERN         do not list implied entries matching shell PATTERN
                                (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
       --indicator-style=WORD  append indicator with style WORD to entry names:
                                none (default), slash (-p),
                                file-type (--file-type), classify (-F)
