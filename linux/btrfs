@@ -71,8 +71,14 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs subvolume find-new <path> <lastgen>
         List the recently modified files in a filesystem
 
-    btrfs subvolume show <subvol-path>
-        Show more information of the subvolume
+    btrfs subvolume show [options] <subvol-path>|<mnt>
+        Show more information about the subvolume
+
+        -r|--rootid   rootid of the subvolume
+        -u|--uuid     uuid of the subvolume
+
+        If no option is specified, <subvol-path> will be shown, otherwise
+        the rootid or uuid are resolved relative to the <mnt> path.
 
     btrfs subvolume sync <path> [<subvol-id>...]
         Wait until given subvolume(s) are completely removed from the filesystem.
@@ -288,6 +294,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
 
         -s|--super <superblock>     use this superblock copy
         -b|--backup                 use the first valid backup root copy
+        --force                     skip mount checks, repair is not possible
         --repair                    try to repair the filesystem
         --readonly                  run in read-only mode (default)
         --init-csum-tree            create a new CRC tree
