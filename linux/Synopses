@@ -36,7 +36,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.13.0
+version 4.14.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -237,31 +237,31 @@ emit -h | getusage
 # sysstat
 
 cmd cifsiostat
-version 10.1.5
+version 11.6.0
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd iostat
-version 10.1.5
+version 11.6.0
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd mpstat
-version 10.1.5
+version 11.6.0
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pidstat
-version 10.1.5
+version 11.6.0
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sadf
-version 10.1.5
+version 11.6.0
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sar
-version 10.1.5
+version 11.6.0
 emit -V | field -1 | getversion
 emit -? | getusage

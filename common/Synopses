@@ -181,7 +181,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.53.7
+version 2.54.0
 subdir
 emit --version | getversion
 emit -h | getusage

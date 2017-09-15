@@ -1,5 +1,5 @@
 cmd rpm
-version 4.13.0-rc1
+version 4.14.0-rc1
 emit --version | field -1 | getversion
 emit --help | getusage
 
@@ -15,7 +15,7 @@ emit --version | line 1 | getversion
 emit -h | getusage
 
 cmd scl
-version 2.0.1
+version 2.0.2
 # dated releases, e.g 20130529 are older so prefix with 0.
 step rpm -q --qf '%{VERSION}' scl-utils | sed -r 's/[0-9]{8}/0.&/' | getversion
 emit -h | getusage
