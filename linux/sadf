@@ -1,5 +1,6 @@
-Usage: sadf [ options ] [ <interval> [ <count> ] ] [ <datafile> ]
+Usage: sadf [ options ] [ <interval> [ <count> ] ] [ <datafile> | -[0-9]+ ]
 Options are:
-[ -C ] [ -d | -j | -p | -x ] [ -H ] [ -h ] [ -T | -t | -U ] [ -V ]
-[ -P { <cpu> [,...] | ALL } ] [ -s [ <hh:mm:ss> ] ] [ -e [ <hh:mm:ss> ] ]
+[ -C ] [ -c | -d | -g | -j | -p | -r | -x ] [ -H ] [ -h ] [ -T | -t | -U ] [ -V ]
+[ -O <opts> [,...] ] [ -P { <cpu> [,...] | ALL } ]
+[ -s [ <hh:mm[:ss]> ] ] [ -e [ <hh:mm[:ss]> ] ]
 [ -- <sar_options> ]
