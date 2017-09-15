@@ -296,7 +296,7 @@ emit | field 2 | getversion
 subcmds help @
 
 cmd ruby
-version 2.4.1p111
+version 2.4.2p198
 emit --version | field 2 | getversion
 emit --help | getusage
 
