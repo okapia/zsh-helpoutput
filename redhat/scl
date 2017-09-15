@@ -8,9 +8,10 @@ description:
     enable|run            run given command from Software Collection 
     load|unload           enable/disable collection in current shell
     list-collections      list installed Software Collections
-    list-packages         list pacages in Sofware Collection
-    man                   show manual paga about Software Collection
-    register|deregister   register/deregister Sofware Collection
+    list-enabled          list Software Collections enabled in current shell
+    list-packages         list packages in Software Collection
+    man                   show manual page about Software Collection
+    register|deregister   register/deregister Software Collection
     --help                show this help
 
 Use '-' as <command> to read the command from standard input.
