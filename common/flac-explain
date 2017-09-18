@@ -1,7 +1,7 @@
 ===============================================================================
-flac - Command-line FLAC encoder/decoder version 1.3.0
+flac - Command-line FLAC encoder/decoder version 1.3.2
 Copyright (C) 2000-2009  Josh Coalson
-Copyright (C) 2011-2013  Xiph.Org Foundation
+Copyright (C) 2011-2016  Xiph.Org Foundation
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -25,7 +25,7 @@ Usage:
 Analyzing: flac -a [<general-options>] [<analysis-options>] [FLACFILE [...]]
 
 Be sure to read the list of known bugs at:
-http://flac.sourceforge.net/documentation_bugs.html
+http://xiph.org/flac/documentation_bugs.html
 
 For encoding:
   The input file(s) may be a PCM WAVE or RF64 file, AIFF (or uncompressed
@@ -151,6 +151,9 @@ encoding options:
                                output in parallel and comparing to the
                                original
       --lax                    Allow encoder to generate non-Subset files
+      --ignore-chunk-sizes     Ignore data chunk sizes in WAVE/AIFF files;
+                               useful when piping data from programs which
+                               generate bogus data chunk sizes.
       --sector-align           Align encoding of multiple CD format WAVE files
                                on sector boundaries.  This option is DEPRECATED
                                and may not exist in future versions of flac.
@@ -270,8 +273,11 @@ encoding options:
   -5, --compression-level-5          Synonymous with -l 8 -b 4096 -m -r 5
                                      -5 is the default setting
   -6, --compression-level-6          Synonymous with -l 8 -b 4096 -m -r 6
-  -7, --compression-level-7          Synonymous with -l 8 -b 4096 -m -e -r 6
-  -8, --compression-level-8, --best  Synonymous with -l 12 -b 4096 -m -e -r 6
+                                        -A tukey(0.5) -A partial_tukey(2)
+  -7, --compression-level-7          Synonymous with -l 12 -b 4096 -m -r 6
+                                         -A tukey(0.5) -A partial_tukey(2)
+  -8, --compression-level-8, --best  Synonymous with -l 12 -b 4096 -m -r 6
+                    -A tukey(0.5) -A partial_tukey(2) -A punchout_tukey(3)
   -m, --mid-side                     Try mid-side coding for each frame
                                      (stereo only)
   -M, --adaptive-mid-side            Adaptive mid-side coding for all frames
@@ -282,12 +288,12 @@ encoding options:
                                      blackman, blackman_harris_4term_92db,
                                      connes, flattop, gauss(STDDEV), hamming,
                                      hann, kaiser_bessel, nuttall, rectangle,
-                                     triangle, tukey(P), welch.  More than one
-                                     may be specified but encoding time is a
-                                     multiple of the number of functions since
-                                     they are each tried in turn.  The encoder
-                                     chooses suitable defaults in the absence
-                                     of any -A options.
+                                     triangle, tukey(P), welch, partial_tukey(n),
+                                     punchout_tukey(n). More than one may be
+                                     specified but encoding time is a multiple of
+                                     the number of functions since they are each
+                                     tried in turn.  The encoder chooses suitable
+                                     defaults in the absence of any -A options.
   -l, --max-lpc-order=#              Max LPC order; 0 => only fixed predictors.
                                      Must be <= 12 for Subset streams if sample
                                      rate is <=48kHz.
@@ -299,24 +305,10 @@ encoding options:
                                      encoder decide (the minimun is 5, the
                                      default is -q 0)
   -r, --rice-partition-order=[#,]#   Set [min,]max residual partition order
-                                     (# is 0..16; min defaults to 0; the
-                                     default is -r 0; above 4 doesn't usually
-                                     help much)
+                                     (# is 0 to 15 inclusive; min defaults to 0;
+                                     the default is -r 0; above 4 does not
+                                     usually help much)
 format options:
-      --endian={big|little}    Set byte order for samples
-      --channels=#             Number of channels
-      --bps=#                  Number of bits per sample
-      --sample-rate=#          Sample rate in Hz
-      --sign={signed|unsigned} Sign of samples (the default is signed)
-      --input-size=#           Size of the raw input in bytes.  If you are
-                               encoding raw samples from stdin, you must set
-                               this option in order to be able to use --skip,
-                               --until, --cuesheet, or other options that need
-                               to know the size of the input beforehand.  If
-                               the size given is greater than what is found in
-                               the input stream, the encoder will complain
-                               about an unexpected end-of-file.  If the size
-                               given is less, samples will be truncated.
       --force-raw-format       Force input (when encoding) or output (when
                                decoding) to be treated as raw samples
       --force-aiff-format      Force the decoder to output AIFF format.  This
@@ -334,6 +326,21 @@ format options:
                                set by -o) ends with .w64; this option
                                has no effect when encoding since input Wave64 is
                                auto-detected.
+raw format options:
+      --endian={big|little}    Set byte order for samples
+      --channels=#             Number of channels
+      --bps=#                  Number of bits per sample
+      --sample-rate=#          Sample rate in Hz
+      --sign={signed|unsigned} Sign of samples (the default is signed)
+      --input-size=#           Size of the raw input in bytes.  If you are
+                               encoding raw samples from stdin, you must set
+                               this option in order to be able to use --skip,
+                               --until, --cuesheet, or other options that need
+                               to know the size of the input beforehand.  If
+                               the size given is greater than what is found in
+                               the input stream, the encoder will complain
+                               about an unexpected end-of-file.  If the size
+                               given is less, samples will be truncated.
 negative options:
       --no-adaptive-mid-side
       --no-cued-seekpoints
@@ -349,6 +356,7 @@ negative options:
       --no-qlp-coeff-prec-search
       --no-residual-gnuplot
       --no-residual-text
+      --no-ignore-chunk-sizes
       --no-sector-align
       --no-seektable
       --no-silent

@@ -1,7 +1,7 @@
 ===============================================================================
-flac - Command-line FLAC encoder/decoder version 1.3.0
+flac - Command-line FLAC encoder/decoder version 1.3.2
 Copyright (C) 2000-2009  Josh Coalson
-Copyright (C) 2011-2013  Xiph.Org Foundation
+Copyright (C) 2011-2016  Xiph.Org Foundation
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -25,7 +25,7 @@ Usage:
 Analyzing: flac -a [<general-options>] [<analysis-options>] [FLACFILE [...]]
 
 Be sure to read the list of known bugs at:
-http://flac.sourceforge.net/documentation_bugs.html
+http://xiph.org/flac/documentation_bugs.html
 
 general options:
   -v, --version                Show the flac version number
@@ -74,8 +74,11 @@ encoding options:
   -4, --compression-level-4          Synonymous with -l 8 -b 4096 -M -r 4
   -5, --compression-level-5          Synonymous with -l 8 -b 4096 -m -r 5
   -6, --compression-level-6          Synonymous with -l 8 -b 4096 -m -r 6
-  -7, --compression-level-7          Synonymous with -l 8 -b 4096 -m -e -r 6
-  -8, --compression-level-8, --best  Synonymous with -l 12 -b 4096 -m -e -r 6
+                                        -A tukey(0.5) -A partial_tukey(2)
+  -7, --compression-level-7          Synonymous with -l 12 -b 4096 -m -r 6
+                                         -A tukey(0.5) -A partial_tukey(2)
+  -8, --compression-level-8, --best  Synonymous with -l 12 -b 4096 -m -r 6
+                    -A tukey(0.5) -A partial_tukey(2) -A punchout_tukey(3)
   -b, --blocksize=#                  Specify blocksize in samples
   -m, --mid-side                     Try mid-side coding for each frame
   -M, --adaptive-mid-side            Adaptive mid-side coding for all frames
@@ -86,21 +89,23 @@ encoding options:
   -q, --qlp-coeff-precision=#        Specify precision in bits
   -r, --rice-partition-order=[#,]#   Set [min,]max residual partition order
 format options:
+      --force-raw-format       Treat input or output as raw samples
+      --force-aiff-format      Force decoding to AIFF format
+      --force-rf64-format      Force decoding to RF64 format
+      --force-wave64-format    Force decoding to Wave64 format
+raw format options:
       --endian={big|little}    Set byte order for samples
       --channels=#             Number of channels
       --bps=#                  Number of bits per sample
       --sample-rate=#          Sample rate in Hz
       --sign={signed|unsigned} Sign of samples
       --input-size=#           Size of the raw input in bytes
-      --force-raw-format       Treat input or output as raw samples
-      --force-aiff-format      Force decoding to AIFF format
-      --force-rf64-format      Force decoding to RF64 format
-      --force-wave64-format    Force decoding to Wave64 format
 negative options:
       --no-adaptive-mid-side
       --no-cued-seekpoints
       --no-decode-through-errors
       --no-delete-input-file
+      --no-error-on-compression-fail
       --no-preserve-modtime
       --no-keep-foreign-metadata
       --no-exhaustive-model-search
