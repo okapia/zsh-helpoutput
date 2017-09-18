@@ -1,0 +1,14 @@
+
+Usage:
+ pidof [options] [program [...]]
+
+Options:
+ -s, --single-shot         return one PID only
+ -c, --check-root          omit processes with different root
+ -x                        also find shells running the named scripts
+ -o, --omit-pid <PID,...>  omit processes with PID
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pidof(1).
