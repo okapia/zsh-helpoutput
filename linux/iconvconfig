@@ -1,0 +1,17 @@
+Usage: iconvconfig [OPTION...] [DIR...]
+Create fastloading iconv module configuration file.
+
+      --nostdlib             Do not search standard directories, only those on
+                             the command line
+  -o, --output=FILE          Put output in FILE instead of installed location
+                             (--prefix does not apply to FILE)
+      --prefix=PATH          Prefix used for all file accesses
+  -?, --help                 Give this help list
+      --usage                Give a short usage message
+  -V, --version              Print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/libc/bugs.html>.
