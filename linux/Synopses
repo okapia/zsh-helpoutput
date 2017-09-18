@@ -40,6 +40,11 @@ version 4.14.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
+cmd cryptsetup
+version 1.7.5
+emit --version | field 2 | getversion
+emit -? | getusage
+
 cmd dhclient
 version 4.3.6b1
 emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
@@ -130,6 +135,11 @@ emit -? | getusage
 cmd pgrep
 version 3.3.12
 emit -V | tr -d \) | field -1 | getversion
+emit -h | getusage
+
+cmd pidof
+version 3.3.10
+emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ps
