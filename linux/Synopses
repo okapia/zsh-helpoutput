@@ -75,6 +75,11 @@ version 2.0.2
 emit -v | field 2 | getversion
 emit -h | getusage
 
+cmd iconvconfig
+version 2.26
+emit -V | field -1 | getversion
+emit -? | getusage
+
 cmd ifconfig
 version 2.10-alpha
 emit -V | field 2 | getversion
@@ -86,7 +91,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 170705
+version 170905
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -158,7 +163,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 170705
+version 170905
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
@@ -201,6 +206,11 @@ cmd setfattr
 version 2.4.47
 emit --version | field 2 | getversion
 emit --help | getusage
+
+cmd tune2fs
+version 1.43.6
+emit -V | sed -n '$p'  | field 2 | getversion
+emit -? | getusage
 
 cmd vmstat
 version 3.3.12

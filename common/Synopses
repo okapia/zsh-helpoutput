@@ -143,7 +143,7 @@ unset LESSOPEN
 emit -? | getusage
 
 cmd lftp
-version 4.8.0
+version 4.8.1
 emit --version | field 4 | getversion
 emit -h | getusage
 
@@ -423,7 +423,7 @@ emit --version | field 2 | tr -d v | getversion
 emit --help | getusage
 
 cmd tmux
-version 2.3
+version 2.5
 emit -V | field -1 | getversion
 emit -? | getusage
 emit list-commands | getusage commands
