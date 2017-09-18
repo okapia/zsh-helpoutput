@@ -40,8 +40,8 @@ Usage: ss [ OPTIONS ]
    -F, --filter=FILE   read filter information from FILE
        FILTER := [ state STATE-FILTER ] [ EXPRESSION ]
        STATE-FILTER := {all|connected|synchronized|bucket|big|TCP-STATES}
-         TCP-STATES := {established|syn-sent|syn-recv|fin-wait-{1,2}|time-wait|closed|close-wait|last-ack|listen|closing}
+         TCP-STATES := {established|syn-sent|syn-recv|fin-wait-{1,2}|time-wait|closed|close-wait|last-ack|listening|closing}
           connected := {established|syn-sent|syn-recv|fin-wait-{1,2}|time-wait|close-wait|last-ack|closing}
        synchronized := {established|syn-recv|fin-wait-{1,2}|time-wait|close-wait|last-ack|closing}
              bucket := {syn-recv|time-wait}
-                big := {established|syn-sent|fin-wait-{1,2}|closed|close-wait|last-ack|listen|closing}
+                big := {established|syn-sent|fin-wait-{1,2}|closed|close-wait|last-ack|listening|closing}
