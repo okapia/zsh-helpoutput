@@ -143,7 +143,7 @@ emit -V | tr -d \) | field -1 | getversion
 emit -h | getusage
 
 cmd pidof
-version 3.3.10
+version 3.3.12
 emit -V | field -1 | getversion
 emit -h | getusage
 
