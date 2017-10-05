@@ -74,18 +74,18 @@ emit -V | field 3 | tr -d , | getversion
 emit -h | getusage
 
 cmd gcc
-version 6.3.1
+version 7.2.1
 variant ! 'LLVM' -- --version
 emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | getversion
 emit --help | getusage
 
 cmd gdb
-version 8.0
+version 8.0.1
 emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 
 cmd getent
-version 2.26
+version 2.26.90
 variant 'GNU' -- --version
 emit -V | field -1 | getversion
 emit -? | getusage
@@ -116,7 +116,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd gprof
-version 2.29
+version 2.29.1
 variant -g GNU -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
@@ -145,12 +145,12 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd install-info
-version 6.4
+version 6.5
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd makeinfo
-version 6.4
+version 6.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -160,12 +160,12 @@ emit --version | field -2 | sed 's/)$//' | getversion
 emit --help | nobug | getusage
 
 cmd texindex
-version 6.4
+version 6.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ldd
-version 2.26
+version 2.26.90
 variant 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -201,13 +201,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd nm
-version 2.29
+version 2.29.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | nobug | getusage
 
 cmd objdump
-version 2.29
+version 2.29.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
@@ -231,13 +231,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ranlib
-version 2.29
+version 2.29.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | getusage
 
 cmd readelf
-version 2.29
+version 2.29.1
 variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage
@@ -260,7 +260,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd strip
-version 2.29
+version 2.29.1
 variant -g 'GNU' -- --version
 emit -V | guess | getversion
 emit -h | egrep -v '(supported targets|Report bugs to)' | getusage

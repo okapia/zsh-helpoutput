@@ -41,12 +41,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.11.16
+version 1.11.18
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.11.16
+version 1.11.18
 pack | getversion
 emit -h | getusage
 
@@ -169,7 +169,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.14.1
+version 2.14.2
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -230,12 +230,12 @@ emit help | line 2 | field -1 | getversion
 emit help | getusage
 
 cmd mtr
-version 0.85
+version 0.92
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.9.0
+version 1.9.1
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -286,7 +286,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.26.0
+version 5.26.1
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
