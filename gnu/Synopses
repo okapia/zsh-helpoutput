@@ -56,6 +56,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd expand
+version 8.28
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd find
 version 4.6.0
 variant -g 'GNU' -- --version
@@ -111,7 +117,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.5.14
+version 3.6.0
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -200,11 +206,23 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd mv
+version 8.28
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd nm
 version 2.29.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | nobug | getusage
+
+cmd numfmt
+version 8.28
+variant -g GNU -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
 
 cmd objdump
 version 2.29.1
@@ -253,7 +271,25 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd seq
+version 8.28
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd sort
+version 8.28
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd split
+version x
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd stdbuf
 version 8.28
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
@@ -276,6 +312,12 @@ version 1.20
 variant -g 'GNU' -- --version
 emit --version | field -1 | getusage
 emit --help | nobug | getusage
+
+cmd timeout
+version 8.28
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
 
 cmd touch
 version 8.28
