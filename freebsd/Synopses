@@ -13,6 +13,11 @@ version 11.1-RELEASE
 uname -r | getversion
 emit | getusage
 
+cmd expand
+version 11.1-RELEASE-p1
+uname -r | getversion
+emit -? | getusage
+
 cmd fetch
 version 11.1-RELEASE
 uname -r | getversion
@@ -105,6 +110,11 @@ emit | getusage
 
 cmd sockstat
 version 11.1-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd stdbuf
+version 11.1-RELEASE-p1
 uname -r | getversion
 emit -? | getusage
 
@@ -361,10 +371,20 @@ version 11.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
+cmd seq
+version 11.1-RELEASE-p1
+uname -r | getversion
+emit -h | getusage
+
 cmd sort
 version 2.3-FreeBSD
 emit --version | getversion
 emit --help | getusage
+
+cmd split
+version 11.1-RELEASE-p1
+uname -r | getversion
+emit -? | getusage
 
 cmd su
 version 11.1-RELEASE
@@ -387,7 +407,7 @@ uname -r | getversion
 emit -? | getusage
 
 cmd timeout
-version 11.1-RELEASE
+version 11.1-RELEASE-p1
 uname -r | getversion
 emit -h | getusage
 
