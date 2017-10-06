@@ -1,0 +1,2 @@
+stdbuf: illegal option -- ?
+Usage: stdbuf [-e 0|L|<sz>] [-i 0|L|<sz>] [-o 0|L|<sz>] <cmd> [args ...]
