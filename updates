@@ -101,7 +101,7 @@ version() {
   _verzsh="$1"
 }
 
-alias emit='(( _run && _present )) && noglob 2>&1 $_runcmd'
+alias emit='(( _run && _present )) && noglob command 2>&1 $_runcmd'
 alias step='(( _run && _present )) &&'
 
 pack() {
@@ -173,7 +173,7 @@ variant() {
   fi
   (( $# )) || return
   i=$argv[(i)--]
-  $_runcmd "${(@)argv[i+1,-1]}" 2>&1 | egrep -- "$1" >/dev/null
+  command $_runcmd "${(@)argv[i+1,-1]}" 2>&1 | egrep -- "$1" >/dev/null
   _present=$?
   (( invert || (_present = !_present) ))
 }
