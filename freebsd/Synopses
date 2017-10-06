@@ -316,6 +316,11 @@ version 11.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
+cmd mv
+version 11.1-RELEASE
+uname -r | getversion
+emit -h | getusage
+
 cmd nl
 version 11.1-RELEASE
 uname -r | getversion
@@ -380,6 +385,11 @@ cmd tail
 version 11.1-RELEASE
 uname -r | getversion
 emit -? | getusage
+
+cmd timeout
+version 11.1-RELEASE
+uname -r | getversion
+emit -h | getusage
 
 cmd top
 version 3.5beta12
