@@ -104,6 +104,11 @@ version 10.11.6
 sw_vers -productVersion | getversion
 emit -? | getusage
 
+cmd expand
+version 10.11.6
+sw_vers -productVersion | getversion
+emit -? | getusage
+
 cmd find
 version 10.11.6
 sw_vers -productVersion | getversion
@@ -199,6 +204,11 @@ version 10.11.6
 sw_vers -productVersion | getversion
 emit -? | getusage
 
+cmd mv
+version 10.11.6
+sw_vers -productVersion | getversion
+emit | getusage
+
 cmd netstat
 version 10.11.6
 sw_vers -productVersion | getversion
@@ -254,12 +264,22 @@ version 10.11.6
 sw_vers -productVersion | getversion
 emit -? | getusage
 
+cmd seq
+version 10.11.6
+sw_vers -productVersion | getversion
+emit | getusage
+
 cmd service
 version 10.3.0
 sw_vers -productVersion | getversion
 emit | getusage
 
 cmd showmount
+version 10.11.6
+sw_vers -productVersion | getversion
+emit -? | getusage
+
+cmd split
 version 10.11.6
 sw_vers -productVersion | getversion
 emit -? | getusage
