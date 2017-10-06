@@ -1,0 +1,3 @@
+mktemp: illegal option -- ?
+usage: mktemp [-d] [-q] [-t prefix] [-u] template ...
+       mktemp [-d] [-q] [-u] -t prefix 

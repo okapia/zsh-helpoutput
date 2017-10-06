@@ -1,0 +1,5 @@
+split: illegal option -- ?
+usage: split [-l line_count] [-a suffix_length] [file [prefix]]
+       split -b byte_count[K|k|M|m|G|g] [-a suffix_length] [file [prefix]]
+       split -n chunk_count [-a suffix_length] [file [prefix]]
+       split -p pattern [-a suffix_length] [file [prefix]]

@@ -1,0 +1,1 @@
+usage: seq [-w] [-f format] [-s string] [-t string] [first [incr]] last
