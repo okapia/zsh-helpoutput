@@ -198,6 +198,11 @@ version 1.0.4
 emit --version | field 2 | getversion
 emit --help | getusage
 
+cmd jq
+version 1.5
+emit -V | sed s'/^jq-//' | getversion
+emit -h | getusage
+
 cmd lsof
 version 4.90
 emit -v | line 2 | field 2 | getversion
