@@ -20,7 +20,7 @@ emit | getusage
 
 cmd setxkbmap
 version 7.7
-[[ $OSTYPE = openbsd* ]] && (( _present=0 ))
+[[ $OSTYPE = (net|open)bsd* ]] && (( _present=0 ))
 pack | getversion
 emit -? | getusage
 
@@ -46,6 +46,6 @@ emit -h | getusage
 
 cmd xterm
 version 7.6.0
-[[ $OSTYPE = (solaris|openbsd)* ]] && (( _present=0 ))
+[[ $OSTYPE = (solaris|(net|open)bsd)* ]] && (( _present=0 ))
 emit -v | tr '(' ' ' | field 2 | getversion
 emit -h | getusage

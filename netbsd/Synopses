@@ -93,6 +93,11 @@ version 7.1
 uname -r | getversion
 emit -? | getusage
 
+cmd expand
+version 7.1
+uname -r | getversion
+emit -? | getusage
+
 cmd find
 version 7.1
 uname -r | getversion
@@ -233,6 +238,11 @@ version 7.1
 uname -r | getversion
 emit | getusage
 
+cmd mv
+version 7.1
+uname -r | getversion
+emit | getusage
+
 cmd netstat
 version 7.1
 uname -r | getversion
@@ -308,6 +318,11 @@ version 7.1
 uname -r | getversion
 emit -? | getusage
 
+cmd seq
+version 7.1
+uname -r | getversion
+emit | getusage
+
 cmd service
 version 7.1
 uname -r | getversion
@@ -319,6 +334,11 @@ uname -r | getversion
 emit -? | getusage
 
 cmd sort
+version 7.1
+uname -r | getversion
+emit -? | getusage
+
+cmd split
 version 7.1
 uname -r | getversion
 emit -? | getusage
@@ -342,6 +362,11 @@ cmd tail
 version 7.1
 uname -r | getversion
 emit -? | getusage
+
+cmd timeout
+version 7.1
+uname -r | getversion
+emit | getusage
 
 cmd touch
 version 7.1
