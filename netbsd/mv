@@ -1,0 +1,2 @@
+usage: mv [-fiv] source target
+       mv [-fiv] source ... directory
