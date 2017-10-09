@@ -483,12 +483,12 @@ emit -V | tr -d v | guess | getversion
 emit -h | getusage
 
 cmd xmllint
-version 20905
+version 20906
 emit --version | line 1 | field 5 | getversion
 emit | getusage
 
 cmd xsltproc
-version 10130
+version 10131
 emit -V | line 1 | field 5 | getversion
 emit | getusage
 

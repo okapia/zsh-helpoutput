@@ -146,7 +146,7 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd info
-version 6.3
+version 6.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -161,7 +161,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd texi2dvi
-version 6.1
+version 6.5
 emit --version | field -2 | sed 's/)$//' | getversion
 emit --help | nobug | getusage
 
@@ -284,7 +284,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd split
-version x
+version 8.28
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
