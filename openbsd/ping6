@@ -1,0 +1,3 @@
+usage: ping6 [-dEefHLmnqv] [-c count] [-h hoplimit] [-I sourceaddr]
+	[-i wait] [-l preload] [-p pattern] [-s packetsize] [-V rtable]
+	[-w maxwait] host
