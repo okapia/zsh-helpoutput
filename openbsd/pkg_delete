@@ -1,2 +1,2 @@
 pkg_delete: Unknown option -?
-Usage: pkg_delete [-acimnqsvXx] [-B pkg-destdir] [-D name[=value]] [pkg-name ...]
+Usage: pkg_delete [-acimnqsVvXx] [-B pkg-destdir] [-D name[=value]] [pkg-name ...]

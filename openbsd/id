@@ -4,4 +4,5 @@ usage: id [user]
        id -G [-n] [user]
        id -g [-nr] [user]
        id -p [user]
+       id -R
        id -u [-nr] [user]

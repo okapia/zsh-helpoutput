@@ -1,5 +1,5 @@
 netstat: unknown option -- ?
-usage: netstat [-AaBn] [-f address_family] [-M core] [-N system]
+usage: netstat [-AaBln] [-f address_family] [-M core] [-N system]
        netstat [-bdFgilmnqrstu] [-f address_family] [-M core] [-N system]
                [-T tableid]
        netstat [-bdhn] [-c count] [-I interface] [-M core] [-N system] [-w wait]
