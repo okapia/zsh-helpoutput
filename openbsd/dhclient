@@ -1,1 +1,1 @@
-usage: dhclient [-d | -q] [-u] [-c file] [-i options] [-L file] [-l file] interface
+usage: dhclient [-d | -q] [-c file] [-i options] [-L file] [-l file] interface
