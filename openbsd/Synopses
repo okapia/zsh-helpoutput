@@ -298,6 +298,11 @@ version 6.1
 uname -r | getversion
 emit | getusage
 
+cmd ping6
+version 6.1
+uname -r | getversion
+emit | getusage
+
 cmd ps
 version 6.1
 uname -r | getversion

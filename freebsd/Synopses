@@ -346,6 +346,11 @@ version 11.1-RELEASE
 uname -r | getversion
 emit | getusage
 
+cmd ping6
+version 11.1-RELEASE
+uname -r | getversion
+emit | getusage
+
 cmd pgrep
 version 11.1-RELEASE
 uname -r | getversion
