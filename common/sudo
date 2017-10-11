@@ -14,6 +14,7 @@ Options:
   -b, --background              run command in the background
   -C, --close-from=num          close all file descriptors >= num
   -E, --preserve-env            preserve user environment when running command
+      --preserve-env=list       preserve specific environment variables
   -e, --edit                    edit files instead of running a command
   -g, --group=group             run command as the specified group name or ID
   -H, --set-home                set HOME variable to target user's home dir
