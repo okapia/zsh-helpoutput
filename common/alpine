@@ -22,13 +22,11 @@ Possible Starting Arguments for Alpine program:
  -z 		Suspend - allow use of ^Z suspension
  -r 		Restricted - can only send mail to oneself
  -sort <sort>	Sort - Specify sort order of folder:
- -threadsort <sort>	Sort - Specify sort order of thread index screen:
 			arrival, subject, threaded, orderedsubject, date,
 			from, size, score, to, cc, /reverse
  -i		Index - Go directly to index, bypassing main menu
  -I <keystroke_list>   Initial keystrokes to be executed
  -n <number>	Entry in index to begin on
- -noutf8	 Warns Alpine that piped input is not encoded in utf-8
  -o 		ReadOnly - Open first folder read-only
  -conf		Configuration - Print out fresh global configuration. The
 		values of your global configuration affect all Alpine users
@@ -37,6 +35,7 @@ Possible Starting Arguments for Alpine program:
  -pinerc <file>	Configuration - Put fresh pinerc configuration in <file>
  -p <pinerc>	Use alternate .pinerc file
  -P <pine.conf>	Use alternate pine.conf file
+ -smimedir <fully_qualified_path>	directory where smime personal certificates are saved
  -passfile <fully_qualified_filename>	Set the password file to something other
 		than the default
  -pwdcertdir <fully_qualified_path>	Set the directory to store a personal
