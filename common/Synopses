@@ -587,6 +587,26 @@ version 1.4.0
 emit -V | field -1 | getversion
 emit -h | getusage
 
+# elftoolchain
+
+cmd readelf
+version 3561
+variant elftoolchain -- --version
+emit --version | field -1 | tr -Cd '[0-9]' | getversion
+emit --help | getusage elftoolchain
+
+cmd nm
+version 3561
+variant elftoolchain -- --version
+emit --version | field -1 | tr -Cd '[0-9]' | getversion
+emit --help | getusage elftoolchain
+
+cmd strings
+version 3561
+variant elftoolchain -- --version
+emit --version | field -1 | tr -Cd '[0-9]' | getversion
+emit --help | getusage elftoolchain
+
 # elfutils
 
 cmd readelf
