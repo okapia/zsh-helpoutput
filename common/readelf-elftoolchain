@@ -1,0 +1,35 @@
+Usage: readelf [options] file...
+  Display information about ELF objects and ar(1) archives.
+
+  Options:
+  -a | --all               Equivalent to specifying options '-dhIlrsASV'.
+  -c | --archive-index     Print the archive symbol table for archives.
+  -d | --dynamic           Print the contents of SHT_DYNAMIC sections.
+  -e | --headers           Print all headers in the object.
+  -g | --section-groups    Print the contents of the section groups.
+  -h | --file-header       Print the file header for the object.
+  -l | --program-headers   Print the PHDR table for the object.
+  -n | --notes             Print the contents of SHT_NOTE sections.
+  -p INDEX | --string-dump=INDEX
+                           Print the contents of section at index INDEX.
+  -r | --relocs            Print relocation information.
+  -s | --syms | --symbols  Print symbol tables.
+  -t | --section-details   Print additional information about sections.
+  -v | --version           Print a version identifier and exit.
+  -w[afilmoprsFLR] | --debug-dump={abbrev,aranges,decodedline,frames,
+                               frames-interp,info,loc,macro,pubnames,
+                               ranges,Ranges,rawline,str}
+                           Display DWARF information.
+  -x INDEX | --hex-dump=INDEX
+                           Display contents of a section as hexadecimal.
+  -A | --arch-specific     (accepted, but ignored)
+  -D | --use-dynamic       Print the symbol table specified by the DT_SYMTAB
+                           entry in the ".dynamic" section.
+  -H | --help              Print a help message.
+  -I | --histogram         Print information on bucket list lengths for 
+                           hash sections.
+  -N | --full-section-name (accepted, but ignored)
+  -S | --sections | --section-headers
+                           Print information about section headers.
+  -V | --version-info      Print symbol versoning information.
+  -W | --wide              Print information without wrapping long lines.
