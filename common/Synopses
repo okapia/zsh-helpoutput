@@ -25,7 +25,7 @@ emit | tr -d , | field 2 | getversion
 emit --help | getusage
 
 cmd augtool
-version 1.8.0
+version 1.9.0
 emit --version | field 2 | getversion
 emit --help | getusage
 emit help | getusage commands
@@ -143,7 +143,7 @@ unset LESSOPEN
 emit -? | getusage
 
 cmd lftp
-version 4.8.2
+version 4.8.3
 emit --version | field 4 | getversion
 emit -h | getusage
 
@@ -602,6 +602,12 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
+version 0.170
+variant -p 'eu-' elfutils -- --version
+emit --version | field -1 | getversion
+emit --help | nobug | getusage
+
+cmd strings
 version 0.170
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion

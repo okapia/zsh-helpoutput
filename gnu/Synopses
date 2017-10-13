@@ -295,6 +295,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd strings
+version 2.29.1
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd strip
 version 2.29.1
 variant -g 'GNU' -- --version
