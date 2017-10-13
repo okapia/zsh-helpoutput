@@ -1,0 +1,44 @@
+Usage: nm [options] file ...
+  Display symbolic information in file.
+
+  Options: 
+  -A, --print-file-name     Write the full pathname or library name of an
+                            object on each line.
+  -a, --debug-syms          Display all symbols include debugger-only
+                            symbols.
+  -B                        Equivalent to specifying "--format=bsd".
+  -C, --demangle[=style]    Decode low-level symbol names.
+      --no-demangle         Do not demangle low-level symbol names.
+  -D, --dynamic             Display only dynamic symbols.
+  -e                        Display only global and static symbols.
+  -f                        Produce full output (default).
+      --format=format       Display output in specific format.  Allowed
+                            formats are: "bsd", "posix" and "sysv".
+  -g, --extern-only         Display only global symbol information.
+  -h, --help                Show this help message.
+  -l, --line-numbers        Display filename and linenumber using
+                            debugging information.
+  -n, --numeric-sort        Sort symbols numerically by value.
+  -o                        Write numeric values in octal. Equivalent to
+                            specifying "-t o".
+  -p, --no-sort             Do not sort symbols.
+  -P                        Write information in a portable output format.
+                            Equivalent to specifying "--format=posix".
+  -r, --reverse-sort        Reverse the order of the sort.
+  -S, --print-size          Print symbol sizes instead values.
+  -s, --print-armap         Include an index of archive members.
+      --size-sort           Sort symbols by size.
+  -t, --radix=format        Write each numeric value in the specified
+                            format:
+                               d   In decimal,
+                               o   In octal,
+                               x   In hexadecimal.
+  -u, --undefined-only      Display only undefined symbols.
+      --defined-only        Display only defined symbols.
+  -V, --version             Show the version identifier for nm.
+  -v                        Sort output by value.
+  -x                        Write numeric values in hexadecimal.
+                            Equivalent to specifying "-t x".
+
+  The default options are: output in bsd format, use a hexadecimal radix,
+  sort by symbol name, do not demangle names.
