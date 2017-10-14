@@ -4,7 +4,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd alpine
-version 2.20
+version 2.21
 emit -v | field 2 | getversion
 emit -h | getusage
 
@@ -41,12 +41,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.11.18
+version 1.11.20
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.11.18
+version 1.11.20
 pack | getversion
 emit -h | getusage
 
@@ -187,7 +187,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.54.0
+version 2.54.1
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -371,7 +371,7 @@ emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 
 cmd sudo
-version 1.8.20p2
+version 1.8.21p2
 variant ! 'doas' -- -V
 emit -V | field -1 | getversion
 emit -h | getusage

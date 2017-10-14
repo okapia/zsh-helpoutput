@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.13
+version 4.13.2
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -51,7 +51,7 @@ emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
 emit -? | sed '/^Please report/ {N;N;d}' | getusage
 
 cmd dkms
-version 2.3.0.0
+version 2.4.0.0
 emit -V | field -1 | getversion
 emit | getusage
 
@@ -203,6 +203,11 @@ emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd script
+version 2.30.2
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd scriptreplay
 version 2.30.2
 emit -V | field -1 | getversion
 emit -h | getusage
