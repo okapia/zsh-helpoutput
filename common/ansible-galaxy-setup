@@ -1,0 +1,16 @@
+Usage: ansible-galaxy setup [options] source github_user github_repo secret
+
+Options:
+  -h, --help            show this help message and exit
+  -c, --ignore-certs    Ignore SSL certificate validation errors.
+  --list                List all of your integrations.
+  --remove=REMOVE_ID    Remove the integration matching the provided ID value.
+                        Use --list to see ID values.
+  -s API_SERVER, --server=API_SERVER
+                        The API server destination
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+ See 'ansible-galaxy <command> --help' for more information on a specific
+command.

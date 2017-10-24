@@ -1,0 +1,23 @@
+Usage: ansible-galaxy init [options] role_name
+
+Options:
+  --container-enabled   Initialize the skeleton role with default contents for
+                        a Container Enabled role.
+  -f, --force           Force overwriting an existing role
+  -h, --help            show this help message and exit
+  -c, --ignore-certs    Ignore SSL certificate validation errors.
+  --init-path=INIT_PATH
+                        The path in which the skeleton role will be created.
+                        The default is the current working directory.
+  --offline             Don't query the galaxy API when creating roles
+  --role-skeleton=ROLE_SKELETON
+                        The path to a role skeleton that the new role should
+                        be based upon.
+  -s API_SERVER, --server=API_SERVER
+                        The API server destination
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+ See 'ansible-galaxy <command> --help' for more information on a specific
+command.
