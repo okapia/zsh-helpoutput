@@ -1,0 +1,13 @@
+Usage: ansible-galaxy [delete|import|info|init|install|list|login|remove|search|setup] [--help] [options] ...
+
+Options:
+  -h, --help            show this help message and exit
+  -c, --ignore-certs    Ignore SSL certificate validation errors.
+  -s API_SERVER, --server=API_SERVER
+                        The API server destination
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+ See 'ansible-galaxy <command> --help' for more information on a specific
+command.

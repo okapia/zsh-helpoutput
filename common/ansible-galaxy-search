@@ -1,0 +1,23 @@
+Usage: ansible-galaxy search [searchterm1 searchterm2] [--galaxy-tags galaxy_tag1,galaxy_tag2] [--platforms platform1,platform2] [--author username]
+
+Options:
+  --author=AUTHOR       GitHub username
+  --galaxy-tags=GALAXY_TAGS
+                        list of galaxy tags to filter by
+  -h, --help            show this help message and exit
+  -c, --ignore-certs    Ignore SSL certificate validation errors.
+  --platforms=PLATFORMS
+                        list of OS platforms to filter by
+  -p ROLES_PATH, --roles-path=ROLES_PATH
+                        The path to the directory containing your roles. The
+                        default is the roles_path configured in your
+                        ansible.cfgfile (/usr/local/etc/ansible/roles if not
+                        configured)
+  -s API_SERVER, --server=API_SERVER
+                        The API server destination
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+ See 'ansible-galaxy <command> --help' for more information on a specific
+command.

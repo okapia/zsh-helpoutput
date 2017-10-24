@@ -1,0 +1,38 @@
+Usage: ansible-inventory [options] [host|group]
+
+Options:
+  --ask-vault-pass      ask for vault password
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory=INVENTORY, --inventory-file=INVENTORY
+                        specify inventory host path
+                        (default=[[u'/usr/local/etc/ansible/hosts']]) or comma
+                        separated host list. --inventory-file is deprecated
+  -l SUBSET, --limit=SUBSET
+                        further limit selected hosts to an additional pattern
+  --list-hosts          outputs a list of matching hosts; does not execute
+                        anything else
+  --new-vault-id=NEW_VAULT_ID
+                        the new vault identity to use for rekey
+  --new-vault-password-file=NEW_VAULT_PASSWORD_FILES
+                        new vault password file for rekey
+  --vars                Add vars to graph display, ignored unless used with
+                        --graph
+  --vault-id=VAULT_IDS  the vault identity to use
+  --vault-password-file=VAULT_PASSWORD_FILES
+                        vault password file
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+  -y, --yaml            Use YAML format instead of default JSON, ignored for
+                        --graph
+
+  Actions:
+    One of following must be used on invocation, ONLY ONE!
+
+    --list              Output all hosts info, works as inventory script
+    --host=HOST         Output specific host info, works as inventory script
+    --graph             create inventory graph, if supplying pattern it must
+                        be a valid group name
+
+Show Ansible inventory information, by default it uses the inventory script
+JSON format

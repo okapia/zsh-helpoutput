@@ -1,0 +1,15 @@
+Usage: ansible-config [view|dump|list] [--help] [options] [ansible.cfg]
+
+View, edit, and manage ansible configuration.
+
+Options:
+  -c CONFIG_FILE, --config=CONFIG_FILE
+                        path to configuration file, defaults to first file
+                        found in precedence.
+  -h, --help            show this help message and exit
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+ See 'ansible-config <command> --help' for more information on a specific
+command.

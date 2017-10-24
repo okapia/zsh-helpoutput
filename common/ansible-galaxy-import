@@ -1,0 +1,21 @@
+Usage: ansible-galaxy import [options] github_user github_repo
+
+Options:
+  --branch=REFERENCE    The name of a branch to import. Defaults to the
+                        repository's default branch (usually master)
+  -h, --help            show this help message and exit
+  -c, --ignore-certs    Ignore SSL certificate validation errors.
+  --no-wait             Don't wait for import results.
+  --role-name=ROLE_NAME
+                        The name the role should have, if different than the
+                        repo name
+  -s API_SERVER, --server=API_SERVER
+                        The API server destination
+  --status              Check the status of the most recent import request for
+                        given github_user/github_repo.
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+ See 'ansible-galaxy <command> --help' for more information on a specific
+command.

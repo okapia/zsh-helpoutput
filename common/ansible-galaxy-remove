@@ -1,0 +1,18 @@
+Usage: ansible-galaxy remove role1 role2 ...
+
+Options:
+  -h, --help            show this help message and exit
+  -c, --ignore-certs    Ignore SSL certificate validation errors.
+  -p ROLES_PATH, --roles-path=ROLES_PATH
+                        The path to the directory containing your roles. The
+                        default is the roles_path configured in your
+                        ansible.cfgfile (/usr/local/etc/ansible/roles if not
+                        configured)
+  -s API_SERVER, --server=API_SERVER
+                        The API server destination
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+ See 'ansible-galaxy <command> --help' for more information on a specific
+command.

@@ -1,0 +1,21 @@
+Usage: ansible-doc [-l|-s] [options] [-t <plugin type] [plugin]
+
+plugin documentation tool
+
+Options:
+  -a, --all             **For internal testing only** Show documentation for
+                        all plugins.
+  -h, --help            show this help message and exit
+  -l, --list            List available plugins
+  -M MODULE_PATH, --module-path=MODULE_PATH
+                        prepend colon-separated path(s) to module library
+                        (default=[u'/home/opk/.ansible/plugins/modules',
+                        u'/usr/local/share/ansible/plugins/modules'])
+  -s, --snippet         Show playbook snippet for specified plugin(s)
+  -t TYPE, --type=TYPE  Choose which plugin type (defaults to "module")
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+
+See man pages for Ansible CLI options or website for tutorials
+https://docs.ansible.com
