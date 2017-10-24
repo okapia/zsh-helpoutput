@@ -19,12 +19,12 @@ emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
 cmd chrt
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd chsh
-version 2.30.2
+version 2.31
 variant util-linux -- -v
 emit -v | field -1 | getversion
 emit -u | getusage
@@ -70,6 +70,11 @@ version 2.4.47
 emit --version | field 2 | getversion
 emit --help | getusage
 
+cmd hexdump
+version 2.31
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd htop
 version 2.0.2
 emit -v | field 2 | getversion
@@ -86,7 +91,7 @@ emit -V | field 2 | getversion
 emit -h | getusage
 
 cmd ionice
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -101,22 +106,22 @@ emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
 cmd last
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd look
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd losetup
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd lsblk
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -203,12 +208,12 @@ emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd script
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd scriptreplay
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -218,7 +223,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.43.6
+version 1.43.7
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
@@ -233,12 +238,12 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd whereis
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd wipefs
-version 2.30.2
+version 2.31
 emit -V | field -1 | getversion
 emit -h | getusage
 

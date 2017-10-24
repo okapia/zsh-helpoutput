@@ -239,7 +239,7 @@ emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
 
 cmd gphoto2
-version 2.5.14
+version 2.5.15
 emit --version | field -1 | getversion
 emit -? | getusage
 
@@ -490,7 +490,7 @@ emit --version | field 2 | tr -d v | getversion
 emit --help | getusage
 
 cmd tmux
-version 2.5
+version 2.6
 emit -V | field -1 | getversion
 emit -? | getusage
 emit list-commands | getusage commands
