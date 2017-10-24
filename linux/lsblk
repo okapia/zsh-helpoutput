@@ -16,6 +16,7 @@ Options:
  -I, --include <list> show only devices with specified major numbers
  -J, --json           use JSON output format
  -l, --list           use list format output
+ -T, --tree           use tree format output
  -m, --perms          output info about permissions
  -n, --noheadings     don't print headings
  -o, --output <list>  output columns
@@ -28,10 +29,10 @@ Options:
  -t, --topology       output info about topology
  -x, --sort <column>  sort output by <column>
 
- -h, --help     display this help and exit
- -V, --version  output version information and exit
+ -h, --help           display this help
+ -V, --version        display version
 
-Available columns (for --output):
+Available output columns:
         NAME  device name
        KNAME  internal kernel device name
      MAJ:MIN  major:minor device number

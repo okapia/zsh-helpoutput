@@ -16,6 +16,7 @@ Options:
 
  -o, --offset <num>            start at offset <num> into file
      --sizelimit <num>         device is limited to <num> bytes of the file
+ -b  --sector-size <num>       set the logical sector size to <num>
  -P, --partscan                create a partitioned loop device
  -r, --read-only               set up a read-only loop device
      --direct-io[=<on|off>]    open backing file with O_DIRECT
@@ -28,10 +29,10 @@ Options:
  -O, --output <cols>           specify columns to output for --list
      --raw                     use raw --list output format
 
- -h, --help     display this help and exit
- -V, --version  output version information and exit
+ -h, --help                    display this help
+ -V, --version                 display version
 
-Available --output columns:
+Available output columns:
          NAME  loop device name
     AUTOCLEAR  autoclear flag set
     BACK-FILE  device backing file
@@ -43,5 +44,6 @@ Available --output columns:
            RO  read-only device
     SIZELIMIT  size limit of the file in bytes
           DIO  access backing file with direct-io
+      LOG-SEC  logical sector size in bytes
 
 For more details see losetup(8).
