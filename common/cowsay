@@ -1,0 +1,3 @@
+cow{say,think} version 3.03, (c) 1999 Tony Monroe
+Usage: cowsay [-bdgpstwy] [-h] [-e eyes] [-f cowfile] 
+          [-l] [-n] [-T tongue] [-W wrapcolumn] [message]
