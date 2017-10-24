@@ -8,6 +8,63 @@ version 2.21
 emit -v | field 2 | getversion
 emit -h | getusage
 
+cmd ansible
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ansible-config
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ansible-console
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+emit dump -h | getusage dump
+
+cmd ansible-doc
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ansible-galaxy
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+emit info -h | getusage info
+emit search -h | getusage search
+emit setup -h | getusage setup
+emit list -h | getusage list
+emit remove -h | getusage remove
+emit init -h | getusage init
+emit install -h | getusage install
+emit import -h | getusage import
+emit login -h | getusage login
+emit delete -h | getusage delete
+
+cmd ansible-inventory
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ansible-playbook
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ansible-pull
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+
+cmd ansible-vault
+version 2.4.0.0
+emit --version | field -1 | getversion
+emit -h | getusage
+emit encrypt_string -h | getusage encrypt_string
+
 cmd ant
 version 1.9.2
 emit -version | field 4 | getversion
