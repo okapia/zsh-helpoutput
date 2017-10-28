@@ -1,4 +1,4 @@
-GNU Wget 1.19, a non-interactive network retriever.
+GNU Wget 1.19.2, a non-interactive network retriever.
 Usage: wget [OPTION]... [URL]...
 
 Mandatory arguments to long options are mandatory for short options too.
@@ -31,6 +31,7 @@ Download:
   -O,  --output-document=FILE      write documents to FILE
   -nc, --no-clobber                skip downloads that would download to
                                      existing files (overwriting them)
+       --no-netrc                  don't try to obtain credentials from .netrc
   -c,  --continue                  resume getting a partially-downloaded file
        --start-pos=OFFSET          start downloading from zero-based position OFFSET
        --progress=TYPE             select progress gauge type
@@ -91,6 +92,7 @@ HTTP options:
   -E,  --adjust-extension          save HTML/CSS documents with proper extensions
        --ignore-length             ignore 'Content-Length' header field
        --header=STRING             insert STRING among the headers
+       --compression=TYPE          choose compression, one of auto, gzip and none
        --max-redirect              maximum redirections allowed per page
        --proxy-user=USER           set USER as proxy username
        --proxy-password=PASS       set PASS as proxy password
@@ -116,7 +118,7 @@ HTTP options:
 
 HTTPS (SSL/TLS) options:
        --secure-protocol=PR        choose secure protocol, one of auto, SSLv2,
-                                     SSLv3, TLSv1 and PFS
+                                     SSLv3, TLSv1, TLSv1_1, TLSv1_2 and PFS
        --https-only                only follow secure HTTPS links
        --no-check-certificate      don't validate the server's certificate
        --certificate=FILE          client certificate file
