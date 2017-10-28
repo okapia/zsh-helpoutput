@@ -10,6 +10,7 @@ usage: git for-each-ref [<options>] [<pattern>]
 
     --count <n>           show only <n> matched refs
     --format <format>     format to use for the output
+    --color[=<when>]      respect format colors
     --sort <key>          field name to sort on
     --points-at <object>  print only refs which points at the given object
     --merged <commit>     print only refs that are merged
