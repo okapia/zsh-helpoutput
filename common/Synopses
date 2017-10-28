@@ -226,7 +226,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.14.2
+version 2.14.3
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -390,7 +390,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.20.1
+version 3.21.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage

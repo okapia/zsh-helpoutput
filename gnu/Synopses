@@ -344,7 +344,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd wget
-version 1.19.1
+version 1.19.2
 emit -V | field 3 | getversion
 emit --help | getusage
 

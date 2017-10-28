@@ -56,7 +56,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 4.11
+version 4.13
 emit --version | field -1 | getversion
 emit -h | getusage
 
