@@ -1,4 +1,4 @@
-ethtool version 4.11
+ethtool version 4.13
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
@@ -42,6 +42,7 @@ Usage:
 		[tx-usecs-high N]
 		[tx-frames-high N]
 		[sample-interval N]
+		[dmac N]
         ethtool -g|--show-ring DEVNAME	Query RX/TX ring parameters
         ethtool -G|--set-ring DEVNAME	Set RX/TX ring parameters
 		[ rx N ]
