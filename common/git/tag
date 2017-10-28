@@ -31,5 +31,6 @@ Tag listing options
     --sort <key>          field name to sort on
     --points-at <object>  print only tags of the object
     --format <format>     format to use for the output
+    --color[=<when>]      respect format colors
     -i, --ignore-case     sorting and filtering are case insensitive
 
