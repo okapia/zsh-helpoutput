@@ -1,0 +1,3 @@
+date: illegal option -- ?
+usage: date [-jnRu] [-d dst] [-r seconds] [-t west] [-v[+|-]val[ymwdHMS]] ... 
+            [-f fmt date | [[[[[cc]yy]mm]dd]HH]MM[.ss]] [+format]

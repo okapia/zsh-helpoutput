@@ -1,0 +1,1 @@
+usage: gcore [-s] [-c core] [executable] pid

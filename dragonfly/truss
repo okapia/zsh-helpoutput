@@ -1,0 +1,2 @@
+usage: truss [-S] [-o file] -p pid
+       truss [-S] [-o file] command [args]

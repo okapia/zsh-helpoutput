@@ -1,0 +1,2 @@
+seq: illegal option -- ?
+usage: seq [-f format] [-s str] [-t str] [-w] [first [incr]] last

@@ -1,0 +1,3 @@
+who: illegal option -- ?
+Usage: who [-abdHlmqrsTtuv] [file]
+	who am i

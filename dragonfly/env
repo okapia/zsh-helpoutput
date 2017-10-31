@@ -1,0 +1,2 @@
+env: illegal option -- ?
+usage: env [-i] [name=value ...] [utility [argument ...]]

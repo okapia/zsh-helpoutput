@@ -1,0 +1,3 @@
+usage: ping6 [-dfHmnNqtvwW] [-a addrtype] [-b bufsiz] [-c count] [-g gateway]
+             [-h hoplimit] [-I interface] [-i wait] [-l preload] [-P policy]
+             [-p pattern] [-S sourceaddr] [-s packetsize] [hops ...] host

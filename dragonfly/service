@@ -1,0 +1,14 @@
+
+Usage:
+service -e
+service -R
+service [-v] -l | -r
+service [-v] <rc.d script> start|stop|etc.
+service -h
+
+-e	Show services that are enabled
+-R	Stop and start enabled /usr/local/etc/rc.d /usr/pkg/etc/rc.d services
+-l	List all scripts in /etc/rc.d and /usr/local/etc/rc.d /usr/pkg/etc/rc.d
+-r	Show the results of boot time rcorder
+-v	Verbose
+

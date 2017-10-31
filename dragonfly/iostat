@@ -1,0 +1,3 @@
+iostat: illegal option -- ?
+usage: iostat [-CdhIKoT] [-c count] [-n devs]
+	      [-t type,if,pass] [-w wait] [drives]

@@ -1,0 +1,4 @@
+savecore: illegal option -- ?
+usage: savecore -c
+       savecore -C [-v] [directory device]
+       savecore [-fkvz] [directory [device ...]]

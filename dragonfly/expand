@@ -1,0 +1,2 @@
+expand: illegal option -- ?
+usage: expand [-t tablist] [file ...]

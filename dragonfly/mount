@@ -1,0 +1,4 @@
+mount: illegal option -- ?
+usage: mount [-adfpruvw] [-F fstab] [-o options] [-t type]
+       mount [-dfpruvw] {special | node}
+       mount [-dfpruvw] [-o options] [-t type] special node

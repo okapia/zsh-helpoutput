@@ -1,0 +1,2 @@
+usage: kldunload [-v] -i id
+       kldunload [-v] [-n] name

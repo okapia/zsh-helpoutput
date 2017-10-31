@@ -1,0 +1,3 @@
+cksum: illegal option -- ?
+usage: cksum [-o 1 | 2 | 3] [file ...]
+       sum [file ...]

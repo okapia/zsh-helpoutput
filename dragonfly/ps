@@ -1,0 +1,4 @@
+ps: illegal option -- ?
+usage: ps [-aCcefhHjlmrSTuvwx] [-M core] [-N system] [-O fmt] [-o fmt] [-p pid]
+          [-t tty] [-U username]
+       ps [-L]

@@ -1,0 +1,2 @@
+column: illegal option -- ?
+usage: column [-tx] [-c columns] [-s sep] [file ...]

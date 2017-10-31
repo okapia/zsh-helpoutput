@@ -1,0 +1,2 @@
+fold: illegal option -- ?
+usage: fold [-bs] [-w width] [file ...]

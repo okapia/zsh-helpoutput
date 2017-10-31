@@ -1,0 +1,6 @@
+usage: install [-bCcpSsUv] [-B suffix] [-D dest] [-f flags] [-g group]
+               [-m mode] [-o owner] file1 file2
+       install [-bCcpSsUv] [-B suffix] [-D dest] [-f flags] [-g group]
+               [-m mode] [-o owner] file1 ... fileN directory
+       install -d [-lUv] [-D dest] [-g group] [-m mode] [-o owner]
+               directory ...

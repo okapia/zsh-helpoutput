@@ -1,0 +1,3 @@
+locale: illegal option -- ?
+usage: locale [ -a | -m ]
+       locale [ -ck ] keyword ...
