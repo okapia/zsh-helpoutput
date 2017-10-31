@@ -1,0 +1,464 @@
+cmd arp
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd at
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd cat
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd chflags
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd chmod
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd chown
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd chsh
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd cksum
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd cmp
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd column
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd comm
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd cp
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd cpio
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd cu
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd cut
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd date
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd df
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd dhclient
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd dmesg
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd du
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd env
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd expand
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd fetch
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd find
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd finger
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd fmt
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd fold
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd fortune
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd fstat
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd gcore
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd getent
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd head
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd iconv
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd id
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd ifconfig
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd install
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd iostat
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd jexec
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd join
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd jot
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd kldload
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd kldunload
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd last
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd ldd
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd ln
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd locale
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd locate
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd look
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd ls
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd make
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd man
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd mkdir
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd mktemp
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd mount
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd mt
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd mv
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd netstat
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd nl
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd od
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd paste
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd patch
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd pfctl
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd pgrep
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd ping
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd ping6
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd pkgconf
+version 5.0-RELEASE
+uname -r | getversion
+emit --help | getusage
+
+cmd ps
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd rm
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd route
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd savecore
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd script
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd sed
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd seq
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd service
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd showmount
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd sockstat
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd sort
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd split
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd su
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd sysctl
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd tail
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd top
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd touch
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd tr
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd truss
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd uname
+version 5.0-RELEASE
+uname -r | getversion
+emit | getusage
+
+cmd uniq
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd vmstat
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd w
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd watch
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd wc
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd who
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd xargs
+version 5.0-RELEASE
+uname -r | getversion
+emit -? | getusage
