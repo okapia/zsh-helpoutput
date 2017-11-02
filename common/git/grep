@@ -4,9 +4,7 @@ usage: git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]
     --no-index            find in contents not managed by git
     --untracked           search in both tracked and untracked files
     --exclude-standard    ignore files specified via '.gitignore'
-    --recurse-submodules  recursivley search in each submodule
-    --parent-basename <basename>
-                          prepend parent project's basename to output
+    --recurse-submodules  recursively search in each submodule
 
     -v, --invert-match    show non-matching lines
     -i, --ignore-case     case insensitive matching

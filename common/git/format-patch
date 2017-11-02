@@ -41,4 +41,5 @@ Messaging
     --signature-file <file>
                           add a signature from a file
     -q, --quiet           don't print the patch filenames
+    --progress            show progress while generating patches
 
