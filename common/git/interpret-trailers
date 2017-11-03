@@ -1,0 +1,14 @@
+usage: git interpret-trailers [--in-place] [--trim-empty] [(--trailer <token>[(=|:)<value>])...] [<file>...]
+
+    --in-place            edit files in place
+    --trim-empty          trim empty trailers
+    --where <action>      where to place the new trailer
+    --if-exists <action>  action if trailer already exists
+    --if-missing <action>
+                          action if trailer is missing
+    --only-trailers       output only the trailers
+    --only-input          do not apply config rules
+    --unfold              join whitespace-continued values
+    --parse               set parsing options
+    --trailer <trailer>   trailer(s) to add
+
