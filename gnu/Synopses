@@ -107,7 +107,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-serv
-version 3.5.14
+version 3.6.1
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -117,7 +117,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.6.0
+version 3.6.1
 emit --version | field -1 | getversion
 emit -h | getusage
 

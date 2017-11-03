@@ -92,18 +92,23 @@ version 1.0.6
 emit -h | line 1 | field 7 | tr -d ',' | getversion
 emit -h | getusage
 
+cmd cowsay
+version 3.03
+emit -h | field 3 | getversion
+emit -h | getusage
+
 cmd cscope
 version 15.8b
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.11.20
+version 1.12.0
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.11.20
+version 1.12.0
 pack | getversion
 emit -h | getusage
 
@@ -244,14 +249,14 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.54.1
+version 2.54.2
 subdir
 emit --version | getversion
 emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.0.4
+version 1.0.5
 emit --version | field 2 | getversion
 emit --help | getusage
 
