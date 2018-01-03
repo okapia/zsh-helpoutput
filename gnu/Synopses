@@ -91,7 +91,7 @@ emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 
 cmd getent
-version 2.26.90
+version 2.26.9000
 variant 'GNU' -- --version
 emit -V | field -1 | getversion
 emit -? | getusage
@@ -140,7 +140,7 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd iconv
-version 2.26.90
+version 2.26.9000
 variant 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | getusage
@@ -171,7 +171,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ldd
-version 2.26.90
+version 2.26.9000
 variant 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage

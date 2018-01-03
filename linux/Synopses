@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.13.2
+version 4.13.3
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -36,7 +36,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.14.0
+version 4.15.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -81,7 +81,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd iconvconfig
-version 2.26.90
+version 2.26.9000
 emit -V | field -1 | getversion
 emit -? | getusage
 
@@ -96,7 +96,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 170905
+version 171113
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -126,7 +126,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd lsusb
-version 008
+version 009
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -168,17 +168,17 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd showmount
-version 2.1.1
+version 2.2.1
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 170905
+version 171113
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.19
+version 4.20
 emit -V | field 4 | getversion
 emit -h | getusage
 
@@ -277,31 +277,31 @@ emit -h | getusage
 # sysstat
 
 cmd cifsiostat
-version 11.6.0
+version 11.6.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd iostat
-version 11.6.0
+version 11.6.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd mpstat
-version 11.6.0
+version 11.6.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pidstat
-version 11.6.0
+version 11.6.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sadf
-version 11.6.0
+version 11.6.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sar
-version 11.6.0
+version 11.6.1
 emit -V | field -1 | getversion
 emit -? | getusage
