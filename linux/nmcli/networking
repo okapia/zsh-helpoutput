@@ -1,0 +1,10 @@
+Usage: nmcli networking { COMMAND | help }
+
+COMMAND := { [ on | off | connectivity ] }
+
+  on
+
+  off
+
+  connectivity [check]
+

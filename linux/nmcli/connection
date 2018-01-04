@@ -1,0 +1,32 @@
+Usage: nmcli connection { COMMAND | help }
+
+COMMAND := { show | up | down | add | modify | clone | edit | delete | monitor | reload | load | import | export }
+
+  show [--active] [--order <order spec>]
+  show [--active] [id | uuid | path | apath] <ID> ...
+
+  up [[id | uuid | path] <ID>] [ifname <ifname>] [ap <BSSID>] [passwd-file <file with passwords>]
+
+  down [id | uuid | path | apath] <ID> ...
+
+  add COMMON_OPTIONS TYPE_SPECIFIC_OPTIONS SLAVE_OPTIONS IP_OPTIONS [-- ([+|-]<setting>.<property> <value>)+]
+
+  modify [--temporary] [id | uuid | path] <ID> ([+|-]<setting>.<property> <value>)+
+
+  clone [--temporary] [id | uuid | path ] <ID> <new name>
+
+  edit [id | uuid | path] <ID>
+  edit [type <new_con_type>] [con-name <new_con_name>]
+
+  delete [id | uuid | path] <ID>
+
+  monitor [id | uuid | path] <ID> ...
+
+  reload
+
+  load <filename> [ <filename>... ]
+
+  import [--temporary] type <type> file <file to import>
+
+  export [id | uuid | path] <ID> [<output file>]
+

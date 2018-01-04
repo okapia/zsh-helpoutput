@@ -1,0 +1,5 @@
+Usage: nmcli monitor
+
+Monitor NetworkManager changes.
+Prints a line whenever a change occurs in NetworkManager
+

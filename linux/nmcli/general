@@ -1,0 +1,12 @@
+Usage: nmcli general { COMMAND | help }
+
+COMMAND := { status | hostname | permissions | logging }
+
+  status
+
+  hostname [<hostname>]
+
+  permissions
+
+  logging [level <log level>] [domains <log domains>]
+
