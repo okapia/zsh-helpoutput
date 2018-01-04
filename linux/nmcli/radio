@@ -1,0 +1,6 @@
+Usage: nmcli radio { COMMAND | help }
+
+COMMAND := { all | wifi | wwan }
+
+  all | wifi | wwan [ on | off ]
+

@@ -1,0 +1,4 @@
+Usage: nmcli agent { COMMAND | help }
+
+COMMAND := { secret | polkit | all }
+

@@ -1,0 +1,33 @@
+Usage: nmcli device { COMMAND | help }
+
+COMMAND := { status | show | set | connect | reapply | modify | disconnect | delete | monitor | wifi | lldp }
+
+  status
+
+  show [<ifname>]
+
+  set [ifname] <ifname> [autoconnect yes|no] [managed yes|no]
+
+  connect <ifname>
+
+  reapply <ifname>
+
+  modify <ifname> ([+|-]<setting>.<property> <value>)+
+
+  disconnect <ifname> ...
+
+  delete <ifname> ...
+
+  monitor <ifname> ...
+
+  wifi [list [ifname <ifname>] [bssid <BSSID>]]
+
+  wifi connect <(B)SSID> [password <password>] [wep-key-type key|phrase] [ifname <ifname>]
+                         [bssid <BSSID>] [name <name>] [private yes|no] [hidden yes|no]
+
+  wifi hotspot [ifname <ifname>] [con-name <name>] [ssid <SSID>] [band a|bg] [channel <channel>] [password <password>]
+
+  wifi rescan [ifname <ifname>] [[ssid <SSID to scan>] ...]
+
+  lldp [list [ifname <ifname>]]
+

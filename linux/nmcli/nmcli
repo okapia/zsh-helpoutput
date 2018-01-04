@@ -1,0 +1,25 @@
+Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
+
+OPTIONS
+  -t[erse]                                       terse output
+  -p[retty]                                      pretty output
+  -m[ode] tabular|multiline                      output mode
+  -c[olors] auto|yes|no                          whether to use colors in output
+  -f[ields] <field1,field2,...>|all|common       specify fields to output
+  -g[et-values] <field1,field2,...>|all|common   shortcut for -m tabular -t -f
+  -e[scape] yes|no                               escape columns separators in values
+  -a[sk]                                         ask for missing parameters
+  -s[how-secrets]                                allow displaying passwords
+  -w[ait] <seconds>                              set timeout waiting for finishing operations
+  -v[ersion]                                     show program version
+  -h[elp]                                        print this help
+
+OBJECT
+  g[eneral]       NetworkManager's general status and operations
+  n[etworking]    overall networking control
+  r[adio]         NetworkManager radio switches
+  c[onnection]    NetworkManager's connections
+  d[evice]        devices managed by NetworkManager
+  a[gent]         NetworkManager secret agent or polkit agent
+  m[onitor]       monitor NetworkManager changes
+
