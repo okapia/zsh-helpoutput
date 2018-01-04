@@ -142,6 +142,13 @@ version 2.10-alpha
 emit -V | field -1 | getversion
 emit -? | getusage
 
+cmd nmcli
+version 1.10.2
+subdir
+emit -v | field -1 | sed 's/-.*//' | getversion
+emit help | getusage
+subcmds @ help
+
 cmd pgrep
 version 3.3.12
 emit -V | tr -d \) | field -1 | getversion
