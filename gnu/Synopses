@@ -74,6 +74,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd fold
+version 8.29
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd gawk
 version 4.2.0
 emit -V | field 3 | tr -d , | getversion
@@ -170,6 +176,12 @@ version 6.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
+cmd install
+version 8.29
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd ldd
 version 2.26.9000
 variant 'GNU' -- --version
@@ -189,7 +201,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd ls
-version 8.28
+version 8.29
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -201,6 +213,12 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd md5sum
+version 8.29
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd mktemp
 version 8.29
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
@@ -308,7 +326,7 @@ emit -V | guess | getversion
 emit -h | egrep -v '(supported targets|Report bugs to)' | getusage
 
 cmd stty
-version 8.28
+version 8.29
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
@@ -320,7 +338,7 @@ emit --version | field -1 | getusage
 emit --help | nobug | getusage
 
 cmd timeout
-version 8.28
+version 8.29
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -332,7 +350,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd unexpand
-version 8.28
+version 8.29
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
