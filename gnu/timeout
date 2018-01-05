@@ -17,6 +17,7 @@ Mandatory arguments to long options are mandatory for short options too.
                  specify the signal to be sent on timeout;
                    SIGNAL may be a name like 'HUP' or a number;
                    see 'kill -l' for a list of signals
+  -v, --verbose  diagnose to stderr any signal sent upon timeout
       --help     display this help and exit
       --version  output version information and exit
 
@@ -30,7 +31,7 @@ any process that does not block or catch that signal.  It may be necessary
 to use the KILL (9) signal, since this signal cannot be caught, in which
 case the exit status is 128+9 rather than 124.
 
-GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-Report timeout translation bugs to <http://translationproject.org/team/>
-Full documentation at: <http://www.gnu.org/software/coreutils/timeout>
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report timeout translation bugs to <https://translationproject.org/team/>
+Full documentation at: <https://www.gnu.org/software/coreutils/timeout>
 or available locally via: info '(coreutils) timeout invocation'
