@@ -74,8 +74,12 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs subvolume get-default <path>
         Get the default subvolume of a filesystem
 
+    btrfs subvolume set-default <subvolume>
     btrfs subvolume set-default <subvolid> <path>
-        Set the default subvolume of a filesystem
+        Set the default subvolume of the filesystem mounted as default.
+
+        The subvolume can be specified by its path,
+        or the pair of subvolume id and path to the filesystem.
 
     btrfs subvolume find-new <path> <lastgen>
         List the recently modified files in a filesystem
@@ -155,6 +159,11 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -s start            defragment only from byte onward
         -l len              defragment only up to len bytes
         -t size             target extent size hint (default: 32M)
+        
+        Warning: most Linux kernels will break up the ref-links of COW data
+        (e.g., files copied with 'cp --reflink', snapshots) which may cause
+        considerable increase of space usage. See btrfs-filesystem(8) for
+        more information.
 
     btrfs filesystem resize [devid:][+/-]<newsize>[kKmMgGtTpPeE]|[devid:]max <path>
         Resize a filesystem
@@ -228,6 +237,10 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
 
     btrfs device remove <device>|<devid> [<device>|<devid>...] <path>
         Remove a device from a filesystem
+
+        If 'missing' is specified for <device>, the first device that is
+        described by the filesystem metadata, but not present at the mount
+        time will be removed. (only in degraded mode)
 
     btrfs device scan [(-d|--all-devices)|<device> [<device>...]]
         Scan devices for a btrfs filesystem
@@ -338,6 +351,10 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
 
     btrfs rescue zero-log <device>
         Clear the tree log. Usable if it's corrupted and prevents mount.
+
+
+    btrfs rescue fix-device-size <device>
+        Re-align device and super block sizes. Usable if newer kernel refuse to mount it due to mismatch super size
 
 
     btrfs restore [options] <device> <path> | -l <device>
@@ -483,7 +500,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -q|--quiet       suppress all messages, except errors
 
     btrfs receive [options] <mount>
-btrfs receive --dump [options]
+    btrfs receive --dump [options]
         Receive subvolumes from a stream
 
         Receives one or more subvolumes that were previously
