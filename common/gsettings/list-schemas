@@ -1,5 +1,5 @@
 Usage:
-  gsettings [--schemadir SCHEMADIR] list-schemas 
+  gsettings [--schemadir SCHEMADIR] list-schemas [--print-paths]
 
 List the installed (non-relocatable) schemas
 
