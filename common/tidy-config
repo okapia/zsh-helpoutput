@@ -1,4 +1,5 @@
 
+
 HTML Tidy Configuration Settings
 
 Within a file, use the form:
@@ -12,108 +13,111 @@ When specified on the command line, use the form:
 
 Name                        Type       Allowable values                        
 =========================== =========  ========================================
-accessibility-check         enum       0 (Tidy Classic), 1 (Priority 1 Checks),
+accessibility-check         Enum       0 (Tidy Classic), 1 (Priority 1 Checks),
                                        2 (Priority 2 Checks), 3 (Priority 3    
                                        Checks)                                 
-add-xml-decl                Boolean    y/n, yes/no, t/f, true/false, 1/0       
-add-xml-space               Boolean    y/n, yes/no, t/f, true/false, 1/0       
+add-meta-charset            Boolean    no, yes                                 
+add-xml-decl                Boolean    no, yes                                 
+add-xml-space               Boolean    no, yes                                 
 alt-text                    String     -                                       
-anchor-as-name              Boolean    y/n, yes/no, t/f, true/false, 1/0       
-ascii-chars                 Boolean    y/n, yes/no, t/f, true/false, 1/0       
-assume-xml-procins          Boolean    y/n, yes/no, t/f, true/false, 1/0       
-bare                        Boolean    y/n, yes/no, t/f, true/false, 1/0       
-break-before-br             Boolean    y/n, yes/no, t/f, true/false, 1/0       
+anchor-as-name              Boolean    no, yes                                 
+ascii-chars                 Boolean    no, yes                                 
+assume-xml-procins          Boolean    no, yes                                 
+bare                        Boolean    no, yes                                 
+break-before-br             Boolean    no, yes                                 
 char-encoding               Encoding   raw, ascii, latin0, latin1, utf8,       
                                        iso2022, mac, win1252, ibm858, utf16le, 
                                        utf16be, utf16, big5, shiftjis          
-clean                       Boolean    y/n, yes/no, t/f, true/false, 1/0       
-coerce-endtags              Boolean    y/n, yes/no, t/f, true/false, 1/0       
+clean                       Boolean    no, yes                                 
+coerce-endtags              Boolean    no, yes                                 
 css-prefix                  String     -                                       
-decorate-inferred-ul        Boolean    y/n, yes/no, t/f, true/false, 1/0       
-doctype                     DocType    html5, omit, auto, strict, transitional,
-                                       user                                    
-drop-empty-elements         Boolean    y/n, yes/no, t/f, true/false, 1/0       
-drop-empty-paras            Boolean    y/n, yes/no, t/f, true/false, 1/0       
-drop-font-tags              Boolean    y/n, yes/no, t/f, true/false, 1/0       
-drop-proprietary-attributes Boolean    y/n, yes/no, t/f, true/false, 1/0       
-enclose-block-text          Boolean    y/n, yes/no, t/f, true/false, 1/0       
-enclose-text                Boolean    y/n, yes/no, t/f, true/false, 1/0       
+custom-tags                 Enum       no, blocklevel, empty, inline, pre      
+decorate-inferred-ul        Boolean    no, yes                                 
+doctype                     String     -                                       
+drop-empty-elements         Boolean    no, yes                                 
+drop-empty-paras            Boolean    no, yes                                 
+drop-proprietary-attributes Boolean    no, yes                                 
+enclose-block-text          Boolean    no, yes                                 
+enclose-text                Boolean    no, yes                                 
 error-file                  String     -                                       
-escape-cdata                Boolean    y/n, yes/no, t/f, true/false, 1/0       
-escape-scripts              Boolean    y/n, yes/no, t/f, true/false, 1/0       
-fix-backslash               Boolean    y/n, yes/no, t/f, true/false, 1/0       
-fix-bad-comments            Boolean    y/n, yes/no, t/f, true/false, 1/0       
-fix-uri                     Boolean    y/n, yes/no, t/f, true/false, 1/0       
-force-output                Boolean    y/n, yes/no, t/f, true/false, 1/0       
-gdoc                        Boolean    y/n, yes/no, t/f, true/false, 1/0       
-gnu-emacs                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
-gnu-emacs-file              String     -                                       
-hide-comments               Boolean    y/n, yes/no, t/f, true/false, 1/0       
-hide-endtags                Boolean    y/n, yes/no, t/f, true/false, 1/0       
-indent                      AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
-indent-attributes           Boolean    y/n, yes/no, t/f, true/false, 1/0       
-indent-cdata                Boolean    y/n, yes/no, t/f, true/false, 1/0       
+escape-cdata                Boolean    no, yes                                 
+escape-scripts              Boolean    no, yes                                 
+fix-backslash               Boolean    no, yes                                 
+fix-bad-comments            Enum       no, yes, auto                           
+fix-style-tags              Boolean    no, yes                                 
+fix-uri                     Boolean    no, yes                                 
+force-output                Boolean    no, yes                                 
+gdoc                        Boolean    no, yes                                 
+gnu-emacs                   Boolean    no, yes                                 
+hide-comments               Boolean    no, yes                                 
+indent                      Enum       no, yes, auto                           
+indent-attributes           Boolean    no, yes                                 
+indent-cdata                Boolean    no, yes                                 
 indent-spaces               Integer    0, 1, 2, ...                            
-indent-with-tabs            Boolean    y/n, yes/no, t/f, true/false, 1/0       
+indent-with-tabs            Boolean    no, yes                                 
 input-encoding              Encoding   raw, ascii, latin0, latin1, utf8,       
                                        iso2022, mac, win1252, ibm858, utf16le, 
                                        utf16be, utf16, big5, shiftjis          
-input-xml                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
-join-classes                Boolean    y/n, yes/no, t/f, true/false, 1/0       
-join-styles                 Boolean    y/n, yes/no, t/f, true/false, 1/0       
-keep-time                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
-language                    String     -                                       
-literal-attributes          Boolean    y/n, yes/no, t/f, true/false, 1/0       
-logical-emphasis            Boolean    y/n, yes/no, t/f, true/false, 1/0       
-lower-literals              Boolean    y/n, yes/no, t/f, true/false, 1/0       
-markup                      Boolean    y/n, yes/no, t/f, true/false, 1/0       
-merge-divs                  AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
-merge-emphasis              Boolean    y/n, yes/no, t/f, true/false, 1/0       
-merge-spans                 AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
-ncr                         Boolean    y/n, yes/no, t/f, true/false, 1/0       
-new-blocklevel-tags         Tag names  tagX, tagY, ...                         
-new-empty-tags              Tag names  tagX, tagY, ...                         
-new-inline-tags             Tag names  tagX, tagY, ...                         
-new-pre-tags                Tag names  tagX, tagY, ...                         
-newline                     enum       LF, CRLF, CR                            
-numeric-entities            Boolean    y/n, yes/no, t/f, true/false, 1/0       
-omit-optional-tags          Boolean    y/n, yes/no, t/f, true/false, 1/0       
-output-bom                  AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
+input-xml                   Boolean    no, yes                                 
+join-classes                Boolean    no, yes                                 
+join-styles                 Boolean    no, yes                                 
+keep-tabs                   Boolean    no, yes                                 
+keep-time                   Boolean    no, yes                                 
+literal-attributes          Boolean    no, yes                                 
+logical-emphasis            Boolean    no, yes                                 
+lower-literals              Boolean    no, yes                                 
+markup                      Boolean    no, yes                                 
+merge-divs                  Enum       no, yes, auto                           
+merge-emphasis              Boolean    no, yes                                 
+merge-spans                 Enum       no, yes, auto                           
+mute                        String     -                                       
+mute-id                     Boolean    no, yes                                 
+ncr                         Boolean    no, yes                                 
+new-blocklevel-tags         Tag Names  tagX, tagY, ...                         
+new-empty-tags              Tag Names  tagX, tagY, ...                         
+new-inline-tags             Tag Names  tagX, tagY, ...                         
+new-pre-tags                Tag Names  tagX, tagY, ...                         
+newline                     Enum       LF, CRLF, CR                            
+numeric-entities            Boolean    no, yes                                 
+omit-optional-tags          Boolean    no, yes                                 
+output-bom                  Enum       no, yes, auto                           
 output-encoding             Encoding   raw, ascii, latin0, latin1, utf8,       
                                        iso2022, mac, win1252, ibm858, utf16le, 
                                        utf16be, utf16, big5, shiftjis          
 output-file                 String     -                                       
-output-html                 Boolean    y/n, yes/no, t/f, true/false, 1/0       
-output-xhtml                Boolean    y/n, yes/no, t/f, true/false, 1/0       
-output-xml                  Boolean    y/n, yes/no, t/f, true/false, 1/0       
-preserve-entities           Boolean    y/n, yes/no, t/f, true/false, 1/0       
-punctuation-wrap            Boolean    y/n, yes/no, t/f, true/false, 1/0       
-quiet                       Boolean    y/n, yes/no, t/f, true/false, 1/0       
-quote-ampersand             Boolean    y/n, yes/no, t/f, true/false, 1/0       
-quote-marks                 Boolean    y/n, yes/no, t/f, true/false, 1/0       
-quote-nbsp                  Boolean    y/n, yes/no, t/f, true/false, 1/0       
-repeated-attributes         enum       keep-first, keep-last                   
-replace-color               Boolean    y/n, yes/no, t/f, true/false, 1/0       
-show-body-only              AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
+output-html                 Boolean    no, yes                                 
+output-xhtml                Boolean    no, yes                                 
+output-xml                  Boolean    no, yes                                 
+preserve-entities           Boolean    no, yes                                 
+priority-attributes         Attribute  attributeX, attributeY, ...             
+                            s Names                                            
+punctuation-wrap            Boolean    no, yes                                 
+quiet                       Boolean    no, yes                                 
+quote-ampersand             Boolean    no, yes                                 
+quote-marks                 Boolean    no, yes                                 
+quote-nbsp                  Boolean    no, yes                                 
+repeated-attributes         Enum       keep-first, keep-last                   
+replace-color               Boolean    no, yes                                 
+show-body-only              Enum       no, yes, auto                           
 show-errors                 Integer    0, 1, 2, ...                            
-show-info                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
-show-warnings               Boolean    y/n, yes/no, t/f, true/false, 1/0       
-skip-nested                 Boolean    y/n, yes/no, t/f, true/false, 1/0       
-slide-style                 String     -                                       
-sort-attributes             enum       none, alpha                             
-split                       Boolean    y/n, yes/no, t/f, true/false, 1/0       
-strict-tags-attributes      Boolean    y/n, yes/no, t/f, true/false, 1/0       
+show-info                   Boolean    no, yes                                 
+show-meta-change            Boolean    no, yes                                 
+show-warnings               Boolean    no, yes                                 
+skip-nested                 Boolean    no, yes                                 
+sort-attributes             Enum       none, alpha                             
+strict-tags-attributes      Boolean    no, yes                                 
 tab-size                    Integer    0, 1, 2, ...                            
-tidy-mark                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
-uppercase-attributes        Boolean    y/n, yes/no, t/f, true/false, 1/0       
-uppercase-tags              Boolean    y/n, yes/no, t/f, true/false, 1/0       
-vertical-space              AutoBool   auto, y/n, yes/no, t/f, true/false, 1/0 
-word-2000                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
+tidy-mark                   Boolean    no, yes                                 
+uppercase-attributes        Enum       no, yes, preserve                       
+uppercase-tags              Boolean    no, yes                                 
+vertical-space              Enum       no, yes, auto                           
+warn-proprietary-attributes Boolean    no, yes                                 
+word-2000                   Boolean    no, yes                                 
 wrap                        Integer    0 (no wrapping), 1, 2, ...              
-wrap-asp                    Boolean    y/n, yes/no, t/f, true/false, 1/0       
-wrap-attributes             Boolean    y/n, yes/no, t/f, true/false, 1/0       
-wrap-jste                   Boolean    y/n, yes/no, t/f, true/false, 1/0       
-wrap-php                    Boolean    y/n, yes/no, t/f, true/false, 1/0       
-wrap-script-literals        Boolean    y/n, yes/no, t/f, true/false, 1/0       
-wrap-sections               Boolean    y/n, yes/no, t/f, true/false, 1/0       
-write-back                  Boolean    y/n, yes/no, t/f, true/false, 1/0       
+wrap-asp                    Boolean    no, yes                                 
+wrap-attributes             Boolean    no, yes                                 
+wrap-jste                   Boolean    no, yes                                 
+wrap-php                    Boolean    no, yes                                 
+wrap-script-literals        Boolean    no, yes                                 
+wrap-sections               Boolean    no, yes                                 
+write-back                  Boolean    no, yes                                 
