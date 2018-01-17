@@ -2,7 +2,7 @@ Unknown command -h
 
 Usage:
   gsettings --version
-  gsettings [--schemadir SCHEMADIR] COMMAND [ARGS...]
+  gsettings [--schemadir SCHEMADIR] COMMAND [ARGS…]
 
 Commands:
   help                      Show this information
@@ -20,6 +20,6 @@ Commands:
   writable                  Check if a key is writable
   monitor                   Watch for changes
 
-Use 'gsettings help COMMAND' to get detailed help.
+Use “gsettings help COMMAND” to get detailed help.
 
 
