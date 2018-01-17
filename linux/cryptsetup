@@ -1,4 +1,4 @@
-cryptsetup 1.7.5
+cryptsetup 2.0.0
 Usage: cryptsetup [OPTION...] <action> <action-specific>
       --version                         Print package version
   -v, --verbose                         Shows more detailed error messages
@@ -27,10 +27,10 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
   -p, --skip=SECTORS                    How many sectors of the encrypted data
                                         to skip at the beginning
   -r, --readonly                        Create a readonly mapping
-  -i, --iter-time=msecs                 PBKDF2 iteration time for LUKS (in ms)
   -q, --batch-mode                      Do not ask for confirmation
   -t, --timeout=secs                    Timeout for interactive passphrase
                                         prompt (in seconds)
+      --progress-frequency=secs         Progress line update (in seconds)
   -T, --tries=INT                       How often the input of the passphrase
                                         can be retried
       --align-payload=SECTORS           Align payload at <n> sector boundaries
@@ -57,6 +57,10 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
       --tcrypt-backup                   Use backup (secondary) TCRYPT header.
       --veracrypt                       Scan also for VeraCrypt compatible
                                         device.
+      --veracrypt-pim=INT               Personal Iteration Multiplier for
+                                        VeraCrypt compatible device.
+      --veracrypt-query-pim             Query Personal Iteration Multiplier
+                                        for VeraCrypt compatible device.
   -M, --type=STRING                     Type of device metadata: luks, plain,
                                         loopaes, tcrypt.
       --force-password                  Disable password quality check (if
@@ -65,6 +69,33 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
                                         performance compatibility option.
       --perf-submit_from_crypt_cpus     Use dm-crypt submit_from_crypt_cpus
                                         performance compatibility option.
+      --deferred                        Device removal is deferred until the
+                                        last user closes it.
+  -i, --iter-time=msecs                 PBKDF iteration time for LUKS (in ms)
+      --pbkdf=STRING                    PBKDF algorithm (for LUKS2)
+                                        (argon2i/argon2id/pbkdf2).
+      --pbkdf-memory=kilobytes          PBKDF memory cost limit
+      --pbkdf-parallel=threads          PBKDF parallel cost 
+      --pbkdf-force-iterations=LONG     PBKDF iterations cost (forced,
+                                        disables benchmark)
+      --priority=STRING                 Keyslot priority (ignore/normal/prefer)
+      --disable-locks                   Disable locking of on-disk metadata
+      --disable-keyring                 Disable loading volume keys via kernel
+                                        keyring
+  -I, --integrity=STRING                Data integrity algorithm (LUKS2 only)
+      --integrity-no-journal            Disable journal for integrity device.
+      --integrity-no-wipe               Do not wipe device after format
+      --token-only                      Do not ask for passphrase if
+                                        activation by token fails
+      --token-id=INT                    Token number (default: any)
+      --key-description=STRING          Key description
+      --sector-size=INT                 Encryption sector size (default: 512
+                                        bytes)
+      --persistent                      Set activation flags persistent for
+                                        device.
+      --label=STRING                    Set label for the LUKS2 device.
+      --subsystem=STRING                Set subsystem label for the LUKS2
+                                        device.
 
 Help options:
   -?, --help                            Show this help message
@@ -78,6 +109,8 @@ Help options:
 	benchmark [--cipher <cipher>] - benchmark cipher
 	repair <device> - try to repair on-disk metadata
 	erase <device> - erase all keyslots (remove encryption key)
+	convert <device> - convert LUKS from/to LUKS2 format
+	config <device> - set permanent configuration options for LUKS2
 	luksFormat <device> [<new key file>] - formats a LUKS device
 	luksAddKey <device> [<new key file>] - add key to LUKS device
 	luksRemoveKey <device> [<key file>] - removes supplied key or key file from LUKS device
@@ -91,6 +124,7 @@ Help options:
 	luksResume <device> - Resume suspended LUKS device.
 	luksHeaderBackup <device> - Backup LUKS device header and keyslots
 	luksHeaderRestore <device> - Restore LUKS device header and keyslots
+	token <add|remove> <device> - Add or remove keyring token
 
 You can also use old <action> syntax aliases:
 	open: create (plainOpen), luksOpen, loopaesOpen, tcryptOpen
@@ -104,6 +138,8 @@ You can also use old <action> syntax aliases:
 Default compiled-in key and passphrase parameters:
 	Maximum keyfile size: 8192kB, Maximum interactive passphrase length 512 (characters)
 Default PBKDF2 iteration time for LUKS: 2000 (ms)
+Default PBKDF for LUKS2: argon2i
+	Iteration time: 2000, Memory required: 1048576kB, Parallel threads: 4
 
 Default compiled-in device cipher parameters:
 	loop-AES: aes, Key 256 bits
