@@ -7,20 +7,21 @@ Mandatory arguments to long options are mandatory for short options too.
   -d, --decompress  decompress
   -f, --force       force overwrite of output file and compress links
   -h, --help        give this help
+  -k, --keep        keep (don't delete) input files
   -l, --list        list compressed file contents
   -L, --license     display software license
-  -n, --no-name     do not save or restore the original name and time stamp
-  -N, --name        save or restore the original name and time stamp
+  -n, --no-name     do not save or restore the original name and timestamp
+  -N, --name        save or restore the original name and timestamp
   -q, --quiet       suppress all warnings
   -r, --recursive   operate recursively on directories
+      --rsyncable   make rsync-friendly archive
   -S, --suffix=SUF  use suffix SUF on compressed files
+      --synchronous synchronous output (safer if system crashes, but slower)
   -t, --test        test compressed file integrity
   -v, --verbose     verbose mode
   -V, --version     display version number
   -1, --fast        compress faster
   -9, --best        compress better
-  --rsyncable       Make rsync-friendly archive
 
 With no FILE, or when FILE is -, read standard input.
 
-Report bugs to <bug-gzip@gnu.org>.
