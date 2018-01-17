@@ -16,8 +16,9 @@ usage: ssh-keygen [-q] [-b bits] [-t dsa | ecdsa | ed25519 | rsa]
        ssh-keygen -G output_file [-v] [-b bits] [-M memory] [-S start_point]
        ssh-keygen -T output_file -f input_file [-v] [-a rounds] [-J num_lines]
                   [-j start_line] [-K checkpt] [-W generator]
-       ssh-keygen -s ca_key -I certificate_identity [-h] [-n principals]
-                  [-O option] [-V validity_interval] [-z serial_number] file ...
+       ssh-keygen -s ca_key -I certificate_identity [-h] [-U]
+                  [-D pkcs11_provider] [-n principals] [-O option]
+                  [-V validity_interval] [-z serial_number] file ...
        ssh-keygen -L [-f input_keyfile]
        ssh-keygen -A
        ssh-keygen -k -f krl_file [-u] [-s ca_public] [-z version_number]
