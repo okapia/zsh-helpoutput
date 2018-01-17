@@ -13,3 +13,4 @@ Options:
   -X          Unlock agent.
   -s pkcs11   Add keys from PKCS#11 provider.
   -e pkcs11   Remove keys provided by PKCS#11 provider.
+  -q          Be quiet after a successful operation.
