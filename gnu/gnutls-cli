@@ -34,32 +34,26 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
        --crlf                 Send CR LF instead of LF
        --fastopen             Enable TCP Fast Open
        --x509fmtder           Use DER format for certificates to read from
-   -f, --fingerprint          Send the openpgp fingerprint, instead of the key
        --print-cert           Print peer's certificate in PEM format
        --save-cert=str        Save the peer's certificate chain in the specified file in PEM format
        --save-ocsp=str        Save the peer's OCSP status response in the provided file
+       --save-server-trace=str Save the server-side TLS message trace in the provided file
+       --save-client-trace=str Save the client-side TLS message trace in the provided file
        --dh-bits=num          The minimum number of bits allowed for DH
        --priority=str         Priorities string
        --x509cafile=str       Certificate file or PKCS #11 URL to use
        --x509crlfile=file     CRL file to use
 				- file must pre-exist
-       --pgpkeyfile=file      PGP Key file to use
-				- file must pre-exist
-       --pgpkeyring=file      PGP Key ring file to use
-				- file must pre-exist
-       --pgpcertfile=file     PGP Public Key (certificate) file to use
-				- requires the option 'pgpkeyfile'
-				- file must pre-exist
        --x509keyfile=str      X.509 key file or PKCS #11 URL to use
        --x509certfile=str     X.509 Certificate file or PKCS #11 URL to use
 				- requires the option 'x509keyfile'
-       --pgpsubkey=str        PGP subkey to use (hex or auto)
        --srpusername=str      SRP username to use
        --srppasswd=str        SRP password to use
        --pskusername=str      PSK username to use
        --pskkey=str           PSK key (in hex) to use
    -p, --port=str             The port or service to connect to
        --insecure             Don't abort program if server certificate can't be validated
+       --verify-allow-broken  Allow broken algorithms, such as MD5 for certificate verification
        --ranges               Use length-hiding padding to prevent traffic analysis
        --benchmark-ciphers    Benchmark individual ciphers
        --benchmark-tls-kx     Benchmark TLS key exchange methods
