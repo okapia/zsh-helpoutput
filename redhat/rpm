@@ -30,6 +30,7 @@ Query options (with -q or --query):
   -c, --configfiles                  list all configuration files
   -d, --docfiles                     list all documentation files
   -L, --licensefiles                 list all license files
+  -A, --artifactfiles                list all artifact files
       --dump                         dump basic file information
   -l, --list                         list files in package
       --queryformat=QUERYFORMAT      use the following query format
