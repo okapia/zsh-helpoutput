@@ -8,6 +8,7 @@ usage: git add [<options>] [--] <pathspec>...
     -e, --edit            edit current diff and apply
     -f, --force           allow adding otherwise ignored files
     -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
     -N, --intent-to-add   record only the fact that the path will be added later
     -A, --all             add changes from all tracked and untracked files
     --ignore-removal      ignore paths removed in the working tree (same as --no-all)

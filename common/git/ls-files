@@ -3,6 +3,7 @@ usage: git ls-files [<options>] [<file>...]
     -z                    paths are separated with NUL character
     -t                    identify the file status with tags
     -v                    use lowercase letters for 'assume unchanged' files
+    -f                    use lowercase letters for 'fsmonitor clean' files
     -c, --cached          show cached files in the output (default)
     -d, --deleted         show deleted files in the output
     -m, --modified        show modified files in the output

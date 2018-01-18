@@ -1,5 +1,11 @@
 usage: git bisect--helper --next-all [--no-checkout]
+   or: git bisect--helper --write-terms <bad_term> <good_term>
+   or: git bisect--helper --bisect-clean-state
 
     --next-all            perform 'git bisect next'
+    --write-terms         write the terms to .git/BISECT_TERMS
+    --bisect-clean-state  cleanup the bisection state
+    --check-expected-revs
+                          check for expected revs
     --no-checkout         update BISECT_HEAD instead of checking out the current commit
 
