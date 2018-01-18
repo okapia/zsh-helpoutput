@@ -28,6 +28,11 @@ version 11.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
+cmd fold
+version 11.1-RELEASE
+uname -r | getversion
+emit -? | getusage
+
 cmd fortune
 version 11.1-RELEASE
 uname -r | getversion
@@ -47,6 +52,11 @@ cmd gstat
 version 11.1-RELEASE
 uname -r | getversion
 emit -? | getusage
+
+cmd install
+version 11.1-RELEASE
+uname -r | getversion
+emit | getusage
 
 cmd jexec
 version 11.1-RELEASE
@@ -69,6 +79,11 @@ uname -r | getversion
 emit -? | getusage
 
 cmd kldunload
+version 11.1-RELEASE
+uname -r | getversion
+emit -? | getusage
+
+cmd mktemp
 version 11.1-RELEASE
 uname -r | getversion
 emit -? | getusage
