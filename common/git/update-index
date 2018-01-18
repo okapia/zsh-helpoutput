@@ -33,4 +33,8 @@ usage: git update-index [<options>] [--] [<file>...]
                           test if the filesystem supports untracked cache
     --force-untracked-cache
                           enable untracked cache without testing the filesystem
+    --force-write-index   write out the index even if is not flagged as changed
+    --fsmonitor           enable or disable file system monitor
+    --fsmonitor-valid     mark files as fsmonitor valid
+    --no-fsmonitor-valid  clear fsmonitor valid bit
 

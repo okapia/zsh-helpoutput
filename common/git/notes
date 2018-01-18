@@ -8,7 +8,7 @@ usage: git notes [--ref <notes-ref>] [list [<object>]]
    or: git notes merge --commit [-v | -q]
    or: git notes merge --abort [-v | -q]
    or: git notes [--ref <notes-ref>] remove [<object>...]
-   or: git notes [--ref <notes-ref>] prune [-n | -v]
+   or: git notes [--ref <notes-ref>] prune [-n] [-v]
    or: git notes [--ref <notes-ref>] get-ref
 
     --ref <notes-ref>     use notes from <notes-ref>

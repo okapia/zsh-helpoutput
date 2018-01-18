@@ -1,7 +1,8 @@
-usage: git prune [-n] [-v] [--expire <time>] [--] [<head>...]
+usage: git prune [-n] [-v] [--progress] [--expire <time>] [--] [<head>...]
 
     -n, --dry-run         do not remove, show only
     -v, --verbose         report pruned objects
     --progress            show progress
-    --expire <time>       expire objects older than <time>
+    --expire <expiry-date>
+                          expire objects older than <time>
 

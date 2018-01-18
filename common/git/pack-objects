@@ -38,4 +38,6 @@ usage: git pack-objects --stdout [<options>...] [< <ref-list> | < <object-list>]
     --keep-true-parents   do not hide commits by grafts
     --use-bitmap-index    use a bitmap index if available to speed up counting objects
     --write-bitmap-index  write a bitmap index together with the pack index
+    --filter <args>       object filtering
+    --missing <action>    handling for missing objects
 

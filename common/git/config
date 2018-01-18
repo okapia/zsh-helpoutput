@@ -28,6 +28,7 @@ Type
     --int                 value is decimal number
     --bool-or-int         value is --bool or --int
     --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
 
 Other
     -z, --null            terminate values with NUL byte
