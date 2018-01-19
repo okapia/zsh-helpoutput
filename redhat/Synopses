@@ -1,5 +1,5 @@
 cmd rpm
-version 4.14.0-rc1
+version 4.14.1
 emit --version | field -1 | getversion
 emit --help | getusage
 

@@ -128,7 +128,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dig
-version 9.11.1-P2
+version 9.11.2-P1
 emit -v | field 2 | sed 's/-RedHat.*//' | getversion
 emit -h | getusage
 
@@ -231,14 +231,14 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.14.3
+version 2.15.1
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
 subcmds @ -h
 
 cmd gpg
-version 2.2.3
+version 2.2.4
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -249,14 +249,14 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.55.0
+version 2.55.1
 subdir
 emit --version | getversion
 emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.0.5
+version 1.0.6
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -312,7 +312,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd pigz
-version 2.3.4
+version 2.4
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -375,6 +375,7 @@ subcmds help @
 
 cmd ruby
 version 2.4.2p198
+variant -n ruby-mri
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -401,29 +402,29 @@ emit -version | field 1 | getversion
 emit -help | getusage
 
 cmd ssh
-version 7.5p1
+version 7.6p1
 variant OpenSSH -- -V
 emit -V | field 1 | sed 's/^.*_//' | getversion
 sshver="$_verinst"
 emit -? | getusage
 
 cmd scp
-version 7.5p1
+version 7.6p1
 getversion <<<$sshver
 emit | getusage
 
 cmd sftp
-version 7.5p1
+version 7.6p1
 getversion <<<$sshver
 emit | getusage
 
 cmd ssh-add
-version 7.5p1
+version 7.6p1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-keygen
-version 7.5p1
+version 7.6p1
 getversion <<<$sshver
 emit -? | getusage
 
@@ -479,7 +480,7 @@ emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage
 
 cmd tidy
-version 5.4.0
+version 5.6.0
 emit -v | field -1 | getversion
 emit -? | getusage
 emit -help-config | getusage config

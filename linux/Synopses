@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.13.3
+version 4.14.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -41,7 +41,7 @@ emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 1.7.5
+version 2.0.0
 emit --version | field 2 | getversion
 emit -? | getusage
 
@@ -175,7 +175,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd showmount
-version 2.2.1
+version 3.1.1
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -195,12 +195,12 @@ emit -V | line 1 | field -1 | sed 's/\.$//' | getversion
 emit -h | getusage
 
 cmd modinfo
-version 24
+version 25
 emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd modprobe
-version 24
+version 25
 emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
@@ -230,7 +230,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.43.7
+version 1.43.8
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
