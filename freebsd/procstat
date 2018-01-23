@@ -1,3 +1,4 @@
-usage: procstat [-CHhn] [-M core] [-N system] [-w interval] 
-                [-b | -c | -e | -f | -i | -j | -k | -l | -r | -s | -S | -t | -v | -x]
+usage: procstat [--libxo] [-CHhn] [-M core] [-N system] [-w interval]
+                [-b | -c | -e | -f | -i | -j | -k | -l | -r | -s | 
+                 -S | -t | -v | -x]
                 [-a | pid | core ...]
