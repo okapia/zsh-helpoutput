@@ -41,7 +41,7 @@ emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 2.0.0
+version 2.0.1
 emit --version | field 2 | getversion
 emit -? | getusage
 
@@ -51,7 +51,7 @@ emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
 emit -? | sed '/^Please report/ {N;N;d}' | getusage
 
 cmd dkms
-version 2.4.0.0
+version 2.5
 emit -V | field -1 | getversion
 emit | getusage
 
@@ -284,31 +284,31 @@ emit -h | getusage
 # sysstat
 
 cmd cifsiostat
-version 11.6.1
+version 11.6.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd iostat
-version 11.6.1
+version 11.6.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd mpstat
-version 11.6.1
+version 11.6.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pidstat
-version 11.6.1
+version 11.6.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sadf
-version 11.6.1
+version 11.6.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sar
-version 11.6.1
+version 11.6.2
 emit -V | field -1 | getversion
 emit -? | getusage
