@@ -255,7 +255,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd patch
-version 2.7.5
+version 2.7.6
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -362,7 +362,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd wget
-version 1.19.2
+version 1.19.4
 emit -V | field 3 | getversion
 emit --help | getusage
 

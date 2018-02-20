@@ -103,12 +103,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.12.0
+version 1.12.2
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.12.0
+version 1.12.2
 pack | getversion
 emit -h | getusage
 
@@ -143,7 +143,7 @@ emit -version | field 2 | getversion
 emit -help | getusage
 
 cmd entr
-version 3.9
+version 4.0
 emit | field -1 | getversion
 emit | sed 1d | getusage
 
@@ -231,10 +231,11 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.15.1
+version 2.16.0
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
+#emit --help -a |& sed -n -e '1,/available/ d' -e '/elsewhere/ q' -e 's/^ *//p' | tr -s ' ' '\012' | sort | getusage commands
 subcmds @ -h
 
 cmd gpg
@@ -396,7 +397,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.21.0
+version 3.22.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -551,7 +552,7 @@ emit --version | line 1 | field 5 | getversion
 emit | getusage
 
 cmd xsltproc
-version 10131
+version 10132
 emit -V | line 1 | field 5 | getversion
 emit | getusage
 
