@@ -15,4 +15,7 @@ Options:
  -u         search for unusual entries
  -l         output effective lookup paths
 
+ -h, --help     display this help
+ -V, --version  display version
+
 For more details see whereis(1).
