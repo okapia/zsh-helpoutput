@@ -27,14 +27,15 @@ Usage: ss [ OPTIONS ]
    -d, --dccp          display only DCCP sockets
    -w, --raw           display only RAW sockets
    -x, --unix          display only Unix domain sockets
+       --vsock         display only vsock sockets
    -f, --family=FAMILY display sockets of type FAMILY
-       FAMILY := {inet|inet6|link|unix|netlink|help}
+       FAMILY := {inet|inet6|link|unix|netlink|vsock|help}
 
    -K, --kill          forcibly close sockets, display what was closed
    -H, --no-header     Suppress header line
 
    -A, --query=QUERY, --socket=QUERY
-       QUERY := {all|inet|tcp|udp|raw|unix|unix_dgram|unix_stream|unix_seqpacket|packet|netlink}[,QUERY]
+       QUERY := {all|inet|tcp|udp|raw|unix|unix_dgram|unix_stream|unix_seqpacket|packet|netlink|vsock_stream|vsock_dgram}[,QUERY]
 
    -D, --diag=FILE     Dump raw information about TCP sockets to FILE
    -F, --filter=FILE   read filter information from FILE
