@@ -1,4 +1,4 @@
-Usage: ruby [switches] [--] [programfile] [arguments]
+Usage: ruby-mri [switches] [--] [programfile] [arguments]
   -0[octal]       specify record separator (\0, if no argument)
   -a              autosplit mode with -n or -p (splits $_ into $F)
   -c              check syntax only
@@ -22,12 +22,20 @@ Usage: ruby [switches] [--] [programfile] [arguments]
   -W[level=2]     set warning level; 0=silence, 1=medium, 2=verbose
   -x[directory]   strip off text before #!ruby line and perhaps cd to directory
   --copyright     print the copyright
-  --enable=feature[,...], --disable=feature[,...]
-                  enable or disable features
+  --dump={insns|parsetree|...}[,...]
+                  dump debug information. see below for available dump list
+  --enable={gems|rubyopt|...}[,...], --disable={gems|rubyopt|...}[,...]
+                  enable or disable features. see below for available features
   --external-encoding=encoding, --internal-encoding=encoding
                   specify the default external or internal character encoding
   --version       print the version
   --help          show this message, -h for short message
+Dump List:
+  insns           instruction sequences
+  yydebug         yydebug of yacc parser generator
+  parsetree       AST
+  parsetree_with_comment
+                  AST with comments
 Features:
   gems            rubygems (default: enabled)
   did_you_mean    did_you_mean (default: enabled)
