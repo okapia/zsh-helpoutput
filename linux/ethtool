@@ -1,4 +1,4 @@
-ethtool version 4.13
+ethtool version 4.15
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
@@ -42,7 +42,6 @@ Usage:
 		[tx-usecs-high N]
 		[tx-frames-high N]
 		[sample-interval N]
-		[dmac N]
         ethtool -g|--show-ring DEVNAME	Query RX/TX ring parameters
         ethtool -G|--set-ring DEVNAME	Set RX/TX ring parameters
 		[ rx N ]
@@ -133,5 +132,30 @@ Usage:
 		[ downshift on|off [count N] ]
         ethtool --get-phy-tunable DEVNAME	Get PHY tunable
 		[ downshift ]
+        ethtool --reset DEVNAME	Reset components
+		[ flags %x ]
+		[ mgmt ]
+		[ mgmt-shared ]
+		[ irq ]
+		[ irq-shared ]
+		[ dma ]
+		[ dma-shared ]
+		[ filter ]
+		[ filter-shared ]
+		[ offload ]
+		[ offload-shared ]
+		[ mac ]
+		[ mac-shared ]
+		[ phy ]
+		[ phy-shared ]
+		[ ram ]
+		[ ram-shared ]
+		[ ap ]
+		[ ap-shared ]
+		[ dedicated ]
+		[ all ]
+        ethtool --show-fec DEVNAME	Show FEC settings
+        ethtool --set-fec DEVNAME	Set FEC settings
+		[ encoding auto|off|rs|baser ]
         ethtool -h|--help 		Show this help
         ethtool --version 		Show version number
