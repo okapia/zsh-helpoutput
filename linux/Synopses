@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.14.1
+version 4.15.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -36,7 +36,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd cpupower
-version 4.15.0
+version 4.16.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -56,7 +56,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 4.13
+version 4.15
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -81,7 +81,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd iconvconfig
-version 2.26.9000
+version 2.27
 emit -V | field -1 | getversion
 emit -? | getusage
 
@@ -96,7 +96,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 171113
+version 180129
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -180,12 +180,12 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 171113
+version 180129
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.20
+version 4.21
 emit -V | field 4 | getversion
 emit -h | getusage
 

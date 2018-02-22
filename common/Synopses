@@ -199,7 +199,7 @@ emit -v | field 2 | cut -d \( -f 1 | getversion
 emit -h | getusage
 
 cmd less
-version 487
+version 530
 emit -V | field 2 | getversion
 unset LESSOPEN
 emit -? | getusage
@@ -250,14 +250,14 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.55.1
+version 2.55.2
 subdir
 emit --version | getversion
 emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.0.6
+version 1.1.1
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -303,7 +303,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.9.2
+version 1.9.3
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -375,13 +375,13 @@ emit | field 2 | getversion
 subcmds help @
 
 cmd ruby
-version 2.4.2p198
+version 2.5.0p0
 variant -n ruby-mri
 emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd rsync
-version 3.1.2
+version 3.1.3
 emit --version | line 1 | field 3 | getversion
 emit -h | getusage
 emit --daemon -h | getusage daemon

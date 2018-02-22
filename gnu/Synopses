@@ -97,18 +97,18 @@ emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 
 cmd getent
-version 2.26.9000
+version 2.27
 variant 'GNU' -- --version
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gnutls-cli
-version 3.6.1
+version 3.6.2
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-cli-debug
-version 3.6.1
+version 3.6.2
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -123,7 +123,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.6.1
+version 3.6.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -146,7 +146,7 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd iconv
-version 2.26.9000
+version 2.27
 variant 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | getusage
@@ -183,7 +183,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ldd
-version 2.26.9000
+version 2.27
 variant 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
