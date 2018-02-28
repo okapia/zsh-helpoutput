@@ -111,7 +111,7 @@ pack() {
   case $pkg in
     rpm) rpm -qf $file --qf '%{VERSION}' ;;
     dpkg) dpkg-query -W --showformat='${version}' ${"$(dpkg --search $file)"%:*} | sed -r 's/[^:]*:+([^-]*).*/\1/' ;;
-    pkg) pkg which -q $file | sed -e 's/.*-//' -e 's/_.*//' ;;
+    pkg) pkg which -q $file | sed -e 's/.*-//' -e 's/[,_].*//' ;;
     pkgsrc) pkg_info -FI $file | sed -e 's/ .*//' -e 's/.*-//' ;;
     pacman) pacman -Q -o $file | sed -e 's/.* //' -e 's/-.*//' ;;
     xbps) xbps-query -v -o $file | sed -n 's/^[^-]*-\([0-9.a-z]*\)_.*/\1/p' ;;
