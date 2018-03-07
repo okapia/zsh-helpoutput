@@ -97,9 +97,10 @@ subdir() {
   _subdir="${1:-$_cmd}/"
 }
 
-version() {
+setversion() {
   _verzsh="$1"
 }
+alias version='_line="$LINENO"; setversion'
 
 alias emit='(( _run && _present )) && noglob command 2>&1 $_runcmd'
 alias step='(( _run && _present )) &&'
@@ -240,7 +241,7 @@ getversion() {
   fg=${${${?/-1/red}/0/blue}/1/yellow}
 
   print -P "%F{$fg}${(l.20.)_runcmd}   ${(r.12.)_verinst} ${(r.12.)_verzsh}%f"
-  (( _opts[s] )) && _edits+=( ${_dir:h}:${_cmd}:${_verinst} )
+  (( _opts[s] )) && _edits+=( ${_dir:h}:${_line}:${_verinst} )
 }
 
 missing() {
@@ -259,9 +260,7 @@ if (( _opts[s] )); then
   for file in ${(u)_edits%%:*}; do
     {
       for edit in ${(M)_edits:#${file}:*}; do
-	print "/^cmd ${${edit#*:}%:*}$/"
-	print +
-	print "s/ [^ ]*\$/ ${edit##*:}/"
+	print "${${edit#*:}%:*} s/ [^ ]*\$/ ${edit##*:}/"
       done
       print w
     } | ${ED} $file/Synopses >&/dev/null
