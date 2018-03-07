@@ -101,7 +101,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
 cmd iptables
-version 1.6.1
+version 1.6.2
 emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 

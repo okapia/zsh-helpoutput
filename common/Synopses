@@ -128,7 +128,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dig
-version 9.11.2-P1
+version 9.11.3b1
 emit -v | field 2 | sed 's/-RedHat.*//' | getversion
 emit -h | getusage
 
@@ -359,7 +359,7 @@ emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
 cmd prove
-version 3.39
+version 3.41
 emit --version | tr _ ' ' | field 2 | tr -d v | getversion
 emit --help | getusage
 
@@ -547,7 +547,7 @@ emit -version | sed 's@.*/\([^,]*\).*@\1@' | getversion
 emit -help | getusage
 
 cmd wiggle
-version 1.0
+version 1.1
 emit -V | tr -d v | guess | getversion
 emit -h | getusage
 
