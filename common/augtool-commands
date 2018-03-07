@@ -21,6 +21,7 @@ Read commands:
   label      - get the label of a node
   ls         - list children of a node
   match      - print matches for a path expression
+  count      - print the number of matches for a path expression
   print      - print a subtree
   span       - print position in input file corresponding to tree
 
