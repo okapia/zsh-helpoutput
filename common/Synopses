@@ -552,7 +552,7 @@ emit -V | tr -d v | guess | getversion
 emit -h | getusage
 
 cmd xmllint
-version 20907
+version 20908
 emit --version | line 1 | field 5 | getversion
 emit | getusage
 

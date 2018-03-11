@@ -230,7 +230,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.43.9
+version 1.44.0
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
