@@ -1,22 +1,23 @@
-usage: khard [-h] [--debug] [--skip-unparsable] [-v]
-             {list,ls,details,export,birthdays,bdays,email,phone,source,new,add,add-email,merge,modify,edit,copy,cp,move,mv,remove,delete,del,rm,addressbooks,abooks}
+usage: khard [-h] [-c CONFIG] [--debug] [--skip-unparsable] [-v]
+             {list,ls,details,show,export,birthdays,bdays,email,phone,source,src,new,add,add-email,merge,modify,edit,ed,copy,cp,move,mv,remove,delete,del,rm,addressbooks,abooks}
              ...
 
-Khard is a carddav address book for the console
-
 positional arguments:
-  {list,ls,details,export,birthdays,bdays,email,phone,source,new,add,add-email,merge,modify,edit,copy,cp,move,mv,remove,delete,del,rm,addressbooks,abooks}
+  {list,ls,details,show,export,birthdays,bdays,email,phone,source,src,new,add,add-email,merge,modify,edit,ed,copy,cp,move,mv,remove,delete,del,rm,addressbooks,abooks}
     list (ls)           list all (selected) contacts
-    details             display detailed information about one contact
-    export              export a contact to the custom yaml format that is also used for editing and creating contacts
+    details (show)      display detailed information about one contact
+    export              export a contact to the custom yaml format that is
+                        also used for editing and creating contacts
     birthdays (bdays)   list birthdays (sorted by month and day)
     email               list email addresses
     phone               list phone numbers
-    source              edit the vcard file of a contact directly
+    source (src)        edit the vcard file of a contact directly
     new (add)           create a new contact
-    add-email           Extract email address from the "From:" field of an email header and add to an existing contact or create a new one
+    add-email           Extract email address from the "From:" field of an
+                        email header and add to an existing contact or create
+                        a new one
     merge               merge two contacts
-    modify (edit)       edit the data of a contact
+    modify (edit, ed)   edit the data of a contact
     copy (cp)           copy a contact to a different addressbook
     move (mv)           move a contact to a different addressbook
     remove (delete, del, rm)
@@ -26,6 +27,8 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        config file to use
   --debug               enable debug output
   --skip-unparsable     skip unparsable vcard files
   -v, --version         show program's version number and exit
