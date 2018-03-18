@@ -10,7 +10,6 @@ Options:
  -h, --no-filename		Suppress the prefixing of file name on output
  -n, --page-number		Print page number with output lines
  -c, --count			Print only a count of matches per file
- -C, --context NUM		Print at most NUM chars of context
      --color WHEN		Use colors for highlighting;
 				WHEN can be `always', `never' or `auto'
  -p, --page-count		Print only a count of matches per page
@@ -18,5 +17,6 @@ Options:
  -q, --quiet			Suppress normal output
  -r, --recursive		Search directories recursively
  -R, --dereference-recursive	Likewise, but follow all symlinks
+     --cache		Use cache for faster operation
      --help			Print this help
  -V, --version			Show version information
