@@ -231,11 +231,11 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.16.0
+version 2.16.2
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
-#emit --help -a |& sed -n -e '1,/available/ d' -e '/elsewhere/ q' -e 's/^ *//p' | tr -s ' ' '\012' | sort | getusage commands
+#emit --help -a |& sed -n -e '1,/available/ d' -e '/elsewhere/ q' -e 's/^ *//p' | tr -s ' ' '\012' | LC_COLLATE=C sort | getusage commands
 subcmds @ -h
 
 cmd gpg
@@ -349,7 +349,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
 cmd notmuch
-version 0.15.2
+version 0.26
 emit --version | field -1 | getversion
 emit --help | getusage
 
@@ -508,7 +508,7 @@ emit -? | getusage
 emit list-commands | getusage commands
 
 cmd unrar
-version 5.50
+version 5.60
 emit | line 2 | field 2 | getversion
 emit | getusage
 
