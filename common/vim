@@ -1,4 +1,4 @@
-VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Sep 12 2016 13:24:03)
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Mar  7 2018 11:55:16)
 
 usage: vim [arguments] [file ..]       edit specified file(s)
    or: vim [arguments] -               read text from stdin
@@ -34,6 +34,7 @@ Arguments:
    -F			Start in Farsi mode
    -T <terminal>	Set terminal type to <terminal>
    --not-a-term		Skip warning for input/output not being a terminal
+   --ttyfail		Exit if input or output is not a terminal
    -u <vimrc>		Use <vimrc> instead of any .vimrc
    -U <gvimrc>		Use <gvimrc> instead of any .gvimrc
    --noplugin		Don't load plugin scripts
@@ -61,6 +62,7 @@ Arguments:
    --servername <name>	Send to/become the Vim server <name>
    --startuptime <file>	Write startup timing messages to <file>
    -i <viminfo>		Use <viminfo> instead of .viminfo
+   --clean		'nocompatible', Vim defaults, no plugins, no viminfo
    -h  or  --help	Print Help (this message) and exit
    --version		Print version information and exit
 
