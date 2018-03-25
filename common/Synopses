@@ -231,7 +231,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.16.2
+version 2.16.3
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -250,7 +250,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.55.2
+version 2.56.0
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -293,7 +293,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd mpc
-version 0.28
+version 0.29
 emit help | line 2 | field -1 | getversion
 emit help | getusage
 
@@ -306,6 +306,12 @@ cmd mutt
 version 1.9.3
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
+
+cmd netcat
+version 0.7.1
+variant -n nc 'GNU netcat' -- -h
+emit -V | field -1 | getversion
+emit -h | getusage gnu
 
 cmd php
 version 5.6.19
@@ -339,8 +345,8 @@ emit -V | tr -d 'V,' | field 2 | getversion
 emit -h | getusage
 
 cmd nmap
-version 7.60
-emit -V | line 2 | field 3 | getversion
+version 7.70
+emit -V |  field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
