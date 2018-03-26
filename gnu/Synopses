@@ -113,12 +113,12 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-serv
-version 3.6.1
+version 3.6.2
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd certtool
-version 3.6.1
+version 3.6.2
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -243,7 +243,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd objdump
-version 2.29.1
+version 2.30
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
@@ -267,13 +267,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ranlib
-version 2.29.1
+version 2.30
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | getusage
 
 cmd readelf
-version 2.29.1
+version 2.30
 variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage

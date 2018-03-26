@@ -41,7 +41,7 @@ emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 2.0.1
+version 2.0.2
 emit --version | field 2 | getversion
 emit -? | getusage
 
@@ -143,7 +143,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd nmcli
-version 1.10.2
+version 1.10.6
 subdir
 emit -v | field -1 | sed 's/-.*//' | getversion
 emit help | getusage

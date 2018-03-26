@@ -225,6 +225,13 @@ version 2.8.9dev.11
 emit -version | field 3 | getversion
 emit -help | getusage
 
+cmd gem
+version 2.7.6
+subdir
+emit -v | getversion
+emit help | getusage
+subcmds help @
+
 cmd getmail
 version 4.6.4
 emit --version | field -1 | getversion
@@ -365,7 +372,7 @@ emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
 cmd prove
-version 3.41
+version 3.42
 emit --version | tr _ ' ' | field 2 | tr -d v | getversion
 emit --help | getusage
 
