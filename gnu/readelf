@@ -28,12 +28,12 @@ Usage: readelf <option(s)> elf-file(s)
   -R --relocated-dump=<number|name>
                          Dump the contents of section <number|name> as relocated bytes
   -z --decompress        Decompress section before dumping it
-  -w[lLiaprmfFsoRt] or
+  -w[lLiaprmfFsoRtUuTgAckK] or
   --debug-dump[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,
                =frames-interp,=str,=loc,=Ranges,=pubtypes,
                =gdb_index,=trace_info,=trace_abbrev,=trace_aranges,
-               =addr,=cu_index]
-                         Display the contents of DWARF2 debug sections
+               =addr,=cu_index,=links,=follow-links]
+                         Display the contents of DWARF debug sections
   --dwarf-depth=N        Do not display DIEs at depth N or greater
   --dwarf-start=N        Display DIEs starting with N, at the same depth
                          or deeper

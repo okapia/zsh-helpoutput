@@ -3,9 +3,10 @@ Usage: ranlib [options] archive
  The options are:
   @<file>                      Read options from <file>
   --plugin <name>              Load the specified plugin
-  -D                           Use zero for symbol map timestamp (default)
-  -U                           Use an actual symbol map timestamp
+  -D                           Use zero for symbol map timestamp
+  -U                           Use actual symbol map timestamp (default)
   -t                           Update the archive's symbol map timestamp
   -h --help                    Print this help message
   -v --version                 Print version information
-ranlib: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big plugin srec symbolsrec verilog tekhex binary ihex
+ranlib: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
+Report bugs to <http://bugzilla.redhat.com/bugzilla/>
