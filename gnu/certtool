@@ -20,7 +20,6 @@ Certificate related options:
    -u, --update-certificate   Update a signed certificate
        --fingerprint          Print the fingerprint of the given certificate
        --key-id               Print the key ID of the given certificate
-       --certificate-pubkey   Print certificate's public key
        --v1                   Generate an X.509 version 1 certificate (with no extensions)
        --sign-params=str      Sign a certificate with a specific signature algorithm
 
