@@ -1,0 +1,32 @@
+Usage: gem open GEMNAME [-e EDITOR] [options]
+
+  Options:
+    -e, --editor EDITOR              Opens gem sources in EDITOR
+    -v, --version VERSION            Opens specific gem version
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME     name of gem to open in editor
+
+  Summary:
+    Open gem sources in editor
+
+  Description:
+            The open command opens gem in editor and changes current path
+            to gem's source directory. Editor can be specified with -e option,
+            otherwise rubygems will look for editor in $EDITOR, $VISUAL and
+            $GEM_EDITOR variables.
+
+  Defaults:
+    -e vi

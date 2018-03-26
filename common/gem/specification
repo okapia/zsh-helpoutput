@@ -1,0 +1,60 @@
+Usage: gem specification [GEMFILE] [FIELD] [options]
+
+  Options:
+    -v, --version VERSION            Specify version of gem to examine
+        --platform PLATFORM          Specify the platform of gem to specification
+        --[no-]prerelease            Allow prerelease versions of a gem
+        --all                        Output specifications for all versions of
+                                     the gem
+        --ruby                       Output ruby format
+        --yaml                       Output YAML format
+        --marshal                    Output Marshal format
+
+
+  Deprecated Options:
+    -u, --[no-]update-sources        Update local source cache
+
+
+  Local/Remote Options:
+    -l, --local                      Restrict operations to the LOCAL domain
+    -r, --remote                     Restrict operations to the REMOTE domain
+    -b, --both                       Allow LOCAL and REMOTE operations
+    -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                     synchronization (default 1000)
+        --clear-sources              Clear the gem sources
+    -s, --source URL                 Append URL to list of remote gem sources
+    -p, --[no-]http-proxy [URL]      Use HTTP proxy for remote operations
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMFILE       name of gem to show the gemspec for
+    FIELD         name of gemspec field to show
+
+  Summary:
+    Display gem specification (in yaml)
+
+  Description:
+    The specification command allows you to extract the specification from
+    a gem for examination.
+    
+    The specification can be output in YAML, ruby or Marshal formats.
+    
+    Specific fields in the specification can be extracted in YAML format:
+    
+      $ gem spec rake summary
+      --- Ruby based make-like utility.
+      ...
+
+  Defaults:
+    --local --version '>= 0' --yaml

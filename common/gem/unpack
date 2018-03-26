@@ -1,0 +1,46 @@
+Usage: gem unpack GEMNAME [options]
+
+  Options:
+        --target=DIR                 target directory for unpacking
+        --spec                       unpack the gem specification
+    -v, --version VERSION            Specify version of gem to unpack
+
+
+  Install/Update Options:
+    -P, --trust-policy POLICY        Specify gem trust policy
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       name of gem to unpack
+
+  Summary:
+    Unpack an installed gem to the current directory
+
+  Description:
+    The unpack command allows you to examine the contents of a gem or modify
+    them to help diagnose a bug.
+    
+    You can add the contents of the unpacked gem to the load path using the
+    RUBYLIB environment variable or -I:
+    
+      $ gem unpack my_gem
+      Unpacked gem: '.../my_gem-1.0'
+      [edit my_gem-1.0/lib/my_gem.rb]
+      $ ruby -Imy_gem-1.0/lib -S other_program
+    
+    You can repackage an unpacked gem using the build command.  See the build
+    command help for an example.
+
+  Defaults:
+    --version '>= 0'

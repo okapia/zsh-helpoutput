@@ -1,0 +1,34 @@
+Usage: gem yank GEM -v VERSION [-p PLATFORM] [--key KEY_NAME] [--host HOST] [options]
+
+  Options:
+    -v, --version VERSION            Specify version of gem to remove
+        --platform PLATFORM          Specify the platform of gem to remove
+        --host HOST                  Yank from another gemcutter-compatible host
+                                       (e.g. https://rubygems.org)
+    -k, --key KEYNAME                Use the given API key
+                                     from ~/.gem/credentials
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEM       name of gem
+
+  Summary:
+    Remove a pushed gem from the index
+
+  Description:
+    The yank command permanently removes a gem you pushed to a server.
+    
+    Once you have pushed a gem several downloads will happen automatically
+    via the webhooks. If you accidentally pushed passwords or other sensitive
+    data you will need to change them immediately and yank your gem.

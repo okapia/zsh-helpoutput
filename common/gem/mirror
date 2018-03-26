@@ -1,0 +1,19 @@
+Usage: gem mirror [options]
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Summary:
+    Mirror all gem files (requires rubygems-mirror)
+
+  Description:
+    The mirror command has been moved to the rubygems-mirror gem.

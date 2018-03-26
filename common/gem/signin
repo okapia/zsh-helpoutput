@@ -1,0 +1,26 @@
+Usage: gem signin [options]
+
+  Options:
+        --host HOST                  Push to another gemcutter-compatible host
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Summary:
+    Sign in to any gemcutter-compatible host. It defaults to
+    https://rubygems.org
+
+  Description:
+    The signin command executes host sign in for a push server (the default is
+    https://rubygems.org). The host can be provided with the host flag or can be
+    inferred from the provided gem. Host resolution matches the resolution
+    strategy for the push command.

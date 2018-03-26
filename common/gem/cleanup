@@ -1,0 +1,34 @@
+Usage: gem cleanup [GEMNAME ...] [options]
+
+  Options:
+    -n, -d, --dryrun                 Do not uninstall gems
+    -D, --[no-]check-development     Check development dependencies while uninstalling
+                                     (default: true)
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       name of gem to cleanup
+
+  Summary:
+    Clean up old versions of installed gems
+
+  Description:
+    The cleanup command removes old versions of gems from GEM_HOME that are not
+    required to meet a dependency.  If a gem is installed elsewhere in GEM_PATH
+    the cleanup command won't delete it.
+    
+    If no gems are named all gems in GEM_HOME are cleaned.
+
+  Defaults:
+    --no-dryrun

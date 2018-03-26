@@ -1,0 +1,42 @@
+Usage: gem fetch GEMNAME [GEMNAME ...] [options]
+
+  Options:
+    -v, --version VERSION            Specify version of gem to fetch
+        --platform PLATFORM          Specify the platform of gem to fetch
+        --[no-]prerelease            Allow prerelease versions of a gem
+
+
+  Local/Remote Options:
+    -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                     synchronization (default 1000)
+    -p, --[no-]http-proxy [URL]      Use HTTP proxy for remote operations
+    -s, --source URL                 Append URL to list of remote gem sources
+        --clear-sources              Clear the gem sources
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       name of gem to download
+
+  Summary:
+    Download a gem and place it in the current directory
+
+  Description:
+    The fetch command fetches gem files that can be stored for later use or
+    unpacked to examine their contents.
+    
+    See the build command help for an example of unpacking a gem, modifying it,
+    then repackaging it.
+
+  Defaults:
+    --version '>= 0'

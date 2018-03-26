@@ -1,0 +1,20 @@
+Usage: gem signout [options]
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Summary:
+    Sign out from all the current sessions.
+
+  Description:
+    The `signout` command is used to sign out from all current sessions,
+    allowing you to sign in using a different set of credentials.

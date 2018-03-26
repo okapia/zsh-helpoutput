@@ -1,0 +1,36 @@
+Usage: gem check [OPTIONS] [GEMNAME ...] [options]
+
+  Options:
+    -a, --[no-]alien                 Report "unmanaged" or rogue files in the
+                                     gem repository
+        --[no-]doctor                Clean up uninstalled gems and broken
+                                     specifications
+        --[no-]dry-run               Do not remove files, only report what
+                                     would be removed
+        --[no-]gems                  Check installed gems for problems
+    -v, --version VERSION            Specify version of gem to check
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       name of gem to check
+
+  Summary:
+    Check a gem repository for added or missing files
+
+  Description:
+    The check command can list and repair problems with installed gems and
+    specifications and will clean up gems that have been partially uninstalled.
+
+  Defaults:
+    --gems --alien

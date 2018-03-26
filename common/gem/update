@@ -1,0 +1,101 @@
+Usage: gem update GEMNAME [GEMNAME ...] [options]
+
+  Options:
+        --system [VERSION]           Update the RubyGems system software
+        --platform PLATFORM          Specify the platform of gem to update
+        --[no-]prerelease            Allow prerelease versions of a gem
+                                     as update targets
+
+
+  Deprecated Options:
+        --[no-]rdoc                  Generate RDoc for installed gems
+                                     Use --document instead
+        --[no-]ri                    Generate ri data for installed gems.
+                                     Use --document instead
+    -u, --[no-]update-sources        Update local source cache
+
+
+  Install/Update Options:
+    -i, --install-dir DIR            Gem repository directory to get installed
+                                     gems
+    -n, --bindir DIR                 Directory where binary files are
+                                     located
+        --[no-]document [TYPES]      Generate documentation for installed gems
+                                     List the documentation types you wish to
+                                     generate.  For example: rdoc,ri
+        --build-root DIR             Temporary installation root. Useful for building
+                                     packages. Do not use this when installing remote gems.
+        --vendor                     Install gem into the vendor directory.
+                                     Only for use by gem repackagers.
+    -N, --no-document                Disable documentation generation
+    -E, --[no-]env-shebang           Rewrite the shebang line on installed
+                                     scripts to use /usr/bin/env
+    -f, --[no-]force                 Force gem to install, bypassing dependency
+                                     checks
+    -w, --[no-]wrappers              Use bin wrappers for executables
+                                     Not available on dosish platforms
+    -P, --trust-policy POLICY        Specify gem trust policy
+        --ignore-dependencies        Do not install any required dependent gems
+        --[no-]format-executable     Make installed executable names match Ruby.
+                                     If Ruby is ruby18, foo_exec will be
+                                     foo_exec18
+        --[no-]user-install          Install in user's home directory instead
+                                     of GEM_HOME.
+        --development                Install additional development
+                                     dependencies
+        --development-all            Install development dependencies for all
+                                     gems (including dev deps themselves)
+        --conservative               Don't attempt to upgrade gems already
+                                     meeting version requirement
+        --minimal-deps               Don't upgrade any dependencies that already
+                                     meet version requirements
+        --[no-]post-install-message  Print post install message
+    -g, --file [FILE]                Read from a gem dependencies API file and
+                                     install the listed gems
+        --without GROUPS             Omit the named groups (comma separated)
+                                     when installing from a gem dependencies
+                                     file
+        --default                    Add the gem's full specification to
+                                     specifications/default and extract only its bin
+        --explain                    Rather than install the gems, indicate which would
+                                     be installed
+        --[no-]lock                  Create a lock file (when used with -g/--file)
+        --[no-]suggestions           Suggest alternates when gems are not found
+
+
+  Local/Remote Options:
+    -l, --local                      Restrict operations to the LOCAL domain
+    -r, --remote                     Restrict operations to the REMOTE domain
+    -b, --both                       Allow LOCAL and REMOTE operations
+    -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                     synchronization (default 1000)
+        --clear-sources              Clear the gem sources
+    -s, --source URL                 Append URL to list of remote gem sources
+    -p, --[no-]http-proxy [URL]      Use HTTP proxy for remote operations
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       name of gem to update
+
+  Summary:
+    Update installed gems to the latest version
+
+  Description:
+    The update command will update your gems to the latest version.
+    
+    The update command does not remove the previous version. Use the cleanup
+    command to remove old versions.
+
+  Defaults:
+    --document --no-force --install-dir /usr/share/gems

@@ -1,0 +1,66 @@
+Usage: gem cert [options]
+
+  Options:
+    -a, --add CERT                   Add a trusted certificate.
+    -l, --list [FILTER]              List trusted certificates where the
+                                     subject contains FILTER
+    -r, --remove FILTER              Remove trusted certificates where the
+                                     subject contains FILTER
+    -b, --build EMAIL_ADDR           Build private key and self-signed
+                                     certificate for EMAIL_ADDR
+    -C, --certificate CERT           Signing certificate for --sign
+    -K, --private-key KEY            Key for --sign or --build
+    -s, --sign CERT                  Signs CERT with the key from -K
+                                     and the certificate from -C
+    -d, --days NUMBER_OF_DAYS        Days before the certificate expires
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Summary:
+    Manage RubyGems certificates and signing settings
+
+  Description:
+    The cert command manages signing keys and certificates for creating signed
+    gems.  Your signing certificate and private key are typically stored in
+    ~/.gem/gem-public_cert.pem and ~/.gem/gem-private_key.pem respectively.
+    
+    To build a certificate for signing gems:
+    
+      gem cert --build you@example
+    
+    If you already have an RSA key, or are creating a new certificate for an
+    existing key:
+    
+      gem cert --build you@example --private-key /path/to/key.pem
+    
+    If you wish to trust a certificate you can add it to the trust list with:
+    
+      gem cert --add /path/to/cert.pem
+    
+    You can list trusted certificates with:
+    
+      gem cert --list
+    
+    or:
+    
+      gem cert --list cert_subject_substring
+    
+    If you wish to remove a previously trusted certificate:
+    
+      gem cert --remove cert_subject_substring
+    
+    To sign another gem author's certificate:
+    
+      gem cert --sign /path/to/other_cert.pem
+    
+    For further reading on signing gems see `ri Gem::Security`.

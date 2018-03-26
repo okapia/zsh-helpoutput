@@ -1,0 +1,35 @@
+Usage: gem contents GEMNAME [GEMNAME ...] [options]
+
+  Options:
+    -v, --version VERSION            Specify version of gem to contents
+        --all                        Contents for all gems
+    -s, --spec-dir a,b,c             Search for gems under specific paths
+    -l, --[no-]lib-only              Only return files in the Gem's lib_dirs
+        --[no-]prefix                Don't include installed path prefix
+        --[no-]show-install-dir      Show only the gem install dir
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       name of gem to list contents for
+
+  Summary:
+    Display the contents of the installed gems
+
+  Description:
+    The contents command lists the files in an installed gem.  The listing can
+    be given as full file names, file names without the installed directory
+    prefix or only the files that are requireable.
+
+  Defaults:
+    --no-lib-only --prefix

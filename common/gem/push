@@ -1,0 +1,36 @@
+Usage: gem push GEM [options]
+
+  Options:
+    -k, --key KEYNAME                Use the given API key
+                                     from ~/.gem/credentials
+        --host HOST                  Push to another gemcutter-compatible host
+                                       (e.g. https://rubygems.org)
+
+
+  Local/Remote Options:
+    -p, --[no-]http-proxy [URL]      Use HTTP proxy for remote operations
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEM       built gem to push up
+
+  Summary:
+    Push a gem up to the gem server
+
+  Description:
+    The push command uploads a gem to the push server (the default is
+    https://rubygems.org) and adds it to the index.
+    
+    The gem can be removed from the index (but only the index) using the yank
+    command.  For further discussion see the help for the yank command.

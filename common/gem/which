@@ -1,0 +1,34 @@
+Usage: gem which FILE [FILE ...] [options]
+
+  Options:
+    -a, --[no-]all                   show all matching files
+    -g, --[no-]gems-first            search gems before non-gems
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    FILE          name of file to find
+
+  Summary:
+    Find the location of a library file you can require
+
+  Description:
+    The which command is like the shell which command and shows you where
+    the file you wish to require lives.
+    
+    You can use the which command to help determine why you are requiring a
+    version you did not expect or to look at the content of a file you are
+    requiring to see why it does not behave as you expect.
+
+  Defaults:
+    --no-gems-first --no-all

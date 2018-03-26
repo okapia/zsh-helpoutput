@@ -1,0 +1,51 @@
+Usage: gem uninstall GEMNAME [GEMNAME ...] [options]
+
+  Options:
+    -a, --[no-]all                   Uninstall all matching versions
+    -I, --[no-]ignore-dependencies   Ignore dependency requirements while
+                                     uninstalling
+    -D, --[no-]check-development     Check development dependencies while uninstalling
+                                     (default: false)
+    -x, --[no-]executables           Uninstall applicable executables without
+                                     confirmation
+    -i, --install-dir DIR            Directory to uninstall gem from
+    -n, --bindir DIR                 Directory to remove binaries from
+        --[no-]user-install          Uninstall from user's home directory
+                                     in addition to GEM_HOME.
+        --[no-]format-executable     Assume executable names match Ruby's prefix and suffix.
+        --[no-]force                 Uninstall all versions of the named gems
+                                     ignoring dependencies
+        --[no-]abort-on-dependent    Prevent uninstalling gems that are
+                                     depended on by other gems.
+    -v, --version VERSION            Specify version of gem to uninstall
+        --platform PLATFORM          Specify the platform of gem to uninstall
+        --vendor                     Uninstall gem from the vendor directory.
+                                     Only for use by gem repackagers.
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       name of gem to uninstall
+
+  Summary:
+    Uninstall gems from the local repository
+
+  Description:
+    The uninstall command removes a previously installed gem.
+    
+    RubyGems will ask for confirmation if you are attempting to uninstall a gem
+    that is a dependency of an existing gem.  You can use the
+    --ignore-dependencies option to skip this check.
+
+  Defaults:
+    --version '>= 0' --no-force --user-install

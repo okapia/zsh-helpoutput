@@ -1,0 +1,52 @@
+Usage: gem dependency REGEXP [options]
+
+  Options:
+    -v, --version VERSION            Specify version of gem to dependency
+        --platform PLATFORM          Specify the platform of gem to dependency
+        --[no-]prerelease            Allow prerelease versions of a gem
+    -R, --[no-]reverse-dependencies  Include reverse dependencies in the output
+        --pipe                       Pipe Format (name --version ver)
+
+
+  Deprecated Options:
+    -u, --[no-]update-sources        Update local source cache
+
+
+  Local/Remote Options:
+    -l, --local                      Restrict operations to the LOCAL domain
+    -r, --remote                     Restrict operations to the REMOTE domain
+    -b, --both                       Allow LOCAL and REMOTE operations
+    -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                     synchronization (default 1000)
+        --clear-sources              Clear the gem sources
+    -s, --source URL                 Append URL to list of remote gem sources
+    -p, --[no-]http-proxy [URL]      Use HTTP proxy for remote operations
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    REGEXP        show dependencies for gems whose names start with REGEXP
+
+  Summary:
+    Show the dependencies of an installed gem
+
+  Description:
+    The dependency commands lists which other gems a given gem depends on.  For
+    local gems only the reverse dependencies can be shown (which gems depend on
+    the named gem).
+    
+    The dependency list can be displayed in a format suitable for piping for
+    use with other commands.
+
+  Defaults:
+    --local --version '>= 0' --no-reverse-dependencies

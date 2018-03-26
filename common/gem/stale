@@ -1,0 +1,23 @@
+Usage: gem stale [options]
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Summary:
+    List gems along with access times
+
+  Description:
+    The stale command lists the latest access time for all the files in your
+    installed gems.
+    
+    You can use this command to discover gems and gem versions you are no
+    longer using.

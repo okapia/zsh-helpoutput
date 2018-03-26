@@ -1,0 +1,54 @@
+Usage: gem query [options]
+
+  Options:
+    -i, --[no-]installed             Check for installed gem
+    -I                               Equivalent to --no-installed
+    -v, --version VERSION            Specify version of gem to query
+                                     for use with --installed
+    -n, --name-matches REGEXP        Name of gem(s) to query on matches the
+                                     provided REGEXP
+    -d, --[no-]details               Display detailed information of gem(s)
+        --[no-]versions              Display only gem names
+    -a, --all                        Display all gem versions
+    -e, --exact                      Name of gem(s) to query on matches the
+                                     provided STRING
+        --[no-]prerelease            Display prerelease versions
+
+
+  Deprecated Options:
+    -u, --[no-]update-sources        Update local source cache
+
+
+  Local/Remote Options:
+    -l, --local                      Restrict operations to the LOCAL domain
+    -r, --remote                     Restrict operations to the REMOTE domain
+    -b, --both                       Allow LOCAL and REMOTE operations
+    -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                     synchronization (default 1000)
+        --clear-sources              Clear the gem sources
+    -s, --source URL                 Append URL to list of remote gem sources
+    -p, --[no-]http-proxy [URL]      Use HTTP proxy for remote operations
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Summary:
+    Query gem information in local or remote repositories
+
+  Description:
+    The query command is the basis for the list and search commands.
+    
+    You should really use the list and search commands instead.  This command
+    is too hard to use.
+
+  Defaults:
+    --local --name-matches // --no-details --versions --no-installed

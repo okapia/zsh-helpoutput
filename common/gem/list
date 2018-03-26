@@ -1,0 +1,57 @@
+Usage: gem list [REGEXP ...] [options]
+
+  Options:
+    -i, --[no-]installed             Check for installed gem
+    -I                               Equivalent to --no-installed
+    -v, --version VERSION            Specify version of gem to list
+                                     for use with --installed
+    -d, --[no-]details               Display detailed information of gem(s)
+        --[no-]versions              Display only gem names
+    -a, --all                        Display all gem versions
+    -e, --exact                      Name of gem(s) to query on matches the
+                                     provided STRING
+        --[no-]prerelease            Display prerelease versions
+
+
+  Deprecated Options:
+    -u, --[no-]update-sources        Update local source cache
+
+
+  Local/Remote Options:
+    -l, --local                      Restrict operations to the LOCAL domain
+    -r, --remote                     Restrict operations to the REMOTE domain
+    -b, --both                       Allow LOCAL and REMOTE operations
+    -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                     synchronization (default 1000)
+        --clear-sources              Clear the gem sources
+    -s, --source URL                 Append URL to list of remote gem sources
+    -p, --[no-]http-proxy [URL]      Use HTTP proxy for remote operations
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    REGEXP        regexp to look for in gem name
+
+  Summary:
+    Display local gems whose name matches REGEXP
+
+  Description:
+    The list command is used to view the gems you have installed locally.
+    
+    The --details option displays additional details including the summary, the
+    homepage, the author, the locations of different versions of the gem.
+    
+    To search for remote gems use the search command.
+
+  Defaults:
+    --local --no-details

@@ -1,0 +1,38 @@
+Usage: gem rdoc [args] [options]
+
+  Options:
+        --all                        Generate RDoc/RI documentation for all
+                                     installed gems
+        --[no-]rdoc                  Generate RDoc HTML
+        --[no-]ri                    Generate RI data
+        --[no-]overwrite             Overwrite installed documents
+    -v, --version VERSION            Specify version of gem to rdoc
+
+
+  Common Options:
+    -h, --help                       Get help on this command
+    -V, --[no-]verbose               Set the verbose level of output
+    -q, --quiet                      Silence command progress meter
+        --silent                     Silence RubyGems output
+        --config-file FILE           Use this config file instead of default
+        --backtrace                  Show stack backtrace on errors
+        --debug                      Turn on Ruby debugging
+        --norc                       Avoid loading any .gemrc file
+
+
+  Arguments:
+    GEMNAME       gem to generate documentation for (unless --all)
+
+  Summary:
+    Generates RDoc for pre-installed gems
+
+  Description:
+    The rdoc command builds documentation for installed gems.  By default
+    only documentation is built using rdoc, but additional types of
+    documentation may be built through rubygems plugins and the
+    Gem.post_installs hook.
+    
+    Use --overwrite to force rebuilding of documentation.
+
+  Defaults:
+    --version '>= 0' --ri --no-overwrite
