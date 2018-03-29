@@ -1,7 +1,8 @@
-ARPing 2.15, by Thomas Habets <thomas@habets.se>
-usage: arping [ -0aAbdDeFpPqrRuUv ] [ -w <us> ] [ -W <sec> ] [ -S <host/ip> ]
+ARPing 2.19, by Thomas Habets <thomas@habets.se>
+usage: arping [ -0aAbdDeFpPqrRuUv ] [ -w <sec> ] [ -W <sec> ] [ -S <host/ip> ]
               [ -T <host/ip ] [ -s <MAC> ] [ -t <MAC> ] [ -c <count> ]
-              [ -C <count> ] [ -i <interface> ] [ -m <type> ] <host/ip/MAC | -B>
+              [ -C <count> ] [ -i <interface> ] [ -m <type> ] [ -g <group> ]
+              [ -V <vlan> ] [ -Q <priority> ] <host/ip/MAC | -B>
 
 Options:
 
@@ -27,6 +28,8 @@ Options:
     -e     Like -a but beep when there is no reply.
     -F     Don't try to be smart about the interface name.  (even  if  this
            switch is not given, -i overrides smartness)
+    -g group
+           setgid() to this group instead of the nobody group.
     -h     Displays a help message and exits.
     -i interface
            Use the specified interface.
@@ -34,6 +37,8 @@ Options:
            Type of timestamp to use for incoming packets. Use -vv when
            pinging to list available ones.
     -q     Does not display messages, except error messages.
+    -Q pri 802.1p priority to set. Should be used with 802.1Q (-V).
+           Defaults to 0.
     -r     Raw output: only the MAC/IP address is displayed for each reply.
     -R     Raw output: Like -r but shows "the other one", can  be  combined
            with -r.
@@ -57,8 +62,10 @@ Options:
            pinging MACs.
     -U     Send unsolicited ARP.
     -v     Verbose output. Use twice for more messages.
-    -w     Time to wait between pings, in microseconds.
-    -W     Same as -w, but in floating point seconds.
+    -V num 802.1Q tag to add. Defaults to no VLAN tag.
+    -w sec Specify a timeout before ping exits regardless of how many
+packets have been sent or received.
+    -W sec Time to wait between pings.
 Report bugs to: thomas@habets.se
 Arping home page: <http://www.habets.pp.se/synscan/>
 Development repo: http://github.com/ThomasHabets/arping
