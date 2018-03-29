@@ -76,7 +76,7 @@ emit -h | line 4 | field 2 | getversion
 emit -h | getusage
 
 cmd arping
-version 2.15
+version 2.19
 variant 'Thomas Habets' --
 emit | tr -d , | field 2 | getversion
 emit --help | getusage
@@ -136,6 +136,11 @@ cmd doas
 version 6.0
 emit -v | field 3 | getversion
 emit | getusage
+
+cmd drill
+version 1.7.0
+emit -v | field 3 | getversion
+emit -h | getusage
 
 cmd elinks
 version 0.12pre6
@@ -274,7 +279,7 @@ emit -V | sed s'/^jq-//' | getversion
 emit -h | getusage
 
 cmd lsof
-version 4.90
+version 4.91
 emit -v | line 2 | field 2 | getversion
 emit -? | sed '/default device cache/ d' | getusage
 
@@ -573,6 +578,14 @@ cmd xsltproc
 version 10132
 emit -V | line 1 | field 5 | getversion
 emit | getusage
+
+cmd xmlstarlet
+version 1.6.1
+variant -n xml
+subdir
+emit --version | getversion
+emit --help | getusage
+subcmds @ --help
 
 cmd xxd
 version 8.0
