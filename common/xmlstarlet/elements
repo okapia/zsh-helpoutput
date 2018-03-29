@@ -1,0 +1,12 @@
+XMLStarlet Toolkit: Display element structure of XML document
+Usage: xml el [<options>] <xml-file>
+where
+  <xml-file> - input XML document file name (stdin is used if missing)
+  <options> is one of:
+  -a    - show attributes as well
+  -v    - show attributes and their values
+  -u    - print out sorted unique lines
+  -d<n> - print out sorted unique lines up to depth <n>
+
+XMLStarlet is a command line toolkit to query/edit/check/transform
+XML documents (for more information see http://xmlstar.sourceforge.net/)

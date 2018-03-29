@@ -1,0 +1,24 @@
+XMLStarlet Toolkit: Transform XML document(s) using XSLT
+Usage: xml tr [<options>] <xsl-file> {-p|-s <name>=<value>} [<xml-file>...]
+where
+  <xsl-file>      - main XSLT stylesheet for transformation
+  <xml-file>      - input XML document file/URL (stdin is used if missing)
+  <name>=<value>  - name and value of the parameter passed to XSLT processor
+  -p              - parameter is XPATH expression ("'string'" to quote string)
+  -s              - parameter is a string literal
+<options> are:
+  --help or -h    - display help message
+  --omit-decl     - omit xml declaration <?xml version="1.0"?>
+  --embed or -E   - allow applying embedded stylesheet
+  --show-ext      - show list of extensions
+  --val           - allow validate against DTDs or schemas
+  --net           - allow fetch DTDs or entities over network
+  --xinclude      - do XInclude processing on document input
+  --maxdepth val  - increase the maximum depth
+  --html          - input document(s) is(are) in HTML format
+
+XMLStarlet is a command line toolkit to query/edit/check/transform
+XML documents (for more information see http://xmlstar.sourceforge.net/)
+
+Current implementation uses libxslt from GNOME codebase as XSLT processor
+(see http://xmlsoft.org/ for more details)

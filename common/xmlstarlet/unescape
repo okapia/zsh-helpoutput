@@ -1,0 +1,9 @@
+XMLStarlet Toolkit: Unescape special XML characters
+Usage: xml unesc [<options>] [<string>]
+where <options> are
+  --help      - print usage
+  (TODO: more to be added in future)
+if <string> is missing stdin is used instead.
+
+XMLStarlet is a command line toolkit to query/edit/check/transform
+XML documents (for more information see http://xmlstar.sourceforge.net/)

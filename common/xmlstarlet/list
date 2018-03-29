@@ -1,0 +1,7 @@
+XMLStarlet Toolkit: List directory as XML
+Usage: xml ls [ <dir> | --help ]
+Lists current directory in XML format.
+Time is shown per ISO 8601 spec.
+
+XMLStarlet is a command line toolkit to query/edit/check/transform
+XML documents (for more information see http://xmlstar.sourceforge.net/)

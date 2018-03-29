@@ -1,0 +1,12 @@
+XMLStarlet Toolkit: Convert PYX into XML
+Usage: xml p2x [<pyx-file>]
+where
+  <pyx-file> - input PYX document file name (stdin is used if missing)
+
+The PYX format is a line-oriented representation of
+XML documents that is derived from the SGML ESIS format.
+(see ESIS - ISO 8879 Element Structure Information Set spec,
+ISO/IEC JTC1/SC18/WG8 N931 (ESIS))
+
+XMLStarlet is a command line toolkit to query/edit/check/transform
+XML documents (for more information see http://xmlstar.sourceforge.net/)
