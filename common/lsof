@@ -1,4 +1,4 @@
-lsof 4.90
+lsof 4.91
  latest revision: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
  latest FAQ: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
  latest man page: ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_man
@@ -9,7 +9,7 @@ Defaults in parentheses; comma-separated set (s) items; dash-separated ranges.
   -?|-h list help          -a AND selections (OR)     -b avoid kernel blocks
   -c c  cmd c ^c /c/[bix]  +c w  COMMAND width (9)    -C no kernel name cache
   +d s  dir s files        -d s  select by FD set     +D D  dir D tree *SLOW?*
-  -D D  ?|i|b|r|u[path]    -i select IPv[46] files    -K list tasKs (threads)
+  -D D  ?|i|b|r|u[path]    -i select IPv[46] files    -K [i] list|(i)gn tasKs
   -l list UID numbers      -n no host names           -N select NFS files
   -o list file offset      -O no overhead *RISKY*     -P no port names
   -R list paRent PID       -s list file size          -t terse listing
