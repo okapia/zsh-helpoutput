@@ -1,0 +1,3 @@
+split: unknown option -- ?
+usage: split [-a suffix_length]
+             [-b byte_count[k|m] | -l line_count | -p pattern] [file [name]]

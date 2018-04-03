@@ -1,0 +1,1 @@
+usage: diff3 [-3aEeXx] file1 file2 file3

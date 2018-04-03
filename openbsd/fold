@@ -1,0 +1,2 @@
+fold: unknown option -- ?
+usage: fold [-bs] [-w width] [file ...]

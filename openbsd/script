@@ -1,2 +1,2 @@
 script: unknown option -- ?
-usage: script [-a] [file]
+usage: script [-a] [-c command] [file]

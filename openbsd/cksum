@@ -1,0 +1,3 @@
+cksum: unknown option -- ?
+usage: cksum [-bcpqrtx] [-a algorithms] [-C checklist] [-h hashfile]
+	[-s string] [file ...]
