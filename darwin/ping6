@@ -1,3 +1,10 @@
-usage: ping6 [-DdfHmnNoqrRtvwW] [-a addrtype] [-b bufsiz] [-B boundif] [-c count]
+usage: ping6 [-DdfHmnNoqrRtvwW] [-a addrtype] [-b bufsiz] [-c count]
              [-g gateway] [-h hoplimit] [-I interface] [-i wait] [-l preload]
-             [-p pattern] [-S sourceaddr] [-s packetsize] [-z tclass] [hops ...] host
+             [-p pattern] [-S sourceaddr] [-s packetsize] [-z tclass] [-k traffic_class] [-K net_service_type] [hops ...] host
+Apple specific options (to be specified before hops or host like all options)
+            -b boundif           # bind the socket to the interface
+            -k traffic_class     # set traffic class socket option
+            -K net_service_type  # set traffic class socket options
+            -apple-connect       # call connect(2) in the socket
+            -apple-time          # display current time
+            -apple-progress      # show progress for debugging

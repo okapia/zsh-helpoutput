@@ -1,2 +1,2 @@
-usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
-       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file ... target_directory
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory

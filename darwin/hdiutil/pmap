@@ -3,6 +3,7 @@ Usage: hdiutil pmap [options] <image|device>
 	    -simple       - MediaKit's minimal report
 	    -standard     - MediaKit's standard report (no free space)
 	    -complete     - MK's comprehensive report (w/end offsets)
+	    -diagnostic   - MK's diagnostic mode (display all schemes)
 
 	    -endoffsets   - indicate last block of each partition
 	    -nofreespace  - don't show free space

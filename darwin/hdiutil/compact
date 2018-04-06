@@ -1,9 +1,9 @@
-hdiutil compact: compacts a SPARSE disk image
+hdiutil compact: compacts a SPARSE (UDSP) or SPARSEBUNDLE (UDSB) disk image
 Usage:	hdiutil compact <image>
 
 	compact options
 	    -batteryallowed		allow compacting on battery power
-	    -sleepallowed		allow machine to sleep while compacting
+	    -sleepallowed		allow machine to idle sleep (cancels compact)
 
 	Common options:
 	    -encryption <crypto method>

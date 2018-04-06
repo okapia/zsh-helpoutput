@@ -8,6 +8,7 @@ General options:
 
   -A                                         - Alias for --print-file-name
   -B                                         - Alias for --format=bsd
+  -C                                         - Alias for --demangle
   -D                                         - Alias for --dynamic
   -M                                         - Alias for --print-armap
   -P                                         - Alias for --format=posix
@@ -17,9 +18,17 @@ General options:
   -aarch64-neon-syntax                       - Choose style of NEON code to emit from AArch64 backend:
     =generic                                 -   Emit generic NEON assembly
     =apple                                   -   Emit Apple-style NEON assembly
+  -add-dyldinfo                        - Add symbols from the dyldinfo not already in the symbol table, Mach-O only
   -arch=<string>                             - architecture(s) from a Mach-O file to dump
+  -arm-add-build-attributes            - 
+  -arm-implicit-it                     - Allow conditional instructions outdside of an IT block
+    =always                            -   Accept in both ISAs, emit implicit ITs in Thumb
+    =never                             -   Warn in ARM, reject in Thumb
+    =arm                               -   Accept in ARM, reject in Thumb
+    =thumb                             -   Warn in ARM, emit implicit ITs in Thumb
+  -as-secure-log-file-name             - As secure log file name (initialized from AS_SECURE_LOG_FILE env variable)
   -asan-instrument-assembly                  - instrument assembly with AddressSanitizer checks
-  -basicaa-recphi                            - 
+  -asm-macro-max-nesting-depth=<uint>  - The maximum nesting depth allowed for assembly macros.
   -debug-pass                                - Print PassManager debugging information
     =Disabled                                -   disable debug output
     =Arguments                               -   print pass arguments to pass to 'opt'
@@ -28,42 +37,33 @@ General options:
     =Details                                 -   print pass details when it is executed
   -debug-syms                                - Show all symbols, even debugger only
   -defined-only                              - Show only defined symbols
-  -disable-basicaa                           - 
-  -disable-sched-hazard                      - Disable hazard detection during preRA scheduling
-  -dom-conditions-dom-blocks=<uint>          - 
-  -dom-conditions-max-depth=<uint>           - 
-  -dom-conditions-max-uses=<uint>            - 
-  -dom-conditions-single-cmp-use             - 
+  -demangle                                  - Demangle C++ symbol names
+  -disable-ondemand-mds-loading              - Force disable the lazy-loading on-demand of metadata when loading bitcode for importing.
+  -disable-symbolication                     - Disable symbolizing crash backtraces.
+  -dyldinfo-only                             - Show only symbols from the dyldinfo, Mach-O only
   -dynamic                                   - Display the dynamic symbols instead of normal symbols.
-  -enable-objc-arc-opts                      - enable/disable all ARC Optimizations
-  -enable-scoped-noalias                     - 
-  -enable-selectiondag-sp                    - 
-  -enable-subreg-liveness                    - Enable subregister liveness tracking.
-  -enable-tbaa                               - 
-  -enable-unsafe-globalsmodref-alias-results - 
   -extern-only                               - Show only external symbols
   -f                                         - Alias for --format
+  -filter-print-funcs=<function names>       - Only print IR for functions whose name match this for all print-[before|after][-all] options
   -format                                    - Specify output format
     =bsd                                     -   BSD format
     =sysv                                    -   System V format
     =posix                                   -   POSIX.2 format
     =darwin                                  -   Darwin -m format
   -g                                         - Alias for --extern-only
+  -import-full-type-definitions              - Import full type definitions for ThinLTO.
   -info-output-file=<filename>               - File to append -stats and -timer output to
   -j                                         - Alias for --just-symbol-name
-  -join-globalcopies                         - Coalesce copies that span blocks (default=subtarget)
-  -join-liveintervals                        - Coalesce copies (default=true)
-  -join-splitedges                           - Coalesce copies on split edges (default=subtarget)
   -just-symbol-name                          - Print just the symbol's name
-  -live-debug-variables                      - Enable the live debug variables pass
   -m                                         - Alias for --format=darwin
   -mark-data-regions                         - Mark code section jump table data regions.
-  -memdep-block-scan-limit=<uint>            - The number of instructions to scan in a block in memory dependency analysis (default = 100)
   -n                                         - Alias for --numeric-sort
+  -no-dyldinfo                               - Don't add any symbols from the dyldinfo, Mach-O only
   -no-llvm-bc                                - Disable LLVM bitcode reader
   -no-sort                                   - Show symbols in order encountered
   -numeric-sort                              - Sort symbols by address
   -o                                         - Alias for --print-file-name
+  -opt-bisect-limit=<int>                    - Maximum optimization to perform
   -p                                         - Alias for --no-sort
   -pass-remarks=<pattern>                    - Enable optimization remarks from passes whose name match the given regular expression
   -pass-remarks-analysis=<pattern>           - Enable optimization analysis remarks from passes whose name match the given regular expression
@@ -75,37 +75,29 @@ General options:
   -print-before-all                          - Print IR before each pass
   -print-file-name                           - Precede each symbol with the object file it came from
   -print-size                                - Show symbol size instead of address
-  -print-whole-regmask                       - Print the full contents of regmask operands in IR dumps
+  -print-summary-global-ids                  - Print the global id for each value when reading the module summary
   -r                                         - Alias for --reverse-sort
+  -radix                                     - Radix (o/d/x) for printing symbol Values
+    =d                                       -   decimal
+    =o                                       -   octal
+    =x                                       -   hexadecimal
   -reverse-sort                              - Sort in reverse order
   -rng-seed=<seed>                           - Seed for the random number generator
   -s=<string>                                - Dump only symbols from this segment and section name, Mach-O only
-  -scheditins                                - Use InstrItineraryData for latency lookup
-  -schedmodel                                - Use TargetSchedModel for latency lookup
   -size-sort                                 - Sort symbols by size
-  -stackmap-version=<int>                    - Specify the stackmap encoding version (default = 1)
-  -stress-regalloc=<N>                       - Limit all regclasses to N registers
-  -terminal-rule                             - Apply the terminal rule
+  -t                                         - Alias for --radix
   -time-passes                               - Time each pass, printing elapsed time for each on exit
   -track-memory                              - Enable -time-passes memory tracking (this may be slow)
   -u                                         - Alias for --undefined-only
   -undefined-only                            - Show only undefined symbols
-  -use-segment-set-for-physregs              - Use segment set for the computation of the live ranges of physregs.
   -v                                         - Alias for --numeric-sort
-  -value-tracking-dom-conditions             - 
-  -vector-library                            - Vector functions library
-    =none                                    -   No vector functions library
-    =Accelerate                              -   Accelerate framework
-  -verify-coalescing                         - Verify machine instrs before and after register coalescing
+  -verify-debug-info                         - 
   -verify-dom-info                           - Verify dominator info (time consuming)
-  -verify-loop-info                          - Verify loop info (time consuming)
-  -verify-scev                               - Verify ScalarEvolution's backedge taken counts (slow)
   -without-aliases                           - Exclude aliases from output
   -x                                         - Print symbol entry in hex, Mach-O only
   -x86-asm-syntax                            - Choose style of code to emit from X86 backend:
     =att                                     -   Emit AT&T-style assembly
     =intel                                   -   Emit Intel-style assembly
-  -x86-use-base-pointer                      - Enable use of a base pointer for complex stack frames
 
 Generic Options:
 

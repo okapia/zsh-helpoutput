@@ -22,16 +22,18 @@ Usage:	hdiutil create <sizespec> <imagepath>
 
 	Filesystem options:
 	    -fs <filesystem>
-		ExFAT - ExFAT
-		Case-sensitive Journaled HFS+ - Mac OS Extended (Case-sensitive, Journaled)
-		HFS+ - Mac OS Extended
-		Journaled HFS+ - Mac OS Extended (Journaled)
-		Case-sensitive HFS+ - Mac OS Extended (Case-sensitive)
+		UDF - Universal Disk Format (UDF)
 		MS-DOS - MS-DOS (FAT)
 		MS-DOS FAT12 - MS-DOS (FAT12)
 		MS-DOS FAT32 - MS-DOS (FAT32)
 		MS-DOS FAT16 - MS-DOS (FAT16)
-		UDF - Universal Disk Format (UDF)
+		Case-sensitive Journaled HFS+ - Mac OS Extended (Case-sensitive, Journaled)
+		HFS+ - Mac OS Extended
+		Journaled HFS+ - Mac OS Extended (Journaled)
+		Case-sensitive HFS+ - Mac OS Extended (Case-sensitive)
+		ExFAT - ExFAT
+		APFS - APFS
+		Case-sensitive APFS - APFS (Case-sensitive)
 	   -volname <volumename>		["untitled"]
 	   -stretch < ?? | ?b | ??k | ??m | ??g | ??t | ??p | ??e > (HFS+)
 
@@ -48,6 +50,7 @@ Usage:	hdiutil create <sizespec> <imagepath>
 	   -[no]spotlight		do (not) create a Spotlight™ index
 	   -[no]anyowners		do (not) attempt to preserve owners
 	   -[no]skipunreadable		do (not) skip unreadable objects [no]
+	   -[no]atomic		do (not) copy to temp location and then rename [yes]
 	   -srcowners on|off|any|auto [auto]
 	   		on	enable owners on source
 	   		off	disable owners on source

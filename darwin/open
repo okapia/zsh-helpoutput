@@ -1,5 +1,5 @@
 open: unrecognized option `--help'
-Usage: open [-e] [-t] [-f] [-W] [-R] [-n] [-g] [-h] [-b <bundle identifier>] [-a <application>] [filenames] [--args arguments]
+Usage: open [-e] [-t] [-f] [-W] [-R] [-n] [-g] [-h] [-s <partial SDK name>][-b <bundle identifier>] [-a <application>] [filenames] [--args arguments]
 Help: Open opens files from a shell.
       By default, opens each file using the default application for that file.  
       If the file is in the form of a URL, the file will be opened as a URL.
@@ -17,3 +17,5 @@ Options:
       -j, --hide        Launches the app hidden.
       -g, --background  Does not bring the application to the foreground.
       -h, --header      Searches header file locations for headers matching the given filenames, and opens them.
+      -s                For -h, the SDK to use; if supplied, only SDKs whose names contain the argument value are searched.
+                        Otherwise the highest versioned SDK in each platform is used.

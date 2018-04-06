@@ -1,11 +1,11 @@
-usage: softwareupdate <mode> [<args> ...]
+usage: softwareupdate <cmd> [<args> ...]
 
 ** Catalog Management:
 	--set-catalog <URL>	Set the new catalog URL (requires privileges)
 	--clear-catalog		Clear the catalog URL back to defaults (requires privileges)
 
 ** Manage Updates:
-	-l | --list		List all appropriate update labels (options:  --no-scan)
+	-l | --list		List all appropriate update labels (options:  --no-scan, --product-types)
 	-d | --download		Download Only
 	-e | --cancel-download		Cancel a download
 	-i | --install		Install
@@ -17,12 +17,20 @@ usage: softwareupdate <mode> [<args> ...]
 	--reset-ignored		Clear all ignored updates
 
 ** Other Tools:
-	--suspend-background (on | off)	Suspend background operations from occurring temporarily (uses --duration)
+	--suspend-background 	Suspend background operations from occurring temporarily (use --duration to specify duration to suspend in seconds)
 		--duration <duration>)		Optional duration in seconds to suspend background operations (defaults to 5*60 seconds)
 	--dump-state		Log the internal state of the SU daemon to /var/log/install.log
+	--evaluate-products	Evaluate a list of product keys specified by the --products option 
+	--history		Show the install history.  By default, only displays updates installed by softwareupdate.  
+	--all 			Include all processes in history (including App installs) 
+
 ** Options:
 	--no-scan		Do not scan when listing or installing updates (use available updates previously scanned)
+	--product-types <type>		Limit a scan to a particular product type only - ignoring all others
+		Ex:  --product-types macOS  || --product-types macOS,Safari 
+	--products		A comma-separated (no spaces) list of product keys to operate on. 
+	--force			Force an operation to complete.  Use with --background to trigger a background scan regardless of "Automatically check" pref  
 	
--v | --verbose	Enable verbose output
--h | --help	Print this help
+	--verbose		Enable verbose output
+	--help			Print this help
 

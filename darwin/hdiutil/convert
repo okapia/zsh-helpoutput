@@ -25,7 +25,7 @@ Usage:	hdiutil convert -format <format> -o <outfile> <image>
 	    -pmap
 	    -segmentSize < ?? | ??b | ??k | ??m | ??g | ??t | ??p | ??e >
 	        (blocks, bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, exabytes)
-	    -tasks <task count>		[4]
+	    -tasks <task count>		[8]
 
 	Common options:
 	    -encryption <crypto method>
