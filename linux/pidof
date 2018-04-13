@@ -7,7 +7,7 @@ Options:
  -c, --check-root          omit processes with different root
  -x                        also find shells running the named scripts
  -o, --omit-pid <PID,...>  omit processes with PID
-
+ -S, --separator SEP       use SEP as separator put between PIDs
  -h, --help     display this help and exit
  -V, --version  output version information and exit
 
