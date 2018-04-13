@@ -6,6 +6,8 @@ Options:
   -L          List public key parameters of all identities.
   -k          Load only keys and not certificates.
   -c          Require confirmation to sign using identities
+  -m minleft  Maxsign is only changed if less than minleft are left (for XMSS)
+  -M maxsign  Maximum number of signatures allowed (for XMSS)
   -t life     Set lifetime (in seconds) when adding identities.
   -d          Delete identity.
   -D          Delete all identities.
