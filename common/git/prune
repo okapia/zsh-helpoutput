@@ -5,4 +5,6 @@ usage: git prune [-n] [-v] [--progress] [--expire <time>] [--] [<head>...]
     --progress            show progress
     --expire <expiry-date>
                           expire objects older than <time>
+    --exclude-promisor-objects
+                          limit traversal to objects outside promisor packfiles
 

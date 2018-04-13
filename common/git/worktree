@@ -1,6 +1,8 @@
-usage: git worktree add [<options>] <path> [<branch>]
+usage: git worktree add [<options>] <path> [<commit-ish>]
    or: git worktree list [<options>]
    or: git worktree lock [<options>] <path>
+   or: git worktree move <worktree> <new-path>
    or: git worktree prune [<options>]
+   or: git worktree remove [<options>] <worktree>
    or: git worktree unlock <path>
 

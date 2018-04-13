@@ -14,6 +14,7 @@ Tag creation options
     -m, --message <message>
                           tag message
     -F, --file <file>     read message from file
+    -e, --edit            force edit of tag message
     -s, --sign            annotated and GPG-signed tag
     --cleanup <mode>      how to strip spaces and #comments from message
     -u, --local-user <key-id>

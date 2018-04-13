@@ -40,4 +40,6 @@ usage: git pack-objects --stdout [<options>...] [< <ref-list> | < <object-list>]
     --write-bitmap-index  write a bitmap index together with the pack index
     --filter <args>       object filtering
     --missing <action>    handling for missing objects
+    --exclude-promisor-objects
+                          do not pack objects in promisor packfiles
 

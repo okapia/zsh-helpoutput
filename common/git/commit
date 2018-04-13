@@ -35,6 +35,7 @@ Commit contents options
     --dry-run             show what would be committed
     --short               show status concisely
     --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
     --porcelain           machine-readable output
     --long                show status in long format (default)
     -z, --null            terminate entries with NUL

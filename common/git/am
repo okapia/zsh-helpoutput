@@ -30,6 +30,8 @@ usage: git am [<options>] [(<mbox> | <Maildir>)...]
     -r, --resolved        synonyms for --continue
     --skip                skip the current patch
     --abort               restore the original branch and abort the patching operation.
+    --quit                abort the patching operation but keep HEAD where it is.
+    --show-current-patch  show the patch being applied.
     --committer-date-is-author-date
                           lie about committer date
     --ignore-date         use current timestamp for author date

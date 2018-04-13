@@ -4,7 +4,6 @@ add--interactive
 am
 annotate
 apply
-archimport
 archive
 bisect
 bisect--helper
@@ -20,7 +19,6 @@ checkout
 checkout-index
 cherry
 cherry-pick
-citool
 clean
 clone
 column
@@ -31,8 +29,9 @@ count-objects
 credential
 credential-cache
 credential-cache--daemon
+credential-libsecret
+credential-netrc
 credential-store
-daemon
 describe
 diff
 diff-files
@@ -87,7 +86,6 @@ mktree
 mv
 name-rev
 notes
-p4
 pack-objects
 pack-redundant
 pack-refs
@@ -118,7 +116,6 @@ rev-list
 rev-parse
 revert
 rm
-send-email
 send-pack
 sh-i18n--envsubst
 shell
@@ -133,7 +130,6 @@ status
 stripspace
 submodule
 submodule--helper
-subtree
 symbolic-ref
 tag
 unpack-file

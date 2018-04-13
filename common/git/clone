@@ -37,4 +37,5 @@ usage: git clone [<options>] [--] <repo> [<dir>]
                           set config inside the new repository
     -4, --ipv4            use IPv4 addresses only
     -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
 

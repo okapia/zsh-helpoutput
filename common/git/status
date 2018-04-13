@@ -4,6 +4,7 @@ usage: git status [<options>] [--] <pathspec>...
     -s, --short           show status concisely
     -b, --branch          show branch information
     --show-stash          show stash information
+    --ahead-behind        compute full ahead/behind values
     --porcelain[=<version>]
                           machine-readable output
     --long                show status in long format (default)
