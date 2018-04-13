@@ -421,6 +421,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -u|--uuid              print only the uuid tree
         -b|--block <block_num> print info from the specified block only
         -t|--tree <tree_id>    print only tree with the given id (string or number)
+        --follow               use with -b, to show all children tree blocks of <block_num>
 
     btrfs inspect-internal dump-super [options] device [device...]
         Dump superblock from a device in a textual form
