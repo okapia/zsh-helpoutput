@@ -247,11 +247,11 @@ version 2.16.3
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
-#emit --help -a |& sed -n -e '1,/available/ d' -e '/elsewhere/ q' -e 's/^ *//p' | tr -s ' ' '\012' | LC_COLLATE=C sort | getusage commands
+#emit --help -a |& sed -n -e '1,/available/ d' -e '/available/ q' -e 's/^ *//p' | tr -s ' ' '\012' | LC_COLLATE=C sort | getusage commands
 subcmds @ -h
 
 cmd gpg
-version 2.2.5
+version 2.2.6
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -262,7 +262,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.56.0
+version 2.56.1
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -315,7 +315,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.9.3
+version 1.9.4
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -372,7 +372,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.26.1
+version 5.26.2
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
@@ -398,7 +398,7 @@ emit | field 2 | getversion
 subcmds help @
 
 cmd ruby
-version 2.5.0p0
+version 2.5.1p57
 variant -n ruby-mri
 emit --version | field 2 | getversion
 emit --help | getusage
@@ -426,29 +426,29 @@ emit -version | field 1 | getversion
 emit -help | getusage
 
 cmd ssh
-version 7.6p1
+version 7.7p1
 variant OpenSSH -- -V
 emit -V | field 1 | sed 's/^.*_//' | getversion
 sshver="$_verinst"
 emit -? | getusage
 
 cmd scp
-version 7.6p1
+version 7.7p1
 getversion <<<$sshver
 emit | getusage
 
 cmd sftp
-version 7.6p1
+version 7.7p1
 getversion <<<$sshver
 emit | getusage
 
 cmd ssh-add
-version 7.6p1
+version 7.7p1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-keygen
-version 7.6p1
+version 7.7p1
 getversion <<<$sshver
 emit -? | getusage
 

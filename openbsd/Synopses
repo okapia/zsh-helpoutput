@@ -343,6 +343,11 @@ version 6.3
 uname -r | getversion
 emit -? | getusage
 
+cmd signify
+version 6.3
+uname -r | getversion
+emit | getusage
+
 cmd sort
 version 6.3
 uname -r | getversion
@@ -404,6 +409,11 @@ uname -r | getversion
 emit | getusage
 
 cmd usermod
+version 6.3
+uname -r | getversion
+emit | getusage
+
+cmd vmctl
 version 6.3
 uname -r | getversion
 emit | getusage

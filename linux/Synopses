@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.15.1
+version 4.16
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -150,12 +150,12 @@ emit help | getusage
 subcmds @ help
 
 cmd pgrep
-version 3.3.12
+version 3.3.13
 emit -V | tr -d \) | field -1 | getversion
 emit -h | getusage
 
 cmd pidof
-version 3.3.12
+version 3.3.13
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -165,7 +165,7 @@ emit -V | sed 's/.*s//' | getversion
 emit | getusage
 
 cmd ps
-version 3.3.12
+version 3.3.13
 emit -V | field -1 | getversion
 emit --help all | getusage
 
@@ -185,7 +185,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.21
+version 4.22
 emit -V | field 4 | getversion
 emit -h | getusage
 
@@ -235,12 +235,12 @@ emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
 cmd vmstat
-version 3.3.12
+version 3.3.13
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd w
-version 3.3.12
+version 3.3.13
 emit -V | field -1 | getversion
 emit --help | getusage
 
