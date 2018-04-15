@@ -2,6 +2,7 @@ Usage: sqlite3 [OPTIONS] FILENAME [SQL]
 FILENAME is the name of an SQLite database. A new database is created
 if the file does not previously exist.
 OPTIONS include:
+   -append              append the database to the end of the file
    -ascii               set output mode to 'ascii'
    -bail                stop after hitting an error
    -batch               force batch I/O
@@ -22,6 +23,7 @@ OPTIONS include:
    -nullvalue TEXT      set text string for NULL values. Default ''
    -pagecache SIZE N    use N slots of SZ bytes each for page cache memory
    -quote               set output mode to 'quote'
+   -readonly            open the database read-only
    -separator SEP       set output column separator. Default: '|'
    -stats               print memory stats before each finalize
    -version             show SQLite version
