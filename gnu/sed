@@ -10,11 +10,6 @@ Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
                  follow symlinks when processing in place
   -i[SUFFIX], --in-place[=SUFFIX]
                  edit files in place (makes backup if SUFFIX supplied)
-  -c, --copy
-                 use copy instead of rename when shuffling files in -i mode
-  -b, --binary
-                 does nothing; for compatibility with WIN32/CYGWIN/MSDOS/EMX (
-                 open files in binary mode (CR+LFs are not treated specially))
   -l N, --line-length=N
                  specify the desired line-wrap length for the `l' command
   --posix
@@ -32,10 +27,8 @@ Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
                  the output buffers more often
   -z, --null-data
                  separate lines by NUL characters
-  --help
-                 display this help and exit
-  --version
-                 output version information and exit
+      --help     display this help and exit
+      --version  output version information and exit
 
 If no -e, --expression, -f, or --file option is given, then the first
 non-option argument is taken as the sed script to interpret.  All
