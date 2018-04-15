@@ -35,6 +35,11 @@ variant pwdutils -- -v
 emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
+cmd column
+version 2.32
+emit -V | field -1 | getversion
+emit --help | getusage
+
 cmd cpupower
 version 4.16.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
@@ -76,7 +81,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd htop
-version 2.1.0
+version 2.2.0
 emit -v | field 2 | getversion
 emit -h | getusage
 
@@ -150,12 +155,12 @@ emit help | getusage
 subcmds @ help
 
 cmd pgrep
-version 3.3.13
+version 3.3.14
 emit -V | tr -d \) | field -1 | getversion
 emit -h | getusage
 
 cmd pidof
-version 3.3.13
+version 3.3.14
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -165,7 +170,7 @@ emit -V | sed 's/.*s//' | getversion
 emit | getusage
 
 cmd ps
-version 3.3.13
+version 3.3.14
 emit -V | field -1 | getversion
 emit --help all | getusage
 
@@ -235,12 +240,12 @@ emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
 cmd vmstat
-version 3.3.13
+version 3.3.14
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd w
-version 3.3.13
+version 3.3.14
 emit -V | field -1 | getversion
 emit --help | getusage
 
@@ -284,31 +289,31 @@ emit -h | getusage
 # sysstat
 
 cmd cifsiostat
-version 11.6.2
+version 11.6.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd iostat
-version 11.6.2
+version 11.6.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd mpstat
-version 11.6.2
+version 11.6.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pidstat
-version 11.6.2
+version 11.6.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sadf
-version 11.6.2
+version 11.6.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sar
-version 11.6.2
+version 11.6.3
 emit -V | field -1 | getversion
 emit -? | getusage

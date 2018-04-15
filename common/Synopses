@@ -420,7 +420,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.22.0
+version 3.23.1
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
