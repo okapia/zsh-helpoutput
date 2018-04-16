@@ -1,4 +1,4 @@
-ethtool version 4.15
+ethtool version 4.16
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
@@ -72,10 +72,10 @@ Usage:
         ethtool -S|--statistics DEVNAME	Show adapter statistics
         ethtool --phy-statistics DEVNAME	Show phy statistics
         ethtool -n|-u|--show-nfc|--show-ntuple DEVNAME	Show Rx network flow classification options or rules
-		[ rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 |
+		[ rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 [context %d] |
 		  rule %d ]
         ethtool -N|-U|--config-nfc|--config-ntuple DEVNAME	Configure Rx network flow classification options or rules
-		rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 m|v|t|s|d|f|n|r... |
+		rx-flow-hash tcp4|udp4|ah4|esp4|sctp4|tcp6|udp6|ah6|esp6|sctp6 m|v|t|s|d|f|n|r... [context %d] |
 		flow-type ether|ip4|tcp4|udp4|sctp4|ah4|esp4|ip6|tcp6|udp6|ah6|esp6|sctp6
 			[ src %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
 			[ dst %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
@@ -92,15 +92,19 @@ Usage:
 			[ vlan %x [m %x] ]
 			[ user-def %x [m %x] ]
 			[ dst-mac %x:%x:%x:%x:%x:%x [m %x:%x:%x:%x:%x:%x] ]
-			[ action %d ]
+			[ action %d ] | [ vf %d queue %d ]
+			[ context %d ]
 			[ loc %d]] |
 		delete %d
         ethtool -T|--show-time-stamping DEVNAME	Show time stamping capabilities
         ethtool -x|--show-rxfh-indir|--show-rxfh DEVNAME	Show Rx flow hash indirection table and/or RSS hash key
+		[ context %d ]
         ethtool -X|--set-rxfh-indir|--rxfh DEVNAME	Set Rx flow hash indirection table and/or RSS hash key
+		[ context %d|new ]
 		[ equal N | weight W0 W1 ... | default ]
 		[ hkey %x:%x:%x:%x:%x:.... ]
 		[ hfunc FUNC ]
+		[ delete ]
         ethtool -f|--flash DEVNAME	Flash firmware image from the specified file to a region on the device
                FILENAME [ REGION-NUMBER-TO-FLASH ]
         ethtool -P|--show-permaddr DEVNAME	Show permanent hardware address
