@@ -1,0 +1,8 @@
+usage: install [-Ubcprs] [-M log] [-D dest] [-T tags] [-B suffix]
+           [-a aftercmd] [-f flags] [-m mode] [-N dbdir] [-o owner] [-g group] 
+           [-l linkflags] [-h hash] [-S stripflags] file1 file2
+       install [-Ubcprs] [-M log] [-D dest] [-T tags] [-B suffix]
+           [-a aftercmd] [-f flags] [-m mode] [-N dbdir] [-o owner] [-g group]
+           [-l linkflags] [-h hash] [-S stripflags] file1 ... fileN directory
+       install -d [-Up] [-M log] [-D dest] [-T tags] [-a aftercmd] [-m mode]
+           [-N dbdir] [-o owner] [-g group] directory ...

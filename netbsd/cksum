@@ -1,0 +1,10 @@
+cksum: unknown option -- ?
+usage: cksum [-n] [-a algorithm [-ptx] [-s string]] [-o 1|2]
+             [file ... | -c [-w] [sumfile]]
+       sum [-n] [-a algorithm [-ptx] [-s string]] [-o 1|2]
+           [file ... | -c [-w] [sumfile]]
+       md2 [-nptx] [-s string] [file ... | -c [-w] [sumfile]]
+       md4 [-nptx] [-s string] [file ... | -c [-w] [sumfile]]
+       md5 [-nptx] [-s string] [file ... | -c [-w] [sumfile]]
+       rmd160 [-nptx] [-s string] [file ... | -c [-w] [sumfile]]
+       sha1 [-nptx] [-s string] [file ... | -c [-w] [sumfile]]
