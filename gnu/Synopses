@@ -33,6 +33,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd dd
+version 8.29
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd diff
 version 3.6
 variant -g 'GNU' -- --version

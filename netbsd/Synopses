@@ -1,110 +1,120 @@
 cmd arp
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd at
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd cat
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd chflags
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd chmod
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd chown
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd chsh
-version 7.1
+version 7.1.2
+uname -r | getversion
+emit -? | getusage
+
+cmd cksum
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd cmp
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd comm
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd cp
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd cpio
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd cut
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd cu
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit --help | getusage
 
 cmd date
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd df
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd dhclient
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd dmesg
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd du
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd env
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd expand
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd find
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd finger
-version 7.1
+version 7.1.2
+uname -r | getversion
+emit -? | getusage
+
+cmd fold
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
@@ -114,311 +124,316 @@ uname -r | getversion
 emit -? | getusage
 
 cmd fstat
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd gcore
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd getent
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd grep
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd groupadd
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd groupmod
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd head
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd iconv
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd id
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd ifconfig
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
+cmd install
+version 7.1.2
+uname -r | getversion
+emit | getusage
+
 cmd iostat
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd join
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd jot
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd last
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd ldd
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd ln
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd locale
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd locate
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | grep -v 'default database' | getusage
 
 cmd ls
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd make
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd man
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd mixerctl
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd mkdir
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd mount
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd mt
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd mv
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd netstat
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd nl
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd od
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd pfctl
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd pgrep
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd pkg_add
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd pkg_create
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd pkg_delete
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd pkg_info
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd ping
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd ps
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd rm
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd savecore
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd script
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd sed
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd seq
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd service
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd showmount
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd sort
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd split
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd su
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd sysctl
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd systat
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd tail
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd timeout
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd touch
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd tr
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd uname
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd uniq
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd useradd
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd usermod
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit | getusage
 
 cmd vmstat
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd w
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd wc
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd who
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage
 
 cmd xargs
-version 7.1
+version 7.1.2
 uname -r | getversion
 emit -? | getusage

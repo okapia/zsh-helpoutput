@@ -28,6 +28,11 @@ version 6.3
 uname -r | getversion
 emit | getusage
 
+cmd cksum
+version 6.3
+uname -r | getversion
+emit -? | getusage
+
 cmd chown
 version 6.3
 uname -r | getversion
@@ -113,10 +118,20 @@ version 6.3
 uname -r | getversion
 emit -? | getusage
 
+cmd expand
+version 6.3
+uname -r | getversion
+emit -? | getusage
+
 cmd find
 version 6.3
 uname -r | getversion
 emit | getusage
+
+cmd fold
+version 6.3
+uname -r | getversion
+emit -? | getusage
 
 cmd finger
 version 6.3
@@ -167,6 +182,11 @@ cmd ifconfig
 version 6.3
 uname -r | getversion
 emit -? | getusage
+
+cmd install
+version 6.3
+uname -r | getversion
+emit | getusage
 
 cmd iostat
 version 6.3
@@ -349,6 +369,11 @@ uname -r | getversion
 emit | getusage
 
 cmd sort
+version 6.3
+uname -r | getversion
+emit -? | getusage
+
+cmd split
 version 6.3
 uname -r | getversion
 emit -? | getusage
