@@ -2,7 +2,7 @@ Usage: sar [ options ] [ <interval> [ <count> ] ]
 Options are:
 [ -A ] [ -B ] [ -b ] [ -C ] [ -D ] [ -d ] [ -F [ MOUNT ] ] [ -H ] [ -h ]
 [ -p ] [ -q ] [ -r [ ALL ] ] [ -S ] [ -t ] [ -u [ ALL ] ] [ -V ]
-[ -v ] [ -W ] [ -w ] [ -y ] [ --human ] [ --sadc ]
+[ -v ] [ -W ] [ -w ] [ -y ] [ -z ] [ --help ] [ --human ] [ --sadc ]
 [ -I { <int_list> | SUM | ALL } ] [ -P { <cpu_list> | ALL } ]
 [ -m { <keyword> [,...] | ALL } ] [ -n { <keyword> [,...] | ALL } ]
 [ -j { ID | LABEL | PATH | UUID | ... } ]
