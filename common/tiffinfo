@@ -1,0 +1,19 @@
+LIBTIFF, Version 4.0.9
+Copyright (c) 1988-1996 Sam Leffler
+Copyright (c) 1991-1996 Silicon Graphics, Inc.
+
+usage: tiffinfo [options] input...
+where options are:
+ -D		read data
+ -i		ignore read errors
+ -c		display data for grey/color response curve or colormap
+ -d		display raw/decoded image data
+ -f lsb2msb	force lsb-to-msb FillOrder for input
+ -f msb2lsb	force msb-to-lsb FillOrder for input
+ -j		show JPEG tables
+ -o offset	set initial directory offset
+ -r		read/display raw image data instead of decoded data
+ -s		display strip offsets and byte counts
+ -w		display raw data in words rather than bytes
+ -z		enable strip chopping
+ -#		set initial directory (first directory is # 0)

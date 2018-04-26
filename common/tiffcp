@@ -1,0 +1,62 @@
+LIBTIFF, Version 4.0.9
+Copyright (c) 1988-1996 Sam Leffler
+Copyright (c) 1991-1996 Silicon Graphics, Inc.
+
+usage: tiffcp [options] input... output
+where options are:
+ -a              append to output instead of overwriting
+ -o offset       set initial directory offset
+ -p contig       pack samples contiguously (e.g. RGBRGB...)
+ -p separate     store samples separately (e.g. RRR...GGG...BBB...)
+ -s              write output in strips
+ -t              write output in tiles
+ -x              force the merged tiff pages in sequence
+ -8              write BigTIFF instead of default ClassicTIFF
+ -B              write big-endian instead of native byte order
+ -L              write little-endian instead of native byte order
+ -M              disable use of memory-mapped files
+ -C              disable strip chopping
+ -i              ignore read errors
+ -b file[,#]     bias (dark) monochrome image to be subtracted from all others
+ -,=%            use % rather than , to separate image #'s (per Note below)
+
+ -r #            make each strip have no more than # rows
+ -w #            set output tile width (pixels)
+ -l #            set output tile length (pixels)
+
+ -f lsb2msb      force lsb-to-msb FillOrder for output
+ -f msb2lsb      force msb-to-lsb FillOrder for output
+
+ -c lzw[:opts]   compress output with Lempel-Ziv & Welch encoding
+ -c zip[:opts]   compress output with deflate encoding
+ -c lzma[:opts]  compress output with LZMA2 encoding
+ -c jpeg[:opts]  compress output with JPEG encoding
+ -c jbig         compress output with ISO JBIG encoding
+ -c packbits     compress output with packbits encoding
+ -c g3[:opts]    compress output with CCITT Group 3 encoding
+ -c g4           compress output with CCITT Group 4 encoding
+ -c sgilog       compress output with SGILOG encoding
+ -c none         use no compression algorithm on output
+
+Group 3 options:
+ 1d              use default CCITT Group 3 1D-encoding
+ 2d              use optional CCITT Group 3 2D-encoding
+ fill            byte-align EOL codes
+For example, -c g3:2d:fill to get G3-2D-encoded data with byte-aligned EOLs
+
+JPEG options:
+ #               set compression quality level (0-100, default 75)
+ r               output color image as RGB rather than YCbCr
+For example, -c jpeg:r:50 to get JPEG-encoded RGB data with 50% comp. quality
+
+LZW, Deflate (ZIP) and LZMA2 options:
+ #               set predictor value
+ p#              set compression level (preset)
+For example, -c lzw:2 to get LZW-encoded data with horizontal differencing,
+-c zip:3:p9 for Deflate encoding with maximum compression level and floating
+point predictor.
+
+Note that input filenames may be of the form filename,x,y,z
+where x, y, and z specify image numbers in the filename to copy.
+example:  tiffcp -c none -b esp.tif,1 esp.tif,0 test.tif
+  subtract 2nd image in esp.tif from 1st yielding uncompressed result test.tif

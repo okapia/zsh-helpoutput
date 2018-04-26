@@ -1,0 +1,24 @@
+ppm2tiff: Too few arguments
+LIBTIFF, Version 4.0.9
+Copyright (c) 1988-1996 Sam Leffler
+Copyright (c) 1991-1996 Silicon Graphics, Inc.
+
+usage: ppm2tiff [options] input.ppm output.tif
+where options are:
+ -r #		make each strip have no more than # rows
+ -R #		set x&y resolution (dpi)
+
+ -c jpeg[:opts]  compress output with JPEG encoding
+ -c lzw[:opts]	compress output with Lempel-Ziv & Welch encoding
+ -c zip[:opts]	compress output with deflate encoding
+ -c packbits	compress output with packbits encoding (the default)
+ -c g3[:opts]  compress output with CCITT Group 3 encoding
+ -c g4         compress output with CCITT Group 4 encoding
+ -c none	use no compression algorithm on output
+
+JPEG options:
+ #		set compression quality level (0-100, default 75)
+ r		output color image as RGB rather than YCbCr
+LZW and deflate options:
+ #		set predictor value
+For example, -c lzw:2 to get LZW-encoded data with horizontal differencing

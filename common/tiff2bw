@@ -1,0 +1,22 @@
+LIBTIFF, Version 4.0.9
+Copyright (c) 1988-1996 Sam Leffler
+Copyright (c) 1991-1996 Silicon Graphics, Inc.
+
+usage: tiff2bw [options] input.tif output.tif
+where options are:
+ -R %		use #% from red channel
+ -G %		use #% from green channel
+ -B %		use #% from blue channel
+
+ -r #		make each strip have no more than # rows
+
+ -c lzw[:opts]	compress output with Lempel-Ziv & Welch encoding
+ -c zip[:opts]	compress output with deflate encoding
+ -c packbits	compress output with packbits encoding
+ -c g3[:opts]	compress output with CCITT Group 3 encoding
+ -c g4		compress output with CCITT Group 4 encoding
+ -c none	use no compression algorithm on output
+
+LZW and deflate options:
+ #		set predictor value
+For example, -c lzw:2 to get LZW-encoded data with horizontal differencing

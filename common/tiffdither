@@ -1,0 +1,26 @@
+LIBTIFF, Version 4.0.9
+Copyright (c) 1988-1996 Sam Leffler
+Copyright (c) 1991-1996 Silicon Graphics, Inc.
+
+usage: tiffdither [options] input.tif output.tif
+where options are:
+ -r #		make each strip have no more than # rows
+ -t #		set the threshold value for dithering (default 128)
+ -f lsb2msb	force lsb-to-msb FillOrder for output
+ -f msb2lsb	force msb-to-lsb FillOrder for output
+ -c lzw[:opts]	compress output with Lempel-Ziv & Welch encoding
+ -c zip[:opts]	compress output with deflate encoding
+ -c packbits	compress output with packbits encoding
+ -c g3[:opts]	compress output with CCITT Group 3 encoding
+ -c g4		compress output with CCITT Group 4 encoding
+ -c none	use no compression algorithm on output
+
+Group 3 options:
+ 1d		use default CCITT Group 3 1D-encoding
+ 2d		use optional CCITT Group 3 2D-encoding
+ fill		byte-align EOL codes
+For example, -c g3:2d:fill to get G3-2D-encoded data with byte-aligned EOLs
+
+LZW and deflate options:
+ #		set predictor value
+For example, -c lzw:2 to get LZW-encoded data with horizontal differencing
