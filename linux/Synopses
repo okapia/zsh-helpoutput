@@ -41,7 +41,7 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd cpupower
-version 4.16.0
+version 4.17.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -289,31 +289,32 @@ emit -h | getusage
 # sysstat
 
 cmd cifsiostat
-version 11.6.3
+version 11.7.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd iostat
-version 11.6.3
+version 11.7.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd mpstat
-version 11.6.3
+version 11.7.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pidstat
-version 11.6.3
+version 11.7.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sadf
-version 11.6.3
+version 11.7.3
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sar
-version 11.6.3
+version 11.7.3
 emit -V | field -1 | getversion
 emit -? | getusage
+emit --help | getusage long

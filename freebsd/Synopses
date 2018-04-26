@@ -186,6 +186,11 @@ version 11.1-RELEASE-p4
 uname -r | getversion
 emit -? | getusage
 
+cmd column
+version 11.1-RELEASE-p4
+uname -r | getversion
+emit -? | getusage
+
 cmd comm
 version 11.1-RELEASE-p4
 uname -r | getversion

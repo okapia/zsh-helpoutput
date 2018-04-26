@@ -157,7 +157,7 @@ emit -? | getusage
 subcmds help @
 
 cmd zpool
-version 34
+version 37
 subdir
 emit upgrade -v | field -1 | sed 's/\.$//' | getversion
 emit -? | getusage

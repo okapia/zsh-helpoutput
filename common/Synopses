@@ -243,7 +243,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.16.3
+version 2.17.0
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -257,7 +257,7 @@ emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
 
 cmd gphoto2
-version 2.5.15
+version 2.5.17
 emit --version | field -1 | getversion
 emit -? | getusage
 
@@ -315,7 +315,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.9.4
+version 1.9.5
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -458,7 +458,7 @@ emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 
 cmd sudo
-version 1.8.22b1
+version 1.8.23b3
 variant ! 'doas' -- -V
 emit -V | field -1 | getversion
 emit -h | getusage
@@ -796,4 +796,70 @@ emit | getusage
 cmd serialver
 version 1.7.0
 step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
+emit | getusage
+
+# libtiff
+cmd tiff2bw
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiff2pdf
+version 4.0.9
+emit -h | field -1 | getversion
+emit -h | getusage
+
+cmd tiff2ps
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiffcmp
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiffcp
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiffdither
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiffdump
+version ..
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiffinfo
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiffmedian
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd tiffsplit
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd fax2tiff
+version 4.0.9
+emit | field -1 | getversion
+emit | getusage
+
+cmd ppm2tiff
+version 4.0.9
+emit | line 2 | field -1 | getversion
+emit | getusage
+
+cmd pal2rgb
+version 4.0.9
+emit | field -1 | getversion
 emit | getusage
