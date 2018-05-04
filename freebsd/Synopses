@@ -351,6 +351,11 @@ version 11.1-RELEASE-p4
 uname -r | getversion
 emit -h | getusage
 
+cmd netstat
+version 11.1-RELEASE-p4
+uname -r | getversion
+emit -h | getusage
+
 cmd nl
 version 11.1-RELEASE-p4
 uname -r | getversion

@@ -103,12 +103,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.12.6
+version 1.12.8
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.12.6
+version 1.12.8
 pack | getversion
 emit -h | getusage
 
@@ -666,6 +666,7 @@ cmd ogg123
 version 1.4.0
 emit --version | field -1 | getversion
 emit -h | getusage
+emit -c | getusage config
 
 cmd oggenc
 version 1.4.0

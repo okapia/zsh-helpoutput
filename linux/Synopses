@@ -61,7 +61,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 4.15
+version 4.16
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -146,6 +146,11 @@ cmd mii-tool
 version 2.10-alpha
 emit -V | field -1 | getversion
 emit -? | getusage
+
+cmd netstat
+version 2.10-alpha
+emit -V | field -1 | getversion
+emit -h | getusage
 
 cmd nmcli
 version 1.10.6
