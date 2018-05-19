@@ -1,4 +1,4 @@
-qiv (Quick Image Viewer) v2.3.1
+qiv (Quick Image Viewer) v2.3.2
 Usage: qiv [options] files ...
 
 General options:
@@ -21,6 +21,7 @@ General options:
     --readonly, -R         Disable the deletion feature
     --maxpect, -m          Zoom to screen size and preserve aspect ratio
     --merged_case_sort, -M Sort filenames with AaBbCc... alpha order
+    --mtime_sort, -K       Sort files by their modification time
     --no_filter, -n        Do not filter images by extension
     --no_statusbar, -i     Disable statusbar
     --statusbar, -I        Enable statusbar
@@ -30,16 +31,20 @@ General options:
     --root_t, -y           Set tiled desktop background and exit
     --root_s, -z           Set stretched desktop background and exit
     --scale_down, -t       Shrink image(s) larger than the screen to fit
+    --trashbin             Use users trash bin instead of .qiv_trash when deleting
+                           (undelete key will not work in that case)
     --transparency, -p     Enable transparency for transparent images
     --watch, -T            Reload the image if it has changed on disk
     --recursivedir, -u     Recursively include all files
     --followlinks, -L      Follow symlinks to directories (requires --recursivedir)
     --select_dir, -A x     Store the selected files in dir x (default is .qiv-select)
-    --autorotate, -l       Autorotate JPEGs according to EXIF rotation tag
+    --autorotate, -l       Do NOT autorotate JPEGs according to EXIF rotation tag
     --rotate, -q x         Rotate 90(x=1),180(x=2),270(x=3) degrees clockwise (11 & 13 for conditional)
     --xineramascreen, -X x Use monitor x as preferred screen
     --source_profile, -Y x Use color profile file x as source profile for all images
     --display_profile,-Z x Use color profile file x as display profile for all images
+    --vikeys               Enable movement with h/j/k/l, vi-style
+                           (HJKL will do what hjkl previously did)
     --version, -v          Print version information and exit
 
 Slideshow options:
@@ -48,8 +53,6 @@ This can also be used for the desktop background (x/y/z)
     --random, -r           Random order
     --shuffle, -S          Shuffled order
     --delay, -d x          Wait x seconds between images [default=3]
-    --vikeys               Enable movement with h/j/k/l, vi-style
-                           (HJKL will do what hjkl previously did)
 
 Keys:
     space/left mouse/wheel down      next picture
@@ -63,7 +66,7 @@ Keys:
     ?/F1                 show keys (in fullscreen mode)
     F11/F12              in/decrease slideshow delay (1 second)
     a/A                  copy current image to .qiv-select
-    d/D/del              move picture to .qiv-trash
+    d/D/del              move picture to .qiv-trash (to trash bin with --trashbin option)
     u                    undelete the previously trashed image
     +/=/wheel r/btn fwd  zoom in (10%)
     -/wheel l/btn back   zoom out (10%)
@@ -92,6 +95,7 @@ Keys:
     enter/return         reset zoom, rotation and color settings
     E                    display Exif information
     i                    statusbar on/off
+    J                    JPEG comments on/off
     I                    iconify window
     w                    watch file on/off
     x                    center image on background
