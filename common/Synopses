@@ -9,28 +9,28 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd ansible
-version 2.4.2.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-config
-version 2.4.3.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-console
-version 2.4.2.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 emit dump -h | getusage dump
 
 cmd ansible-doc
-version 2.4.3.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-galaxy
-version 2.4.3.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 emit info -h | getusage info
@@ -45,22 +45,22 @@ emit login -h | getusage login
 emit delete -h | getusage delete
 
 cmd ansible-inventory
-version 2.4.2.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-playbook
-version 2.4.2.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-pull
-version 2.4.2.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-vault
-version 2.4.3.0
+version 2.5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 emit encrypt_string -h | getusage encrypt_string
@@ -251,7 +251,7 @@ emit --help | getusage
 subcmds @ -h
 
 cmd gpg
-version 2.2.6
+version 2.2.7
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -474,14 +474,14 @@ pack | getversion
 emit | getusage
 
 cmd svn
-version 1.9.7
+version 1.10.0
 subdir
 emit --version --quiet | getversion
 emit help | getusage
 subcmds help @
 
 cmd svnadmin
-version 1.9.7
+version 1.10.0
 subdir
 emit --version | field 3 | getversion
 emit help | getusage
@@ -520,7 +520,7 @@ emit --version | field 2 | tr -d v | getversion
 emit --help | getusage
 
 cmd tmux
-version 2.6
+version 2.7
 emit -V | field -1 | getversion
 emit -? | getusage
 emit list-commands | getusage commands
@@ -554,7 +554,7 @@ emit --version | cut -d- -f2 | getversion
 emit --help | getusage
 
 cmd vim
-version 8.0
+version 8.1
 emit -version | field 5 | getversion
 vimver="$_verinst"
 emit -h | getusage
@@ -588,12 +588,12 @@ emit --help | getusage
 subcmds @ --help
 
 cmd xxd
-version 8.0
-getversion <<<"$vimver"
+version 1.10
+emit -v | tr -d V | field 2 | getversion
 emit -h | getusage
 
 cmd xz
-version 5.2.3
+version 5.2.4
 emit -V | field -1 | getversion
 emit -h | getusage
 emit --long-help | getusage long

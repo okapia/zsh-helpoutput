@@ -101,7 +101,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 180129
+version 180402
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -131,7 +131,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd lsusb
-version 009
+version 010
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -160,12 +160,12 @@ emit help | getusage
 subcmds @ help
 
 cmd pgrep
-version 3.3.14
+version 3.3.15
 emit -V | tr -d \) | field -1 | getversion
 emit -h | getusage
 
 cmd pidof
-version 3.3.14
+version 3.3.15
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -175,7 +175,7 @@ emit -V | sed 's/.*s//' | getversion
 emit | getusage
 
 cmd ps
-version 3.3.14
+version 3.3.15
 emit -V | field -1 | getversion
 emit --help all | getusage
 
@@ -190,7 +190,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 180129
+version 180402
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
@@ -240,17 +240,17 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.44.1
+version 1.44.2
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
 cmd vmstat
-version 3.3.14
+version 3.3.15
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd w
-version 3.3.14
+version 3.3.15
 emit -V | field -1 | getversion
 emit --help | getusage
 
@@ -267,27 +267,27 @@ emit -h | getusage
 # shadow-utils
 
 cmd gpasswd
-version 4.5
+version 4.6
 pack | getversion
 emit -h | getusage
 
 cmd groupadd
-version 4.5
+version 4.6
 pack | getversion
 emit -h | getusage
 
 cmd groupmod
-version 4.5
+version 4.6
 pack | getversion
 emit -h | getusage
 
 cmd useradd
-version 4.5
+version 4.6
 pack | getversion
 emit -h | getusage
 
 cmd usermod
-version 4.5
+version 4.6
 pack | getversion
 emit -h | getusage
 
