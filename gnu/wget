@@ -1,4 +1,4 @@
-GNU Wget 1.19.2, a non-interactive network retriever.
+GNU Wget 1.19.5, a non-interactive network retriever.
 Usage: wget [OPTION]... [URL]...
 
 Mandatory arguments to long options are mandatory for short options too.
@@ -28,6 +28,7 @@ Logging and input file:
 Download:
   -t,  --tries=NUMBER              set number of retries to NUMBER (0 unlimits)
        --retry-connrefused         retry even if connection is refused
+       --retry-on-http-error=ERRORS    comma-separated list of HTTP errors to retry
   -O,  --output-document=FILE      write documents to FILE
   -nc, --no-clobber                skip downloads that would download to
                                      existing files (overwriting them)
@@ -58,10 +59,6 @@ Download:
        --no-dns-cache              disable caching DNS lookups
        --restrict-file-names=OS    restrict chars in file names to ones OS allows
        --ignore-case               ignore case when matching files/directories
-  -4,  --inet4-only                connect only to IPv4 addresses
-  -6,  --inet6-only                connect only to IPv6 addresses
-       --prefer-family=FAMILY      connect first to addresses of specified family,
-                                     one of IPv6, IPv4, or none
        --user=USER                 set both ftp and http user to USER
        --password=PASS             set both ftp and http password to PASS
        --ask-password              prompt for passwords
@@ -92,7 +89,7 @@ HTTP options:
   -E,  --adjust-extension          save HTML/CSS documents with proper extensions
        --ignore-length             ignore 'Content-Length' header field
        --header=STRING             insert STRING among the headers
-       --compression=TYPE          choose compression, one of auto, gzip and none
+       --compression=TYPE          choose compression, one of auto, gzip and none. (default: none)
        --max-redirect              maximum redirections allowed per page
        --proxy-user=USER           set USER as proxy username
        --proxy-password=PASS       set PASS as proxy password
@@ -133,7 +130,11 @@ HTTPS (SSL/TLS) options:
                                    'sha256//' and separated by ';', to verify
                                    peer against
        --random-file=FILE          file with random data for seeding the SSL PRNG
+       --egd-file=FILE             file naming the EGD socket with random data
 
+       --ciphers=STR           Set the priority string (GnuTLS) or cipher list string (OpenSSL) directly.
+                                   Use with care. This option overrides --secure-protocol.
+                                   The format and syntax of this string depend on the specific SSL/TLS engine.
 HSTS options:
        --no-hsts                   disable HSTS
        --hsts-file                 path of HSTS database (will override default)
@@ -183,7 +184,7 @@ Recursive accept/reject:
   -R,  --reject=LIST               comma-separated list of rejected extensions
        --accept-regex=REGEX        regex matching accepted URLs
        --reject-regex=REGEX        regex matching rejected URLs
-       --regex-type=TYPE           regex type (posix|pcre)
+       --regex-type=TYPE           regex type (posix)
   -D,  --domains=LIST              comma-separated list of accepted domains
        --exclude-domains=LIST      comma-separated list of rejected domains
        --follow-ftp                follow FTP links from HTML documents
@@ -197,4 +198,5 @@ Recursive accept/reject:
   -X,  --exclude-directories=LIST  list of excluded directories
   -np, --no-parent                 don't ascend to the parent directory
 
-Mail bug reports and suggestions to <bug-wget@gnu.org>
+Email bug reports, questions, discussions to <bug-wget@gnu.org>
+and/or open issues at https://savannah.gnu.org/bugs/?func=additem&group=wget.
