@@ -11,4 +11,5 @@ Options:
   -p, --password PASSWORD       use this encrypted password for the new group
   -r, --system                  create a system account
   -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       directory prefix
 

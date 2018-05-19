@@ -8,4 +8,5 @@ Options:
   -p, --password PASSWORD       change the password to this (encrypted)
                                 PASSWORD
   -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
 
