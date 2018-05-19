@@ -4,7 +4,7 @@ break-pane (breakp) [-dP] [-F format] [-n window-name] [-s src-pane] [-t dst-win
 capture-pane (capturep) [-aCeJpPq] [-b buffer-name] [-E end-line] [-S start-line][-t target-pane]
 choose-buffer [-N] [-F format] [-f filter] [-O sort-order] [-t target-pane]
 choose-client [-N] [-F format] [-f filter] [-O sort-order] [-t target-pane]
-choose-tree [-Nsw] [-F format] [-f filter] [-O sort-order] [-t target-pane]
+choose-tree [-GNsw] [-F format] [-f filter] [-O sort-order] [-t target-pane]
 clear-history (clearhist) [-t target-pane]
 clock-mode [-t target-pane]
 command-prompt [-1Ni] [-I inputs] [-p prompts] [-t target-client] [template]
@@ -43,7 +43,7 @@ new-window (neww) [-adkP] [-c start-directory] [-F format] [-n window-name] [-t 
 next-layout (nextl) [-t target-window]
 next-window (next) [-a] [-t target-session]
 paste-buffer (pasteb) [-dpr] [-s separator] [-b buffer-name] [-t target-pane]
-pipe-pane (pipep) [-o] [-t target-pane] [command]
+pipe-pane (pipep) [-IOo] [-t target-pane] [command]
 previous-layout (prevl) [-t target-window]
 previous-window (prev) [-a] [-t target-session]
 refresh-client (refresh) [-S] [-C size] [-t target-client]
@@ -55,7 +55,7 @@ respawn-window (respawnw) [-c start-directory] [-k] [-t target-window] [command]
 rotate-window (rotatew) [-DU] [-t target-window]
 run-shell (run) [-b] [-t target-pane] shell-command
 save-buffer (saveb) [-a] [-b buffer-name] path
-select-layout (selectl) [-nop] [-t target-window] [layout-name]
+select-layout (selectl) [-Enop] [-t target-pane] [layout-name]
 select-pane (selectp) [-DdegLlMmRU] [-P style] [-T title] [-t target-pane]
 select-window (selectw) [-lnpT] [-t target-window]
 send-keys (send) [-lXRM] [-N repeat-count] [-t target-pane] key ...
