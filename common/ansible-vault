@@ -7,7 +7,7 @@ Options:
   -h, --help            show this help message and exit
   --new-vault-id=NEW_VAULT_ID
                         the new vault identity to use for rekey
-  --new-vault-password-file=NEW_VAULT_PASSWORD_FILES
+  --new-vault-password-file=NEW_VAULT_PASSWORD_FILE
                         new vault password file for rekey
   --vault-id=VAULT_IDS  the vault identity to use
   --vault-password-file=VAULT_PASSWORD_FILES

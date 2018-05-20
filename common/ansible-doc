@@ -1,4 +1,4 @@
-Usage: ansible-doc [-l|-s] [options] [-t <plugin type] [plugin]
+Usage: ansible-doc [-l|-F|-s] [options] [-t <plugin type> ] [plugin]
 
 plugin documentation tool
 
@@ -7,6 +7,8 @@ Options:
                         all plugins.
   -h, --help            show this help message and exit
   -l, --list            List available plugins
+  -F, --list_files      Show plugin names and their source files without
+                        summaries (implies --list)
   -M MODULE_PATH, --module-path=MODULE_PATH
                         prepend colon-separated path(s) to module library
                         (default=[u'/home/opk/.ansible/plugins/modules',

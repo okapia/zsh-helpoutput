@@ -22,24 +22,20 @@ Options:
   --full                Do a full clone, instead of a shallow one.
   -h, --help            show this help message and exit
   -i INVENTORY, --inventory=INVENTORY, --inventory-file=INVENTORY
-                        specify inventory host path
-                        (default=[[u'/usr/local/etc/ansible/hosts']]) or comma
-                        separated host list. --inventory-file is deprecated
+                        specify inventory host path or comma separated host
+                        list. --inventory-file is deprecated
   -l SUBSET, --limit=SUBSET
                         further limit selected hosts to an additional pattern
   --list-hosts          outputs a list of matching hosts; does not execute
                         anything else
   -m MODULE_NAME, --module-name=MODULE_NAME
                         Repository module name, which ansible will use to
-                        check out the repo. Default is git.
+                        check out the repo. Choices are ('git', 'subversion',
+                        'hg', 'bzr'). Default is git.
   -M MODULE_PATH, --module-path=MODULE_PATH
                         prepend colon-separated path(s) to module library
                         (default=[u'/home/opk/.ansible/plugins/modules',
                         u'/usr/local/share/ansible/plugins/modules'])
-  --new-vault-id=NEW_VAULT_ID
-                        the new vault identity to use for rekey
-  --new-vault-password-file=NEW_VAULT_PASSWORD_FILES
-                        new vault password file for rekey
   -o, --only-if-changed
                         only run the playbook if the repository has been
                         updated

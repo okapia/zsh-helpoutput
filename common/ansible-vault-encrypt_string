@@ -1,15 +1,18 @@
-Usage: ansible-vault encrypt-string [--prompt] [options] string_to_encrypt
+Usage: ansible-vault encrypt_string [--prompt] [options] string_to_encrypt
 
 encryption/decryption utility for Ansible data files
 
 Options:
   --ask-vault-pass      ask for vault password
+  --encrypt-vault-id=ENCRYPT_VAULT_ID
+                        the vault id used to encrypt (required if more than
+                        vault-id is provided)
   -h, --help            show this help message and exit
   -n ENCRYPT_STRING_NAMES, --name=ENCRYPT_STRING_NAMES
                         Specify the variable name
   --new-vault-id=NEW_VAULT_ID
                         the new vault identity to use for rekey
-  --new-vault-password-file=NEW_VAULT_PASSWORD_FILES
+  --new-vault-password-file=NEW_VAULT_PASSWORD_FILE
                         new vault password file for rekey
   --output=OUTPUT_FILE  output file name for encrypt or decrypt; use - for
                         stdout

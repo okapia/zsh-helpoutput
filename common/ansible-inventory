@@ -2,19 +2,18 @@ Usage: ansible-inventory [options] [host|group]
 
 Options:
   --ask-vault-pass      ask for vault password
+  --export              When doing an --list, represent in a way that is
+                        optimized for export,not as an accurate representation
+                        of how Ansible has processed it
   -h, --help            show this help message and exit
   -i INVENTORY, --inventory=INVENTORY, --inventory-file=INVENTORY
-                        specify inventory host path
-                        (default=[[u'/usr/local/etc/ansible/hosts']]) or comma
-                        separated host list. --inventory-file is deprecated
-  -l SUBSET, --limit=SUBSET
-                        further limit selected hosts to an additional pattern
-  --list-hosts          outputs a list of matching hosts; does not execute
-                        anything else
-  --new-vault-id=NEW_VAULT_ID
-                        the new vault identity to use for rekey
-  --new-vault-password-file=NEW_VAULT_PASSWORD_FILES
-                        new vault password file for rekey
+                        specify inventory host path or comma separated host
+                        list. --inventory-file is deprecated
+  --playbook-dir=BASEDIR
+                        Since this tool does not use playbooks, use this as a
+                        subsitute playbook directory.This sets the relative
+                        path for many features including roles/ group_vars/
+                        etc.
   --vars                Add vars to graph display, ignored unless used with
                         --graph
   --vault-id=VAULT_IDS  the vault identity to use
