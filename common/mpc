@@ -1,5 +1,5 @@
 Usage: mpc [options] <command> [<arguments>]
-mpc version: 0.29
+mpc version: 0.30
 
 Options:
   -v, --verbose              Give verbose output
@@ -31,6 +31,7 @@ Commands:
   mpc enable [only] <output # or name> [...]            Enable output(s)
   mpc disable [only] <output # or name> [...]           Disable output(s)
   mpc toggleoutput <output # or name> [...]             Toggle output(s)
+  mpc outputset <output # or name> <name>=<value>       Set output attributes
   mpc shuffle                                           Shuffle the queue
   mpc move <from> <to>                                  Move song in queue
   mpc playlist [<playlist>]                             Print <playlist>
@@ -58,6 +59,7 @@ Commands:
   mpc mixrampdb [<dB>]                                  Set and display mixrampdb settings
   mpc mixrampdelay [<seconds>]                          Set and display mixrampdelay settings
   mpc update [<path>]                                   Scan music directory for updates
+  mpc rescan [<path>]                                   Rescan music directory (including unchanged files)
   mpc sticker <uri> <get|set|list|delete|find> [args..] Sticker management
   mpc stats                                             Display statistics about MPD
   mpc version                                           Report version of MPD
