@@ -6,4 +6,5 @@ triggering the pre-unlock and post-unlock hook scripts.
 
 Valid options:
   --bypass-hooks           : bypass the repository hook system
+  -q [--quiet]             : no progress (only errors to stderr)
 

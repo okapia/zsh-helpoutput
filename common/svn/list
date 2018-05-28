@@ -9,6 +9,10 @@ usage: list [TARGET[@REV]...]
   The default TARGET is '.', meaning the repository URL of the current
   working directory.
 
+  Multiple --search patterns may be specified and the output will be
+  reduced to those paths whose last segment - i.e. the file or directory
+  name - matches at least one of these patterns.
+
   With --verbose, the following fields will be shown for each item:
 
     Revision number of the last commit
@@ -34,11 +38,15 @@ Valid options:
   --xml                    : output in XML
   --include-externals      : also operate on externals defined by
                              svn:externals properties
+  --search ARG             : use ARG as search pattern (glob syntax, case-
+                             and accent-insensitive, may require quotation marks
+                             to prevent shell expansion)
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG (caution: on many operating
                              systems, other users will be able to see this)
+  --password-from-stdin    : read password from stdin
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)

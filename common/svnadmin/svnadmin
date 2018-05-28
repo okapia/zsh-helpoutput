@@ -9,6 +9,7 @@ Available subcommands:
    delrevprop
    deltify
    dump
+   dump-revprops
    freeze
    help (?, h)
    hotcopy
@@ -16,6 +17,7 @@ Available subcommands:
    list-dblogs
    list-unused-dblogs
    load
+   load-revprops
    lock
    lslocks
    lstxns

@@ -6,8 +6,9 @@ usage: copy SRC[@REV]... DST
     WC  -> URL:  immediately commit a copy of WC to URL
     URL -> WC:   check out URL into WC, schedule for addition
     URL -> URL:  complete server-side copy;  used to branch and tag
-  All the SRCs must be of the same type. When copying multiple sources,
-  they will be added as children of DST, which must be a directory.
+  All the SRCs must be of the same type. If DST is an existing directory,
+  the sources will be added as children of DST. When copying multiple
+  sources, DST must be an existing directory.
 
   WARNING: For compatibility with previous versions of Subversion,
   copies performed using two working copy paths (WC -> WC) will not
@@ -41,6 +42,7 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG (caution: on many operating
                              systems, other users will be able to see this)
+  --password-from-stdin    : read password from stdin
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)

@@ -8,6 +8,47 @@ usage: resolve [PATH...]
   conflicts on PATH to be resolved in the manner specified by ARG.
   In this mode, the command is not recursive by default (depth 'empty').
 
+  A conflicted path cannot be committed with 'svn commit' until it
+  has been marked as resolved with 'svn resolve'.
+
+  Subversion knows three types of conflicts:
+  Text conflicts, Property conflicts, and Tree conflicts.
+
+  Text conflicts occur when overlapping changes to file contents were
+  made. Text conflicts are usually resolved by editing the conflicted
+  file or by using a merge tool (which may be an external program).
+  'svn resolve' provides options which can be used to automatically
+  edit files (such as 'mine-full' or 'theirs-conflict'), but these are
+  only useful in situations where it is acceptable to discard local or
+  incoming changes altogether.
+
+  Property conflicts are usually resolved by editing the value of the
+  conflicted property (either from the interactive prompt, or with
+  'svn propedit'). As with text conflicts, options exist to edit a
+  property automatically, discarding some changes in favour of others.
+
+  Tree conflicts occur when a change to the directory structure was
+  made, and when this change cannot be applied to the working copy
+  without affecting other changes (text changes, property changes,
+  or other changes to the directory structure). Brief information about
+  tree conflicts is shown by the 'svn status' and 'svn info' commands.
+  In interactive mode, 'svn resolve' will attempt to describe tree conflicts
+  in detail, and may offer options to resolve the conflict automatically.
+  It is recommended to use these automatic options whenever possible,
+  rather than attempting manual tree conflict resolution.
+
+  If a tree conflict cannot be resolved automatically, it is recommended
+  to figure out why the conflict occurred before attempting to resolve it.
+  The 'svn log -v' command can be used to inspect structural changes
+  made in past revisions, and perhaps even on other branches.
+  'svn help log' describes how these structural changes are presented.
+  Once the conflicting "incoming" change has been identified with 'svn log'
+  the current "local" working copy state should be examined and adjusted
+  in a way such that the conflict is resolved. This may involve editing
+  files manually or with 'svn merge'. It may be necessary to discard some
+  local changes with 'svn revert'. Files or directories might have to be
+  copied, deleted, or moved.
+
 Valid options:
   --targets ARG            : pass contents of file ARG as additional args
   -R [--recursive]         : descend recursively, same as --depth=infinity
@@ -22,6 +63,7 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG (caution: on many operating
                              systems, other users will be able to see this)
+  --password-from-stdin    : read password from stdin
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)

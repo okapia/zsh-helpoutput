@@ -1,5 +1,5 @@
 delrevprop: usage: 1. svnadmin delrevprop REPOS_PATH -r REVISION NAME
-                   2. svnadmin delrevprop REPO_PATH -t TXN NAME
+                   2. svnadmin delrevprop REPOS_PATH -t TXN NAME
 
 1. Delete the property NAME on revision REVISION.
 

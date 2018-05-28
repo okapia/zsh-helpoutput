@@ -1,0 +1,13 @@
+dump-revprops: usage: svnadmin dump-revprops REPOS_PATH [-r LOWER[:UPPER]]
+
+Dump the revision properties of filesystem to stdout in a 'dumpfile'
+portable format, sending feedback to stderr.  Dump revisions
+LOWER rev through UPPER rev.  If no revisions are given, dump the
+properties for all revisions.  If only LOWER is given, dump the
+properties for that one revision.
+
+Valid options:
+  -r [--revision] ARG      : specify revision number ARG (or X:Y range)
+  -q [--quiet]             : no progress (only errors to stderr)
+  -F [--file] ARG          : write to file ARG instead of stdout
+

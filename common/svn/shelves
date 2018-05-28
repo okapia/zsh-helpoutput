@@ -1,31 +1,11 @@
-import: Commit an unversioned file or tree into the repository.
-usage: import [PATH] URL
+x-shelves (shelves): List shelved changes.
+usage: x-shelves
 
-  Recursively commit a copy of PATH to URL.
-  If PATH is omitted '.' is assumed.
-  Parent directories are created as necessary in the repository.
-  If PATH is a directory, the contents of the directory are added
-  directly under URL.
-  Unversionable items such as device files and pipes are ignored
-  if --force is specified.
+  The shelving feature is EXPERIMENTAL. This command is likely to change
+  in the next release, and there is no promise of backward compatibility.
 
 Valid options:
   -q [--quiet]             : print nothing, or only summary information
-  -N [--non-recursive]     : obsolete; try --depth=files or --depth=immediates
-  --depth ARG              : limit operation by depth ARG ('empty', 'files',
-                             'immediates', or 'infinity')
-  --auto-props             : enable automatic properties
-  --force                  : force operation to run
-  --no-auto-props          : disable automatic properties
-  -m [--message] ARG       : specify log message ARG
-  -F [--file] ARG          : read log message from file ARG
-  --force-log              : force validity of log message source
-  --editor-cmd ARG         : use ARG as external editor
-  --encoding ARG           : treat value as being in charset encoding ARG
-  --with-revprop ARG       : set revision property ARG in new revision
-                             using the name[=value] format
-  --no-ignore              : disregard default and svn:ignore and
-                             svn:global-ignores property ignores
 
 Global options:
   --username ARG           : specify a username ARG

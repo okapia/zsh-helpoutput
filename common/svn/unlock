@@ -1,16 +1,18 @@
 unlock: Unlock working copy paths or URLs.
 usage: unlock TARGET...
 
-  Use --force to break the lock.
+  Use --force to break a lock held by another user or working copy.
 
 Valid options:
   --targets ARG            : pass contents of file ARG as additional args
-  --force                  : force operation to run
+  --force                  : break locks
+  -q [--quiet]             : print nothing, or only summary information
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG (caution: on many operating
                              systems, other users will be able to see this)
+  --password-from-stdin    : read password from stdin
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)

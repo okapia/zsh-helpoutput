@@ -2,23 +2,12 @@ info: Display information about a local or remote item.
 usage: info [TARGET[@REV]...]
 
   Print information about each TARGET (default: '.').
-  TARGET may be either a working-copy path or URL.  If specified, REV
-  determines in which revision the target is first looked up.
+  TARGET may be either a working-copy path or a URL.  If specified, REV
+  determines in which revision the target is first looked up; the default
+  is HEAD for a URL or BASE for a WC path.
 
   With --show-item, print only the value of one item of information
-  about TARGET. One of the following items can be selected:
-     kind                  the kind of TARGET
-     url                   the URL of TARGET in the repository
-     relative-url          the repository-relative URL
-     repos-root-url        the repository root URL
-     repos-uuid            the repository UUID
-     revision              the revision of TARGET (defaults to BASE
-                           for working copy paths and HEAD for URLs)
-     last-changed-revision the most recent revision in which TARGET
-                           was changed
-     last-changed-date     the date of the last-changed revision
-     last-changed-author   the author of the last-changed revision
-     wc-root               the root of TARGET's working copy
+  about TARGET.
 
 Valid options:
   -r [--revision] ARG      : ARG (some commands also take ARG1:ARG2 range)
@@ -38,17 +27,30 @@ Valid options:
   --changelist [--cl] ARG  : operate only on members of changelist ARG
   --include-externals      : also operate on externals defined by
                              svn:externals properties
-  --show-item ARG          : print only the item identified by ARG ('kind',
-                             'url', 'relative-url', 'repos-root-url',
-                             'repos-uuid', 'revision', 'last-changed-revision',
-                             'last-changed-date', 'last-changed-author',
-                             'wc-root')
+  --show-item ARG          : print only the item identified by ARG:
+                                'kind'       node kind of TARGET
+                                'url'        URL of TARGET in the repository
+                                'relative-url'
+                                             repository-relative URL of TARGET
+                                'repos-root-url'
+                                             root URL of repository
+                                'repos-uuid' UUID of repository
+                                'revision'   specified or implied revision
+                                'last-changed-revision'
+                                             last change of TARGET at or before
+                                             'revision'
+                                'last-changed-date'
+                                             date of 'last-changed-revision'
+                                'last-changed-author'
+                                             author of 'last-changed-revision'
+                                'wc-root'    root of TARGET's working copy
   --no-newline             : do not output the trailing newline
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG (caution: on many operating
                              systems, other users will be able to see this)
+  --password-from-stdin    : read password from stdin
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)

@@ -10,6 +10,10 @@ every path present in the repository as of that revision.  (In either
 case, the second and subsequent revisions, if any, describe only paths
 changed in those revisions.)
 
+Using --exclude or --include gives results equivalent to authz-based
+path exclusions. In particular, when the source of a copy is
+excluded, the copy is transformed into an add (unlike in 'svndumpfilter').
+
 Valid options:
   -r [--revision] ARG      : specify revision number ARG (or X:Y range)
   --incremental            : dump or hotcopy incrementally
@@ -18,4 +22,11 @@ Valid options:
   -M [--memory-cache-size] ARG : size of the extra in-memory cache in MB used to
                              minimize redundant operations. Default: 16.
                              [used for FSFS repositories only]
+  -F [--file] ARG          : write to file ARG instead of stdout
+  --exclude ARG            : filter out nodes with given prefix(es) from dump
+  --include ARG            : filter out nodes without given prefix(es) from dump
+  --pattern                : treat the path prefixes as file glob patterns.
+                             Glob special characters are '*' '?' '[]' and '\'.
+                             Character '/' is not treated specially, so
+                             pattern /*/foo matches paths /a/foo and /a/b/foo.
 

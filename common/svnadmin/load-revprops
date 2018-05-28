@@ -1,0 +1,19 @@
+load-revprops: usage: svnadmin load-revprops REPOS_PATH
+
+Read a 'dumpfile'-formatted stream from stdin, setting the revision
+properties in the repository's filesystem.  Revisions not found in the
+repository will cause an error.  Progress feedback is sent to stdout.
+If --revision is specified, limit the loaded revisions to only those
+in the dump stream whose revision numbers match the specified range.
+
+Valid options:
+  -q [--quiet]             : no progress (only errors to stderr)
+  -r [--revision] ARG      : specify revision number ARG (or X:Y range)
+  --force-uuid             : set repos UUID to that found in stream, if any
+  --normalize-props        : normalize property values found in the dumpstream
+                             (currently, only translates non-LF line endings)
+  --bypass-prop-validation : bypass property validation logic
+  --no-flush-to-disk       : disable flushing to disk during the operation
+                             (faster, but unsafe on power off)
+  -F [--file] ARG          : read from file ARG instead of stdin
+

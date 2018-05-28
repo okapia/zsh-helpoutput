@@ -2,7 +2,7 @@ lock: Lock working copy paths or URLs in the repository, so that
 no other user can commit changes to them.
 usage: lock TARGET...
 
-  Use --force to steal the lock from another user or working copy.
+  Use --force to steal a lock from another user or working copy.
 
 Valid options:
   --targets ARG            : pass contents of file ARG as additional args
@@ -10,12 +10,14 @@ Valid options:
   -F [--file] ARG          : read lock comment from file ARG
   --force-log              : force validity of lock comment source
   --encoding ARG           : treat value as being in charset encoding ARG
-  --force                  : force operation to run
+  --force                  : steal locks
+  -q [--quiet]             : print nothing, or only summary information
 
 Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG (caution: on many operating
                              systems, other users will be able to see this)
+  --password-from-stdin    : read password from stdin
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)

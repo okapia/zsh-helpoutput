@@ -361,8 +361,8 @@ Valid options:
   --accept ARG             : specify automatic conflict resolution action
                              ('postpone', 'working', 'base', 'mine-conflict',
                              'theirs-conflict', 'mine-full', 'theirs-full',
-                             'edit', 'launch')
-                             (shorthand: 'p', 'mc', 'tc', 'mf', 'tf', 'e', 'l')
+                             'edit', 'launch', 'recommended') (shorthand:
+                             'p', 'mc', 'tc', 'mf', 'tf', 'e', 'l', 'r')
   --reintegrate            : deprecated
   --allow-mixed-revisions  : Allow operation on mixed-revision working copy.
                              Use of this option is not recommended!
@@ -373,6 +373,7 @@ Global options:
   --username ARG           : specify a username ARG
   --password ARG           : specify a password ARG (caution: on many operating
                              systems, other users will be able to see this)
+  --password-from-stdin    : read password from stdin
   --no-auth-cache          : do not cache authentication tokens
   --non-interactive        : do no interactive prompting (default is to prompt
                              only if standard input is a terminal device)
