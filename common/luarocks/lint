@@ -1,0 +1,18 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks lint - Check syntax of a rockspec.
+
+SYNOPSIS
+	/usr/bin/luarocks lint <rockspec>
+
+DESCRIPTION
+	This is a utility function that checks the syntax of a rockspec.
+	
+	It returns success or failure if the text of a rockspec is
+	syntactically correct.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

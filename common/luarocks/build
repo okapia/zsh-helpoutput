@@ -1,0 +1,46 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks build - Build/compile a rock.
+
+SYNOPSIS
+	/usr/bin/luarocks build [--pack-binary-rock] [--keep] {<rockspec>|<rock>|<name> [<version>]}
+
+DESCRIPTION
+	Build and install a rock, compiling its C parts if any.
+	Argument may be a rockspec file, a source rock file
+	or the name of a rock to be fetched from a repository.
+	
+	--pack-binary-rock  Do not install rock. Instead, produce a .rock file
+	                    with the contents of compilation in the current
+	                    directory.
+	
+	--keep              Do not remove previously installed versions of the
+	                    rock after building a new one. This behavior can
+	                    be made permanent by setting keep_other_versions=true
+	                    in the configuration file.
+	
+	--branch=<name>     Override the `source.branch` field in the loaded
+	                    rockspec. Allows to specify a different branch to 
+	                    fetch. Particularly for SCM rocks.
+	
+	--only-deps         Installs only the dependencies of the rock.
+	
+	--deps-mode=<mode>  How to handle dependencies. Four modes are supported:
+	                    * all - use all trees from the rocks_trees list
+	                      for finding dependencies
+	                    * one - use only the current tree (possibly set
+	                      with --tree)
+	                    * order - use trees based on order (use the current
+	                      tree and all trees below it on the rocks_trees list)
+	                    * none - ignore dependencies altogether.
+	                    The default mode may be set with the deps_mode entry
+	                    in the configuration file.
+	                    The current default is "one".
+	                    Type '/usr/bin/luarocks' with no arguments to see
+	                    your list of rocks trees.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

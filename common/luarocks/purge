@@ -1,0 +1,25 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks purge - Remove all installed rocks from a tree.
+
+SYNOPSIS
+	/usr/bin/luarocks purge --tree=<tree> [--old-versions]
+
+DESCRIPTION
+	This command removes rocks en masse from a given tree.
+	By default, it removes all rocks from a tree.
+	
+	The --tree argument is mandatory: luarocks purge does not
+	assume a default tree.
+	
+	--old-versions  Keep the highest-numbered version of each
+	                rock and remove the other ones. By default
+	                it only removes old versions if they are
+	                not needed as dependencies. This can be
+	                overridden with the flag --force.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

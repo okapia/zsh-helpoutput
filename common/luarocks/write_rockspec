@@ -1,0 +1,39 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks write_rockspec - Write a template for a rockspec file.
+
+SYNOPSIS
+	/usr/bin/luarocks write_rockspec [--output=<file> ...] [<name>] [<version>] [<url>|<path>]
+
+DESCRIPTION
+	This command writes an initial version of a rockspec file,
+	based on a name, a version, and a location (an URL or a local path).
+	If only two arguments are given, the first one is considered the name and the
+	second one is the location.
+	If only one argument is given, it must be the location.
+	If no arguments are given, current directory is used as location.
+	LuaRocks will attempt to infer name and version if not given,
+	using 'scm' as default version.
+	
+	Note that the generated file is a _starting point_ for writing a
+	rockspec, and is not guaranteed to be complete or correct.
+	
+	--output=<file>          Write the rockspec with the given filename.
+	                         If not given, a file is written in the current
+	                         directory with a filename based on given name and version.
+	--license="<string>"     A license string, such as "MIT/X11" or "GNU GPL v3".
+	--summary="<txt>"        A short one-line description summary.
+	--detailed="<txt>"       A longer description string.
+	--homepage=<url>         Project homepage.
+	--lua-version=<ver>      Supported Lua versions. Accepted values are "5.1", "5.2",
+	                         "5.3", "5.1,5.2", "5.2,5.3", or "5.1,5.2,5.3".
+	--rockspec-format=<ver>  Rockspec format version, such as "1.0" or "1.1".
+	--tag=<tag>              Tag to use. Will attempt to extract version number from it.
+	--lib=<lib>[,<lib>]      A comma-separated list of libraries that C files need to
+	                         link to.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

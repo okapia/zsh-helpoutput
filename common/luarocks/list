@@ -1,0 +1,20 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks list - List currently installed rocks.
+
+SYNOPSIS
+	/usr/bin/luarocks list [--porcelain] <filter>
+
+DESCRIPTION
+	<filter> is a substring of a rock name to filter by.
+	
+	--outdated    List only rocks for which there is a
+	              higher version available in the rocks server.
+	
+	--porcelain   Produce machine-friendly output.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

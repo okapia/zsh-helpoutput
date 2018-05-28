@@ -1,0 +1,15 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks help - Help on commands. Type '/usr/bin/luarocks help <command>' for more.
+
+SYNOPSIS
+	/usr/bin/luarocks help [<command>]
+
+DESCRIPTION
+	<command> is the command to show help for.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

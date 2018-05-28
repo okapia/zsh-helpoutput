@@ -1,0 +1,33 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks path - Return the currently configured package path.
+
+SYNOPSIS
+	/usr/bin/luarocks path 
+
+DESCRIPTION
+	Returns the package path currently configured for this installation
+	of LuaRocks, formatted as shell commands to update LUA_PATH and LUA_CPATH. 
+	
+	--bin          Adds the system path to the output
+	
+	--append       Appends the paths to the existing paths. Default is to prefix
+	               the LR paths to the existing paths.
+	
+	--lr-path      Exports the Lua path (not formatted as shell command)
+	
+	--lr-cpath     Exports the Lua cpath (not formatted as shell command)
+	
+	--lr-bin       Exports the system path (not formatted as shell command)
+	
+	
+	On Unix systems, you may run: 
+	  eval `luarocks path`
+	And on Windows: 
+	  luarocks path > "%temp%\_lrp.bat" && call "%temp%\_lrp.bat" && del "%temp%\_lrp.bat"
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

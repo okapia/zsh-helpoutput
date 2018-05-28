@@ -1,0 +1,36 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks install - Install a rock.
+
+SYNOPSIS
+	/usr/bin/luarocks install {<rock>|<name> [<version>]}
+
+DESCRIPTION
+	Argument may be the name of a rock to be fetched from a repository
+	or a filename of a locally available rock.
+	
+	--keep              Do not remove previously installed versions of the
+	                    rock after installing a new one. This behavior can
+	                    be made permanent by setting keep_other_versions=true
+	                    in the configuration file.
+	
+	--only-deps         Installs only the dependencies of the rock.
+	--deps-mode=<mode>  How to handle dependencies. Four modes are supported:
+	                    * all - use all trees from the rocks_trees list
+	                      for finding dependencies
+	                    * one - use only the current tree (possibly set
+	                      with --tree)
+	                    * order - use trees based on order (use the current
+	                      tree and all trees below it on the rocks_trees list)
+	                    * none - ignore dependencies altogether.
+	                    The default mode may be set with the deps_mode entry
+	                    in the configuration file.
+	                    The current default is "one".
+	                    Type '/usr/bin/luarocks' with no arguments to see
+	                    your list of rocks trees.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

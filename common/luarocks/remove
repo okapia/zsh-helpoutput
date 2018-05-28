@@ -1,0 +1,34 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks remove - Uninstall a rock.
+
+SYNOPSIS
+	/usr/bin/luarocks remove [--force|--force-fast] <name> [<version>]
+
+DESCRIPTION
+	Argument is the name of a rock to be uninstalled.
+	If a version is not given, try to remove all versions at once.
+	Will only perform the removal if it does not break dependencies.
+	To override this check and force the removal, use --force.
+	To perform a forced removal without reporting dependency issues,
+	use --force-fast.
+	
+	--deps-mode=<mode>  How to handle dependencies. Four modes are supported:
+	                    * all - use all trees from the rocks_trees list
+	                      for finding dependencies
+	                    * one - use only the current tree (possibly set
+	                      with --tree)
+	                    * order - use trees based on order (use the current
+	                      tree and all trees below it on the rocks_trees list)
+	                    * none - ignore dependencies altogether.
+	                    The default mode may be set with the deps_mode entry
+	                    in the configuration file.
+	                    The current default is "one".
+	                    Type '/usr/bin/luarocks' with no arguments to see
+	                    your list of rocks trees.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

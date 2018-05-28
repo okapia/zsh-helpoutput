@@ -1,0 +1,18 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks download - Download a specific rock file from a rocks server.
+
+SYNOPSIS
+	/usr/bin/luarocks download [--all] [--arch=<arch> | --source | --rockspec] [<name> [<version>]]
+
+DESCRIPTION
+	--all          Download all files if there are multiple matches.
+	--source       Download .src.rock if available.
+	--rockspec     Download .rockspec if available.
+	--arch=<arch>  Download rock for a specific architecture.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

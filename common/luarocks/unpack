@@ -1,0 +1,19 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks unpack - Unpack the contents of a rock.
+
+SYNOPSIS
+	/usr/bin/luarocks unpack [--force] {<rock>|<name> [<version>]}
+
+DESCRIPTION
+	Unpacks the contents of a rock in a newly created directory.
+	Argument may be a rock file, or the name of a rock in a rocks server.
+	In the latter case, the app version may be given as a second argument.
+	
+	--force   Unpack files even if the output directory already exists.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

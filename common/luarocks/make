@@ -1,0 +1,43 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks make - Compile package in current directory using a rockspec.
+
+SYNOPSIS
+	/usr/bin/luarocks make [--pack-binary-rock] [<rockspec>]
+
+DESCRIPTION
+	Builds sources in the current directory, but unlike "build",
+	it does not fetch sources, etc., assuming everything is 
+	available in the current directory. If no argument is given,
+	it looks for a rockspec in the current directory and in "rockspec/"
+	and "rockspecs/" subdirectories, picking the rockspec with newest version
+	or without version name. If rockspecs for different rocks are found
+	or there are several rockspecs without version, you must specify which to use,
+	through the command-line.
+	
+	This command is useful as a tool for debugging rockspecs. 
+	To install rocks, you'll normally want to use the "install" and
+	"build" commands. See the help on those for details.
+	
+	NB: Use `luarocks install` with the `--only-deps` flag if you want to install
+	only dependencies of the rockspec (see `luarocks help install`).
+	
+	--pack-binary-rock  Do not install rock. Instead, produce a .rock file
+	                    with the contents of compilation in the current
+	                    directory.
+	
+	--keep              Do not remove previously installed versions of the
+	                    rock after installing a new one. This behavior can
+	                    be made permanent by setting keep_other_versions=true
+	                    in the configuration file.
+	
+	--branch=<name>     Override the `source.branch` field in the loaded
+	                    rockspec. Allows to specify a different branch to 
+	                    fetch. Particularly for SCM rocks.
+	
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

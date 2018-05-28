@@ -1,0 +1,23 @@
+
+LuaRocks 2.4.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks doc - Show documentation for an installed rock.
+
+SYNOPSIS
+	/usr/bin/luarocks doc <argument>
+
+DESCRIPTION
+	<argument> is an existing package name.
+	Without any flags, tries to load the documentation
+	using a series of heuristics.
+	With these flags, return only the desired information:
+	
+	--home      Open the home page of project.
+	--list      List documentation files only.
+	
+	For more information about a rock, see the 'show' command.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+
