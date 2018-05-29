@@ -50,22 +50,22 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pmdiff
-version 3.11.8
+version 3.12.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pmdumplog
-version 3.11.8
+version 3.12.2
 emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd pmfind
-version 3.11.8
+version 3.12.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pminfo
-version 3.11.8
+version 3.12.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
@@ -75,7 +75,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pmlogsummary
-version 3.11.8
+version 3.12.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
@@ -85,11 +85,11 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pmstore
-version 3.11.8
+version 3.12.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pmval
-version 3.11.8
+version 3.12.2
 emit -V | field -1 | getversion
 emit -? | getusage

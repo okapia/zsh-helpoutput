@@ -92,7 +92,7 @@ emit -V | field 3 | tr -d , | getversion
 emit -h | getusage
 
 cmd gcc
-version 8.0.1
+version 8.1.1
 variant ! 'LLVM' -- --version
 emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | getversion
 emit --help | getusage

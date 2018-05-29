@@ -225,6 +225,13 @@ variant -n links2 ! ELinks -- -version
 emit -version | field 2 | getversion
 emit -help | getusage
 
+cmd luarocks
+version 2.4.3
+subdir
+emit --version | field -1 | getversion
+emit help | getusage
+subcmds help @
+
 cmd lynx
 version 2.8.9dev.11
 emit -version | field 3 | getversion
@@ -259,6 +266,11 @@ emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
 cmd gphoto2
 version 2.5.17
 emit --version | field -1 | getversion
+emit -? | getusage
+
+cmd gs
+version 9.23
+emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
@@ -315,7 +327,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.9.5
+version 1.10.0
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -732,12 +744,12 @@ emit --help | nobug | getusage
 # java
 
 cmd appletviewer
-version 1.7.0
+version 1.8.0
 step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
 cmd extcheck
-version 1.7.0
+version 1.8.0
 step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
@@ -747,7 +759,7 @@ step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
 cmd jarsigner
-version 1.7.0
+version 1.8.0
 step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
@@ -780,7 +792,7 @@ emit -version | sed 's/_.*//' | getversion
 emit -? | getusage
 
 cmd jdb
-version 1.7.0
+version 1.8.0
 emit -version | field -1 | tr -d \"\) | sed 's/_.*//' | getversion
 emit -help | getusage
 
@@ -790,12 +802,12 @@ step java -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
 cmd rmic
-version 1.7.0
+version 1.8.0
 step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
 cmd serialver
-version 1.7.0
+version 1.8.0
 step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 

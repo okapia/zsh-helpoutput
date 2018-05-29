@@ -46,7 +46,7 @@ emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 2.0.2
+version 2.0.3
 emit --version | field 2 | getversion
 emit -? | getusage
 
