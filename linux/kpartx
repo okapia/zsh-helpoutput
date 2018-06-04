@@ -1,0 +1,12 @@
+usage : kpartx [-a|-d|-l] [-f] [-v] wholedisk
+	-a add partition devmappings
+	-r devmappings will be readonly
+	-d del partition devmappings
+	-u update partition devmappings
+	-l list partitions devmappings that would be added by -a
+	-p set device name-partition number delimiter
+	-g force GUID partition table (GPT)
+	-f force devmap create
+	-v verbose
+	-n nosync mode. Return before the partitions are created
+	-s sync mode. Don't return until the partitions are created. Default.
