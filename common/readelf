@@ -2,6 +2,9 @@ Usage: eu-readelf [OPTION...] FILE...
 Print information from ELF file in human-readable form.
 
  ELF input selection:
+      --dwarf-skeleton=FILE  Used with -w to find the skeleton Compile Units in
+                             FILE associated with the Split Compile units in a
+                             .dwo input file
       --elf-section[=SECTION]   Use the named SECTION (default .gnu_debugdata)
                              as (compressed) ELF input data
 
@@ -10,6 +13,7 @@ Print information from ELF file in human-readable form.
   -A, --arch-specific        Display architecture specific information, if any
   -d, --dynamic              Display the dynamic segment
   -e, --exception            Display sections for exception handling
+  -g, --section-groups       Display the section groups
   -h, --file-header          Display the ELF file header
   -I, --histogram            Display histogram of bucket list lengths
   -l, --program-headers      Display the program headers
@@ -23,9 +27,10 @@ Print information from ELF file in human-readable form.
   -c, --archive-index        Display the symbol index of an archive
   -p, --strings[=SECTION]    Print string contents of sections
   -w, --debug-dump[=SECTION] Display DWARF section content.  SECTION can be one
-                             of abbrev, aranges, decodedaranges, frame,
-                             gdb_index, info, loc, line, decodedline, ranges,
-                             pubnames, str, macinfo, macro or exception
+                             of abbrev, addr, aranges, decodedaranges, frame,
+                             gdb_index, info, info+, loc, line, decodedline,
+                             ranges, pubnames, str, macinfo, macro or
+                             exception
   -x, --hex-dump=SECTION     Dump the uninterpreted contents of SECTION, by
                              number or name
 
