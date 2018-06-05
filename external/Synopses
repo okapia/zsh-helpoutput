@@ -28,7 +28,7 @@ emit version | field 1 | getversion
 emit help | getusage
 
 cmd ninja-build
-version 1.7.2
+version 1.8.2
 emit --version | getversion
 emit -h | getusage
 

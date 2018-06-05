@@ -301,6 +301,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd shuf
+version 8.29
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd sort
 version 8.29
 variant -g 'GNU' -- --version
@@ -336,6 +342,12 @@ version 8.29
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
+
+cmd tac
+version 8.29
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
 
 cmd tar
 version 1.20

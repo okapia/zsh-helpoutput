@@ -233,9 +233,10 @@ emit help | getusage
 subcmds help @
 
 cmd lynx
-version 2.8.9dev.11
+version 2.8.9dev.19
 emit -version | field 3 | getversion
 emit -help | getusage
+emit -restrictions | getusage restrictions
 
 cmd gem
 version 2.7.6
@@ -250,7 +251,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.17.0
+version 2.17.1
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -718,25 +719,25 @@ emit --help | getusage elftoolchain
 # elfutils
 
 cmd readelf
-version 0.170
+version 0.171
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.170
+version 0.171
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
-version 0.170
+version 0.171
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd strings
-version 0.170
+version 0.171
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage

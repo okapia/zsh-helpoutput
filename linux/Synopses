@@ -110,6 +110,11 @@ version 1.6.2
 emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
+cmd kpartx
+version 0.7.6
+pack | getversion
+emit | getusage
+
 cmd last
 version 2.32
 emit -V | field -1 | getversion
@@ -243,6 +248,12 @@ cmd tune2fs
 version 1.44.2
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
+
+cmd uptime
+version 3.3.14
+variant procps-ng -- -V
+emit -V | field -1 | getversion
+emit -h | getusage
 
 cmd vmstat
 version 3.3.15
