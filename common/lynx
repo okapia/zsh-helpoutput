@@ -28,8 +28,12 @@ Options are:
   -cmd_script=FILENAME
                     read keystroke commands from the given file
                     (see -cmd_log)
+  -collapse_br_tags toggles collapsing of BR tags (on)
   -connect_timeout=N
                     set the N-second connection timeout (18000)
+  -convert_to=FORMAT
+                    convert input, FORMAT is in MIME type notation
+                    (experimental)
   -cookie_file=FILENAME
                     specifies a file to use to read cookies
   -cookie_save_file=FILENAME
@@ -108,13 +112,14 @@ Options are:
   -nostatus         disable the miscellaneous information messages (off)
   -notitle          disable the title at the top of each page (off)
   -nounderline      disable underline video-attribute
+  -nozap=DURATION ("initially" or "full") disable checks for 'z' key
   -number_fields    force numbering of links as well as form input fields (off)
   -number_links     force numbering of links (off)
   -partial          toggles display partial pages while downloading (on)
   -partial_thres    [=NUMBER]
                     number of lines to render before repainting display
                     with partial-display logic (-1)
-  -passive-ftp      toggles passive ftp connection (on)
+  -passive_ftp      toggles passive ftp connection (on)
   -pauth=id:pw      authentication information for protected proxy server
   -popup            toggles handling of single-choice SELECT options via
                     popup windows or as lists of radio buttons (off)
@@ -170,6 +175,8 @@ Options are:
   -trace            turns on Lynx trace mode (off)
   -trace_mask       customize Lynx trace mode (0)
   -traversal        traverse all http links derived from startfile
+  -trim_blank_lines 
+                    toggle trimming of leading/trailing/collapsed-br blank lines (on)
   -trim_input_fields 
                     trim input text/textarea fields in forms (off)
   -underline_links  toggles use of underline/bold attribute for links (off)
@@ -187,4 +194,4 @@ Options are:
   -width=NUMBER     screen width for formatting of dumps (default is 80)
   -with_backspaces  emit backspaces in output if -dumping or -crawling
                     (like 'man' does) (off)
-  -xhtml-parsing    enable XHTML 1.0 parsing (off)
+  -xhtml_parsing    enable XHTML 1.0 parsing (off)

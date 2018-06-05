@@ -1,0 +1,59 @@
+
+USAGE: lynx -restrictions=[option][,option][,option]
+List of Options:
+  ?                 when used alone, list restrictions in effect.
+  all               restricts all options.
+  bookmark          disallow changing the location of the bookmark file (off)
+  bookmark_exec     disallow execution links via the bookmark file (off)
+  change_exec_perms disallow changing the eXecute permission on files
+                    (but still allow it for directories) when local file
+                    management is enabled. (off)
+  chdir             disallow changing the working directory of lynx, e.g.,
+                    to affect the behavior of download command (off)
+  compileopts_info  disable info on options used to compile the binary (off)
+  default           same as commandline option -anonymous.  Sets the
+                    default service restrictions for anonymous users.  Set to
+                    all restricted, except for: inside_telnet, outside_telnet,
+                    inside_ftp, outside_ftp, inside_rlogin, outside_rlogin,
+                    inside_news, outside_news, telnet_port, jump, mail, print,
+                    exec, and goto.  The settings for these, as well as
+                    additional goto restrictions for specific URL schemes
+                    that are also applied, are derived from definitions
+                    within userdefs.h.
+  dired_support     disallow local file management (off)
+  disk_save         disallow saving to disk in the download and print menus (off)
+  dotfiles          disallow access to, or creation of, hidden (dot) files (on)
+  download          disallow some downloaders in the download menu (off)
+  editor            disallow editing (off)
+  exec              disable execution scripts (off)
+  exec_frozen       disallow the user from changing the execution link option (off)
+  externals         disable passing URLs to some external programs (off)
+  file_url          disallow using G)oto, served links or bookmarks for
+                    file: URL's (off)
+  goto              disable the 'g' (goto) command (off)
+  inside_ftp        disallow ftps coming from inside your domain (off)
+  inside_news       disallow USENET news reading and posting coming
+                    from inside your domain (off)
+  inside_rlogin     disallow rlogins coming from inside your domain (off)
+  inside_telnet     disallow telnets coming from inside your domain (off)
+  jump              disable the 'j' (jump) command (off)
+  lynxcfg_info      disable viewing of lynx.cfg configuration file info (off)
+  lynxcfg_xinfo     disable extended lynx.cfg viewing and reloading (off)
+  lynxcgi           disallow execution of Lynx CGI URLs (off)
+  mail              disallow mail (off)
+  multibook         disallow multiple bookmark files (off)
+  news_post         disallow USENET News posting. (off)
+  option_save       disallow saving options in .lynxrc (off)
+  outside_ftp       disallow ftp coming from outside your domain (off)
+  outside_news      disallow USENET news reading and posting coming
+                    from outside your domain (off)
+  outside_rlogin    disallow rlogins coming from outside your domain (off)
+  outside_telnet    disallow telnets coming from outside your domain (off)
+  print             disallow most print options (off)
+  shell             disallow shell escapes, and lynxexec, lynxprog or lynxcgi
+                    G)oto's (off)
+  suspend           disallow Control-Z suspends with escape to shell (off)
+  telnet_port       disallow specifying a port in telnet G)oto's (off)
+  useragent         disallow modifications of the User-Agent header (off)
+Other restrictions (see the user's guide):
+  goto_bibp (off)
