@@ -423,12 +423,12 @@ emit -h | getusage
 emit --daemon -h | getusage daemon
 
 cmd smbclient
-version 4.8.0
+version 4.8.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd smbcontrol
-version 4.6.2
+version 4.8.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
