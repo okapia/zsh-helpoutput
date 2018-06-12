@@ -1,0 +1,24 @@
+
+Usage: .ar [OPTION...] [FILE...]
+The .ar command manages sqlar archives.
+
+Examples:
+  .ar -cf archive.sar foo bar    # Create archive.sar from files foo and bar
+  .ar -tf archive.sar            # List members of archive.sar
+  .ar -xvf archive.sar           # Verbosely extract files from archive.sar
+
+Each command line must feature exactly one command option:
+  -c, --create               Create a new archive
+  -u, --update               Update or add files to an existing archive
+  -t, --list                 List contents of archive
+  -x, --extract              Extract files from archive
+
+And zero or more optional options:
+  -v, --verbose              Print each filename as it is processed
+  -f FILE, --file FILE       Operate on archive FILE (default is current db)
+  -a FILE, --append FILE     Operate on FILE opened using the apndvfs VFS
+  -C DIR, --directory DIR    Change to directory DIR to read/extract files
+  -n, --dryrun               Show the SQL that would have occurred
+
+See also: http://sqlite.org/cli.html#sqlar_archive_support
+

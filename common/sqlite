@@ -2,6 +2,7 @@ Usage: sqlite3 [OPTIONS] FILENAME [SQL]
 FILENAME is the name of an SQLite database. A new database is created
 if the file does not previously exist.
 OPTIONS include:
+   -A ARGS...           run ".archive ARGS" and exit
    -append              append the database to the end of the file
    -ascii               set output mode to 'ascii'
    -bail                stop after hitting an error
@@ -28,3 +29,4 @@ OPTIONS include:
    -stats               print memory stats before each finalize
    -version             show SQLite version
    -vfs NAME            use NAME as the default VFS
+   -zip                 open the file as a ZIP Archive
