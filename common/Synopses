@@ -255,7 +255,7 @@ version 2.17.1
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
-#emit --help -a |& sed -n -e '1,/available/ d' -e '/available/ q' -e 's/^ *//p' | tr -s ' ' '\012' | LC_COLLATE=C sort | getusage commands
+emit help -av | getusage commands
 subcmds @ -h
 
 cmd gpg
@@ -375,7 +375,7 @@ emit -V |  field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.8.0
+version 4.8.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -433,10 +433,11 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.23.1
+version 3.24.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
+emit -A | getusage archive
 
 cmd ssh
 version 7.7p1

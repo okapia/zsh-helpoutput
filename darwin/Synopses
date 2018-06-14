@@ -22,6 +22,11 @@ version 10.11.6
 sw_vers -productVersion | getversion
 emit --help | getusage
 
+cmd nvram
+version 10.12.4
+sw_vers -productVersion | getversion
+emit -? | getusage
+
 cmd softwareupdate
 version 10.11.6
 sw_vers -productVersion | getversion

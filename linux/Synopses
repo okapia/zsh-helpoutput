@@ -140,6 +140,12 @@ version 010
 emit -V | field -1 | getversion
 emit -h | getusage
 
+cmd man
+version 2.8.3
+variant ! '-S subsection' --
+emit -V | field 2 | getversion
+emit -h | getusage
+
 cmd mdadm
 version 4.0
 subdir
