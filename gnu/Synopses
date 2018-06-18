@@ -33,6 +33,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
+cmd comm
+version 8.29
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd date
 version 8.29
 variant -g 'GNU' -- --version

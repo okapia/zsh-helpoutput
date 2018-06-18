@@ -101,7 +101,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 180402
+version 180608
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -111,7 +111,7 @@ emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
 cmd kpartx
-version 0.7.6
+version 0.7.7
 pack | getversion
 emit | getusage
 
@@ -201,7 +201,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 180402
+version 180608
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
@@ -256,7 +256,7 @@ emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
 cmd uptime
-version 3.3.14
+version 3.3.15
 variant procps-ng -- -V
 emit -V | field -1 | getversion
 emit -h | getusage
