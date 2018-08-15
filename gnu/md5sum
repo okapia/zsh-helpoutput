@@ -7,6 +7,8 @@ With no FILE, or when FILE is -, read standard input.
   -c, --check          read MD5 sums from the FILEs and check them
       --tag            create a BSD-style checksum
   -t, --text           read in text mode (default)
+  -z, --zero           end each output line with NUL, not newline,
+                       and disable file name escaping
 
 The following five options are useful only when verifying checksums:
       --ignore-missing  don't fail or report status for missing files
@@ -23,6 +25,7 @@ should be a former output of this program.  The default mode is to print a
 line with checksum, a space, a character indicating input mode ('*' for binary,
 ' ' for text or where binary is insignificant), and name for each FILE.
 
-GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-Full documentation at: <http://www.gnu.org/software/coreutils/md5sum>
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report md5sum translation bugs to <https://translationproject.org/team/>
+Full documentation at: <https://www.gnu.org/software/coreutils/md5sum>
 or available locally via: info '(coreutils) md5sum invocation'
