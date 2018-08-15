@@ -1,4 +1,4 @@
-setfattr 2.4.43 -- set extended attributes
+setfattr 2.4.48 -- set extended attributes
 Usage: setfattr {-n name} [-v value] [-h] file...
        setfattr {-x name} [-h] file...
   -n, --name=name         set the value of the named extended attribute
@@ -6,5 +6,6 @@ Usage: setfattr {-n name} [-v value] [-h] file...
   -v, --value=value       use value as the attribute value
   -h, --no-dereference    do not dereference symbolic links
       --restore=file      restore extended attributes
+      --raw               attribute value is not encoded
       --version           print version and exit
       --help              this help text
