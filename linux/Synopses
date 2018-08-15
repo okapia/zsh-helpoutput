@@ -4,22 +4,22 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd arping
-version 20161105
+version 20180629
 emit -V | sed 's/.*s//' | getversion
 emit -? | getusage
 
 cmd attr
-version 2.4.47
+version 2.4.48
 pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.16
+version 4.17
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
 cmd chrt
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -36,12 +36,12 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd column
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd cpupower
-version 4.17.0
+version 4.18.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -61,22 +61,22 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 4.16
+version 4.17
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd getfacl
-version 2.2.52
+version 2.2.53
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd getfattr
-version 2.4.47
+version 2.4.48
 emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd hexdump
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -86,7 +86,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd iconvconfig
-version 2.27
+version 2.28
 emit -V | field -1 | getversion
 emit -? | getusage
 
@@ -96,7 +96,7 @@ emit -V | field 2 | getversion
 emit -h | getusage
 
 cmd ionice
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -106,7 +106,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
 cmd iptables
-version 1.6.2
+version 1.8.0
 emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
@@ -116,22 +116,22 @@ pack | getversion
 emit | getusage
 
 cmd last
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd look
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd losetup
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd lsblk
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -141,7 +141,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd man
-version 2.8.3
+version 2.8.4
 variant ! '-S subsection' --
 emit -V | field 2 | getversion
 emit -h | getusage
@@ -164,7 +164,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd nmcli
-version 1.10.6
+version 1.12.2
 subdir
 emit -v | field -1 | sed 's/-.*//' | getversion
 emit help | getusage
@@ -181,7 +181,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ping
-version 20161105
+version 20180629
 emit -V | sed 's/.*s//' | getversion
 emit | getusage
 
@@ -191,7 +191,7 @@ emit -V | field -1 | getversion
 emit --help all | getusage
 
 cmd setfacl
-version 2.2.52
+version 2.2.53
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -206,7 +206,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.22
+version 4.23
 emit -V | field 4 | getversion
 emit -h | getusage
 
@@ -236,22 +236,22 @@ emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd script
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd scriptreplay
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd setfattr
-version 2.4.47
+version 2.4.48
 emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.44.2
+version 1.44.3
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
@@ -272,12 +272,12 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd whereis
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd wipefs
-version 2.32
+version 2.32.1
 emit -V | field -1 | getversion
 emit -h | getusage
 

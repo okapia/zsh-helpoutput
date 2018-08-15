@@ -1,23 +1,23 @@
 cmd bash
-version 4.4.19
+version 4.4.23
 emit --version | field 4 | cut -d \( -f1 | getversion
 emit --help | getusage
 emit -c 'help set' | getusage set
 
 cmd cat
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd chmod
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd chown
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -34,19 +34,19 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd comm
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd date
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd dd
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -58,7 +58,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd du
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -69,13 +69,13 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd env
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd expand
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -87,13 +87,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd fmt
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd fold
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -104,7 +104,7 @@ emit -V | field 3 | tr -d , | getversion
 emit -h | getusage
 
 cmd gcc
-version 8.1.1
+version 8.2.1
 variant ! 'LLVM' -- --version
 emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | getversion
 emit --help | getusage
@@ -115,7 +115,7 @@ emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 
 cmd getent
-version 2.27
+version 2.28
 variant 'GNU' -- --version
 emit -V | field -1 | getversion
 emit -? | getusage
@@ -126,7 +126,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-cli-debug
-version 3.6.2
+version 3.6.3
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -136,17 +136,17 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd certtool
-version 3.6.2
+version 3.6.3
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.6.2
+version 3.6.3
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd gprof
-version 2.30
+version 2.31.1
 variant -g GNU -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
@@ -195,7 +195,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd install
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -207,7 +207,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ln
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -219,7 +219,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd ls
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -237,37 +237,37 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd mktemp
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd mv
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd nm
-version 2.30
+version 2.31.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | nobug | getusage
 
 cmd numfmt
-version 8.29
+version 8.30
 variant -g GNU -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd objdump
-version 2.30
+version 2.31.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
 
 cmd paste
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -279,19 +279,19 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd printenv
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ranlib
-version 2.30
+version 2.31.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | getusage
 
 cmd readelf
-version 2.30
+version 2.31.1
 variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage
@@ -308,55 +308,55 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd seq
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd shuf
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd sort
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd split
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd stdbuf
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd strings
-version 2.30
+version 2.31.1
 variant -g 'GNU' -- --version
 emit --version | field -1 | sed 's/-.*//' | getversion
 emit --help | getusage
 
 cmd strip
-version 2.30
+version 2.31.1
 variant -g 'GNU' -- --version
 emit -V | guess | getversion
 emit -h | egrep -v '(supported targets|Report bugs to)' | getusage
 
 cmd stty
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd tac
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -368,25 +368,25 @@ emit --version | field -1 | getusage
 emit --help | nobug | getusage
 
 cmd timeout
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd touch
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd unexpand
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd uniq
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -397,7 +397,7 @@ emit -V | field 3 | getversion
 emit --help | getusage
 
 cmd who
-version 8.29
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage

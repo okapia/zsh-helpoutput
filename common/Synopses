@@ -103,12 +103,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dbus-monitor
-version 1.12.8
+version 1.12.10
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.12.8
+version 1.12.10
 pack | getversion
 emit -h | getusage
 
@@ -128,7 +128,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dig
-version 9.11.3b1
+version 9.11.4-P1
 emit -v | field 2 | sed 's/-RedHat.*//' | getversion
 emit -h | getusage
 
@@ -210,7 +210,7 @@ unset LESSOPEN
 emit -? | getusage
 
 cmd lftp
-version 4.8.3
+version 4.8.4
 emit --version | field 4 | getversion
 emit -h | getusage
 
@@ -259,7 +259,7 @@ emit help -av | getusage commands
 subcmds @ -h
 
 cmd gpg
-version 2.2.8
+version 2.2.9
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -275,7 +275,7 @@ emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.56.1
+version 2.57.2
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -328,7 +328,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.10.0
+version 1.10.1
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -385,7 +385,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.26.2
+version 5.28.0
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
@@ -488,14 +488,14 @@ pack | getversion
 emit | getusage
 
 cmd svn
-version 1.10.0
+version 1.10.2
 subdir
 emit --version --quiet | getversion
 emit help | getusage
 subcmds help @
 
 cmd svnadmin
-version 1.10.0
+version 1.10.2
 subdir
 emit --version | field 3 | getversion
 emit help | getusage
@@ -572,6 +572,11 @@ version 8.1
 emit -version | field 5 | getversion
 vimver="$_verinst"
 emit -h | getusage
+
+cmd vpnc
+version 0.5.3
+emit --version | field 3 | getversion
+emit --long-help | getusage
 
 cmd w3m
 version 0.5.3
@@ -720,25 +725,25 @@ emit --help | getusage elftoolchain
 # elfutils
 
 cmd readelf
-version 0.172
+version 0.173
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.172
+version 0.173
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
-version 0.172
+version 0.173
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd strings
-version 0.172
+version 0.173
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
