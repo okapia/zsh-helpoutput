@@ -1,6 +1,7 @@
 Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
 
 OPTIONS
+  -o[verview]                                    overview mode (hide default values)
   -t[erse]                                       terse output
   -p[retty]                                      pretty output
   -m[ode] tabular|multiline                      output mode
