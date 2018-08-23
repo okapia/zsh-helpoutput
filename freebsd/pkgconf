@@ -8,6 +8,8 @@ basic options:
   --atleast-pkgconfig-version       check whether or not pkgconf is compatible
                                     with a specified pkg-config version
   --errors-to-stdout                print all errors on stdout instead of stderr
+  --print-errors                    ensure all errors are printed
+  --short-errors                    be less verbose about some errors
   --silence-errors                  explicitly be silent about errors
   --list-all                        list all known packages
   --list-package-names              list all known package names
@@ -15,6 +17,14 @@ basic options:
   --no-cache                        do not cache already seen packages when
                                     walking the dependency graph
   --log-file=filename               write an audit log to a specified file
+  --with-path=path                  adds a directory to the search path
+  --define-prefix                   override the prefix variable with one that is guessed based on
+                                    the location of the .pc file
+  --dont-define-prefix              do not override the prefix variable under any circumstances
+  --prefix-variable=varname         sets the name of the variable that pkgconf considers
+                                    to be the package prefix
+  --relocate=path                   relocates a path and exits (mostly for testsuite)
+  --dont-relocate-paths             disables path relocation support
 
 checking specific pkg-config database entries:
 
@@ -54,5 +64,7 @@ querying specific pkg-config database fields:
   --keep-system-cflags              keep -I/usr/include entries in cflags output
   --keep-system-libs                keep -L/usr/lib entries in libs output
   --path                            show the exact filenames for any matching .pc files
+  --modversion                      print the specified module's version to stdout
+  --msvc-syntax                     print translatable fragments in MSVC syntax
 
 report bugs to <http://github.com/pkgconf/pkgconf/issues>.

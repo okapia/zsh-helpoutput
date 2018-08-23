@@ -1,11 +1,12 @@
 
 Usage:
-service -e
-service -R
-service [-v] -l | -r
-service [-v] <rc.d script> start|stop|etc.
+service [-j <jail name or id>] -e
+service [-j <jail name or id>] -R
+service [-j <jail name or id>] [-v] -l | -r
+service [-j <jail name or id>] [-v] <rc.d script> start|stop|etc.
 service -h
 
+-j	Perform actions within the named jail
 -e	Show services that are enabled
 -R	Stop and start enabled /usr/local/etc/rc.d services
 -l	List all scripts in /etc/rc.d and /usr/local/etc/rc.d

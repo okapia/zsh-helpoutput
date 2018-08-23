@@ -15,6 +15,7 @@ where 'command' is one of the following:
 	rename [-f] -p <filesystem|volume> <filesystem|volume>
 	rename -r <snapshot> <snapshot>
 	rename -u [-p] <filesystem> <filesystem>	bookmark <snapshot> <bookmark>
+	program [-n] [-t <instruction limit>] [-m <memory limit (b)>] <pool> <program file> [lua args...]
 
 	list [-Hp] [-r|-d max] [-o property[,...]] [-s property]...
 	    [-S property]... [-t type[,...]] [filesystem|volume|snapshot] ...
@@ -22,7 +23,7 @@ where 'command' is one of the following:
 	set <property=value> ... <filesystem|volume|snapshot> ...
 	get [-rHp] [-d max] [-o "all" | field[,...]]
 	    [-t type[,...]] [-s source[,...]]
-	    <"all" | property[,...]> [filesystem|volume|snapshot] ...
+	    <"all" | property[,...]> [filesystem|volume|snapshot|bookmark] ...
 	inherit [-rS] <property> <filesystem|volume|snapshot> ...
 	upgrade [-v]
 	upgrade [-r] [-V version] <-a | filesystem ...>
@@ -37,7 +38,7 @@ where 'command' is one of the following:
 	share <-a | filesystem>
 	unshare <-a | filesystem|mountpoint>
 
-	send [-DnPpRvLe] [-[iI] snapshot] <snapshot>
+	send [-DnPpRvLec] [-[iI] snapshot] <snapshot>
 	send [-Le] [-i snapshot|bookmark] <filesystem|volume|snapshot>
 	send [-nvPe] -t <receive_resume_token>
 	receive|recv [-vnsFu] <filesystem|volume|snapshot>
@@ -64,6 +65,7 @@ where 'command' is one of the following:
 
 	jail <jailid|jailname> <filesystem>
 	unjail <jailid|jailname> <filesystem>
+	remap <filesystem | volume>
 
 Each dataset is of the form: pool/[dataset/]*dataset[@name]
 

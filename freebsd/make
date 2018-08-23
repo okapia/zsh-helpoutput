@@ -1,4 +1,4 @@
 usage: make [-BeikNnqrstWwX] 
             [-C directory] [-D variable] [-d flags] [-f makefile]
             [-I directory] [-J private] [-j max_jobs] [-m directory] [-T file]
-            [-V variable] [variable=value] [target ...]
+            [-V variable] [-v variable] [variable=value] [target ...]
