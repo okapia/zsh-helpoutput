@@ -100,6 +100,10 @@ Options:
   -md5-list FILE              File containing MD5 sums of the files that should be checked
   -jigdo-template-compress ALGORITHM
                               Choose to use gzip or bzip2 compression for template data; default is gzip
+  -checksum_algorithm_iso alg1,alg2,...
+                              Specify the checksum types desired for the output image
+  -checksum_algorithm_template alg1,alg2,...
+                              Specify the checksum types desired for the output jigdo template
   -sort FILE                  Sort file content locations according to rules in FILE
   -split-output               Split output into files of approx. 1GB size
   -stream-file-name FILE_NAME Set the stream file ISO9660 name (incl. version)
