@@ -1,4 +1,4 @@
 ps: unknown option -- ?
-usage:	ps [-AaCcehjlmrSsTuvwx] [-k key] [-M core] [-N system] [-O fmt]
+usage:	ps [-AaCcdehjlmrSsTuvwx] [-k key] [-M core] [-N system] [-O fmt]
 	   [-o fmt] [-p pid] [-t tty] [-U user] [-W swap]
 	ps -L

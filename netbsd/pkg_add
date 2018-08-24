@@ -1,6 +1,4 @@
 pkg_add: unknown option -- ?
-usage: pkg_add [-AfhILnRuVv] [-C config] [-P destdir] [-K pkg_dbdir]
-               [-m machine] [-p prefix] [-s verification-type
-               [-W viewbase] [-w view]
-
+usage: pkg_add [-AfhInRuVv] [-C config] [-P destdir] [-K pkg_dbdir]
+               [-m machine] [-p prefix]
                [[ftp|http]://[user[:password]@]host[:port]][/path/]pkg-name ...

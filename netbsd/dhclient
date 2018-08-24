@@ -1,9 +1,10 @@
-Internet Systems Consortium DHCP Client 4.3.0
-Copyright 2004-2014 Internet Systems Consortium.
+Internet Systems Consortium DHCP Client 4.3.3
+Copyright 2004-2015 Internet Systems Consortium.
 All rights reserved.
 For info, please visit https://www.isc.org/software/dhcp/
 Usage: dhclient [-4|-6] [-SNTPI1dvrxi] [-nw] [-m] [-p <port>] [-D LL|LLT] 
-                [-s server-addr] [-cf config-file] [-lf lease-file]
+                [-s server-addr] [-cf config-file]
+                [-df duid-file] [-lf lease-file]
                 [-pf pid-file] [--no-pid] [-e VAR=val]
                 [-sf script-file] [interface]
 

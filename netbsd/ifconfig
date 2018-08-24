@@ -3,7 +3,9 @@ usage: ifconfig [-h] [-m] [-v] [-z] [-L] interface
 	[ af [ address [ dest_addr ] ] [ netmask mask ] [ prefixlen n ]
 		[ alias | -alias ] ]
 	[ up ] [ down ] [ metric n ] [ mtu n ]
-	[ maxupd n ] [ syncdev iface ] [syncpeer peer_addr]
+	[ session local-session-id remote-session-id ]
+	[ cookie local-cookie-length local-cookie remote-cookie-length remote-cookie ]
+	[ agrport i ] [ -agrport i ]
 	[ vlan n vlanif i ] [ -vlanif i ]
 	[ [ af ] tunnel src_addr dest_addr ] [ deletetunnel ]
 	[ media type ] [ mediaopt opts ] [ -mediaopt opts ] [ instance minst ]
@@ -11,9 +13,9 @@ usage: ifconfig [-h] [-m] [-v] [-z] [-L] interface
 	[ list scan ]
 	[ powersave | -powersave ] [ powersavesleep duration ]
 	[ hidessid | -hidessid ] [ apbridge | -apbridge ]
-	[ agrport i ] [ -agrport i ]
 	[ anycast | -anycast ] [ deprecated | -deprecated ]
 	[ pltime n ] [ vltime n ] [ eui64 ]
+	[ maxupd n ] [ syncdev iface ] [syncpeer peer_addr]
 	[ advbase n ] [ advskew n ] [ carpdev iface ] [ pass passphrase ] [ state state ] [ vhid n ]
 	[ arp | -arp ]
 	[ preference n ]
@@ -21,5 +23,6 @@ usage: ifconfig [-h] [-m] [-v] [-z] [-L] interface
        ifconfig -a [-b] [-d] [-h] [-m] [-u] [-v] [-z] [ af ]
        ifconfig -l [-b] [-d] [-s] [-u]
        ifconfig -C
+       ifconfig -w n
        ifconfig interface create
        ifconfig interface destroy

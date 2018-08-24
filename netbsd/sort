@@ -1,2 +1,5 @@
 sort: unknown option -- ?
-usage: sort [-bcdfHilmnrSsu] [-k field1[,field2]] [-o output] [-R char] [-T dir]             [-t char] [file ...]
+usage: sort [-bdfHilmnrSsu] [-k kstart[,kend]] [-o output] [-R char] [-T dir]
+             [-t char] [file ...]
+   or: sort -C|-c [-bdfilnru] [-k kstart[,kend]] [-o output] [-R char]
+             [-t char] [file]

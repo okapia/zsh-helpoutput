@@ -1,5 +1,5 @@
 Usage: arp [-n] hostname
-	      arp [-nv] -a
-	      arp [-v] -d [-a|hostname [pub [proxy]]]
+       arp [-nv] -a
+       arp [-v] -d [-a|hostname [proxy]]
        arp -s hostname ether_addr [temp] [pub [proxy]]
        arp -f filename

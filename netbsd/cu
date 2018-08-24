@@ -11,5 +11,6 @@ Usage: cu [options] [phone-number|"dir"]
  -o: Use odd parity
  -P,--parity {even,odd,none}: use even, odd, no parity
  -l,--line line: Use this device (ttyXX)
+ -n: Disable escape character processing
  -s,--speed,--baud speed,-#: Use this speed
  -t: Connect via hard-wired connection

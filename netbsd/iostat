@@ -1,2 +1,2 @@
 iostat: unknown option -- ?
-usage: iostat [-CdDITx] [-c count] [-w wait] [drives]
+usage: iostat [-CdDITxy] [-c count] [-w wait] [drives]
