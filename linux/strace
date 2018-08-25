@@ -7,6 +7,7 @@ usage: strace [-CdffhiqrtttTvVwxxy] [-I n] [-e expr]...
 Output format:
   -a column      alignment COLUMN for printing syscall results (default 40)
   -i             print instruction pointer at time of syscall
+  -k             obtain stack trace between each syscall
   -o file        send trace output to FILE instead of stderr
   -q             suppress messages about attaching, detaching, etc.
   -r             print relative timestamp
@@ -28,7 +29,7 @@ Statistics:
 
 Filtering:
   -e expr        a qualifying expression: option=[!]all or option=[!]val1[,val2]...
-     options:    trace, abbrev, verbose, raw, signal, read, write, fault
+     options:    trace, abbrev, verbose, raw, signal, read, write, fault, inject, kvm
   -P path        trace accesses to path
 
 Tracing:
@@ -54,4 +55,3 @@ Miscellaneous:
   -v             verbose mode: print unabbreviated argv, stat, termios, etc. args
   -h             print help message
   -V             print version
-  -k             obtain stack trace between each syscall (experimental)
