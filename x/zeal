@@ -1,0 +1,11 @@
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-opk'
+Usage: zeal [options] url
+Zeal - Offline documentation browser.
+
+Options:
+  -h, --help     Displays this help.
+  -v, --version  Displays version information.
+  -f, --force    Force the application run.
+
+Arguments:
+  url            dash[-plugin]:// URL
