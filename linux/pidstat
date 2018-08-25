@@ -1,5 +1,6 @@
 Usage: pidstat [ options ] [ <interval> [ <count> ] ] [ -e <program> <args> ]
 Options are:
 [ -d ] [ -H ] [ -h ] [ -I ] [ -l ] [ -R ] [ -r ] [ -s ] [ -t ] [ -U [ <username> ] ]
-[ -u ] [ -V ] [ -v ] [ -w ] [ -C <command> ] [ -G <process_name> ] [ --human ]
+[ -u ] [ -V ] [ -v ] [ -w ] [ -C <command> ] [ -G <process_name> ]
 [ -p { <pid> [,...] | SELF | ALL } ] [ -T { TASK | CHILD | ALL } ]
+[ --dec={ 0 | 1 | 2 } ] [ --human ]

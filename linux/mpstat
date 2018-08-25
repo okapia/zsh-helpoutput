@@ -1,4 +1,5 @@
 Usage: mpstat [ options ] [ <interval> [ <count> ] ]
 Options are:
-[ -A ] [ -n ] [ -u ] [ -V ] [ -I { SUM | CPU | SCPU | ALL } ]
-[ -N { <node_list> | ALL } ] [ -o JSON ] [ -P { <cpu_list> | ALL } ]
+[ -A ] [ -n ] [ -u ] [ -V ]
+[ -I { SUM | CPU | SCPU | ALL } ] [ -N { <node_list> | ALL } ]
+[ --dec={ 0 | 1 | 2 } ] [ -o JSON ] [ -P { <cpu_list> | ALL } ]

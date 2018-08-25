@@ -2,5 +2,6 @@ Usage: sadf [ options ] [ <interval> [ <count> ] ] [ <datafile> | -[0-9]+ ]
 Options are:
 [ -C ] [ -c | -d | -g | -j | -p | -r | -x ] [ -H ] [ -h ] [ -T | -t | -U ] [ -V ]
 [ -O <opts> [,...] ] [ -P { <cpu> [,...] | ALL } ]
+[ --dev=<dev_list> ] [ --fs=<fs_list> ] [ --iface=<iface_list> ]
 [ -s [ <hh:mm[:ss]> ] ] [ -e [ <hh:mm[:ss]> ] ]
 [ -- <sar_options> ]

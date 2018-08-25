@@ -1,3 +1,3 @@
 Usage: cifsiostat [ options ] [ <interval> [ <count> ] ]
 Options are:
-[ --human ] [ -h ] [ -k | -m ] [ -t ] [ -V ]
+[ --dec={ 0 | 1 | 2 } ] [ --human ] [ -h ] [ -k | -m ] [ -t ] [ -V ]
