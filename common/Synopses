@@ -98,7 +98,7 @@ emit -h | field 3 | getversion
 emit -h | getusage
 
 cmd cscope
-version 15.8b
+version 15.9
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -148,7 +148,7 @@ emit -version | field 2 | getversion
 emit -help | getusage
 
 cmd entr
-version 4.0
+version 4.1
 emit | field -1 | getversion
 emit | sed 1d | getusage
 
@@ -169,7 +169,7 @@ emit -h | getusage
 emit -H | getusage explain
 
 cmd fusermount
-version 2.9.7
+version 2.9.8
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -318,7 +318,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd mpc
-version 0.29
+version 0.30
 emit help | line 2 | field -1 | getversion
 emit help | getusage
 

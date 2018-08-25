@@ -1,5 +1,5 @@
 cmd ag
-version 2.1.0
+version 2.2.0
 emit -V | field -1 | getversion
 emit -h | getusage
 

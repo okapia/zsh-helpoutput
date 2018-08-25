@@ -24,7 +24,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd chsh
-version 2.32
+version 2.32.1
 variant util-linux -- -v
 emit -v | field -1 | getversion
 emit -u | getusage
@@ -206,7 +206,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.23
+version 4.24
 emit -V | field 4 | getversion
 emit -h | getusage
 
@@ -251,7 +251,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.44.3
+version 1.44.4
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 
@@ -311,32 +311,32 @@ emit -h | getusage
 # sysstat
 
 cmd cifsiostat
-version 11.7.3
+version 12.0.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd iostat
-version 11.7.3
+version 12.0.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd mpstat
-version 11.7.3
+version 12.0.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pidstat
-version 11.7.3
+version 12.0.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sadf
-version 11.7.3
+version 12.0.1
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sar
-version 11.7.3
+version 12.0.1
 emit -V | field -1 | getversion
 emit -? | getusage
 emit --help | getusage long

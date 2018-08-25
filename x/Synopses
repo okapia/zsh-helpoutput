@@ -49,3 +49,8 @@ version 7.6.0
 [[ $OSTYPE = (solaris|(net|open)bsd)* ]] && (( _present=0 ))
 emit -v | tr '(' ' ' | field 2 | getversion
 emit -h | getusage
+
+cmd zeal
+version 0.6.0
+emit -v | sed -n 's/^Zeal //p' | getversion
+emit -h | getusage
