@@ -1,1 +1,1 @@
-usage: entr [-cdprs] utility [argument [/_] ...] < filenames
+usage: entr [-cdnprs] utility [argument [/_] ...] < filenames
