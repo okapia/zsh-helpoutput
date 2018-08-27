@@ -1,0 +1,21 @@
+Taylor UUCP 1.07, copyright (C) 1991, 92, 93, 94, 1995, 2002 Ian Lance Taylor
+Usage: cu [options] [system or phone-number]
+ -a,-p,--port port: Use named port
+ -l,--line line: Use named device (e.g. tty0)
+ -s,--speed,--baud speed, -#: Use given speed
+ -c,--phone phone: Phone number to call
+ -z,--system system: System to call
+ -e: Set even parity
+ -o: Set odd parity
+ --parity={odd,even}: Set parity
+ -E,--escape char: Set escape character
+ -h,--halfduplex: Echo locally
+ --nostop: Turn off XON/XOFF handling
+ -t,--mapcr: Map carriage return to carriage return/linefeed
+ -n,--prompt: Prompt for phone number
+ -d: Set maximum debugging level
+ -x,--debug debug: Set debugging type
+ -I,--config file: Set configuration file to use
+ -v,--version: Print version and exit
+ --help: Print help and exit
+Report bugs to taylor-uucp@gnu.org
