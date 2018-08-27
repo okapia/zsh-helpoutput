@@ -10,6 +10,7 @@ Usage:  gnutls-serv [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
 				- may appear multiple times
        --alpn-fatal           Send fatal alert on non-matching ALPN name
        --noticket             Don't accept session tickets
+       --nocookie             Don't require cookie on DTLS sessions
    -g, --generate             Generate Diffie-Hellman parameters
    -q, --quiet                Suppress some messages
        --nodb                 Do not use a resumption database
@@ -21,6 +22,7 @@ Usage:  gnutls-serv [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
 				  0 to 17000
        --srtp-profiles=str    Offer SRTP profiles
    -a, --disable-client-cert  Do not request a client certificate
+				- prohibits the option 'require-client-cert'
    -r, --require-client-cert  Require a client certificate
        --verify-client-cert   If a client certificate is sent then verify it.
    -b, --heartbeat            Activate heartbeat support
@@ -42,8 +44,9 @@ Usage:  gnutls-serv [ -<flag> [<val>] | --<name>[{=| }<val>] ]...
        --pskpasswd=file       PSK password file to use
 				- file must pre-exist
        --pskhint=str          PSK identity hint to use
-       --ocsp-response=file   The OCSP response to send to client
-				- file must pre-exist
+       --ocsp-response=str    The OCSP response to send to client
+				- may appear multiple times
+       --ignore-ocsp-response-errors  Ignore any errors when setting the OCSP response
    -p, --port=num             The port to connect to
    -l, --list                 Print a list of the supported algorithms and modes
        --provider=file        Specify the PKCS #11 provider library

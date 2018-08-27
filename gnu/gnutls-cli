@@ -8,7 +8,8 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
 				- may appear multiple times
        --tofu                 Enable trust on first use authentication
 				- disabled as '--no-tofu'
-       --strict-tofu          Fail to connect if a known certificate has changed
+       --strict-tofu          Fail to connect if a certificate is unknown or a known certificate has
+changed
 				- disabled as '--no-strict-tofu'
        --dane                 Enable DANE certificate verification (DNSSEC)
 				- disabled as '--no-dane'
@@ -22,6 +23,7 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
    -r, --resume               Establish a session and resume
    -e, --rehandshake          Establish a session and rehandshake
        --sni-hostname=str     Server's hostname for server name indication extension
+       --verify-hostname=str  Server's hostname to use for validation
    -s, --starttls             Connect, establish a plain session and start TLS
        --app-proto=str        an alias for the 'starttls-proto' option
        --starttls-proto=str   The application protocol to be used to obtain the server's certificate
@@ -54,7 +56,6 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
    -p, --port=str             The port or service to connect to
        --insecure             Don't abort program if server certificate can't be validated
        --verify-allow-broken  Allow broken algorithms, such as MD5 for certificate verification
-       --ranges               Use length-hiding padding to prevent traffic analysis
        --benchmark-ciphers    Benchmark individual ciphers
        --benchmark-tls-kx     Benchmark TLS key exchange methods
        --benchmark-tls-ciphers  Benchmark TLS ciphers
@@ -70,7 +71,8 @@ Usage:  gnutls-cli [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [hostname]
 				- it must be in the range:
 				  0 to 4096
        --disable-sni          Do not send a Server Name Indication (SNI)
-       --disable-extensions   Disable all the TLS extensions
+       --single-key-share     Send a single key share under TLS1.3
+       --post-handshake-auth  Enable post-handshake authentication under TLS1.3
        --inline-commands      Inline commands of the form ^<cmd>^
        --inline-commands-prefix=str Change the default delimiter for inline commands.
        --provider=file        Specify the PKCS #11 provider library
