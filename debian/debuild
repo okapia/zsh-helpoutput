@@ -1,0 +1,75 @@
+First usage method:
+  debuild [<debuild options>] -- binary|binary-arch|binary-indep|clean ...
+    to run debian/rules with given parameter(s).  Options here are
+        --no-conf, --noconf      Don't read devscripts config files;
+                                 must be the first option given
+        --rootcmd=<gain-root-command>, -r<gain-root-command>
+                                 Command used to become root if debuild
+                                 not setuid root; default=fakeroot
+
+        --preserve-envvar=<envvar>, -e<envvar>
+                                 Preserve environment variable <envvar>
+
+        --preserve-env           Preserve all environment vars (except PATH)
+
+        --set-envvar=<envvar>=<value>, -e<envvar>=<value>
+                                 Set environment variable <envvar> to <value>
+
+        --prepend-path=<value>   Prepend <value> to the sanitised PATH
+
+        -d                       Skip checking of build dependencies
+        -D                       Force checking of build dependencies (default)
+
+        --check-dirname-level N
+                How much to check directory names:
+                N=0   never
+                N=1   only if program changes directory (default)
+                N=2   always
+
+        --check-dirname-regex REGEX
+                What constitutes a matching directory name; REGEX is
+                a Perl regular expression; the string `PACKAGE' will
+                be replaced by the package name; see manpage for details
+                (default: 'PACKAGE(-.+)?')
+
+        --help, -h    display this message
+
+        --version     show version and copyright information
+
+Second usage method:
+  debuild [<debuild options>] [<dpkg-buildpackage options>]
+             [--lintian-opts <lintian options>]
+    to run dpkg-buildpackage and then run lintian on the resulting
+    .changes file.
+
+    Additional debuild options available in this case are:
+
+        --lintian           Run lintian (default)
+        --no-lintian        Do not run lintian
+        --[no-]tgz-check    Do [not] check for an .orig.tar.gz before running
+                            dpkg-buildpackage if we have a Debian revision
+                            (Default: check)
+        --username          Run debrsign instead of debsign, using the
+                            supplied credentials
+
+        --dpkg-buildpackage-hook=HOOK
+        --clean-hook=HOOK
+        --dpkg-source-hook=HOOK
+        --build-hook=HOOK
+        --binary-hook=HOOK
+        --dpkg-genchanges-hook=HOOK
+        --final-clean-hook=HOOK
+        --lintian-hook=HOOK
+        --signing-hook=HOOK
+        --post-dpkg-buildpackage-hook=HOOK
+                            These hooks run at the various stages of the
+                            dpkg-buildpackage run.  For details, see the
+                            debuild manpage.  They default to nothing, and
+                            can be reset to nothing with --foo-hook=''
+        --clear-hooks       Clear all hooks
+
+    For available dpkg-buildpackage and lintian options, see their
+    respective manpages.
+
+Default settings modified by devscripts configuration files:
+  (none)
