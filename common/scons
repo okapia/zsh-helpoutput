@@ -11,6 +11,7 @@ SCons Options:
                               Do not retrieve built targets from CacheDir.
   --cache-force, --cache-populate
                               Copy already-built targets into the CacheDir.
+  --cache-readonly            Do not update CacheDir with built targets.
   --cache-show                Print build actions for files from CacheDir.
   --config=MODE               Controls Configure subsystem: auto, force,
                                 cache.
@@ -19,8 +20,7 @@ SCons Options:
   --debug=TYPE                Print various types of debugging information:
                                 count, duplicate, explain, findlibs, includes,
                                 memoizer, memory, objects, pdb, prepare,
-                                presub, stacktrace, time, dtree, tree, stree,
-                                nomemoizer.
+                                presub, stacktrace, time.
   --diskcheck=TYPE            Enable specific on-disk checks.
   --duplicate=DUPLICATE       Set the preferred duplication methods. Must be
                                 one of hard-soft-copy, soft-hard-copy,
