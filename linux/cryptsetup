@@ -1,4 +1,4 @@
-cryptsetup 2.0.3
+cryptsetup 2.0.4
 Usage: cryptsetup [OPTION...] <action> <action-specific>
       --version                         Print package version
   -v, --verbose                         Shows more detailed error messages
@@ -79,7 +79,7 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
       --pbkdf-force-iterations=LONG     PBKDF iterations cost (forced,
                                         disables benchmark)
       --priority=STRING                 Keyslot priority: ignore, normal,
-                                        prefer)
+                                        prefer
       --disable-locks                   Disable locking of on-disk metadata
       --disable-keyring                 Disable loading volume keys via kernel
                                         keyring
@@ -99,6 +99,8 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
                                         device
       --unbound                         Create unbound (no assigned data
                                         segment) LUKS2 keyslot
+      --json-file=STRING                Read or write the json from or to a
+                                        file
 
 Help options:
   -?, --help                            Show this help message
@@ -128,7 +130,7 @@ Help options:
 	luksResume <device> - Resume suspended LUKS device
 	luksHeaderBackup <device> - Backup LUKS device header and keyslots
 	luksHeaderRestore <device> - Restore LUKS device header and keyslots
-	token <add|remove> <device> - Add or remove keyring token
+	token <add|remove|import|export> <device> - Manipulate LUKS2 tokens
 
 You can also use old <action> syntax aliases:
 	open: create (plainOpen), luksOpen, loopaesOpen, tcryptOpen
