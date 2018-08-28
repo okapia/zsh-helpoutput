@@ -48,6 +48,11 @@ version 2.11.6
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd debuild
+version 2.17.12ubuntu1.1
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd dpkg
 version 1.16.2
 emit --version | field -2 | getversion

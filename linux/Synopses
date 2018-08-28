@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.17
+version 4.17.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -46,7 +46,7 @@ emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 2.0.3
+version 2.0.4
 emit --version | field 2 | getversion
 emit -? | getusage
 
@@ -101,7 +101,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 180608
+version 180813
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -201,7 +201,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 180608
+version 180813
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 

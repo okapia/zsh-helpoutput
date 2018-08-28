@@ -3,6 +3,11 @@ version 4.14
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd ack
+version 2.22
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd alpine
 version 2.21
 emit -v | field 2 | getversion
@@ -101,6 +106,11 @@ cmd cscope
 version 15.9
 emit -V | field -1 | getversion
 emit -h | getusage
+
+cmd cu
+version 1.07
+emit -v | field -1 | getversion
+emit --help | getusage
 
 cmd dbus-monitor
 version 1.12.10
@@ -224,6 +234,11 @@ version 2.14
 variant -n links2 ! ELinks -- -version
 emit -version | field 2 | getversion
 emit -help | getusage
+
+cmd lua
+version 5.3.5
+emit -v | field 2 | getversion
+emit -? | getusage
 
 cmd luarocks
 version 2.4.3
@@ -422,6 +437,11 @@ emit --version | line 1 | field 3 | getversion
 emit -h | getusage
 emit --daemon -h | getusage daemon
 
+cmd scons
+version 3.0.1
+emit -v | sed -n -e '2 s/.*: v\(.*\)\.[^.]*$/\1/p' | getversion
+emit -H | getusage
+
 cmd smbclient
 version 4.8.2
 emit -V | sed 's/-.*//' | field -1 | getversion
@@ -440,29 +460,34 @@ emit -help | getusage
 emit -A | getusage archive
 
 cmd ssh
-version 7.7p1
+version 7.8p1
 variant OpenSSH -- -V
 emit -V | field 1 | sed 's/^.*_//' | getversion
 sshver="$_verinst"
 emit -? | getusage
 
 cmd scp
-version 7.7p1
+version 7.8p1
 getversion <<<$sshver
 emit | getusage
 
 cmd sftp
-version 7.7p1
+version 7.8p1
 getversion <<<$sshver
 emit | getusage
 
 cmd ssh-add
-version 7.7p1
+version 7.8p1
+getversion <<<$sshver
+emit -? | getusage
+
+cmd ssh-copy-id
+version 7.8p1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-keygen
-version 7.7p1
+version 7.8p1
 getversion <<<$sshver
 emit -? | getusage
 
@@ -747,6 +772,53 @@ version 0.173
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
+
+# ImageMagick
+
+cmd animate
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd composite
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd combine
+version 6.7.2
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd convert
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd display
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd identify
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd import
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd mogrify
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
+
+cmd montage
+version 6.9.9
+emit -version | field 3 | sed 's/-.*//' | getversion
+emit -help | getusage
 
 # java
 

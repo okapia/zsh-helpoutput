@@ -1,3 +1,8 @@
+cmd code
+version 1.21.1
+emit -v | line 1 | getversion
+emit -h | getusage
+
 cmd evince
 version 3.28.2
 emit --version | field -1 | getversion

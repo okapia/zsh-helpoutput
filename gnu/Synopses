@@ -127,7 +127,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gnutls-cli
-version 3.6.2
+version 3.6.3
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -137,7 +137,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-serv
-version 3.6.2
+version 3.6.3
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -170,7 +170,7 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd iconv
-version 2.27
+version 2.28
 variant 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | getusage
@@ -207,7 +207,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ldd
-version 2.27
+version 2.28
 variant 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
