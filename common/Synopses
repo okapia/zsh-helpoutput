@@ -87,7 +87,7 @@ emit | tr -d , | field 2 | getversion
 emit --help | getusage
 
 cmd augtool
-version 1.10.1
+version 1.11.0
 emit --version | field 2 | getversion
 emit --help | getusage
 emit help | getusage commands
@@ -274,7 +274,7 @@ emit help -av | getusage commands
 subcmds @ -h
 
 cmd gpg
-version 2.2.9
+version 2.2.10
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -565,7 +565,7 @@ emit -? | getusage
 emit list-commands | getusage commands
 
 cmd unrar
-version 5.60
+version 5.61
 emit | line 2 | field 2 | getversion
 emit | getusage
 

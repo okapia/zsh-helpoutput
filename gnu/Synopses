@@ -23,7 +23,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd bison
-version 3.0.5
+version 3.1
 emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
