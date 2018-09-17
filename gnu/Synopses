@@ -127,27 +127,27 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gnutls-cli
-version 3.6.3
+version 3.6.4
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-cli-debug
-version 3.6.3
+version 3.6.4
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-serv
-version 3.6.3
+version 3.6.4
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd certtool
-version 3.6.3
+version 3.6.4
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.6.3
+version 3.6.4
 emit --version | field -1 | getversion
 emit -h | getusage
 

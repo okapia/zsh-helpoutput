@@ -41,7 +41,7 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd cpupower
-version 4.18.0
+version 4.19.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -111,7 +111,7 @@ emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
 cmd kpartx
-version 0.7.7
+version 0.7.8
 pack | getversion
 emit | getusage
 
@@ -164,7 +164,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd nmcli
-version 1.12.2
+version 1.14.0
 subdir
 emit -v | field -1 | sed 's/-.*//' | getversion
 emit help | getusage

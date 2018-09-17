@@ -390,7 +390,7 @@ emit -V |  field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.8.2
+version 4.9.1
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -443,12 +443,12 @@ emit -v | sed -n -e '2 s/.*: v\(.*\)\.[^.]*$/\1/p' | getversion
 emit -H | getusage
 
 cmd smbclient
-version 4.8.2
+version 4.9.1
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd smbcontrol
-version 4.8.2
+version 4.9.1
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
@@ -497,7 +497,7 @@ emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 
 cmd sudo
-version 1.8.23b3
+version 1.8.25p1
 variant ! 'doas' -- -V
 emit -V | field -1 | getversion
 emit -h | getusage
@@ -776,12 +776,12 @@ emit --help | nobug | getusage
 # ImageMagick
 
 cmd animate
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd composite
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
