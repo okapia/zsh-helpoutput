@@ -16,18 +16,19 @@ Usage: smbclient service <password>
   -t, --timeout=SECONDS                     Changes the per-operation timeout
   -p, --port=PORT                           Port to connect to
   -g, --grepable                            Produce grepable output
+  -q, --quiet                               Suppress help message
   -B, --browse                              Browse SMB servers using DNS
 
 Help options:
   -?, --help                                Show this help message
-  --usage                                   Display brief usage message
+      --usage                               Display brief usage message
 
 Common samba options:
   -d, --debuglevel=DEBUGLEVEL               Set debug level
   -s, --configfile=CONFIGFILE               Use alternate configuration file
   -l, --log-basename=LOGFILEBASE            Base name for log files
   -V, --version                             Print version
-  --option=name=value                       Set smb.conf option from command
+      --option=name=value                   Set smb.conf option from command
                                             line
 
 Connection options:
@@ -44,9 +45,8 @@ Authentication options:
   -A, --authentication-file=FILE            Get the credentials from a file
   -S, --signing=on|off|required             Set the client signing state
   -P, --machine-pass                        Use stored machine account password
-  -e, --encrypt                             Encrypt SMB transport (UNIX
-                                            extended servers only)
+  -e, --encrypt                             Encrypt SMB transport
   -C, --use-ccache                          Use the winbind ccache for
                                             authentication
-  --pw-nt-hash                              The supplied password is the NT
+      --pw-nt-hash                          The supplied password is the NT
                                             hash
