@@ -123,7 +123,7 @@ pack | getversion
 emit -h | getusage
 
 cmd dmidecode
-version 3.1
+version 3.2
 emit -V | getversion
 emit -h | getusage
 
@@ -285,12 +285,12 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gs
-version 9.23
+version 9.25
 emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.57.2
+version 2.58.1
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -453,7 +453,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.24.0
+version 3.25.2
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -513,14 +513,14 @@ pack | getversion
 emit | getusage
 
 cmd svn
-version 1.10.2
+version 1.10.3
 subdir
 emit --version --quiet | getversion
 emit help | getusage
 subcmds help @
 
 cmd svnadmin
-version 1.10.2
+version 1.10.3
 subdir
 emit --version | field 3 | getversion
 emit help | getusage
@@ -750,25 +750,25 @@ emit --help | getusage elftoolchain
 # elfutils
 
 cmd readelf
-version 0.173
+version 0.174
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.173
+version 0.174
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
-version 0.173
+version 0.174
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd strings
-version 0.173
+version 0.174
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
