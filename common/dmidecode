@@ -5,6 +5,7 @@ Options are:
  -q, --quiet            Less verbose output
  -s, --string KEYWORD   Only display the value of the given DMI string
  -t, --type TYPE        Only display the entries of given type
+ -H, --handle HANDLE    Only display the entry of given handle
  -u, --dump             Do not decode the entries
      --dump-bin FILE    Dump the DMI data to a binary file
      --from-dump FILE   Read the DMI data from a binary file
