@@ -1,4 +1,4 @@
-ethtool version 4.16
+ethtool version 4.18
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
@@ -10,7 +10,7 @@ Usage:
 		[ advertise %x ]
 		[ phyad %d ]
 		[ xcvr internal|external ]
-		[ wol p|u|m|b|a|g|s|d... ]
+		[ wol p|u|m|b|a|g|s|f|d... ]
 		[ sopass %x:%x:%x:%x:%x:%x ]
 		[ msglvl %d | msglvl type on|off ... ]
         ethtool -a|--show-pause DEVNAME	Show pause options
