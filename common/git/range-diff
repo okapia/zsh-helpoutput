@@ -1,0 +1,8 @@
+usage: git range-diff [<options>] <old-base>..<old-tip> <new-base>..<new-tip>
+   or: git range-diff [<options>] <old-tip>...<new-tip>
+   or: git range-diff [<options>] <base> <old-tip> <new-tip>
+
+    --creation-factor <n>
+                          Percentage by which creation is weighted
+    --no-dual-color       use simple diff colors
+

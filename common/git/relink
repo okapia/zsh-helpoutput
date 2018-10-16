@@ -1,4 +1,0 @@
-Usage: git relink [--safe] <dir> [<dir> ...] <master_dir> 
-All directories should contain a .git/objects/ subdirectory.
-Options
-	--safe	Stops if two objects with the same hash exist but have different sizes.  Default is to warn and continue.

@@ -7,7 +7,7 @@ usage: git pull [<options>] [<repository> [<refspec>...]]
                           control for recursive fetching of submodules
 
 Options related to merging
-    -r, --rebase[=<false|true|preserve|interactive>]
+    -r, --rebase[=(false|true|merges|preserve|interactive)]
                           incorporate changes by rebasing rather than merging
     -n                    do not show a diffstat at the end of the merge
     --stat                show a diffstat at the end of the merge

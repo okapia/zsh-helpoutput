@@ -19,6 +19,7 @@ usage: git merge [<options>] [<commit>...]
                           option for selected merge strategy
     -m, --message <message>
                           merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
     -v, --verbose         be more verbose
     -q, --quiet           be more quiet
     --abort               abort the current in-progress merge

@@ -24,6 +24,7 @@ Action
     --get-colorbool       find the color setting: slot [stdout-is-tty]
 
 Type
+    -t, --type <>         value is given this type
     --bool                value is "true" or "false"
     --int                 value is decimal number
     --bool-or-int         value is --bool or --int
@@ -35,4 +36,5 @@ Other
     --name-only           show variable names only
     --includes            respect include directives on lookup
     --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
 

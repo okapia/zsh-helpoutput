@@ -30,7 +30,11 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     --unshallow           convert to a complete repository
     --update-shallow      accept refs that update .git/shallow
     --refmap <refmap>     specify fetch refmap
+    -o, --server-option <server-specific>
+                          option to transmit
     -4, --ipv4            use IPv4 addresses only
     -6, --ipv6            use IPv6 addresses only
+    --negotiation-tip <revision>
+                          report that we have only objects reachable from this object
     --filter <args>       object filtering
 

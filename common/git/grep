@@ -21,6 +21,7 @@ usage: git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]
     -P, --perl-regexp     use Perl-compatible regular expressions
 
     -n, --line-number     show line numbers
+    --column              show column number of first match
     -h                    don't show filenames
     -H                    show filenames
     --full-name           show filenames relative to top directory
@@ -30,6 +31,7 @@ usage: git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]
     -L, --files-without-match
                           show only the names of files without match
     -z, --null            print NUL after filenames
+    -o, --only-matching   show only matching parts of a line
     -c, --count           show the number of matches instead of matching lines
     --color[=<when>]      highlight matches
     --break               print empty line between matches from different files

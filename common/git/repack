@@ -22,4 +22,5 @@ usage: git repack [<options>]
     --max-pack-size <bytes>
                           maximum size of each packfile
     --pack-kept-objects   repack objects in packs marked with .keep
+    --keep-pack <name>    do not repack this pack
 

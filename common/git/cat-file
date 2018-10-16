@@ -16,4 +16,5 @@ usage: git cat-file (-t [--allow-unknown-type] | -s [--allow-unknown-type] | -e 
                           show info about objects fed from the standard input
     --follow-symlinks     follow in-tree symlinks (used with --batch or --batch-check)
     --batch-all-objects   show all objects with --batch or --batch-check
+    --unordered           do not order --batch-all-objects output
 

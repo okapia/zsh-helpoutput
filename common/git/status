@@ -15,4 +15,7 @@ usage: git status [<options>] [--] <pathspec>...
     --ignore-submodules[=<when>]
                           ignore changes to submodules, optional when: all, dirty, untracked. (Default: all)
     --column[=<style>]    list untracked files in columns
+    --no-renames          do not detect renames
+    -M, --find-renames[=<n>]
+                          detect renames, optionally set similarity index
 

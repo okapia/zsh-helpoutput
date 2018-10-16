@@ -1,8 +1,10 @@
-usage: git help [--all] [--guides] [--man|--web|--info] [command]
+usage: git help [--all] [--guides] [--man | --web | --info] [<command>]
 
     -a, --all             print all available commands
     -g, --guides          print list of useful guides
+    -c, --config          print all configuration variable names
     -m, --man             show man page
     -w, --web             show manual in web browser
     -i, --info            show info page
+    -v, --verbose         print command description
 

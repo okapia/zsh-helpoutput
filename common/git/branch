@@ -29,7 +29,7 @@ Specific git-branch actions:
     -c, --copy            copy a branch and its reflog
     -C                    copy a branch, even if target exists
     --list                list branch names
-    -l, --create-reflog   create the branch's reflog
+    --create-reflog       create the branch's reflog
     --edit-description    edit the description for the branch
     -f, --force           force creation, move/rename, deletion
     --merged <commit>     print only branches that are merged
