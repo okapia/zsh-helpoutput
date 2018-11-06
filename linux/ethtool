@@ -1,4 +1,4 @@
-ethtool version 4.18
+ethtool version 4.19
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
@@ -160,6 +160,6 @@ Usage:
 		[ all ]
         ethtool --show-fec DEVNAME	Show FEC settings
         ethtool --set-fec DEVNAME	Set FEC settings
-		[ encoding auto|off|rs|baser ]
+		[ encoding auto|off|rs|baser [...]]
         ethtool -h|--help 		Show this help
         ethtool --version 		Show version number
