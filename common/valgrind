@@ -39,9 +39,14 @@ usage: valgrind [options] prog-and-args
     --demangle=no|yes         automatically demangle C++ names? [yes]
     --num-callers=<number>    show <number> callers in stack traces [12]
     --error-limit=no|yes      stop showing new errors if too many? [yes]
+    --exit-on-first-error=no|yes exit code on the first error found? [no]
     --error-exitcode=<number> exit code to return if errors found [0=disable]
     --error-markers=<begin>,<end> add lines with begin/end markers before/after
                               each error output in plain text mode [none]
+    --keep-debuginfo=no|yes   Keep symbols etc for unloaded code [no]
+                              This allows saved stack traces (e.g. memory leaks)
+                              to include file/line info for code that has been
+                              dlclose'd (or similar)
     --show-below-main=no|yes  continue stack traces below main() [no]
     --default-suppressions=yes|no
                               load default suppressions [yes]
@@ -160,8 +165,8 @@ usage: valgrind [options] prog-and-args
     --undef-value-errors=no|yes      check for undefined value errors [yes]
     --track-origins=no|yes           show origins of undefined values? [no]
     --partial-loads-ok=no|yes        too hard to explain here; see manual [yes]
-    --expensive-definedness-checks=no|yes
-                                     Use extra-precise definedness tracking [no]
+    --expensive-definedness-checks=no|auto|yes
+                                     Use extra-precise definedness tracking [auto]
     --freelist-vol=<number>          volume of freed blocks queue     [20000000]
     --freelist-big-blocks=<number>   releases first blocks with size>= [1000000]
     --workaround-gcc296-bugs=no|yes  self explanatory [no].  Deprecated.
