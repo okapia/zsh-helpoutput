@@ -1,21 +1,24 @@
 
-LuaRocks 2.4.3, the Lua package manager
+LuaRocks 3.0.3, the Lua package manager
 
 NAME
 	/usr/bin/luarocks - LuaRocks main command-line interface
 
 SYNOPSIS
-	/usr/bin/luarocks [--server=<server> | --only-server=<server>] [--tree=<tree>] [VAR=VALUE]... <command> [<argument>] 
+	/usr/bin/luarocks [<flags...>] [VAR=VALUE]... <command> [<argument>] 
 
 GENERAL OPTIONS
 	These apply to all commands, as appropriate:
 
+	--dev                  Enable the sub-repositories in rocks servers
+	                       for rockspecs of in-development versions
 	--server=<server>      Fetch rocks/rockspecs from this server
 	                       (takes priority over config file)
 	--only-server=<server> Fetch rocks/rockspecs from this server only
 	                       (overrides any entries in the config file)
 	--only-sources=<url>   Restrict downloads to paths matching the
 	                       given URL.
+        --lua-dir=<prefix>     Which Lua installation to use.
 	--tree=<tree>          Which tree to operate on.
 	--local                Use the tree in the user's home directory.
 	                       To enable it, see '/usr/bin/luarocks help path'.
@@ -30,7 +33,7 @@ VARIABLES
 
 COMMANDS
 	build
-		Build/compile a rock.
+		build/compile a rock.
 	config
 		Query information about the LuaRocks configuration.
 	doc
@@ -39,6 +42,8 @@ COMMANDS
 		Download a specific rock file from a rocks server.
 	help
 		Help on commands. Type '/usr/bin/luarocks help <command>' for more.
+	init
+		Initialize a directory for a Lua project using LuaRocks.
 	install
 		Install a rock.
 	lint
@@ -61,19 +66,25 @@ COMMANDS
 		Query the LuaRocks servers.
 	show
 		Show information about an installed rock.
+	test
+		Run the test suite in the current directory.
 	unpack
 		Unpack the contents of a rock.
 	upload
 		Upload a rockspec to the public rocks repository.
+	which
+		Tell which file corresponds to a given module name.
 	write_rockspec
 		Write a template for a rockspec file.
 
 CONFIGURATION
 	Lua version: 5.3
+
 	Configuration files:
-		System: /etc/luarocks/config-5.3.lua (ok)
-		User  : /home/okiddle/.luarocks/config-5.3.lua (not found)
+		System  : /etc/luarocks/config-5.3.lua (ok)
+		User    : /home/okiddle/.luarocks/config-5.3.lua (not found)
 
 	Rocks trees in use: 
 		/home/okiddle/.luarocks ("user")
 		/usr ("system")
+

@@ -1,5 +1,5 @@
 
-LuaRocks 2.4.3, the Lua package manager
+LuaRocks 3.0.3, the Lua package manager
 
 NAME
 	/usr/bin/luarocks search - Query the LuaRocks servers.
@@ -8,12 +8,13 @@ SYNOPSIS
 	/usr/bin/luarocks search [--source] [--binary] { <name> [<version>] | --all }
 
 DESCRIPTION
-	--source  Return only rockspecs and source rocks,
-	          to be used with the "build" command.
-	--binary  Return only pure Lua and binary rocks (rocks that can be used
-	          with the "install" command without requiring a C toolchain).
-	--all     List all contents of the server that are suitable to
-	          this platform, do not filter by name.
+	--source     Return only rockspecs and source rocks,
+	             to be used with the "build" command.
+	--binary     Return only pure Lua and binary rocks (rocks that can be used
+	             with the "install" command without requiring a C toolchain).
+	--all        List all contents of the server that are suitable to
+	             this platform, do not filter by name.
+	--porcelain  Return a machine readable format.
 
 SEE ALSO
 	'/usr/bin/luarocks help' for general options and configuration.

@@ -1,0 +1,41 @@
+
+LuaRocks 3.0.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks test - Run the test suite in the current directory.
+
+SYNOPSIS
+	/usr/bin/luarocks test [--test-type=<type>] [<rockspec>] [-- <args>]
+
+DESCRIPTION
+	Run the test suite for the Lua project in the current directory.
+	If the first argument is a rockspec, it will use it to determine
+	the parameters for running tests; otherwise, it will attempt to
+	detect the rockspec.
+	
+	Any additional arguments are forwarded to the test suite. 
+	To make sure that any flags passed in <args> are not interpreted
+	as LuaRocks flags, use -- to separate LuaRocks arguments from
+	test suite arguments.
+	
+	--test-type=<type>  Specify the test suite type manually if it was not
+	                    specified in the rockspec and it could not be
+	                    auto-detected.
+	
+	--deps-mode=<mode>  How to handle dependencies. Four modes are supported:
+	                    * all - use all trees from the rocks_trees list
+	                      for finding dependencies
+	                    * one - use only the current tree (possibly set
+	                      with --tree)
+	                    * order - use trees based on order (use the current
+	                      tree and all trees below it on the rocks_trees list)
+	                    * none - ignore dependencies altogether.
+	                    The default mode may be set with the deps_mode entry
+	                    in the configuration file.
+	                    The current default is "one".
+	                    Type '/usr/bin/luarocks' with no arguments to see
+	                    your list of rocks trees.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

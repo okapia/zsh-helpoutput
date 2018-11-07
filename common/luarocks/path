@@ -1,5 +1,5 @@
 
-LuaRocks 2.4.3, the Lua package manager
+LuaRocks 3.0.3, the Lua package manager
 
 NAME
 	/usr/bin/luarocks path - Return the currently configured package path.
@@ -11,7 +11,7 @@ DESCRIPTION
 	Returns the package path currently configured for this installation
 	of LuaRocks, formatted as shell commands to update LUA_PATH and LUA_CPATH. 
 	
-	--bin          Adds the system path to the output
+	--no-bin       Do not export the PATH variable
 	
 	--append       Appends the paths to the existing paths. Default is to prefix
 	               the LR paths to the existing paths.

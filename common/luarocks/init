@@ -1,0 +1,31 @@
+
+LuaRocks 3.0.3, the Lua package manager
+
+NAME
+	/usr/bin/luarocks init - Initialize a directory for a Lua project using LuaRocks.
+
+SYNOPSIS
+	/usr/bin/luarocks init [<name> [<version>]]
+
+DESCRIPTION
+	<name> is the project name.
+	<version> is an optional project version.
+	
+	--reset                  Regenerate .luarocks/config-5.x.lua and ./lua wrapper
+	                         if those already exist.
+	
+	Options for specifying rockspec data:
+	
+	--license="<string>"     A license string, such as "MIT/X11" or "GNU GPL v3".
+	--summary="<txt>"        A short one-line description summary.
+	--detailed="<txt>"       A longer description string.
+	--homepage=<url>         Project homepage.
+	--lua-versions=<ver>     Supported Lua versions. Accepted values are "5.1", "5.2",
+	                         "5.3", "5.1,5.2", "5.2,5.3", or "5.1,5.2,5.3".
+	--rockspec-format=<ver>  Rockspec format version, such as "1.0" or "1.1".
+	--lib=<lib>[,<lib>]      A comma-separated list of libraries that C files need to
+	                         link to.
+
+SEE ALSO
+	'/usr/bin/luarocks help' for general options and configuration.
+

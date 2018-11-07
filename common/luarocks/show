@@ -1,5 +1,5 @@
 
-LuaRocks 2.4.3, the Lua package manager
+LuaRocks 3.0.3, the Lua package manager
 
 NAME
 	/usr/bin/luarocks show - Show information about an installed rock.
@@ -12,13 +12,15 @@ DESCRIPTION
 	Without any flags, show all module information.
 	With these flags, return only the desired information:
 	
-	--home      home page of project
-	--modules   all modules provided by this package as used by require()
-	--deps      packages this package depends on
-	--rockspec  the full path of the rockspec file
-	--mversion  the package version
-	--rock-tree local tree where rock is installed
-	--rock-dir  data directory of the installed rock
+	--home       home page of project
+	--modules    all modules provided by this package as used by require()
+	--deps       packages this package depends on
+	--build-deps build-only dependencies for this package
+	--test-deps  dependencies for testing this package
+	--rockspec   the full path of the rockspec file
+	--mversion   the package version
+	--rock-tree  local tree where rock is installed
+	--rock-dir   data directory of the installed rock
 
 SEE ALSO
 	'/usr/bin/luarocks help' for general options and configuration.
