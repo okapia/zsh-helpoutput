@@ -1,6 +1,6 @@
 pkg_create: Unknown option -?
 Usage: pkg_create [-nQqvSx] [-A arches] [-B pkg-destdir] [-D name[=value]]
        [-L localbase] [-M displayfile] [-P pkg-dependency]
-       [-U undisplayfile] [-V n] [-W wantedlib] [-w libset]
-       [-d desc -D COMMENT=value -f packinglist -p prefix]
+       [-U undisplayfile] [-u userlist] [-V n] [-W wantedlib]
+       [-w libset] [-d desc -D COMMENT=value -f packinglist -p prefix]
        pkg-name

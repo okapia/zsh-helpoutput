@@ -1,15 +1,15 @@
 usage:	vmctl command [arg ...]
 	vmctl console id
-	vmctl create "path" -s size
+	vmctl create "path" [-s size] [-b base]
 	vmctl load "path"
-	vmctl log (verbose|brief)
+	vmctl log [verbose|brief]
 	vmctl reload 
 	vmctl reset [all|vms|switches]
 	vmctl show [id]
 	vmctl start "name" [-Lc] [-b image] [-r image] [-m size]
-		[-n switch] [-i count] [-d disk]*
+		[-n switch] [-i count] [-d disk]* [-t name]
 	vmctl status [id]
-	vmctl stop id
+	vmctl stop [id|-a] [-fw]
 	vmctl pause id
 	vmctl unpause id
 	vmctl send id
