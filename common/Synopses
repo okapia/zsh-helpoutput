@@ -241,7 +241,7 @@ emit -v | field 2 | getversion
 emit -? | getusage
 
 cmd luarocks
-version 2.4.3
+version 3.0.3
 subdir
 emit --version | field -1 | getversion
 emit help | getusage
