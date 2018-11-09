@@ -12,6 +12,8 @@ Options:
                         repository module.
   --clean               modified files in the working repository will be
                         discarded
+  --diff                when changing (small) files and templates, show the
+                        differences in those files; works great with --check
   -d DEST, --directory=DEST
                         directory to checkout repository to
   -e EXTRA_VARS, --extra-vars=EXTRA_VARS

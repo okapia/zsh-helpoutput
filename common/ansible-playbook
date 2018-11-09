@@ -86,8 +86,8 @@ Options:
                         prompting)
     --become-method=BECOME_METHOD
                         privilege escalation method to use (default=sudo),
-                        valid choices: [ sesu | sudo | su | pbrun | pfexec |
-                        doas | dzdo | ksu | runas | pmrun | enable ]
+                        valid choices: [ sudo | su | pbrun | pfexec | doas |
+                        dzdo | ksu | runas | pmrun | enable | machinectl ]
     --become-user=BECOME_USER
                         run operations as this user (default=root)
     --ask-sudo-pass     ask for sudo password (deprecated, use become)

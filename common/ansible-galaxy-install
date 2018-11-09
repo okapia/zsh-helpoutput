@@ -1,18 +1,22 @@
 Usage: ansible-galaxy install [options] [-r FILE | role_name(s)[,version] | scm+role_repo_url[,version] | tar_file(s)]
 
+Install Roles from file(s), URL(s) or tar file(s)
+
 Options:
   -f, --force           Force overwriting an existing role
   -h, --help            show this help message and exit
   -c, --ignore-certs    Ignore SSL certificate validation errors.
   -i, --ignore-errors   Ignore errors and continue with the next specified
                         role.
+  -g, --keep-scm-meta   Use tar instead of the scm archive option when
+                        packaging the role
   -n, --no-deps         Don't download roles listed as dependencies
   -r ROLE_FILE, --role-file=ROLE_FILE
                         A file containing a list of roles to be imported
   -p ROLES_PATH, --roles-path=ROLES_PATH
                         The path to the directory containing your roles. The
                         default is the roles_path configured in your
-                        ansible.cfgfile (/usr/local/etc/ansible/roles if not
+                        ansible.cfg file (/etc/ansible/roles if not
                         configured)
   -s API_SERVER, --server=API_SERVER
                         The API server destination

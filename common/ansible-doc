@@ -6,6 +6,8 @@ Options:
   -a, --all             **For internal testing only** Show documentation for
                         all plugins.
   -h, --help            show this help message and exit
+  -j, --json            **For internal testing only** Dump json metadata for
+                        all plugins.
   -l, --list            List available plugins
   -F, --list_files      Show plugin names and their source files without
                         summaries (implies --list)
