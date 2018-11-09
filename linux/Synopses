@@ -19,12 +19,12 @@ emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
 cmd chrt
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd chsh
-version 2.32.1
+version 2.33
 variant util-linux -- -v
 emit -v | field -1 | getversion
 emit -u | getusage
@@ -36,7 +36,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd column
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit --help | getusage
 
@@ -46,7 +46,7 @@ emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 2.0.4
+version 2.0.5
 emit --version | field 2 | getversion
 emit -? | getusage
 
@@ -61,7 +61,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 4.18
+version 4.19
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -76,7 +76,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd hexdump
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -96,7 +96,7 @@ emit -V | field 2 | getversion
 emit -h | getusage
 
 cmd ionice
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -116,22 +116,22 @@ pack | getversion
 emit | getusage
 
 cmd last
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd look
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd losetup
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd lsblk
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -164,7 +164,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd nmcli
-version 1.14.0
+version 1.14.4
 subdir
 emit -v | field -1 | sed 's/-.*//' | getversion
 emit help | getusage
@@ -206,7 +206,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 4.24
+version 4.25
 emit -V | field 4 | getversion
 emit -h | getusage
 
@@ -236,12 +236,12 @@ emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd script
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd scriptreplay
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -272,12 +272,12 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd whereis
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd wipefs
-version 2.32.1
+version 2.33
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -311,32 +311,32 @@ emit -h | getusage
 # sysstat
 
 cmd cifsiostat
-version 12.0.1
+version 12.0.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd iostat
-version 12.0.1
+version 12.0.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd mpstat
-version 12.0.1
+version 12.0.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd pidstat
-version 12.0.1
+version 12.0.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sadf
-version 12.0.1
+version 12.0.2
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd sar
-version 12.0.1
+version 12.0.2
 emit -V | field -1 | getversion
 emit -? | getusage
 emit --help | getusage long

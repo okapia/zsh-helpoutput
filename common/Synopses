@@ -266,7 +266,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.17.1
+version 2.19.1
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -274,13 +274,13 @@ emit help -av | getusage commands
 subcmds @ -h
 
 cmd gpg
-version 2.2.10
+version 2.2.11
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
 
 cmd gphoto2
-version 2.5.17
+version 2.5.20
 emit --version | field -1 | getversion
 emit -? | getusage
 
@@ -302,7 +302,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd jq
-version 1.5
+version 1.6
 emit -V | sed s'/^jq-//' | getversion
 emit -h | getusage
 
@@ -333,7 +333,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd mpc
-version 0.30
+version 0.31
 emit help | line 2 | field -1 | getversion
 emit help | getusage
 
@@ -426,7 +426,7 @@ emit | field 2 | getversion
 subcmds help @
 
 cmd ruby
-version 2.5.1p57
+version 2.5.3p105
 variant -n ruby-mri
 emit --version | field 2 | getversion
 emit --help | getusage
@@ -460,34 +460,34 @@ emit -help | getusage
 emit -A | getusage archive
 
 cmd ssh
-version 7.8p1
+version 7.9p1
 variant OpenSSH -- -V
 emit -V | field 1 | sed 's/^.*_//' | getversion
 sshver="$_verinst"
 emit -? | getusage
 
 cmd scp
-version 7.8p1
+version 7.9p1
 getversion <<<$sshver
 emit | getusage
 
 cmd sftp
-version 7.8p1
+version 7.9p1
 getversion <<<$sshver
 emit | getusage
 
 cmd ssh-add
-version 7.8p1
+version 7.9p1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-copy-id
-version 7.8p1
+version 7.9p1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-keygen
-version 7.8p1
+version 7.9p1
 getversion <<<$sshver
 emit -? | getusage
 
@@ -559,7 +559,7 @@ emit --version | field 2 | tr -d v | getversion
 emit --help | getusage
 
 cmd tmux
-version 2.7
+version 2.8
 emit -V | field -1 | getversion
 emit -? | getusage
 emit list-commands | getusage commands
@@ -588,7 +588,7 @@ emit --version | field 3 | sed 's/\,$//' | getversion
 emit --help | getusage
 
 cmd valgrind
-version 3.13.0
+version 3.14.0
 emit --version | cut -d- -f2 | getversion
 emit --help | getusage
 
