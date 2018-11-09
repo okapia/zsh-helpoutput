@@ -1,15 +1,16 @@
 Usage: mpc [options] <command> [<arguments>]
-mpc version: 0.30
+mpc version: 0.31
 
 Options:
-  -v, --verbose              Give verbose output
-  -q, --quiet                Suppress status message
-  -q, --no-status            synonym for --quiet
-  -h, --host=<host>          Connect to server on <host>
-  -P, --password=<password>  Connect to server using password <password>
-  -p, --port=<port>          Connect to server port <port>
-  -f, --format=<format>      Print status with format <format>
-  -w, --wait                 Wait for operation to finish (e.g. database update)
+  -v, --verbose                   Give verbose output
+  -q, --quiet                     Suppress status message
+  -q, --no-status                 synonym for --quiet
+  -h, --host=<host>               Connect to server on <host>
+  -P, --password=<password>       Connect to server using password <password>
+  -p, --port=<port>               Connect to server port <port>
+  -f, --format=<format>           Print status with format <format>
+  -w, --wait                      Wait for operation to finish (e.g. database update)
+  -r, --range=[<start>]:[<end>]   Operate on a range (e.g. when loading a playlist)
 
 Commands:
   mpc                                                   Display status
@@ -26,12 +27,14 @@ Commands:
   mpc cdprev                                            Compact disk player-like previous command
   mpc stop                                              Stop playback
   mpc seek [+-][HH:MM:SS]|<0-100>%                      Seeks to the specified position
+  mpc seekthrough [+-][HH:MM:SS]                        Seeks by an amount of time within the song and playlist
   mpc clear                                             Clear the queue
   mpc outputs                                           Show the current outputs
   mpc enable [only] <output # or name> [...]            Enable output(s)
   mpc disable [only] <output # or name> [...]           Disable output(s)
   mpc toggleoutput <output # or name> [...]             Toggle output(s)
   mpc outputset <output # or name> <name>=<value>       Set output attributes
+  mpc queued                                            Show the next queued song
   mpc shuffle                                           Shuffle the queue
   mpc move <from> <to>                                  Move song in queue
   mpc playlist [<playlist>]                             Print <playlist>
@@ -70,5 +73,7 @@ Commands:
   mpc sendmessage <channel> <message>                   Send a message to the specified channel.
   mpc waitmessage <channel>                             Wait for at least one message on the specified channel.
   mpc subscribe <channel>                               Subscribe to the specified channel and continuously receive messages.
+  mpc mount [<uri> <storage>]                           List mounts or add a new mount.
+  mpc unmount <uri>                                     Remove a mount.
 
 See man 1 mpc for more information about mpc commands and options
