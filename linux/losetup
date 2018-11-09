@@ -27,6 +27,7 @@ Options:
  -l, --list                    list info about all or specified (default)
  -n, --noheadings              don't print headings for --list output
  -O, --output <cols>           specify columns to output for --list
+     --output-all              output all columns
      --raw                     use raw --list output format
 
  -h, --help                    display this help

@@ -28,6 +28,7 @@ Options:
  -S, --scsi           output info about SCSI devices
  -t, --topology       output info about topology
  -x, --sort <column>  sort output by <column>
+     --sysroot <dir>  use specified directory as system root
 
  -h, --help           display this help
  -V, --version        display version
@@ -35,11 +36,18 @@ Options:
 Available output columns:
         NAME  device name
        KNAME  internal kernel device name
+        PATH  path to the device node
      MAJ:MIN  major:minor device number
+     FSAVAIL  filesystem size available
+      FSSIZE  filesystem size
       FSTYPE  filesystem type
+      FSUSED  filesystem size used
+      FSUSE%  filesystem use percentage
   MOUNTPOINT  where the device is mounted
        LABEL  filesystem LABEL
         UUID  filesystem UUID
+      PTUUID  partition table identifier (usually UUID)
+      PTTYPE  partition table type
     PARTTYPE  partition type UUID
    PARTLABEL  partition LABEL
     PARTUUID  partition UUID

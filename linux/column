@@ -16,6 +16,7 @@ Options:
  -R, --table-right <columns>      right align text in these columns
  -T, --table-truncate <columns>   truncate text in the columns when necessary
  -W, --table-wrap <columns>       wrap text in the columns when necessary
+ -L, --table-empty-lines          don't ignore empty lines
  -J, --json                       use JSON output format for table
 
  -r, --tree <column>              column to use tree-like output for the table
