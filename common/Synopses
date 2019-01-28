@@ -133,7 +133,7 @@ emit -V | tr '/' ' ' | field 2 | getversion
 emit --help | getusage
 
 cmd diffstat
-version 1.61
+version 1.62
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -297,7 +297,7 @@ emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.1.1
+version 1.1.2
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -400,7 +400,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.28.0
+version 5.28.1
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
@@ -730,19 +730,19 @@ emit -h | getusage
 # elftoolchain
 
 cmd readelf
-version 3561
+version 3614
 variant elftoolchain -- --version
 emit --version | field -1 | tr -Cd '[0-9]' | getversion
 emit --help | getusage elftoolchain
 
 cmd nm
-version 3561
+version 3614
 variant elftoolchain -- --version
 emit --version | field -1 | tr -Cd '[0-9]' | getversion
 emit --help | getusage elftoolchain
 
 cmd strings
-version 3561
+version 3614
 variant elftoolchain -- --version
 emit --version | field -1 | tr -Cd '[0-9]' | getversion
 emit --help | getusage elftoolchain
@@ -892,22 +892,22 @@ emit | getusage
 
 # libtiff
 cmd tiff2bw
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
 cmd tiff2pdf
-version 4.0.9
+version 4.0.10
 emit -h | field -1 | getversion
 emit -h | getusage
 
 cmd tiff2ps
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
 cmd tiffcmp
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
@@ -917,7 +917,7 @@ emit | field -1 | getversion
 emit | getusage
 
 cmd tiffdither
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
@@ -927,31 +927,31 @@ emit | field -1 | getversion
 emit | getusage
 
 cmd tiffinfo
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
 cmd tiffmedian
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
 cmd tiffsplit
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
 cmd fax2tiff
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 
 cmd ppm2tiff
-version 4.0.9
+version 4.0.10
 emit | line 2 | field -1 | getversion
 emit | getusage
 
 cmd pal2rgb
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
