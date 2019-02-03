@@ -26,6 +26,11 @@ basic options:
   --relocate=path                   relocates a path and exits (mostly for testsuite)
   --dont-relocate-paths             disables path relocation support
 
+cross-compilation personality support:
+
+  --personality=triplet|filename    sets the personality to 'triplet' or a file named 'filename'
+  --dump-personality                dumps details concerning selected personality
+
 checking specific pkg-config database entries:
 
   --atleast-version                 require a specific version of a module
@@ -64,5 +69,12 @@ querying specific pkg-config database fields:
   --keep-system-cflags              keep -I/usr/include entries in cflags output
   --keep-system-libs                keep -L/usr/lib entries in libs output
   --path                            show the exact filenames for any matching .pc files
+  --modversion                      print the specified module's version to stdout
+  --internal-cflags                 do not filter 'internal' cflags from output
+
+filtering output:
+
+  --msvc-syntax                     print translatable fragments in MSVC syntax
+  --fragment-filter=types           filter output fragments to the specified types
 
 report bugs to <http://github.com/pkgconf/pkgconf/issues>.

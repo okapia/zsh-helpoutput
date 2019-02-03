@@ -1,2 +1,2 @@
 ls: illegal option -- ?
-usage: ls [-ABCFGHILPRSTWabcdfghiklmnopqrstuwxy1] [file ...]
+usage: ls [-1ABCFGHILPRSTW_abcdfghiklmnopqrstuwxy] [-D format] [file ...]

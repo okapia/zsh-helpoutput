@@ -1,7 +1,7 @@
-usage: arp [-n] [-c cpu] hostname
-       arp [-n] [-c cpu] -a
+usage: arp [-n] [-c cpu] [-i interface] hostname
+       arp [-n] [-c cpu] [-i interface] -a
        arp -d hostname [pub]
-       arp -d -a
+       arp -d [-i interface] -a
        arp -s hostname ether_addr [temp] [pub [only]]
        arp -S hostname ether_addr [temp] [pub [only]]
        arp -f filename
