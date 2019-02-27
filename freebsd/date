@@ -1,3 +1,4 @@
 date: illegal option -- ?
-usage: date [-jnRu] [-d dst] [-r seconds] [-t west] [-v[+|-]val[ymwdHMS]] ... 
+usage: date [-jnRu] [-d dst] [-r seconds|file] [-t west] [-v[+|-]val[ymwdHMS]]
+            [-I[date | hours | minutes | seconds]]
             [-f fmt date | [[[[[cc]yy]mm]dd]HH]MM[.ss]] [+format]

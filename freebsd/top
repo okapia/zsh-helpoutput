@@ -1,4 +1,3 @@
-top: illegal option -- ?
-Top version 3.5beta12
-Usage: top [-abCHIijnPqStuvwz] [-d count] [-m io | cpu] [-o field] [-s time]
-       [-J jail] [-U username] [number]
+top: invalid option -- ?
+top: [-abCHIijnPqStuvwz] [-d count] [-m io | cpu] [-o field] [-p pid]
+       [-s time] [-J jail] [-U username] [number]

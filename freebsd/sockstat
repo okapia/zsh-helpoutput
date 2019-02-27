@@ -1,2 +1,2 @@
 sockstat: illegal option -- ?
-usage: sockstat [-46cLlsu] [-j jid] [-p ports] [-P protocols]
+usage: sockstat [-46cLlSsUuvw] [-j jid] [-p ports] [-P protocols]

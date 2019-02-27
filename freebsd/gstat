@@ -1,2 +1,2 @@
 gstat: illegal option -- ?
-usage: gstat [-abBcdps] [-f filter] [-I interval]
+usage: gstat [-abBcCdps] [-f filter] [-I interval]
