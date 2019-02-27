@@ -1,4 +1,4 @@
-LIBTIFF, Version 4.0.9
+LIBTIFF, Version 4.0.10
 Copyright (c) 1988-1996 Sam Leffler
 Copyright (c) 1991-1996 Silicon Graphics, Inc.
 
@@ -30,6 +30,8 @@ where options are:
  -c lzw[:opts]   compress output with Lempel-Ziv & Welch encoding
  -c zip[:opts]   compress output with deflate encoding
  -c lzma[:opts]  compress output with LZMA2 encoding
+ -c zstd[:opts]  compress output with ZSTD encoding
+ -c webp[:opts]  compress output with WEBP encoding
  -c jpeg[:opts]  compress output with JPEG encoding
  -c jbig         compress output with ISO JBIG encoding
  -c packbits     compress output with packbits encoding
@@ -49,7 +51,7 @@ JPEG options:
  r               output color image as RGB rather than YCbCr
 For example, -c jpeg:r:50 to get JPEG-encoded RGB data with 50% comp. quality
 
-LZW, Deflate (ZIP) and LZMA2 options:
+LZW, Deflate (ZIP), LZMA2, ZSTD and WEBP options:
  #               set predictor value
  p#              set compression level (preset)
 For example, -c lzw:2 to get LZW-encoded data with horizontal differencing,
