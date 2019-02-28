@@ -109,6 +109,7 @@ emit -h | getusage
 
 cmd cu
 version 1.07
+variant Taylor -- -v
 emit -v | field -1 | getversion
 emit --help | getusage
 
@@ -833,7 +834,7 @@ step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
 cmd jar
-version 1.7.0
+version 1.8.0
 step javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit | getusage
 
@@ -849,24 +850,24 @@ emit -? | getusage
 emit -X | getusage nonstd
 
 cmd javac
-version 1.7.0
+version 1.8.0
 emit -version | field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit -help | getusage
 emit -X | getusage nonstd
 
 cmd javadoc
-version 1.7.0
+version 1.8.0
 javac -version |& field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit -help | getusage
 emit -X | getusage nonstd
 
 cmd javah
-version 1.7.0
+version 1.8.0
 emit -version | field -1 | tr -d \" | sed 's/_.*//' | getversion
 emit -help | getusage
 
 cmd javap
-version 1.7.0
+version 1.8.0
 emit -version | sed 's/_.*//' | getversion
 emit -? | getusage
 
@@ -912,7 +913,7 @@ emit | field -1 | getversion
 emit | getusage
 
 cmd tiffcp
-version 4.0.9
+version 4.0.10
 emit | field -1 | getversion
 emit | getusage
 

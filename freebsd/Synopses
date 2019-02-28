@@ -1,5 +1,5 @@
 cmd bsdconfig
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit -h | getusage
 
@@ -9,7 +9,7 @@ uname -r | getversion
 emit -? | getusage
 
 cmd cu
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit | getusage
 
@@ -59,7 +59,7 @@ uname -r | getversion
 emit -? | getusage
 
 cmd gstat
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p3
 uname -r | getversion
 emit -? | getusage
 
@@ -124,7 +124,7 @@ uname -r | getversion
 emit | getusage
 
 cmd procstat
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p3
 uname -r | getversion
 emit | getusage
 
@@ -134,7 +134,7 @@ uname -r | getversion
 emit | getusage
 
 cmd sockstat
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p3
 uname -r | getversion
 emit -? | getusage
 
@@ -154,7 +154,7 @@ uname -r | getversion
 emit -? | getusage
 
 cmd zpool
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p3
 uname -r | getversion
 emit -? | getusage
 
@@ -222,7 +222,7 @@ uname -r | getversion
 emit -? | getusage
 
 cmd date
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit -? | getusage
 
@@ -277,17 +277,17 @@ uname -r | getversion
 emit -? | getusage
 
 cmd ifconfig
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p3
 uname -r | getversion
 emit -? | getusage
 
 cmd iostat
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit -? | getusage
 
 cmd gcore
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit -? | getusage
 
@@ -317,7 +317,7 @@ uname -r | getversion
 emit | getusage
 
 cmd locale
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit -? | getusage
 
@@ -332,7 +332,7 @@ uname -r | getversion
 emit | getusage
 
 cmd ls
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit -? | getusage
 
@@ -407,7 +407,7 @@ uname -r | getversion
 emit -? | getusage
 
 cmd sed
-version 11.2-RELEASE-p2
+version 12.0-RELEASE-p2
 uname -r | getversion
 emit -? | getusage
 
@@ -452,8 +452,8 @@ uname -r | getversion
 emit -h | getusage
 
 cmd top
-version 3.5beta12
-emit -? | line 2 | field -1 | getversion
+version 12.0-RELEASE-p2
+uname -r | getversion
 emit -? | getusage
 
 cmd tr
