@@ -6,9 +6,9 @@ Usage: strip <option(s)> in-file(s)
   -F --target=<bfdname>            Set both input and output format to <bfdname>
   -p --preserve-dates              Copy modified/access timestamps to the output
   -D --enable-deterministic-archives
-                                   Produce deterministic output when stripping archives
+                                   Produce deterministic output when stripping archives (default)
   -U --disable-deterministic-archives
-                                   Disable -D behavior (default)
+                                   Disable -D behavior
   -R --remove-section=<name>       Also remove section <name> from the output
      --remove-relocations <name>   Remove relocations from section <name>
   -s --strip-all                   Remove all symbol and relocation information

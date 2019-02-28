@@ -9,6 +9,8 @@ Usage: nm [option(s)] [file(s)]
                           `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', `java'
                           or `gnat'
       --no-demangle      Do not demangle low-level symbol names
+      --recurse-limit    Enable a demangling recursion limit.  This is the default.
+      --no-recurse-limit Disable a demangling recursion limit.
   -D, --dynamic          Display dynamic symbols instead of normal symbols
       --defined-only     Display only defined symbols
   -e                     (ignored)
@@ -37,4 +39,4 @@ Usage: nm [option(s)] [file(s)]
   -h, --help             Display this information
   -V, --version          Display this program's version number
 
-nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 a.out-i386-linux pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big plugin srec symbolsrec verilog tekhex binary ihex
+nm: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 pei-i386 pei-x86-64 elf64-l1om elf64-k1om elf64-little elf64-big elf32-little elf32-big pe-x86-64 pe-bigobj-x86-64 pe-i386 plugin srec symbolsrec verilog tekhex binary ihex
