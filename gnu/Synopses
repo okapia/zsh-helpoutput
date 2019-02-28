@@ -23,12 +23,12 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd bison
-version 3.2
+version 3.3.2
 emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd cmp
-version 3.6
+version 3.7
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
@@ -52,13 +52,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd diff
-version 3.6
+version 3.7
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd diff3
-version 3.6
+version 3.7
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
@@ -116,12 +116,12 @@ emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | ge
 emit --help | getusage
 
 cmd gdb
-version 8.2
+version 8.2.1
 emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 
 cmd getent
-version 2.28
+version 2.29
 variant 'GNU' -- --version
 emit -V | field -1 | getversion
 emit -? | getusage
@@ -152,25 +152,25 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd gprof
-version 2.31.1
+version 2.32
 variant -g GNU -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd grep
-version 3.1
+version 3.3
 variant -g 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd gzip
-version 1.9
+version 1.10
 variant 'GNU' -- -V
 emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd iconv
-version 2.28
+version 2.29
 variant 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | getusage
@@ -207,7 +207,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ldd
-version 2.28
+version 2.29
 variant 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -255,7 +255,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd nm
-version 2.31.1
+version 2.32
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | nobug | getusage
@@ -267,7 +267,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd objdump
-version 2.31.1
+version 2.32
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
@@ -291,13 +291,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ranlib
-version 2.31.1
+version 2.32
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | getusage
 
 cmd readelf
-version 2.31.1
+version 2.32
 variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage
@@ -308,7 +308,7 @@ emit -v | field 3 | getversion
 emit -h | getusage
 
 cmd sed
-version 4.5
+version 4.7
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -344,13 +344,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd strings
-version 2.31.1
+version 2.32
 variant -g 'GNU' -- --version
 emit --version | field -1 | sed 's/-.*//' | getversion
 emit --help | getusage
 
 cmd strip
-version 2.31.1
+version 2.32
 variant -g 'GNU' -- --version
 emit -V | guess | getversion
 emit -h | egrep -v '(supported targets|Report bugs to)' | getusage
@@ -398,7 +398,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd wget
-version 1.20
+version 1.20.1
 emit -V | field 3 | getversion
 emit --help | getusage
 

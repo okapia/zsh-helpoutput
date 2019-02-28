@@ -33,7 +33,7 @@ emit --version | getversion
 emit -h | getusage
 
 cmd pdfgrep
-version 2.1.1
+version 2.1.2
 emit -V | field -1 | getversion
 emit --help | getusage
 

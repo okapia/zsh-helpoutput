@@ -114,12 +114,12 @@ emit -v | field -1 | getversion
 emit --help | getusage
 
 cmd dbus-monitor
-version 1.12.10
+version 1.12.12
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.12.10
+version 1.12.12
 pack | getversion
 emit -h | getusage
 
@@ -180,7 +180,7 @@ emit -h | getusage
 emit -H | getusage explain
 
 cmd fusermount
-version 2.9.8
+version 2.9.9
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -231,7 +231,7 @@ emit -v | sed 's/^lldb-//' | getversion
 emit -h | getusage
 
 cmd links
-version 2.13
+version 2.18
 variant -n links2 ! ELinks -- -version
 emit -version | field 2 | getversion
 emit -help | getusage
@@ -275,7 +275,7 @@ emit help -av | getusage commands
 subcmds @ -h
 
 cmd gpg
-version 2.2.11
+version 2.2.13
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -286,12 +286,12 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gs
-version 9.25
+version 9.26
 emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.58.1
+version 2.58.3
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -454,7 +454,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.25.2
+version 3.25.3
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -528,7 +528,7 @@ emit help | getusage
 subcmds help @
 
 cmd swaks
-version 20170101.0
+version 20181104.0
 emit --version | field -1 | getversion
 emit --help | getusage
 
@@ -555,7 +555,7 @@ emit -V | line 2 | field 3 | getversion
 emit -h | getusage
 
 cmd tree
-version 1.7.0
+version 1.8.0
 emit --version | field 2 | tr -d v | getversion
 emit --help | getusage
 
@@ -566,7 +566,7 @@ emit -? | getusage
 emit list-commands | getusage commands
 
 cmd unrar
-version 5.61
+version 5.70
 emit | line 2 | field 2 | getversion
 emit | getusage
 
@@ -615,12 +615,12 @@ emit -V | tr -d v | guess | getversion
 emit -h | getusage
 
 cmd xmllint
-version 20908
+version 20909
 emit --version | line 1 | field 5 | getversion
 emit | getusage
 
 cmd xsltproc
-version 10132
+version 10133
 emit -V | line 1 | field 5 | getversion
 emit | getusage
 
@@ -751,25 +751,25 @@ emit --help | getusage elftoolchain
 # elfutils
 
 cmd readelf
-version 0.174
+version 0.176
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.174
+version 0.176
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
-version 0.174
+version 0.176
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd strings
-version 0.174
+version 0.176
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
