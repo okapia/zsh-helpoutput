@@ -1,0 +1,18 @@
+Usage: xsetroot [options]
+  where options are:
+  -help                           Print this help
+  -version                        Print a version message
+  -def, -default                  Reset unspecified attributes
+  -cursor <cursorfile> <maskfile> Pointer cursor used when outside of any windows
+  -cursor_name <cursorfontname>   Use a pointer cursor from the cursor font
+  -xcf <cursorfile> <cursorsize>  Load a pointer cursor from an Xcursor file
+  -bitmap <filename>              Use the bitmap specified in the file
+  -mod <x> <y>                    Use a plaid-like grid pattern on screen
+  -gray, -grey                    Make the entire background grey
+  -bg,  -background <color>       Set background color
+  -fg,  -foreground <color>       Set foreground color
+  -rv,  -reverse                  Swap foreground and background colors
+  -solid <color>                  Set the background of the root window
+  -name <string>                  Set the name of the root window
+  -d,   -display <display>        Specifies the server to connect to
+
