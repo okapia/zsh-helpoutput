@@ -2,7 +2,8 @@ usage: tree [-acdfghilnpqrstuvxACDFJQNSUX] [-H baseHREF] [-T title ]
 	[-L level [-R]] [-P pattern] [-I pattern] [-o filename] [--version]
 	[--help] [--inodes] [--device] [--noreport] [--nolinks] [--dirsfirst]
 	[--charset charset] [--filelimit[=]#] [--si] [--timefmt[=]<f>]
-	[--sort[=]<name>] [--matchdirs] [--ignore-case] [--] [<directory list>]
+	[--sort[=]<name>] [--matchdirs] [--ignore-case] [--fromfile] [--]
+	[<directory list>]
   ------- Listing options -------
   -a            All files are listed.
   -d            List directories only.
@@ -20,7 +21,7 @@ usage: tree [-acdfghilnpqrstuvxACDFJQNSUX] [-H baseHREF] [-T title ]
   --filelimit # Do not descend dirs with more than # files in them.
   --timefmt <f> Print and format time according to the format <f>.
   -o filename   Output to file instead of stdout.
-  -------- File options ---------
+  ------- File options -------
   -q            Print non-printable characters as '?'.
   -N            Print non-printable characters as is.
   -Q            Quote filenames with double quotes.
@@ -42,7 +43,7 @@ usage: tree [-acdfghilnpqrstuvxACDFJQNSUX] [-H baseHREF] [-T title ]
   -r            Reverse the order of the sort.
   --dirsfirst   List directories before files (-U disables).
   --sort X      Select sort: name,version,size,mtime,ctime.
-  ------- Graphics options ------
+  ------- Graphics options -------
   -i            Don't print indentation lines.
   -A            Print ANSI lines graphic indentation lines.
   -S            Print with CP437 (console) graphics indentation lines.
@@ -54,7 +55,9 @@ usage: tree [-acdfghilnpqrstuvxACDFJQNSUX] [-H baseHREF] [-T title ]
   -H baseHREF   Prints out HTML format with baseHREF as top directory.
   -T string     Replace the default HTML title and H1 header with string.
   --nolinks     Turn off hyperlinks in HTML output.
-  ---- Miscellaneous options ----
+  ------- Input options -------
+  --fromfile    Reads paths from files (.=stdin)
+  ------- Miscellaneous options -------
   --version     Print version and exit.
   --help        Print usage and this help message and exit.
   --            Options processing terminator.
