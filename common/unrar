@@ -1,5 +1,5 @@
 
-UNRAR 5.50 beta 5 freeware      Copyright (c) 1993-2017 Alexander Roshal
+UNRAR 5.70 freeware      Copyright (c) 1993-2019 Alexander Roshal
 
 Usage:     unrar <command> -<switch 1> -<switch N> <archive> <files...>
                <@listfiles...> <path_to_extract\>
@@ -44,11 +44,11 @@ Usage:     unrar <command> -<switch 1> -<switch N> <archive> <files...>
   sc<chr>[obj]  Specify the character set
   sl<size>      Process files with size less than specified
   sm<size>      Process files with size more than specified
-  ta<date>      Process files modified after <date> in YYYYMMDDHHMMSS format
-  tb<date>      Process files modified before <date> in YYYYMMDDHHMMSS format
-  tn<time>      Process files newer than <time>
-  to<time>      Process files older than <time>
-  ts[m|c|a]     Save or restore file time (modification, creation, access)
+  ta[mcao]<d>   Process files modified after <d> YYYYMMDDHHMMSS date
+  tb[mcao]<d>   Process files modified before <d> YYYYMMDDHHMMSS date
+  tn[mcao]<t>   Process files newer than <t> time
+  to[mcao]<t>   Process files older than <t> time
+  ts[m,c,a]     Save or restore file time (modification, creation, access)
   u             Update files
   v             List all volumes
   ver[n]        File version control
