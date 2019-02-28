@@ -2,6 +2,8 @@ Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
 
   -n, --quiet, --silent
                  suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
   -e script, --expression=script
                  add the script to the commands to be executed
   -f script-file, --file=script-file
