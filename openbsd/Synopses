@@ -98,6 +98,11 @@ version 6.4
 uname -r | getversion
 emit | getusage
 
+cmd diff3
+version 6.3
+uname -r | getversion
+emit | getusage
+
 cmd dmesg
 version 6.4
 uname -r | getversion
@@ -257,6 +262,11 @@ cmd mkdir
 version 6.4
 uname -r | getversion
 emit | getusage
+
+cmd mktemp
+version 6.3
+uname -r | getversion
+emit -? | getusage
 
 cmd mount
 version 6.4

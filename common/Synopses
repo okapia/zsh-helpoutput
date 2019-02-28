@@ -255,7 +255,7 @@ emit -help | getusage
 emit -restrictions | getusage restrictions
 
 cmd gem
-version 2.7.6
+version 2.7.7
 subdir
 emit -v | getversion
 emit help | getusage
@@ -308,7 +308,7 @@ emit -V | sed s'/^jq-//' | getversion
 emit -h | getusage
 
 cmd lsof
-version 4.91
+version 4.92
 emit -v | line 2 | field 2 | getversion
 emit -? | sed '/default device cache/ d' | getusage
 
@@ -396,7 +396,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
 cmd notmuch
-version 0.26
+version 0.26.2
 emit --version | field -1 | getversion
 emit --help | getusage
 
