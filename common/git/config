@@ -4,6 +4,7 @@ Config file location
     --global              use global config file
     --system              use system config file
     --local               use repository config file
+    --worktree            use per-worktree config file
     -f, --file <file>     use given config file
     --blob <blob-id>      read config from given blob object
 

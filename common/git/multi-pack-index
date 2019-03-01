@@ -1,0 +1,4 @@
+usage: git multi-pack-index [--object-dir=<dir>] (write|verify)
+
+    --object-dir <file>   object directory containing set of packfile and pack-index pairs
+

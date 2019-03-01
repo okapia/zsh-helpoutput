@@ -12,6 +12,7 @@ usage: git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]
     -a, --text            process binary files as text
     -I                    don't match patterns in binary files
     --textconv            process binary files with textconv filters
+    -r, --recursive       search in subdirectories (default)
     --max-depth <depth>   descend at most <depth> levels
 
     -E, --extended-regexp

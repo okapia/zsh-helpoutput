@@ -4,4 +4,5 @@ usage: git quiltimport [options]
     --author ...          author name and email address for patches without any
     --patches ...         path to the quilt patches
     --series ...          path to the quilt series file
+    --keep-non-patch      Pass -b to git mailinfo
 

@@ -18,6 +18,7 @@ usage: git checkout [<options>] <branch>
     -p, --patch           select hunks interactively
     --ignore-skip-worktree-bits
                           do not limit pathspecs to sparse entries only
+    --no-guess            do not second guess 'git checkout <no-such-branch>'
     --ignore-other-worktrees
                           do not check if another worktree is holding the given ref
     --recurse-submodules[=<checkout>]

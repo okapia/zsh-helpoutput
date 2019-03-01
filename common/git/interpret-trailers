@@ -10,5 +10,6 @@ usage: git interpret-trailers [--in-place] [--trim-empty] [(--trailer <token>[(=
     --only-input          do not apply config rules
     --unfold              join whitespace-continued values
     --parse               set parsing options
+    --no-divider          do not treat --- specially
     --trailer <trailer>   trailer(s) to add
 

@@ -8,7 +8,7 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     --all                 fetch from all remotes
     -a, --append          append to .git/FETCH_HEAD instead of overwriting
     --upload-pack <path>  path to upload pack on remote end
-    -f, --force           force overwrite of local branch
+    -f, --force           force overwrite of local reference
     -m, --multiple        fetch from multiple remotes
     -t, --tags            fetch all tags and associated objects
     -n                    do not fetch all tags (--no-tags)

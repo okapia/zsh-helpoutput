@@ -31,6 +31,7 @@ usage: git pack-objects --stdout [<options>...] [< <ref-list> | < <object-list>]
                           pack loose unreachable objects
     --unpack-unreachable[=<time>]
                           unpack unreachable objects newer than <time>
+    --sparse              use the sparse reachability algorithm
     --thin                create thin packs
     --shallow             create packs suitable for shallow fetches
     --honor-pack-keep     ignore packs that have companion .keep file
@@ -43,4 +44,5 @@ usage: git pack-objects --stdout [<options>...] [< <ref-list> | < <object-list>]
     --missing <action>    handling for missing objects
     --exclude-promisor-objects
                           do not pack objects in promisor packfiles
+    --delta-islands       respect islands during delta compression
 

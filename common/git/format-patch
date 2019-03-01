@@ -42,4 +42,9 @@ Messaging
                           add a signature from a file
     -q, --quiet           don't print the patch filenames
     --progress            show progress while generating patches
+    --interdiff <rev>     show changes against <rev> in cover letter or single patch
+    --range-diff <refspec>
+                          show changes against <refspec> in cover letter or single patch
+    --creation-factor <n>
+                          percentage by which creation is weighted
 

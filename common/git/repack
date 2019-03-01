@@ -10,6 +10,7 @@ usage: git repack [<options>]
     -l, --local           pass --local to git-pack-objects
     -b, --write-bitmap-index
                           write bitmap index
+    -i, --delta-islands   pass --delta-islands to git-pack-objects
     --unpack-unreachable <approxidate>
                           with -A, do not loosen objects older than this
     -k, --keep-unreachable

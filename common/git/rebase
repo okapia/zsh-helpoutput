@@ -2,47 +2,48 @@ usage: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] [<upstream>] 
    or: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] --root [<branch>]
    or: git rebase --continue | --abort | --skip | --edit-todo
 
-Available options are
-    -v, --verbose         display a diffstat of what changed upstream
+    --onto <revision>     rebase onto given branch instead of upstream
+    --no-verify           allow pre-rebase hook to run
     -q, --quiet           be quiet. implies --no-stat
-    --autostash           automatically stash/stash pop before and after
-    --fork-point          use 'merge-base --fork-point' to refine upstream
-    --onto ...            rebase onto given branch instead of upstream
-    -r, --rebase-merges[=...]
-                          try to rebase merges instead of skipping them
-    -p, --preserve-merges
-                          try to recreate merges instead of ignoring them
-    -s, --strategy ...    use the given merge strategy
-    -X, --strategy-option ...
-                          pass the argument through to the merge strategy
-    --no-ff               cherry-pick all commits, even if unchanged
-    -f, --force-rebase    cherry-pick all commits, even if unchanged
-    -m, --merge           use merging strategies to rebase
-    -i, --interactive     let the user edit the list of commits to rebase
-    -x, --exec ...        add exec lines after each commit of the editable list
-    -k, --keep-empty      preserve empty commits during rebase
-    --allow-empty-message
-                          allow rebasing commits with empty messages
-    --stat                display a diffstat of what changed upstream
+    -v, --verbose         display a diffstat of what changed upstream
     -n, --no-stat         do not show diffstat of what changed upstream
-    --verify              allow pre-rebase hook to run
-    --rerere-autoupdate   allow rerere to update index with resolved conflicts
-    --root                rebase all reachable commits up to the root(s)
-    --autosquash          move commits that begin with squash!/fixup! under -i
     --signoff             add a Signed-off-by: line to each commit
+    --ignore-whitespace   passed to 'git am'
     --committer-date-is-author-date
                           passed to 'git am'
     --ignore-date         passed to 'git am'
-    --whitespace ...      passed to 'git apply'
-    --ignore-whitespace   passed to 'git apply'
-    -C ...                passed to 'git apply'
-    -S, --gpg-sign[=...]  GPG-sign commits
-
-Actions:
+    -C <n>                passed to 'git apply'
+    --whitespace <action>
+                          passed to 'git apply'
+    -f, --force-rebase    cherry-pick all commits, even if unchanged
+    --no-ff               cherry-pick all commits, even if unchanged
     --continue            continue
-    --abort               abort and check out the original branch
     --skip                skip current patch and continue
-    --edit-todo           edit the todo list during an interactive rebase
+    --abort               abort and check out the original branch
     --quit                abort but keep HEAD where it is
+    --edit-todo           edit the todo list during an interactive rebase
     --show-current-patch  show the patch file being applied or merged
+    -m, --merge           use merging strategies to rebase
+    -i, --interactive     let the user edit the list of commits to rebase
+    -p, --preserve-merges
+                          try to recreate merges instead of ignoring them
+    --rerere-autoupdate   allow rerere to update index with resolved conflict
+    -k, --keep-empty      preserve empty commits during rebase
+    --autosquash          move commits that begin with squash!/fixup! under -i
+    -S, --gpg-sign[=<key-id>]
+                          GPG-sign commits
+    --autostash           automatically stash/stash pop before and after
+    -x, --exec <exec>     add exec lines after each commit of the editable list
+    --allow-empty-message
+                          allow rebasing commits with empty messages
+    -r, --rebase-merges[=<mode>]
+                          try to rebase merges instead of skipping them
+    --fork-point          use 'merge-base --fork-point' to refine upstream
+    -s, --strategy <strategy>
+                          use the given merge strategy
+    -X, --strategy-option <option>
+                          pass the argument through to the merge strategy
+    --root                rebase all reachable commits up to the root(s)
+    --reschedule-failed-exec
+                          automatically re-schedule any `exec` that fails
 
