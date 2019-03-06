@@ -21,6 +21,7 @@ changed
        --ocsp                 Enable OCSP certificate verification
 				- disabled as '--no-ocsp'
    -r, --resume               Establish a session and resume
+       --earlydata=str        Send early data on resumption from the specified file
    -e, --rehandshake          Establish a session and rehandshake
        --sni-hostname=str     Server's hostname for server name indication extension
        --verify-hostname=str  Server's hostname to use for validation

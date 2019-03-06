@@ -42,6 +42,7 @@ Private key related options:
        --p8-info              Print information on a PKCS #8 structure
        --to-rsa               Convert an RSA-PSS key to raw RSA format
    -p, --generate-privkey     Generate a private key
+       --key-type=str         Specify the key type to use on key generation
        --bits=num             Specify the number of bits for key generation
        --curve=str            Specify the curve used for EC key generation
        --sec-param=str        Specify the security level [low, legacy, medium, high, ultra]
@@ -101,7 +102,6 @@ Other options:
        --empty-password       Enforce an empty password
        --hex-numbers          Print big number in an easier format to parse
        --cprint               In certain operations it prints the information in C-friendly format
-       --key-type=str         Specify the key type to use on key generation
        --hash=str             Hash algorithm to use for signing
        --salt-size=num        Specify the RSA-PSS key default salt size
        --inder                Use DER format for input certificates, private keys, and DH parameters
@@ -115,6 +115,10 @@ Other options:
        --ask-pass             Enable interaction for entering password when in batch mode.
        --pkcs-cipher=str      Cipher to use for PKCS #8 and #12 operations
        --provider=str         Specify the PKCS #11 provider library
+       --text                 Output textual information before PEM-encoded certificates, private
+keys, etc
+				- disabled as '--no-text'
+				- enabled by default
 
 Version, usage and configuration options:
 
