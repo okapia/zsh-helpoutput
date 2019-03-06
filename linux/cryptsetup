@@ -1,8 +1,10 @@
-cryptsetup 2.0.4
+cryptsetup 2.1.0
 Usage: cryptsetup [OPTION...] <action> <action-specific>
       --version                         Print package version
   -v, --verbose                         Shows more detailed error messages
       --debug                           Show debug messages
+      --debug-json                      Show debug messages including JSON
+                                        metadata
   -c, --cipher=STRING                   The cipher used to encrypt the disk
                                         (see /proc/crypto)
   -h, --hash=STRING                     The hash used to create the encryption
@@ -101,6 +103,14 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
                                         segment) LUKS2 keyslot
       --json-file=STRING                Read or write the json from or to a
                                         file
+      --luks2-metadata-size=bytes       LUKS2 header metadata area size
+      --luks2-keyslots-size=bytes       LUKS2 header keyslots area size
+      --refresh                         Refresh (reactivate) device with new
+                                        parameters
+      --keyslot-key-size=BITS           LUKS2 keyslot: The size of the
+                                        encryption key
+      --keyslot-cipher=STRING           LUKS2 keyslot: The cipher used for
+                                        keyslot encryption
 
 Help options:
   -?, --help                            Show this help message
@@ -141,7 +151,7 @@ You can also use old <action> syntax aliases:
 <key slot> is the LUKS key slot number to modify
 <key file> optional key file for the new key for luksAddKey action
 
-Default compiled-in metadata format is LUKS1 (for luksFormat action).
+Default compiled-in metadata format is LUKS2 (for luksFormat action).
 
 Default compiled-in key and passphrase parameters:
 	Maximum keyfile size: 8192kB, Maximum interactive passphrase length 512 (characters)
@@ -152,4 +162,5 @@ Default PBKDF for LUKS2: argon2i
 Default compiled-in device cipher parameters:
 	loop-AES: aes, Key 256 bits
 	plain: aes-cbc-essiv:sha256, Key: 256 bits, Password hashing: ripemd160
-	LUKS1: aes-xts-plain64, Key: 256 bits, LUKS header hashing: sha256, RNG: /dev/urandom
+	LUKS: aes-xts-plain64, Key: 256 bits, LUKS header hashing: sha256, RNG: /dev/urandom
+	LUKS: Default keysize with XTS mode (two internal keys) will be doubled.
