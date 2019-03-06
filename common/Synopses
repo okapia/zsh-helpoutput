@@ -3,6 +3,11 @@ version 4.14
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd abcde
+version 2.5.4
+emit -v | field -1 | getversion
+emit -h | getusage
+
 cmd ack
 version 2.22
 emit --version | field -1 | getversion
@@ -139,7 +144,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dig
-version 9.11.4-P1
+version 9.11.5-P1
 emit -v | field 2 | sed 's/-RedHat.*//' | getversion
 emit -h | getusage
 
@@ -296,7 +301,7 @@ emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.58.3
+version 2.59.2
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -349,7 +354,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.10.1
+version 1.11.3
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -449,12 +454,12 @@ emit -v | sed -n -e '2 s/.*: v\(.*\)\.[^.]*$/\1/p' | getversion
 emit -H | getusage
 
 cmd smbclient
-version 4.9.1
+version 4.9.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
 cmd smbcontrol
-version 4.9.1
+version 4.9.2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
@@ -797,32 +802,32 @@ emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd convert
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd display
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd identify
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd import
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd mogrify
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd montage
-version 6.9.9
+version 6.9.10
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 

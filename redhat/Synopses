@@ -4,7 +4,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd dnf
-version 2.7.5
+version 4.1.0
 emit --version | line 1 | getversion
 emit -h | getusage
 

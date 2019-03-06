@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.17.1
+version 4.19.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -41,12 +41,12 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd cpupower
-version 4.20
+version 5.0.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 2.0.5
+version 2.1.0
 emit --version | field 2 | getversion
 emit -? | getusage
 
@@ -111,7 +111,7 @@ emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
 cmd kpartx
-version 0.7.8
+version 0.7.9
 pack | getversion
 emit | getusage
 
