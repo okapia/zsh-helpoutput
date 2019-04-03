@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.19.1
+version 4.20.2
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -41,7 +41,7 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd cpupower
-version 5.0.0
+version 5.1.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -101,7 +101,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 190107
+version 190319
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -201,7 +201,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 190107
+version 190319
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
@@ -251,7 +251,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.44.5
+version 1.45.0
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 

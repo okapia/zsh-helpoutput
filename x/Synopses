@@ -4,7 +4,7 @@ emit -v | line 1 | getversion
 emit -h | getusage
 
 cmd evince
-version 3.31.90
+version 3.32.0
 emit --version | field -1 | getversion
 emit --help-all | getusage
 

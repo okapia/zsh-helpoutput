@@ -301,7 +301,7 @@ emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.59.2
+version 2.60.0
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -354,7 +354,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.11.3
+version 1.11.4
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -365,7 +365,7 @@ emit -V | field -1 | getversion
 emit -h | getusage gnu
 
 cmd pandoc
-version 1.12.3.1
+version 2.2.1
 emit -v | field 2 | getversion
 emit -h | getusage
 
@@ -406,7 +406,7 @@ emit -V |  field 3 | getversion
 emit -h | getusage
 
 cmd nmblookup
-version 4.9.1
+version 4.10.0rc2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
@@ -459,7 +459,7 @@ emit -v | sed -n -e '2 s/.*: v\(.*\)\.[^.]*$/\1/p' | getversion
 emit -H | getusage
 
 cmd smbclient
-version 4.9.2
+version 4.10.0rc2
 emit -V | sed 's/-.*//' | field -1 | getversion
 emit -? | getusage
 
@@ -469,7 +469,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.25.3
+version 3.26.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -513,7 +513,7 @@ emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 
 cmd sudo
-version 1.8.25p1
+version 1.8.27
 variant ! 'doas' -- -V
 emit -V | field -1 | getversion
 emit -h | getusage
