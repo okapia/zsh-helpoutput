@@ -13,6 +13,7 @@ Usage: ss [ OPTIONS ]
    -i, --info          show internal TCP information
        --tipcinfo      show internal tipc socket information
    -s, --summary       show socket usage summary
+       --tos           show tos and priority information
    -b, --bpf           show bpf filter socket information
    -E, --events        continually display sockets as they are destroyed
    -Z, --context       display process SELinux security contexts
