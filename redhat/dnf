@@ -112,7 +112,7 @@ Optional arguments:
                         specified multiple times.
   --noautoremove        disable removal of dependencies that are no longer
                         used
-  --nogpgcheck          disable gpg signature checking
+  --nogpgcheck          disable gpg signature checking (if RPM policy allows)
   --color COLOR         control whether color is used
   --refresh             set metadata as expired before running the command
   -4                    resolve to IPv4 addresses only
@@ -128,9 +128,11 @@ Optional arguments:
   --advisory ADVISORY, --advisories ADVISORY
                         Include packages needed to fix the given advisory, in
                         updates
-  --bzs BUGZILLA        Include packages needed to fix the given BZ, in
+  --bz BUGZILLA, --bzs BUGZILLA
+                        Include packages needed to fix the given BZ, in
                         updates
-  --cves CVES           Include packages needed to fix the given CVE, in
+  --cve CVES, --cves CVES
+                        Include packages needed to fix the given CVE, in
                         updates
   --sec-severity {Critical,Important,Moderate,Low}, --secseverity {Critical,Important,Moderate,Low}
                         Include security relevant packages matching the
