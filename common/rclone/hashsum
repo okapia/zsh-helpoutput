@@ -1,0 +1,27 @@
+
+Produces a hash file for all the objects in the path using the hash
+named.  The output is in the same format as the standard
+md5sum/sha1sum tool.
+
+Run without a hash to see the list of supported hashes, eg
+
+    $ rclone hashsum
+    Supported hashes are:
+      * MD5
+      * SHA-1
+      * DropboxHash
+      * QuickXorHash
+
+Then
+
+    $ rclone hashsum MD5 remote:path
+
+Usage:
+  rclone hashsum <hash> remote:path [flags]
+
+Flags:
+  -h, --help   help for hashsum
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

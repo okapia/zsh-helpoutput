@@ -1,0 +1,12 @@
+
+Print cache stats for a remote in JSON format
+
+Usage:
+  rclone cachestats source: [flags]
+
+Flags:
+  -h, --help   help for cachestats
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

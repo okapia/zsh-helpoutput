@@ -1,0 +1,31 @@
+
+Remove the files in path.  Unlike `purge` it obeys include/exclude
+filters so can be used to selectively delete files.
+
+`rclone delete` only deletes objects but leaves the directory structure
+alone. If you want to delete a directory and all of its contents use
+`rclone purge`
+
+Eg delete all files bigger than 100MBytes
+
+Check what would be deleted first (use either)
+
+    rclone --min-size 100M lsl remote:path
+    rclone --dry-run --min-size 100M delete remote:path
+
+Then delete
+
+    rclone --min-size 100M delete remote:path
+
+That reads "delete everything with a minimum size of 100 MB", hence
+delete all files bigger than 100MBytes.
+
+Usage:
+  rclone delete remote:path [flags]
+
+Flags:
+  -h, --help   help for delete
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

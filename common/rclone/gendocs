@@ -1,0 +1,14 @@
+
+This produces markdown docs for the rclone commands to the directory
+supplied.  These are in a format suitable for hugo to render into the
+rclone.org website.
+
+Usage:
+  rclone gendocs output_directory [flags]
+
+Flags:
+  -h, --help   help for gendocs
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

@@ -1,0 +1,13 @@
+
+Produces an md5sum file for all the objects in the path.  This
+is in the same format as the standard md5sum tool produces.
+
+Usage:
+  rclone md5sum remote:path [flags]
+
+Flags:
+  -h, --help   help for md5sum
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

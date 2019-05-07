@@ -1,0 +1,17 @@
+
+Generates a shell completion script for rclone.
+Run with --help to list the supported shells.
+
+Usage:
+  rclone genautocomplete [command]
+
+Available Commands:
+  bash        Output bash completion script for rclone.
+  zsh         Output zsh completion script for rclone.
+
+Flags:
+  -h, --help   help for genautocomplete
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

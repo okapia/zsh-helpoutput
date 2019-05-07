@@ -1,0 +1,44 @@
+
+Lists the objects in the source path to standard output in a human
+readable format with size and path. Recurses by default.
+
+Eg
+
+    $ rclone ls swift:bucket
+        60295 bevajer5jef
+        90613 canole
+        94467 diwogej7
+        37600 fubuwic
+
+
+Any of the filtering options can be applied to this commmand.
+
+There are several related list commands
+
+  * `ls` to list size and path of objects only
+  * `lsl` to list modification time, size and path of objects only
+  * `lsd` to list directories only
+  * `lsf` to list objects and directories in easy to parse format
+  * `lsjson` to list objects and directories in JSON format
+
+`ls`,`lsl`,`lsd` are designed to be human readable.
+`lsf` is designed to be human and machine readable.
+`lsjson` is designed to be machine readable.
+
+Note that `ls` and `lsl` recurse by default - use "--max-depth 1" to stop the recursion.
+
+The other list commands `lsd`,`lsf`,`lsjson` do not recurse by default - use "-R" to make them recurse.
+
+Listing a non existent directory will produce an error except for
+remotes which can't have empty directories (eg s3, swift, gcs, etc -
+the bucket based remotes).
+
+Usage:
+  rclone ls remote:path [flags]
+
+Flags:
+  -h, --help   help for ls
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

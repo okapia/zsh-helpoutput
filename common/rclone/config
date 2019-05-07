@@ -1,0 +1,25 @@
+Enter an interactive configuration session where you can setup new
+remotes and manage existing ones. You may also set or remove a
+password to protect your configuration.
+
+Usage:
+  rclone config [flags]
+  rclone config [command]
+
+Available Commands:
+  create      Create a new remote with name, type and options.
+  delete      Delete an existing remote <name>.
+  dump        Dump the config file as JSON.
+  edit        Enter an interactive configuration session.
+  file        Show path of configuration file in use.
+  password    Update password in an existing remote.
+  providers   List in JSON format all the providers and options.
+  show        Print (decrypted) config file, or the config for a single remote.
+  update      Update options in an existing remote.
+
+Flags:
+  -h, --help   help for config
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

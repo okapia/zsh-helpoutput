@@ -1,0 +1,13 @@
+
+Remove the path.  Note that you can't remove a path with
+objects in it, use purge for that.
+
+Usage:
+  rclone rmdir remote:path [flags]
+
+Flags:
+  -h, --help   help for rmdir
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

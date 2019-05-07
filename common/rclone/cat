@@ -1,0 +1,34 @@
+
+rclone cat sends any files to standard output.
+
+You can use it like this to output a single file
+
+    rclone cat remote:path/to/file
+
+Or like this to output any file in dir or subdirectories.
+
+    rclone cat remote:path/to/dir
+
+Or like this to output any .txt files in dir or subdirectories.
+
+    rclone --include "*.txt" cat remote:path/to/dir
+
+Use the --head flag to print characters only at the start, --tail for
+the end and --offset and --count to print a section in the middle.
+Note that if offset is negative it will count from the end, so
+--offset -1 --count 1 is equivalent to --tail 1.
+
+Usage:
+  rclone cat remote:path [flags]
+
+Flags:
+      --count int    Only print N characters. (default -1)
+      --discard      Discard the output instead of printing.
+      --head int     Only print the first N characters.
+  -h, --help         help for cat
+      --offset int   Start printing at offset N (or from end if -ve).
+      --tail int     Only print the last N characters.
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

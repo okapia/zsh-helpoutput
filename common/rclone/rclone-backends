@@ -1,0 +1,30 @@
+All rclone backends:
+
+  alias        Alias for a existing remote
+  acd          Amazon Drive
+  b2           Backblaze B2
+  box          Box
+  crypt        Encrypt/Decrypt a remote
+  cache        Cache a remote
+  drive        Google Drive
+  dropbox      Dropbox
+  ftp          FTP Connection
+  gcs          Google Cloud Storage (this is not Google Drive)
+  http         http Connection
+  swift        Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+  hubic        Hubic
+  jottacloud   JottaCloud
+  local        Local Disk
+  mega         Mega
+  onedrive     Microsoft OneDrive
+  opendrive    OpenDrive
+  pcloud       Pcloud
+  qingstor     QingCloud Object Storage
+  s3           Amazon S3 Compliant Storage Providers (AWS, Ceph, Dreamhost, IBM COS, Minio)
+  sftp         SSH/SFTP Connection
+  union        A stackable unification remote, which can appear to merge the contents of several remotes
+  webdav       Webdav
+  yandex       Yandex Disk
+
+To see more info about a particular backend use:
+  rclone help backend <name>

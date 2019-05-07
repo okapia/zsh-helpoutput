@@ -1,0 +1,36 @@
+
+
+This runs a command against a running rclone.  Use the --url flag to
+specify an non default URL to connect on.  This can be either a
+":port" which is taken to mean "http://localhost:port" or a
+"host:port" which is taken to mean "http://host:port"
+
+A username and password can be passed in with --user and --pass.
+
+Note that --rc-addr, --rc-user, --rc-pass will be read also for --url,
+--user, --pass.
+
+Arguments should be passed in as parameter=value.
+
+The result will be returned as a JSON object by default.
+
+The --json parameter can be used to pass in a JSON blob as an input
+instead of key=value arguments.  This is the only way of passing in
+more complicated values.
+
+Use "rclone rc" to see a list of all possible commands.
+
+Usage:
+  rclone rc commands parameter [flags]
+
+Flags:
+  -h, --help          help for rc
+      --json string   Input JSON - use instead of key=value args.
+      --no-output     If set don't output the JSON result.
+      --pass string   Password to use to connect to rclone remote control.
+      --url string    URL to connect to rclone remote control. (default "http://localhost:5572/")
+      --user string   Username to use to rclone remote control.
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.

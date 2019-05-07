@@ -1,0 +1,38 @@
+
+If source:path is a file or directory then it copies it to a file or
+directory named dest:path.
+
+This can be used to upload single files to other than their current
+name.  If the source is a directory then it acts exactly like the copy
+command.
+
+So
+
+    rclone copyto src dst
+
+where src and dst are rclone paths, either remote:path or
+/path/to/local or C:\windows\path\if\on\windows.
+
+This will:
+
+    if src is file
+        copy it to dst, overwriting an existing file if it exists
+    if src is directory
+        copy it to dst, overwriting existing files if they exist
+        see copy command for full details
+
+This doesn't transfer unchanged files, testing by size and
+modification time or MD5SUM.  It doesn't delete files from the
+destination.
+
+**Note**: Use the `-P`/`--progress` flag to view real-time transfer statistics
+
+Usage:
+  rclone copyto source:path dest:path [flags]
+
+Flags:
+  -h, --help   help for copyto
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.
