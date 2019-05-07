@@ -164,7 +164,7 @@ emit -version | field 2 | getversion
 emit -help | getusage
 
 cmd entr
-version 4.1
+version 4.2
 emit | field -1 | getversion
 emit | sed 1d | getusage
 
@@ -285,7 +285,7 @@ emit help -av | getusage commands
 subcmds @ -h
 
 cmd gpg
-version 2.2.13
+version 2.2.15
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -296,7 +296,7 @@ emit --version | field -1 | getversion
 emit -? | getusage
 
 cmd gs
-version 9.26
+version 9.27
 emit -? | field 3 | getversion
 emit -? | getusage
 
@@ -434,6 +434,15 @@ cmd python
 version 3.5.1
 emit --version | field -1 | getversion
 emit -h | getusage
+
+cmd rclone
+version 1.47.0
+subdir
+emit -V | field -1 | getversion
+emit help | getusage
+emit help flags | getusage flags
+emit help backends | getusage backends
+subcmds @ --help
 
 cmd rrdtool
 version 1.4.8
