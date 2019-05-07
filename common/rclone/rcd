@@ -1,5 +1,5 @@
 
-This runs rclone so that it only listents to remote control commands.
+This runs rclone so that it only listens to remote control commands.
 
 This is useful if you are controlling rclone via the rc API.
 

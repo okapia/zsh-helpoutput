@@ -10,6 +10,7 @@ Usage:
   rclone serve [command]
 
 Available Commands:
+  dlna        Serve remote:path over DLNA
   ftp         Serve remote:path over FTP.
   http        Serve the remote over HTTP.
   restic      Serve the remote for restic's REST API.

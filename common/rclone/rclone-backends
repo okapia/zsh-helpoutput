@@ -2,6 +2,7 @@ All rclone backends:
 
   alias        Alias for a existing remote
   acd          Amazon Drive
+  azureblob    Microsoft Azure Blob Storage
   b2           Backblaze B2
   box          Box
   crypt        Encrypt/Decrypt a remote
@@ -14,13 +15,14 @@ All rclone backends:
   swift        Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
   hubic        Hubic
   jottacloud   JottaCloud
+  koofr        Koofr
   local        Local Disk
   mega         Mega
   onedrive     Microsoft OneDrive
   opendrive    OpenDrive
   pcloud       Pcloud
   qingstor     QingCloud Object Storage
-  s3           Amazon S3 Compliant Storage Providers (AWS, Ceph, Dreamhost, IBM COS, Minio)
+  s3           Amazon S3 Compliant Storage Provider (AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Minio, etc)
   sftp         SSH/SFTP Connection
   union        A stackable unification remote, which can appear to merge the contents of several remotes
   webdav       Webdav

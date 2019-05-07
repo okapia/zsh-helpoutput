@@ -21,8 +21,10 @@ output:
     s - size
     t - modification time
     h - hash
-    i - ID of object if known
+    i - ID of object
+    o - Original ID of underlying object
     m - MimeType of object if known
+    e - encrypted name
 
 So if you wanted the path, size and modification time, you would use
 --format "pst", or maybe --format "tsp" to put the path last.

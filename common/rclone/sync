@@ -24,7 +24,8 @@ Usage:
   rclone sync source:path dest:path [flags]
 
 Flags:
-  -h, --help   help for sync
+      --create-empty-src-dirs   Create empty source dirs on destination after sync
+  -h, --help                    help for sync
 
 Use "rclone [command] --help" for more information about a command.
 Use "rclone help flags" for to see the global flags.
