@@ -1,479 +1,479 @@
 cmd apm
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd arp
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd at
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd cat
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd chflags
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd chmod
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd cksum
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd chown
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd chsh
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd cmp
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd column
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd comm
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd cp
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd cpio
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd cut
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd cu
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd date
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd df
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd dhclient
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd diff
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd diff3
-version 6.3
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd dmesg
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd doas
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd du
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd env
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd expand
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd find
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd fold
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd finger
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd fstat
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd fuser
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd fw_update
-version 6.4
+version 6.5
 uname -r | getversion
 emit -\? | getusage
 
 cmd grep
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd groupadd
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd groupmod
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd head
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd id
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd ifconfig
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd install
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd iostat
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd join
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd jot
-version 6.4
+version 6.5
 uname -r | getversion
-emit | getusage
+emit -\? | getusage
 
 cmd last
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd ln
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd locale
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd locate
-version 6.4
+version 6.5
 uname -r | getversion
 emit | grep -v 'default database' | getusage
 
 cmd look
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd ls
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd ltrace
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd make
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd man
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd mixerctl
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd mkdir
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd mktemp
-version 6.3
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd mount
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd mt
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd netstat
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd nl
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd nm
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd od
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd pfctl
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd pgrep
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd pkg_add
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd pkg_create
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd pkg_delete
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd pkg_info
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd ping
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd ping6
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd ps
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd rcctl
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd rm
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd savecore
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd script
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd sed
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd showmount
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd signify
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd sort
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd split
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd su
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd sysctl
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd systat
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd tail
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd tcpdump
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd top
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd touch
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd tr
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd uname
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd uniq
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd useradd
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd usermod
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd vmctl
-version 6.4
+version 6.5
 uname -r | getversion
 emit | getusage
 
 cmd vmstat
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd w
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd wc
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd who
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
 
 cmd xargs
-version 6.4
+version 6.5
 uname -r | getversion
 emit -? | getusage
