@@ -10,6 +10,7 @@ GEM commands are:
     fetch             Download a gem and place it in the current directory
     generate_index    Generates the index files for a gem server directory
     help              Provide help on the 'gem' command
+    info              Show information for the given gem
     install           Install a gem into the local repository
     list              Display local gems whose name matches REGEXP
     lock              Generate a lockdown list of gems

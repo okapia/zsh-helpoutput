@@ -3,6 +3,7 @@ Usage: gem push GEM [options]
   Options:
     -k, --key KEYNAME                Use the given API key
                                      from ~/.gem/credentials
+        --otp CODE                   Digit code for multifactor authentication
         --host HOST                  Push to another gemcutter-compatible host
                                        (e.g. https://rubygems.org)
 
@@ -32,5 +33,6 @@ Usage: gem push GEM [options]
     The push command uploads a gem to the push server (the default is
     https://rubygems.org) and adds it to the index.
     
-    The gem can be removed from the index (but only the index) using the yank
+    The gem can be removed from the index and deleted from the server using the
+    yank
     command.  For further discussion see the help for the yank command.

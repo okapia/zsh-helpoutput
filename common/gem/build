@@ -2,6 +2,10 @@ Usage: gem build GEMSPEC_FILE [options]
 
   Options:
         --force                      skip validation of the spec
+        --strict                     consider warnings as errors when validating the spec
+    -o, --output FILE                output gem with the given filename
+    -C PATH
+                                     Run as if gem build was started in <PATH> instead of the current working directory.
 
 
   Common Options:
@@ -36,3 +40,7 @@ Usage: gem build GEMSPEC_FILE [options]
       $ cd my_gem-1.0
       [edit gem contents]
       $ gem build my_gem-1.0.gemspec
+    
+    Gems can be saved to a specified filename with the output option:
+    
+      $ gem build my_gem-1.0.gemspec --output=release.gem

@@ -3,6 +3,7 @@ Usage: gem owner GEM [options]
   Options:
     -k, --key KEYNAME                Use the given API key
                                      from ~/.gem/credentials
+        --otp CODE                   Digit code for multifactor authentication
     -a, --add EMAIL                  Add an owner
     -r, --remove EMAIL               Remove an owner
         --host HOST                  Use another gemcutter-compatible host

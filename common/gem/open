@@ -1,7 +1,7 @@
-Usage: gem open GEMNAME [-e EDITOR] [options]
+Usage: gem open GEMNAME [-e COMMAND] [options]
 
   Options:
-    -e, --editor EDITOR              Opens gem sources in EDITOR
+    -e, --editor COMMAND             Prepends COMMAND to gem path. Could be used to specify editor.
     -v, --version VERSION            Opens specific gem version
 
 
@@ -24,9 +24,9 @@ Usage: gem open GEMNAME [-e EDITOR] [options]
 
   Description:
             The open command opens gem in editor and changes current path
-            to gem's source directory. Editor can be specified with -e option,
-            otherwise rubygems will look for editor in $EDITOR, $VISUAL and
-            $GEM_EDITOR variables.
+            to gem's source directory.
+            Editor command can be specified with -e option, otherwise rubygems
+            will look for editor in $EDITOR, $VISUAL and $GEM_EDITOR variables.
 
   Defaults:
-    -e vi
+    -e /usr/bin/vim

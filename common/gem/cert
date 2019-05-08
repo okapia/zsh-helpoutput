@@ -13,6 +13,7 @@ Usage: gem cert [options]
     -s, --sign CERT                  Signs CERT with the key from -K
                                      and the certificate from -C
     -d, --days NUMBER_OF_DAYS        Days before the certificate expires
+    -R, --re-sign                    Re-signs the certificate from -C with the key from -K
 
 
   Common Options:

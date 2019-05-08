@@ -9,6 +9,8 @@ Usage: gem pristine [GEMNAME ...] [options]
         --only-executables           Only restore executables
     -E, --[no-]env-shebang           Rewrite executables with a shebang
                                      of /usr/bin/env
+    -n, --bindir DIR                 Directory where executables are
+                                     located
     -v, --version VERSION            Specify version of gem to restore to
                                      pristine condition
 

@@ -8,19 +8,15 @@ Usage: gem install GEMNAME [GEMNAME ...] [options] -- --build-flags [options]
 
 
   Deprecated Options:
-        --[no-]rdoc                  Generate RDoc for installed gems
-                                     Use --document instead
-        --[no-]ri                    Generate ri data for installed gems.
-                                     Use --document instead
     -u, --[no-]update-sources        Update local source cache
 
 
   Install/Update Options:
     -i, --install-dir DIR            Gem repository directory to get installed
                                      gems
-    -n, --bindir DIR                 Directory where binary files are
+    -n, --bindir DIR                 Directory where executables are
                                      located
-        --[no-]document [TYPES]      Generate documentation for installed gems
+        --document [TYPES]           Generate documentation for installed gems
                                      List the documentation types you wish to
                                      generate.  For example: rdoc,ri
         --build-root DIR             Temporary installation root. Useful for building
@@ -159,6 +155,13 @@ Usage: gem install GEMNAME [GEMNAME ...] [options] -- --build-flags [options]
     
       some_extension_gem (1.0)
       $
+    
+    Command Alias
+    ==========================
+    
+    You can use `i` command instead of `install`.
+    
+      $ gem i GEMNAME
 
   Defaults:
     --both --version '>= 0' --document --no-force

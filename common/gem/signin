@@ -2,6 +2,7 @@ Usage: gem signin [options]
 
   Options:
         --host HOST                  Push to another gemcutter-compatible host
+        --otp CODE                   Digit code for multifactor authentication
 
 
   Common Options:
