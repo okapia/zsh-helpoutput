@@ -1,13 +1,20 @@
-Usage: arping [-fqbDUAV] [-c count] [-w timeout] [-I device] [-s source] destination
-  -f : quit on first reply
-  -q : be quiet
-  -b : keep broadcasting, don't go unicast
-  -D : duplicate address detection mode
-  -U : Unsolicited ARP mode, update your neighbours
-  -A : ARP answer mode, update your neighbours
-  -V : print version and exit
-  -c count : how many packets to send
-  -w timeout : how long to wait for a reply
-  -I device : which ethernet device to use (eth0)
-  -s source : source ip address
-  destination : ask for what ip address
+
+Usage:
+  arping [options] <destination>
+
+Options:
+  -f            quit on first reply
+  -q            be quiet
+  -b            keep on broadcasting, do not unicast
+  -D            duplicate address detection mode
+  -U            unsolicited ARP mode, update your neighbours
+  -A            ARP answer mode, update your neighbours
+  -V            print version and exit
+  -c <count>    how many packets to send
+  -w <timeout>  how long to wait for a reply
+  -i <interval> set interval between packets (default: 1 second)
+  -I <device>   which ethernet device to use
+  -s <source>   source ip address
+  <destination> dns name or ip address
+
+For more details see arping(8).
