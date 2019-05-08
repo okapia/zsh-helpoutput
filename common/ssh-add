@@ -15,4 +15,6 @@ Options:
   -X          Unlock agent.
   -s pkcs11   Add keys from PKCS#11 provider.
   -e pkcs11   Remove keys provided by PKCS#11 provider.
+  -T pubkey   Test if ssh-agent can access matching private key.
   -q          Be quiet after a successful operation.
+  -v          Be more verbose.

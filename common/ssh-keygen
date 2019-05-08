@@ -1,7 +1,8 @@
 unknown option -- ?
-usage: ssh-keygen [-q] [-b bits] [-t dsa | ecdsa | ed25519 | rsa]
+usage: ssh-keygen [-q] [-b bits] [-t dsa | ecdsa | ed25519 | rsa] [-m format]
                   [-N new_passphrase] [-C comment] [-f output_keyfile]
-       ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
+       ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-m format]
+                   [-f keyfile]
        ssh-keygen -i [-m key_format] [-f input_keyfile]
        ssh-keygen -e [-m key_format] [-f input_keyfile]
        ssh-keygen -y [-f input_keyfile]
