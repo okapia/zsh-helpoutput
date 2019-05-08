@@ -1,28 +1,5 @@
 Usage:
-insmod [-fhkLmnpqrsSvVxXyYN] [-e persist_name] [-o module_name] [-O blob_name] [-P prefix] module [ symbol=value ... ]
-
-  module                Name of a loadable kernel module ('.o' can be omitted)
-  -f, --force           Force loading under wrong kernel version
-  -h, --help            Print this message
-  -k, --autoclean       Make module autoclean-able
-  -L, --lock            Prevent simultaneous loads of the same module
-  -m, --map             Generate load map (so crashes can be traced)
-  -n, --noload          Don't load, just show
-  -p, --probe           Probe mode; check if the module matches the kernel
-  -q, --quiet           Don't print unresolved symbols
-  -r, --root            Allow root to load modules not owned by root
-  -s, --syslog          Report errors via syslog
-  -S, --kallsyms        Force kallsyms on module
-  -v, --verbose         Verbose output
-  -V, --version         Show version
-  -x, --noexport        Do not export externs
-  -X, --export          Do export externs (default)
-  -y, --noksymoops      Do not add ksymoops symbols
-  -Y, --ksymoops        Do add ksymoops symbols (default)
-  -N, --numeric-only    Only check the numeric part of the kernel version
-  -e persist_name
-      --persist=persist_name Filename to hold any persistent data from the module
-  -o NAME, --name=NAME  Set internal module name to NAME
-  -O NAME, --blob=NAME  Save the object as a binary blob in NAME
-  -P PREFIX
-      --prefix=PREFIX   Prefix for kernel or module symbols
+	insmod [options] filename [args]
+Options:
+	-V, --version     show version
+	-h, --help        show this help

@@ -28,6 +28,7 @@ Query Options:
 	-c, --show-config           Same as --showconfig
 	    --show-modversions      Dump module symbol version and exit
 	    --dump-modversions      Same as --show-modversions
+	    --show-exports          Only print module exported symbol versions and exit
 
 General Options:
 	-n, --dry-run               Do not execute operations, just print out
