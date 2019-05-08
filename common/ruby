@@ -17,10 +17,12 @@ Usage: ruby-mri [switches] [--] [programfile] [arguments]
   -s              enable some switch parsing for switches after script name
   -S              look for the script using PATH environment variable
   -T[level=1]     turn on tainting checks
-  -v, --verbose   print version number, then turn on verbose mode
+  -v              print the version number, then turn on verbose mode
   -w              turn warnings on for your script
   -W[level=2]     set warning level; 0=silence, 1=medium, 2=verbose
   -x[directory]   strip off text before #!ruby line and perhaps cd to directory
+  --jit           enable JIT with default options (experimental)
+  --jit-[option]  enable JIT with an option (experimental)
   --copyright     print the copyright
   --dump={insns|parsetree|...}[,...]
                   dump debug information. see below for available dump list
@@ -28,7 +30,8 @@ Usage: ruby-mri [switches] [--] [programfile] [arguments]
                   enable or disable features. see below for available features
   --external-encoding=encoding, --internal-encoding=encoding
                   specify the default external or internal character encoding
-  --version       print the version
+  --verbose       turn on verbose mode and disable script from stdin
+  --version       print the version number, then exit
   --help          show this message, -h for short message
 Dump List:
   insns           instruction sequences
@@ -42,3 +45,16 @@ Features:
   rubyopt         RUBYOPT environment variable (default: enabled)
   frozen-string-literal
                   freeze all string literals (default: disabled)
+  jit             JIT compiler (default: disabled)
+JIT options (experimental):
+  --jit-warnings  Enable printing JIT warnings
+  --jit-debug     Enable JIT debugging (very slow)
+  --jit-wait      Wait until JIT compilation is finished everytime (for testing)
+  --jit-save-temps
+                  Save JIT temporary files in $TMP or /tmp (for testing)
+  --jit-verbose=num
+                  Print JIT logs of level num or less to stderr (default: 0)
+  --jit-max-cache=num
+                  Max number of methods to be JIT-ed in a cache (default: 1000)
+  --jit-min-calls=num
+                  Number of calls to trigger JIT (for testing, default: 5)
