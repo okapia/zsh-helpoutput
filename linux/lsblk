@@ -5,28 +5,30 @@ Usage:
 List information about block devices.
 
 Options:
+ -D, --discard        print discard capabilities
+ -E, --dedup <column> de-duplicate output by <column>
+ -I, --include <list> show only devices with specified major numbers
+ -J, --json           use JSON output format
+ -O, --output-all     output all columns
+ -P, --pairs          use key="value" output format
+ -S, --scsi           output info about SCSI devices
+ -T, --tree[=<column>] use tree format output
  -a, --all            print all devices
  -b, --bytes          print SIZE in bytes rather than in human readable format
  -d, --nodeps         don't print slaves or holders
- -D, --discard        print discard capabilities
- -z, --zoned          print zone model
  -e, --exclude <list> exclude devices by major number (default: RAM disks)
  -f, --fs             output info about filesystems
  -i, --ascii          use ascii characters only
- -I, --include <list> show only devices with specified major numbers
- -J, --json           use JSON output format
  -l, --list           use list format output
- -T, --tree           use tree format output
+ -M, --merge          group parents of sub-trees (usable for RAIDs, Multi-path)
  -m, --perms          output info about permissions
  -n, --noheadings     don't print headings
  -o, --output <list>  output columns
- -O, --output-all     output all columns
  -p, --paths          print complete device path
- -P, --pairs          use key="value" output format
  -r, --raw            use raw output format
  -s, --inverse        inverse dependencies
- -S, --scsi           output info about SCSI devices
  -t, --topology       output info about topology
+ -z, --zoned          print zone model
  -x, --sort <column>  sort output by <column>
      --sysroot <dir>  use specified directory as system root
 
