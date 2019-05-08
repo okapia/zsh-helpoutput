@@ -3,14 +3,14 @@ Usage: smbcontrol [OPTION...] <destination> <message-type> <parameters>
 
 Help options:
   -?, --help                         Show this help message
-  --usage                            Display brief usage message
+      --usage                        Display brief usage message
 
 Common samba options:
   -d, --debuglevel=DEBUGLEVEL        Set debug level
   -s, --configfile=CONFIGFILE        Use alternate configuration file
   -l, --log-basename=LOGFILEBASE     Base name for log files
   -V, --version                      Print version
-  --option=name=value                Set smb.conf option from command line
+      --option=name=value            Set smb.conf option from command line
 
 <destination> is one of "nmbd", "smbd", "winbindd" or a process ID
 
@@ -31,6 +31,7 @@ Common samba options:
 	lockretry                     Force a blocking lock retry
 	brl-revalidate                Revalidate all brl entries
 	pool-usage                    Display talloc memory usage
+	ringbuf-log                   Display ringbuf log
 	dmalloc-mark                  
 	dmalloc-log-changed           
 	shutdown                      Shut down daemon
@@ -41,11 +42,12 @@ Common samba options:
 	online                        Ask winbind to go into online state
 	offline                       Ask winbind to go into offline state
 	onlinestatus                  Request winbind online status
-	dump-event-list               Dump event list
 	validate-cache                Validate winbind's credential cache
 	dump-domain-list              Dump winbind domain list
+	disconnect-dc                 (null)
 	notify-cleanup                (null)
 	num-children                  Print number of smbd child processes
 	msg-cleanup                   (null)
 	noop                          Do nothing
+	sleep                         Cause the target process to sleep
 
