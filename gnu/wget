@@ -1,4 +1,4 @@
-GNU Wget 1.20.1, a non-interactive network retriever.
+GNU Wget 1.20.3, a non-interactive network retriever.
 Usage: wget [OPTION]... [URL]...
 
 Mandatory arguments to long options are mandatory for short options too.
@@ -18,6 +18,7 @@ Logging and input file:
   -nv, --no-verbose                turn off verboseness, without being quiet
        --report-speed=TYPE         output bandwidth as TYPE.  TYPE can be bits
   -i,  --input-file=FILE           download URLs found in local or external FILE
+       --input-metalink=FILE       download files covered in local Metalink FILE
   -F,  --force-html                treat input file as HTML
   -B,  --base=URL                  resolves HTML input-file links (-i -F)
                                      relative to URL
@@ -74,6 +75,10 @@ Download:
        --local-encoding=ENC        use ENC as the local encoding for IRIs
        --remote-encoding=ENC       use ENC as the default remote encoding
        --unlink                    remove file before clobber
+       --keep-badhash              keep files with checksum mismatch (append .badhash)
+       --metalink-index=NUMBER     Metalink application/metalink4+xml metaurl ordinal NUMBER
+       --metalink-over-http        use Metalink metadata from HTTP response headers
+       --preferred-location        preferred location for Metalink resources
        --xattr                     turn on storage of metadata in extended file attributes
 
 Directories:
@@ -133,7 +138,6 @@ HTTPS (SSL/TLS) options:
                                    of base64 encoded sha256 hashes preceded by
                                    'sha256//' and separated by ';', to verify
                                    peer against
-       --random-file=FILE          file with random data for seeding the SSL PRNG
 
        --ciphers=STR           Set the priority string (GnuTLS) or cipher list string (OpenSSL) directly.
                                    Use with care. This option overrides --secure-protocol.
@@ -187,7 +191,7 @@ Recursive accept/reject:
   -R,  --reject=LIST               comma-separated list of rejected extensions
        --accept-regex=REGEX        regex matching accepted URLs
        --reject-regex=REGEX        regex matching rejected URLs
-       --regex-type=TYPE           regex type (posix|pcre)
+       --regex-type=TYPE           regex type (posix)
   -D,  --domains=LIST              comma-separated list of accepted domains
        --exclude-domains=LIST      comma-separated list of rejected domains
        --follow-ftp                follow FTP links from HTML documents
