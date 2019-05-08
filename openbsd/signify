@@ -1,4 +1,4 @@
 usage:	signify -C [-q] -p pubkey -x sigfile [file ...]
 	signify -G [-n] [-c comment] -p pubkey -s seckey
-	signify -S [-ez] [-x sigfile] -s seckey -m message
+	signify -S [-enz] [-x sigfile] -s seckey -m message
 	signify -V [-eqz] [-p pubkey] [-t keytype] [-x sigfile] -m message

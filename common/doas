@@ -1,1 +1,1 @@
-usage: doas [-nsv] [-C config] [-u user] command [args]
+usage: doas [-Lns] [-a style] [-C config] [-u user] command [args]

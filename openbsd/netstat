@@ -1,8 +1,8 @@
 netstat: unknown option -- ?
 usage: netstat [-AaBln] [-f address_family] [-M core] [-N system]
-       netstat [-bdFgilmnqrstu] [-f address_family] [-M core] [-N system]
-               [-T tableid]
-       netstat [-bdhn] [-c count] [-I interface] [-M core] [-N system] [-w wait]
+       netstat [-bdeFgilmnqrstu] [-f address_family] [-M core] [-N system]
+               [-T rtable]
+       netstat [-bdehn] [-c count] [-I interface] [-M core] [-N system] [-w wait]
        netstat [-v] [-M core] [-N system] -P pcbaddr
        netstat [-s] [-M core] [-N system] [-p protocol]
        netstat [-a] [-f address_family] [-i | -I interface]
