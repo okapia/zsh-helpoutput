@@ -1,4 +1,4 @@
-GNU bash, version 4.4.19(1)-release-(x86_64-redhat-linux-gnu)
+GNU bash, version 5.0.2(1)-release-(x86_64-redhat-linux-gnu)
 Usage:	bash [GNU long option] [option] ...
 	bash [GNU long option] [option] script-file ...
 GNU long options:
@@ -13,6 +13,7 @@ GNU long options:
 	--noprofile
 	--norc
 	--posix
+	--pretty-print
 	--rcfile
 	--rpm-requires
 	--restricted
