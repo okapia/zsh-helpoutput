@@ -36,7 +36,7 @@ FORMAT controls the output.  Interpreted sequences are:
   %d   day of month (e.g., 01)
   %D   date; same as %m/%d/%y
   %e   day of month, space padded; same as %_d
-  %F   full date; same as %Y-%m-%d
+  %F   full date; like %+4Y-%m-%d
   %g   last two digits of year of ISO week number (see %G)
   %G   year of ISO week number (see %V); normally useful only with %V
   %h   same as %b
@@ -79,6 +79,7 @@ The following optional flags may follow '%':
   -  (hyphen) do not pad the field
   _  (underscore) pad with spaces
   0  (zero) pad with zeros
+  +  pad with zeros, and put '+' before future years with >4 digits
   ^  use upper case if possible
   #  use opposite case if possible
 
@@ -97,7 +98,7 @@ Show the time on the west coast of the US (use tzselect(1) to find TZ)
 Show the local time for 9AM next Friday on the west coast of the US
   $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
 
-GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
-Report date translation bugs to <http://translationproject.org/team/>
-Full documentation at: <http://www.gnu.org/software/coreutils/date>
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/date>
 or available locally via: info '(coreutils) date invocation'
