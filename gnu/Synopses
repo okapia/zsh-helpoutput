@@ -1,5 +1,5 @@
 cmd bash
-version 4.4.23
+version 5.0.2
 emit --version | field 4 | cut -d \( -f1 | getversion
 emit --help | getusage
 emit -c 'help set' | getusage set
@@ -40,7 +40,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd date
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -64,7 +64,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd du
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -75,13 +75,13 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd env
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd expand
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -110,7 +110,7 @@ emit -V | field 3 | tr -d , | getversion
 emit -h | getusage
 
 cmd gcc
-version 9.0.1
+version 9.1.1
 variant ! 'LLVM' -- --version
 emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | getversion
 emit --help | getusage
@@ -170,7 +170,7 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd iconv
-version 2.29
+version 2.29.9000
 variant 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | getusage
@@ -201,19 +201,19 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd install
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ldd
-version 2.29
+version 2.29.9000
 variant 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ln
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -225,7 +225,7 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd ls
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -237,19 +237,19 @@ emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd md5sum
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd mktemp
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd mv
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -261,7 +261,7 @@ emit -V | guess | getversion
 emit -h | nobug | getusage
 
 cmd numfmt
-version 8.30
+version 8.31
 variant -g GNU -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -273,7 +273,7 @@ emit -V | guess | getversion
 emit --help | nobug | getusage
 
 cmd paste
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -314,7 +314,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd seq
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -398,12 +398,12 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd wget
-version 1.20.1
+version 1.20.3
 emit -V | field 3 | getversion
 emit --help | getusage
 
 cmd who
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage

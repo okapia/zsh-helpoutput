@@ -4,7 +4,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd arping
-version 20180629
+version 20190324
 emit -V | sed 's/.*s//' | getversion
 emit -? | getusage
 
@@ -19,7 +19,7 @@ emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
 cmd chrt
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -36,7 +36,7 @@ emit -v | field -1 | getversion
 emit --help | getusage pwdutils
 
 cmd column
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit --help | getusage
 
@@ -46,12 +46,12 @@ emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
 cmd cryptsetup
-version 2.1.0
+version 2.2.0-rc0
 emit --version | field 2 | getversion
 emit -? | getusage
 
 cmd dhclient
-version 4.3.6b1
+version 4.4.1
 emit -? | grep '^Internet Systems Consortium' | field -1 | getversion
 emit -? | sed '/^Please report/ {N;N;d}' | getusage
 
@@ -61,7 +61,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 4.19
+version 5.0
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -76,7 +76,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd hexdump
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -86,7 +86,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd iconvconfig
-version 2.29
+version 2.29.9000
 emit -V | field -1 | getversion
 emit -? | getusage
 
@@ -96,7 +96,7 @@ emit -V | field 2 | getversion
 emit -h | getusage
 
 cmd ionice
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -116,22 +116,22 @@ pack | getversion
 emit | getusage
 
 cmd last
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd look
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd losetup
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd lsblk
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -181,9 +181,9 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ping
-version 20180629
+version 20190324
 emit -V | sed 's/.*s//' | getversion
-emit | getusage
+emit -h | getusage
 
 cmd ps
 version 3.3.15
@@ -221,27 +221,27 @@ emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd modprobe
-version 25
+version 26
 emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd insmod
-version 22
+version 26
 emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd rmmod
-version 22
+version 26
 emit -V | line 1 | field 3 | getversion
 emit -h | getusage
 
 cmd script
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd scriptreplay
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -272,12 +272,12 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd whereis
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd wipefs
-version 2.33.1
+version 2.34-rc1
 emit -V | field -1 | getversion
 emit -h | getusage
 
