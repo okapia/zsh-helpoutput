@@ -1,4 +1,4 @@
-cryptsetup 2.1.0
+cryptsetup 2.2.0-rc0
 Usage: cryptsetup [OPTION...] <action> <action-specific>
       --version                         Print package version
   -v, --verbose                         Shows more detailed error messages
@@ -73,6 +73,8 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
                                         performance compatibility option
       --deferred                        Device removal is deferred until the
                                         last user closes it
+      --serialize-memory-hard-pbkdf     Use global lock to serialize memory
+                                        hard PBKDF (OOM workaround)
   -i, --iter-time=msecs                 PBKDF iteration time for LUKS (in ms)
       --pbkdf=STRING                    PBKDF algorithm (for LUKS2): argon2i,
                                         argon2id, pbkdf2
@@ -111,6 +113,20 @@ Usage: cryptsetup [OPTION...] <action> <action-specific>
                                         encryption key
       --keyslot-cipher=STRING           LUKS2 keyslot: The cipher used for
                                         keyslot encryption
+      --encrypt                         Encrypt LUKS2 device (in-place
+                                        encryption).
+      --decrypt                         Decrypt LUKS2 device (remove
+                                        encryption).
+      --init-only                       Initialize LUKS2 reencryption in
+                                        metadata only.
+      --reduce-device-size=bytes        Reduce data device size (move data
+                                        offset). DANGEROUS!
+      --hotzone-size=bytes              Maximal reencryption hotzone size.
+      --resilience=STRING               Reencryption hotzone resilience type
+                                        (checksum,journal,none)
+      --resilience-hash=STRING          Reencryption hotzone checksums hash
+      --active-name=STRING              Override device autodetection of dm
+                                        device to be reencrypted
 
 Help options:
   -?, --help                            Show this help message
@@ -123,6 +139,7 @@ Help options:
 	status <name> - show device status
 	benchmark [--cipher <cipher>] - benchmark cipher
 	repair <device> - try to repair on-disk metadata
+	reencrypt <device> - reencrypt LUKS2 device
 	erase <device> - erase all keyslots (remove encryption key)
 	convert <device> - convert LUKS from/to LUKS2 format
 	config <device> - set permanent configuration options for LUKS2
