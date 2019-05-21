@@ -1,4 +1,4 @@
-ethtool version 4.19
+ethtool version 5.1
 Usage:
         ethtool DEVNAME	Display standard information about device
         ethtool -s|--change DEVNAME	Change generic options
@@ -134,8 +134,10 @@ Usage:
 		[ tx-timer %d ]
         ethtool --set-phy-tunable DEVNAME	Set PHY tunable
 		[ downshift on|off [count N] ]
+		[ fast-link-down on|off [msecs N] ]
         ethtool --get-phy-tunable DEVNAME	Get PHY tunable
 		[ downshift ]
+		[ fast-link-down ]
         ethtool --reset DEVNAME	Reset components
 		[ flags %x ]
 		[ mgmt ]
@@ -161,5 +163,7 @@ Usage:
         ethtool --show-fec DEVNAME	Show FEC settings
         ethtool --set-fec DEVNAME	Set FEC settings
 		[ encoding auto|off|rs|baser [...]]
+        ethtool -Q|--per-queue DEVNAME	Apply per-queue command.The supported sub commands include --show-coalesce, --coalesce
+             [queue_mask %x] SUB_COMMAND
         ethtool -h|--help 		Show this help
         ethtool --version 		Show version number
