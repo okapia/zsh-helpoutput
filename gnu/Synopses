@@ -1,5 +1,5 @@
 cmd bash
-version 5.0.2
+version 5.0.3
 emit --version | field 4 | cut -d \( -f1 | getversion
 emit --help | getusage
 emit -c 'help set' | getusage set
@@ -105,7 +105,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd gawk
-version 4.2.1
+version 5.0.0
 emit -V | field 3 | tr -d , | getversion
 emit -h | getusage
 

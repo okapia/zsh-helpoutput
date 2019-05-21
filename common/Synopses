@@ -19,28 +19,28 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd ansible
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-config
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-console
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 emit dump -h | getusage dump
 
 cmd ansible-doc
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-galaxy
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 emit info -h | getusage info
@@ -55,22 +55,22 @@ emit login -h | getusage login
 emit delete -h | getusage delete
 
 cmd ansible-inventory
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-playbook
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-pull
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-vault
-version 2.7.6
+version 2.7.10
 emit --version | field -1 | getversion
 emit -h | getusage
 emit encrypt_string -h | getusage encrypt_string
@@ -92,7 +92,7 @@ emit | tr -d , | field 2 | getversion
 emit --help | getusage
 
 cmd augtool
-version 1.11.0
+version 1.12.0
 emit --version | field 2 | getversion
 emit --help | getusage
 emit help | getusage commands
@@ -119,12 +119,12 @@ emit -v | field -1 | getversion
 emit --help | getusage
 
 cmd dbus-monitor
-version 1.12.12
+version 1.12.14
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.12.12
+version 1.12.14
 pack | getversion
 emit -h | getusage
 
@@ -308,7 +308,7 @@ emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.1.2
+version 1.2.0
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -370,7 +370,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd php
-version 5.6.19
+version 7.3.5
 emit -v | field 2 | getversion
 emit -h | getusage
 
@@ -411,7 +411,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit --help | getusage
 
 cmd notmuch
-version 0.26.2
+version 0.28.2
 emit --version | field -1 | getversion
 emit --help | getusage
 
@@ -451,7 +451,7 @@ emit | field 2 | getversion
 subcmds help @
 
 cmd ruby
-version 2.6.1p33
+version 2.6.3p62
 variant -n ruby-mri
 emit --version | field 2 | getversion
 emit --help | getusage
@@ -478,7 +478,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.26.0
+version 3.28.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -591,7 +591,7 @@ emit -? | getusage
 emit list-commands | getusage commands
 
 cmd unrar
-version 5.70
+version 5.71
 emit | line 2 | field 2 | getversion
 emit | getusage
 
@@ -614,7 +614,7 @@ emit --version | field 3 | sed 's/\,$//' | getversion
 emit --help | getusage
 
 cmd valgrind
-version 3.14.0
+version 3.15.0
 emit --version | cut -d- -f2 | getversion
 emit --help | getusage
 
