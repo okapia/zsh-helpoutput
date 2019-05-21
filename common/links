@@ -1,5 +1,15 @@
 links [options] URL
+
 Options are:
+
+ -help
+  Prints this help screen
+
+ -version
+  Prints the links version number and exit.
+
+ -lookup <hostname>
+  Does name lookup, like command "host".
 
  -g
   Run in graphics mode.
@@ -53,11 +63,12 @@ Options are:
   Runs links as a separate instance - instead of connecting to
     existing instance.
 
- -download-utime <0>/<1>
-  Set time of downloaded files to last modification time reported by server.
+ -download-dir <path>
+  Default download directory.
+    (default: actual dir)
 
- -async-dns <0>/<1>
-  Asynchronous DNS resolver on(1)/off(0).
+ -language <language>
+  Set user interface language.
 
  -max-connections <max>
   Maximum number of concurrent connections.
@@ -79,6 +90,28 @@ Options are:
   Timeout on non restartable connections.
     (default: 600)
 
+ -timeout-when-trying-multiple-addresses <sec>
+  Timeout for connection when trying multiple addresses or keepalive connection.
+    (default: 3)
+
+ -bind-address <ip address>
+  Use a specific local IP address.
+
+ -bind-address-ipv6 <ipv6 address>
+  Use a specific local IPv6 address.
+
+ -no-libevent
+  Don't use libevent library.
+
+ -no-openmp
+  Don't use OpenMP.
+
+ -async-dns <0>/<1>
+  Asynchronous DNS resolver on(1)/off(0).
+
+ -download-utime <0>/<1>
+  Set time of downloaded files to last modification time reported by server.
+
  -format-cache-size <num>
   Number of formatted document pages cached.
     (default: 5)
@@ -88,8 +121,26 @@ Options are:
     (default: 1048576)
 
  -image-cache-size <bytes>
-  Cache memory in bytes.
+  Image cache in bytes.
     (default: 1048576)
+
+ -font-cache-size <bytes>
+  Font cache in bytes.
+    (default: 2097152)
+
+ -aggressive-cache <0>/<1>
+    (default 1)
+  Always cache everything regardless of server's caching recomendations.
+    Many servers deny caching even if their content is not changing
+    just to get more hits and more money from ads.
+
+ -address-preference <0>/<1>/<2>/<3>/<4>
+    (default 0)
+  0 - use system default.
+  1 - prefer IPv4.
+  2 - prefer IPv6.
+  3 - use only IPv4.
+  4 - use only IPv6.
 
  -http-proxy <host:port>
   Host and port number of the HTTP proxy, or blank.
@@ -99,8 +150,21 @@ Options are:
   Host and port number of the FTP proxy, or blank.
     (default: blank)
 
+ -https-proxy <host:port>
+  Host and port number of the HTTPS proxy, or blank.
+    (default: blank)
+
  -socks-proxy <user@host:port>
   Userid, host and port of Socks4a, or blank.
+    (default: blank)
+
+ -append-text-to-dns-lookups <text>
+  Append text to dns lookups. It is useful for specifying fixed
+    tor exit node.
+    (default: blank)
+
+ -no-proxy-domains <domain,domain...>
+  No proxy for specified domains.
     (default: blank)
 
  -only-proxies <0>/<1>
@@ -108,12 +172,26 @@ Options are:
   "1" causes that Links won't initiate any non-proxy connection.
     It is useful for anonymization with tor or similar networks.
 
- -download-dir <path>
-  Default download directory.
-    (default: actual dir)
+ -ssl.certificates <0>/<1>/<2>
+    (default 1)
+  0 - ignore invalid certificate
+  1 - warn on invalid certificate
+  2 - reject invalid certificate
 
- -language <language>
-  Set user interface language.
+ -ssl.builtin-certificates <0>/<1>
+    (default 0)
+  Use built-in certificates instead of system certificates.
+
+ -ssl.client-cert-key <filename>
+  Name of the PEM encoded file with the user private key
+  for client certificate authentication.
+
+ -ssl.client-cert-crt <filename>
+  Name of the PEM encoded file with the user certificate
+  for client certificate authentication.
+
+ -ssl.client-cert-password <text>
+  Password for the user private key.
 
  -http-bugs.http10 <0>/<1>
     (default 0)
@@ -125,15 +203,6 @@ Options are:
     (default 1)
   "1" defaults to using list of servers that have broken HTTP/1.1 support.
      When links finds such server, it will retry the request with HTTP/1.0.
-
- -http-bugs.bug-302-redirect <0>/<1>
-    (default 1)
-  Process 302 redirect in a way that is incompatible with RFC1945 and RFC2068,
-    but the same as Netscape and MSIE. Many pages depend on it.
-
- -http-bugs.bug-post-no-keepalive <0>/<1>
-    (default 0)
-  No keepalive connection after post requests. For some buggy servers.
 
  -http-bugs.bug-no-accept-charset <0>/<1>
     (default 0)
@@ -151,25 +220,30 @@ Options are:
     (default 0)
   Retry on internal server errors (50x).
 
- -http-bugs.aggressive-cache <0>/<1>
-    (default 1)
-  Always cache everything regardless of server's caching recomendations.
-    Many servers deny caching even if their content is not changing
-    just to get more hits and more money from ads.
-
- -http-referer <0>/<1>/<2>/<3>
+ -http.fake-firefox <0>/<1>
     (default 0)
-  0 - do not send referer
-  1 - send the requested URL as referer
-  2 - send fake referer
-  3 - send real referer
-  4 - send real referer only to the same server
+  Fake Firefox in the HTTP header.
 
- -fake-referer <string>
+ -http.do-not-track <0>/<1>
+    (default 0)
+  Send do not track request in the HTTP header.
+
+ -http.referer <0>/<1>/<2>/<3>/<4>
+    (default 4)
+  0 - do not send referer.
+  1 - send the requested URL as referer.
+  2 - send fake referer.
+  3 - send real referer.
+  4 - send real referer only to the same server.
+
+ -http.fake-referer <string>
   Fake referer value.
 
- -fake-user-agent <string>
+ -http.fake-user-agent <string>
   Fake user agent value.
+
+ -http.extra-header <string>
+  Extra string added to HTTP header.
 
  -ftp.anonymous-password <string>
   Password for anonymous ftp access.
@@ -177,21 +251,24 @@ Options are:
  -ftp.use-passive <0>/<1>
   Use ftp PASV command to bypass firewalls.
 
- -ftp.fast <0>/<1>
-  Send more ftp commands simultaneously. Faster response when
-    browsing ftp directories, but it is incompatible with RFC
-    and some servers don't like it.
+ -ftp.use-eprt-epsv <0>/<1>
+  Use EPRT and EPSV commands instead of PORT and PASV.
 
  -ftp.set-iptos <0>/<1>
   Set IP Type-of-service to high throughput on ftp connections.
 
+ -smb.allow-hyperlinks-to-smb <0>/<1>
+  Allow hyperlinks to SMB protocol.
+    Disabling this improves security, because internet sites cannot
+    exploit possible bugs in the SMB client.
+
  -menu-font-size <size>
   Size of font in menu.
 
- -background-color 0xRRGGBB
+ -menu-background-color 0xRRGGBB
   Set menu background color in graphics mode, RRGGBB are hex.
 
- -foreground-color 0xRRGGBB
+ -menu-foreground-color 0xRRGGBB
   Set menu foreground color in graphics mode.
 
  -scroll-bar-area-color 0xRRGGBB
@@ -202,6 +279,15 @@ Options are:
 
  -scroll-bar-frame-color 0xRRGGBB
   Set color of scroll bar frame.
+
+ -bookmarks-file <file>
+  File to store bookmarks.
+
+ -bookmarks-codepage <codepage>
+  Character set of bookmarks file.
+
+ -save-url-history <0>/<1>
+  Save URL history on exit.
 
  -display-red-gamma <fp-value>
   Red gamma of display.
@@ -222,9 +308,6 @@ Options are:
  -bfu-aspect <fp-value>
   Display aspect ration.
 
- -aspect-on <0>/<1>
-  Enable aspect ratio correction.
-
  -dither-letters <0>/<1>
   Do letter dithering.
 
@@ -234,18 +317,17 @@ Options are:
  -display-optimize <0>/<1>/<2>
   Optimize for CRT (0), LCD RGB (1), LCD BGR (2).
 
- -gamma correction <0>/<1>/<2>
+ -gamma-correction <0>/<1>/<2>
   Type of gamma correction:
     (default 2)
   0 - 8-bit (fast).
   1 - 16-bit (slow).
   2 - automatically detect according to speed of FPU.
 
- -bookmarks-codepage <codepage>
-  Character set of bookmarks file.
-
- -bookmarks-file <file>
-  File to store bookmarks.
+ -overwrite-instead-of-scroll <0>/<1>
+  Overwrite the screen instead of scrolling it
+    (valid for svgalib and framebuffer).
+    Overwriting may or may not be faster, depending on hardware.
 
  -html-assume-codepage <codepage>
   If server didn't specify document character set, assume this.
@@ -259,6 +341,9 @@ Options are:
 
  -html-frames <0>/<1>
   Render frames. (0) causes frames  rendered like in lynx.
+
+ -html-break-long-lines <0>/<1>
+  Break long lines in <pre> sections.
 
  -html-images <0>/<1>
   Display links to unnamed images as [IMG].
@@ -294,15 +379,29 @@ Options are:
  -html-user-font-size <size>
   Size of font on pages in graphics mode.
 
- -lookup <hostname>
-  Does name lookup, like command "host".
+ -html-text-color <0>-<15>
+  Text color in text mode.
 
- -version
-  Prints the links version number and exit.
+ -html-link-color <0>-<15>
+  Link color in text mode.
 
- -help
-  Prints this help screen
+ -html-background-color <0>-<7>
+  Background color in text mode.
 
+ -html-ignore-document-color <0>/<1>
+  Ignore colors specified in html document in text mode.
+
+ -html-g-text-color 0xRRGGBB
+  Text color in graphics mode.
+
+ -html-g-link-color 0xRRGGBB
+  Link color in graphics mode.
+
+ -html-g-background-color 0xRRGGBB
+  Background color in graphics mode.
+
+ -html-g-ignore-document-color <0>/<1>
+  Ignore colors specified in html document in graphics mode.
 
 Keys:
 	ESC	  display menu
@@ -329,6 +428,7 @@ Keys:
 	s	  bookmarks
 	q	  quit or close current window
 	^X	  cut to clipboard
+	^B	  copy to clipboard
 	^V	  paste from clipboard
 	^K	  cut line (in textarea) or text to the end (in field)
 	^U	  cut all text before cursor
