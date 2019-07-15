@@ -119,12 +119,12 @@ emit -v | field -1 | getversion
 emit --help | getusage
 
 cmd dbus-monitor
-version 1.12.14
+version 1.12.16
 pack | getversion
 emit -h | getusage
 
 cmd dbus-send
-version 1.12.14
+version 1.12.16
 pack | getversion
 emit -h | getusage
 
@@ -144,7 +144,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd dig
-version 9.11.6-P1
+version 9.11.8
 emit -v | field 2 | sed 's/-RedHat.*//' | getversion
 emit -h | getusage
 
@@ -301,7 +301,7 @@ emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.61.0
+version 2.61.1
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -323,7 +323,7 @@ emit -v | line 2 | field 2 | getversion
 emit -? | sed '/default device cache/ d' | getusage
 
 cmd lzop
-version 1.03
+version 1.04
 emit -V | sed -n 's/^lzop version: v//p' | field 1 | tr -d , | getversion
 emit -h | getusage
 
@@ -354,7 +354,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd mutt
-version 1.11.4
+version 1.12.0
 emit -v | line 1 | field 2 | getversion
 emit -h | getusage
 
@@ -370,7 +370,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd php
-version 7.3.5
+version 7.3.7
 emit -v | field 2 | getversion
 emit -h | getusage
 
@@ -416,7 +416,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.28.2
+version 5.30.0
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 

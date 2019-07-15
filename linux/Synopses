@@ -4,7 +4,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd arping
-version 20190324
+version 20190515
 emit -V | sed 's/.*s//' | getversion
 emit -? | getusage
 
@@ -41,7 +41,7 @@ emit -V | field -1 | getversion
 emit --help | getusage
 
 cmd cpupower
-version 5.1.0
+version 5.2.0
 emit --version | field 2 | sed 's/[_-].*//' | getversion
 emit -h | getusage
 
@@ -181,7 +181,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ping
-version 20190324
+version 20190515
 emit -V | sed 's/.*s//' | getversion
 emit -h | getusage
 
@@ -206,7 +206,7 @@ emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 5.0
+version 5.1
 emit -V | field 4 | getversion
 emit -h | getusage
 
@@ -251,7 +251,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.45.0
+version 1.45.2
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 

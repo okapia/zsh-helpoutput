@@ -1,5 +1,5 @@
 cmd bash
-version 5.0.3
+version 5.0.7
 emit --version | field 4 | cut -d \( -f1 | getversion
 emit --help | getusage
 emit -c 'help set' | getusage set
@@ -132,7 +132,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-cli-debug
-version 3.6.7
+version 3.6.8
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -142,12 +142,12 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd certtool
-version 3.6.7
+version 3.6.8
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.6.7
+version 3.6.8
 emit --version | field -1 | getversion
 emit -h | getusage
 
