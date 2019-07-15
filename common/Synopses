@@ -19,28 +19,28 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd ansible
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-config
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-console
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 emit dump -h | getusage dump
 
 cmd ansible-doc
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-galaxy
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 emit info -h | getusage info
@@ -55,22 +55,22 @@ emit login -h | getusage login
 emit delete -h | getusage delete
 
 cmd ansible-inventory
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-playbook
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-pull
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-vault
-version 2.7.10
+version 2.8.2
 emit --version | field -1 | getversion
 emit -h | getusage
 emit encrypt_string -h | getusage encrypt_string
@@ -308,7 +308,7 @@ emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.2.0
+version 1.2.1
 emit --version | field 2 | getversion
 emit --help | getusage
 
