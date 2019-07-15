@@ -1,5 +1,7 @@
 Usage: ansible-galaxy import [options] github_user github_repo
 
+Import a role.
+
 Options:
   --branch=REFERENCE    The name of a branch to import. Defaults to the
                         repository's default branch (usually master)
@@ -15,7 +17,9 @@ Options:
                         given github_user/github_repo.
   -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
                         connection debugging)
-  --version             show program's version number and exit
+  --version             show program's version number, config file location,
+                        configured module search path, module location,
+                        executable location and exit
 
  See 'ansible-galaxy <command> --help' for more information on a specific
 command.

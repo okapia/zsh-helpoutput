@@ -1,5 +1,7 @@
 Usage: ansible-galaxy search [searchterm1 searchterm2] [--galaxy-tags galaxy_tag1,galaxy_tag2] [--platforms platform1,platform2] [--author username]
 
+Search the Galaxy database by tags, platforms, author and multiple keywords.
+
 Options:
   --author=AUTHOR       GitHub username
   --galaxy-tags=GALAXY_TAGS
@@ -11,13 +13,15 @@ Options:
   -p ROLES_PATH, --roles-path=ROLES_PATH
                         The path to the directory containing your roles. The
                         default is the roles_path configured in your
-                        ansible.cfgfile (/usr/local/etc/ansible/roles if not
+                        ansible.cfg file (/usr/local/etc/ansible/roles if not
                         configured)
   -s API_SERVER, --server=API_SERVER
                         The API server destination
   -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
                         connection debugging)
-  --version             show program's version number and exit
+  --version             show program's version number, config file location,
+                        configured module search path, module location,
+                        executable location and exit
 
  See 'ansible-galaxy <command> --help' for more information on a specific
 command.

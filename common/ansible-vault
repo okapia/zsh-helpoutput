@@ -14,7 +14,9 @@ Options:
                         vault password file
   -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
                         connection debugging)
-  --version             show program's version number and exit
+  --version             show program's version number, config file location,
+                        configured module search path, module location,
+                        executable location and exit
 
  See 'ansible-vault <command> --help' for more information on a specific
 command.

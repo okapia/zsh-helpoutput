@@ -4,6 +4,8 @@ Install Roles from file(s), URL(s) or tar file(s)
 
 Options:
   -f, --force           Force overwriting an existing role
+  --force-with-deps     Force overwriting an existing role and it's
+                        dependencies
   -h, --help            show this help message and exit
   -c, --ignore-certs    Ignore SSL certificate validation errors.
   -i, --ignore-errors   Ignore errors and continue with the next specified
@@ -16,13 +18,15 @@ Options:
   -p ROLES_PATH, --roles-path=ROLES_PATH
                         The path to the directory containing your roles. The
                         default is the roles_path configured in your
-                        ansible.cfg file (/etc/ansible/roles if not
+                        ansible.cfg file (/usr/local/etc/ansible/roles if not
                         configured)
   -s API_SERVER, --server=API_SERVER
                         The API server destination
   -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
                         connection debugging)
-  --version             show program's version number and exit
+  --version             show program's version number, config file location,
+                        configured module search path, module location,
+                        executable location and exit
 
  See 'ansible-galaxy <command> --help' for more information on a specific
 command.

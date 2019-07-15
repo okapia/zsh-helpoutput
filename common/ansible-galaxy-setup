@@ -1,5 +1,7 @@
 Usage: ansible-galaxy setup [options] source github_user github_repo secret
 
+Manage the integration between Galaxy and the given source.
+
 Options:
   -h, --help            show this help message and exit
   -c, --ignore-certs    Ignore SSL certificate validation errors.
@@ -10,7 +12,9 @@ Options:
                         The API server destination
   -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
                         connection debugging)
-  --version             show program's version number and exit
+  --version             show program's version number, config file location,
+                        configured module search path, module location,
+                        executable location and exit
 
  See 'ansible-galaxy <command> --help' for more information on a specific
 command.

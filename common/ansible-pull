@@ -35,9 +35,9 @@ Options:
                         check out the repo. Choices are ('git', 'subversion',
                         'hg', 'bzr'). Default is git.
   -M MODULE_PATH, --module-path=MODULE_PATH
-                        prepend colon-separated path(s) to module library
-                        (default=[u'/home/opk/.ansible/plugins/modules',
-                        u'/usr/local/share/ansible/plugins/modules'])
+                        prepend colon-separated path(s) to module library (def
+                        ault=~/.ansible/plugins/modules:/usr/local/share/py36-
+                        ansible/plugins/modules)
   -o, --only-if-changed
                         only run the playbook if the repository has been
                         updated
@@ -62,7 +62,9 @@ Options:
   --verify-commit       verify GPG signature of checked out commit, if it
                         fails abort running the playbook. This needs the
                         corresponding VCS module to support such an operation
-  --version             show program's version number and exit
+  --version             show program's version number, config file location,
+                        configured module search path, module location,
+                        executable location and exit
 
   Connection Options:
     control as whom and how to connect to hosts
@@ -91,7 +93,5 @@ Options:
   Privilege Escalation Options:
     control how and which user you become as on target hosts
 
-    --ask-sudo-pass     ask for sudo password (deprecated, use become)
-    --ask-su-pass       ask for su password (deprecated, use become)
     -K, --ask-become-pass
                         ask for privilege escalation password

@@ -3,8 +3,6 @@ Usage: ansible-doc [-l|-F|-s] [options] [-t <plugin type> ] [plugin]
 plugin documentation tool
 
 Options:
-  -a, --all             **For internal testing only** Show documentation for
-                        all plugins.
   -h, --help            show this help message and exit
   -j, --json            **For internal testing only** Dump json metadata for
                         all plugins.
@@ -12,14 +10,20 @@ Options:
   -F, --list_files      Show plugin names and their source files without
                         summaries (implies --list)
   -M MODULE_PATH, --module-path=MODULE_PATH
-                        prepend colon-separated path(s) to module library
-                        (default=[u'/home/opk/.ansible/plugins/modules',
-                        u'/usr/local/share/ansible/plugins/modules'])
+                        prepend colon-separated path(s) to module library (def
+                        ault=~/.ansible/plugins/modules:/usr/local/share/py36-
+                        ansible/plugins/modules)
   -s, --snippet         Show playbook snippet for specified plugin(s)
-  -t TYPE, --type=TYPE  Choose which plugin type (defaults to "module")
+  -t TYPE, --type=TYPE  Choose which plugin type (defaults to "module").
+                        Available plugin types are : ('become', 'cache',
+                        'callback', 'cliconf', 'connection', 'httpapi',
+                        'inventory', 'lookup', 'shell', 'module', 'strategy',
+                        'vars')
   -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
                         connection debugging)
-  --version             show program's version number and exit
+  --version             show program's version number, config file location,
+                        configured module search path, module location,
+                        executable location and exit
 
 See man pages for Ansible CLI options or website for tutorials
 https://docs.ansible.com
