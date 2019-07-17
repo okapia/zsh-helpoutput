@@ -1,1 +1,8 @@
-usage: git commit-tree [(-p <sha1>)...] [-S[<keyid>]] [-m <message>] [-F <file>] <sha1> <changelog
+usage: git commit-tree [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...] [(-F <file>)...] <tree>
+
+    -p <parent>           id of a parent commit object
+    -m <message>          commit message
+    -F <file>             read commit log message from file
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+

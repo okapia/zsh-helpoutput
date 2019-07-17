@@ -16,6 +16,7 @@ Options related to merging
     --squash              create a single commit instead of doing a merge
     --commit              perform a commit if the merge succeeds (default)
     --edit                edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
     --ff                  allow fast-forward
     --ff-only             abort if fast-forward is not possible
     --verify-signatures   verify that the named commit has a valid GPG signature

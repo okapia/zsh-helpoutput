@@ -9,6 +9,8 @@ usage: git clone [<options>] [--] <repo> [<dir>]
     -l, --local           to clone from a local repository
     --no-hardlinks        don't use local hardlinks, always copy
     -s, --shared          setup as shared repository
+    --recursive[=<pathspec>]
+                          initialize submodules in the clone
     --recurse-submodules[=<pathspec>]
                           initialize submodules in the clone
     -j, --jobs <n>        number of submodules cloned in parallel
@@ -35,6 +37,8 @@ usage: git clone [<options>] [--] <repo> [<dir>]
                           separate git dir from working tree
     -c, --config <key=value>
                           set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
     -4, --ipv4            use IPv4 addresses only
     -6, --ipv6            use IPv6 addresses only
     --filter <args>       object filtering

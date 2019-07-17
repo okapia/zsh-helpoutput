@@ -1,5 +1,9 @@
-usage: git diff-tree [--stdin] [-m] [-c] [--cc] [-s] [-v] [--pretty] [-t] [-r] [--root] [<common diff options>] <tree-ish> [<tree-ish>] [<path>...]
+usage: git diff-tree [--stdin] [-m] [-c | --cc] [-s] [-v] [--pretty] [-t] [-r] [--root] [<common-diff-options>] <tree-ish> [<tree-ish>] [<path>...]
   -r            diff recursively
+  -c            show combined diff for merge commits
+  --cc          show combined diff for merge commits removing uninteresting hunks
+  --combined-all-paths
+                show name of file in all parents for combined diffs
   --root        include the initial commit as diff against /dev/null
 
 common diff options:

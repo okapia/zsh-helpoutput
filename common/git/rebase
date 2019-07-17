@@ -26,8 +26,8 @@ usage: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] [<upstream>] 
     -m, --merge           use merging strategies to rebase
     -i, --interactive     let the user edit the list of commits to rebase
     -p, --preserve-merges
-                          try to recreate merges instead of ignoring them
-    --rerere-autoupdate   allow rerere to update index with resolved conflict
+                          (DEPRECATED) try to recreate merges instead of ignoring them
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
     -k, --keep-empty      preserve empty commits during rebase
     --autosquash          move commits that begin with squash!/fixup! under -i
     -S, --gpg-sign[=<key-id>]

@@ -1,11 +1,12 @@
 usage: git stash list [<options>]
-   or: git stash show [<stash>]
+   or: git stash show [<options>] [<stash>]
    or: git stash drop [-q|--quiet] [<stash>]
    or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
    or: git stash branch <branchname> [<stash>]
-   or: git stash save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
-		      [-u|--include-untracked] [-a|--all] [<message>]
-   or: git stash [push [--patch] [-k|--[no-]keep-index] [-q|--quiet]
-		       [-u|--include-untracked] [-a|--all] [-m <message>]
-		       [-- <pathspec>...]]
    or: git stash clear
+   or: git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+          [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+          [--] [<pathspec>...]]
+   or: git stash save [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+          [-u|--include-untracked] [-a|--all] [<message>]
+

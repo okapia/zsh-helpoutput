@@ -24,4 +24,5 @@ usage: git checkout [<options>] <branch>
     --recurse-submodules[=<checkout>]
                           control recursive updating of submodules
     --progress            force progress reporting
+    --overlay             use overlay mode (default)
 

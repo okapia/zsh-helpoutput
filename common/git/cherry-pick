@@ -1,13 +1,15 @@
-usage: git cherry-pick [options] <commit-ish>...
+usage: git cherry-pick [<options>] <commit-ish>...
    or: git cherry-pick <subcommand>
 
     --quit                end revert or cherry-pick sequence
     --continue            resume revert or cherry-pick sequence
     --abort               cancel revert or cherry-pick sequence
+    --cleanup <mode>      how to strip spaces and #comments from message
     -n, --no-commit       don't automatically commit
     -e, --edit            edit the commit message
     -s, --signoff         add Signed-off-by:
-    -m, --mainline <n>    parent number
+    -m, --mainline <parent-number>
+                          select mainline parent
     --rerere-autoupdate   update the index with reused conflict resolution if possible
     --strategy <strategy>
                           merge strategy

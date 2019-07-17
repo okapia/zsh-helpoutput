@@ -21,4 +21,5 @@ Merging
     --debug-unpack        debug unpack-trees
     --recurse-submodules[=<checkout>]
                           control recursive updating of submodules
+    -q, --quiet           suppress feedback messages
 
