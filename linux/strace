@@ -30,8 +30,10 @@ Statistics:
 
 Filtering:
   -e expr        a qualifying expression: option=[!]all or option=[!]val1[,val2]...
-     options:    trace, abbrev, verbose, raw, signal, read, write, fault, inject, kvm
+     options:    trace, abbrev, verbose, raw, signal, read, write, fault, inject, status, kvm
   -P path        trace accesses to path
+  -z             print only syscalls that returned without an error code
+  -Z             print only syscalls that returned with an error code
 
 Tracing:
   -b execve      detach on execve syscall
