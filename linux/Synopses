@@ -101,12 +101,12 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 190319
+version 190510
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
 cmd iptables
-version 1.8.2
+version 1.8.3
 emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
@@ -201,12 +201,12 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 190319
+version 190510
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 5.1
+version 5.2
 emit -V | field 4 | getversion
 emit -h | getusage
 

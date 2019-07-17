@@ -23,7 +23,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd bison
-version 3.3.2
+version 3.4.1
 emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
@@ -127,7 +127,7 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gnutls-cli
-version 3.6.7
+version 3.6.8
 emit -v | field -1 | getversion
 emit -h | getusage
 
@@ -137,7 +137,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-serv
-version 3.6.7
+version 3.6.8
 emit -v | field -1 | getversion
 emit -h | getusage
 
