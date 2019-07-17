@@ -32,7 +32,7 @@ Usage: ss [ OPTIONS ]
        --tipc          display only TIPC sockets
        --vsock         display only vsock sockets
    -f, --family=FAMILY display sockets of type FAMILY
-       FAMILY := {inet|inet6|link|unix|netlink|vsock|tipc|help}
+       FAMILY := {inet|inet6|link|unix|netlink|vsock|tipc|xdp|help}
 
    -K, --kill          forcibly close sockets, display what was closed
    -H, --no-header     Suppress header line
