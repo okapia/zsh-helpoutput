@@ -105,7 +105,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd gawk
-version 5.0.0
+version 5.0.1
 emit -V | field 3 | tr -d , | getversion
 emit -h | getusage
 

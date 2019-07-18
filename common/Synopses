@@ -220,7 +220,7 @@ emit -v | field 2 | cut -d \( -f 1 | getversion
 emit -h | getusage
 
 cmd less
-version 530
+version 550
 emit -V | field 2 | getversion
 unset LESSOPEN
 emit -? | getusage
@@ -285,7 +285,7 @@ emit help -av | getusage commands
 subcmds @ -h
 
 cmd gpg
-version 2.2.15
+version 2.2.17
 variant -n gpg2
 emit --version | field -1 | getversion
 emit --help | egrep -v '^(Home:|Please report bugs)' | getusage
@@ -478,7 +478,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.28.0
+version 3.29.0
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
