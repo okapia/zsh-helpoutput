@@ -84,14 +84,14 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs subvolume find-new <path> <lastgen>
         List the recently modified files in a filesystem
 
-    btrfs subvolume show [options] <subvol-path>|<mnt>
-        Show more information about the subvolume
+    btrfs subvolume show [options] <path>
+        Show more information about the subvolume (UUIDs, generations, times, snapshots)
 
         -r|--rootid   rootid of the subvolume
         -u|--uuid     uuid of the subvolume
 
-        If no option is specified, <subvol-path> will be shown, otherwise
-        the rootid or uuid are resolved relative to the <mnt> path.
+        If no option is specified, subvolume at <path> will be shown, otherwise
+        the rootid or uuid are resolved relative to the <path>.
 
     btrfs subvolume sync <path> [<subvol-id>...]
         Wait until given subvolume(s) are completely removed from the filesystem.
@@ -208,7 +208,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -m[filters]    act on metadata chunks
         -s[filters]    act on system chunks (only under -f)
         -v             be verbose
-        -f             force reducing of metadata integrity
+        -f             force a reduction of metadata integrity
         --full-balance do not print warning and do not delay start
         --background|--bg
                        run the balance as a background process
@@ -228,9 +228,9 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -v     be verbose
 
     btrfs device add [options] <device> [<device>...] <path>
-        Add a device to a filesystem
+        Add one or more devices to a mounted filesystem.
 
-        -K|--nodiscard    do not perform whole device TRIM
+        -K|--nodiscard    do not perform whole device TRIM on devices that report such capability
         -f|--force        force overwrite existing filesystem on the disk
 
     btrfs device delete <device>|<devid> [<device>|<devid>...] <path>
@@ -238,17 +238,31 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs device remove <device>|<devid> [<device>|<devid>...] <path>
         Remove a device from a filesystem
 
+        Remove a device from a filesystem, specified by a path to the device or
+        as a device id in the filesystem. The btrfs signature is removed from
+        the device.
         If 'missing' is specified for <device>, the first device that is
         described by the filesystem metadata, but not present at the mount
         time will be removed. (only in degraded mode)
 
-    btrfs device scan [(-d|--all-devices)|<device> [<device>...]]
-        Scan devices for a btrfs filesystem
+    btrfs device scan [-d|--all-devices] <device> [<device>...]
+    btrfs device scan -u|--forget [<device>...]
+        Scan or forget (unregister) devices of btrfs filesystems
 
-         -d|--all-devices (deprecated)
+        Scan or forget (unregister) devices of btrfs filesystems. Multi-device
+        filesystems need to scan devices before mount. The blkid provides list
+        of devices in case no path is given. If blkid is no available, there's
+        a fallback to manual enumeration of device nodes.
+
+        The reverse is done by the forget option, such devices must be unmounted.
+        No argument will unregister all devices that are not part of a mounted filesystem.
+        
+         -d|--all-devices            enumerate and register all devices, use as a fallback
+                                     if blkid is not available
+         -u|--forget [<device>...]   unregister a given device or all stale devices if no path 
 
     btrfs device ready <device>
-        Check device to see if it has all of its devices in cache for mounting
+        Check and wait until a group of devices of a filesystem is ready for mount
 
     btrfs device stats [options] <path>|<device>
         Show device IO error statistics
@@ -313,7 +327,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         trees' consistency and item connectivity. In the repair mode try to
         fix the problems found. 
         WARNING: the repair mode is considered dangerous and should not be used
-                 without prior analysis of problems found on the flesystem.
+                 without prior analysis of problems found on the filesystem.
         Options:
           starting point selection:
                -s|--super <superblock>     use this superblock copy
@@ -425,6 +439,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -R|--backups           same as --roots plus print backup root info
         -u|--uuid              print only the uuid tree
         -b|--block <block_num> print info from the specified block only
+                               can be specified multiple times
         -t|--tree <tree_id>    print only tree with the given id (string or number)
         --follow               use with -b, to show all children tree blocks of <block_num>
 
@@ -519,6 +534,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         read-only.
 
         -v               increase verbosity about performed actions
+        -q|--quiet       suppress all messages, except errors
         -f FILE          read the stream from FILE instead of stdin
         -e               terminate after receiving an <end cmd> marker in the stream.
                          Without this option the receiver side terminates only in case
