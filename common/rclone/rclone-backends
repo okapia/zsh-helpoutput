@@ -1,6 +1,6 @@
 All rclone backends:
 
-  alias        Alias for a existing remote
+  alias        Alias for an existing remote
   acd          Amazon Drive
   azureblob    Microsoft Azure Blob Storage
   b2           Backblaze B2

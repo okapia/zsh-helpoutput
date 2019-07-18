@@ -12,12 +12,12 @@ Global Flags:
       --buffer-size SizeSuffix               In memory buffer size when reading files for each --transfer. (default 16M)
       --bwlimit BwTimetable                  Bandwidth limit in kBytes/s, or use suffix b|k|M|G or a full timetable.
       --ca-cert string                       CA certificate used to verify servers
-      --cache-dir string                     Directory rclone will use for caching. (default "/home/opk/.cache/rclone")
+      --cache-dir string                     Directory rclone will use for caching. (default "/home/okiddle/.cache/rclone")
       --checkers int                         Number of checkers to run in parallel. (default 8)
   -c, --checksum                             Skip based on checksum (if available) & size, not mod-time & size
       --client-cert string                   Client SSL certificate (PEM) for mutual TLS auth
       --client-key string                    Client SSL private key (PEM) for mutual TLS auth
-      --config string                        Config file. (default "/home/opk/.config/rclone/rclone.conf")
+      --config string                        Config file. (default "/home/okiddle/.config/rclone/rclone.conf")
       --contimeout duration                  Connect timeout (default 1m0s)
       --cpuprofile string                    Write cpu profile to file
       --delete-after                         When synchronizing, delete files on destination after transferring (default)
@@ -28,7 +28,7 @@ Global Flags:
   -n, --dry-run                              Do a trial run with no permanent changes
       --dump DumpFlags                       List of items to dump from: headers,bodies,requests,responses,auth,filters,goroutines,openfiles
       --dump-bodies                          Dump HTTP headers and bodies - may contain sensitive info
-      --dump-headers                         Dump HTTP bodies - may contain sensitive info
+      --dump-headers                         Dump HTTP headers - may contain sensitive info
       --exclude stringArray                  Exclude files matching pattern
       --exclude-from stringArray             Read exclude patterns from file
       --exclude-if-present string            Exclude directories if filename is present
@@ -37,6 +37,7 @@ Global Flags:
   -f, --filter stringArray                   Add a file-filtering rule
       --filter-from stringArray              Read filtering patterns from a file
       --ignore-case                          Ignore case in filters (case insensitive)
+      --ignore-case-sync                     Ignore case when synchronizing
       --ignore-checksum                      Skip post copy check of checksums.
       --ignore-errors                        delete even if there are I/O errors
       --ignore-existing                      Skip all files that exist on destination
@@ -59,6 +60,8 @@ Global Flags:
       --min-age Duration                     Only transfer files older than this in s or suffix ms|s|m|h|d|w|M|y (default off)
       --min-size SizeSuffix                  Only transfer files bigger than this in k or suffix b|k|M|G (default off)
       --modify-window duration               Max time diff to be considered the same (default 1ns)
+      --multi-thread-cutoff SizeSuffix       Use multi-thread downloads for files above this size. (default 250M)
+      --multi-thread-streams int             Max number of streams to use for multi-thread downloads. (default 4)
       --no-check-certificate                 Do not verify the server SSL certificate. Insecure.
       --no-gzip-encoding                     Don't set Accept-Encoding: gzip.
       --no-traverse                          Don't traverse destination file system on copy.
@@ -71,6 +74,8 @@ Global Flags:
       --rc-client-ca string                  Client certificate authority to verify clients with
       --rc-files string                      Path to local files to serve on the HTTP server.
       --rc-htpasswd string                   htpasswd file - if not provided no authentication is done
+      --rc-job-expire-duration duration      expire finished async jobs older than this value (default 1m0s)
+      --rc-job-expire-interval duration      interval to check for expired async jobs (default 10s)
       --rc-key string                        SSL PEM Private key
       --rc-max-header-bytes int              Maximum size of request header (default 4096)
       --rc-no-auth                           Don't require auth for certain methods.
@@ -87,6 +92,8 @@ Global Flags:
       --stats-file-name-length int           Max file name length in stats. 0 for no limit (default 45)
       --stats-log-level string               Log level to show --stats output DEBUG|INFO|NOTICE|ERROR (default "INFO")
       --stats-one-line                       Make the stats fit on one line.
+      --stats-one-line-date                  Enables --stats-one-line and add current date/time prefix.
+      --stats-one-line-date-format string    Enables --stats-one-line-date and uses custom formatted date. Enclose date string in double quotes ("). See https://golang.org/pkg/time/#Time.Format
       --stats-unit string                    Show data rate in stats as either 'bits' or 'bytes'/s (default "bytes")
       --streaming-upload-cutoff SizeSuffix   Cutoff for switching to chunked upload if file size is unknown. Upload starts after reaching cutoff or when file ends. (default 100k)
       --suffix string                        Suffix for use with --backup-dir.
@@ -102,7 +109,7 @@ Global Flags:
       --use-cookies                          Enable session cookiejar.
       --use-mmap                             Use mmap allocator (see docs).
       --use-server-modtime                   Use server modified time instead of object metadata
-      --user-agent string                    Set the user-agent to a specified string. The default is rclone/ version (default "rclone/v1.47.0")
+      --user-agent string                    Set the user-agent to a specified string. The default is rclone/ version (default "rclone/v1.48.0")
   -v, --verbose count                        Print lots more stuff (repeat for more)
 
 Backend Flags:
@@ -137,10 +144,10 @@ Backend Flags:
       --box-upload-cutoff SizeSuffix                 Cutoff for switching to multipart upload (>= 50MB). (default 50M)
       --cache-chunk-clean-interval Duration          How often should the cache perform cleanups of the chunk storage. (default 1m0s)
       --cache-chunk-no-memory                        Disable the in-memory cache for storing chunks during streaming.
-      --cache-chunk-path string                      Directory to cache chunk files. (default "/home/opk/.cache/rclone/cache-backend")
+      --cache-chunk-path string                      Directory to cache chunk files. (default "/home/okiddle/.cache/rclone/cache-backend")
       --cache-chunk-size SizeSuffix                  The size of a chunk (partial file data). (default 5M)
       --cache-chunk-total-size SizeSuffix            The total size that the chunks can take up on the local disk. (default 10G)
-      --cache-db-path string                         Directory to store file structure metadata DB. (default "/home/opk/.cache/rclone/cache-backend")
+      --cache-db-path string                         Directory to store file structure metadata DB. (default "/home/okiddle/.cache/rclone/cache-backend")
       --cache-db-purge                               Clear all the cached data for this remote on start.
       --cache-db-wait-time Duration                  How long to wait for the DB to be available - 0 is unlimited (default 1s)
       --cache-info-age Duration                      How long to cache file structure information (directory listings, file size, times etc). (default 6h0m0s)
@@ -179,9 +186,11 @@ Backend Flags:
       --drive-pacer-min-sleep Duration               Minimum time to sleep between API calls. (default 100ms)
       --drive-root-folder-id string                  ID of the root folder
       --drive-scope string                           Scope that rclone should use when requesting access from drive.
+      --drive-server-side-across-configs             Allow server side operations (eg copy) to work across different drive configs.
       --drive-service-account-credentials string     Service Account Credentials JSON blob
       --drive-service-account-file string            Service Account Credentials JSON file path
       --drive-shared-with-me                         Only show files that are shared with me.
+      --drive-size-as-quota                          Show storage quota usage for file size.
       --drive-skip-checksum-gphotos                  Skip MD5 checksum on Google photos and videos only.
       --drive-skip-gdocs                             Skip google documents in all listings.
       --drive-team-drive string                      ID of the Team Drive
@@ -196,9 +205,11 @@ Backend Flags:
       --dropbox-impersonate string                   Impersonate this user when using a business account.
       --ftp-concurrency int                          Maximum number of FTP simultaneous connections, 0 for unlimited
       --ftp-host string                              FTP host to connect to
+      --ftp-no-check-certificate                     Do not verify the TLS certificate of the server
       --ftp-pass string                              FTP password
       --ftp-port string                              FTP port, leave blank to use default (21)
-      --ftp-user string                              FTP username, leave blank for current username, opk
+      --ftp-tls                                      Use FTP over TLS (Implicit)
+      --ftp-user string                              FTP username, leave blank for current username, okiddle
       --gcs-bucket-acl string                        Access Control List for new buckets.
       --gcs-bucket-policy-only                       Access checks should use bucket-level IAM policies.
       --gcs-client-id string                         Google Application Client Id
@@ -216,7 +227,6 @@ Backend Flags:
       --hubic-no-chunk                               Don't chunk files during streaming upload.
       --jottacloud-hard-delete                       Delete files permanently rather than putting them into the trash.
       --jottacloud-md5-memory-limit SizeSuffix       Files bigger than this will be cached on disk to calculate the MD5 if required. (default 10M)
-      --jottacloud-mountpoint string                 The mountpoint to use.
       --jottacloud-unlink                            Remove existing public link to file/folder with link command rather than creating.
       --jottacloud-upload-resume-limit SizeSuffix    Files bigger than this can be resumed if the upload fail's. (default 10M)
       --jottacloud-user string                       User Name:
@@ -270,6 +280,7 @@ Backend Flags:
       --s3-storage-class string                      The storage class to use when storing new objects in S3.
       --s3-upload-concurrency int                    Concurrency for multipart uploads. (default 4)
       --s3-upload-cutoff SizeSuffix                  Cutoff for switching to chunked upload (default 200M)
+      --s3-use-accelerate-endpoint                   If true use the AWS S3 accelerated endpoint.
       --s3-v2-auth                                   If true use v2 authentication.
       --sftp-ask-password                            Allow asking for SFTP password when needed.
       --sftp-disable-hashcheck                       Disable the execution of SSH commands to determine if remote file hashing is available.
@@ -282,7 +293,7 @@ Backend Flags:
       --sftp-port string                             SSH port, leave blank to use default (22)
       --sftp-set-modtime                             Set the modified time on the remote if set. (default true)
       --sftp-use-insecure-cipher                     Enable the use of the aes128-cbc cipher. This cipher is insecure and may allow plaintext data to be recovered by an attacker.
-      --sftp-user string                             SSH username, leave blank for current username, opk
+      --sftp-user string                             SSH username, leave blank for current username, okiddle
       --skip-links                                   Don't warn about skipped symlinks.
       --swift-application-credential-id string       Application Credential ID (OS_APPLICATION_CREDENTIAL_ID)
       --swift-application-credential-name string     Application Credential Name (OS_APPLICATION_CREDENTIAL_NAME)

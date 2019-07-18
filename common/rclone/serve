@@ -14,6 +14,7 @@ Available Commands:
   ftp         Serve remote:path over FTP.
   http        Serve the remote over HTTP.
   restic      Serve the remote for restic's REST API.
+  sftp        Serve the remote over SFTP.
   webdav      Serve remote:path over webdav.
 
 Flags:
