@@ -1,5 +1,5 @@
 usage: install [-bCcpSsUv] [-f flags] [-g group] [-m mode] [-o owner]
-               [-D dest] [-h hash] [-T tags]
+               [-D dest] [-h hash]
                [-B suffix] [-l linkflags] [-N dbdir]
                file1 file2
        install [-bCcpSsUv] [-B suffix] [-D dest] [-f flags] [-g group]

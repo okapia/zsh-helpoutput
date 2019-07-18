@@ -1,1 +1,1 @@
-usage: gcore [-s] [-c core] [executable] pid
+usage: gcore [-sv] [-c core] [-l seglimit] [executable] pid
