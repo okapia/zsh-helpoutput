@@ -436,7 +436,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd rclone
-version 1.47.0
+version 1.48.0
 subdir
 emit -V | field -1 | getversion
 emit help | getusage
@@ -517,7 +517,7 @@ getversion <<<$sshver
 emit -? | getusage
 
 cmd sshfs
-version 2.8
+version 3.5.2
 emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 

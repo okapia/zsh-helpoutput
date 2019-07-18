@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 4.20.2
+version 5.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
