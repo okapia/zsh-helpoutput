@@ -10,6 +10,7 @@ OPTIONS include:
    -column              set output mode to 'column'
    -cmd COMMAND         run "COMMAND" before reading stdin
    -csv                 set output mode to 'csv'
+   -deserialize         open the database using sqlite3_deserialize()
    -echo                print commands before execution
    -init FILENAME       read/process named file
    -[no]header          turn headers on or off
@@ -19,6 +20,7 @@ OPTIONS include:
    -line                set output mode to 'line'
    -list                set output mode to 'list'
    -lookaside SIZE N    use N entries of SZ bytes for lookaside memory
+   -maxsize N           maximum size for a --deserialize database
    -memtrace            trace all memory allocations and deallocations
    -mmap N              default mmap size set to N
    -newline SEP         set output row separator. Default: '\n'
