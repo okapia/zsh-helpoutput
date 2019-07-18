@@ -20,7 +20,7 @@ COMMAND := { status | show | set | connect | reapply | modify | disconnect | del
 
   monitor <ifname> ...
 
-  wifi [list [ifname <ifname>] [bssid <BSSID>]]
+  wifi [list [ifname <ifname>] [bssid <BSSID>] [--rescan yes|no|auto]]
 
   wifi connect <(B)SSID> [password <password>] [wep-key-type key|phrase] [ifname <ifname>]
                          [bssid <BSSID>] [name <name>] [private yes|no] [hidden yes|no]

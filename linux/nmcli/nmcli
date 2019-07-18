@@ -1,19 +1,19 @@
 Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
 
 OPTIONS
-  -o[verview]                                    overview mode (hide default values)
-  -t[erse]                                       terse output
-  -p[retty]                                      pretty output
-  -m[ode] tabular|multiline                      output mode
-  -c[olors] auto|yes|no                          whether to use colors in output
-  -f[ields] <field1,field2,...>|all|common       specify fields to output
-  -g[et-values] <field1,field2,...>|all|common   shortcut for -m tabular -t -f
-  -e[scape] yes|no                               escape columns separators in values
-  -a[sk]                                         ask for missing parameters
-  -s[how-secrets]                                allow displaying passwords
-  -w[ait] <seconds>                              set timeout waiting for finishing operations
-  -v[ersion]                                     show program version
-  -h[elp]                                        print this help
+  -a, --ask                                ask for missing parameters
+  -c, --colors auto|yes|no                 whether to use colors in output
+  -e, --escape yes|no                      escape columns separators in values
+  -f, --fields <field,...>|all|common      specify fields to output
+  -g, --get-values <field,...>|all|common  shortcut for -m tabular -t -f
+  -h, --help                               print this help
+  -m, --mode tabular|multiline             output mode
+  -o, --overview                           overview mode
+  -p, --pretty                             pretty output
+  -s, --show-secrets                       allow displaying passwords
+  -t, --terse                              terse output
+  -v, --version                            show program version
+  -w, --wait <seconds>                     set timeout waiting for finishing operations
 
 OBJECT
   g[eneral]       NetworkManager's general status and operations
