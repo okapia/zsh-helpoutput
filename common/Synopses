@@ -386,12 +386,12 @@ emit --version | getversion
 emit --help | getusage
 
 cmd postconf
-version 2.10.1
+version 3.3.1
 pack | getversion
 emit -? | getusage
 
 cmd postqueue
-version 2.10.1
+version 3.3.1
 pack | getversion
 emit | getusage
 

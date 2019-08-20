@@ -147,7 +147,7 @@ emit -V | field 2 | getversion
 emit -h | getusage
 
 cmd mdadm
-version 4.0
+version 4.1
 subdir
 emit -V | field 3 | tr -d v | getversion
 emit --help-options | getusage
