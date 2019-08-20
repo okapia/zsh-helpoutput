@@ -12,4 +12,5 @@ mv $tmp/.git .s.git
 print ~+/.s.git(:A) > .git/worktrees/.zh-overlay-$$/gitdir
 rm -rf $tmp
 git --git-dir=.s.git reset --hard HEAD
+mkdir .git/info
 print -l .s.git LICENSE Synopses *.md updates changes overlay >> .git/info/exclude
