@@ -11,8 +11,12 @@ Query/Verify package selection options:
                                      identifier
       --triggeredby                  query the package(s) triggered by the
                                      package
+      --whatconflicts                query/verify the package(s) which require
+                                     a dependency
       --whatrequires                 query/verify the package(s) which require
                                      a dependency
+      --whatobsoletes                query/verify the package(s) which
+                                     obsolete a dependency
       --whatprovides                 query/verify the package(s) which provide
                                      a dependency
       --whatrecommends               query/verify the package(s) which
@@ -60,6 +64,8 @@ Install/Upgrade/Erase options:
       --ignorearch                   don't verify package architecture
       --ignoreos                     don't verify package operating system
       --ignoresize                   don't check disk space before installing
+      --noverify                     short hand for --ignorepayload
+                                     --ignoresignature
   -i, --install                      install package(s)
       --justdb                       update the database, but do not modify
                                      the filesystem
@@ -113,6 +119,8 @@ Options implemented via popt alias/exec:
       --setperms                     set permissions of files in a package
       --setugids                     set user/group ownership of files in a
                                      package
+      --setcaps                      set capabilities of files in a package
+      --restore                      restore file/directory permissions
       --conflicts                    list capabilities this package conflicts
                                      with
       --obsoletes                    list other packages removed by installing
