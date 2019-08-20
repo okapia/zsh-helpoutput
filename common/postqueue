@@ -1,1 +1,1 @@
-postqueue: fatal: usage: postqueue -f | postqueue -i queueid | postqueue -p | postqueue -s site
+postqueue: fatal: usage: postqueue -f | postqueue -i queueid | postqueue -j | postqueue -p | postqueue -s site
