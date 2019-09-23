@@ -1,0 +1,37 @@
+Usage: rpmsign [OPTION...]
+
+Signature options:
+      --addsign                  sign package(s)
+      --resign                   sign package(s) (identical to --addsign)
+      --delsign                  delete package signatures
+      --signfiles                sign package(s) files
+      --fskpath=<key>            use file signing key <key>
+      --fskpass                  prompt for file signing key password
+
+Common options for all rpm modes and executables:
+  -D, --define='MACRO EXPR'      define MACRO with value EXPR
+      --undefine=MACRO           undefine MACRO
+  -E, --eval='EXPR'              print macro expansion of EXPR
+      --target=CPU-VENDOR-OS     Specify target platform
+      --macros=<FILE:...>        read <FILE:...> instead of default file(s)
+      --load=<FILE>              load a single macro file
+      --noplugins                don't enable any plugins
+      --nodigest                 don't verify package digest(s)
+      --nosignature              don't verify package signature(s)
+      --rcfile=<FILE:...>        read <FILE:...> instead of default file(s)
+  -r, --root=ROOT                use ROOT as top level directory (default: "/")
+      --dbpath=DIRECTORY         use database in DIRECTORY
+      --querytags                display known query tags
+      --showrc                   display final rpmrc and macro configuration
+      --quiet                    provide less detailed output
+  -v, --verbose                  provide more detailed output
+      --version                  print the version of rpm being used
+
+Options implemented via popt alias/exec:
+      --key-id=<id>              key id/name to sign with
+      --digest-algo=<algorithm>   override default digest algorithm (eg
+                                 sha1/sha256)
+
+Help options:
+  -?, --help                     Show this help message
+      --usage                    Display brief usage message

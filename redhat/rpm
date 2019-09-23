@@ -30,11 +30,16 @@ Query/Verify package selection options:
       --nomanifest                   do not process non-package files as
                                      manifests
 
+Query/Verify file selection options:
+  -c, --configfiles                  only include configuration files
+  -d, --docfiles                     only include documentation files
+  -L, --licensefiles                 only include license files
+  -A, --artifactfiles                only include artifact files
+      --noghost                      exclude %%ghost files
+      --noconfig                     exclude %%config files
+      --noartifact                   exclude %%artifact files
+
 Query options (with -q or --query):
-  -c, --configfiles                  list all configuration files
-  -d, --docfiles                     list all documentation files
-  -L, --licensefiles                 list all license files
-  -A, --artifactfiles                list all artifact files
       --dump                         dump basic file information
   -l, --list                         list files in package
       --queryformat=QUERYFORMAT      use the following query format
@@ -99,6 +104,7 @@ Common options for all rpm modes and executables:
   -E, --eval='EXPR'                  print macro expansion of EXPR
       --target=CPU-VENDOR-OS         Specify target platform
       --macros=<FILE:...>            read <FILE:...> instead of default file(s)
+      --load=<FILE>                  load a single macro file
       --noplugins                    don't enable any plugins
       --nodigest                     don't verify package digest(s)
       --nosignature                  don't verify package signature(s)
