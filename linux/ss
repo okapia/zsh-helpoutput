@@ -36,6 +36,7 @@ Usage: ss [ OPTIONS ]
 
    -K, --kill          forcibly close sockets, display what was closed
    -H, --no-header     Suppress header line
+   -O, --oneline       socket's data printed on a single line
 
    -A, --query=QUERY, --socket=QUERY
        QUERY := {all|inet|tcp|udp|raw|unix|unix_dgram|unix_stream|unix_seqpacket|packet|netlink|vsock_stream|vsock_dgram|tipc}[,QUERY]
