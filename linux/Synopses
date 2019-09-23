@@ -14,7 +14,7 @@ pack | getversion
 emit | getusage
 
 cmd btrfs
-version 5.1
+version 5.2.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
@@ -61,7 +61,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 5.1
+version 5.2
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -86,7 +86,7 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd iconvconfig
-version 2.29.9000
+version 2.30.9000
 emit -V | field -1 | getversion
 emit -? | getusage
 
@@ -101,7 +101,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 190510
+version 190708
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -111,7 +111,7 @@ emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
 cmd kpartx
-version 0.8.0
+version 0.8.2
 pack | getversion
 emit | getusage
 
@@ -141,7 +141,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd man
-version 2.8.4
+version 2.8.7
 variant ! '-S subsection' --
 emit -V | field 2 | getversion
 emit -h | getusage
@@ -164,7 +164,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd nmcli
-version 1.20.0
+version 1.20.2
 subdir
 emit -v | field -1 | sed 's/-.*//' | getversion
 emit help | getusage
@@ -201,7 +201,7 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 190510
+version 190708
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
@@ -251,7 +251,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd tune2fs
-version 1.45.2
+version 1.45.3
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 

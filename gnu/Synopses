@@ -87,7 +87,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd find
-version 4.6.0
+version 4.7.0
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -110,7 +110,7 @@ emit -V | field 3 | tr -d , | getversion
 emit -h | getusage
 
 cmd gcc
-version 9.1.1
+version 9.2.1
 variant ! 'LLVM' -- --version
 emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | getversion
 emit --help | getusage
@@ -121,33 +121,33 @@ emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 
 cmd getent
-version 2.29.9000
+version 2.30.9000
 variant 'GNU' -- --version
 emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gnutls-cli
-version 3.6.8
+version 3.6.9
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-cli-debug
-version 3.6.8
+version 3.6.9
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-serv
-version 3.6.8
+version 3.6.9
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd certtool
-version 3.6.8
+version 3.6.9
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.6.8
+version 3.6.9
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -170,7 +170,7 @@ emit -V | field -1 | getversion
 emit -h | nobug | getusage
 
 cmd iconv
-version 2.29.9000
+version 2.30.9000
 variant 'GNU' -- -V
 emit -V | field -1 | getversion
 emit --help | getusage
@@ -207,7 +207,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ldd
-version 2.29.9000
+version 2.30.9000
 variant 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -409,7 +409,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd xargs
-version 4.6.0
+version 4.7.0
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage

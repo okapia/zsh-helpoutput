@@ -19,28 +19,28 @@ emit -v | field 2 | getversion
 emit -h | getusage
 
 cmd ansible
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-config
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-console
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 emit dump -h | getusage dump
 
 cmd ansible-doc
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-galaxy
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 emit info -h | getusage info
@@ -55,22 +55,22 @@ emit login -h | getusage login
 emit delete -h | getusage delete
 
 cmd ansible-inventory
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-playbook
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-pull
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd ansible-vault
-version 2.8.3
+version 2.8.5
 emit --version | field -1 | getversion
 emit -h | getusage
 emit encrypt_string -h | getusage encrypt_string
@@ -220,7 +220,7 @@ emit -v | field 2 | cut -d \( -f 1 | getversion
 emit -h | getusage
 
 cmd less
-version 550
+version 551
 emit -V | field 2 | getversion
 unset LESSOPEN
 emit -? | getusage
@@ -277,11 +277,12 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.22.0
+version 2.23.0
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
 emit help -av | getusage commands
+emit help -c | getusage config-variables
 subcmds @ -h
 
 cmd gpg
@@ -301,14 +302,14 @@ emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.61.1
+version 2.62.0
 subdir
 emit --version | getversion
 emit -h | getusage
 subcmds help @
 
 cmd irssi
-version 1.2.1
+version 1.2.2
 emit --version | field 2 | getversion
 emit --help | getusage
 
@@ -451,7 +452,7 @@ emit | field 2 | getversion
 subcmds help @
 
 cmd ruby
-version 2.6.3p62
+version 2.6.4p104
 variant -n ruby-mri
 emit --version | field 2 | getversion
 emit --help | getusage
@@ -776,25 +777,25 @@ emit --help | getusage elftoolchain
 # elfutils
 
 cmd readelf
-version 0.176
+version 0.177
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.176
+version 0.177
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
-version 0.176
+version 0.177
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd strings
-version 0.176
+version 0.177
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
