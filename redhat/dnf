@@ -49,9 +49,8 @@ repodiff                  List differences between two sets of repositories
 repograph                 Output a full package dependency graph in dot format
 repomanage                Manage a directory of rpm packages
 reposync                  download all packages from remote repo
-system-upgrade            Prepare system for upgrade to a new release
 
-Optional arguments:
+General DNF options:
   -c [config file], --config [config file]
                         config file location
   -q, --quiet           quiet operation
@@ -92,8 +91,10 @@ Optional arguments:
                         debugging output level for rpm
   -y, --assumeyes       automatically answer yes for all questions
   --assumeno            automatically answer no for all questions
-  --enablerepo [repo]
-  --disablerepo [repo]
+  --enablerepo [repo]   Enable additional repositories. List option. Supports
+                        globs, can be specified multiple times.
+  --disablerepo [repo]  Disable repositories. List option. Supports globs, can
+                        be specified multiple times.
   --repo [repo], --repoid [repo]
                         enable just specific repositories by an id or a glob,
                         can be specified multiple times
