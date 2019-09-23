@@ -1,4 +1,4 @@
-usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
+usage: btrfs [--help] [--version] [--format <format>] <group> [<group>...] <command> [<args>]
 
     btrfs subvolume create [-i <qgroupid>] [<dest>/]<name>
         Create a subvolume
@@ -89,7 +89,17 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
 
         -r|--rootid   rootid of the subvolume
         -u|--uuid     uuid of the subvolume
-
+        -b|--raw           raw numbers in bytes
+        -h|--human-readable
+                           human friendly numbers, base 1024 (default)
+        -H                 human friendly numbers, base 1000
+        --iec              use 1024 as a base (KiB, MiB, GiB, TiB)
+        --si               use 1000 as a base (kB, MB, GB, TB)
+        -k|--kbytes        show sizes in KiB, or kB with --si
+        -m|--mbytes        show sizes in MiB, or MB with --si
+        -g|--gbytes        show sizes in GiB, or GB with --si
+        -t|--tbytes        show sizes in TiB, or TB with --si
+        
         If no option is specified, subvolume at <path> will be shown, otherwise
         the rootid or uuid are resolved relative to the <path>.
 
@@ -245,6 +255,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         described by the filesystem metadata, but not present at the mount
         time will be removed. (only in degraded mode)
 
+
     btrfs device scan [-d|--all-devices] <device> [<device>...]
     btrfs device scan -u|--forget [<device>...]
         Scan or forget (unregister) devices of btrfs filesystems
@@ -371,10 +382,8 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs rescue zero-log <device>
         Clear the tree log. Usable if it's corrupted and prevents mount.
 
-
     btrfs rescue fix-device-size <device>
         Re-align device and super block sizes. Usable if newer kernel refuse to mount it due to mismatch super size
-
 
     btrfs restore [options] <device> <path> | -l <device>
         Try to restore files from a damaged filesystem (unmounted)
@@ -423,9 +432,10 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         Get the minimum size the device can be shrunk to. The
 
         device id 1 is used by default.
+
         --id DEVID   specify the device id to query
 
-    btrfs inspect-internal dump-tree [options] device
+    btrfs inspect-internal dump-tree [options] <device> [<device> ..]
         Dump tree structures from a given device
 
         Dump tree structures from a given device in textual form, expand keys to human
@@ -442,6 +452,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
                                can be specified multiple times
         -t|--tree <tree_id>    print only tree with the given id (string or number)
         --follow               use with -b, to show all children tree blocks of <block_num>
+        --noscan               do not scan the devices from the filesystem, use only the listed ones
 
     btrfs inspect-internal dump-super [options] device [device...]
         Dump superblock from a device in a textual form
@@ -451,7 +462,7 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -s|--super <super>    specify which copy to print out (values: 0, 1, 2)
         -F|--force            attempt to dump superblocks with bad magic
         --bytenr <offset>     specify alternate superblock offset
-
+        
         Deprecated syntax:
         -s <bytenr>           specify alternate superblock offset, values other than 0, 1, 2
                               will be interpreted as --bytenr for backward compatibility,
@@ -465,27 +476,39 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         -b		raw numbers in bytes
 
     btrfs property get [-t <type>] <object> [<name>]
-        Gets a property from a btrfs object.
+        Get a property value of a btrfs object
 
-        If no name is specified, all properties for the given object are
-        printed.
-        A filesystem object can be a the filesystem itself, a subvolume,
-        an inode or a device. The '-t <type>' option can be used to explicitly
+        Get a property value of a btrfs object. If no name is specified, all
+        properties for the given object are printed.
+        A filesystem object can be the filesystem itself, a subvolume,
+        an inode or a device. The option -t can be used to explicitly
         specify what type of object you meant. This is only needed when a
-        property could be set for more then one object type. Possible types
-        are s[ubvol], f[ilesystem], i[node] and d[evice].
+        property could be set for more then one object type.
+
+        Possible values for type are: inode, subvol, filesystem, device.
+        They can be abbreviated to the first letter, i/s/f/d
+        
+        -t <TYPE>       list properties for the given object type (inode, subvol,
+                        filesystem, device)
 
     btrfs property set [-t <type>] <object> <name> <value>
-        Sets a property on a btrfs object.
+        Set a property on a btrfs object
 
-        Please see the help of 'btrfs property get' for a description of
-        objects and object types.
+        Set a property on a btrfs object where object is a path to file or
+        directory and can also represent the filesystem or device based on the type
+
+        -t <TYPE>       list properties for the given object type (inode, subvol,
+                        filesystem, device)
 
     btrfs property list [-t <type>] <object>
-        Lists available properties with their descriptions for the given object.
+        Lists available properties with their descriptions for the given object
 
-        Please see the help of 'btrfs property get' for a description of
+        Lists available properties with their descriptions for the given object
+        See the help of 'btrfs property get' for a description of
         objects and object types.
+
+        -t <TYPE>       list properties for the given object type (inode, subvol,
+                        filesystem, device)
 
     btrfs send [-ve] [-p <parent>] [-c <clone-src>] [-f <outfile>] <subvol> [<subvol>...]
         Send the subvolume(s) to stdout.
@@ -501,7 +524,6 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
         '-p <parent>' option when '-c <clone-src>' options are given, in
         which case 'btrfs send' will determine a suitable parent among the
         clone sources itself.
-        
 
         -e               If sending multiple subvols at once, use the new
                          format and omit the end-cmd between the subvols.
@@ -648,10 +670,11 @@ usage: btrfs [--help] [--version] <group> [<group>...] <command> [<args>]
     btrfs replace cancel <mount_point>
         Cancel a running device replace operation.
 
-    btrfs help [--full]
+    btrfs help [--full] [--box]
         Display help information
 
         --full     display detailed help on every command
+        --box      show list of built-in tools (busybox style)
 
     btrfs version
         Display btrfs-progs version
