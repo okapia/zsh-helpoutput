@@ -1,4 +1,6 @@
-usage : kpartx [-a|-d|-l] [-f] [-v] wholedisk
+multipath-tools v0.8.2 (07/03, 2019)
+Usage:
+  kpartx [-a|-d|-u|-l] [-r] [-p] [-f] [-g] [-s|-n] [-v] wholedisk
 	-a add partition devmappings
 	-r devmappings will be readonly
 	-d del partition devmappings
@@ -9,4 +11,4 @@ usage : kpartx [-a|-d|-l] [-f] [-v] wholedisk
 	-f force devmap create
 	-v verbose
 	-n nosync mode. Return before the partitions are created
-	-s sync mode. Don't return until the partitions are created. Default.
+	-s sync mode (Default). Don't return until the partitions are created
