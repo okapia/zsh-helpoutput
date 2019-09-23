@@ -1,7 +1,7 @@
 usage: git commit-graph [--object-dir <objdir>]
    or: git commit-graph read [--object-dir <objdir>]
-   or: git commit-graph verify [--object-dir <objdir>]
-   or: git commit-graph write [--object-dir <objdir>] [--append] [--reachable|--stdin-packs|--stdin-commits]
+   or: git commit-graph verify [--object-dir <objdir>] [--shallow]
+   or: git commit-graph write [--object-dir <objdir>] [--append|--split] [--reachable|--stdin-packs|--stdin-commits] <split options>
 
     --object-dir <dir>    The object directory to store the graph
 

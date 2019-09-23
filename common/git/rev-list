@@ -26,6 +26,7 @@ usage: git rev-list [OPTION] <commit-id>... [ -- paths... ]
     --objects | --objects-edge
     --unpacked
     --header | --pretty
+    --[no-]object-names
     --abbrev=<n> | --no-abbrev
     --abbrev-commit
     --left-right

@@ -18,6 +18,9 @@ usage: git blame [<options>] [<rev-opts>] [<rev>] [--] <file>
     -s                    Suppress author name and timestamp (Default: off)
     -e, --show-email      Show author email instead of name (Default: off)
     -w                    Ignore whitespace differences
+    --ignore-rev <rev>    Ignore <rev> when blaming
+    --ignore-revs-file <file>
+                          Ignore revisions from <file>
     --color-lines         color redundant metadata from previous line differently
     --color-by-age        color lines by age
     --indent-heuristic    Use an experimental heuristic to improve diffs

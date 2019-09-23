@@ -24,6 +24,7 @@ usage: git merge [<options>] [<commit>...]
     -v, --verbose         be more verbose
     -q, --quiet           be more quiet
     --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
     --continue            continue the current in-progress merge
     --allow-unrelated-histories
                           allow merging unrelated histories

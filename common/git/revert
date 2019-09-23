@@ -4,6 +4,7 @@ usage: git revert [<options>] <commit-ish>...
     --quit                end revert or cherry-pick sequence
     --continue            resume revert or cherry-pick sequence
     --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
     --cleanup <mode>      how to strip spaces and #comments from message
     -n, --no-commit       don't automatically commit
     -e, --edit            edit the commit message

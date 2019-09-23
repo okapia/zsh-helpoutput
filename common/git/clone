@@ -42,4 +42,5 @@ usage: git clone [<options>] [--] <repo> [<dir>]
     -4, --ipv4            use IPv4 addresses only
     -6, --ipv6            use IPv6 addresses only
     --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
 

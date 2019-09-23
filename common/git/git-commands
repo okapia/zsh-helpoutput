@@ -31,6 +31,7 @@ Main Porcelain Commands
    range-diff           Compare two commit ranges (e.g. two versions of a branch)
    rebase               Reapply commits on top of another base tip
    reset                Reset current HEAD to the specified state
+   restore              Restore working tree files
    revert               Revert some existing commits
    rm                   Remove files from the working tree and from the index
    shortlog             Summarize 'git log' output
@@ -38,6 +39,7 @@ Main Porcelain Commands
    stash                Stash the changes in a dirty working directory away
    status               Show the working tree status
    submodule            Initialize, update or inspect submodules
+   switch               Switch branches
    tag                  Create, list, delete or verify a tag object signed with GPG
    worktree             Manage multiple working trees
 
@@ -71,12 +73,10 @@ Ancillary Commands / Interrogators
    whatchanged          Show logs with difference each commit introduces
 
 Interacting with Others
-   archimport           Import a GNU Arch repository into Git
    cvsexportcommit      Export a single commit to a CVS checkout
    cvsimport            Salvage your data out of another SCM people love to hate
    cvsserver            A CVS server emulator for Git
    imap-send            Send a collection of patches from stdin to an IMAP folder
-   p4                   Import from and submit to Perforce repositories
    quiltimport          Applies a quilt patchset onto the current branch
    request-pull         Generates a summary of pending changes
    send-email           Send a collection of patches as emails
@@ -142,7 +142,7 @@ Low-level Commands / Internal Helpers
    credential-cache     Helper to temporarily store passwords in memory
    credential-store     Helper to store credentials on disk
    fmt-merge-msg        Produce a merge commit message
-   interpret-trailers   add or parse structured information in commit messages
+   interpret-trailers   Add or parse structured information in commit messages
    mailinfo             Extracts patch and authorship from a single e-mail message
    mailsplit            Simple UNIX mbox splitter program
    merge-one-file       The standard helper program to use with git-merge-index

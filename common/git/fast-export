@@ -4,6 +4,7 @@ usage: git fast-export [rev-list-opts]
     --signed-tags <mode>  select handling of signed tags
     --tag-of-filtered-object <mode>
                           select handling of tags that tag filtered objects
+    --reencode <mode>     select handling of commit messages in an alternate encoding
     --export-marks <file>
                           Dump marks to this file
     --import-marks <file>

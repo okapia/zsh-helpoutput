@@ -46,4 +46,6 @@ Options related to fetching
     --refmap <refmap>     specify fetch refmap
     -4, --ipv4            use IPv4 addresses only
     -6, --ipv6            use IPv6 addresses only
+    --show-forced-updates
+                          check for forced-updates on all updated branches
 

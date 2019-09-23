@@ -1,4 +1,5 @@
-usage: git multi-pack-index [--object-dir=<dir>] (write|verify)
+usage: git multi-pack-index [--object-dir=<dir>] (write|verify|expire|repack --batch-size=<size>)
 
     --object-dir <file>   object directory containing set of packfile and pack-index pairs
+    --batch-size <n>      during repack, collect pack-files of smaller size into a batch that is larger than this size
 

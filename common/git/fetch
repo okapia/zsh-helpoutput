@@ -37,4 +37,7 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     --negotiation-tip <revision>
                           report that we have only objects reachable from this object
     --filter <args>       object filtering
+    --auto-gc             run 'gc --auto' after fetching
+    --show-forced-updates
+                          check for forced-updates on all updated branches
 
