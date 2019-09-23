@@ -1,4 +1,4 @@
-Usage: gxargs [OPTION]... COMMAND [INITIAL-ARGS]...
+Usage: xargs [OPTION]... COMMAND [INITIAL-ARGS]...
 Run COMMAND with arguments INITIAL-ARGS and more arguments read from input.
 
 Mandatory and optional arguments to long options are also
@@ -24,6 +24,9 @@ mandatory or optional for the corresponding short option.
   -l[MAX-LINES]                similar to -L but defaults to at most one non-
                                  blank input line if MAX-LINES is not specified
   -n, --max-args=MAX-ARGS      use at most MAX-ARGS arguments per command line
+  -o, --open-tty               Reopen stdin as /dev/tty in the child process
+                                 before executing the command; useful to run an
+                                 interactive application.
   -P, --max-procs=MAX-PROCS    run at most MAX-PROCS processes at a time
   -p, --interactive            prompt before running commands
       --process-slot-var=VAR   set environment variable VAR in child processes
@@ -37,3 +40,8 @@ mandatory or optional for the corresponding short option.
       --help                   display this help and exit
       --version                output version information and exit
 
+Please see also the documentation at http://www.gnu.org/software/findutils/.
+You can report (and track progress on fixing) bugs in the "xargs"
+program via the GNU findutils bug-reporting page at
+https://savannah.gnu.org/bugs/?group=findutils or, if
+you have no web access, by sending email to <bug-findutils@gnu.org>.
