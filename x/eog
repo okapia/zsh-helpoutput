@@ -1,0 +1,27 @@
+Usage:
+  eog [OPTION…] [FILE…]
+
+Help Options:
+  -h, --help                Show help options
+  --help-all                Show all help options
+  --help-gtk                Show GTK+ Options
+
+GTK+ Options
+  --class=CLASS             Program class as used by the window manager
+  --name=NAME               Program name as used by the window manager
+  --gdk-debug=FLAGS         GDK debugging flags to set
+  --gdk-no-debug=FLAGS      GDK debugging flags to unset
+  --gtk-module=MODULES      Load additional GTK+ modules
+  --g-fatal-warnings        Make all warnings fatal
+  --gtk-debug=FLAGS         GTK+ debugging flags to set
+  --gtk-no-debug=FLAGS      GTK+ debugging flags to unset
+
+Application Options:
+  -f, --fullscreen          Open in fullscreen mode
+  -g, --disable-gallery     Disable image gallery
+  -s, --slide-show          Open in slideshow mode
+  -n, --new-instance        Start a new instance instead of reusing an existing one
+  -w, --single-window       Open in a single window, if multiple windows are open the first one is used
+  --version                 Show the application’s version
+  --display=DISPLAY         X display to use
+
