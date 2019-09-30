@@ -16,6 +16,12 @@ variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
 
+cmd chgrp
+version x
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd chown
 version 8.31
 variant -g 'GNU' -- --version

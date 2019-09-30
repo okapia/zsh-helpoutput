@@ -110,6 +110,11 @@ version 1.8.3
 emit -V | field 2 | tr -d v | getversion
 emit -h | getusage
 
+cmd killall
+version 23.1
+emit -V | field -1 | getversion
+emit | getusage
+
 cmd kpartx
 version 0.8.2
 pack | getversion

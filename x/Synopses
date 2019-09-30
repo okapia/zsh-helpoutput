@@ -3,6 +3,11 @@ version 1.21.1
 emit -v | line 1 | getversion
 emit -h | getusage
 
+cmd eog
+version 3.28.4
+emit --version | field -1 | getversion
+emit --help-all | getusage
+
 cmd evince
 version 3.32.0
 emit --version | field -1 | getversion
@@ -39,15 +44,30 @@ version 0.13
 emit -version | field -1 | getversion
 emit -h | getusage
 
+cmd xdvi
+version 22.87.03
+emit -version | field 3 | getversion
+emit -help | getusage
+
 cmd xfig
 version 3.2.5c
 emit -v | sed 's/ patchlevel /./' | field 2 | getversion
 emit -h | getusage
 
 cmd xfreerdp
-version 1.0.2
-emit --version | field -1 | getversion
+version 2.0.0
+emit --version | guess | getversion
 emit -h | getusage
+
+cmd xmodmap
+version 1.0.9
+emit -version | field -1 | getversion
+emit -help | getusage
+
+cmd xrandr
+version 1.5.0
+emit --version | field -1 | getversion
+emit --help | getusage
 
 cmd xsetroot
 version 1.1.2
@@ -55,9 +75,9 @@ emit -version | field -1 | getversion
 emit -help | getusage
 
 cmd xterm
-version 7.6.0
+version 331
 [[ $OSTYPE = (solaris|(net|open)bsd)* ]] && (( _present=0 ))
-emit -v | tr '(' ' ' | field 2 | getversion
+emit -v | tr '()' ' ' | field 2 | getversion
 emit -h | getusage
 
 cmd zeal
