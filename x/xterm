@@ -1,5 +1,4 @@
-xterm: ambiguous option "-hold" vs "-hm"
-X.Org 7.6.0(295) usage:
+XTerm(331) usage:
     xterm [-options ...] [-e command args]
 
 where options include:
@@ -11,6 +10,7 @@ where options include:
     -/+ai                        turn off/on active icon
     -/+aw                        turn on/off auto wraparound
     -b number                    internal border in pixels
+    -baudrate rate               set line-speed (default 38400)
     -/+bc                        turn on/off text cursor blinking
     -bcf milliseconds            time text cursor is off when blinking
     -bcn milliseconds            time text cursor is on when blinking
@@ -52,6 +52,7 @@ where options include:
     -/+ie                        turn on/off initialization of 'erase' from pty
     -/+im                        use insert mode for TERMCAP
     -into windowId               use the window id given to -into as the parent window rather than the default root window
+    -/+itc                       turn off/on display of italic as color
     -/+j                         turn on/off jump scroll
     -/+k8                        turn on/off C1-printable classification
     -kt keyboardtype             set keyboard type: tcap sun vt220
@@ -73,6 +74,9 @@ where options include:
     -/+nul                       turn off/on display of underlining
     -/+pc                        turn on/off PC-style bold colors
     -/+pob                       turn on/off pop on bell
+    -report-charclass            report "charClass" after initialization
+    -report-colors               report colors as they are allocated
+    -report-fonts                report fonts as loaded to stdout
     -rightbar                    force scrollbar right (default left)
     -/+rv                        turn on/off reverse video
     -/+rvc                       turn off/on display of reverse as color
@@ -83,6 +87,7 @@ where options include:
     -selbg color                 selection background color
     -selfg color                 selection foreground color
     -/+sf                        turn on/off Sun Function Key escape codes
+    -sh number                   scale line-height values by the given number
     -/+si                        turn on/off scroll-on-tty-output inhibit
     -/+sk                        turn on/off scroll-on-keypress
     -sl number                   number of scrolled lines to save
