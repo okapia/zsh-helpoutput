@@ -1,0 +1,17 @@
+usage:  xmodmap [-options ...] [filename]
+
+where options include:
+    -display host:dpy            X server to use
+    -verbose, -quiet             turn logging on or off
+    -n                           don't execute changes, just show like make
+    -e expression                execute string
+    -pm                          print modifier map
+    -pk                          print keymap table
+    -pke                         print keymap table as expressions
+    -pp                          print pointer map
+    -help                        print this usage message
+    -grammar                     print out short help on allowable input
+    -version                     print program version
+    -                            read standard input
+
+
