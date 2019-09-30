@@ -55,3 +55,7 @@ usage: xrandr [options]
   --listproviders
   --setprovideroutputsource <prov-xid> <source-xid>
   --setprovideroffloadsink <prov-xid> <sink-xid>
+  --listmonitors
+  --listactivemonitors
+  --setmonitor <name> {auto|<w>/<mmw>x<h>/<mmh>+<x>+<y>} {none|<output>,<output>,...}
+  --delmonitor <name>
