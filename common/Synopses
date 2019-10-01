@@ -365,6 +365,11 @@ variant -n nc 'GNU netcat' -- -h
 emit -V | field -1 | getversion
 emit -h | getusage gnu
 
+cmd pv
+version 1.6.6
+emit -V | field 2 | getversion
+emit -h | getusage
+
 cmd pandoc
 version 2.2.1
 emit -v | field 2 | getversion
