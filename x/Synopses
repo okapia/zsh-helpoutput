@@ -60,7 +60,7 @@ emit --version | guess | getversion
 emit -h | getusage
 
 cmd xmodmap
-version 1.0.9
+version 1.0.10
 emit -version | field -1 | getversion
 emit -help | getusage
 

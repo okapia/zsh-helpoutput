@@ -122,7 +122,7 @@ emit --version | sed 's/ [20][012][0-9][0-9][0-1][0-9][0-3][0-9]//' | guess | ge
 emit --help | getusage
 
 cmd gdb
-version 8.2.50.20190120
+version 8.3
 emit --version | tr -d '()' | guess | getversion
 emit -h | nobug | grep -v 'user-specific init file' | getusage
 

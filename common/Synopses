@@ -345,7 +345,7 @@ emit --version | field 2 | getversion
 emit --help | getusage
 
 cmd mpc
-version 0.31
+version 0.32
 emit help | line 2 | field -1 | getversion
 emit help | getusage
 
@@ -803,47 +803,42 @@ emit --help | nobug | getusage
 # ImageMagick
 
 cmd animate
-version 6.9.10
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd composite
-version 6.9.10
-emit -version | field 3 | sed 's/-.*//' | getversion
-emit -help | getusage
-
-cmd combine
-version 6.7.2
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd convert
-version 6.9.10
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd display
-version 6.9.10
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd identify
-version 6.9.10
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd import
-version 6.9.10
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd mogrify
-version 6.9.10
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
 cmd montage
-version 6.9.10
+version 7.0.8
 emit -version | field 3 | sed 's/-.*//' | getversion
 emit -help | getusage
 
