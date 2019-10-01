@@ -1,36 +1,45 @@
-usage: strace [-CdffhiqrtttTvVwxxy] [-I n] [-e expr]...
-              [-a column] [-o file] [-s strsize] [-P path]...
-              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
-   or: strace -c[dfw] [-I n] [-e expr]... [-O overhead] [-S sortby]
-              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+usage: strace [-ACdffhikqqrtttTvVwxxyyzZ] [-I n] [-b execve] [-e expr]...
+              [-a column] [-o file] [-s strsize] [-X format] [-P path]...
+              [-p pid]... [--seccomp-bpf]
+	      { -p pid | [-D] [-E var=val]... [-u username] PROG [ARGS] }
+   or: strace -c[dfwzZ] [-I n] [-b execve] [-e expr]... [-O overhead]
+              [-S sortby] [-P path]... [-p pid]... [--seccomp-bpf]
+              { -p pid | [-D] [-E var=val]... [-u username] PROG [ARGS] }
 
 Output format:
+  -A             open the file provided in the -o option in append mode
   -a column      alignment COLUMN for printing syscall results (default 40)
   -i             print instruction pointer at time of syscall
   -k             obtain stack trace between each syscall
   -o file        send trace output to FILE instead of stderr
   -q             suppress messages about attaching, detaching, etc.
+  -qq            suppress messages about process exit status as well.
   -r             print relative timestamp
   -s strsize     limit length of print strings to STRSIZE chars (default 32)
   -t             print absolute timestamp
   -tt            print absolute timestamp with usecs
   -T             print time spent in each syscall
+  -v             verbose mode: print entities unabbreviated
   -x             print non-ascii strings in hex
   -xx            print all strings in hex
   -X format      set the format for printing of named constants and flags
   -y             print paths associated with file descriptor arguments
-  -yy            print protocol specific information associated with socket file descriptors
+  -yy            print protocol specific information associated with socket
+                 file descriptors
 
 Statistics:
-  -c             count time, calls, and errors for each syscall and report summary
+  -c             count time, calls, and errors for each syscall and report
+                 summary
   -C             like -c but also print regular output
   -O overhead    set overhead for tracing syscalls to OVERHEAD usecs
-  -S sortby      sort syscall counts by: time, calls, name, nothing (default time)
+  -S sortby      sort syscall counts by: time, calls, errors, name, nothing
+                 (default time)
   -w             summarise syscall latency (default is system time)
 
 Filtering:
   -e expr        a qualifying expression: option=[!]all or option=[!]val1[,val2]...
-     options:    trace, abbrev, verbose, raw, signal, read, write, fault, inject, status, kvm
+     options:    trace, abbrev, verbose, raw, signal, read, write, fault,
+                 inject, status, kvm
   -P path        trace accesses to path
   -z             print only syscalls that returned without an error code
   -Z             print only syscalls that returned with an error code
@@ -54,7 +63,7 @@ Startup:
   -u username    run command as username handling setuid and/or setgid
 
 Miscellaneous:
+  --seccomp-bpf  enable seccomp-bpf filtering
   -d             enable debug output to stderr
-  -v             verbose mode: print unabbreviated argv, stat, termios, etc. args
-  -h             print help message
-  -V             print version
+  -h, --help     print help message
+  -V, --version  print version
