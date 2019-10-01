@@ -1,0 +1,71 @@
+cargo-fix 
+Automatically fix lint warnings reported by rustc
+
+USAGE:
+    cargo fix [OPTIONS]
+
+OPTIONS:
+    -q, --quiet                     No output printed to stdout
+    -p, --package <SPEC>...         Package(s) to fix
+        --all                       Fix all packages in the workspace
+        --exclude <SPEC>...         Exclude packages from the fixes
+    -j, --jobs <N>                  Number of parallel jobs, defaults to # of CPUs
+        --lib                       Fix only this package's library
+        --bin <NAME>...             Fix only the specified binary
+        --bins                      Fix all binaries
+        --example <NAME>...         Fix only the specified example
+        --examples                  Fix all examples
+        --test <NAME>...            Fix only the specified test target
+        --tests                     Fix all tests
+        --bench <NAME>...           Fix only the specified bench target
+        --benches                   Fix all benches
+        --all-targets               Fix all targets (default)
+        --release                   Fix artifacts in release mode, with optimizations
+        --profile <PROFILE>         Profile to build the selected target for
+        --features <FEATURES>       Space-separated list of features to activate
+        --all-features              Activate all available features
+        --no-default-features       Do not activate the `default` feature
+        --target <TRIPLE>           Fix for the target triple
+        --target-dir <DIRECTORY>    Directory for all generated artifacts
+        --manifest-path <PATH>      Path to Cargo.toml
+        --message-format <FMT>      Error format [default: human]  [possible values: human, json, short]
+        --broken-code               Fix code even if it already has compiler errors
+        --edition                   Fix in preparation for the next edition
+        --edition-idioms            Fix warnings to migrate to the idioms of an edition
+        --allow-no-vcs              Fix code even if a VCS was not detected
+        --allow-dirty               Fix code even if the working directory is dirty
+        --allow-staged              Fix code even if the working directory has staged changes
+    -v, --verbose                   Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>              Coloring: auto, always, never
+        --frozen                    Require Cargo.lock and cache are up to date
+        --locked                    Require Cargo.lock is up to date
+    -Z <FLAG>...                    Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                      Prints help information
+
+This Cargo subcommand will automatically take rustc's suggestions from
+diagnostics like warnings and apply them to your source code. This is intended
+to help automate tasks that rustc itself already knows how to tell you to fix!
+The `cargo fix` subcommand is also being developed for the Rust 2018 edition
+to provide code the ability to easily opt-in to the new edition without having
+to worry about any breakage.
+
+Executing `cargo fix` will under the hood execute `cargo check`. Any warnings
+applicable to your crate will be automatically fixed (if possible) and all
+remaining warnings will be displayed when the check process is finished. For
+example if you'd like to prepare for the 2018 edition, you can do so by
+executing:
+
+    cargo fix --edition
+
+which behaves the same as `cargo check --all-targets`. Similarly if you'd like
+to fix code for different platforms you can do:
+
+    cargo fix --edition --target x86_64-pc-windows-gnu
+
+or if your crate has optional features:
+
+    cargo fix --edition --no-default-features --features foo
+
+If you encounter any problems with `cargo fix` or otherwise have any questions
+or feature requests please don't hesitate to file an issue at
+https://github.com/rust-lang/cargo

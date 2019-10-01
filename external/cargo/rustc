@@ -1,36 +1,47 @@
+cargo-rustc 
 Compile a package and all of its dependencies
 
-Usage:
-    cargo rustc [options] [--] [<opts>...]
+USAGE:
+    cargo rustc [OPTIONS] [--] [args]...
 
-Options:
-    -h, --help               Print this message
-    -p SPEC, --package SPEC  Package to build
-    -j N, --jobs N           Number of parallel jobs, defaults to # of CPUs
-    --lib                    Build only this package's library
-    --bin NAME               Build only the specified binary
-    --example NAME           Build only the specified example
-    --test NAME              Build only the specified test target
-    --bench NAME             Build only the specified benchmark target
-    --release                Build artifacts in release mode, with optimizations
-    --profile PROFILE        Profile to build the selected target for
-    --features FEATURES      Features to compile for the package
-    --all-features           Build all available features
-    --no-default-features    Do not compile default features for the package
-    --target TRIPLE          Target triple which compiles will be for
-    --manifest-path PATH     Path to the manifest to fetch dependencies for
-    -v, --verbose ...        Use verbose output
-    -q, --quiet              No output printed to stdout
-    --color WHEN             Coloring: auto, always, never
-    --message-format FMT     Error format: human, json [default: human]
-    --frozen                 Require Cargo.lock and cache are up to date
-    --locked                 Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                     No output printed to stdout
+    -p, --package <SPEC>            Package to build
+    -j, --jobs <N>                  Number of parallel jobs, defaults to # of CPUs
+        --lib                       Build only this package's library
+        --bin <NAME>...             Build only the specified binary
+        --bins                      Build all binaries
+        --example <NAME>...         Build only the specified example
+        --examples                  Build all examples
+        --test <NAME>...            Build only the specified test target
+        --tests                     Build all tests
+        --bench <NAME>...           Build only the specified bench target
+        --benches                   Build all benches
+        --all-targets               Build all targets
+        --release                   Build artifacts in release mode, with optimizations
+        --profile <PROFILE>         Profile to build the selected target for
+        --features <FEATURES>       Space-separated list of features to activate
+        --all-features              Activate all available features
+        --no-default-features       Do not activate the `default` feature
+        --target <TRIPLE>           Target triple which compiles will be for
+        --target-dir <DIRECTORY>    Directory for all generated artifacts
+        --manifest-path <PATH>      Path to Cargo.toml
+        --message-format <FMT>      Error format [default: human]  [possible values: human, json, short]
+    -v, --verbose                   Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>              Coloring: auto, always, never
+        --frozen                    Require Cargo.lock and cache are up to date
+        --locked                    Require Cargo.lock is up to date
+    -Z <FLAG>...                    Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                      Prints help information
+
+ARGS:
+    <args>...    
 
 The specified target for the current package (or package specified by SPEC if
 provided) will be compiled along with all of its dependencies. The specified
-<opts>... will all be passed to the final compiler invocation, not any of the
+<args>... will all be passed to the final compiler invocation, not any of the
 dependencies. Note that the compiler will still unconditionally receive
-arguments such as -L, --extern, and --crate-type, and the specified <opts>...
+arguments such as -L, --extern, and --crate-type, and the specified <args>...
 will simply be added to the compiler invocation.
 
 This command requires that only one target is being compiled. If more than one

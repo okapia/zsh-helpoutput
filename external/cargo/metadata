@@ -1,21 +1,21 @@
-Output the resolved dependencies of a project, the concrete used versions
-including overrides, in machine-readable format.
+cargo-metadata 
+Output the resolved dependencies of a package, the concrete used versions including overrides, in machine-readable
+format
 
-Usage:
-    cargo metadata [options]
+USAGE:
+    cargo metadata [OPTIONS]
 
-Options:
-    -h, --help                 Print this message
-    --features FEATURES        Space-separated list of features
-    --all-features             Build all available features
-    --no-default-features      Do not include the `default` feature
-    --no-deps                  Output information only about the root package
-                               and don't fetch dependencies.
-    --manifest-path PATH       Path to the manifest
-    --format-version VERSION   Format version [default: 1]
-                               Valid values: 1
-    -v, --verbose ...          Use verbose output
-    -q, --quiet                No output printed to stdout
-    --color WHEN               Coloring: auto, always, never
-    --frozen                   Require Cargo.lock and cache are up to date
-    --locked                   Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                       No output printed to stdout
+        --features <FEATURES>         Space-separated list of features to activate
+        --all-features                Activate all available features
+        --no-default-features         Do not activate the `default` feature
+        --no-deps                     Output information only about the root package and don't fetch dependencies
+        --manifest-path <PATH>        Path to Cargo.toml
+        --format-version <VERSION>    Format version [possible values: 1]
+    -v, --verbose                     Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>                Coloring: auto, always, never
+        --frozen                      Require Cargo.lock and cache are up to date
+        --locked                      Require Cargo.lock is up to date
+    -Z <FLAG>...                      Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                        Prints help information

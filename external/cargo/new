@@ -1,19 +1,25 @@
+cargo-new 
 Create a new cargo package at <path>
 
-Usage:
-    cargo new [options] <path>
-    cargo new -h | --help
+USAGE:
+    cargo new [OPTIONS] <path>
 
-Options:
-    -h, --help          Print this message
-    --vcs VCS           Initialize a new repository for the given version
-                        control system (git or hg) or do not initialize any version
-                        control at all (none) overriding a global configuration.
-    --bin               Use a binary (application) template
-    --lib               Use a library template
-    --name NAME         Set the resulting package name
-    -v, --verbose ...   Use verbose output
-    -q, --quiet         No output printed to stdout
-    --color WHEN        Coloring: auto, always, never
-    --frozen            Require Cargo.lock and cache are up to date
-    --locked            Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                  No output printed to stdout
+        --registry <REGISTRY>    Registry to use
+        --vcs <VCS>              Initialize a new repository for the given version control system (git, hg, pijul, or
+                                 fossil) or do not initialize any version control at all (none), overriding a global
+                                 configuration. [possible values: git, hg, pijul, fossil, none]
+        --bin                    Use a binary (application) template [default]
+        --lib                    Use a library template
+        --edition <YEAR>         Edition to set for the crate generated [possible values: 2015, 2018]
+        --name <NAME>            Set the resulting package name, defaults to the directory name
+    -v, --verbose                Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>           Coloring: auto, always, never
+        --frozen                 Require Cargo.lock and cache are up to date
+        --locked                 Require Cargo.lock is up to date
+    -Z <FLAG>...                 Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                   Prints help information
+
+ARGS:
+    <path>    

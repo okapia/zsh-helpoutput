@@ -1,34 +1,45 @@
+cargo-build 
 Compile a local package and all of its dependencies
 
-Usage:
-    cargo build [options]
+USAGE:
+    cargo build [OPTIONS]
 
-Options:
-    -h, --help                   Print this message
-    -p SPEC, --package SPEC ...  Package to build
-    -j N, --jobs N               Number of parallel jobs, defaults to # of CPUs
-    --lib                        Build only this package's library
-    --bin NAME                   Build only the specified binary
-    --example NAME               Build only the specified example
-    --test NAME                  Build only the specified test target
-    --bench NAME                 Build only the specified benchmark target
-    --release                    Build artifacts in release mode, with optimizations
-    --features FEATURES          Space-separated list of features to also build
-    --all-features               Build all available features
-    --no-default-features        Do not build the `default` feature
-    --target TRIPLE              Build for the target triple
-    --manifest-path PATH         Path to the manifest to compile
-    -v, --verbose ...            Use verbose output
-    -q, --quiet                  No output printed to stdout
-    --color WHEN                 Coloring: auto, always, never
-    --message-format FMT         Error format: human, json [default: human]
-    --frozen                     Require Cargo.lock and cache are up to date
-    --locked                     Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                     No output printed to stdout
+    -p, --package <SPEC>...         Package to build (see `cargo help pkgid`)
+        --all                       Build all packages in the workspace
+        --exclude <SPEC>...         Exclude packages from the build
+    -j, --jobs <N>                  Number of parallel jobs, defaults to # of CPUs
+        --lib                       Build only this package's library
+        --bin <NAME>...             Build only the specified binary
+        --bins                      Build all binaries
+        --example <NAME>...         Build only the specified example
+        --examples                  Build all examples
+        --test <NAME>...            Build only the specified test target
+        --tests                     Build all tests
+        --bench <NAME>...           Build only the specified bench target
+        --benches                   Build all benches
+        --all-targets               Build all targets
+        --release                   Build artifacts in release mode, with optimizations
+        --features <FEATURES>       Space-separated list of features to activate
+        --all-features              Activate all available features
+        --no-default-features       Do not activate the `default` feature
+        --target <TRIPLE>           Build for the target triple
+        --target-dir <DIRECTORY>    Directory for all generated artifacts
+        --out-dir <PATH>            Copy final artifacts to this directory (unstable)
+        --manifest-path <PATH>      Path to Cargo.toml
+        --message-format <FMT>      Error format [default: human]  [possible values: human, json, short]
+        --build-plan                Output the build plan in JSON (unstable)
+    -v, --verbose                   Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>              Coloring: auto, always, never
+        --frozen                    Require Cargo.lock and cache are up to date
+        --locked                    Require Cargo.lock is up to date
+    -Z <FLAG>...                    Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                      Prints help information
 
-If the --package argument is given, then SPEC is a package id specification
-which indicates which package should be built. If it is not given, then the
-current package is built. For more information on SPEC and its format, see the
-`cargo help pkgid` command.
+All packages in the workspace are built if the `--all` flag is supplied. The
+`--all` flag is automatically assumed for a virtual manifest.
+Note that `--exclude` has to be specified in conjunction with the `--all` flag.
 
 Compilation can be configured via the use of profiles which are configured in
 the manifest. The default profile for this command is `dev`, but passing

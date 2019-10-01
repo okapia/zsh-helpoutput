@@ -1,20 +1,25 @@
+cargo-uninstall 
 Remove a Rust binary
 
-Usage:
-    cargo uninstall [options] <spec>
-    cargo uninstall (-h | --help)
+USAGE:
+    cargo uninstall [OPTIONS] [--] [spec]...
 
-Options:
-    -h, --help                Print this message
-    --root DIR                Directory to uninstall packages from
-    --bin NAME                Only uninstall the binary NAME
-    -v, --verbose ...         Use verbose output
-    -q, --quiet               Less output printed to stdout
-    --color WHEN              Coloring: auto, always, never
-    --frozen                  Require Cargo.lock and cache are up to date
-    --locked                  Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                No output printed to stdout
+    -p, --package <SPEC>...    Package to uninstall
+        --bin <NAME>...        Only uninstall the binary NAME
+        --root <DIR>           Directory to uninstall packages from
+    -v, --verbose              Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>         Coloring: auto, always, never
+        --frozen               Require Cargo.lock and cache are up to date
+        --locked               Require Cargo.lock is up to date
+    -Z <FLAG>...               Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                 Prints help information
 
-The argument SPEC is a package id specification (see `cargo help pkgid`) to
+ARGS:
+    <spec>...    
+
+The argument SPEC is a package ID specification (see `cargo help pkgid`) to
 specify which crate should be uninstalled. By default all binaries are
 uninstalled for a crate but the `--bin` and `--example` flags can be used to
 only uninstall particular binaries.

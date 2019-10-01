@@ -1,19 +1,24 @@
+cargo-pkgid 
 Print a fully qualified package specification
 
-Usage:
-    cargo pkgid [options] [<spec>]
+USAGE:
+    cargo pkgid [OPTIONS] [--] [spec]
 
-Options:
-    -h, --help               Print this message
-    -p SPEC, --package SPEC  Argument to get the package id specifier for
-    --manifest-path PATH     Path to the manifest to the package to clean
-    -v, --verbose ...        Use verbose output
-    -q, --quiet              No output printed to stdout
-    --color WHEN             Coloring: auto, always, never
-    --frozen                 Require Cargo.lock and cache are up to date
-    --locked                 Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                   No output printed to stdout
+    -p, --package <SPEC>          Argument to get the package ID specifier for
+        --manifest-path <PATH>    Path to Cargo.toml
+    -v, --verbose                 Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>            Coloring: auto, always, never
+        --frozen                  Require Cargo.lock and cache are up to date
+        --locked                  Require Cargo.lock is up to date
+    -Z <FLAG>...                  Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                    Prints help information
 
-Given a <spec> argument, print out the fully qualified package id specifier.
+ARGS:
+    <spec>    
+
+Given a <spec> argument, print out the fully qualified package ID specifier.
 This command will generate an error if <spec> is ambiguous as to which package
 it refers to in the dependency graph. If no <spec> is given, then the pkgid for
 the local package is printed.
@@ -30,4 +35,4 @@ Example Package IDs
      crates.io/foo                | foo    | *         | *://crates.io/foo
      crates.io/foo#1.2.3          | foo    | 1.2.3     | *://crates.io/foo
      crates.io/bar#foo:1.2.3      | foo    | 1.2.3     | *://crates.io/bar
-     http://crates.io/foo#1.2.3   | foo    | 1.2.3     | http://crates.io/foo
+     https://crates.io/foo#1.2.3  | foo    | 1.2.3     | https://crates.io/foo

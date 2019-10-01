@@ -1,14 +1,15 @@
+cargo-verify-project 
 Check correctness of crate manifest
 
-Usage:
-    cargo verify-project [options]
-    cargo verify-project -h | --help
+USAGE:
+    cargo verify-project [OPTIONS]
 
-Options:
-    -h, --help              Print this message
-    --manifest-path PATH    Path to the manifest to verify
-    -v, --verbose ...       Use verbose output
-    -q, --quiet             No output printed to stdout
-    --color WHEN            Coloring: auto, always, never
-    --frozen                Require Cargo.lock and cache are up to date
-    --locked                Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                   No output printed to stdout
+        --manifest-path <PATH>    Path to Cargo.toml
+    -v, --verbose                 Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>            Coloring: auto, always, never
+        --frozen                  Require Cargo.lock and cache are up to date
+        --locked                  Require Cargo.lock is up to date
+    -Z <FLAG>...                  Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                    Prints help information

@@ -1,19 +1,27 @@
+cargo-publish 
 Upload a package to the registry
 
-Usage:
-    cargo publish [options]
+USAGE:
+    cargo publish [OPTIONS]
 
-Options:
-    -h, --help               Print this message
-    --host HOST              Host to upload the package to
-    --token TOKEN            Token to use when uploading
-    --no-verify              Don't verify package tarball before publish
-    --allow-dirty            Allow publishing with a dirty source directory
-    --manifest-path PATH     Path to the manifest of the package to publish
-    -j N, --jobs N           Number of parallel jobs, defaults to # of CPUs
-    --dry-run                Perform all checks without uploading
-    -v, --verbose ...        Use verbose output
-    -q, --quiet              No output printed to stdout
-    --color WHEN             Coloring: auto, always, never
-    --frozen                 Require Cargo.lock and cache are up to date
-    --locked                 Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                     No output printed to stdout
+        --index <INDEX>             Registry index URL to upload the package to
+        --token <TOKEN>             Token to use when uploading
+        --no-verify                 Don't verify the contents by building them
+        --allow-dirty               Allow dirty working directories to be packaged
+        --target <TRIPLE>           Build for the target triple
+        --target-dir <DIRECTORY>    Directory for all generated artifacts
+        --manifest-path <PATH>      Path to Cargo.toml
+        --features <FEATURES>       Space-separated list of features to activate
+        --all-features              Activate all available features
+        --no-default-features       Do not activate the `default` feature
+    -j, --jobs <N>                  Number of parallel jobs, defaults to # of CPUs
+        --dry-run                   Perform all checks without uploading
+        --registry <REGISTRY>       Registry to publish to
+    -v, --verbose                   Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>              Coloring: auto, always, never
+        --frozen                    Require Cargo.lock and cache are up to date
+        --locked                    Require Cargo.lock is up to date
+    -Z <FLAG>...                    Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                      Prints help information

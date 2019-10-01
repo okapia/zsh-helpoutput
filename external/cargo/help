@@ -1,8 +1,8 @@
-Get some help with a cargo command.
+cargo-help 
+Prints this message or the help of the given subcommand(s)
 
-Usage:
-    cargo help <command>
-    cargo help -h | --help
+USAGE:
+    cargo help [subcommand]...
 
-Options:
-    -h, --help          Print this message
+ARGS:
+    <subcommand>...    The subcommand whose help message to display

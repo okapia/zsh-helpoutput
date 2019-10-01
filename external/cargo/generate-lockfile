@@ -1,13 +1,15 @@
-Generate the lockfile for a project
+cargo-generate-lockfile 
+Generate the lockfile for a package
 
-Usage:
-    cargo generate-lockfile [options]
+USAGE:
+    cargo generate-lockfile [OPTIONS]
 
-Options:
-    -h, --help               Print this message
-    --manifest-path PATH     Path to the manifest to generate a lockfile for
-    -v, --verbose ...        Use verbose output
-    -q, --quiet              No output printed to stdout
-    --color WHEN             Coloring: auto, always, never
-    --frozen                 Require Cargo.lock and cache are up to date
-    --locked                 Require Cargo.lock is up to date
+OPTIONS:
+    -q, --quiet                   No output printed to stdout
+        --manifest-path <PATH>    Path to Cargo.toml
+    -v, --verbose                 Use verbose output (-vv very verbose/build.rs output)
+        --color <WHEN>            Coloring: auto, always, never
+        --frozen                  Require Cargo.lock and cache are up to date
+        --locked                  Require Cargo.lock is up to date
+    -Z <FLAG>...                  Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
+    -h, --help                    Prints help information
