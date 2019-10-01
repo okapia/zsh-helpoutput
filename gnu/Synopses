@@ -17,7 +17,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd chgrp
-version x
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -133,27 +133,27 @@ emit -V | field -1 | getversion
 emit -? | getusage
 
 cmd gnutls-cli
-version 3.6.9
+version 3.6.10
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-cli-debug
-version 3.6.9
+version 3.6.10
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd gnutls-serv
-version 3.6.9
+version 3.6.10
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd certtool
-version 3.6.9
+version 3.6.10
 emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd srptool
-version 3.6.9
+version 3.6.10
 emit --version | field -1 | getversion
 emit -h | getusage
 

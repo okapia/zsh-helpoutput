@@ -61,7 +61,7 @@ emit -V | field -1 | getversion
 emit | getusage
 
 cmd ethtool
-version 5.2
+version 5.3
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -101,7 +101,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 190708
+version 190924
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -206,12 +206,12 @@ emit -v | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 190708
+version 190924
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
 cmd strace
-version 5.2
+version 5.3
 emit -V | field 4 | getversion
 emit -h | getusage
 

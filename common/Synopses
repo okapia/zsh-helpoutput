@@ -98,7 +98,7 @@ emit --help | getusage
 emit help | getusage commands
 
 cmd bzip2
-version 1.0.7
+version 1.0.8
 emit -h | line 1 | field 7 | tr -d ',' | getversion
 emit -h | getusage
 
