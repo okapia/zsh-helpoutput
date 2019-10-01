@@ -1,5 +1,5 @@
 Usage: mpc [options] <command> [<arguments>]
-mpc version: 0.31
+mpc version: 0.32
 
 Options:
   -v, --verbose                   Give verbose output
@@ -73,6 +73,7 @@ Commands:
   mpc sendmessage <channel> <message>                   Send a message to the specified channel.
   mpc waitmessage <channel>                             Wait for at least one message on the specified channel.
   mpc subscribe <channel>                               Subscribe to the specified channel and continuously receive messages.
+  mpc listneighbors                                     List neighbors.
   mpc mount [<uri> <storage>]                           List mounts or add a new mount.
   mpc unmount <uri>                                     Remove a mount.
 
