@@ -237,13 +237,25 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd make
-version 4.2.1
+version 4.2.91
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd md5sum
 version 8.31
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd mkfifo
+version 8.30
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd mknod
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
@@ -387,6 +399,12 @@ emit --help | getusage
 
 cmd touch
 version 8.31
+variant -g 'GNU' -- --version
+emit --version | field -1 | getversion
+emit --help | getusage
+
+cmd tty
+version 8.30
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage

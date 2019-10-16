@@ -18,6 +18,11 @@ version 5.2.1
 emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
+cmd chcon
+version 8.30
+emit --version | field -1 | getversion
+emit --help | getusage
+
 cmd chrt
 version 2.34-rc1
 emit -V | field -1 | getversion
@@ -64,6 +69,16 @@ cmd ethtool
 version 5.3
 emit --version | field -1 | getversion
 emit -h | getusage
+
+cmd findmnt
+version 2.32.1
+emit -V | field -1 | getversion
+emit -h | getusage
+
+cmd free
+version 3.3.15
+emit -V | field -1 | getversion
+emit --help | getusage
 
 cmd getfacl
 version 2.2.53
@@ -190,6 +205,11 @@ version 20190515
 emit -V | sed 's/.*s//' | getversion
 emit -h | getusage
 
+cmd pmap
+version 3.3.15
+emit -V | field -1 | getversion
+emit -h | getusage
+
 cmd ps
 version 3.3.15
 emit -V | field -1 | getversion
@@ -203,6 +223,11 @@ emit -h | getusage
 cmd showmount
 version 3.1.1
 emit -v | field -1 | getversion
+emit -h | getusage
+
+cmd slabtop
+version 3.3.15
+emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ss
@@ -254,6 +279,11 @@ cmd setfattr
 version 2.4.48
 emit --version | field 2 | getversion
 emit --help | getusage
+
+cmd tload
+version 3.3.15
+emit -V | field -1 | getversion
+emit -h | getusage
 
 cmd tune2fs
 version 1.45.3
