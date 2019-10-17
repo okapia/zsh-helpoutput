@@ -491,36 +491,41 @@ emit -help | getusage
 emit -A | getusage archive
 
 cmd ssh
-version 8.0p1
+version 8.1
 variant OpenSSH -- -V
 emit -V | field 1 | sed 's/^.*_//' | getversion
 sshver="$_verinst"
 emit -? | getusage
 
 cmd scp
-version 8.0p1
+version 8.1
 getversion <<<$sshver
 emit | getusage
 
 cmd sftp
-version 8.0p1
+version 8.1
 getversion <<<$sshver
 emit | getusage
 
 cmd ssh-add
-version 8.0p1
+version 8.1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-copy-id
-version 8.0p1
+version 8.1
 getversion <<<$sshver
 emit -? | getusage
 
 cmd ssh-keygen
-version 8.0p1
+version 8.1
 getversion <<<$sshver
 emit -? | getusage
+
+cmd ssh-keyscan
+version 8.1
+getversion <<<$sshver
+emit | getusage
 
 cmd sshfs
 version 3.5.2
