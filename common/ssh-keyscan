@@ -1,0 +1,2 @@
+usage: ssh-keyscan [-46cDHv] [-f file] [-p port] [-T timeout] [-t type]
+		   [host | addrlist namelist]
