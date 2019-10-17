@@ -1,6 +1,6 @@
 usage:	vmctl [-v] command [arg ...]
 	vmctl console id
-	vmctl create disk [-b base | -i disk] [-s size]
+	vmctl create [-b base | -i disk] [-s size] disk
 	vmctl load filename
 	vmctl log [brief | verbose]
 	vmctl pause id
@@ -9,9 +9,9 @@ usage:	vmctl [-v] command [arg ...]
 	vmctl reset [all | switches | vms]
 	vmctl send id
 	vmctl show [id]
-	vmctl start id | name [-cL] [-B device] [-b path] [-d disk] [-i count]
-		[-m size] [-n switch] [-r path] [-t name]
+	vmctl start [-cL] [-B device] [-b path] [-d disk] [-i count]
+		[-m size] [-n switch] [-r path] [-t name] id | name
 	vmctl status [id]
-	vmctl stop [id | -a] [-fw]
+	vmctl stop [-fw] [id | -a]
 	vmctl unpause id
 	vmctl wait id
