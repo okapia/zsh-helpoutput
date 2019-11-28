@@ -9,7 +9,7 @@ tmp=../.zh-overlay-$$
 git checkout usage
 git worktree add $tmp master
 mv $tmp/.git .s.git
-print ~+/.s.git(:A) > .git/worktrees/.zh-overlay-$$/gitdir
+print ~+/.s.git(:A) > .git/worktrees/-zh-overlay-$$/gitdir
 rm -rf $tmp
 git --git-dir=.s.git reset --hard HEAD
 mkdir .git/info
