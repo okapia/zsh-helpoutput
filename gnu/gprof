@@ -1,4 +1,4 @@
-Usage: gprof [-[abcDhilLsTvwxyz]] [-[ACeEfFJnNOpPqSQZ][name]] [-I dirs]
+Usage: gprof [-[abcDhilLrsTvwxyz]] [-[ACeEfFJnNOpPqQRStZ][name]] [-I dirs]
 	[-d[num]] [-k from/to] [-m min-count] [-t table-length]
 	[--[no-]annotated-source[=name]] [--[no-]exec-counts[=name]]
 	[--[no-]flat-profile[=name]] [--[no-]graph[=name]]
