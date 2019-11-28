@@ -19,7 +19,7 @@ emit --version | field 2 | sed 's/^v//' | getversion
 emit help --full | getusage
 
 cmd chcon
-version 8.30
+version 8.31
 emit --version | field -1 | getversion
 emit --help | getusage
 
@@ -71,7 +71,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd findmnt
-version 2.32.1
+version 2.34
 emit -V | field -1 | getversion
 emit -h | getusage
 
@@ -116,7 +116,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ip
-version 190924
+version 191125
 emit -V | sed 's/.*-ss//' | getversion
 emit help | getusage
 
@@ -184,7 +184,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd nmcli
-version 1.20.2
+version 1.22.0
 subdir
 emit -v | field -1 | sed 's/-.*//' | getversion
 emit help | getusage
@@ -231,7 +231,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd ss
-version 190924
+version 191125
 emit -V | sed 's/.*-ss//' | getversion
 emit -h | getusage
 
@@ -286,7 +286,7 @@ emit -V | field -1 | getversion
 emit -h | getusage
 
 cmd tune2fs
-version 1.45.3
+version 1.45.4
 emit -V | sed -n '$p'  | field 2 | getversion
 emit -? | getusage
 

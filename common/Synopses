@@ -277,7 +277,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd git
-version 2.23.0
+version 2.24.0
 subdir
 emit --version | field 3 | getversion
 emit --help | getusage
@@ -302,7 +302,7 @@ emit -? | field 3 | getversion
 emit -? | getusage
 
 cmd gsettings
-version 2.62.0
+version 2.63.0
 subdir
 emit --version | getversion
 emit -h | getusage
@@ -422,7 +422,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd perl
-version 5.30.0
+version 5.30.1
 emit --version | line 2 | tr -d '()v' | guess | getversion
 emit --help | getusage
 
@@ -484,7 +484,7 @@ emit -V | sed 's/-.*//' | field -1 | getversion
 emit | getusage
 
 cmd sqlite
-version 3.29.0
+version 3.30.1
 variant -n sqlite3
 emit -version | field 1 | getversion
 emit -help | getusage
@@ -533,7 +533,7 @@ emit -V | grep SSHFS | field -1 | getversion
 emit -h | getusage
 
 cmd sudo
-version 1.8.27
+version 1.8.29
 variant ! 'doas' -- -V
 emit -V | field -1 | getversion
 emit -h | getusage
@@ -574,7 +574,7 @@ emit -H | getusage
 
 cmd tcpdump
 [[ $OSTYPE = openbsd* ]] && _present=0
-version 4.9.2
+version 4.9.3
 variant ! 'Apple' -- --version
 emit --version | grep -v 'unrecognized option' | field -1 | getversion
 emit -h | getusage
@@ -651,7 +651,7 @@ emit -V | tr -d v | guess | getversion
 emit -h | getusage
 
 cmd xmllint
-version 20909
+version 20910
 emit --version | line 1 | field 5 | getversion
 emit | getusage
 
@@ -787,25 +787,25 @@ emit --help | getusage elftoolchain
 # elfutils
 
 cmd readelf
-version 0.177
+version 0.178
 variant -p 'eu-' elfutils -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
 
 cmd nm
-version 0.177
+version 0.178
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd objdump
-version 0.177
+version 0.178
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage
 
 cmd strings
-version 0.177
+version 0.178
 variant -p 'eu-' elfutils -- --version
 emit --version | field -1 | getversion
 emit --help | nobug | getusage

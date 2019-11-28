@@ -1,30 +1,30 @@
 cmd rpm
-version 4.15.0-rc1
+version 4.15.1
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd rpmbuild
-version 4.15.0-rc1
+version 4.15.1
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd rpmkeys
-version 4.15.0-rc1
+version 4.15.1
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd rpmsign
-version 4.15.0-rc1
+version 4.15.1
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd rpmspec
-version 4.15.0-rc1
+version 4.15.1
 emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd dnf
-version 4.2.9
+version 4.2.15
 emit --version | line 1 | getversion
 emit -h | getusage
 

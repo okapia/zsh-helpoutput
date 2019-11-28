@@ -158,7 +158,7 @@ emit --version | field -1 | getversion
 emit -h | getusage
 
 cmd gprof
-version 2.32
+version 2.33.1
 variant -g GNU -- --version
 emit --version | guess | getversion
 emit --help | nobug | getusage
@@ -192,7 +192,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd makeinfo
-version 6.6
+version 6.7
 emit --version | field -1 | getversion
 emit -h | getusage
 
@@ -273,7 +273,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd nm
-version 2.32
+version 2.33.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | nobug | getusage
@@ -285,7 +285,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd objdump
-version 2.32
+version 2.33.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit --help | nobug | getusage
@@ -309,19 +309,19 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd ranlib
-version 2.32
+version 2.33.1
 variant -g GNU -- -V
 emit -V | guess | getversion
 emit -h | getusage
 
 cmd readelf
-version 2.32
+version 2.33.1
 variant -g GNU -- -v
 emit -v | guess | getversion
 emit -H | nobug | getusage
 
 cmd screen
-version 4.06.02
+version 4.07.00
 emit -v | field 3 | getversion
 emit -h | getusage
 
@@ -362,13 +362,13 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd strings
-version 2.32
+version 2.33.1
 variant -g 'GNU' -- --version
 emit --version | field -1 | sed 's/-.*//' | getversion
 emit --help | getusage
 
 cmd strip
-version 2.32
+version 2.33.1
 variant -g 'GNU' -- --version
 emit -V | guess | getversion
 emit -h | egrep -v '(supported targets|Report bugs to)' | getusage
@@ -404,7 +404,7 @@ emit --version | field -1 | getversion
 emit --help | getusage
 
 cmd tty
-version 8.30
+version 8.31
 variant -g 'GNU' -- --version
 emit --version | field -1 | getversion
 emit --help | getusage
