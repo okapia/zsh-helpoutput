@@ -42,6 +42,13 @@ Options implemented via popt alias/exec:
                                     of this package
       --buildrequires               list capabilities required to build this
                                     package
+      --with=<option>               enable configure <option> for build
+      --without=<option>            disable configure <option> for build
+      --scm=<scm>                   shortcut for '--define="__scm <scm>"'
+      --buildpolicy=<policy>        set buildroot <policy> (e.g. compress man
+                                    pages)
+      --trace                       trace macro expansion
+      --nodebuginfo                 do not generate debuginfo for this package
 
 Help options:
   -?, --help                        Show this help message

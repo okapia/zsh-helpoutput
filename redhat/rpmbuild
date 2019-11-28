@@ -87,6 +87,7 @@ Options implemented via popt alias/exec:
                                  pages)
       --sign                     generate GPG signature (deprecated, use
                                  command rpmsign instead)
+      --trace                    trace macro expansion
       --nodebuginfo              do not generate debuginfo for this package
 
 Help options:
