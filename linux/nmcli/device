@@ -29,5 +29,7 @@ COMMAND := { status | show | set | connect | reapply | modify | disconnect | del
 
   wifi rescan [ifname <ifname>] [[ssid <SSID to scan>] ...]
 
+  wifi show-password [ifname <ifname>]
+
   lldp [list [ifname <ifname>]]
 
