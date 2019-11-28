@@ -767,13 +767,13 @@ emit -h | getusage
 # elftoolchain
 
 cmd readelf
-version 3614
+version 3668
 variant elftoolchain -- --version
 emit --version | field -1 | tr -Cd '[0-9]' | getversion
 emit --help | getusage elftoolchain
 
 cmd nm
-version 3614
+version 3668
 variant elftoolchain -- --version
 emit --version | field -1 | tr -Cd '[0-9]' | getversion
 emit --help | getusage elftoolchain

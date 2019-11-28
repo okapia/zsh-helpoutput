@@ -1,145 +1,145 @@
 cmd bsdconfig
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -h | getusage
 
 cmd chsh
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd cu
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd dhclient
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd diff
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd expand
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd fetch
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd fmt
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd fold
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd fortune
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd freebsd-update
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd fstat
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd gstat
-version 12.0-RELEASE-p3
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd install
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd jexec
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd jls
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd jot
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd kldload
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd kldunload
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd mktemp
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd paste
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd patch
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit --help | getusage
 
 cmd pfctl
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd pkgconf
-version 1.3.10,1
+version 1.6.3
 pack | getversion
 emit -h | getusage
 
 cmd portsnap
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd procstat
-version 12.0-RELEASE-p3
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd service
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd sockstat
-version 12.0-RELEASE-p3
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd stdbuf
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
@@ -149,270 +149,275 @@ emit --version | field 1 | getversion
 emit --help | getusage
 
 cmd zfs
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd zpool
-version 12.0-RELEASE-p3
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 # Standard Unix Commands
 
 cmd arp
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd apm
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd at
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 variant 'not have permission'
 uname -r | getversion
 emit | getusage
 
 cmd cat
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd chmod
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd chown
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd cmp
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd column
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd comm
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd cp
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd cpio
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd cut
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd date
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd df
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd dmesg
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd du
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd env
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd find
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd finger
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd fuser
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd head
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd iconv
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd id
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd ifconfig
-version 12.0-RELEASE-p3
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd iostat
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd gcore
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd getent
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd join
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd last
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd ldd
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd ln
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd locale
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd locate
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | grep -v 'default database' | getusage
 
 cmd look
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
+cmd logger
+version 12.1-RELEASE-p1
+uname -r | getversion
+emit -? | grep -v illegal | getusage
+
 cmd ls
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd make
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd mkdir
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd mount
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd mt
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd mv
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -h | getusage
 
 cmd netstat
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd nl
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd od
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd ping
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd ping6
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd pgrep
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd ps
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd rm
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd script
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd sed
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd seq
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -h | getusage
 
@@ -422,86 +427,86 @@ emit --version | getversion
 emit --help | getusage
 
 cmd split
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd su
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd sysctl
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd touch
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd tail
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd timeout
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -h | getusage
 
 cmd top
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd tr
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd truss
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit | getusage
 
 cmd uname
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd uniq
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd vmstat
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd w
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd watch
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd wc
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd who
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
 
 cmd xargs
-version 12.0-RELEASE-p2
+version 12.1-RELEASE
 uname -r | getversion
 emit -? | getusage
