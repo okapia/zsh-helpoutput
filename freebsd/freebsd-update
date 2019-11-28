@@ -7,9 +7,10 @@ Options:
                   (default: /var/db/freebsd-update/)
   -f conffile  -- Read configuration options from conffile
                   (default: /etc/freebsd-update.conf)
-  -F           -- Force a fetch operation to proceed
+  -F           -- Force a fetch operation to proceed in the
+                  case of an unfinished upgrade
   -k KEY       -- Trust an RSA key with SHA256 hash of KEY
-  -r release   -- Target for upgrade (e.g., 6.2-RELEASE)
+  -r release   -- Target for upgrade (e.g., 11.1-RELEASE)
   -s server    -- Server from which to fetch updates
                   (default: update.FreeBSD.org)
   -t address   -- Mail output of cron command, if any, to address
@@ -23,6 +24,8 @@ Commands:
   cron         -- Sleep rand(3600) seconds, fetch updates, and send an
                   email if updates were found
   upgrade      -- Fetch upgrades to FreeBSD version specified via -r option
+  updatesready -- Check if there are fetched updates ready to install
   install      -- Install downloaded updates or upgrades
   rollback     -- Uninstall most recently installed updates
-  IDS          -- Compare the system against an index of "known good" files.
+  IDS          -- Compare the system against an index of "known good" files
+  showconfig   -- Show configuration

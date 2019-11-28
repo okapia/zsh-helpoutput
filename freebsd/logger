@@ -1,0 +1,2 @@
+usage: logger [-46Ais] [-f file] [-h host] [-P port] [-p pri] [-t tag]
+              [-S addr:port] [message ...]
