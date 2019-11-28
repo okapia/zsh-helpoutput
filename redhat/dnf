@@ -27,7 +27,7 @@ repoquery                 search for packages matching keyword
 repository-packages       run commands on top of all packages in given repository
 search                    search package details for the given string
 shell                     run an interactive DNF shell
-swap                      run an interactive dnf mod for remove and install one spec
+swap                      run an interactive DNF mod for remove and install one spec
 updateinfo                display advisories about packages
 upgrade                   upgrade a package or packages on your system
 upgrade-minimal           upgrade, but only 'newest' package match which fixes a problem that affects your system
@@ -109,8 +109,9 @@ General DNF options:
   --disableexcludes [repo], --disableexcludepkgs [repo]
                         disable excludepkgs
   --repofrompath [repo,path]
-                        label and path to additional repository, can be
-                        specified multiple times.
+                        label and path to an additional repository to use
+                        (same path as in a baseurl), can be specified multiple
+                        times.
   --noautoremove        disable removal of dependencies that are no longer
                         used
   --nogpgcheck          disable gpg signature checking (if RPM policy allows)
