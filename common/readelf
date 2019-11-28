@@ -12,12 +12,13 @@ Print information from ELF file in human-readable form.
   -a, --all                  All these plus -p .strtab -p .dynstr -p .comment
   -A, --arch-specific        Display architecture specific information, if any
   -d, --dynamic              Display the dynamic segment
+      --dyn-syms             Display (only) the dynamic symbol table
   -e, --exception            Display sections for exception handling
   -g, --section-groups       Display the section groups
   -h, --file-header          Display the ELF file header
   -I, --histogram            Display histogram of bucket list lengths
   -l, --program-headers      Display the program headers
-  -n, --notes                Display the ELF notes
+  -n, --notes[=SECTION]      Display the ELF notes
   -r, --relocs               Display relocations
   -s, --symbols[=SECTION]    Display the symbol table sections
   -S, --section-headers      Display the sections' headers
