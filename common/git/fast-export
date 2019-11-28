@@ -9,6 +9,8 @@ usage: git fast-export [rev-list-opts]
                           Dump marks to this file
     --import-marks <file>
                           Import marks from this file
+    --import-marks-if-exists <file>
+                          Import marks from this file if it exists
     --fake-missing-tagger
                           Fake a tagger when tags lack one
     --full-tree           Output full tree for each commit
@@ -19,4 +21,5 @@ usage: git fast-export [rev-list-opts]
     --reference-excluded-parents
                           Reference parents which are not in fast-export stream by object id
     --show-original-ids   Show original object ids of blobs/commits
+    --mark-tags           Label tags with mark ids
 

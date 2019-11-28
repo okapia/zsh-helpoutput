@@ -48,4 +48,5 @@ Options related to fetching
     -6, --ipv6            use IPv6 addresses only
     --show-forced-updates
                           check for forced-updates on all updated branches
+    --set-upstream        set upstream for git pull/fetch
 

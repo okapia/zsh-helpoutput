@@ -6,6 +6,7 @@ usage: git fetch [<options>] [<repository> [<refspec>...]]
     -v, --verbose         be more verbose
     -q, --quiet           be more quiet
     --all                 fetch from all remotes
+    --set-upstream        set upstream for git pull/fetch
     -a, --append          append to .git/FETCH_HEAD instead of overwriting
     --upload-pack <path>  path to upload pack on remote end
     -f, --force           force overwrite of local reference

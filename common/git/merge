@@ -33,5 +33,5 @@ usage: git merge [<options>] [<commit>...]
                           GPG sign commit
     --overwrite-ignore    update ignored files (default)
     --signoff             add Signed-off-by:
-    --verify              verify commit-msg hook
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
 
