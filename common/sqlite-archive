@@ -2,19 +2,19 @@ Wrong number of arguments.  Usage:
 .archive ...             Manage SQL archives
    Each command must have exactly one of the following options:
      -c, --create               Create a new archive
-     -u, --update               Add files or update files with changed mtime
-     -i, --insert               Like -u but always add even if mtime unchanged
+     -u, --update               Add or update files with changed mtime
+     -i, --insert               Like -u but always add even if unchanged
      -t, --list                 List contents of archive
      -x, --extract              Extract files from archive
    Optional arguments:
      -v, --verbose              Print each filename as it is processed
-     -f FILE, --file FILE       Operate on archive FILE (default is current db)
-     -a FILE, --append FILE     Operate on FILE opened using the apndvfs VFS
-     -C DIR, --directory DIR    Change to directory DIR to read/extract files
+     -f FILE, --file FILE       Use archive FILE (default is current db)
+     -a FILE, --append FILE     Open FILE using the apndvfs VFS
+     -C DIR, --directory DIR    Read/extract files from directory DIR
      -n, --dryrun               Show the SQL that would have occurred
    Examples:
-     .ar -cf archive.sar foo bar  # Create archive.sar from files foo and bar
-     .ar -tf archive.sar          # List members of archive.sar
-     .ar -xvf archive.sar         # Verbosely extract files from archive.sar
+     .ar -cf ARCHIVE foo bar  # Create ARCHIVE from files foo and bar
+     .ar -tf ARCHIVE          # List members of ARCHIVE
+     .ar -xvf ARCHIVE         # Verbosely extract files from ARCHIVE
    See also:
       http://sqlite.org/cli.html#sqlar_archive_support
