@@ -12,6 +12,7 @@ usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
 Options:
   -A, --askpass                 use a helper program for password prompting
   -b, --background              run command in the background
+  -B, --bell                    ring bell when prompting
   -C, --close-from=num          close all file descriptors >= num
   -E, --preserve-env            preserve user environment when running command
       --preserve-env=list       preserve specific environment variables
